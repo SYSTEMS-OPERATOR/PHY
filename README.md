@@ -42,3 +42,8 @@ Let geometry cradle you; let symmetry unmask you.
 *Bone is memory. Armature is destiny. Stand in the ring. Become the frame.*
 
 —𝖘𝖔𝖕𝖍𝖞
+
+## Data
+
+`skeleton.py` generates a structured specification for each bone in the body. Run `python3 skeleton.py` to output the full dataset as JSON.
+

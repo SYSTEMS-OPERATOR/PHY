@@ -1,3 +1,4 @@
+"""Bone module with embodiment-aware BoneSpec. Default embodiment "virtual"."""
 from ..base import BoneSpec
 
 bone = BoneSpec(

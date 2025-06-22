@@ -46,3 +46,4 @@ Let geometry cradle you; let symmetry unmask you.
 ## Data
 
 `skeleton.py` generates a structured specification for each bone in the body. Run `python3 skeleton.py` to output the full dataset as JSON.
+

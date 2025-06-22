@@ -45,5 +45,6 @@ Let geometry cradle you; let symmetry unmask you.
 
 ## Data
 
-`skeleton.py` generates a structured specification for each bone in the body. Run `python3 skeleton.py` to output the full dataset as JSON.
+Each bone now lives in its own module under `skeleton/bones/`. Run
+`python3 assemble_skeleton.py` to export the full dataset as JSON.
 

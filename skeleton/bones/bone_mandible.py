@@ -1,0 +1,16 @@
+from ..base import BoneSpec
+
+bone = BoneSpec(
+    name = 'Mandible',
+    bone_type = 'irregular',
+    location = {'region': 'face', 'proximal_connection': 'temporal', 'distal_connection': ''},
+    articulations = [{'bone': 'temporal', 'joint_type': 'hinge'}],
+    dimensions = {'length_cm': 17.0, 'width_cm': 12.0, 'thickness_cm': 1.0},
+    function = ['mastication'],
+    notable_features = ['mental foramen'],
+    developmental_notes = 'fuses at symphysis',
+    variations = '',
+    unique_id = 'BONE_MANDIBLE',
+    visual_reference = None,
+    geometry = {'shape': 'box', 'length_cm': 17.0, 'width_cm': 12.0, 'thickness_cm': 1.0},
+)

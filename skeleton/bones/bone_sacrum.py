@@ -1,0 +1,16 @@
+from ..base import BoneSpec
+
+bone = BoneSpec(
+    name = 'Sacrum',
+    bone_type = 'irregular',
+    location = {'region': 'sacrum', 'proximal_connection': 'L5', 'distal_connection': 'coccyx'},
+    articulations = [],
+    dimensions = {'length_cm': None, 'width_cm': None, 'thickness_cm': None},
+    function = ['supports pelvis'],
+    notable_features = [],
+    developmental_notes = 'fusion of 5 sacral vertebrae',
+    variations = '',
+    unique_id = 'BONE_SACRUM',
+    visual_reference = None,
+    geometry = {},
+)

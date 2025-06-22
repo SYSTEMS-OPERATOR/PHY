@@ -1,0 +1,16 @@
+from ..base import BoneSpec
+
+bone = BoneSpec(
+    name = 'C6',
+    bone_type = 'irregular',
+    location = {'region': 'cervical vertebrae', 'proximal_connection': 'C5', 'distal_connection': 'C7'},
+    articulations = [],
+    dimensions = {'length_cm': None, 'width_cm': None, 'thickness_cm': None},
+    function = ['support neck'],
+    notable_features = [],
+    developmental_notes = 'centers fuse during adolescence',
+    variations = '',
+    unique_id = 'BONE_C6',
+    visual_reference = None,
+    geometry = {},
+)

@@ -1,7 +1,14 @@
-from skeleton import load_field
+from skeleton import load_bones
+from skeleton.field import SkeletonField
 import json
 
+
 if __name__ == "__main__":
-    field = load_field()
-    data = {uid: bone.self_state() for uid, bone in field.bones.items()}
+    bones = load_bones()
+    field = SkeletonField(bones)
+    data = {
+        "bones": {b.unique_id: b.self_state() for b in bones},
+        "health": field.health(),
+        "faults": field.faults(),
+    }    
     print(json.dumps(data, indent=2))

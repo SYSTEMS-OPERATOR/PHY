@@ -4,7 +4,7 @@ import json
 
 
 if __name__ == "__main__":
-    bones = load_bones()
+    bones = load_bones("female_21_baseline")
     field = SkeletonField(bones)
     data = {
         "bones": {b.unique_id: b.self_state() for b in bones},

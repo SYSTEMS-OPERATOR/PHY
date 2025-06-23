@@ -43,3 +43,4 @@ class SkeletonField:
     def faults(self) -> Dict[str, List[str]]:
         """Return fault lists per bone."""
         return {d: b.report_faults() for d, b in self.bones.items() if not b.is_healthy()}
+

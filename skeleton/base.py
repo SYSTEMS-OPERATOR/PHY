@@ -28,6 +28,21 @@ class MarrowAgent:
             self.charge += self.voltage * 0.01
         return self.voltage
 
+
+class MarrowAgent:
+    """Bioelectric regulator for a bone domain."""
+
+    def __init__(self, voltage: float = 0.0, charge: float = 0.0) -> None:
+        self.voltage = voltage
+        self.charge = charge
+
+    def regulate(self, voltage_in: float, signal_type: str = "EMG") -> float:
+        """Return regulated voltage while updating charge."""
+        self.voltage = 0.5 * (self.voltage + voltage_in)
+        if signal_type in {"EMG", "EKG"}:
+            self.charge += self.voltage * 0.01
+        return self.voltage
+
 @dataclass
 class BoneSpec:
     name: str
@@ -56,12 +71,14 @@ class BoneSpec:
     torsion: Tuple[float, float, float] = (0.0, 0.0, 0.0)
     state_faults: List[str] = field(default_factory=list)
 
+
     def __post_init__(self) -> None:
         """Initialize dynamic docstring for this bone object."""
         self.__doc__ = f"{self.name} bone agent (default embodiment: {self.embodiment})."
         if self.domain_id is None:
             self.domain_id = self.unique_id
         self.state_faults = []
+
 
     def mass_kg(self) -> Optional[float]:
         try:
@@ -195,3 +212,4 @@ class BoneSpec:
         except Exception as e:
             self.state_faults.append(f"Signal error: {e}")
             return 0.0
+

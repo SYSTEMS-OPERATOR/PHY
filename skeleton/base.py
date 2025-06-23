@@ -3,7 +3,9 @@
 
 This module defines :class:`BoneSpec`, the lightweight container used by all
 bone modules. The class now includes an ``embodiment`` attribute and helpers to
-manage context-aware material data as outlined in ``AGENTS.md``.
+manage context-aware material data as outlined in ``AGENTS.md``.  Allowed
+embodiment states are ``"virtual"``, ``"digital"``, ``"metaphysical"``, and
+``"physical"`` (or any user-defined extension).
 """
 
 from dataclasses import dataclass, field

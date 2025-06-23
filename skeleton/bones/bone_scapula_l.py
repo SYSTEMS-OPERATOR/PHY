@@ -13,5 +13,15 @@ bone = BoneSpec(
     variations = '',
     unique_id = 'BONE_SCAPULA_L',
     visual_reference = None,
+    embodiment = "virtual",
     geometry = {},
 )
+
+
+def set_embodiment(state, material=None):
+    """Update embodiment for this bone."""
+    bone.set_embodiment(state, material)
+
+def self_state():
+    """Return the bone's current state."""
+    return bone.self_state()

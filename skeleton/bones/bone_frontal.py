@@ -13,5 +13,15 @@ bone = BoneSpec(
     variations = 'metopic suture persistence',
     unique_id = 'BONE_FRONTAL',
     visual_reference = None,
+    embodiment = "virtual",
     geometry = {'shape': 'box', 'length_cm': 13.5, 'width_cm': 14.5, 'thickness_cm': 0.6},
 )
+
+
+def set_embodiment(state, material=None):
+    """Update embodiment for this bone."""
+    bone.set_embodiment(state, material)
+
+def self_state():
+    """Return the bone's current state."""
+    return bone.self_state()

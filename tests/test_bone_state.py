@@ -5,6 +5,7 @@ import sys
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 from skeleton.base import BoneSpec
+from skeleton.bones import bone_c1
 
 class BoneStateTest(unittest.TestCase):
     def setUp(self):
@@ -35,6 +36,17 @@ class BoneStateTest(unittest.TestCase):
         state = self.bone.current_state()
         self.assertEqual(state['position'], (1,2,3))
         self.assertTrue(self.bone.is_healthy())
+
+    def test_module_wrappers(self):
+        bone_c1.clear_faults()
+        bone_c1.set_embodiment('virtual')
+        self.assertIsNone(bone_c1.bone.mass_kg())
+        self.assertFalse(bone_c1.is_healthy())
+        bone_c1.clear_faults()
+        bone_c1.update_state(position=(5,5,5), torsion=(1,0,0))
+        state = bone_c1.current_state()
+        self.assertEqual(state['position'], (5,5,5))
+        self.assertTrue(bone_c1.is_healthy())
 
 if __name__ == '__main__':
     unittest.main()

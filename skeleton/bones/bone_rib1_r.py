@@ -46,3 +46,8 @@ def clear_faults():
 def report_faults():
     """Return list of recorded faults."""
     return bone.report_faults()
+
+
+def notify_fault(field=None):
+    """Notify linked bones of a fault."""
+    bone.notify_fault(field)

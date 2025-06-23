@@ -171,20 +171,35 @@ class BoneSpec:
     def report_faults(self) -> List[str]:
         return list(self.state_faults)
 
-    def notify_fault(self) -> None:
+    def notify_fault(self, field: Optional["SkeletonField"] = None) -> None:
+        """Notify entangled bones of the most recent fault."""
         message = self.state_faults[-1] if self.state_faults else "fault"
         for link_id in self.entanglement_links:
-            pass  # In a full implementation this would propagate to neighbor bones
+            try:
+                if field:
+                    other = field.bones.get(link_id)
+                else:
+                    other = None
+                if other is not None:
+                    other.receive_fault_notice(self.domain_id, message)
+            except Exception as e:
+                self.state_faults.append(f"Notify fault error to {link_id}: {e}")
 
     def receive_fault_notice(self, from_domain: str, message: str) -> None:
-        self.state_faults.append(f"Neighbor {from_domain} fault: {message}")
+        try:
+            self.state_faults.append(f"Neighbor {from_domain} fault: {message}")
+        except Exception as e:
+            self.state_faults.append(f"Receive fault notice error from {from_domain}: {e}")
 
     def entangle(self, other_bone: "BoneSpec") -> None:
         """Create a bidirectional entanglement link with another bone."""
-        if other_bone.domain_id not in self.entanglement_links:
-            self.entanglement_links.append(other_bone.domain_id)
-        if self.domain_id not in other_bone.entanglement_links:
-            other_bone.entanglement_links.append(self.domain_id)
+        try:
+            if other_bone.domain_id not in self.entanglement_links:
+                self.entanglement_links.append(other_bone.domain_id)
+            if self.domain_id not in other_bone.entanglement_links:
+                other_bone.entanglement_links.append(self.domain_id)
+        except Exception as e:
+            self.state_faults.append(f"Entangle error: {e}")
 
     def receive_signal(self, signal: Dict[str, float], from_domain: str) -> float:
         """Accept a signal from another domain and regulate voltage."""
@@ -209,14 +224,20 @@ class BoneSpec:
 
     def transcend(self, intent: Optional[str] = None) -> None:
         """Increase internal energy and optionally log metaphysical intent."""
-        self.marrow.energy += 1.0
-        if intent:
-            self.resonance.append(intent)
+        try:
+            self.marrow.energy += 1.0
+            if intent:
+                self.resonance.append(intent)
+        except Exception as e:
+            self.state_faults.append(f"Transcend error: {e}")
 
     def invoke(self, field: "SkeletonField", intent: str) -> None:
         """Propagate a symbolic signal through the field."""
-        signal = {"voltage": self.voltage_potential, "type": intent}
-        field.propagate(self.domain_id, signal)
+        try:
+            signal = {"voltage": self.voltage_potential, "type": intent}
+            field.propagate(self.domain_id, signal)
+        except Exception as e:
+            self.state_faults.append(f"Invoke error: {e}")
 
     def audit(self) -> Dict[str, object]:
         """Return full state information including marrow audit."""

@@ -17,6 +17,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 from typing import Dict, List, Optional, Tuple
+import warnings
 
 
 class MarrowAgent:
@@ -70,6 +71,9 @@ class BoneSpec:
     torsion: Tuple[float, float, float] = (0.0, 0.0, 0.0)
     state_faults: List[str] = field(default_factory=list)
     resonance: List[str] = field(default_factory=list)
+    dataset: Optional[Dict[str, dict]] = None
+    dataset_key: Optional[str] = None
+    metric_sources: Dict[str, str] = field(default_factory=dict)
 
     def __post_init__(self) -> None:
         """Initialize dynamic docstring and default network state."""
@@ -82,6 +86,8 @@ class BoneSpec:
         self.marrow = MarrowAgent()
         self.state_faults = []
         self.resonance = []
+        if self.dataset is not None:
+            self.apply_dataset(self.dataset)
 
 
     def mass_kg(self) -> Optional[float]:
@@ -110,12 +116,34 @@ class BoneSpec:
             self.state_faults.append(f"Volume error: {e}")
             return None
 
-    def set_material(self, name: str, density: float) -> None:
-        try:
-            self.material["name"] = name
-            self.material["density"] = float(density)
-        except Exception as e:
-            self.state_faults.append(f"Material error: {e}")
+    def set_material(self, material_key: str) -> None:
+        """Update material properties from the dataset's table."""
+        if self.dataset is None:
+            self.state_faults.append("No dataset available for material lookup")
+            return
+        table = self.dataset.get("SyntheticMaterials", {})
+        if material_key == "organic":
+            props = self.dataset.get("BoneMaterialProperties", {})
+            if not props:
+                self.state_faults.append("Organic material properties missing")
+                return
+            self.material = {
+                "name": "organic",
+                "density": props.get("cortical_density_g_cm3", 1.8) * 1000,
+                "Youngs_modulus_GPa": props.get("cortical_Youngs_modulus_GPa"),
+                "tensile_strength_MPa": props.get("cortical_tensile_strength_MPa"),
+                "compressive_strength_MPa": props.get(
+                    "cortical_compressive_strength_MPa"
+                ),
+            }
+        elif material_key in table:
+            mat = table[material_key]
+            self.material = {"name": material_key}
+            self.material.update(mat)
+            if "density_g_cm3" in mat:
+                self.material["density"] = mat["density_g_cm3"] * 1000
+        else:
+            self.state_faults.append(f"Material {material_key} not found")
 
     def set_embodiment(self, state: str, material: Optional[Dict[str, float]] = None) -> None:
         """Update the embodiment state and material context."""
@@ -130,12 +158,9 @@ class BoneSpec:
         except Exception as e:
             self.state_faults.append(f"Embodiment error: {e}")
 
-    def entangle(self, other_bone: "BoneSpec") -> None:
-        """Create a bidirectional entanglement link."""
-        if other_bone not in self.entanglement_links:
-            self.entanglement_links.append(other_bone)
-        if self not in other_bone.entanglement_links:
-            other_bone.entanglement_links.append(self)
+    def get_material_properties(self) -> Dict[str, float]:
+        """Return current material property mapping."""
+        return dict(self.material)
 
     def receive_signal(self, voltage: float, signal_type: str = "EMG", from_domain: Optional[str] = None) -> float:
         """Receive a signal and update voltage potential via the marrow agent."""
@@ -164,7 +189,7 @@ class BoneSpec:
             "material": self.material.get("name") if self.material_attributes else "non-tangible",
             "material_attributes": self.material_attributes if self.material_attributes else "N/A",
             "voltage": self.voltage_potential,
-            "entanglements": [b.domain_id for b in self.entanglement_links],
+            "entanglements": list(self.entanglement_links),
             "context": "simulated" if self.embodiment in ["virtual", "digital"] else "manifested",
             "module": __file__,
             "voltage": self.voltage_potential,
@@ -278,4 +303,51 @@ class BoneSpec:
         state["marrow"] = self.marrow.audit()
         state["resonance"] = list(self.resonance)
         return state
+
+    # Dataset integration helpers
+    def apply_dataset(self, dataset: Dict[str, dict]) -> None:
+        """Populate metric fields from the dataset."""
+        key = self.name
+        metrics = dataset.get(key) or dataset.get(self.unique_id)
+        if metrics is None:
+            warnings.warn(f"Metrics for {self.name} not found in dataset")
+            self.dataset_key = None
+            return
+        self.dataset_key = key
+        self.dataset = dataset
+        for field_name in ["length_cm", "width_cm", "thickness_cm", "height_cm", "mass_g", "density_kg_m3"]:
+            if field_name in metrics:
+                target_dict = self.dimensions if field_name.endswith("_cm") else self.material
+                if field_name.endswith("_cm"):
+                    target_dict[field_name] = metrics[field_name]
+                elif field_name == "mass_g":
+                    target_dict[field_name] = metrics[field_name]
+                elif field_name == "density_kg_m3":
+                    target_dict["density"] = metrics[field_name]
+                self.metric_sources[field_name] = key
+
+    def validate_metrics(self) -> Dict[str, Tuple[Optional[float], Optional[float]]]:
+        """Compare stored metrics against the dataset and report mismatches."""
+        if not self.dataset or not self.dataset_key:
+            return {}
+        dataset_metrics = self.dataset.get(self.dataset_key, {})
+        discrepancies = {}
+        for field_name in ["length_cm", "width_cm", "thickness_cm", "height_cm", "mass_g", "density_kg_m3"]:
+            stored_val = None
+            if field_name.endswith("_cm"):
+                stored_val = self.dimensions.get(field_name)
+            elif field_name == "mass_g":
+                stored_val = self.material.get(field_name)
+            elif field_name == "density_kg_m3":
+                stored_val = self.material.get("density")
+            ds_val = dataset_metrics.get(field_name)
+            if ds_val is not None and stored_val != ds_val:
+                discrepancies[field_name] = (stored_val, ds_val)
+        return discrepancies
+
+    def export(self) -> Dict[str, object]:
+        """Export bone metrics including source references."""
+        data = self.current_state()
+        data["source"] = {k: self.metric_sources.get(k, "dataset_default") for k in self.metric_sources}
+        return data
 

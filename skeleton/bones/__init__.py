@@ -5,14 +5,19 @@ from typing import List
 
 from ..base import BoneSpec
 from ..field import SkeletonField
+from ..datasets import load_dataset
 
-def load_bones() -> List[BoneSpec]:
+def load_bones(dataset_name: str = "female_21_baseline") -> List[BoneSpec]:
     bones: List[BoneSpec] = []
     for file in Path(__file__).parent.glob('*.py'):
         if file.name == '__init__.py':
             continue
         module = import_module(f'skeleton.bones.{file.stem}')
         bones.append(module.bone)
+
+    dataset = load_dataset(dataset_name)
+    for b in bones:
+        b.apply_dataset(dataset)
 
     # establish entanglements based on articulations
     name_map = {b.name: b for b in bones}
@@ -25,8 +30,8 @@ def load_bones() -> List[BoneSpec]:
     return bones
 
 
-def load_field() -> SkeletonField:
+def load_field(dataset_name: str = "female_21_baseline") -> SkeletonField:
     """Return a SkeletonField with all discovered bones registered."""
-    bones = load_bones()
+    bones = load_bones(dataset_name)
     field = SkeletonField(bones)
     return field

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, Tuple
 
 from .base import BoneSpec
 
@@ -85,4 +85,13 @@ class SkeletonField:
     def faults(self) -> Dict[str, List[str]]:
         """Return fault lists per bone."""
         return {d: b.report_faults() for d, b in self.bones.items() if not b.is_healthy()}
+
+    def audit_metrics(self) -> Dict[str, Dict[str, Tuple[Optional[float], Optional[float]]]]:
+        """Return dataset metric discrepancies for all bones."""
+        report: Dict[str, Dict[str, Tuple[Optional[float], Optional[float]]]] = {}
+        for bone in self.bones.values():
+            diff = bone.validate_metrics()
+            if diff:
+                report[bone.unique_id] = diff
+        return report
 

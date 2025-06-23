@@ -33,7 +33,12 @@ class SkeletonField:
 
     def broadcast(self, voltage: float, signal_type: str = "EMG") -> None:
         for bone in self.bones.values():
-            bone.emit_signal(None, voltage, signal_type)
+            regulated = bone.marrow.regulate(voltage, signal_type)
+            bone.voltage_potential = regulated
+            for link_id in bone.entanglement_links:
+                other = self.bones.get(link_id)
+                if other is not None:
+                    other.receive_signal(regulated, signal_type, from_domain=bone.domain_id)
 
 
     def summary(self) -> Dict[str, float]:
@@ -50,11 +55,9 @@ class SkeletonField:
             if b.domain_id in visited:
                 return
             visited.add(b.domain_id)
-            for link_id in b.entanglement_links:
-                other = self.bones.get(link_id)
-                if other:
-                    other.receive_signal(signal, b.domain_id)
-                    _prop(other)
+            for other in b.entanglement_links:
+                other.receive_signal_packet(signal, b.domain_id)
+                _prop(other)
 
         _prop(origin)
 

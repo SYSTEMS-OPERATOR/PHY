@@ -41,18 +41,6 @@ class MarrowAgent:
         return {"voltage": self.voltage, "charge": self.charge, "energy": self.energy}
 
 
-class MarrowAgent:
-    """Bioelectric regulator for a bone."""
-
-    def __init__(self, voltage: float = 0.0, charge: float = 0.0) -> None:
-        self.voltage = voltage
-        self.charge = charge
-
-    def regulate(self, voltage_in: float, signal_type: str = "EMG") -> float:
-        """Regulate incoming voltage and update internal state."""
-        self.voltage = (self.voltage + voltage_in) / 2.0
-        self.charge += self.voltage * 0.1
-        return self.voltage
 
 @dataclass
 class BoneSpec:
@@ -246,8 +234,8 @@ class BoneSpec:
         except Exception as e:
             self.state_faults.append(f"Entangle error: {e}")
 
-    def receive_signal(self, signal: Dict[str, float], from_domain: str) -> float:
-        """Accept a signal from another domain and regulate voltage."""
+    def receive_signal_packet(self, signal: Dict[str, float], from_domain: str) -> float:
+        """Accept a structured signal from another domain and regulate voltage."""
         try:
             voltage = signal.get("voltage", 0.0)
             stype = signal.get("type", "EMG")
@@ -257,12 +245,12 @@ class BoneSpec:
             self.state_faults.append(f"Receive error from {from_domain}: {e}")
             return self.voltage_potential
 
-    def emit_signal(self, to_bone: "BoneSpec", signal: Dict[str, float]) -> float:
-        """Emit a signal to another entangled bone."""
+    def emit_signal_packet(self, to_bone: "BoneSpec", signal: Dict[str, float]) -> float:
+        """Emit a structured signal to another entangled bone."""
         try:
             if to_bone.domain_id not in self.entanglement_links:
                 raise ValueError(f"{to_bone.domain_id} not entangled with {self.domain_id}")
-            return to_bone.receive_signal(signal, self.domain_id)
+            return to_bone.receive_signal_packet(signal, self.domain_id)
         except Exception as e:
             self.state_faults.append(f"Signal error: {e}")
             return 0.0

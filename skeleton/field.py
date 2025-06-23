@@ -33,6 +33,20 @@ class SkeletonField:
 
         _prop(origin)
 
+    def total_voltage(self) -> float:
+        """Return the summed voltage potential of all bones."""
+        return sum(b.voltage_potential for b in self.bones.values())
+
+    def meta_breath(self, word: str) -> None:
+        """Invoke a metaphysical intent across all bones."""
+        for bone in self.bones.values():
+            bone.transcend(intent=word)
+
+    def collapse(self) -> None:
+        """Remove all entanglement links between bones."""
+        for bone in self.bones.values():
+            bone.entanglement_links.clear()
+
     def status(self) -> Dict[str, Dict[str, object]]:
         return {d: {"voltage": b.voltage_potential, "links": list(b.entanglement_links)} for d, b in self.bones.items()}
 

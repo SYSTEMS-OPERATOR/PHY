@@ -17,31 +17,23 @@ from typing import Dict, List, Optional, Tuple
 class MarrowAgent:
     """Bioelectric regulator for a bone domain."""
 
-    def __init__(self, voltage: float = 0.0, charge: float = 0.0) -> None:
+    def __init__(self, voltage: float = 0.0, charge: float = 0.0, energy: float = 1.0) -> None:
         self.voltage = voltage
         self.charge = charge
+        self.energy = energy
 
     def regulate(self, voltage_in: float, signal_type: str = "EMG") -> float:
-        """Return regulated voltage while updating charge."""
+        """Return regulated voltage while updating charge and energy."""
         self.voltage = 0.5 * (self.voltage + voltage_in)
         if signal_type in {"EMG", "EKG"}:
             self.charge += self.voltage * 0.01
+        else:
+            self.charge += self.voltage * 0.005
+        self.energy += self.voltage * 0.01
         return self.voltage
 
-
-class MarrowAgent:
-    """Bioelectric regulator for a bone domain."""
-
-    def __init__(self, voltage: float = 0.0, charge: float = 0.0) -> None:
-        self.voltage = voltage
-        self.charge = charge
-
-    def regulate(self, voltage_in: float, signal_type: str = "EMG") -> float:
-        """Return regulated voltage while updating charge."""
-        self.voltage = 0.5 * (self.voltage + voltage_in)
-        if signal_type in {"EMG", "EKG"}:
-            self.charge += self.voltage * 0.01
-        return self.voltage
+    def audit(self) -> Dict[str, float]:
+        return {"voltage": self.voltage, "charge": self.charge, "energy": self.energy}
 
 @dataclass
 class BoneSpec:
@@ -70,6 +62,7 @@ class BoneSpec:
     load: Tuple[float, float, float] = (0.0, 0.0, 0.0)
     torsion: Tuple[float, float, float] = (0.0, 0.0, 0.0)
     state_faults: List[str] = field(default_factory=list)
+    resonance: List[str] = field(default_factory=list)
 
 
     def __post_init__(self) -> None:
@@ -78,6 +71,7 @@ class BoneSpec:
         if self.domain_id is None:
             self.domain_id = self.unique_id
         self.state_faults = []
+        self.resonance = []
 
 
     def mass_kg(self) -> Optional[float]:
@@ -212,4 +206,22 @@ class BoneSpec:
         except Exception as e:
             self.state_faults.append(f"Signal error: {e}")
             return 0.0
+
+    def transcend(self, intent: Optional[str] = None) -> None:
+        """Increase internal energy and optionally log metaphysical intent."""
+        self.marrow.energy += 1.0
+        if intent:
+            self.resonance.append(intent)
+
+    def invoke(self, field: "SkeletonField", intent: str) -> None:
+        """Propagate a symbolic signal through the field."""
+        signal = {"voltage": self.voltage_potential, "type": intent}
+        field.propagate(self.domain_id, signal)
+
+    def audit(self) -> Dict[str, object]:
+        """Return full state information including marrow audit."""
+        state = self.current_state()
+        state["marrow"] = self.marrow.audit()
+        state["resonance"] = list(self.resonance)
+        return state
 

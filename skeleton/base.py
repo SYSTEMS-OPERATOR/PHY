@@ -6,7 +6,12 @@ bone modules. The class now includes an ``embodiment`` attribute and helpers to
 manage context-aware material data as outlined in ``AGENTS.md``.  Allowed
 embodiment states are ``"virtual"``, ``"digital"``, ``"metaphysical"``, and
 ``"physical"`` (or any user-defined extension).
-"""
+
+The module also introduces :class:`MarrowAgent` and entanglement helpers so
+bones can participate in a metaphysical bionic network, following the
+"Metaphysical Bionic Entanglement Protocol" directive."""
+
+from __future__ import annotations
 
 from __future__ import annotations
 
@@ -35,6 +40,20 @@ class MarrowAgent:
     def audit(self) -> Dict[str, float]:
         return {"voltage": self.voltage, "charge": self.charge, "energy": self.energy}
 
+
+class MarrowAgent:
+    """Bioelectric regulator for a bone."""
+
+    def __init__(self, voltage: float = 0.0, charge: float = 0.0) -> None:
+        self.voltage = voltage
+        self.charge = charge
+
+    def regulate(self, voltage_in: float, signal_type: str = "EMG") -> float:
+        """Regulate incoming voltage and update internal state."""
+        self.voltage = (self.voltage + voltage_in) / 2.0
+        self.charge += self.voltage * 0.1
+        return self.voltage
+
 @dataclass
 class BoneSpec:
     name: str
@@ -52,10 +71,10 @@ class BoneSpec:
     geometry: Dict[str, float] = field(default_factory=dict)
     embodiment: str = "virtual"
     material_attributes: Optional[Dict[str, float]] = None
-    domain_id: Optional[str] = None
+    domain_id: str = ""
     ground_state: bool = False
     voltage_potential: float = 0.0
-    entanglement_links: List[str] = field(default_factory=list)
+    entanglement_links: List["BoneSpec"] = field(default_factory=list)
     marrow: MarrowAgent = field(default_factory=MarrowAgent)
     position: Tuple[float, float, float] = (0.0, 0.0, 0.0)
     orientation: Tuple[float, float, float, float] = (1.0, 0.0, 0.0, 0.0)
@@ -64,12 +83,15 @@ class BoneSpec:
     state_faults: List[str] = field(default_factory=list)
     resonance: List[str] = field(default_factory=list)
 
-
     def __post_init__(self) -> None:
-        """Initialize dynamic docstring for this bone object."""
-        self.__doc__ = f"{self.name} bone agent (default embodiment: {self.embodiment})."
-        if self.domain_id is None:
+        """Initialize dynamic docstring and default network state."""
+        self.__doc__ = (
+            f"{self.name} bone agent (default embodiment: {self.embodiment})."
+            " Supports metaphysical entanglement."
+        )
+        if not self.domain_id:
             self.domain_id = self.unique_id
+        self.marrow = MarrowAgent()
         self.state_faults = []
         self.resonance = []
 
@@ -120,6 +142,27 @@ class BoneSpec:
         except Exception as e:
             self.state_faults.append(f"Embodiment error: {e}")
 
+    def entangle(self, other_bone: "BoneSpec") -> None:
+        """Create a bidirectional entanglement link."""
+        if other_bone not in self.entanglement_links:
+            self.entanglement_links.append(other_bone)
+        if self not in other_bone.entanglement_links:
+            other_bone.entanglement_links.append(self)
+
+    def receive_signal(self, voltage: float, signal_type: str = "EMG", from_domain: Optional[str] = None) -> float:
+        """Receive a signal and update voltage potential via the marrow agent."""
+        regulated = self.marrow.regulate(voltage, signal_type)
+        self.voltage_potential = regulated
+        return regulated
+
+    def emit_signal(self, to_bone: Optional["BoneSpec"], voltage: float, signal_type: str = "EMG") -> None:
+        """Emit a signal to another bone or broadcast to entangled links."""
+        regulated = self.marrow.regulate(voltage, signal_type)
+        self.voltage_potential = regulated
+        targets = self.entanglement_links if to_bone is None else [to_bone]
+        for target in targets:
+            target.receive_signal(regulated, signal_type, from_domain=self.domain_id)
+
     def self_state(self) -> Dict[str, object]:
         """Return a dict summarizing the bone's current state."""
         return self.current_state()
@@ -132,6 +175,8 @@ class BoneSpec:
             "embodiment": self.embodiment,
             "material": self.material.get("name") if self.material_attributes else "non-tangible",
             "material_attributes": self.material_attributes if self.material_attributes else "N/A",
+            "voltage": self.voltage_potential,
+            "entanglements": [b.domain_id for b in self.entanglement_links],
             "context": "simulated" if self.embodiment in ["virtual", "digital"] else "manifested",
             "module": __file__,
             "voltage": self.voltage_potential,

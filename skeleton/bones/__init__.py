@@ -4,6 +4,7 @@ from pathlib import Path
 from typing import List
 
 from ..base import BoneSpec
+from ..field import SkeletonField
 
 def load_bones() -> List[BoneSpec]:
     bones: List[BoneSpec] = []
@@ -22,3 +23,10 @@ def load_bones() -> List[BoneSpec]:
                 bone.entangle(other)
 
     return bones
+
+
+def load_field() -> SkeletonField:
+    """Return a SkeletonField with all discovered bones registered."""
+    bones = load_bones()
+    field = SkeletonField(bones)
+    return field

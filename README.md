@@ -48,3 +48,7 @@ Let geometry cradle you; let symmetry unmask you.
 Each bone now lives in its own module under `skeleton/bones/`. Run
 `python3 assemble_skeleton.py` to export the full dataset as JSON.
 
+Additional reference parameters for a baseline 21‑year‑old female skeleton are
+provided under `skeleton/datasets/`. Load them with
+`from skeleton.datasets import bones_from_dataset`.
+

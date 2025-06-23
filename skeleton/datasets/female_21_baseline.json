@@ -1,0 +1,149 @@
+{
+  "Femur": {
+    "length_cm": 42.0,
+    "width_cm": 4.0,
+    "thickness_cm": 4.0,
+    "mass_g": 350,
+    "density_kg_m3": 1900,
+    "cortical_modulus_GPa": 18.5,
+    "cortical_tensile_strength_MPa": 130,
+    "cortical_compressive_strength_MPa": 200,
+    "trabecular_modulus_GPa": 0.5,
+    "trabecular_compressive_strength_MPa": 5
+  },
+  "Tibia": {
+    "length_cm": 37.5,
+    "width_cm": 3.5,
+    "thickness_cm": 3.5,
+    "mass_g": 200,
+    "density_kg_m3": 1900,
+    "cortical_modulus_GPa": 18.5,
+    "cortical_tensile_strength_MPa": 130,
+    "cortical_compressive_strength_MPa": 200,
+    "trabecular_modulus_GPa": 0.4,
+    "trabecular_compressive_strength_MPa": 5
+  },
+  "Fibula": {
+    "length_cm": 35.5,
+    "width_cm": 1.5,
+    "thickness_cm": 1.5,
+    "mass_g": 40,
+    "density_kg_m3": 1900
+  },
+  "Humerus": {
+    "length_cm": 31.0,
+    "width_cm": 3.0,
+    "thickness_cm": 3.0,
+    "mass_g": 100,
+    "density_kg_m3": 1900
+  },
+  "Radius": {
+    "length_cm": 24.0,
+    "width_cm": 1.5,
+    "thickness_cm": 1.5,
+    "mass_g": 30,
+    "density_kg_m3": 1900
+  },
+  "Ulna": {
+    "length_cm": 25.0,
+    "width_cm": 1.5,
+    "thickness_cm": 1.5,
+    "mass_g": 40,
+    "density_kg_m3": 1900
+  },
+  "Clavicle": {
+    "length_cm": 14.0,
+    "width_cm": 1.2,
+    "thickness_cm": 1.2,
+    "mass_g": 16,
+    "density_kg_m3": 1850
+  },
+  "Scapula": {
+    "length_cm": 14.5,
+    "width_cm": 10.5,
+    "thickness_cm": 0.3,
+    "mass_g": 45,
+    "density_kg_m3": 1800
+  },
+  "HipBone": {
+    "length_cm": 23.0,
+    "width_cm": 14.0,
+    "thickness_cm": 5.0,
+    "mass_g": 120,
+    "density_kg_m3": 1800
+  },
+  "Vertebra": {
+    "avg_height_cm": 2.0,
+    "avg_width_cm": 3.5,
+    "avg_thickness_cm": 2.5,
+    "avg_mass_g": 10,
+    "density_kg_m3": 1000
+  },
+  "Sacrum": {
+    "length_cm": 10.0,
+    "width_cm": 11.0,
+    "thickness_cm": 1.0,
+    "mass_g": 30,
+    "density_kg_m3": 1500
+  },
+  "Rib": {
+    "avg_length_cm": 24.0,
+    "avg_width_cm": 1.2,
+    "avg_thickness_cm": 0.5,
+    "avg_mass_g": 8,
+    "density_kg_m3": 1800
+  },
+  "Sternum": {
+    "length_cm": 17.0,
+    "width_cm": 5.0,
+    "thickness_cm": 1.0,
+    "mass_g": 15,
+    "density_kg_m3": 1800
+  },
+  "Skull": {
+    "length_cm": 18.0,
+    "width_cm": 14.0,
+    "height_cm": 13.0,
+    "wall_thickness_cm": 0.7,
+    "mass_g": 550,
+    "density_kg_m3": 1600
+  },
+  "Mandible": {
+    "length_cm": 13.0,
+    "height_cm": 7.0,
+    "thickness_cm": 1.3,
+    "mass_g": 75,
+    "density_kg_m3": 1800
+  },
+  "BoneMaterialProperties": {
+    "cortical_density_g_cm3": 1.8,
+    "trabecular_density_g_cm3": 0.2,
+    "cortical_Youngs_modulus_GPa": 18.5,
+    "trabecular_Youngs_modulus_GPa": 0.5,
+    "cortical_tensile_strength_MPa": 130,
+    "cortical_compressive_strength_MPa": 170,
+    "trabecular_compressive_strength_MPa": 5
+  },
+  "SyntheticMaterials": {
+    "Ti6Al4V": {
+      "density_g_cm3": 4.4,
+      "Youngs_modulus_GPa": 110,
+      "tensile_strength_MPa": 950
+    },
+    "CFRP": {
+      "density_g_cm3": 1.6,
+      "Youngs_modulus_GPa": 70,
+      "tensile_strength_MPa": 700
+    },
+    "UHMWPE": {
+      "density_g_cm3": 0.93,
+      "Youngs_modulus_GPa": 0.5,
+      "tensile_strength_MPa": 35
+    },
+    "PEEK": {
+      "density_g_cm3": 1.3,
+      "Youngs_modulus_GPa": 3.5,
+      "tensile_strength_MPa": 95
+    }
+  }
+}

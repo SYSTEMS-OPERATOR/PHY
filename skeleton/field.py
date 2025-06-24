@@ -55,7 +55,10 @@ class SkeletonField:
             if b.domain_id in visited:
                 return
             visited.add(b.domain_id)
-            for other in b.entanglement_links:
+            for link_id in b.entanglement_links:
+                other = self.bones.get(link_id)
+                if other is None:
+                    continue
                 other.receive_signal_packet(signal, b.domain_id)
                 _prop(other)
 

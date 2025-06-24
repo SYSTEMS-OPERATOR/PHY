@@ -99,3 +99,45 @@ class SkeletonField:
                 report[bone.unique_id] = diff
         return report
 
+
+    # Visualization helpers
+    def to_render_nodes(self, color_by: str = 'material') -> List['SkeletonRenderNode']:
+        from .visualization import SkeletonRenderNode
+
+        nodes: List[SkeletonRenderNode] = []
+        for bone in self.bones.values():
+            nodes.append(SkeletonRenderNode.from_bone(bone, color_by=color_by))
+        return nodes
+
+    def _connection_pairs(self) -> List[Tuple[str, str]]:
+        pairs: List[Tuple[str, str]] = []
+        name_map = {b.name: b for b in self.bones.values()}
+        for bone in self.bones.values():
+            for art in bone.articulations:
+                other = name_map.get(art.get('bone'))
+                if other:
+                    pairs.append((bone.unique_id, other.unique_id))
+        return pairs
+
+    def visualize(
+        self,
+        mode: str = '3d_cylinders',
+        color_by: str = 'material',
+        interactivity: bool = True,
+        output_target: str = 'ipython',
+        **vis_kwargs,
+    ) -> None:
+        from .visualization import SkeletonVisualizer2D, SkeletonVisualizer3D
+
+        nodes = self.to_render_nodes(color_by=color_by)
+        connections = self._connection_pairs()
+
+        if mode == '2d_graph':
+            viz = SkeletonVisualizer2D()
+            viz.render_graph(nodes, connections, **vis_kwargs)
+        elif mode == '3d_points':
+            viz = SkeletonVisualizer3D()
+            viz.render_points(nodes, **vis_kwargs)
+        else:  # default to 3d_cylinders
+            viz = SkeletonVisualizer3D()
+            viz.render_cylinders(nodes, connections, **vis_kwargs)

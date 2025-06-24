@@ -46,6 +46,7 @@ class SkeletonField:
 
 
     def propagate(self, from_domain: str, signal: Dict[str, float]) -> None:
+        """Propagate a signal through the entanglement network."""
         origin = self.bones.get(from_domain)
         if not origin:
             return

@@ -13,8 +13,6 @@ bones can participate in a metaphysical bionic network, following the
 
 from __future__ import annotations
 
-from __future__ import annotations
-
 from dataclasses import dataclass, field
 from typing import Dict, List, Optional, Tuple
 import warnings
@@ -180,6 +178,7 @@ class BoneSpec:
         When ``to_bone`` is ``None`` the method will send the signal to all
         entangled links using the provided ``field`` to resolve domain IDs.
         """
+
         regulated = self.marrow.regulate(voltage, signal_type)
         self.voltage_potential = regulated
         if to_bone is not None:
@@ -189,6 +188,7 @@ class BoneSpec:
                 other = field.get(link_id)
                 if other is not None:
                     other.receive_signal(regulated, signal_type, from_domain=self.domain_id)
+
 
     def self_state(self) -> Dict[str, object]:
         """Return a dict summarizing the bone's current state."""

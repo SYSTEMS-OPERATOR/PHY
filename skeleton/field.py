@@ -46,6 +46,7 @@ class SkeletonField:
 
 
     def propagate(self, from_domain: str, signal: Dict[str, float]) -> None:
+        """Propagate a signal through the entanglement network."""
         origin = self.bones.get(from_domain)
         if not origin:
             return
@@ -55,9 +56,11 @@ class SkeletonField:
             if b.domain_id in visited:
                 return
             visited.add(b.domain_id)
-            for other in b.entanglement_links:
-                other.receive_signal_packet(signal, b.domain_id)
-                _prop(other)
+            for link_id in b.entanglement_links:
+                other = self.bones.get(link_id)
+                if other is not None:
+                    other.receive_signal_packet(signal, b.domain_id)
+                    _prop(other)
 
         _prop(origin)
 

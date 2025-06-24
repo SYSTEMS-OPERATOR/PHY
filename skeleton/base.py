@@ -13,8 +13,6 @@ bones can participate in a metaphysical bionic network, following the
 
 from __future__ import annotations
 
-from __future__ import annotations
-
 from dataclasses import dataclass, field
 from typing import Dict, List, Optional, Tuple
 import warnings
@@ -63,7 +61,7 @@ class BoneSpec:
     domain_id: str = ""
     ground_state: bool = False
     voltage_potential: float = 0.0
-    entanglement_links: List["BoneSpec"] = field(default_factory=list)
+    entanglement_links: List[str] = field(default_factory=list)
     marrow: MarrowAgent = field(default_factory=MarrowAgent)
     position: Tuple[float, float, float] = (0.0, 0.0, 0.0)
     orientation: Tuple[float, float, float, float] = (1.0, 0.0, 0.0, 0.0)
@@ -168,13 +166,25 @@ class BoneSpec:
         self.voltage_potential = regulated
         return regulated
 
-    def emit_signal(self, to_bone: Optional["BoneSpec"], voltage: float, signal_type: str = "EMG") -> None:
+    def emit_signal(
+        self,
+        to_bone: Optional["BoneSpec"],
+        voltage: float,
+        signal_type: str = "EMG",
+        field: Optional["SkeletonField"] = None,
+    ) -> None:
         """Emit a signal to another bone or broadcast to entangled links."""
         regulated = self.marrow.regulate(voltage, signal_type)
         self.voltage_potential = regulated
-        targets = self.entanglement_links if to_bone is None else [to_bone]
-        for target in targets:
-            target.receive_signal(regulated, signal_type, from_domain=self.domain_id)
+        if to_bone is not None:
+            to_bone.receive_signal(regulated, signal_type, from_domain=self.domain_id)
+            return
+        for link_id in self.entanglement_links:
+            other = None
+            if field is not None:
+                other = field.bones.get(link_id)
+            if other is not None:
+                other.receive_signal(regulated, signal_type, from_domain=self.domain_id)
 
     def self_state(self) -> Dict[str, object]:
         """Return a dict summarizing the bone's current state."""

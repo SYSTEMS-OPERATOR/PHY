@@ -173,18 +173,22 @@ class BoneSpec:
         signal_type: str = "EMG",
         field: Optional["SkeletonField"] = None,
     ) -> None:
-        """Emit a signal to another bone or broadcast to entangled links."""
+        """Emit a signal to another bone or broadcast to entangled links.
+
+        When ``to_bone`` is ``None`` the method will send the signal to all
+        entangled links using the provided ``field`` to resolve domain IDs.
+        """
+
         regulated = self.marrow.regulate(voltage, signal_type)
         self.voltage_potential = regulated
         if to_bone is not None:
             to_bone.receive_signal(regulated, signal_type, from_domain=self.domain_id)
-            return
-        for link_id in self.entanglement_links:
-            other = None
-            if field is not None:
-                other = field.bones.get(link_id)
-            if other is not None:
-                other.receive_signal(regulated, signal_type, from_domain=self.domain_id)
+        elif field is not None:
+            for link_id in self.entanglement_links:
+                other = field.get(link_id)
+                if other is not None:
+                    other.receive_signal(regulated, signal_type, from_domain=self.domain_id)
+
 
     def self_state(self) -> Dict[str, object]:
         """Return a dict summarizing the bone's current state."""

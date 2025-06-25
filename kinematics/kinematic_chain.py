@@ -41,7 +41,6 @@ class KinematicChain:
 
     def forward_kinematics(self, angles: Dict[str, float]) -> Dict[str, np.ndarray]:
         T = {self.root_uid: np.eye(4)}
-        joint_map = {j.child_uid: j for j in self.joints}
         queue = [self.root_uid]
         while queue:
             parent = queue.pop(0)
@@ -49,9 +48,14 @@ class KinematicChain:
                 if j.parent_uid != parent:
                     continue
                 ang = angles.get(j.name, 0.0)
-                R_origin = rot_from_axis_angle((0, 0, 1), 0)
+                rpy = tuple(math.radians(v) for v in j.origin_rpy)
+                R_origin = (
+                    rot_from_axis_angle((0, 0, 1), rpy[2])
+                    @ rot_from_axis_angle((0, 1, 0), rpy[1])
+                    @ rot_from_axis_angle((1, 0, 0), rpy[0])
+                )
+                origin = transform_matrix(R_origin, j.origin_xyz)
                 R = rot_from_axis_angle(j.axis, math.radians(ang))
-                origin = transform_matrix(np.eye(3), j.origin_xyz)
                 M = T[parent] @ origin @ transform_matrix(R, (0, 0, 0))
                 T[j.child_uid] = M
                 queue.append(j.child_uid)
@@ -71,6 +75,7 @@ class KinematicChain:
             initial = {j.name: 0.0 for j in self.joints}
         angles = dict(initial)
         joint_names = [j.name for j in self.joints]
+        dq = np.zeros(len(joint_names))
         for _ in range(max_iter):
             pos = self.end_effector_position(angles, end_uid)
             err = np.array(target) - pos
@@ -84,7 +89,23 @@ class KinematicChain:
                 J.append((pos_eps - pos) / 0.001)
             J = np.array(J).T
             dq = np.linalg.pinv(J) @ err
-            for i, name in enumerate(joint_names):
-                angles[name] += math.degrees(dq[i])
+        for i, name in enumerate(joint_names):
+            angles[name] += math.degrees(dq[i])
         return angles
+
+    def center_of_mass(self, angles: Dict[str, float]) -> np.ndarray:
+        """Return the world-space center of mass for the chain."""
+        transforms = self.forward_kinematics(angles)
+        com_sum = np.zeros(3)
+        mass_sum = 0.0
+        for uid, T in transforms.items():
+            bone = self.bones[uid]
+            com_local = bone.geometry.get("COM", (0.0, 0.0, 0.0))
+            com_world = T @ np.array([com_local[0], com_local[1], com_local[2], 1.0])
+            mass = bone.mass_kg() or 0.0
+            com_sum += mass * com_world[:3]
+            mass_sum += mass
+        if mass_sum == 0.0:
+            return np.zeros(3)
+        return com_sum / mass_sum
 

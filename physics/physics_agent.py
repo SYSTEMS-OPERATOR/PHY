@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Dict, List, Optional
+from typing import Dict, List, Iterable, Optional
 import os
 import tempfile
 import pybullet as pb
@@ -14,6 +14,11 @@ from soft.ligament_agent import LigamentAgent
 from control.control_agent import ControlAgent
 from adaptation.wolff_engine import WolffAdaptationEngine
 from energy.energy_agent import EnergyAgent
+from sensors.sensor_agent import SensorAgent
+from neuro.neuro_agent import NeuroAgent
+from damage.damage_engine import DamageEngine
+from healing.healing_engine import HealingEngine
+from autonomic.autonomic_agent import AutonomicAgent
 
 
 @dataclass
@@ -24,6 +29,11 @@ class PhysicsAgent:
     controller: Optional[ControlAgent] = None
     wolff: Optional[WolffAdaptationEngine] = None
     energy: Optional[EnergyAgent] = None
+    sensors: Iterable[SensorAgent] = field(default_factory=list)
+    neuro: Optional[NeuroAgent] = None
+    damage_engine: Optional[DamageEngine] = None
+    healing: Optional[HealingEngine] = None
+    autonomic: Optional[AutonomicAgent] = None
 
     def __post_init__(self) -> None:
         self.client = pb.connect(pb.DIRECT)
@@ -46,6 +56,8 @@ class PhysicsAgent:
             pb.setJointMotorControl2(self.robot, jid, pb.TORQUE_CONTROL, force=torque, physicsClientId=self.client)
 
     def step(self, dt: float) -> None:
+        if self.neuro is not None:
+            self.neuro.step(dt)
         activations: Dict[str, float] = {}
         if self.controller is not None:
             activations = self.controller.update(dt, {})
@@ -56,6 +68,8 @@ class PhysicsAgent:
             if self.energy is not None:
                 vel = self.get_joint_velocity(m.joint_name)
                 self.energy.accumulate(torque, vel, dt)
+            if self.damage_engine is not None:
+                self.damage_engine.accumulate(m.spec.name, abs(torque), 0.0)
         for lig in self.ligaments:
             ang = self.get_joint_state(lig.joint_name)
             vel = self.get_joint_velocity(lig.joint_name)
@@ -66,6 +80,12 @@ class PhysicsAgent:
         if self.wolff is not None:
             loads = {uid: self.get_bone_force(uid) for uid in self.chain.bones}
             self.wolff.record(loads)
+        if self.healing is not None:
+            self.healing.update(0.0)
+        if self.autonomic is not None:
+            self.autonomic.update(dt)
+        for s in self.sensors:
+            s.update(dt)
 
     def get_joint_state(self, name: str) -> float:
         jid = self.joint_map.get(name)

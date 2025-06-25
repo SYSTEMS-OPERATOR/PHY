@@ -20,6 +20,13 @@ jobs:
         pip install pytest pandas pybullet==3.2.5 ikpy scipy
     - name: Run tests
       run: pytest -q
+    - name: Run healing demo
+      run: python bin/demo_healing.py > heal_log.txt
+    - name: Upload demo
+      uses: actions/upload-artifact@v4
+      with:
+        name: healing-demo
+        path: heal_log.txt
     - name: Validate skeleton (organic)
       run: python -m eval_skeleton --material organic --export-dir reports/organic
     - name: Validate skeleton (Ti6Al4V)

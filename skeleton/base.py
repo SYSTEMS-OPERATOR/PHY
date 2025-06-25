@@ -327,6 +327,9 @@ class BoneSpec:
         key = self.name
         metrics = dataset.get(key)
         if metrics is None:
+            key = self.name.replace(" ", "")
+            metrics = dataset.get(key)
+        if metrics is None:
             key = self.unique_id
             metrics = dataset.get(key)
 

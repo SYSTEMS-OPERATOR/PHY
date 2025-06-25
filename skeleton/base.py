@@ -320,14 +320,11 @@ class BoneSpec:
     def apply_dataset(self, dataset: Dict[str, dict]) -> None:
         """Populate metric fields from the dataset."""
         key = self.name
-        metrics = dataset.get(key) or dataset.get(self.unique_id)
-        self.dataset = dataset
+        metrics = dataset.get(key)
         if metrics is None:
-            alt_key = key.replace(" ", "")
-            if alt_key != key:
-                metrics = dataset.get(alt_key)
-                if metrics is not None:
-                    key = alt_key
+            key = self.unique_id
+            metrics = dataset.get(key)
+
         if metrics is None:
             warnings.warn(f"Metrics for {self.name} not found in dataset")
             self.dataset_key = None

@@ -25,7 +25,7 @@ jobs:
     - name: Validate skeleton (Ti6Al4V)
       run: python -m eval_skeleton --material Ti6Al4V --export-dir reports/ti
     - name: Upload reports
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: validation-reports
         path: reports/

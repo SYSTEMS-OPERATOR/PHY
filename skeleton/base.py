@@ -67,6 +67,7 @@ class BoneSpec:
     orientation: Tuple[float, float, float, float] = (1.0, 0.0, 0.0, 0.0)
     load: Tuple[float, float, float] = (0.0, 0.0, 0.0)
     torsion: Tuple[float, float, float] = (0.0, 0.0, 0.0)
+    mount_points: List[Dict[str, object]] = field(default_factory=list)
     state_faults: List[str] = field(default_factory=list)
     resonance: List[str] = field(default_factory=list)
     dataset: Optional[Dict[str, dict]] = None

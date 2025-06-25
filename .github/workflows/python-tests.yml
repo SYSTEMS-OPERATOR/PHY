@@ -17,9 +17,19 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install pytest pandas
+        pip install pytest pandas pybullet ikpy
     - name: Run tests
-      run: pytest -q
+      run: pytest -q | tee reports/test.log
+    - name: Generate URDF
+      run: |
+        python - <<'PY'
+        from skeleton.datasets import bones_from_dataset
+        from joints.joint_spec import hinge
+        from export.urdf_exporter import bones_to_urdf
+        bones = bones_from_dataset('female_21_baseline')[:2]
+        u = bones_to_urdf(bones[0], [hinge('j', bones[0].unique_id, bones[1].unique_id)], bones)
+        open('reports/test.urdf','w').write(u)
+        PY
     - name: Validate skeleton (organic)
       run: python -m eval_skeleton --material organic --export-dir reports/organic
     - name: Validate skeleton (Ti6Al4V)

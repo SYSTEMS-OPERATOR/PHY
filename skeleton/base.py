@@ -71,6 +71,7 @@ class BoneSpec:
     resonance: List[str] = field(default_factory=list)
     dataset: Optional[Dict[str, dict]] = None
     dataset_key: Optional[str] = None
+    mount_points: List[Dict[str, object]] = field(default_factory=list)
     metric_sources: Dict[str, str] = field(default_factory=dict)
 
     def __post_init__(self) -> None:

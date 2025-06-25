@@ -61,8 +61,9 @@ class GeometryAgent:
             mass = density * volume_m3
             inertia = box_inertia(mass, x, y, z)
             com = (x / 2, y / 2, z / 2)
-            self.bone.geometry.update({
-                "type": "box",
+            geom_type = "box" if shape == "flat" else "irregular"
+            geom_dict = {
+                "type": geom_type,
                 "width_m": x,
                 "thickness_m": y,
                 "length_m": z,
@@ -71,5 +72,8 @@ class GeometryAgent:
                 "V_cm3": volume_m3 * 1e6,
                 "COM": com,
                 "inertia_kgm2": inertia,
-            })
+            }
+            if shape == "irregular":
+                geom_dict["mass_distribution"] = "irregular"
+            self.bone.geometry.update(geom_dict)
 

@@ -7,8 +7,10 @@ wrapper around PyBullet.  The focus is correctness rather than fidelity.
 ## Components
 
 - **GeometryAgent** computes a primitive shape for a `BoneSpec`. Long bones are
-  treated as cylinders, everything else falls back to a box approximation.  The
-  agent stores the volume, centre of mass and inertia tensor on the bone.
+  treated as cylinders, while flat and irregular bones fall back to a box
+  approximation. Irregular shapes carry a `mass_distribution` flag to mark
+  non-uniform mass. The agent stores the volume, centre of mass and inertia
+  tensor on the bone.
 - **JointSpec** describes the connection between bones. Factory helpers create
   common hinge and pivot joints.
 - **KinematicChain** builds a tree from bones and joints. It supports forward and

@@ -41,7 +41,6 @@ class KinematicChain:
 
     def forward_kinematics(self, angles: Dict[str, float]) -> Dict[str, np.ndarray]:
         T = {self.root_uid: np.eye(4)}
-        joint_map = {j.child_uid: j for j in self.joints}
         queue = [self.root_uid]
         while queue:
             parent = queue.pop(0)
@@ -49,9 +48,14 @@ class KinematicChain:
                 if j.parent_uid != parent:
                     continue
                 ang = angles.get(j.name, 0.0)
-                R_origin = rot_from_axis_angle((0, 0, 1), 0)
+                rpy = tuple(math.radians(v) for v in j.origin_rpy)
+                R_origin = (
+                    rot_from_axis_angle((0, 0, 1), rpy[2])
+                    @ rot_from_axis_angle((0, 1, 0), rpy[1])
+                    @ rot_from_axis_angle((1, 0, 0), rpy[0])
+                )
+                origin = transform_matrix(R_origin, j.origin_xyz)
                 R = rot_from_axis_angle(j.axis, math.radians(ang))
-                origin = transform_matrix(np.eye(3), j.origin_xyz)
                 M = T[parent] @ origin @ transform_matrix(R, (0, 0, 0))
                 T[j.child_uid] = M
                 queue.append(j.child_uid)

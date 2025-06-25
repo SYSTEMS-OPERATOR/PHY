@@ -1,0 +1,10 @@
+{
+  "biceps_brachii": {
+    "origin": {"bone_uid": "BONE_SCAPULA_L", "point": "glenoid"},
+    "insertion": {"bone_uid": "BONE_RADIUS_L", "point": "tuberosity"},
+    "max_isometric_force_N": 800,
+    "optimal_fiber_len_cm": 8.0,
+    "tendon_slack_len_cm": 5.0,
+    "pennation_angle_deg": 0.0
+  }
+}

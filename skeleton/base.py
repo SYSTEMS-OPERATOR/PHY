@@ -56,6 +56,7 @@ class BoneSpec:
     visual_reference: Optional[str] = None
     material: Dict[str, float] = field(default_factory=lambda: {"name": "bone", "density": 1800.0})
     geometry: Dict[str, float] = field(default_factory=dict)
+    mount_points: List[Dict[str, object]] = field(default_factory=list)
     embodiment: str = "virtual"
     material_attributes: Optional[Dict[str, float]] = None
     domain_id: str = ""

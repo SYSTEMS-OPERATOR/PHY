@@ -322,6 +322,12 @@ class BoneSpec:
         key = self.name
         metrics = dataset.get(key) or dataset.get(self.unique_id)
         if metrics is None:
+            alt_key = key.replace(" ", "")
+            if alt_key != key:
+                metrics = dataset.get(alt_key)
+                if metrics is not None:
+                    key = alt_key
+        if metrics is None:
             warnings.warn(f"Metrics for {self.name} not found in dataset")
             self.dataset_key = None
             return

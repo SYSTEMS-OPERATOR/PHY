@@ -17,6 +17,7 @@ def load_bones(dataset_name: str = "female_21_baseline") -> List[BoneSpec]:
 
     dataset = load_dataset(dataset_name)
     for b in bones:
+        b.dataset = dataset
         b.apply_dataset(dataset)
 
     # establish entanglements based on articulations

@@ -16,7 +16,7 @@ wrapper around PyBullet.  The focus is correctness rather than fidelity.
 - **PhysicsAgent** uses PyBullet to simulate the chain.  The agent loads a URDF
   generated on the fly and exposes simple methods for stepping the simulation and
   querying joints.
-- **URDF exporter** serialises the chain to a minimal URDF file.
+- **URDF/SDF exporter** serialises the chain to URDF or SDF files.
 - **TF broadcaster** publishes PyBullet poses as ROS2 TF frames.
 
 A simple CLI entry point `run_dynamics.py` demonstrates a standing and drop

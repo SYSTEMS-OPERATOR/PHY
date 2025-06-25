@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, work ]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install pandas pytest
+      - name: Run tests
+        run: pytest
+      - name: Validate skeleton (organic)
+        run: python bin/eval_skeleton.py --material organic
+      - name: Validate skeleton (Ti6Al4V)
+        run: python bin/eval_skeleton.py --material Ti6Al4V
+      - name: Archive reports
+        uses: actions/upload-artifact@v3
+        with:
+          name: reports
+          path: reports/
+

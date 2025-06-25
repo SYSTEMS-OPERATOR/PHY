@@ -1,0 +1,10 @@
+{
+  "biceps": {
+    "origin": {"bone_uid": "BONE_HUMERUS_L", "point": "distal"},
+    "insertion": {"bone_uid": "BONE_ULNA_L", "point": "proximal"},
+    "max_isometric_force_N": 300.0,
+    "optimal_fiber_len_cm": 10.0,
+    "tendon_slack_len_cm": 10.0,
+    "pennation_angle_deg": 0.0
+  }
+}

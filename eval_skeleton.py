@@ -1,3 +1,6 @@
+# from bin.eval_skeleton import main
+
+
 from __future__ import annotations
 
 import argparse

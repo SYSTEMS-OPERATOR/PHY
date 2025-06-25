@@ -23,9 +23,12 @@ def box_inertia(mass: float, x: float, y: float, z: float) -> List[List[float]]:
 
 @dataclass
 class GeometryAgent:
+    """Attach primitive geometry information to a :class:`BoneSpec`."""
+
     bone: BoneSpec
 
     def compute(self) -> None:
+        """Compute and store the bone geometry and inertia."""
         dims = self.bone.dimensions
         l = dims.get("length_cm")
         w = dims.get("width_cm")
@@ -34,6 +37,7 @@ class GeometryAgent:
             return
         shape = self.bone.bone_type
         density = self.bone.material.get("density", 1800.0)
+
         if shape == "long":
             radius_m = (w * 0.5) / 100
             length_m = l / 100
@@ -41,17 +45,27 @@ class GeometryAgent:
             mass = density * volume_m3
             inertia = cylinder_inertia(mass, radius_m, length_m)
             com = (0.0, 0.0, length_m / 2)
-            self.bone.geometry.update({
+            geom = {
                 "type": "cylinder",
                 "radius_m": radius_m,
                 "length_m": length_m,
-                "verts": [],
-                "faces": [],
-                "V_cm3": volume_m3 * 1e6,
-                "COM": com,
-                "inertia_kgm2": inertia,
-            })
+            }
+        elif shape == "flat" and t is not None:
+            x = w / 100
+            y = t / 100
+            z = l / 100
+            volume_m3 = x * y * z
+            mass = density * volume_m3
+            inertia = box_inertia(mass, x, y, z)
+            com = (x / 2, y / 2, z / 2)
+            geom = {
+                "type": "plate",
+                "width_m": x,
+                "thickness_m": y,
+                "length_m": z,
+            }
         else:
+            # irregular or generic box approximation
             if t is None:
                 return
             x = w / 100
@@ -76,4 +90,9 @@ class GeometryAgent:
             if shape == "irregular":
                 geom_dict["mass_distribution"] = "irregular"
             self.bone.geometry.update(geom_dict)
+
+    def recompute(self) -> None:
+        """Clear stored geometry and recompute with current attributes."""
+        self.bone.geometry.clear()
+        self.compute()
 

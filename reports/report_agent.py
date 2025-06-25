@@ -11,6 +11,7 @@ from skeleton.field import SkeletonField
 class ReportAgent:
     """Generate validation reports."""
 
+
     def __init__(self, skeleton: SkeletonField, results: Dict[str, object]):
         self.skeleton = skeleton
         self.results = results

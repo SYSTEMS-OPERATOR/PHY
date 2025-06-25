@@ -2,7 +2,7 @@
 from ..base import BoneSpec
 
 bone = BoneSpec(
-    name = 'Hip Bone',
+    name = 'HipBone',
     bone_type = 'irregular',
     location = {'region': 'pelvis', 'proximal_connection': 'sacrum', 'distal_connection': 'femur'},
     articulations = [],

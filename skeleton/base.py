@@ -318,7 +318,12 @@ class BoneSpec:
 
     # Dataset integration helpers
     def apply_dataset(self, dataset: Dict[str, dict]) -> None:
-        """Populate metric fields from the dataset."""
+        """Populate metric fields from the dataset.
+
+        This also stores the dataset reference so the bone can use
+        dataset-based utilities later (e.g., `set_material`).
+        """
+        self.dataset = dataset
         key = self.name
         metrics = dataset.get(key)
         if metrics is None:

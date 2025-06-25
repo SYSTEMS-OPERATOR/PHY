@@ -4,8 +4,6 @@ from __future__ import annotations
 import argparse
 
 from skeleton.bones import load_bones
-from skeleton.field import SkeletonField
-from skeleton.datasets import load_dataset
 from geometry.geometry_agent import GeometryAgent
 from joints import joint_spec
 from kinematics.kinematic_chain import KinematicChain
@@ -13,15 +11,28 @@ from physics.physics_agent import PhysicsAgent
 
 
 def build_chain(material: str = "organic") -> KinematicChain:
-    bones = load_bones("female_21_baseline")[:2]
-    dataset = load_dataset("female_21_baseline")
-    for b in bones:
+    """Return a simple femur-tibia kinematic chain."""
+    bones = load_bones("female_21_baseline")
+    femur = next(b for b in bones if b.unique_id == "BONE_FEMUR_L")
+    tibia = next(b for b in bones if b.unique_id == "BONE_TIBIA_L")
+
+    for b in (femur, tibia):
         b.set_material(material)
         b.set_embodiment("physical", b.material)
         GeometryAgent(b).compute()
-    j = joint_spec.hinge("joint1", bones[0].unique_id, bones[1].unique_id, axis=(0,0,1), limit=(-180,180), origin_xyz=(0,0,bones[0].dimensions.get('length_cm',1)/100))
-    mapping = {b.unique_id: b for b in bones}
-    chain = KinematicChain(mapping, [j], bones[0].unique_id)
+
+    origin_z = femur.dimensions.get("length_cm", 1.0) / 100
+    j = joint_spec.hinge(
+        "joint1",
+        femur.unique_id,
+        tibia.unique_id,
+        axis=(0, 0, 1),
+        limit=(-180, 180),
+        origin_xyz=(0, 0, origin_z),
+    )
+
+    mapping = {femur.unique_id: femur, tibia.unique_id: tibia}
+    chain = KinematicChain(mapping, [j], femur.unique_id)
     return chain
 
 

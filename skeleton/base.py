@@ -321,12 +321,12 @@ class BoneSpec:
         """Populate metric fields from the dataset."""
         key = self.name
         metrics = dataset.get(key) or dataset.get(self.unique_id)
+        self.dataset = dataset
         if metrics is None:
             warnings.warn(f"Metrics for {self.name} not found in dataset")
             self.dataset_key = None
             return
         self.dataset_key = key
-        self.dataset = dataset
         for field_name in ["length_cm", "width_cm", "thickness_cm", "height_cm", "mass_g", "density_kg_m3"]:
             if field_name in metrics:
                 target_dict = self.dimensions if field_name.endswith("_cm") else self.material

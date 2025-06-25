@@ -17,6 +17,14 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install pytest
+        pip install pytest pandas
     - name: Run tests
       run: pytest -q
+    - name: Validate organic skeleton
+      run: python -m eval_skeleton --material organic --export-dir reports/organic
+    - name: Validate Ti6Al4V skeleton
+      run: python -m eval_skeleton --material Ti6Al4V --export-dir reports/Ti6Al4V
+    - uses: actions/upload-artifact@v3
+      with:
+        name: validation-reports
+        path: reports/

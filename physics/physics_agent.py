@@ -14,6 +14,11 @@ from soft.ligament_agent import LigamentAgent
 from control.control_agent import ControlAgent
 from adaptation.wolff_engine import WolffAdaptationEngine
 from energy.energy_agent import EnergyAgent
+from sensors.sensor_agent import SensorAgent
+from neuro.neuro_agent import NeuroAgent
+from damage.damage_engine import DamageEngine
+from healing.healing_engine import HealingEngine
+from autonomic.autonomic_agent import AutonomicAgent
 
 
 @dataclass
@@ -24,6 +29,11 @@ class PhysicsAgent:
     controller: Optional[ControlAgent] = None
     wolff: Optional[WolffAdaptationEngine] = None
     energy: Optional[EnergyAgent] = None
+    sensors: Optional[SensorAgent] = None
+    neuro: Optional[NeuroAgent] = None
+    damage_engine: Optional[DamageEngine] = None
+    healing_engine: Optional[HealingEngine] = None
+    autonomic: Optional[AutonomicAgent] = None
 
     def __post_init__(self) -> None:
         self.client = pb.connect(pb.DIRECT)
@@ -46,11 +56,17 @@ class PhysicsAgent:
             pb.setJointMotorControl2(self.robot, jid, pb.TORQUE_CONTROL, force=torque, physicsClientId=self.client)
 
     def step(self, dt: float) -> None:
+        if self.neuro is not None:
+            self.neuro.step(dt)
         activations: Dict[str, float] = {}
         if self.controller is not None:
             activations = self.controller.update(dt, {})
         for m in self.muscles:
             act = activations.get(m.spec.name, m.spec.activation)
+            if self.neuro is not None:
+                act += self.neuro.reflex.get(m.spec.name, 0.0)
+                if self.neuro.pain_model is not None:
+                    act = self.neuro.pain_model.apply(act)
             torque = m.update(dt, act)
             self.apply_joint_torque(m.joint_name, torque)
             if self.energy is not None:
@@ -61,11 +77,20 @@ class PhysicsAgent:
             vel = self.get_joint_velocity(lig.joint_name)
             torque = lig.update(ang, vel)
             self.apply_joint_torque(lig.joint_name, torque)
+        if self.damage_engine is not None:
+            loads = {uid: self.get_bone_force(uid) for uid in self.chain.bones}
+            self.damage_engine.accumulate(loads, dt)
+        if self.healing_engine is not None:
+            self.healing_engine.update(dt)
+        if self.autonomic is not None:
+            self.autonomic.update(dt)
         pb.setTimeStep(dt, physicsClientId=self.client)
         pb.stepSimulation(physicsClientId=self.client)
         if self.wolff is not None:
             loads = {uid: self.get_bone_force(uid) for uid in self.chain.bones}
             self.wolff.record(loads)
+        if self.sensors is not None:
+            self.sensors.update(dt)
 
     def get_joint_state(self, name: str) -> float:
         jid = self.joint_map.get(name)

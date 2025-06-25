@@ -29,3 +29,13 @@ jobs:
       with:
         name: validation-reports
         path: reports/
+    - name: Run demos
+      run: |
+        python bin/demo_healing.py
+        python bin/demo_reflexes.py
+    - name: Upload demo artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: demo-artifacts
+        path: |
+          healing_curve.png

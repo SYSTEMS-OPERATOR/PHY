@@ -32,13 +32,19 @@ class SkeletonField:
                     bone.entangle(partner)
 
     def broadcast(self, voltage: float, signal_type: str = "EMG") -> None:
+        """Broadcast a signal to all bones simultaneously."""
+        regulated_values: Dict[str, float] = {}
         for bone in self.bones.values():
             regulated = bone.marrow.regulate(voltage, signal_type)
             bone.voltage_potential = regulated
+            regulated_values[bone.domain_id] = regulated
+
+        for bone in self.bones.values():
+            value = regulated_values[bone.domain_id]
             for link_id in bone.entanglement_links:
                 other = self.bones.get(link_id)
                 if other is not None:
-                    other.receive_signal(regulated, signal_type, from_domain=bone.domain_id)
+                    other.receive_signal(value, signal_type, from_domain=bone.domain_id)
 
 
     def summary(self) -> Dict[str, float]:

@@ -17,13 +17,24 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install pytest pandas pybullet==3.2.5 ikpy scipy
+        pip install pytest pandas pybullet==3.2.5 ikpy scipy matplotlib
     - name: Run tests
       run: pytest -q
     - name: Validate skeleton (organic)
       run: python -m eval_skeleton --material organic --export-dir reports/organic
     - name: Validate skeleton (Ti6Al4V)
       run: python -m eval_skeleton --material Ti6Al4V --export-dir reports/ti
+    - name: Run demos
+      run: |
+        PYTHONPATH=. python bin/demo_healing.py --output healing.png
+        PYTHONPATH=. python bin/demo_reflexes.py --output reflex.txt
+    - name: Upload demo artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: demos
+        path: |
+          healing.png
+          reflex.txt
     - name: Upload reports
       uses: actions/upload-artifact@v4
       with:

@@ -17,6 +17,7 @@ class MuscleAgent:
 
     length_m: float = 0.0
     velocity_m_s: float = 0.0
+    last_torque: float = 0.0
 
     def update(self, dt: float, activation: Optional[float] = None) -> float:
         """Return torque to apply at the joint."""
@@ -26,4 +27,5 @@ class MuscleAgent:
         f_iso = self.spec.max_isometric_force_N
         force = self.spec.activation * f_iso
         torque = force * self.moment_arm_m
+        self.last_torque = torque
         return torque

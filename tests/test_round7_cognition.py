@@ -8,6 +8,8 @@ from envs.base_env import BaseEnv
 from perception.vision_agent import VisionAgent
 from perception.auditory_agent import AuditoryAgent
 from memory.memory_agent import MemoryAgent
+import pytest
+pytest.importorskip("pybullet")
 import pybullet as pb
 
 

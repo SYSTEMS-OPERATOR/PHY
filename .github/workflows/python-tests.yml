@@ -21,6 +21,12 @@ jobs:
         pip install gymnasium stable-baselines3 fastapi uvicorn httpx
     - name: Run tests
       run: pytest -q
+    - name: Hardware benches
+      run: |
+        PYTHONPATH=. python bin/rt_monitor.py || true
+        PYTHONPATH=. python bin/generate_tcf.py
+    - name: Build Yocto image
+      run: deploy/yocto_builder.sh yocto_artifact
     - name: Run benchmark smoke
       run: PYTHONPATH=. python bin/run_benchmark.py
     - name: Build Docker image

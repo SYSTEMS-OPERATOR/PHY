@@ -3,7 +3,23 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import List, Tuple
 
-from stable_baselines3.common.monitor import Monitor
+try:
+    from stable_baselines3.common.monitor import Monitor  # type: ignore
+except Exception:  # pragma: no cover
+    class Monitor:
+        """Lightweight wrapper used when stable-baselines3 is absent."""
+
+        def __init__(self, env):
+            self.env = env
+
+        def reset(self, **kwargs):
+            return self.env.reset(**kwargs)
+
+        def step(self, action):
+            return self.env.step(action)
+
+        def __getattr__(self, name):
+            return getattr(self.env, name)
 
 from cortex.cortical_agent import CorticalAgent
 from envs.flat_ground import FlatGroundEnv

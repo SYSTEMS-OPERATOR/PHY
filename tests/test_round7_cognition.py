@@ -5,6 +5,10 @@ from affect.emotion_agent import EmotionAgent
 from training.curriculum_runner import CurriculumRunner
 from cortex.cortical_agent import CorticalAgent
 from envs.base_env import BaseEnv
+from perception.vision_agent import VisionAgent
+from perception.auditory_agent import AuditoryAgent
+from memory.memory_agent import MemoryAgent
+import pybullet as pb
 
 
 def test_forward_model_reduces_error():
@@ -44,3 +48,27 @@ def test_curriculum_progresses():
     runner = CurriculumRunner(agent)
     results = runner.run(steps_per_phase=10)
     assert sum(results) >= 2
+
+
+def test_vision_agent_capture_shape():
+    cid = pb.connect(pb.DIRECT)
+    agent = VisionAgent()
+    frame = agent.capture()
+    pb.disconnect()
+    assert frame.shape == (agent.height, agent.width)
+
+
+def test_auditory_agent_process_shape():
+    agent = AuditoryAgent(n_bands=16)
+    waveform = np.sin(np.linspace(0, 2 * np.pi, 100))
+    mag, cues = agent.process(waveform)
+    assert mag.shape == (16,)
+    assert cues.shape == (16,)
+
+
+def test_memory_buffer_rollover():
+    mem = MemoryAgent(capacity=2)
+    for i in range(3):
+        mem.add(np.array([i]), np.array([i]), float(i), np.array([i + 1]))
+    assert len(mem.buffer) == 2
+    assert mem.idx == 1

@@ -6,6 +6,8 @@ from social.social_cognition import SocialCognitionAgent
 from tasks.cooperative_tasks import PassTheCubeEnv
 from tasks.competitive_tasks import TugOfWarEnv
 from safety.alignment_layer import AlignmentSafetyLayer
+import pytest
+fastapi = pytest.importorskip("fastapi")
 from interpretability.dashboard import app
 from fastapi.testclient import TestClient
 from training.social_curriculum import CurriculumSocialRunner

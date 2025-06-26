@@ -49,17 +49,16 @@ class SimulationWorker:
     """Remote environment worker."""
 
     env_fn: Callable[[], Any]
-    policy_fn: Callable[[], Any]
+    policy_fn: Callable[[Any], Any]
 
     def __post_init__(self) -> None:
         self.env = self.env_fn()
-        self.policy = self.policy_fn()
 
     def rollout(self, steps: int = 200):
         obs, _ = self.env.reset()
         data = []
         for _ in range(steps):
-            action = self.policy(obs)
+            action = self.policy_fn(obs)
             obs, reward, done, _, info = self.env.step(action)
             data.append((obs, action, reward, info))
             if done:

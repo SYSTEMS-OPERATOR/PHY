@@ -29,7 +29,13 @@ class TrainerDistPPO:
         ]
 
     def collect_rollouts(self, steps: int) -> List[Any]:
-        futures = [w.rollout.remote(steps) for w in self.workers]
+        futures = []
+        for w in self.workers:
+            r = getattr(w.rollout, "remote", None)
+            if callable(r):
+                futures.append(r(steps))
+            else:
+                futures.append(w.rollout(steps))
         return backend.ray.get(futures)
 
     def update_policy(self, rollouts: List[Any]) -> None:

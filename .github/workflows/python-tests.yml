@@ -18,7 +18,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install pytest pandas pybullet==3.2.5 ikpy scipy matplotlib
-        pip install gymnasium stable-baselines3
+        pip install gymnasium stable-baselines3 fastapi uvicorn
     - name: Run tests
       run: pytest -q
     - name: Smoke curriculum
@@ -31,6 +31,9 @@ jobs:
       run: |
         PYTHONPATH=. python bin/demo_healing.py --output healing.png
         PYTHONPATH=. python bin/demo_reflexes.py --output reflex.txt
+        PYTHONPATH=. python bin/demo_language_pick.py > lang.txt
+        PYTHONPATH=. python bin/demo_pass_the_cube.py > pass.txt
+        PYTHONPATH=. python bin/demo_stop_button.py > stop.txt
     - name: Upload demo artifacts
       uses: actions/upload-artifact@v4
       with:
@@ -38,6 +41,9 @@ jobs:
         path: |
           healing.png
           reflex.txt
+          lang.txt
+          pass.txt
+          stop.txt
     - name: Upload reports
       uses: actions/upload-artifact@v4
       with:

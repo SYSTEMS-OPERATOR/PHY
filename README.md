@@ -52,3 +52,12 @@ Additional reference parameters for a baseline 21‑year‑old female skeleton a
 provided under `skeleton/datasets/`. Load them with
 `from skeleton.datasets import bones_from_dataset`.
 
+
+## Quick Start for Language Demo
+
+Ensure a working microphone is configured, or the language agent can be given
+text directly.  To try the pick/drop macro:
+
+```bash
+PYTHONPATH=. bin/demo_language_pick.py
+```

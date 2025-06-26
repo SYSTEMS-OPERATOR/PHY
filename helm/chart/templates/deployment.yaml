@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: phy-server
+spec:
+  replicas: {{ .Values.workerReplicas }}
+  selector:
+    matchLabels:
+      app: phy
+  template:
+    metadata:
+      labels:
+        app: phy
+    spec:
+      containers:
+      - name: phy
+        image: {{ .Values.image }}
+        command: ["python", "bin/run_curriculum.py"]

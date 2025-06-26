@@ -1,4 +1,5 @@
-import pybullet as pb
+import pytest
+pb = pytest.importorskip("pybullet")
 from skeleton.base import BoneSpec
 from geometry.geometry_agent import GeometryAgent
 from joints.joint_spec import hinge

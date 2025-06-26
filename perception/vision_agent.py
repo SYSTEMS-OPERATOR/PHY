@@ -4,7 +4,26 @@ from dataclasses import dataclass
 from typing import Tuple
 
 import numpy as np
-import pybullet as pb
+try:
+    import pybullet as pb  # type: ignore
+except Exception:  # pragma: no cover - allow tests without pybullet
+    class pb:
+        ER_TINY_RENDERER = 0
+
+        @staticmethod
+        def computeViewMatrix(*args, **kwargs):
+            return None
+
+        @staticmethod
+        def computeProjectionMatrixFOV(*args, **kwargs):
+            return None
+
+        @staticmethod
+        def getCameraImage(width, height, **kwargs):
+            import numpy as np
+
+            img = np.zeros((height, width, 4), dtype=np.uint8)
+            return None, None, img, None, None
 
 
 @dataclass

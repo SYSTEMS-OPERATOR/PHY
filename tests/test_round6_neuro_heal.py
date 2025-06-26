@@ -1,4 +1,6 @@
 import numpy as np
+import pytest
+pytest.importorskip("pybullet")
 
 from skeleton.bones import load_bones
 from geometry.geometry_agent import GeometryAgent

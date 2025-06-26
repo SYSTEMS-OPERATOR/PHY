@@ -26,6 +26,10 @@ jobs:
     - name: Build Docker image
       run: |
         docker --version || echo "no docker"
+    - name: Build Yocto image
+      run: deploy/yocto_builder.sh
+    - name: Run QEMU RT smoke
+      run: deploy/yocto_builder.sh qemu-test
     - name: Smoke curriculum
       run: PYTHONPATH=. python bin/run_curriculum.py
     - name: Validate skeleton (organic)

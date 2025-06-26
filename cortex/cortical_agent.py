@@ -5,7 +5,24 @@ from typing import Any
 
 import numpy as np
 from stable_baselines3 import PPO
-from stable_baselines3.common.envs import DummyEnv
+import gymnasium as gym
+
+
+class _StaticEnv(gym.Env):
+    """Minimal environment just to initialize PPO."""
+
+    def __init__(self, observation_space: gym.Space, action_space: gym.Space) -> None:
+        self.observation_space = observation_space
+        self.action_space = action_space
+
+    def reset(self, *, seed: int | None = None, options: dict | None = None):
+        super().reset(seed=seed)
+        obs = np.zeros(self.observation_space.shape, dtype=np.float32)
+        return obs, {}
+
+    def step(self, action):
+        obs = np.zeros(self.observation_space.shape, dtype=np.float32)
+        return obs, 0.0, True, False, {}
 
 
 @dataclass
@@ -17,7 +34,8 @@ class CorticalAgent:
     model: PPO = field(init=False)
 
     def __post_init__(self) -> None:
-        self.model = PPO('MlpPolicy', DummyEnv(self.observation_space, self.action_space), verbose=0)
+        dummy_env = _StaticEnv(self.observation_space, self.action_space)
+        self.model = PPO('MlpPolicy', dummy_env, verbose=0)
 
     def train(self, env, steps: int) -> None:
         self.model.set_env(env)

@@ -11,7 +11,7 @@ class BaseEnv(gym.Env):
 
     def __post_init__(self) -> None:
         self.observation_space = gym.spaces.Box(low=-np.inf, high=np.inf, shape=(4,), dtype=np.float32)
-        self.action_space = gym.spaces.Box(low=-1.0, high=1.0, shape=(2,), dtype=np.float32)
+        self.action_space = gym.spaces.Box(low=-1.0, high=1.0, shape=(4,), dtype=np.float32)
         self.state = np.zeros(4, dtype=np.float32)
         self.t = 0
 

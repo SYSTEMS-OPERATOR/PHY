@@ -13,6 +13,8 @@ class SafetyController:
     torque_cb: Callable[[float], None]
     estop_cb: Callable[[], None]
     faulted: bool = field(init=False, default=False)
+    contactor_a: bool = field(init=False, default=True)
+    contactor_b: bool = field(init=False, default=True)
     _threads: list[threading.Thread] = field(init=False, default_factory=list)
     _running: bool = field(init=False, default=False)
 
@@ -20,8 +22,10 @@ class SafetyController:
         if self._running:
             return
         self._running = True
-        self._threads = [threading.Thread(target=self._plc_loop, daemon=True),
-                         threading.Thread(target=self._micro_loop, daemon=True)]
+        self._threads = [
+            threading.Thread(target=self._plc_loop, daemon=True),
+            threading.Thread(target=self._micro_loop, daemon=True),
+        ]
         for t in self._threads:
             t.start()
 
@@ -33,6 +37,8 @@ class SafetyController:
 
     def trigger_estop(self) -> None:
         self.faulted = True
+        self.contactor_a = False
+        self.contactor_b = False
         self.estop_cb()
         self.torque_cb(0.0)
 
@@ -42,9 +48,11 @@ class SafetyController:
             time.sleep(0.01)
             if self.faulted:
                 self.torque_cb(0.0)
+                self.contactor_a = False
 
     def _micro_loop(self) -> None:
         while self._running:
             time.sleep(0.02)
             if self.faulted:
                 self.estop_cb()
+                self.contactor_b = False

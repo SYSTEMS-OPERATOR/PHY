@@ -1,10 +1,12 @@
 """Privacy module providing encryption and differential privacy."""
 from __future__ import annotations
 
-from dataclasses import dataclass
-from typing import Any
+from dataclasses import dataclass, field
+from typing import Any, Dict
 
 import os
+from fastapi import FastAPI
+from fastapi.responses import PlainTextResponse
 try:
     from cryptography.hazmat.primitives.ciphers.aead import AESGCM
 except Exception:  # pragma: no cover - optional dependency
@@ -21,6 +23,7 @@ def add_laplace_noise(value: float, epsilon: float) -> float:
 @dataclass
 class PrivacyManager:
     key: bytes
+    dsar_requests: Dict[str, str] = field(default_factory=dict)
 
     def __post_init__(self) -> None:
         if len(self.key) != 32:
@@ -43,3 +46,13 @@ class PrivacyManager:
 
     def dp_query(self, value: float, epsilon: float = 1.0) -> float:
         return add_laplace_noise(value, epsilon)
+
+    def dsar_app(self) -> FastAPI:
+        app = FastAPI()
+
+        @app.post("/dsar")
+        async def dsar(user: str) -> PlainTextResponse:
+            self.dsar_requests[user] = "delete"
+            return PlainTextResponse("request logged")
+
+        return app

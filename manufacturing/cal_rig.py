@@ -15,9 +15,11 @@ class CalibrationRig:
         self.results = {"torque": 1.0, "sensor": self.serial}
 
     def birth_certificate(self) -> str:
+        firmware_hash = "deadbeef"  # placeholder
         data = {
             "serial": self.serial,
             "results": self.results,
+            "firmware": firmware_hash,
         }
         return json.dumps(data)
 

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Damage Module Manual</title>
+<style>
+body { font-family: sans-serif; line-height: 1.6; margin: 2em; }
+h1 { color: #333333; }
+h2 { color: #555555; }
+code { background: #f8f8f8; padding: 2px 4px; }
+pre { background: #f0f0f0; padding: 1em; overflow-x: auto; }
+</style>
+</head>
+<body>
+<h1>Damage Module Manual</h1>
+<p>This manual describes the <code>damage</code> package and how to use the <code>DamageEngine</code>
+for tracking stress related bone events.</p>
+
+<h2>DamageEvent</h2>
+<p>A simple dataclass storing the unique bone identifier, severity level and the
+simulation time when the damage occurred.</p>
+<pre><code>@dataclass
+class DamageEvent:
+    uid: str
+    severity: float
+    time: float
+</code></pre>
+
+<h2>DamageEngine</h2>
+<p>The engine accumulates stress values per bone over time. When a load exceeds
+its material yield strength a <code>DamageEvent</code> is recorded. If the load passes
+the ultimate strength threshold the event severity is set to <code>1.0</code>.</p>
+<pre><code>def accumulate(self, loads: Dict[str, float], dt: float) -&gt; None:
+    self.time += dt
+    for uid, stress in loads.items():
+        bone = self.bones.get(uid)
+        if bone is None:
+            continue
+        yield_strength = bone.material.get("yield_strength", 1e6)
+        ult_strength = bone.material.get("ultimate_strength", 2e6)
+        if stress &gt; yield_strength:
+            severity = 0.1 if stress &lt; ult_strength else 1.0
+            self.events.append(DamageEvent(uid, severity, self.time))
+</code></pre>
+
+<h2>Usage Example</h2>
+<pre><code>from damage.damage_engine import DamageEngine
+from skeleton.bones import load_bones
+
+bones = {b.unique_id: b for b in load_bones("female_21_baseline")}
+engine = DamageEngine(bones)
+
+# apply some loads
+engine.accumulate({"BONE_ULNA_L": 2e6}, 0.01)
+
+for event in engine.events:
+    print(event.uid, event.severity, event.time)
+</code></pre>
+
+<p>The engine stores all <code>DamageEvent</code> objects in the <code>events</code> list for later
+analysis.</p>
+
+</body>
+</html>

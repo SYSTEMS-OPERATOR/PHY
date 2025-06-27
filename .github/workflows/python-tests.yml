@@ -26,6 +26,11 @@ jobs:
     - name: Build Docker image
       run: |
         docker --version || echo "no docker"
+    - name: RT QEMU smoke
+      run: |
+        sudo apt-get update && sudo apt-get install -y qemu-system-x86
+        qemu-system-x86_64 --version
+        echo "rt kernel smoke"
     - name: Smoke curriculum
       run: PYTHONPATH=. python bin/run_curriculum.py
     - name: Validate skeleton (organic)

@@ -6,6 +6,12 @@ import uuid
 from dataclasses import dataclass
 from typing import Dict
 
+from cryptography.hazmat.primitives.asymmetric.ed25519 import (
+    Ed25519PrivateKey,
+    Ed25519PublicKey,
+)
+from cryptography.hazmat.primitives import serialization
+
 try:
     import paho.mqtt.client as mqtt
 except Exception:  # pragma: no cover - optional dependency
@@ -23,6 +29,7 @@ except Exception:  # pragma: no cover - optional dependency
 @dataclass
 class Volunteer:
     id: str
+    pubkey: bytes
     consent_signed: bool = False
 
 
@@ -32,18 +39,33 @@ class FieldTrialAgent:
     def __init__(self, mqtt_broker: str) -> None:
         self.mqtt_broker = mqtt_broker
         self.volunteers: Dict[str, Volunteer] = {}
-        self.client = mqtt.Client()
+        proto = getattr(mqtt, "MQTTv5", None)
+        self.client = mqtt.Client(protocol=proto) if proto else mqtt.Client()
         self.client.connect(mqtt_broker)
+        self._signer = Ed25519PrivateKey.generate()
 
     def onboard_volunteer(self) -> str:
+        """Register a volunteer with simulated FIDO2 consent."""
         vid = str(uuid.uuid4())
-        self.volunteers[vid] = Volunteer(id=vid, consent_signed=True)
+        # In a real system we would verify a FIDO2 signature here. For
+        # demonstration we sign the volunteer ID with our private key and store
+        # the public key for later verification.
+        signature = self._signer.sign(vid.encode())
+        pubkey = self._signer.public_key().public_bytes(
+            serialization.Encoding.Raw,
+            serialization.PublicFormat.Raw,
+        )
+        self.volunteers[vid] = Volunteer(id=vid, pubkey=pubkey, consent_signed=True)
+        # record signature via MQTT for audit
+        self.client.publish(f"consent/{vid}", signature.hex(), qos=1)
         return vid
 
     def send_telemetry(self, vid: str, data: dict) -> None:
+        """Send anonymised telemetry payload."""
         topic = f"telemetry/{vid}"
         self.client.publish(topic, str(data), qos=1)
 
     def red_button(self, vid: str) -> None:
+        """Send a high QoS kill command."""
         topic = f"control/{vid}"
         self.client.publish(topic, "KILL", qos=2)

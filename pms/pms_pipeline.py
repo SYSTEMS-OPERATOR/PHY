@@ -4,6 +4,9 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import List
 
+import json
+import requests
+
 
 try:
     from sklearn.ensemble import IsolationForest  # type: ignore
@@ -26,6 +29,7 @@ class PMSPipeline:
             self.model = IsolationForest(contamination=0.1)
         else:
             self.model = None
+        self.cve_seen: set[str] = set()
 
     def ingest(self, value: float) -> None:
         self.log.append(LogEvent(value))
@@ -55,3 +59,25 @@ class PMSPipeline:
         if self.std == 0:
             return False
         return abs(value - self.mean) > 3 * self.std
+
+    def watch_cves(self, deps: List[str]) -> List[str]:
+        """Check NVD feed for vulnerabilities impacting deps."""
+        try:
+            r = requests.get(
+                "https://services.nvd.nist.gov/rest/json/cves/2.0?resultsPerPage=5",
+                timeout=5,
+            )
+            data = r.json()
+        except Exception:
+            return []
+
+        hits = []
+        for item in data.get("vulnerabilities", []):
+            cve = item.get("cve", {}).get("id")
+            if not cve or cve in self.cve_seen:
+                continue
+            self.cve_seen.add(cve)
+            desc = json.dumps(item)
+            if any(dep.lower() in desc.lower() for dep in deps):
+                hits.append(cve)
+        return hits

@@ -20,7 +20,10 @@ class CAPA:
     issue_id: str
     severity: str
     owner: str
-    opened: datetime.datetime = field(default_factory=lambda: datetime.datetime.now(datetime.timezone.utc))
+    due: datetime.datetime
+    opened: datetime.datetime = field(
+        default_factory=lambda: datetime.datetime.now(datetime.timezone.utc)
+    )
     closed: datetime.datetime | None = None
 
     def close(self) -> None:
@@ -35,13 +38,41 @@ class QMSManager:
         self.docs: Dict[str, ControlledDocument] = {}
         self.capa_events: Dict[str, CAPA] = {}
 
+    def audit_trail_pdf(self, out_path: Path) -> None:
+        """Export audit trail to a PDF file."""
+        try:
+            from reportlab.lib.pagesizes import letter
+            from reportlab.pdfgen import canvas
+        except Exception:  # pragma: no cover - optional dependency
+            return
+
+        c = canvas.Canvas(str(out_path), pagesize=letter)
+        text = c.beginText(40, 750)
+        text.textLine("Audit Trail")
+        for doc in self.docs.values():
+            text.textLine(f"DOC {doc.path} {doc.version} {doc.signer}")
+        for capa in self.capa_events.values():
+            status = "closed" if capa.closed else "open"
+            text.textLine(
+                f"CAPA {capa.issue_id} {status} {capa.severity} due {capa.due.date()}"
+            )
+        c.drawText(text)
+        c.showPage()
+        c.save()
+
     def add_document(self, doc_path: str, signer: str) -> None:
         path = self.repo_root / doc_path
         version = datetime.datetime.now(datetime.timezone.utc).isoformat()
         self.docs[doc_path] = ControlledDocument(path, version, signer, datetime.datetime.now(datetime.timezone.utc))
 
-    def raise_capa(self, issue_id: str, severity: str, owner: str) -> CAPA:
-        capa = CAPA(issue_id=issue_id, severity=severity, owner=owner)
+    def raise_capa(
+        self, issue_id: str, severity: str, owner: str, days: int = 30
+    ) -> CAPA:
+        """Create a CAPA entry with a due date."""
+        due = datetime.datetime.now(datetime.timezone.utc) + datetime.timedelta(
+            days=days
+        )
+        capa = CAPA(issue_id=issue_id, severity=severity, owner=owner, due=due)
         self.capa_events[issue_id] = capa
         return capa
 
@@ -56,5 +87,7 @@ class QMSManager:
             lines.append(f"{doc.path}:{doc.version}:{doc.signer}")
         for capa in self.capa_events.values():
             status = "closed" if capa.closed else "open"
-            lines.append(f"CAPA {capa.issue_id}:{status}:{capa.severity}")
+            lines.append(
+                f"CAPA {capa.issue_id}:{status}:{capa.severity}:due={capa.due.isoformat()}"
+            )
         return lines

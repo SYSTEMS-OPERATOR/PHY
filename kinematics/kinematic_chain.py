@@ -75,7 +75,6 @@ class KinematicChain:
             initial = {j.name: 0.0 for j in self.joints}
         angles = dict(initial)
         joint_names = [j.name for j in self.joints]
-        dq = np.zeros(len(joint_names))
         for _ in range(max_iter):
             pos = self.end_effector_position(angles, end_uid)
             err = np.array(target) - pos
@@ -89,8 +88,8 @@ class KinematicChain:
                 J.append((pos_eps - pos) / 0.001)
             J = np.array(J).T
             dq = np.linalg.pinv(J) @ err
-        for i, name in enumerate(joint_names):
-            angles[name] += math.degrees(dq[i])
+            for i, name in enumerate(joint_names):
+                angles[name] += math.degrees(dq[i])
         return angles
 
     def center_of_mass(self, angles: Dict[str, float]) -> np.ndarray:

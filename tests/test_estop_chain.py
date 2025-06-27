@@ -16,4 +16,9 @@ def test_estop_chain():
     ctrl.trigger_estop()
     time.sleep(0.05)
     ctrl.stop()
-    assert flags["estop"] and flags["torque"] == 0.0
+    assert (
+        flags["estop"]
+        and flags["torque"] == 0.0
+        and not ctrl.contactor_a
+        and not ctrl.contactor_b
+    )

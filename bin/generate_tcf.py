@@ -1,7 +1,13 @@
 #!/usr/bin/env python
-from docs.compliance_doc_gen import ComplianceDocGen
 from pathlib import Path
 import json
+import sys
+
+ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.append(str(ROOT))
+
+from docs.compliance_doc_gen import ComplianceDocGen
 
 
 def main() -> None:

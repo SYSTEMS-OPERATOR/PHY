@@ -5,7 +5,14 @@ from dataclasses import dataclass
 from typing import List
 
 import json
-import requests
+try:
+    import requests
+except Exception:  # pragma: no cover - optional dependency
+    class _DummyRequests:
+        def get(self, *args, **kwargs):
+            raise RuntimeError("requests not available")
+
+    requests = _DummyRequests()
 
 
 try:

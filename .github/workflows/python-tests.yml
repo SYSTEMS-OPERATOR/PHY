@@ -20,6 +20,7 @@ jobs:
         pip install pytest pandas pybullet==3.2.5 ikpy scipy matplotlib
         pip install gymnasium stable-baselines3 fastapi uvicorn httpx
         pip install reportlab
+        pip install cryptography requests
     - name: Run tests
       run: pytest -q
     - name: Hardware benches

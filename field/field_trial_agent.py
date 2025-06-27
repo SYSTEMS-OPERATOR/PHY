@@ -6,11 +6,23 @@ import uuid
 from dataclasses import dataclass
 from typing import Dict
 
-from cryptography.hazmat.primitives.asymmetric.ed25519 import (
-    Ed25519PrivateKey,
-    Ed25519PublicKey,
-)
-from cryptography.hazmat.primitives import serialization
+try:
+    from cryptography.hazmat.primitives.asymmetric.ed25519 import (
+        Ed25519PrivateKey,
+        Ed25519PublicKey,
+    )
+    from cryptography.hazmat.primitives import serialization
+except Exception:  # pragma: no cover - optional dependency
+    Ed25519PrivateKey = None  # type: ignore
+    Ed25519PublicKey = None  # type: ignore
+    class _DummySerialization:
+        class Encoding:
+            Raw = None
+
+        class PublicFormat:
+            Raw = None
+
+    serialization = _DummySerialization()
 
 try:
     import paho.mqtt.client as mqtt
@@ -42,7 +54,7 @@ class FieldTrialAgent:
         proto = getattr(mqtt, "MQTTv5", None)
         self.client = mqtt.Client(protocol=proto) if proto else mqtt.Client()
         self.client.connect(mqtt_broker)
-        self._signer = Ed25519PrivateKey.generate()
+        self._signer = Ed25519PrivateKey.generate() if Ed25519PrivateKey else None
 
     def onboard_volunteer(self) -> str:
         """Register a volunteer with simulated FIDO2 consent."""
@@ -50,11 +62,15 @@ class FieldTrialAgent:
         # In a real system we would verify a FIDO2 signature here. For
         # demonstration we sign the volunteer ID with our private key and store
         # the public key for later verification.
-        signature = self._signer.sign(vid.encode())
-        pubkey = self._signer.public_key().public_bytes(
-            serialization.Encoding.Raw,
-            serialization.PublicFormat.Raw,
-        )
+        if self._signer:
+            signature = self._signer.sign(vid.encode())
+            pubkey = self._signer.public_key().public_bytes(
+                serialization.Encoding.Raw,
+                serialization.PublicFormat.Raw,
+            )
+        else:  # fallback if cryptography not installed
+            signature = vid.encode()
+            pubkey = b""
         self.volunteers[vid] = Volunteer(id=vid, pubkey=pubkey, consent_signed=True)
         # record signature via MQTT for audit
         self.client.publish(f"consent/{vid}", signature.hex(), qos=1)

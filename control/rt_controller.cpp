@@ -32,12 +32,18 @@ private:
     void loop() {
         using clock = std::chrono::steady_clock;
         auto next = clock::now();
+        auto last_cmd = next;
         while (running) {
             next += std::chrono::microseconds(1000);
             command.resize(desired.size());
             for (size_t i = 0; i < desired.size(); ++i) {
                 command[i] = std::clamp(desired[i], -torque_limit, torque_limit);
             }
+            auto now = clock::now();
+            if (std::chrono::duration_cast<std::chrono::milliseconds>(now - last_cmd).count() > 2) {
+                std::fill(command.begin(), command.end(), 0.0);
+            }
+            last_cmd = now;
             std::this_thread::sleep_until(next);
         }
     }

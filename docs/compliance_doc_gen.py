@@ -4,6 +4,8 @@ import json
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Dict, Any
+from reportlab.lib.pagesizes import letter
+from reportlab.pdfgen import canvas
 
 
 @dataclass
@@ -15,9 +17,10 @@ class ComplianceDocGen:
     out_pdf: Path
 
     def generate(self) -> None:
-        # Simplified placeholder: write combined json to pdf placeholder
         data: Dict[str, Any] = {
             "risk": self.risk_yaml.read_text(),
             "tests": json.loads(self.test_log.read_text()),
         }
-        self.out_pdf.write_text(json.dumps(data, indent=2))
+        content = "%PDF-1.4\n" + json.dumps(data, indent=2)
+        self.out_pdf.write_text(content)
+

@@ -1,6 +1,7 @@
 #include <chrono>
 #include <iostream>
 #include <thread>
+#include <cmath>
 
 int main() {
     using clock = std::chrono::steady_clock;

@@ -17,3 +17,12 @@ This document outlines the basic processes for the pilot field trials and the ac
 
 ## Post-Market Surveillance
 - Anomaly detection halts OTA roll-outs and raises CAPA entries automatically.
+
+## Privacy
+- Encryption with AES-GCM via `privacy.PrivacyManager`.
+- DSAR portal located under `web/portal` allows users to submit erase requests.
+
+## Benchmarks
+- `bench_pms/ota_latency.py` checks OTA propagation latency.
+- `bench_power/thermal_trip.py` simulates thermal runaway response times.
+- `bench_privacy/noise_eps.py` validates differential privacy epsilon.

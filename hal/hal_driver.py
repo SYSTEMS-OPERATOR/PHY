@@ -109,13 +109,20 @@ class HAL:
     publish_cb: Callable[[Dict[int, float], Tuple[float, float, float], Tuple[float, float, float]], None]
     running: bool = field(init=False, default=False)
     thread: threading.Thread | None = field(init=False, default=None)
+    frames: int = field(init=False, default=0)
+    dropped: int = field(init=False, default=0)
 
     def _loop(self) -> None:
         next_time = time.time()
         while self.running:
+            now = time.time()
+            if now - next_time > 0.0015:
+                self.dropped += 1
+                next_time = now
             joint_state = self.motor.get_state()
             gyro, accel = self.imu.get_gyro_accel()
             self.publish_cb(joint_state, gyro, accel)
+            self.frames += 1
             next_time += 0.001
             sleep = max(0.0, next_time - time.time())
             time.sleep(sleep)

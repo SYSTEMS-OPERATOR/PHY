@@ -1,6 +1,8 @@
 #!/usr/bin/env python
-from docs.compliance_doc_gen import ComplianceDocGen
+import sys
 from pathlib import Path
+sys.path.append(str(Path(__file__).resolve().parent.parent / "docs"))
+from compliance_doc_gen import ComplianceDocGen
 import json
 
 

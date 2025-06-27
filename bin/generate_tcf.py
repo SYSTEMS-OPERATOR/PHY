@@ -1,10 +1,11 @@
 #!/usr/bin/env python
 
+import sys
 from pathlib import Path
 sys.path.append(str(Path(__file__).resolve().parent.parent / "docs"))
-from compliance_doc_gen import ComplianceDocGen
 import json
-import sys
+from compliance_doc_gen import ComplianceDocGen
+
 
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:

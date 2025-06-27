@@ -1,6 +1,9 @@
 #!/usr/bin/env python
 """Send an E-Stop toggle via SafetyController."""
 import argparse
+import sys
+from pathlib import Path
+sys.path.append(str(Path(__file__).resolve().parent.parent))
 from safety.safety_controller import SafetyController
 
 

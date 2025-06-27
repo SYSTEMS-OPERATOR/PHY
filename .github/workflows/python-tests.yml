@@ -27,6 +27,11 @@ jobs:
         PYTHONPATH=. python bin/generate_tcf.py
     - name: Build Yocto image
       run: deploy/yocto_builder.sh yocto_artifact
+    - name: QEMU RT kernel smoke
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y qemu-system-x86
+        qemu-system-x86_64 --version
     - name: Run benchmark smoke
       run: PYTHONPATH=. python bin/run_benchmark.py
     - name: Build Docker image

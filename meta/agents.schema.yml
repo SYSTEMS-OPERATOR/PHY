@@ -1,0 +1,21 @@
+Agent:
+  type: object
+  required: [name, role, inputs, outputs, run, safety]
+  properties:
+    name: {type: string}
+    role: {type: string}
+    tags: {type: array, items: {type: string}}
+    inputs: {type: array, items: {type: string}}
+    outputs: {type: array, items: {type: string}}
+    run:
+      type: object
+      required: [entry, args]
+      properties:
+        entry: {type: string}
+        args: {type: array, items: {type: string}}
+        env: {type: object, additionalProperties: {type: string}}
+    safety:
+      type: object
+      properties:
+        policies: {type: array, items: {type: string}}
+        rate_limits: {type: object, additionalProperties: {type: string}}

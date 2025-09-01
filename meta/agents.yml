@@ -1,0 +1,31 @@
+- name: BoneAgent
+  role: "Encapsulate a single bone’s data & physics"
+  tags: [armature, anatomy, physics]
+  inputs: [bone_yaml]
+  outputs: [ros_tf, urdf, json]
+  run: {entry: "skeleton.agents.bone:BoneAgent", args: []}
+  safety: {policies: ["text-only-geometry"], rate_limits: {}}
+
+- name: AssemblerAgent
+  role: "Discover and assemble bones into a digital skeleton"
+  tags: [assembly, ros, urdf]
+  inputs: [bone_yaml]
+  outputs: [tf_tree, urdf, json]
+  run: {entry: "skeleton.agents.assembler:AssemblerAgent", args: []}
+  safety: {policies: ["integrity-check"], rate_limits: {}}
+
+- name: VisualizerAgent
+  role: "ASCII/URDF visualizations"
+  tags: [viz, tf, urdf]
+  inputs: [tf_tree]
+  outputs: [ascii, urdf]
+  run: {entry: "skeleton.agents.visualizer:VisualizerAgent", args: []}
+  safety: {policies: ["no-binaries"], rate_limits: {}}
+
+- name: ReferenceAgent
+  role: "Maintain citations per bone"
+  tags: [citations]
+  inputs: [bone_refs]
+  outputs: [csv, md]
+  run: {entry: "references.reference_manager:ReferenceAgent", args: []}
+  safety: {policies: ["must-have-ref"], rate_limits: {}}

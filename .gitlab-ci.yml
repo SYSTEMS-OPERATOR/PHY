@@ -1,0 +1,92 @@
+stages: [codex]
+
+default:
+  image: node:24
+  variables:
+    CODEX_QA_PATH: "gl-code-quality-report.json"
+    CODEX_RAW_LOG: "artifacts/codex-raw.log"
+    # Strict prompt: must output a single JSON array (or []), no prose/markdown/placeholders.
+    CODEX_PROMPT: |
+      Review this repository and output a GitLab Code Quality report in CodeClimate JSON format.
+      RULES (must follow exactly):
+      - OUTPUT MUST BE A SINGLE JSON ARRAY. Example: [] or [ {...}, {...} ].
+      - If you find no issues, OUTPUT EXACTLY: []
+      - DO NOT print any prose, backticks, code fences, markdown, or placeholders.
+      - DO NOT write any files. PRINT ONLY between these two lines:
+        === BEGIN_CODE_QUALITY_JSON ===
+        <JSON ARRAY HERE>
+        === END_CODE_QUALITY_JSON ===
+      Each issue object MUST include these fields:
+        "description": String,
+        "check_name": String (short rule name),
+        "fingerprint": String (stable across runs for the same issue),
+        "severity": "info"|"minor"|"major"|"critical"|"blocker",
+        "location": { "path": "<repo-relative-file>", "lines": { "begin": <line> } }
+      Requirements:
+      - Use repo-relative paths from the current checkout (no "./", no absolute paths).
+      - Use only files that actually exist in this repo.
+      - No trailing commas. No comments. No BOM.
+      - Prefer concrete, de-duplicated findings. If uncertain, omit the finding.
+
+codex_review:
+  stage: codex
+  # Skip on forked MRs (no secrets available). Run only if OPENAI_API_KEY exists.
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event" && $CI_MERGE_REQUEST_SOURCE_PROJECT_ID != $CI_PROJECT_ID'
+      when: never
+    - if: '$OPENAI_API_KEY'
+      when: on_success
+    - when: never
+
+  script:
+    - set -euo pipefail
+    - echo "PWD=$(pwd)  CI_PROJECT_DIR=${CI_PROJECT_DIR}"
+    # Ensure artifacts always exist so upload never warns, even on early failure
+    - mkdir -p artifacts
+    - ': > ${CODEX_RAW_LOG}'
+    - ': > ${CODEX_QA_PATH}'
+    # Minimal deps + Codex CLI
+    - apt-get update && apt-get install -y --no-install-recommends curl ca-certificates git lsb-release
+    - npm -g i @openai/codex@latest
+    - codex --version && git --version
+    # Build a real-file allowlist to guide Codex to valid paths/lines
+    - FILE_LIST="$(git ls-files | sed 's/^/- /')"
+    - |
+      export CODEX_PROMPT="${CODEX_PROMPT}
+      Only report issues in the following existing files (exactly as listed):
+      ${FILE_LIST}"
+    # Run Codex; allow non-zero exit but capture output for extraction
+    - |
+      set +o pipefail
+      script -q -c 'codex exec --full-auto "$CODEX_PROMPT"' | tee "${CODEX_RAW_LOG}" >/dev/null
+      CODEX_RC=${PIPESTATUS[0]}
+      set -o pipefail
+      echo "Codex exit code: ${CODEX_RC}"
+    # Strip ANSI + \r, extract JSON between markers to a temp file; validate or fallback to []
+    - |
+      TMP_OUT="$(mktemp)"
+      sed -E 's/\x1B\[[0-9;]*[A-Za-z]//g' "${CODEX_RAW_LOG}" \
+        | tr -d '\r' \
+        | awk '
+            /^\s*=== BEGIN_CODE_QUALITY_JSON ===\s*$/ {grab=1; next}
+            /^\s*=== END_CODE_QUALITY_JSON ===\s*$/   {grab=0}
+            grab
+          ' > "${TMP_OUT}"
+      # If extracted content is empty/invalid or still contains placeholders, replace with []
+      if ! node -e 'const f=process.argv[1]; const s=require("fs").readFileSync(f,"utf8").trim(); if(!s || /(<JSON ARRAY HERE>|BEGIN_CODE_QUALITY_JSON|END_CODE_QUALITY_JSON)/.test(s)) process.exit(2); JSON.parse(s);' "${TMP_OUT}"; then
+        echo "WARNING: Extracted content empty/invalid; writing empty [] report."
+        echo "[]" > "${TMP_OUT}"
+      fi
+      mv -f "${TMP_OUT}" "${CODEX_QA_PATH}"
+      # Soft warning if Codex returned non-zero but we still produced a report
+      if [ "${CODEX_RC}" -ne 0 ]; then
+        echo "WARNING: Codex exited with code ${CODEX_RC}. Proceeding with extracted report." >&2
+      fi
+
+  artifacts:
+    when: always
+    reports:
+      codequality: gl-code-quality-report.json
+    paths:
+      - artifacts/codex-raw.log
+    expire_in: 14 days

@@ -1,0 +1,397 @@
+path,suffix,bytes,loc,imports
+eval_skeleton.py,.py,1434,47,"['__future__', 'argparse', 'pathlib', 'reports', 'skeleton', 'skvalidators']"
+AGENTS.md,.md,5683,170,[]
+REFERENCES.md,.md,68,4,[]
+legacy_skeleton.py,.py,12467,280,"['dataclasses', 'json', 'typing']"
+assemble_skeleton.py,.py,408,12,"['json', 'pathlib', 'skeleton']"
+LICENSE,dirless,1211,24,[]
+README.md,.md,2528,63,[]
+.gitignore,dirless,57,4,[]
+autonomic/__init__.py,.py,29,1,[]
+autonomic/autonomic_agent.py,.py,737,27,"['__future__', 'dataclasses']"
+adaptation/__init__.py,.py,0,0,[]
+adaptation/wolff_engine.py,.py,1074,27,"['__future__', 'dataclasses', 'typing']"
+skeleton/__init__.py,.py,420,20,[]
+skeleton/field.py,.py,5633,149,"['__future__', 'typing']"
+skeleton/base.py,.py,15851,377,"['__future__', 'dataclasses', 'typing', 'warnings']"
+energy/energy_agent.py,.py,491,19,"['__future__', 'dataclasses']"
+energy/__init__.py,.py,0,0,[]
+qms/qms_manager.py,.py,3156,93,"['__future__', 'dataclasses', 'datetime', 'pathlib', 'reportlab', 'typing']"
+geometry/__init__.py,.py,0,0,[]
+geometry/geometry_agent.py,.py,3067,99,"['__future__', 'dataclasses', 'math', 'skeleton', 'typing']"
+deploy/yocto_builder.sh,.sh,169,7,[]
+damage/damage_engine.py,.py,936,32,"['__future__', 'dataclasses', 'typing']"
+damage/__init__.py,.py,42,1,[]
+meta/agents.schema.yml,.yml,688,21,[]
+meta/__init__.py,.py,0,0,[]
+meta/meta_cognition.py,.py,1322,37,"['__future__', 'collections', 'dataclasses', 'typing']"
+meta/agents.yml,.yml,1094,31,[]
+social/__init__.py,.py,0,0,[]
+social/social_cognition.py,.py,774,26,"['__future__', 'dataclasses', 'typing']"
+field/field_trial_agent.py,.py,2856,87,"['__future__', 'cryptography', 'dataclasses', 'paho', 'time', 'typing', 'uuid']"
+validators/__init__.py,.py,0,0,[]
+validators/validator_agent.py,.py,3784,99,"['__future__', 'dataclasses', 'skeleton', 'typing']"
+cloud/twin_sync.py,.py,1097,36,"['__future__', 'dataclasses', 'json', 'time', 'typing']"
+bench_power/thermal_trip.py,.py,638,25,"['__future__', 'power', 'time']"
+soft/muscle_spec.py,.py,532,20,"['__future__', 'dataclasses', 'typing']"
+soft/__init__.py,.py,0,0,[]
+soft/muscle_agent.py,.py,857,31,"['__future__', 'dataclasses', 'math', 'typing']"
+soft/ligament_agent.py,.py,575,21,"['__future__', 'dataclasses']"
+language/language_agent.py,.py,775,26,"['__future__', 'dataclasses', 'typing']"
+language/__init__.py,.py,0,0,[]
+language/dialogue_manager.py,.py,662,25,"['__future__', 'affect', 'dataclasses', 'typing']"
+bench_pms/ota_latency.py,.py,588,20,"['__future__', 'random', 'time']"
+bench_privacy/noise_eps.py,.py,478,16,"['__future__', 'privacy']"
+joints/__init__.py,.py,0,0,[]
+joints/joint_spec.py,.py,1633,44,"['__future__', 'dataclasses', 'typing']"
+docker/Dockerfile,dirless,185,6,[]
+docker/Dockerfile.gpu,.gpu,226,6,[]
+perception/tactile_array.py,.py,529,22,"['__future__', 'dataclasses', 'numpy', 'typing']"
+perception/vestibular_agent.py,.py,1016,30,"['__future__', 'dataclasses', 'numpy', 'physics', 'pybullet', 'typing']"
+perception/__init__.py,.py,0,0,[]
+perception/vision_agent.py,.py,1448,50,"['__future__', 'dataclasses', 'numpy', 'pybullet', 'typing']"
+perception/auditory_agent.py,.py,766,27,"['__future__', 'dataclasses', 'numpy', 'typing']"
+cortex/cerebellum.py,.py,876,28,"['__future__', 'dataclasses', 'numpy']"
+cortex/__init__.py,.py,0,0,[]
+cortex/cortical_agent.py,.py,2325,75,"['__future__', 'dataclasses', 'gymnasium', 'numpy', 'stable_baselines3', 'typing']"
+kinematics/__init__.py,.py,0,0,[]
+kinematics/kinematic_chain.py,.py,4031,110,"['__future__', 'dataclasses', 'joints', 'math', 'numpy', 'skeleton', 'typing']"
+interpretability/__init__.py,.py,0,0,[]
+interpretability/dashboard.py,.py,224,11,"['__future__', 'fastapi']"
+skvalidators/__init__.py,.py,0,0,[]
+skvalidators/validator_agent.py,.py,3951,103,"['__future__', 'dataclasses', 'skeleton', 'typing']"
+bench_cloud/failover_test.py,.py,207,9,['time']
+bench_hw/force_trace.py,.py,247,12,"['json', 'pathlib', 'random']"
+bench_hw/latency_bench.cpp,.cpp,604,21,[]
+healing/__init__.py,.py,28,1,[]
+healing/healing_engine.py,.py,1090,35,"['__future__', 'dataclasses', 'typing']"
+bioelectric/__init__.py,.py,0,0,[]
+bioelectric/bus.py,.py,646,24,"['__future__', 'dataclasses', 'typing']"
+affect/emotion_agent.py,.py,547,19,"['__future__', 'dataclasses']"
+affect/__init__.py,.py,0,0,[]
+power/bms_agent.cpp,.cpp,1085,39,[]
+power/bms_agent.py,.py,634,21,[]
+physics/__init__.py,.py,0,0,[]
+physics/physics_agent.py,.py,4619,111,"['__future__', 'adaptation', 'autonomic', 'control', 'damage', 'dataclasses', 'energy', 'export', 'healing', 'kinematics', 'neuro', 'os', 'pybullet', 'pybullet_data', 'soft', 'tempfile', 'typing']"
+benchmarks/benchmark_runner.py,.py,1087,46,"['__future__', 'envs', 'json', 'pathlib', 'sys', 'time']"
+privacy/privacy_manager.py,.py,1783,58,"['__future__', 'cryptography', 'dataclasses', 'fastapi', 'numpy', 'os', 'typing']"
+neuro/neuro_agent.py,.py,1587,41,"['__future__', 'dataclasses', 'sensors', 'typing']"
+neuro/pain_fatigue.py,.py,645,20,"['__future__', 'dataclasses']"
+neuro/__init__.py,.py,45,1,[]
+sensors/__init__.py,.py,27,1,[]
+sensors/receptor_spec.py,.py,348,15,"['__future__', 'dataclasses', 'typing']"
+sensors/sensor_agent.py,.py,1417,36,"['__future__', 'dataclasses', 'typing']"
+reports/__init__.py,.py,0,0,[]
+reports/report_agent.py,.py,2726,78,"['__future__', 'json', 'pandas', 'pathlib', 'skeleton', 'typing']"
+hal/hal_driver.py,.py,3657,141,"['__future__', 'dataclasses', 'threading', 'time', 'typing']"
+tests/test_round6_neuro_heal.py,.py,3421,88,"['control', 'damage', 'geometry', 'healing', 'joints', 'kinematics', 'neuro', 'numpy', 'physics', 'pytest', 'sensors', 'skeleton', 'soft']"
+tests/test_round5_soft_tissue.py,.py,3161,89,"['adaptation', 'control', 'energy', 'geometry', 'joints', 'kinematics', 'numpy', 'physics', 'pytest', 'skeleton', 'soft']"
+tests/test_ethics_block.py,.py,232,9,['ethics']
+tests/test_dataset_integration.py,.py,658,20,"['os', 'skeleton', 'sys', 'unittest', 'warnings']"
+tests/test_mass_consistency_pytest.py,.py,253,7,['skvalidators']
+tests/test_birth_certificate.py,.py,269,10,"['manufacturing', 'pathlib']"
+tests/test_field_red_button.py,.py,526,20,['field']
+tests/test_capa_workflow.py,.py,310,10,"['pathlib', 'qms']"
+tests/conftest.py,.py,797,26,"['os', 'pytest', 'skeleton', 'sys']"
+tests/test_round7_cognition.py,.py,2245,76,"['affect', 'cortex', 'envs', 'memory', 'numpy', 'perception', 'pybullet', 'pytest', 'training']"
+tests/test_fk_identity_zero_angles.py,.py,942,24,"['geometry', 'joints', 'kinematics', 'numpy', 'skeleton']"
+tests/test_hal_rate.py,.py,554,28,"['hal', 'time']"
+tests/test_dsar_delete.py,.py,316,13,"['os', 'privacy']"
+tests/test_pms_anomaly.py,.py,186,9,['pms']
+tests/test_no_missing_metrics_pytest.py,.py,208,6,['skvalidators']
+tests/test_ik_reaches_target.py,.py,975,25,"['geometry', 'joints', 'kinematics', 'numpy', 'skeleton']"
+tests/test_rt_watchdog.py,.py,422,18,"['control', 'time']"
+tests/test_fault_notify.py,.py,1130,26,"['os', 'skeleton', 'sys', 'unittest']"
+tests/test_cloud_failover.py,.py,532,27,"['cloud', 'time']"
+tests/test_pybullet_energy_consistency.py,.py,1239,31,"['geometry', 'joints', 'kinematics', 'physics', 'pytest', 'skeleton']"
+tests/test_cert_rotation.py,.py,497,13,"['datetime', 'pytest', 'security']"
+tests/test_bone_count_pytest.py,.py,290,8,['skvalidators']
+tests/test_meta_field.py,.py,2013,41,"['os', 'skeleton', 'sys', 'unittest']"
+tests/test_bms_trip.py,.py,468,12,"['pathlib', 'subprocess']"
+tests/test_inertia_positive_definite.py,.py,700,25,"['geometry', 'numpy', 'skeleton']"
+tests/test_round9_meta_dist.py,.py,1942,75,"['benchmarks', 'dist', 'envs', 'json', 'meta', 'os', 'pathlib', 'pytest', 'shutil', 'training']"
+tests/test_bone_state.py,.py,1764,52,"['os', 'skeleton', 'sys', 'unittest']"
+tests/test_validator_overall_pass.py,.py,245,7,['skvalidators']
+tests/test_material_switch_pytest.py,.py,204,6,['skvalidators']
+tests/test_tcf_generation.py,.py,388,14,"['docs', 'json', 'pathlib']"
+tests/test_broadcast_symmetry.py,.py,1089,25,"['os', 'skeleton', 'sys', 'unittest']"
+tests/test_estop_chain.py,.py,537,24,"['safety', 'time']"
+tests/test_round8_language_social.py,.py,1872,66,"['asyncio', 'cortex', 'envs', 'fastapi', 'interpretability', 'language', 'pytest', 'safety', 'social', 'tasks', 'training']"
+tests/test_dataset_link.py,.py,759,20,"['os', 'skeleton', 'sys', 'unittest']"
+tests/test_dhf_export.py,.py,339,11,"['pathlib', 'qms']"
+tests/test_validator.py,.py,1953,60,"['pytest', 'skeleton', 'validators']"
+tests/test_cloud_degrade.py,.py,354,20,"['cloud', 'time']"
+tests/test_signal_propagation.py,.py,1229,27,"['os', 'skeleton', 'sys', 'unittest']"
+tests/test_dataset_summary.py,.py,560,19,"['json', 'os', 'skeleton', 'sys']"
+tests/test_hal_mock.py,.py,275,11,['hal']
+ros2/__init__.py,.py,0,0,[]
+ros2/tf_broadcaster.py,.py,1534,41,"['__future__', 'geometry_msgs', 'physics', 'pybullet', 'rclpy', 'tf2_ros']"
+ethics/ethics_agent.py,.py,1739,55,"['__future__', 'dataclasses', 'datetime', 'reportlab', 'typing']"
+training/lifelong_learner.py,.py,1513,49,"['__future__', 'collections', 'dataclasses', 'os', 'pickle', 'typing']"
+training/__init__.py,.py,146,3,[]
+training/social_curriculum.py,.py,1009,33,"['__future__', 'cortex', 'dataclasses', 'tasks', 'training', 'typing']"
+training/distributed_ppo.py,.py,1749,55,"['__future__', 'dataclasses', 'dist', 'numpy', 'typing']"
+training/curriculum_runner.py,.py,1631,58,"['__future__', 'cortex', 'dataclasses', 'envs', 'stable_baselines3', 'typing']"
+bin/generate_tcf.py,.py,682,27,"['compliance_doc_gen', 'docs', 'json', 'pathlib', 'sys']"
+bin/launch_cluster.sh,.sh,41,2,[]
+bin/agents_build.py,.py,482,17,"['__future__', 'json', 'yaml']"
+bin/eval_skeleton.py,.py,1125,37,"['__future__', 'argparse', 'pathlib', 'reports', 'skeleton', 'validators']"
+bin/demo_pass_the_cube.py,.py,297,13,['tasks']
+bin/run_emg_demo.py,.py,2175,58,"['__future__', 'argparse', 'control', 'energy', 'geometry', 'joints', 'kinematics', 'numpy', 'physics', 'skeleton', 'soft', 'time']"
+bin/demo_stop_button.py,.py,230,12,['safety']
+bin/rt_monitor.py,.py,446,17,"['statistics', 'subprocess']"
+bin/demo_reflexes.py,.py,2198,57,"['__future__', 'argparse', 'control', 'energy', 'geometry', 'joints', 'kinematics', 'neuro', 'physics', 'sensors', 'skeleton', 'soft', 'time']"
+bin/launch_field_trial.py,.py,326,15,"['__future__', 'field']"
+bin/run_benchmark.py,.py,257,10,"['benchmarks', 'json']"
+bin/repo_map.py,.py,1782,47,['os']
+bin/run_dynamics.py,.py,1793,64,"['__future__', 'argparse', 'geometry', 'joints', 'kinematics', 'physics', 'skeleton']"
+bin/run_adaptation_demo.py,.py,1636,42,"['__future__', 'adaptation', 'argparse', 'geometry', 'joints', 'kinematics', 'physics', 'skeleton']"
+bin/demo_language_pick.py,.py,223,12,['language']
+bin/demo_healing.py,.py,1238,44,"['__future__', 'argparse', 'healing', 'matplotlib', 'pathlib', 'skeleton', 'sys']"
+bin/estop_cli.py,.py,636,27,"['argparse', 'pathlib', 'safety', 'sys']"
+bin/run_curriculum.py,.py,495,20,"['__future__', 'cortex', 'envs', 'pathlib', 'sys', 'training']"
+bin/sqlite_query.py,.py,959,34,"['__future__', 'argparse', 'pathlib', 'sqlite3']"
+bin/teleop_wsad.py,.py,950,47,"['__future__', 'cortex', 'envs', 'sys', 'termios', 'tty']"
+bin/run_dashboard.sh,.sh,80,2,[]
+bin/meta_watch.py,.py,211,10,"['meta', 'time']"
+bin/raise_capa.py,.py,530,22,"['__future__', 'argparse', 'pathlib', 'qms']"
+security/security_agent.py,.py,939,36,"['__future__', 'dataclasses', 'datetime', 'typing']"
+references/reference_manager.py,.py,1437,38,"['__future__', 'typing', 'yaml']"
+references/index.yml,.yml,50,2,[]
+control/__init__.py,.py,0,0,[]
+control/rt_controller.cpp,.cpp,1462,56,[]
+control/rt_controller.py,.py,2079,63,"['__future__', 'dataclasses', 'threading', 'time', 'typing']"
+control/control_agent.py,.py,1168,33,"['__future__', 'dataclasses', 'numpy', 'scipy', 'typing']"
+memory/memory_agent.py,.py,767,24,"['__future__', 'dataclasses', 'numpy', 'typing']"
+memory/__init__.py,.py,0,0,[]
+pms/pms_pipeline.py,.py,2692,90,"['__future__', 'dataclasses', 'json', 'numpy', 'requests', 'sklearn', 'typing']"
+tasks/competitive_tasks.py,.py,1652,57,"['__future__', 'dataclasses', 'envs', 'numpy', 'typing']"
+tasks/__init__.py,.py,0,0,[]
+tasks/cooperative_tasks.py,.py,1939,71,"['__future__', 'dataclasses', 'envs', 'numpy', 'typing']"
+manufacturing/cal_rig.py,.py,809,28,"['__future__', 'json', 'pathlib']"
+docs/round11_field_qms.md,.md,1101,28,[]
+docs/round10_hardware.md,.md,704,32,[]
+docs/round7_cognition.md,.md,381,9,[]
+docs/validation_guide.md,.md,1635,44,[]
+docs/round8_social_language.md,.md,330,12,[]
+docs/round4_design.md,.md,1152,24,[]
+docs/round6_neural_heal.md,.md,848,22,[]
+docs/round5_soft_tissue.md,.md,996,19,[]
+docs/ppo_config.yaml,.yaml,61,4,[]
+docs/compliance_doc_gen.py,.py,657,26,"['__future__', 'dataclasses', 'json', 'pathlib', 'reportlab', 'typing']"
+safety/alignment_layer.py,.py,505,19,"['__future__', 'dataclasses', 'typing']"
+safety/__init__.py,.py,0,0,[]
+safety/safety_controller.py,.py,1657,58,"['__future__', 'dataclasses', 'threading', 'time', 'typing']"
+skeleton/agents/visualizer.py,.py,1564,40,"['__future__', 'typing', 'xml']"
+skeleton/agents/assembler.py,.py,2208,60,"['__future__', 'dataclasses', 'typing', 'yaml']"
+skeleton/agents/__init__.py,.py,106,3,[]
+skeleton/agents/bone.py,.py,2617,65,"['__future__', 'dataclasses', 'math', 'typing']"
+skeleton/visualization/render.py,.py,2392,74,"['__future__', 'dataclasses', 'matplotlib', 'typing']"
+skeleton/visualization/visualizer3d.py,.py,1945,52,"['__future__', 'plotly', 'typing']"
+skeleton/visualization/__init__.py,.py,328,12,[]
+skeleton/visualization/animation.py,.py,736,24,"['__future__', 'typing']"
+skeleton/visualization/visualizer2d.py,.py,1458,44,"['__future__', 'matplotlib', 'networkx', 'typing']"
+skeleton/bones/bone_femur_r.py,.py,1652,53,[]
+skeleton/bones/bone_occipital.py,.py,1715,53,[]
+skeleton/bones/bone_t_phal_3_2_l.py,.py,1592,53,[]
+skeleton/bones/bone_phal_3_1_l.py,.py,1587,53,[]
+skeleton/bones/bone_phal_4_3_l.py,.py,1575,53,[]
+skeleton/bones/bone_phal_1_1_l.py,.py,1587,53,[]
+skeleton/bones/bone_trapezoid_r.py,.py,1581,53,[]
+skeleton/bones/bone_meta3_l.py,.py,1566,53,[]
+skeleton/bones/bone_meta5_l.py,.py,1566,53,[]
+skeleton/bones/bone_talus_r.py,.py,1562,53,[]
+skeleton/bones/bone_malleus_l.py,.py,1617,53,[]
+skeleton/bones/bone_mt3_l.py,.py,1558,53,[]
+skeleton/bones/bone_hip_r.py,.py,1578,53,[]
+skeleton/bones/bone_t8.py,.py,1572,53,[]
+skeleton/bones/bone_sternum.py,.py,1588,53,[]
+skeleton/bones/bone_phal_2_3_l.py,.py,1575,53,[]
+skeleton/bones/bone_phal_5_2_l.py,.py,1591,53,[]
+skeleton/bones/bone_t_phal_3_2_r.py,.py,1592,53,[]
+skeleton/bones/bone_t_phal_4_2_r.py,.py,1592,53,[]
+skeleton/bones/bone_l5.py,.py,1558,53,[]
+skeleton/bones/bone_pisiform_l.py,.py,1579,53,[]
+skeleton/bones/bone_rib4_l.py,.py,1583,53,[]
+skeleton/bones/bone_cuboid_l.py,.py,1564,53,[]
+skeleton/bones/bone_t_phal_2_1_l.py,.py,1588,53,[]
+skeleton/bones/bone_t10.py,.py,1575,53,[]
+skeleton/bones/bone_t_phal_5_1_r.py,.py,1588,53,[]
+skeleton/bones/bone_rib7_l.py,.py,1583,53,[]
+skeleton/bones/bone_fibula_l.py,.py,1614,53,[]
+skeleton/bones/bone_rib2_l.py,.py,1583,53,[]
+skeleton/bones/bone_t6.py,.py,1572,53,[]
+skeleton/bones/bone_rib6_r.py,.py,1583,53,[]
+skeleton/bones/bone_medial_cuneiform_l.py,.py,1584,53,[]
+skeleton/bones/bone_t3.py,.py,1572,53,[]
+skeleton/bones/bone_c5.py,.py,1563,53,[]
+skeleton/bones/bone_scapula_r.py,.py,1591,53,[]
+skeleton/bones/bone_mt2_r.py,.py,1558,53,[]
+skeleton/bones/bone_t_phal_1_1_r.py,.py,1588,53,[]
+skeleton/bones/bone_meta2_r.py,.py,1566,53,[]
+skeleton/bones/bone_phal_5_1_r.py,.py,1587,53,[]
+skeleton/bones/bone_phal_5_3_l.py,.py,1575,53,[]
+skeleton/bones/bone_calcaneus_r.py,.py,1570,53,[]
+skeleton/bones/bone_rib4_r.py,.py,1583,53,[]
+skeleton/bones/bone_sacrum.py,.py,1563,53,[]
+skeleton/bones/bone_meta4_l.py,.py,1566,53,[]
+skeleton/bones/bone_t4.py,.py,1572,53,[]
+skeleton/bones/bone_femur_l.py,.py,1652,53,[]
+skeleton/bones/bone_phal_1_2_r.py,.py,1577,53,[]
+skeleton/bones/bone_t_phal_5_2_r.py,.py,1592,53,[]
+skeleton/bones/bone_t_phal_4_2_l.py,.py,1592,53,[]
+skeleton/bones/bone_c7.py,.py,1563,53,[]
+skeleton/bones/bone_navicular_r.py,.py,1570,53,[]
+skeleton/bones/bone_lateral_cuneiform_r.py,.py,1586,53,[]
+skeleton/bones/bone_radius_r.py,.py,1640,53,[]
+skeleton/bones/__init__.py,.py,1166,38,"['importlib', 'pathlib', 'typing']"
+skeleton/bones/bone_rib9_r.py,.py,1592,53,[]
+skeleton/bones/bone_trapezium_r.py,.py,1581,53,[]
+skeleton/bones/bone_t_phal_2_3_l.py,.py,1576,53,[]
+skeleton/bones/bone_scaphoid_r.py,.py,1579,53,[]
+skeleton/bones/bone_t12.py,.py,1575,53,[]
+skeleton/bones/bone_mt2_l.py,.py,1558,53,[]
+skeleton/bones/bone_humerus_l.py,.py,1660,53,[]
+skeleton/bones/bone_mt1_l.py,.py,1558,53,[]
+skeleton/bones/bone_c4.py,.py,1563,53,[]
+skeleton/bones/bone_par_l.py,.py,1745,53,[]
+skeleton/bones/bone_phal_3_2_l.py,.py,1591,53,[]
+skeleton/bones/bone_calcaneus_l.py,.py,1570,53,[]
+skeleton/bones/bone_t_phal_4_1_l.py,.py,1588,53,[]
+skeleton/bones/bone_rib6_l.py,.py,1583,53,[]
+skeleton/bones/bone_cuboid_r.py,.py,1564,53,[]
+skeleton/bones/bone_phal_3_3_r.py,.py,1575,53,[]
+skeleton/bones/bone_mt5_r.py,.py,1558,53,[]
+skeleton/bones/bone_mt4_l.py,.py,1558,53,[]
+skeleton/bones/bone_t_phal_5_1_l.py,.py,1588,53,[]
+skeleton/bones/bone_meta5_r.py,.py,1566,53,[]
+skeleton/bones/bone_rib10_r.py,.py,1594,53,[]
+skeleton/bones/bone_phal_2_1_l.py,.py,1587,53,[]
+skeleton/bones/bone_l4.py,.py,1554,53,[]
+skeleton/bones/bone_mt3_r.py,.py,1558,53,[]
+skeleton/bones/bone_malleus_r.py,.py,1617,53,[]
+skeleton/bones/bone_phal_4_3_r.py,.py,1575,53,[]
+skeleton/bones/bone_t7.py,.py,1572,53,[]
+skeleton/bones/bone_rib7_r.py,.py,1583,53,[]
+skeleton/bones/bone_rib8_l.py,.py,1592,53,[]
+skeleton/bones/bone_t_phal_2_3_r.py,.py,1576,53,[]
+skeleton/bones/bone_l3.py,.py,1554,53,[]
+skeleton/bones/bone_phal_2_1_r.py,.py,1587,53,[]
+skeleton/bones/bone_triquetrum_r.py,.py,1583,53,[]
+skeleton/bones/bone_incus_r.py,.py,1613,53,[]
+skeleton/bones/bone_lunate_r.py,.py,1575,53,[]
+skeleton/bones/bone_scapula_l.py,.py,1591,53,[]
+skeleton/bones/bone_t_phal_5_2_l.py,.py,1592,53,[]
+skeleton/bones/bone_talus_l.py,.py,1562,53,[]
+skeleton/bones/bone_meta4_r.py,.py,1566,53,[]
+skeleton/bones/bone_sphenoid.py,.py,1698,53,[]
+skeleton/bones/bone_phal_4_2_r.py,.py,1591,53,[]
+skeleton/bones/bone_ulna_l.py,.py,1619,53,[]
+skeleton/bones/bone_phal_5_2_r.py,.py,1591,53,[]
+skeleton/bones/bone_t_phal_1_2_l.py,.py,1578,53,[]
+skeleton/bones/bone_rib12_r.py,.py,1594,53,[]
+skeleton/bones/bone_phal_2_2_l.py,.py,1591,53,[]
+skeleton/bones/bone_temp_l.py,.py,1678,53,[]
+skeleton/bones/bone_meta3_r.py,.py,1566,53,[]
+skeleton/bones/bone_t11.py,.py,1576,53,[]
+skeleton/bones/bone_phal_2_3_r.py,.py,1575,53,[]
+skeleton/bones/bone_t_phal_3_1_r.py,.py,1588,53,[]
+skeleton/bones/bone_c1.py,.py,1566,53,[]
+skeleton/bones/bone_t_phal_2_1_r.py,.py,1588,53,[]
+skeleton/bones/bone_t_phal_1_2_r.py,.py,1578,53,[]
+skeleton/bones/bone_ethmoid.py,.py,1685,53,[]
+skeleton/bones/bone_navicular_l.py,.py,1570,53,[]
+skeleton/bones/bone_trapezium_l.py,.py,1581,53,[]
+skeleton/bones/bone_medial_cuneiform_r.py,.py,1584,53,[]
+skeleton/bones/bone_t9.py,.py,1573,53,[]
+skeleton/bones/bone_meta2_l.py,.py,1566,53,[]
+skeleton/bones/bone_capitate_r.py,.py,1579,53,[]
+skeleton/bones/bone_mt4_r.py,.py,1558,53,[]
+skeleton/bones/bone_patella_r.py,.py,1574,53,[]
+skeleton/bones/bone_scaphoid_l.py,.py,1579,53,[]
+skeleton/bones/bone_lateral_cuneiform_l.py,.py,1586,53,[]
+skeleton/bones/bone_ulna_r.py,.py,1619,53,[]
+skeleton/bones/bone_frontal.py,.py,1708,53,[]
+skeleton/bones/bone_rib3_l.py,.py,1583,53,[]
+skeleton/bones/bone_phal_3_2_r.py,.py,1591,53,[]
+skeleton/bones/bone_t_phal_2_2_r.py,.py,1592,53,[]
+skeleton/bones/bone_stapes_l.py,.py,1615,53,[]
+skeleton/bones/bone_intermediate_cuneiform_r.py,.py,1596,53,[]
+skeleton/bones/bone_t_phal_5_3_l.py,.py,1576,53,[]
+skeleton/bones/bone_t_phal_3_3_l.py,.py,1576,53,[]
+skeleton/bones/bone_hyoid.py,.py,1621,53,[]
+skeleton/bones/bone_t_phal_1_1_l.py,.py,1588,53,[]
+skeleton/bones/bone_t_phal_4_3_l.py,.py,1576,53,[]
+skeleton/bones/bone_coccyx.py,.py,1568,53,[]
+skeleton/bones/bone_phal_3_1_r.py,.py,1587,53,[]
+skeleton/bones/bone_phal_4_2_l.py,.py,1591,53,[]
+skeleton/bones/bone_mandible.py,.py,1681,53,[]
+skeleton/bones/bone_mt1_r.py,.py,1558,53,[]
+skeleton/bones/bone_c2.py,.py,1563,53,[]
+skeleton/bones/bone_rib3_r.py,.py,1583,53,[]
+skeleton/bones/bone_l1.py,.py,1555,53,[]
+skeleton/bones/bone_stapes_r.py,.py,1615,53,[]
+skeleton/bones/bone_fibula_r.py,.py,1614,53,[]
+skeleton/bones/bone_t1.py,.py,1572,53,[]
+skeleton/bones/bone_phal_2_2_r.py,.py,1591,53,[]
+skeleton/bones/bone_par_r.py,.py,1745,53,[]
+skeleton/bones/bone_meta1_l.py,.py,1566,53,[]
+skeleton/bones/bone_trapezoid_l.py,.py,1581,53,[]
+skeleton/bones/bone_rib1_l.py,.py,1583,53,[]
+skeleton/bones/bone_rib8_r.py,.py,1592,53,[]
+skeleton/bones/bone_rib11_l.py,.py,1594,53,[]
+skeleton/bones/bone_t_phal_2_2_l.py,.py,1592,53,[]
+skeleton/bones/bone_t_phal_5_3_r.py,.py,1576,53,[]
+skeleton/bones/bone_l2.py,.py,1554,53,[]
+skeleton/bones/bone_t5.py,.py,1572,53,[]
+skeleton/bones/bone_radius_l.py,.py,1640,53,[]
+skeleton/bones/bone_t_phal_3_1_l.py,.py,1588,53,[]
+skeleton/bones/bone_phal_4_1_r.py,.py,1587,53,[]
+skeleton/bones/bone_incus_l.py,.py,1613,53,[]
+skeleton/bones/bone_clavicle_l.py,.py,1647,53,[]
+skeleton/bones/bone_temp_r.py,.py,1678,53,[]
+skeleton/bones/bone_phal_5_3_r.py,.py,1575,53,[]
+skeleton/bones/bone_hamate_l.py,.py,1575,53,[]
+skeleton/bones/bone_capitate_l.py,.py,1579,53,[]
+skeleton/bones/bone_hamate_r.py,.py,1575,53,[]
+skeleton/bones/bone_meta1_r.py,.py,1566,53,[]
+skeleton/bones/bone_triquetrum_l.py,.py,1583,53,[]
+skeleton/bones/bone_phal_5_1_l.py,.py,1587,53,[]
+skeleton/bones/bone_phal_1_2_l.py,.py,1577,53,[]
+skeleton/bones/bone_rib1_r.py,.py,1583,53,[]
+skeleton/bones/bone_t_phal_3_3_r.py,.py,1576,53,[]
+skeleton/bones/bone_rib11_r.py,.py,1594,53,[]
+skeleton/bones/bone_rib5_r.py,.py,1583,53,[]
+skeleton/bones/bone_phal_4_1_l.py,.py,1587,53,[]
+skeleton/bones/bone_rib5_l.py,.py,1583,53,[]
+skeleton/bones/bone_c3.py,.py,1563,53,[]
+skeleton/bones/bone_tibia_l.py,.py,1634,53,[]
+skeleton/bones/bone_phal_1_1_r.py,.py,1587,53,[]
+skeleton/bones/bone_rib12_l.py,.py,1594,53,[]
+skeleton/bones/bone_rib2_r.py,.py,1583,53,[]
+skeleton/bones/bone_t_phal_4_1_r.py,.py,1588,53,[]
+skeleton/bones/bone_intermediate_cuneiform_l.py,.py,1596,53,[]
+skeleton/bones/bone_rib10_l.py,.py,1594,53,[]
+skeleton/bones/bone_lunate_l.py,.py,1575,53,[]
+skeleton/bones/bone_clavicle_r.py,.py,1647,53,[]
+skeleton/bones/bone_mt5_l.py,.py,1558,53,[]
+skeleton/bones/bone_rib9_l.py,.py,1592,53,[]
+skeleton/bones/bone_pisiform_r.py,.py,1579,53,[]
+skeleton/bones/bone_phal_3_3_l.py,.py,1575,53,[]
+skeleton/bones/bone_humerus_r.py,.py,1660,53,[]
+skeleton/bones/bone_t2.py,.py,1572,53,[]
+skeleton/bones/bone_patella_l.py,.py,1574,53,[]
+skeleton/bones/bone_t_phal_4_3_r.py,.py,1576,53,[]
+skeleton/bones/bone_c6.py,.py,1563,53,[]
+skeleton/bones/bone_tibia_r.py,.py,1634,53,[]
+skeleton/bones/bone_hip_l.py,.py,1578,53,[]
+skeleton/datasets/__init__.py,.py,1704,58,"['__future__', 'json', 'pathlib', 'typing']"
+skeleton/datasets/female_21_baseline.json,.json,3279,149,[]
+skeleton/bones/examples/femur_left.yml,.yml,790,34,[]
+web/portal/index.html,.html,583,21,[]
+helm/chart/values.yaml,.yaml,36,2,[]
+helm/chart/Chart.yaml,.yaml,40,3,[]
+helm/chart/templates/deployment.yaml,.yaml,348,18,[]
+docs/damage/index.html,.html,2099,64,[]
+docs/source/index.rst,.rst,184,11,[]
+docs/source/conf.py,.py,73,3,[]

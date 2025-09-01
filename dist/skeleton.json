@@ -1,0 +1,61 @@
+{
+  "bones": {
+    "femur_left": {
+      "dimensions": {
+        "length": 0.45,
+        "width": 0.035,
+        "thickness": 0.03
+      },
+      "material": {
+        "density": 1850.0,
+        "E": "1.7e10"
+      },
+      "physics": {},
+      "connections": {
+        "parent": "pelvis",
+        "children": [
+          "patella_left",
+          "tibia_left"
+        ],
+        "joints": {
+          "hip_left": {
+            "type": "ball",
+            "parent_anchor": [
+              0,
+              0,
+              0
+            ],
+            "child_anchor": [
+              0,
+              0,
+              0
+            ]
+          },
+          "knee_left": {
+            "type": "hinge",
+            "parent_anchor": [
+              0.44,
+              0,
+              0
+            ],
+            "child_anchor": [
+              0,
+              0,
+              0
+            ]
+          }
+        }
+      }
+    }
+  },
+  "hierarchy": {
+    "femur_left": {
+      "children": []
+    },
+    "pelvis": {
+      "children": [
+        "femur_left"
+      ]
+    }
+  }
+}

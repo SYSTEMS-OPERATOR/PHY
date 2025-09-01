@@ -1,14 +1,12 @@
-from skeleton import load_bones
-from skeleton.field import SkeletonField
+from skeleton.agents.assembler import AssemblerAgent
+from pathlib import Path
 import json
 
-
 if __name__ == "__main__":
-    bones = load_bones("female_21_baseline")
-    field = SkeletonField(bones)
-    data = {
-        "bones": {b.unique_id: b.self_state() for b in bones},
-        "health": field.health(),
-        "faults": field.faults(),
-    }    
-    print(json.dumps(data, indent=2))
+    sk = AssemblerAgent()
+    sk.discover_bones()       # reads skeleton/bones/*.yml
+    sk.assemble()
+    report = sk.validate()
+    out = Path("dist"); out.mkdir(exist_ok=True, parents=True)
+    (out / "skeleton.json").write_text(sk.to_json())
+    print("integrity:", json.dumps(report))

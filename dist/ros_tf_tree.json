@@ -1,0 +1,1952 @@
+[
+  {
+    "frame_id": "C1",
+    "parent": "skull",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "C2",
+    "parent": "C1",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "C3",
+    "parent": "C2",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "C4",
+    "parent": "C3",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "C5",
+    "parent": "C4",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "C6",
+    "parent": "C5",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "C7",
+    "parent": "C6",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Calcaneus",
+    "parent": "tibia/fibula",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Calcaneus",
+    "parent": "tibia/fibula",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Capitate",
+    "parent": "radius/ulna",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Capitate",
+    "parent": "radius/ulna",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Clavicle",
+    "parent": "sternum",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Clavicle",
+    "parent": "sternum",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Coccyx",
+    "parent": "sacrum",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Cuboid",
+    "parent": "tibia/fibula",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Cuboid",
+    "parent": "tibia/fibula",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Ethmoid",
+    "parent": "frontal",
+    "children": [
+      "vomer"
+    ],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Femur",
+    "parent": "hip",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Femur",
+    "parent": "hip",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Fibula",
+    "parent": "tibia",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Fibula",
+    "parent": "tibia",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Frontal",
+    "parent": "",
+    "children": [
+      "parietal"
+    ],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Hamate",
+    "parent": "radius/ulna",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Hamate",
+    "parent": "radius/ulna",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "HipBone",
+    "parent": "sacrum",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "HipBone",
+    "parent": "sacrum",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Humerus",
+    "parent": "scapula",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Humerus",
+    "parent": "scapula",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Hyoid",
+    "parent": "",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Incus",
+    "parent": "",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Incus",
+    "parent": "",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Intermediate Cuneiform",
+    "parent": "tibia/fibula",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Intermediate Cuneiform",
+    "parent": "tibia/fibula",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "L1",
+    "parent": "T12",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "L2",
+    "parent": "L1",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "L3",
+    "parent": "L2",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "L4",
+    "parent": "L3",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "L5",
+    "parent": "L4",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Lateral Cuneiform",
+    "parent": "tibia/fibula",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Lateral Cuneiform",
+    "parent": "tibia/fibula",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Lunate",
+    "parent": "radius/ulna",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Lunate",
+    "parent": "radius/ulna",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Malleus",
+    "parent": "",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Malleus",
+    "parent": "",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Mandible",
+    "parent": "temporal",
+    "children": [
+      "temporal"
+    ],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Medial Cuneiform",
+    "parent": "tibia/fibula",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Medial Cuneiform",
+    "parent": "tibia/fibula",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Metacarpal 1",
+    "parent": "carpals",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Metacarpal 1",
+    "parent": "carpals",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Metacarpal 2",
+    "parent": "carpals",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Metacarpal 2",
+    "parent": "carpals",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Metacarpal 3",
+    "parent": "carpals",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Metacarpal 3",
+    "parent": "carpals",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Metacarpal 4",
+    "parent": "carpals",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Metacarpal 4",
+    "parent": "carpals",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Metacarpal 5",
+    "parent": "carpals",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Metacarpal 5",
+    "parent": "carpals",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Metatarsal 1",
+    "parent": "tarsals",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Metatarsal 1",
+    "parent": "tarsals",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Metatarsal 2",
+    "parent": "tarsals",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Metatarsal 2",
+    "parent": "tarsals",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Metatarsal 3",
+    "parent": "tarsals",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Metatarsal 3",
+    "parent": "tarsals",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Metatarsal 4",
+    "parent": "tarsals",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Metatarsal 4",
+    "parent": "tarsals",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Metatarsal 5",
+    "parent": "tarsals",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Metatarsal 5",
+    "parent": "tarsals",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Navicular",
+    "parent": "tibia/fibula",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Navicular",
+    "parent": "tibia/fibula",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Occipital",
+    "parent": "parietal",
+    "children": [
+      "atlas"
+    ],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Parietal",
+    "parent": "frontal",
+    "children": [
+      "frontal",
+      "occipital"
+    ],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Parietal",
+    "parent": "frontal",
+    "children": [
+      "frontal",
+      "occipital"
+    ],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Patella",
+    "parent": "femur",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Patella",
+    "parent": "femur",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Proximal Phalanx 1",
+    "parent": "metacarpal",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Proximal Phalanx 1",
+    "parent": "metacarpal",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Distal Phalanx 1",
+    "parent": "Proximal phalanx",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Distal Phalanx 1",
+    "parent": "Proximal phalanx",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Proximal Phalanx 2",
+    "parent": "metacarpal",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Proximal Phalanx 2",
+    "parent": "metacarpal",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Middle Phalanx 2",
+    "parent": "Proximal phalanx",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Middle Phalanx 2",
+    "parent": "Proximal phalanx",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Distal Phalanx 2",
+    "parent": "Middle phalanx",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Distal Phalanx 2",
+    "parent": "Middle phalanx",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Proximal Phalanx 3",
+    "parent": "metacarpal",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Proximal Phalanx 3",
+    "parent": "metacarpal",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Middle Phalanx 3",
+    "parent": "Proximal phalanx",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Middle Phalanx 3",
+    "parent": "Proximal phalanx",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Distal Phalanx 3",
+    "parent": "Middle phalanx",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Distal Phalanx 3",
+    "parent": "Middle phalanx",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Proximal Phalanx 4",
+    "parent": "metacarpal",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Proximal Phalanx 4",
+    "parent": "metacarpal",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Middle Phalanx 4",
+    "parent": "Proximal phalanx",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Middle Phalanx 4",
+    "parent": "Proximal phalanx",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Distal Phalanx 4",
+    "parent": "Middle phalanx",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Distal Phalanx 4",
+    "parent": "Middle phalanx",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Proximal Phalanx 5",
+    "parent": "metacarpal",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Proximal Phalanx 5",
+    "parent": "metacarpal",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Middle Phalanx 5",
+    "parent": "Proximal phalanx",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Middle Phalanx 5",
+    "parent": "Proximal phalanx",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Distal Phalanx 5",
+    "parent": "Middle phalanx",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Distal Phalanx 5",
+    "parent": "Middle phalanx",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Pisiform",
+    "parent": "radius/ulna",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Pisiform",
+    "parent": "radius/ulna",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Radius",
+    "parent": "humerus",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Radius",
+    "parent": "humerus",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Rib 10",
+    "parent": "thoracic vertebrae",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Rib 10",
+    "parent": "thoracic vertebrae",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Rib 11",
+    "parent": "thoracic vertebrae",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Rib 11",
+    "parent": "thoracic vertebrae",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Rib 12",
+    "parent": "thoracic vertebrae",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Rib 12",
+    "parent": "thoracic vertebrae",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Rib 1",
+    "parent": "thoracic vertebrae",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Rib 1",
+    "parent": "thoracic vertebrae",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Rib 2",
+    "parent": "thoracic vertebrae",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Rib 2",
+    "parent": "thoracic vertebrae",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Rib 3",
+    "parent": "thoracic vertebrae",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Rib 3",
+    "parent": "thoracic vertebrae",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Rib 4",
+    "parent": "thoracic vertebrae",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Rib 4",
+    "parent": "thoracic vertebrae",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Rib 5",
+    "parent": "thoracic vertebrae",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Rib 5",
+    "parent": "thoracic vertebrae",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Rib 6",
+    "parent": "thoracic vertebrae",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Rib 6",
+    "parent": "thoracic vertebrae",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Rib 7",
+    "parent": "thoracic vertebrae",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Rib 7",
+    "parent": "thoracic vertebrae",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Rib 8",
+    "parent": "thoracic vertebrae",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Rib 8",
+    "parent": "thoracic vertebrae",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Rib 9",
+    "parent": "thoracic vertebrae",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Rib 9",
+    "parent": "thoracic vertebrae",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Sacrum",
+    "parent": "L5",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Scaphoid",
+    "parent": "radius/ulna",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Scaphoid",
+    "parent": "radius/ulna",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Scapula",
+    "parent": "clavicle",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Scapula",
+    "parent": "clavicle",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Sphenoid",
+    "parent": "frontal",
+    "children": [
+      "frontal"
+    ],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Stapes",
+    "parent": "",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Stapes",
+    "parent": "",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Sternum",
+    "parent": "clavicle",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "T1",
+    "parent": "C7",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "T10",
+    "parent": "T9",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "T11",
+    "parent": "T10",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "T12",
+    "parent": "T11",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "T2",
+    "parent": "T1",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "T3",
+    "parent": "T2",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "T4",
+    "parent": "T3",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "T5",
+    "parent": "T4",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "T6",
+    "parent": "T5",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "T7",
+    "parent": "T6",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "T8",
+    "parent": "T7",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "T9",
+    "parent": "T8",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Talus",
+    "parent": "tibia/fibula",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Talus",
+    "parent": "tibia/fibula",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Temporal",
+    "parent": "parietal",
+    "children": [
+      "mandible"
+    ],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Temporal",
+    "parent": "parietal",
+    "children": [
+      "mandible"
+    ],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Tibia",
+    "parent": "femur",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Tibia",
+    "parent": "femur",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Trapezium",
+    "parent": "radius/ulna",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Trapezium",
+    "parent": "radius/ulna",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Trapezoid",
+    "parent": "radius/ulna",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Trapezoid",
+    "parent": "radius/ulna",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Triquetrum",
+    "parent": "radius/ulna",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Triquetrum",
+    "parent": "radius/ulna",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Proximal Toe Phalanx 1",
+    "parent": "metatarsal",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Proximal Toe Phalanx 1",
+    "parent": "metatarsal",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Distal Toe Phalanx 1",
+    "parent": "Proximal phalanx",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Distal Toe Phalanx 1",
+    "parent": "Proximal phalanx",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Proximal Toe Phalanx 2",
+    "parent": "metatarsal",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Proximal Toe Phalanx 2",
+    "parent": "metatarsal",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Middle Toe Phalanx 2",
+    "parent": "Proximal phalanx",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Middle Toe Phalanx 2",
+    "parent": "Proximal phalanx",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Distal Toe Phalanx 2",
+    "parent": "Middle phalanx",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Distal Toe Phalanx 2",
+    "parent": "Middle phalanx",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Proximal Toe Phalanx 3",
+    "parent": "metatarsal",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Proximal Toe Phalanx 3",
+    "parent": "metatarsal",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Middle Toe Phalanx 3",
+    "parent": "Proximal phalanx",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Middle Toe Phalanx 3",
+    "parent": "Proximal phalanx",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Distal Toe Phalanx 3",
+    "parent": "Middle phalanx",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Distal Toe Phalanx 3",
+    "parent": "Middle phalanx",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Proximal Toe Phalanx 4",
+    "parent": "metatarsal",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Proximal Toe Phalanx 4",
+    "parent": "metatarsal",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Middle Toe Phalanx 4",
+    "parent": "Proximal phalanx",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Middle Toe Phalanx 4",
+    "parent": "Proximal phalanx",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Distal Toe Phalanx 4",
+    "parent": "Middle phalanx",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Distal Toe Phalanx 4",
+    "parent": "Middle phalanx",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Proximal Toe Phalanx 5",
+    "parent": "metatarsal",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Proximal Toe Phalanx 5",
+    "parent": "metatarsal",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Middle Toe Phalanx 5",
+    "parent": "Proximal phalanx",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Middle Toe Phalanx 5",
+    "parent": "Proximal phalanx",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Distal Toe Phalanx 5",
+    "parent": "Middle phalanx",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Distal Toe Phalanx 5",
+    "parent": "Middle phalanx",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Ulna",
+    "parent": "humerus",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "frame_id": "Ulna",
+    "parent": "humerus",
+    "children": [],
+    "origin": [
+      0,
+      0,
+      0
+    ]
+  }
+]

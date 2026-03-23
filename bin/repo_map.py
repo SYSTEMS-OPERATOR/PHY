@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-import os, re, json, pathlib, hashlib, csv
+import re
+import pathlib
+import csv
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 EXCLUDE = {".git", ".github", "dist", "__pycache__", ".venv", "envs", "data", "export"}
 INFO = []

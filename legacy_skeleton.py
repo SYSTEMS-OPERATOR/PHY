@@ -139,7 +139,7 @@ for i in range(1, 13):
              dev_notes="vertebral arch fusion in adolescence")
 for i in range(1, 6):
     add_bone(f"L{i}", "irregular", "lumbar vertebrae", f"L{i}",
-             proximal=f"T12" if i==1 else f"L{i-1}",
+             proximal="T12" if i==1 else f"L{i-1}",
              distal=f"L{i+1}" if i<5 else "sacrum",
              function=["weight bearing"],
              dev_notes="large body for support")

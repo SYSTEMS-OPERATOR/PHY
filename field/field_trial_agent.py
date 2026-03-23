@@ -1,7 +1,6 @@
 """Field trial agent handling onboarding, telemetry and remote stop."""
 from __future__ import annotations
 
-import time
 import uuid
 from dataclasses import dataclass
 from typing import Dict

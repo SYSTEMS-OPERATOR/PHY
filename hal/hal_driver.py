@@ -3,20 +3,20 @@ from __future__ import annotations
 import threading
 import time
 from dataclasses import dataclass, field
-from typing import Dict, Iterable, Tuple, Callable
+from typing import Callable, Dict, Tuple
 
 
 class MotorDriver:
     """Abstract motor driver interface."""
 
     def enable(self) -> None:
-        pass
+        raise NotImplementedError("MotorDriver.enable must be implemented by hardware driver")
 
     def disable(self) -> None:
-        pass
+        raise NotImplementedError("MotorDriver.disable must be implemented by hardware driver")
 
     def set_torque(self, joint_id: int, torque: float) -> None:
-        pass
+        raise NotImplementedError("MotorDriver.set_torque must be implemented by hardware driver")
 
     def get_state(self) -> Dict[int, float]:
         return {}
@@ -39,7 +39,7 @@ class IODriver:
         return 0
 
     def write_pin(self, pin_id: int, val: int) -> None:
-        pass
+        raise NotImplementedError("IODriver.write_pin must be implemented by hardware driver")
 
 
 class EtherCATDriver(MotorDriver):
@@ -68,12 +68,16 @@ class CANFDDriver(MotorDriver, IODriver):
     def __init__(self) -> None:
         self._pins: Dict[int, int] = {}
         self._state: Dict[int, float] = {}
+        self.enabled = False
 
     def enable(self) -> None:
-        pass
+        # Dev Agent Breadcrumb: hardware transport is marked active before writes.
+        self.enabled = True
 
     def disable(self) -> None:
-        pass
+        # Dev Agent Breadcrumb: disable clears command outputs for deterministic stop.
+        self._state.clear()
+        self.enabled = False
 
     def set_torque(self, joint_id: int, torque: float) -> None:
         self._state[joint_id] = float(torque)
@@ -113,6 +117,7 @@ class HAL:
     dropped: int = field(init=False, default=0)
 
     def _loop(self) -> None:
+        # Dev Agent Breadcrumb: fixed 1 kHz publish loop for deterministic HAL timing.
         next_time = time.time()
         while self.running:
             now = time.time()

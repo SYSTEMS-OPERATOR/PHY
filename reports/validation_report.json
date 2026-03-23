@@ -1,0 +1,4384 @@
+{
+  "summary": {
+    "pass": false,
+    "total_bones": 193,
+    "failed_checks": 5
+  },
+  "missing_required_fields": [
+    {
+      "bone": "BONE_T_PHAL_2_1_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_T_PHAL_2_1_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_T_PHAL_2_1_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_T_PHAL_2_1_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_RIB6_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_RIB6_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_RIB6_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_RIB6_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_META4_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_META4_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_META4_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_META4_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_MT4_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_MT4_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_MT4_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_MT4_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_MT3_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_MT3_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_MT3_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_MT3_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_META3_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_META3_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_META3_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_META3_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_SPHENOID",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_SPHENOID",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_SPHENOID",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_SPHENOID",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_T10",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_T10",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_T10",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_T10",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_FEMUR_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_FEMUR_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_FEMUR_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_FEMUR_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_PHAL_5_1_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_PHAL_5_1_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_PHAL_5_1_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_PHAL_5_1_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_MT3_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_MT3_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_MT3_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_MT3_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_RIB1_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_RIB1_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_RIB1_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_RIB1_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_L4",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_L4",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_L4",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_L4",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_T_PHAL_5_1_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_T_PHAL_5_1_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_T_PHAL_5_1_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_T_PHAL_5_1_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_T_PHAL_2_3_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_T_PHAL_2_3_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_T_PHAL_2_3_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_T_PHAL_2_3_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_PISIFORM_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_PISIFORM_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_PISIFORM_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_PISIFORM_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_PHAL_1_2_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_PHAL_1_2_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_PHAL_1_2_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_PHAL_1_2_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_PHAL_1_1_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_PHAL_1_1_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_PHAL_1_1_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_PHAL_1_1_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_PHAL_3_1_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_PHAL_3_1_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_PHAL_3_1_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_PHAL_3_1_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_STERNUM",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_STERNUM",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_STERNUM",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_STERNUM",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_CAPITATE_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_CAPITATE_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_CAPITATE_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_CAPITATE_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_TRAPEZOID_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_TRAPEZOID_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_TRAPEZOID_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_TRAPEZOID_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_T5",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_T5",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_T5",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_T5",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_META1_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_META1_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_META1_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_META1_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_RADIUS_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_RADIUS_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_RADIUS_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_RADIUS_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_HYOID",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_HYOID",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_HYOID",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_HYOID",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_FIBULA_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_FIBULA_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_FIBULA_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_FIBULA_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_C2",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_C2",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_C2",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_C2",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_T_PHAL_2_1_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_T_PHAL_2_1_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_T_PHAL_2_1_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_T_PHAL_2_1_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_META1_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_META1_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_META1_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_META1_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_OCCIPITAL",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_OCCIPITAL",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_OCCIPITAL",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_OCCIPITAL",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_META5_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_META5_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_META5_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_META5_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_TRAPEZIUM_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_TRAPEZIUM_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_TRAPEZIUM_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_TRAPEZIUM_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_T_PHAL_4_1_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_T_PHAL_4_1_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_T_PHAL_4_1_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_T_PHAL_4_1_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_CALCANEUS_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_CALCANEUS_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_CALCANEUS_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_CALCANEUS_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_TRIQUETRUM_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_TRIQUETRUM_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_TRIQUETRUM_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_TRIQUETRUM_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_RIB4_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_RIB4_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_RIB4_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_RIB4_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_STAPES_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_STAPES_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_STAPES_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_STAPES_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_PISIFORM_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_PISIFORM_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_PISIFORM_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_PISIFORM_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_C7",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_C7",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_C7",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_C7",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_RIB12_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_RIB12_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_RIB12_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_RIB12_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_PHAL_4_3_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_PHAL_4_3_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_PHAL_4_3_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_PHAL_4_3_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_MALLEUS_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_MALLEUS_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_MALLEUS_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_MALLEUS_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_META5_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_META5_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_META5_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_META5_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_T9",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_T9",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_T9",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_T9",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_FIBULA_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_FIBULA_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_FIBULA_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_FIBULA_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_T12",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_T12",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_T12",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_T12",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_PHAL_5_2_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_PHAL_5_2_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_PHAL_5_2_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_PHAL_5_2_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_MT4_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_MT4_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_MT4_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_MT4_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_RIB5_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_RIB5_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_RIB5_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_RIB5_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_PHAL_4_2_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_PHAL_4_2_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_PHAL_4_2_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_PHAL_4_2_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_T_PHAL_2_2_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_T_PHAL_2_2_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_T_PHAL_2_2_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_T_PHAL_2_2_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_INTERMEDIATE_CUNEIFORM_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_INTERMEDIATE_CUNEIFORM_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_INTERMEDIATE_CUNEIFORM_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_INTERMEDIATE_CUNEIFORM_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_T1",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_T1",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_T1",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_T1",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_T_PHAL_5_2_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_T_PHAL_5_2_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_T_PHAL_5_2_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_T_PHAL_5_2_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_NAVICULAR_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_NAVICULAR_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_NAVICULAR_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_NAVICULAR_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_PATELLA_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_PATELLA_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_PATELLA_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_PATELLA_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_MT5_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_MT5_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_MT5_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_MT5_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_RIB10_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_RIB10_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_RIB10_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_RIB10_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_T11",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_T11",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_T11",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_T11",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_MEDIAL_CUNEIFORM_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_MEDIAL_CUNEIFORM_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_MEDIAL_CUNEIFORM_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_MEDIAL_CUNEIFORM_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_SACRUM",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_SACRUM",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_SACRUM",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_SACRUM",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_T7",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_T7",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_T7",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_T7",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_NAVICULAR_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_NAVICULAR_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_NAVICULAR_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_NAVICULAR_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_PHAL_1_1_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_PHAL_1_1_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_PHAL_1_1_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_PHAL_1_1_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_ULNA_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_ULNA_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_ULNA_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_ULNA_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_TEMP_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_TEMP_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_TEMP_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_TEMP_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_META3_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_META3_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_META3_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_META3_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_T_PHAL_4_2_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_T_PHAL_4_2_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_T_PHAL_4_2_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_T_PHAL_4_2_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_T_PHAL_5_3_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_T_PHAL_5_3_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_T_PHAL_5_3_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_T_PHAL_5_3_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_T_PHAL_1_2_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_T_PHAL_1_2_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_T_PHAL_1_2_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_T_PHAL_1_2_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_TALUS_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_TALUS_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_TALUS_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_TALUS_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_HIP_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_HIP_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_HIP_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_HIP_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_L2",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_L2",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_L2",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_L2",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_HUMERUS_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_HUMERUS_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_HUMERUS_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_HUMERUS_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_T_PHAL_4_2_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_T_PHAL_4_2_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_T_PHAL_4_2_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_T_PHAL_4_2_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_SCAPHOID_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_SCAPHOID_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_SCAPHOID_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_SCAPHOID_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_C6",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_C6",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_C6",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_C6",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_TRAPEZIUM_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_TRAPEZIUM_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_TRAPEZIUM_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_TRAPEZIUM_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_STAPES_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_STAPES_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_STAPES_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_STAPES_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_PHAL_2_1_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_PHAL_2_1_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_PHAL_2_1_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_PHAL_2_1_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_PHAL_5_1_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_PHAL_5_1_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_PHAL_5_1_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_PHAL_5_1_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_T3",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_T3",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_T3",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_T3",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_RADIUS_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_RADIUS_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_RADIUS_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_RADIUS_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_RIB4_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_RIB4_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_RIB4_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_RIB4_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_MALLEUS_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_MALLEUS_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_MALLEUS_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_MALLEUS_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_TRAPEZOID_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_TRAPEZOID_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_TRAPEZOID_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_TRAPEZOID_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_T_PHAL_2_3_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_T_PHAL_2_3_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_T_PHAL_2_3_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_T_PHAL_2_3_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_T_PHAL_4_1_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_T_PHAL_4_1_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_T_PHAL_4_1_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_T_PHAL_4_1_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_RIB2_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_RIB2_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_RIB2_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_RIB2_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_LATERAL_CUNEIFORM_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_LATERAL_CUNEIFORM_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_LATERAL_CUNEIFORM_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_LATERAL_CUNEIFORM_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_LATERAL_CUNEIFORM_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_LATERAL_CUNEIFORM_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_LATERAL_CUNEIFORM_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_LATERAL_CUNEIFORM_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_INCUS_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_INCUS_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_INCUS_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_INCUS_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_PAR_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_PAR_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_PAR_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_PAR_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_LUNATE_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_LUNATE_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_LUNATE_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_LUNATE_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_C4",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_C4",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_C4",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_C4",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_LUNATE_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_LUNATE_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_LUNATE_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_LUNATE_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_MT1_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_MT1_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_MT1_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_MT1_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_ULNA_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_ULNA_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_ULNA_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_ULNA_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_TALUS_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_TALUS_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_TALUS_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_TALUS_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_RIB8_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_RIB8_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_RIB8_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_RIB8_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_MT2_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_MT2_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_MT2_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_MT2_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_L3",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_L3",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_L3",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_L3",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_TIBIA_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_TIBIA_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_TIBIA_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_TIBIA_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_T_PHAL_3_2_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_T_PHAL_3_2_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_T_PHAL_3_2_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_T_PHAL_3_2_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_PHAL_4_3_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_PHAL_4_3_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_PHAL_4_3_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_PHAL_4_3_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_T6",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_T6",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_T6",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_T6",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_T_PHAL_3_2_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_T_PHAL_3_2_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_T_PHAL_3_2_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_T_PHAL_3_2_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_CLAVICLE_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_CLAVICLE_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_CLAVICLE_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_CLAVICLE_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_CAPITATE_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_CAPITATE_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_CAPITATE_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_CAPITATE_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_RIB10_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_RIB10_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_RIB10_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_RIB10_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_RIB3_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_RIB3_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_RIB3_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_RIB3_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_T_PHAL_4_3_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_T_PHAL_4_3_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_T_PHAL_4_3_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_T_PHAL_4_3_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_INCUS_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_INCUS_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_INCUS_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_INCUS_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_META2_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_META2_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_META2_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_META2_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_L1",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_L1",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_L1",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_L1",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_PHAL_4_1_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_PHAL_4_1_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_PHAL_4_1_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_PHAL_4_1_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_RIB7_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_RIB7_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_RIB7_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_RIB7_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_HIP_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_HIP_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_HIP_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_HIP_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_RIB12_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_RIB12_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_RIB12_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_RIB12_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_RIB3_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_RIB3_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_RIB3_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_RIB3_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_TIBIA_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_TIBIA_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_TIBIA_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_TIBIA_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_T4",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_T4",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_T4",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_T4",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_PHAL_5_2_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_PHAL_5_2_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_PHAL_5_2_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_PHAL_5_2_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_COCCYX",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_COCCYX",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_COCCYX",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_COCCYX",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_C5",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_C5",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_C5",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_C5",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_PAR_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_PAR_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_PAR_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_PAR_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_PHAL_2_2_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_PHAL_2_2_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_PHAL_2_2_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_PHAL_2_2_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_PHAL_4_2_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_PHAL_4_2_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_PHAL_4_2_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_PHAL_4_2_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_RIB9_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_RIB9_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_RIB9_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_RIB9_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_PHAL_3_3_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_PHAL_3_3_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_PHAL_3_3_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_PHAL_3_3_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_SCAPHOID_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_SCAPHOID_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_SCAPHOID_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_SCAPHOID_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_T_PHAL_2_2_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_T_PHAL_2_2_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_T_PHAL_2_2_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_T_PHAL_2_2_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_PHAL_4_1_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_PHAL_4_1_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_PHAL_4_1_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_PHAL_4_1_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_CUBOID_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_CUBOID_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_CUBOID_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_CUBOID_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_FRONTAL",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_FRONTAL",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_FRONTAL",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_FRONTAL",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_RIB7_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_RIB7_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_RIB7_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_RIB7_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_META4_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_META4_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_META4_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_META4_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_RIB11_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_RIB11_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_RIB11_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_RIB11_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_T_PHAL_1_1_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_T_PHAL_1_1_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_T_PHAL_1_1_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_T_PHAL_1_1_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_T_PHAL_5_3_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_T_PHAL_5_3_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_T_PHAL_5_3_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_T_PHAL_5_3_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_T_PHAL_3_1_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_T_PHAL_3_1_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_T_PHAL_3_1_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_T_PHAL_3_1_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_T8",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_T8",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_T8",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_T8",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_MT2_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_MT2_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_MT2_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_MT2_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_C3",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_C3",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_C3",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_C3",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_T_PHAL_1_1_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_T_PHAL_1_1_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_T_PHAL_1_1_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_T_PHAL_1_1_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_HAMATE_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_HAMATE_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_HAMATE_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_HAMATE_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_RIB6_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_RIB6_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_RIB6_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_RIB6_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_T_PHAL_4_3_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_T_PHAL_4_3_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_T_PHAL_4_3_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_T_PHAL_4_3_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_ETHMOID",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_ETHMOID",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_ETHMOID",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_ETHMOID",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_INTERMEDIATE_CUNEIFORM_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_INTERMEDIATE_CUNEIFORM_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_INTERMEDIATE_CUNEIFORM_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_INTERMEDIATE_CUNEIFORM_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_T_PHAL_3_1_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_T_PHAL_3_1_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_T_PHAL_3_1_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_T_PHAL_3_1_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_PHAL_2_1_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_PHAL_2_1_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_PHAL_2_1_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_PHAL_2_1_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_PHAL_2_3_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_PHAL_2_3_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_PHAL_2_3_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_PHAL_2_3_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_HAMATE_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_HAMATE_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_HAMATE_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_HAMATE_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_RIB9_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_RIB9_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_RIB9_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_RIB9_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_PHAL_3_2_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_PHAL_3_2_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_PHAL_3_2_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_PHAL_3_2_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_CLAVICLE_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_CLAVICLE_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_CLAVICLE_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_CLAVICLE_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_C1",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_C1",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_C1",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_C1",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_PHAL_5_3_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_PHAL_5_3_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_PHAL_5_3_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_PHAL_5_3_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_HUMERUS_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_HUMERUS_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_HUMERUS_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_HUMERUS_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_RIB11_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_RIB11_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_RIB11_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_RIB11_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_T_PHAL_3_3_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_T_PHAL_3_3_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_T_PHAL_3_3_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_T_PHAL_3_3_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_META2_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_META2_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_META2_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_META2_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_TRIQUETRUM_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_TRIQUETRUM_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_TRIQUETRUM_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_TRIQUETRUM_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_MANDIBLE",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_MANDIBLE",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_MANDIBLE",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_MANDIBLE",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_PHAL_5_3_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_PHAL_5_3_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_PHAL_5_3_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_PHAL_5_3_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_CUBOID_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_CUBOID_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_CUBOID_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_CUBOID_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_RIB2_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_RIB2_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_RIB2_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_RIB2_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_PHAL_2_2_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_PHAL_2_2_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_PHAL_2_2_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_PHAL_2_2_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_PHAL_1_2_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_PHAL_1_2_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_PHAL_1_2_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_PHAL_1_2_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_FEMUR_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_FEMUR_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_FEMUR_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_FEMUR_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_MT5_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_MT5_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_MT5_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_MT5_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_T2",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_T2",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_T2",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_T2",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_MT1_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_MT1_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_MT1_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_MT1_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_T_PHAL_5_2_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_T_PHAL_5_2_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_T_PHAL_5_2_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_T_PHAL_5_2_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_SCAPULA_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_SCAPULA_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_SCAPULA_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_SCAPULA_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_PHAL_3_1_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_PHAL_3_1_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_PHAL_3_1_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_PHAL_3_1_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_L5",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_L5",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_L5",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_L5",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_RIB1_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_RIB1_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_RIB1_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_RIB1_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_MEDIAL_CUNEIFORM_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_MEDIAL_CUNEIFORM_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_MEDIAL_CUNEIFORM_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_MEDIAL_CUNEIFORM_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_CALCANEUS_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_CALCANEUS_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_CALCANEUS_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_CALCANEUS_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_T_PHAL_5_1_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_T_PHAL_5_1_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_T_PHAL_5_1_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_T_PHAL_5_1_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_TEMP_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_TEMP_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_TEMP_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_TEMP_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_PHAL_3_3_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_PHAL_3_3_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_PHAL_3_3_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_PHAL_3_3_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_PHAL_3_2_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_PHAL_3_2_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_PHAL_3_2_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_PHAL_3_2_L",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_T_PHAL_1_2_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_T_PHAL_1_2_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_T_PHAL_1_2_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_T_PHAL_1_2_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_SCAPULA_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_SCAPULA_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_SCAPULA_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_SCAPULA_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_PHAL_2_3_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_PHAL_2_3_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_PHAL_2_3_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_PHAL_2_3_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_RIB5_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_RIB5_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_RIB5_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_RIB5_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_T_PHAL_3_3_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_T_PHAL_3_3_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_T_PHAL_3_3_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_T_PHAL_3_3_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_RIB8_R",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_RIB8_R",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_RIB8_R",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_RIB8_R",
+      "field": "references"
+    },
+    {
+      "bone": "BONE_PATELLA_L",
+      "field": "joint_interfaces"
+    },
+    {
+      "bone": "BONE_PATELLA_L",
+      "field": "mount_points"
+    },
+    {
+      "bone": "BONE_PATELLA_L",
+      "field": "manufacturing_notes"
+    },
+    {
+      "bone": "BONE_PATELLA_L",
+      "field": "references"
+    }
+  ],
+  "duplicate_bone_ids": [],
+  "invalid_parent_child_references": [
+    {
+      "bone": "BONE_T_PHAL_2_1_L",
+      "parent": "metatarsal"
+    },
+    {
+      "bone": "BONE_RIB6_L",
+      "parent": "thoracic vertebrae"
+    },
+    {
+      "bone": "BONE_META4_R",
+      "parent": "carpals"
+    },
+    {
+      "bone": "BONE_MT4_L",
+      "parent": "tarsals"
+    },
+    {
+      "bone": "BONE_MT3_L",
+      "parent": "tarsals"
+    },
+    {
+      "bone": "BONE_META3_L",
+      "parent": "carpals"
+    },
+    {
+      "bone": "BONE_SPHENOID",
+      "child": "frontal"
+    },
+    {
+      "bone": "BONE_SPHENOID",
+      "parent": "frontal"
+    },
+    {
+      "bone": "BONE_FEMUR_R",
+      "parent": "hip"
+    },
+    {
+      "bone": "BONE_PHAL_5_1_L",
+      "parent": "metacarpal"
+    },
+    {
+      "bone": "BONE_MT3_R",
+      "parent": "tarsals"
+    },
+    {
+      "bone": "BONE_RIB1_L",
+      "parent": "thoracic vertebrae"
+    },
+    {
+      "bone": "BONE_T_PHAL_5_1_R",
+      "parent": "metatarsal"
+    },
+    {
+      "bone": "BONE_T_PHAL_2_3_R",
+      "parent": "Middle phalanx"
+    },
+    {
+      "bone": "BONE_PISIFORM_R",
+      "parent": "radius/ulna"
+    },
+    {
+      "bone": "BONE_PHAL_1_2_L",
+      "parent": "Proximal phalanx"
+    },
+    {
+      "bone": "BONE_PHAL_1_1_R",
+      "parent": "metacarpal"
+    },
+    {
+      "bone": "BONE_PHAL_3_1_R",
+      "parent": "metacarpal"
+    },
+    {
+      "bone": "BONE_STERNUM",
+      "parent": "clavicle"
+    },
+    {
+      "bone": "BONE_CAPITATE_R",
+      "parent": "radius/ulna"
+    },
+    {
+      "bone": "BONE_TRAPEZOID_L",
+      "parent": "radius/ulna"
+    },
+    {
+      "bone": "BONE_META1_L",
+      "parent": "carpals"
+    },
+    {
+      "bone": "BONE_RADIUS_R",
+      "parent": "humerus"
+    },
+    {
+      "bone": "BONE_FIBULA_L",
+      "parent": "tibia"
+    },
+    {
+      "bone": "BONE_T_PHAL_2_1_R",
+      "parent": "metatarsal"
+    },
+    {
+      "bone": "BONE_META1_R",
+      "parent": "carpals"
+    },
+    {
+      "bone": "BONE_OCCIPITAL",
+      "child": "atlas"
+    },
+    {
+      "bone": "BONE_OCCIPITAL",
+      "parent": "parietal"
+    },
+    {
+      "bone": "BONE_META5_R",
+      "parent": "carpals"
+    },
+    {
+      "bone": "BONE_TRAPEZIUM_R",
+      "parent": "radius/ulna"
+    },
+    {
+      "bone": "BONE_T_PHAL_4_1_L",
+      "parent": "metatarsal"
+    },
+    {
+      "bone": "BONE_CALCANEUS_R",
+      "parent": "tibia/fibula"
+    },
+    {
+      "bone": "BONE_TRIQUETRUM_R",
+      "parent": "radius/ulna"
+    },
+    {
+      "bone": "BONE_RIB4_L",
+      "parent": "thoracic vertebrae"
+    },
+    {
+      "bone": "BONE_PISIFORM_L",
+      "parent": "radius/ulna"
+    },
+    {
+      "bone": "BONE_RIB12_R",
+      "parent": "thoracic vertebrae"
+    },
+    {
+      "bone": "BONE_PHAL_4_3_L",
+      "parent": "Middle phalanx"
+    },
+    {
+      "bone": "BONE_META5_L",
+      "parent": "carpals"
+    },
+    {
+      "bone": "BONE_FIBULA_R",
+      "parent": "tibia"
+    },
+    {
+      "bone": "BONE_PHAL_5_2_R",
+      "parent": "Proximal phalanx"
+    },
+    {
+      "bone": "BONE_MT4_R",
+      "parent": "tarsals"
+    },
+    {
+      "bone": "BONE_RIB5_L",
+      "parent": "thoracic vertebrae"
+    },
+    {
+      "bone": "BONE_PHAL_4_2_L",
+      "parent": "Proximal phalanx"
+    },
+    {
+      "bone": "BONE_T_PHAL_2_2_R",
+      "parent": "Proximal phalanx"
+    },
+    {
+      "bone": "BONE_INTERMEDIATE_CUNEIFORM_L",
+      "parent": "tibia/fibula"
+    },
+    {
+      "bone": "BONE_T_PHAL_5_2_R",
+      "parent": "Proximal phalanx"
+    },
+    {
+      "bone": "BONE_NAVICULAR_L",
+      "parent": "tibia/fibula"
+    },
+    {
+      "bone": "BONE_PATELLA_R",
+      "parent": "femur"
+    },
+    {
+      "bone": "BONE_MT5_L",
+      "parent": "tarsals"
+    },
+    {
+      "bone": "BONE_RIB10_L",
+      "parent": "thoracic vertebrae"
+    },
+    {
+      "bone": "BONE_MEDIAL_CUNEIFORM_L",
+      "parent": "tibia/fibula"
+    },
+    {
+      "bone": "BONE_NAVICULAR_R",
+      "parent": "tibia/fibula"
+    },
+    {
+      "bone": "BONE_PHAL_1_1_L",
+      "parent": "metacarpal"
+    },
+    {
+      "bone": "BONE_ULNA_R",
+      "parent": "humerus"
+    },
+    {
+      "bone": "BONE_TEMP_R",
+      "child": "mandible"
+    },
+    {
+      "bone": "BONE_TEMP_R",
+      "parent": "parietal"
+    },
+    {
+      "bone": "BONE_META3_R",
+      "parent": "carpals"
+    },
+    {
+      "bone": "BONE_T_PHAL_4_2_R",
+      "parent": "Proximal phalanx"
+    },
+    {
+      "bone": "BONE_T_PHAL_5_3_L",
+      "parent": "Middle phalanx"
+    },
+    {
+      "bone": "BONE_T_PHAL_1_2_L",
+      "parent": "Proximal phalanx"
+    },
+    {
+      "bone": "BONE_TALUS_L",
+      "parent": "tibia/fibula"
+    },
+    {
+      "bone": "BONE_HIP_R",
+      "parent": "sacrum"
+    },
+    {
+      "bone": "BONE_HUMERUS_R",
+      "parent": "scapula"
+    },
+    {
+      "bone": "BONE_T_PHAL_4_2_L",
+      "parent": "Proximal phalanx"
+    },
+    {
+      "bone": "BONE_SCAPHOID_L",
+      "parent": "radius/ulna"
+    },
+    {
+      "bone": "BONE_TRAPEZIUM_L",
+      "parent": "radius/ulna"
+    },
+    {
+      "bone": "BONE_PHAL_2_1_L",
+      "parent": "metacarpal"
+    },
+    {
+      "bone": "BONE_PHAL_5_1_R",
+      "parent": "metacarpal"
+    },
+    {
+      "bone": "BONE_RADIUS_L",
+      "parent": "humerus"
+    },
+    {
+      "bone": "BONE_RIB4_R",
+      "parent": "thoracic vertebrae"
+    },
+    {
+      "bone": "BONE_TRAPEZOID_R",
+      "parent": "radius/ulna"
+    },
+    {
+      "bone": "BONE_T_PHAL_2_3_L",
+      "parent": "Middle phalanx"
+    },
+    {
+      "bone": "BONE_T_PHAL_4_1_R",
+      "parent": "metatarsal"
+    },
+    {
+      "bone": "BONE_RIB2_R",
+      "parent": "thoracic vertebrae"
+    },
+    {
+      "bone": "BONE_LATERAL_CUNEIFORM_R",
+      "parent": "tibia/fibula"
+    },
+    {
+      "bone": "BONE_LATERAL_CUNEIFORM_L",
+      "parent": "tibia/fibula"
+    },
+    {
+      "bone": "BONE_PAR_R",
+      "child": "frontal"
+    },
+    {
+      "bone": "BONE_PAR_R",
+      "child": "occipital"
+    },
+    {
+      "bone": "BONE_PAR_R",
+      "parent": "frontal"
+    },
+    {
+      "bone": "BONE_LUNATE_L",
+      "parent": "radius/ulna"
+    },
+    {
+      "bone": "BONE_LUNATE_R",
+      "parent": "radius/ulna"
+    },
+    {
+      "bone": "BONE_MT1_R",
+      "parent": "tarsals"
+    },
+    {
+      "bone": "BONE_ULNA_L",
+      "parent": "humerus"
+    },
+    {
+      "bone": "BONE_TALUS_R",
+      "parent": "tibia/fibula"
+    },
+    {
+      "bone": "BONE_RIB8_L",
+      "parent": "thoracic vertebrae"
+    },
+    {
+      "bone": "BONE_MT2_R",
+      "parent": "tarsals"
+    },
+    {
+      "bone": "BONE_TIBIA_R",
+      "parent": "femur"
+    },
+    {
+      "bone": "BONE_T_PHAL_3_2_L",
+      "parent": "Proximal phalanx"
+    },
+    {
+      "bone": "BONE_PHAL_4_3_R",
+      "parent": "Middle phalanx"
+    },
+    {
+      "bone": "BONE_T_PHAL_3_2_R",
+      "parent": "Proximal phalanx"
+    },
+    {
+      "bone": "BONE_CLAVICLE_L",
+      "parent": "sternum"
+    },
+    {
+      "bone": "BONE_CAPITATE_L",
+      "parent": "radius/ulna"
+    },
+    {
+      "bone": "BONE_RIB10_R",
+      "parent": "thoracic vertebrae"
+    },
+    {
+      "bone": "BONE_RIB3_R",
+      "parent": "thoracic vertebrae"
+    },
+    {
+      "bone": "BONE_T_PHAL_4_3_L",
+      "parent": "Middle phalanx"
+    },
+    {
+      "bone": "BONE_META2_L",
+      "parent": "carpals"
+    },
+    {
+      "bone": "BONE_PHAL_4_1_L",
+      "parent": "metacarpal"
+    },
+    {
+      "bone": "BONE_RIB7_R",
+      "parent": "thoracic vertebrae"
+    },
+    {
+      "bone": "BONE_HIP_L",
+      "parent": "sacrum"
+    },
+    {
+      "bone": "BONE_RIB12_L",
+      "parent": "thoracic vertebrae"
+    },
+    {
+      "bone": "BONE_RIB3_L",
+      "parent": "thoracic vertebrae"
+    },
+    {
+      "bone": "BONE_TIBIA_L",
+      "parent": "femur"
+    },
+    {
+      "bone": "BONE_PHAL_5_2_L",
+      "parent": "Proximal phalanx"
+    },
+    {
+      "bone": "BONE_COCCYX",
+      "parent": "sacrum"
+    },
+    {
+      "bone": "BONE_PAR_L",
+      "child": "frontal"
+    },
+    {
+      "bone": "BONE_PAR_L",
+      "child": "occipital"
+    },
+    {
+      "bone": "BONE_PAR_L",
+      "parent": "frontal"
+    },
+    {
+      "bone": "BONE_PHAL_2_2_L",
+      "parent": "Proximal phalanx"
+    },
+    {
+      "bone": "BONE_PHAL_4_2_R",
+      "parent": "Proximal phalanx"
+    },
+    {
+      "bone": "BONE_RIB9_R",
+      "parent": "thoracic vertebrae"
+    },
+    {
+      "bone": "BONE_PHAL_3_3_R",
+      "parent": "Middle phalanx"
+    },
+    {
+      "bone": "BONE_SCAPHOID_R",
+      "parent": "radius/ulna"
+    },
+    {
+      "bone": "BONE_T_PHAL_2_2_L",
+      "parent": "Proximal phalanx"
+    },
+    {
+      "bone": "BONE_PHAL_4_1_R",
+      "parent": "metacarpal"
+    },
+    {
+      "bone": "BONE_CUBOID_R",
+      "parent": "tibia/fibula"
+    },
+    {
+      "bone": "BONE_FRONTAL",
+      "child": "parietal"
+    },
+    {
+      "bone": "BONE_RIB7_L",
+      "parent": "thoracic vertebrae"
+    },
+    {
+      "bone": "BONE_META4_L",
+      "parent": "carpals"
+    },
+    {
+      "bone": "BONE_RIB11_L",
+      "parent": "thoracic vertebrae"
+    },
+    {
+      "bone": "BONE_T_PHAL_1_1_R",
+      "parent": "metatarsal"
+    },
+    {
+      "bone": "BONE_T_PHAL_5_3_R",
+      "parent": "Middle phalanx"
+    },
+    {
+      "bone": "BONE_T_PHAL_3_1_L",
+      "parent": "metatarsal"
+    },
+    {
+      "bone": "BONE_MT2_L",
+      "parent": "tarsals"
+    },
+    {
+      "bone": "BONE_T_PHAL_1_1_L",
+      "parent": "metatarsal"
+    },
+    {
+      "bone": "BONE_HAMATE_R",
+      "parent": "radius/ulna"
+    },
+    {
+      "bone": "BONE_RIB6_R",
+      "parent": "thoracic vertebrae"
+    },
+    {
+      "bone": "BONE_T_PHAL_4_3_R",
+      "parent": "Middle phalanx"
+    },
+    {
+      "bone": "BONE_ETHMOID",
+      "child": "vomer"
+    },
+    {
+      "bone": "BONE_ETHMOID",
+      "parent": "frontal"
+    },
+    {
+      "bone": "BONE_INTERMEDIATE_CUNEIFORM_R",
+      "parent": "tibia/fibula"
+    },
+    {
+      "bone": "BONE_T_PHAL_3_1_R",
+      "parent": "metatarsal"
+    },
+    {
+      "bone": "BONE_PHAL_2_1_R",
+      "parent": "metacarpal"
+    },
+    {
+      "bone": "BONE_PHAL_2_3_L",
+      "parent": "Middle phalanx"
+    },
+    {
+      "bone": "BONE_HAMATE_L",
+      "parent": "radius/ulna"
+    },
+    {
+      "bone": "BONE_RIB9_L",
+      "parent": "thoracic vertebrae"
+    },
+    {
+      "bone": "BONE_PHAL_3_2_R",
+      "parent": "Proximal phalanx"
+    },
+    {
+      "bone": "BONE_CLAVICLE_R",
+      "parent": "sternum"
+    },
+    {
+      "bone": "BONE_C1",
+      "parent": "skull"
+    },
+    {
+      "bone": "BONE_PHAL_5_3_L",
+      "parent": "Middle phalanx"
+    },
+    {
+      "bone": "BONE_HUMERUS_L",
+      "parent": "scapula"
+    },
+    {
+      "bone": "BONE_RIB11_R",
+      "parent": "thoracic vertebrae"
+    },
+    {
+      "bone": "BONE_T_PHAL_3_3_L",
+      "parent": "Middle phalanx"
+    },
+    {
+      "bone": "BONE_META2_R",
+      "parent": "carpals"
+    },
+    {
+      "bone": "BONE_TRIQUETRUM_L",
+      "parent": "radius/ulna"
+    },
+    {
+      "bone": "BONE_MANDIBLE",
+      "child": "temporal"
+    },
+    {
+      "bone": "BONE_MANDIBLE",
+      "parent": "temporal"
+    },
+    {
+      "bone": "BONE_PHAL_5_3_R",
+      "parent": "Middle phalanx"
+    },
+    {
+      "bone": "BONE_CUBOID_L",
+      "parent": "tibia/fibula"
+    },
+    {
+      "bone": "BONE_RIB2_L",
+      "parent": "thoracic vertebrae"
+    },
+    {
+      "bone": "BONE_PHAL_2_2_R",
+      "parent": "Proximal phalanx"
+    },
+    {
+      "bone": "BONE_PHAL_1_2_R",
+      "parent": "Proximal phalanx"
+    },
+    {
+      "bone": "BONE_FEMUR_L",
+      "parent": "hip"
+    },
+    {
+      "bone": "BONE_MT5_R",
+      "parent": "tarsals"
+    },
+    {
+      "bone": "BONE_MT1_L",
+      "parent": "tarsals"
+    },
+    {
+      "bone": "BONE_T_PHAL_5_2_L",
+      "parent": "Proximal phalanx"
+    },
+    {
+      "bone": "BONE_SCAPULA_L",
+      "parent": "clavicle"
+    },
+    {
+      "bone": "BONE_PHAL_3_1_L",
+      "parent": "metacarpal"
+    },
+    {
+      "bone": "BONE_RIB1_R",
+      "parent": "thoracic vertebrae"
+    },
+    {
+      "bone": "BONE_MEDIAL_CUNEIFORM_R",
+      "parent": "tibia/fibula"
+    },
+    {
+      "bone": "BONE_CALCANEUS_L",
+      "parent": "tibia/fibula"
+    },
+    {
+      "bone": "BONE_T_PHAL_5_1_L",
+      "parent": "metatarsal"
+    },
+    {
+      "bone": "BONE_TEMP_L",
+      "child": "mandible"
+    },
+    {
+      "bone": "BONE_TEMP_L",
+      "parent": "parietal"
+    },
+    {
+      "bone": "BONE_PHAL_3_3_L",
+      "parent": "Middle phalanx"
+    },
+    {
+      "bone": "BONE_PHAL_3_2_L",
+      "parent": "Proximal phalanx"
+    },
+    {
+      "bone": "BONE_T_PHAL_1_2_R",
+      "parent": "Proximal phalanx"
+    },
+    {
+      "bone": "BONE_SCAPULA_R",
+      "parent": "clavicle"
+    },
+    {
+      "bone": "BONE_PHAL_2_3_R",
+      "parent": "Middle phalanx"
+    },
+    {
+      "bone": "BONE_RIB5_R",
+      "parent": "thoracic vertebrae"
+    },
+    {
+      "bone": "BONE_T_PHAL_3_3_R",
+      "parent": "Middle phalanx"
+    },
+    {
+      "bone": "BONE_RIB8_R",
+      "parent": "thoracic vertebrae"
+    },
+    {
+      "bone": "BONE_PATELLA_L",
+      "parent": "femur"
+    }
+  ],
+  "impossible_geometry_values": [],
+  "invalid_unit_combinations": [],
+  "material_incompleteness": [],
+  "missing_mount_points": [
+    "BONE_T_PHAL_2_1_L",
+    "BONE_RIB6_L",
+    "BONE_META4_R",
+    "BONE_MT4_L",
+    "BONE_MT3_L",
+    "BONE_META3_L",
+    "BONE_SPHENOID",
+    "BONE_T10",
+    "BONE_FEMUR_R",
+    "BONE_PHAL_5_1_L",
+    "BONE_MT3_R",
+    "BONE_RIB1_L",
+    "BONE_L4",
+    "BONE_T_PHAL_5_1_R",
+    "BONE_T_PHAL_2_3_R",
+    "BONE_PISIFORM_R",
+    "BONE_PHAL_1_2_L",
+    "BONE_PHAL_1_1_R",
+    "BONE_PHAL_3_1_R",
+    "BONE_STERNUM",
+    "BONE_CAPITATE_R",
+    "BONE_TRAPEZOID_L",
+    "BONE_T5",
+    "BONE_META1_L",
+    "BONE_RADIUS_R",
+    "BONE_HYOID",
+    "BONE_FIBULA_L",
+    "BONE_C2",
+    "BONE_T_PHAL_2_1_R",
+    "BONE_META1_R",
+    "BONE_OCCIPITAL",
+    "BONE_META5_R",
+    "BONE_TRAPEZIUM_R",
+    "BONE_T_PHAL_4_1_L",
+    "BONE_CALCANEUS_R",
+    "BONE_TRIQUETRUM_R",
+    "BONE_RIB4_L",
+    "BONE_STAPES_L",
+    "BONE_PISIFORM_L",
+    "BONE_C7",
+    "BONE_RIB12_R",
+    "BONE_PHAL_4_3_L",
+    "BONE_MALLEUS_R",
+    "BONE_META5_L",
+    "BONE_T9",
+    "BONE_FIBULA_R",
+    "BONE_T12",
+    "BONE_PHAL_5_2_R",
+    "BONE_MT4_R",
+    "BONE_RIB5_L",
+    "BONE_PHAL_4_2_L",
+    "BONE_T_PHAL_2_2_R",
+    "BONE_INTERMEDIATE_CUNEIFORM_L",
+    "BONE_T1",
+    "BONE_T_PHAL_5_2_R",
+    "BONE_NAVICULAR_L",
+    "BONE_PATELLA_R",
+    "BONE_MT5_L",
+    "BONE_RIB10_L",
+    "BONE_T11",
+    "BONE_MEDIAL_CUNEIFORM_L",
+    "BONE_SACRUM",
+    "BONE_T7",
+    "BONE_NAVICULAR_R",
+    "BONE_PHAL_1_1_L",
+    "BONE_ULNA_R",
+    "BONE_TEMP_R",
+    "BONE_META3_R",
+    "BONE_T_PHAL_4_2_R",
+    "BONE_T_PHAL_5_3_L",
+    "BONE_T_PHAL_1_2_L",
+    "BONE_TALUS_L",
+    "BONE_HIP_R",
+    "BONE_L2",
+    "BONE_HUMERUS_R",
+    "BONE_T_PHAL_4_2_L",
+    "BONE_SCAPHOID_L",
+    "BONE_C6",
+    "BONE_TRAPEZIUM_L",
+    "BONE_STAPES_R",
+    "BONE_PHAL_2_1_L",
+    "BONE_PHAL_5_1_R",
+    "BONE_T3",
+    "BONE_RADIUS_L",
+    "BONE_RIB4_R",
+    "BONE_MALLEUS_L",
+    "BONE_TRAPEZOID_R",
+    "BONE_T_PHAL_2_3_L",
+    "BONE_T_PHAL_4_1_R",
+    "BONE_RIB2_R",
+    "BONE_LATERAL_CUNEIFORM_R",
+    "BONE_LATERAL_CUNEIFORM_L",
+    "BONE_INCUS_L",
+    "BONE_PAR_R",
+    "BONE_LUNATE_L",
+    "BONE_C4",
+    "BONE_LUNATE_R",
+    "BONE_MT1_R",
+    "BONE_ULNA_L",
+    "BONE_TALUS_R",
+    "BONE_RIB8_L",
+    "BONE_MT2_R",
+    "BONE_L3",
+    "BONE_TIBIA_R",
+    "BONE_T_PHAL_3_2_L",
+    "BONE_PHAL_4_3_R",
+    "BONE_T6",
+    "BONE_T_PHAL_3_2_R",
+    "BONE_CLAVICLE_L",
+    "BONE_CAPITATE_L",
+    "BONE_RIB10_R",
+    "BONE_RIB3_R",
+    "BONE_T_PHAL_4_3_L",
+    "BONE_INCUS_R",
+    "BONE_META2_L",
+    "BONE_L1",
+    "BONE_PHAL_4_1_L",
+    "BONE_RIB7_R",
+    "BONE_HIP_L",
+    "BONE_RIB12_L",
+    "BONE_RIB3_L",
+    "BONE_TIBIA_L",
+    "BONE_T4",
+    "BONE_PHAL_5_2_L",
+    "BONE_COCCYX",
+    "BONE_C5",
+    "BONE_PAR_L",
+    "BONE_PHAL_2_2_L",
+    "BONE_PHAL_4_2_R",
+    "BONE_RIB9_R",
+    "BONE_PHAL_3_3_R",
+    "BONE_SCAPHOID_R",
+    "BONE_T_PHAL_2_2_L",
+    "BONE_PHAL_4_1_R",
+    "BONE_CUBOID_R",
+    "BONE_FRONTAL",
+    "BONE_RIB7_L",
+    "BONE_META4_L",
+    "BONE_RIB11_L",
+    "BONE_T_PHAL_1_1_R",
+    "BONE_T_PHAL_5_3_R",
+    "BONE_T_PHAL_3_1_L",
+    "BONE_T8",
+    "BONE_MT2_L",
+    "BONE_C3",
+    "BONE_T_PHAL_1_1_L",
+    "BONE_HAMATE_R",
+    "BONE_RIB6_R",
+    "BONE_T_PHAL_4_3_R",
+    "BONE_ETHMOID",
+    "BONE_INTERMEDIATE_CUNEIFORM_R",
+    "BONE_T_PHAL_3_1_R",
+    "BONE_PHAL_2_1_R",
+    "BONE_PHAL_2_3_L",
+    "BONE_HAMATE_L",
+    "BONE_RIB9_L",
+    "BONE_PHAL_3_2_R",
+    "BONE_CLAVICLE_R",
+    "BONE_C1",
+    "BONE_PHAL_5_3_L",
+    "BONE_HUMERUS_L",
+    "BONE_RIB11_R",
+    "BONE_T_PHAL_3_3_L",
+    "BONE_META2_R",
+    "BONE_TRIQUETRUM_L",
+    "BONE_MANDIBLE",
+    "BONE_PHAL_5_3_R",
+    "BONE_CUBOID_L",
+    "BONE_RIB2_L",
+    "BONE_PHAL_2_2_R",
+    "BONE_PHAL_1_2_R",
+    "BONE_FEMUR_L",
+    "BONE_MT5_R",
+    "BONE_T2",
+    "BONE_MT1_L",
+    "BONE_T_PHAL_5_2_L",
+    "BONE_SCAPULA_L",
+    "BONE_PHAL_3_1_L",
+    "BONE_L5",
+    "BONE_RIB1_R",
+    "BONE_MEDIAL_CUNEIFORM_R",
+    "BONE_CALCANEUS_L",
+    "BONE_T_PHAL_5_1_L",
+    "BONE_TEMP_L",
+    "BONE_PHAL_3_3_L",
+    "BONE_PHAL_3_2_L",
+    "BONE_T_PHAL_1_2_R",
+    "BONE_SCAPULA_R",
+    "BONE_PHAL_2_3_R",
+    "BONE_RIB5_R",
+    "BONE_T_PHAL_3_3_R",
+    "BONE_RIB8_R",
+    "BONE_PATELLA_L"
+  ],
+  "missing_joint_interfaces": [
+    "BONE_T_PHAL_2_1_L",
+    "BONE_RIB6_L",
+    "BONE_META4_R",
+    "BONE_MT4_L",
+    "BONE_MT3_L",
+    "BONE_META3_L",
+    "BONE_SPHENOID",
+    "BONE_T10",
+    "BONE_FEMUR_R",
+    "BONE_PHAL_5_1_L",
+    "BONE_MT3_R",
+    "BONE_RIB1_L",
+    "BONE_L4",
+    "BONE_T_PHAL_5_1_R",
+    "BONE_T_PHAL_2_3_R",
+    "BONE_PISIFORM_R",
+    "BONE_PHAL_1_2_L",
+    "BONE_PHAL_1_1_R",
+    "BONE_PHAL_3_1_R",
+    "BONE_STERNUM",
+    "BONE_CAPITATE_R",
+    "BONE_TRAPEZOID_L",
+    "BONE_T5",
+    "BONE_META1_L",
+    "BONE_RADIUS_R",
+    "BONE_HYOID",
+    "BONE_FIBULA_L",
+    "BONE_C2",
+    "BONE_T_PHAL_2_1_R",
+    "BONE_META1_R",
+    "BONE_OCCIPITAL",
+    "BONE_META5_R",
+    "BONE_TRAPEZIUM_R",
+    "BONE_T_PHAL_4_1_L",
+    "BONE_CALCANEUS_R",
+    "BONE_TRIQUETRUM_R",
+    "BONE_RIB4_L",
+    "BONE_STAPES_L",
+    "BONE_PISIFORM_L",
+    "BONE_C7",
+    "BONE_RIB12_R",
+    "BONE_PHAL_4_3_L",
+    "BONE_MALLEUS_R",
+    "BONE_META5_L",
+    "BONE_T9",
+    "BONE_FIBULA_R",
+    "BONE_T12",
+    "BONE_PHAL_5_2_R",
+    "BONE_MT4_R",
+    "BONE_RIB5_L",
+    "BONE_PHAL_4_2_L",
+    "BONE_T_PHAL_2_2_R",
+    "BONE_INTERMEDIATE_CUNEIFORM_L",
+    "BONE_T1",
+    "BONE_T_PHAL_5_2_R",
+    "BONE_NAVICULAR_L",
+    "BONE_PATELLA_R",
+    "BONE_MT5_L",
+    "BONE_RIB10_L",
+    "BONE_T11",
+    "BONE_MEDIAL_CUNEIFORM_L",
+    "BONE_SACRUM",
+    "BONE_T7",
+    "BONE_NAVICULAR_R",
+    "BONE_PHAL_1_1_L",
+    "BONE_ULNA_R",
+    "BONE_TEMP_R",
+    "BONE_META3_R",
+    "BONE_T_PHAL_4_2_R",
+    "BONE_T_PHAL_5_3_L",
+    "BONE_T_PHAL_1_2_L",
+    "BONE_TALUS_L",
+    "BONE_HIP_R",
+    "BONE_L2",
+    "BONE_HUMERUS_R",
+    "BONE_T_PHAL_4_2_L",
+    "BONE_SCAPHOID_L",
+    "BONE_C6",
+    "BONE_TRAPEZIUM_L",
+    "BONE_STAPES_R",
+    "BONE_PHAL_2_1_L",
+    "BONE_PHAL_5_1_R",
+    "BONE_T3",
+    "BONE_RADIUS_L",
+    "BONE_RIB4_R",
+    "BONE_MALLEUS_L",
+    "BONE_TRAPEZOID_R",
+    "BONE_T_PHAL_2_3_L",
+    "BONE_T_PHAL_4_1_R",
+    "BONE_RIB2_R",
+    "BONE_LATERAL_CUNEIFORM_R",
+    "BONE_LATERAL_CUNEIFORM_L",
+    "BONE_INCUS_L",
+    "BONE_PAR_R",
+    "BONE_LUNATE_L",
+    "BONE_C4",
+    "BONE_LUNATE_R",
+    "BONE_MT1_R",
+    "BONE_ULNA_L",
+    "BONE_TALUS_R",
+    "BONE_RIB8_L",
+    "BONE_MT2_R",
+    "BONE_L3",
+    "BONE_TIBIA_R",
+    "BONE_T_PHAL_3_2_L",
+    "BONE_PHAL_4_3_R",
+    "BONE_T6",
+    "BONE_T_PHAL_3_2_R",
+    "BONE_CLAVICLE_L",
+    "BONE_CAPITATE_L",
+    "BONE_RIB10_R",
+    "BONE_RIB3_R",
+    "BONE_T_PHAL_4_3_L",
+    "BONE_INCUS_R",
+    "BONE_META2_L",
+    "BONE_L1",
+    "BONE_PHAL_4_1_L",
+    "BONE_RIB7_R",
+    "BONE_HIP_L",
+    "BONE_RIB12_L",
+    "BONE_RIB3_L",
+    "BONE_TIBIA_L",
+    "BONE_T4",
+    "BONE_PHAL_5_2_L",
+    "BONE_COCCYX",
+    "BONE_C5",
+    "BONE_PAR_L",
+    "BONE_PHAL_2_2_L",
+    "BONE_PHAL_4_2_R",
+    "BONE_RIB9_R",
+    "BONE_PHAL_3_3_R",
+    "BONE_SCAPHOID_R",
+    "BONE_T_PHAL_2_2_L",
+    "BONE_PHAL_4_1_R",
+    "BONE_CUBOID_R",
+    "BONE_FRONTAL",
+    "BONE_RIB7_L",
+    "BONE_META4_L",
+    "BONE_RIB11_L",
+    "BONE_T_PHAL_1_1_R",
+    "BONE_T_PHAL_5_3_R",
+    "BONE_T_PHAL_3_1_L",
+    "BONE_T8",
+    "BONE_MT2_L",
+    "BONE_C3",
+    "BONE_T_PHAL_1_1_L",
+    "BONE_HAMATE_R",
+    "BONE_RIB6_R",
+    "BONE_T_PHAL_4_3_R",
+    "BONE_ETHMOID",
+    "BONE_INTERMEDIATE_CUNEIFORM_R",
+    "BONE_T_PHAL_3_1_R",
+    "BONE_PHAL_2_1_R",
+    "BONE_PHAL_2_3_L",
+    "BONE_HAMATE_L",
+    "BONE_RIB9_L",
+    "BONE_PHAL_3_2_R",
+    "BONE_CLAVICLE_R",
+    "BONE_C1",
+    "BONE_PHAL_5_3_L",
+    "BONE_HUMERUS_L",
+    "BONE_RIB11_R",
+    "BONE_T_PHAL_3_3_L",
+    "BONE_META2_R",
+    "BONE_TRIQUETRUM_L",
+    "BONE_MANDIBLE",
+    "BONE_PHAL_5_3_R",
+    "BONE_CUBOID_L",
+    "BONE_RIB2_L",
+    "BONE_PHAL_2_2_R",
+    "BONE_PHAL_1_2_R",
+    "BONE_FEMUR_L",
+    "BONE_MT5_R",
+    "BONE_T2",
+    "BONE_MT1_L",
+    "BONE_T_PHAL_5_2_L",
+    "BONE_SCAPULA_L",
+    "BONE_PHAL_3_1_L",
+    "BONE_L5",
+    "BONE_RIB1_R",
+    "BONE_MEDIAL_CUNEIFORM_R",
+    "BONE_CALCANEUS_L",
+    "BONE_T_PHAL_5_1_L",
+    "BONE_TEMP_L",
+    "BONE_PHAL_3_3_L",
+    "BONE_PHAL_3_2_L",
+    "BONE_T_PHAL_1_2_R",
+    "BONE_SCAPULA_R",
+    "BONE_PHAL_2_3_R",
+    "BONE_RIB5_R",
+    "BONE_T_PHAL_3_3_R",
+    "BONE_RIB8_R",
+    "BONE_PATELLA_L"
+  ],
+  "missing_references": [
+    "BONE_T_PHAL_2_1_L",
+    "BONE_RIB6_L",
+    "BONE_META4_R",
+    "BONE_MT4_L",
+    "BONE_MT3_L",
+    "BONE_META3_L",
+    "BONE_SPHENOID",
+    "BONE_T10",
+    "BONE_FEMUR_R",
+    "BONE_PHAL_5_1_L",
+    "BONE_MT3_R",
+    "BONE_RIB1_L",
+    "BONE_L4",
+    "BONE_T_PHAL_5_1_R",
+    "BONE_T_PHAL_2_3_R",
+    "BONE_PISIFORM_R",
+    "BONE_PHAL_1_2_L",
+    "BONE_PHAL_1_1_R",
+    "BONE_PHAL_3_1_R",
+    "BONE_STERNUM",
+    "BONE_CAPITATE_R",
+    "BONE_TRAPEZOID_L",
+    "BONE_T5",
+    "BONE_META1_L",
+    "BONE_RADIUS_R",
+    "BONE_HYOID",
+    "BONE_FIBULA_L",
+    "BONE_C2",
+    "BONE_T_PHAL_2_1_R",
+    "BONE_META1_R",
+    "BONE_OCCIPITAL",
+    "BONE_META5_R",
+    "BONE_TRAPEZIUM_R",
+    "BONE_T_PHAL_4_1_L",
+    "BONE_CALCANEUS_R",
+    "BONE_TRIQUETRUM_R",
+    "BONE_RIB4_L",
+    "BONE_STAPES_L",
+    "BONE_PISIFORM_L",
+    "BONE_C7",
+    "BONE_RIB12_R",
+    "BONE_PHAL_4_3_L",
+    "BONE_MALLEUS_R",
+    "BONE_META5_L",
+    "BONE_T9",
+    "BONE_FIBULA_R",
+    "BONE_T12",
+    "BONE_PHAL_5_2_R",
+    "BONE_MT4_R",
+    "BONE_RIB5_L",
+    "BONE_PHAL_4_2_L",
+    "BONE_T_PHAL_2_2_R",
+    "BONE_INTERMEDIATE_CUNEIFORM_L",
+    "BONE_T1",
+    "BONE_T_PHAL_5_2_R",
+    "BONE_NAVICULAR_L",
+    "BONE_PATELLA_R",
+    "BONE_MT5_L",
+    "BONE_RIB10_L",
+    "BONE_T11",
+    "BONE_MEDIAL_CUNEIFORM_L",
+    "BONE_SACRUM",
+    "BONE_T7",
+    "BONE_NAVICULAR_R",
+    "BONE_PHAL_1_1_L",
+    "BONE_ULNA_R",
+    "BONE_TEMP_R",
+    "BONE_META3_R",
+    "BONE_T_PHAL_4_2_R",
+    "BONE_T_PHAL_5_3_L",
+    "BONE_T_PHAL_1_2_L",
+    "BONE_TALUS_L",
+    "BONE_HIP_R",
+    "BONE_L2",
+    "BONE_HUMERUS_R",
+    "BONE_T_PHAL_4_2_L",
+    "BONE_SCAPHOID_L",
+    "BONE_C6",
+    "BONE_TRAPEZIUM_L",
+    "BONE_STAPES_R",
+    "BONE_PHAL_2_1_L",
+    "BONE_PHAL_5_1_R",
+    "BONE_T3",
+    "BONE_RADIUS_L",
+    "BONE_RIB4_R",
+    "BONE_MALLEUS_L",
+    "BONE_TRAPEZOID_R",
+    "BONE_T_PHAL_2_3_L",
+    "BONE_T_PHAL_4_1_R",
+    "BONE_RIB2_R",
+    "BONE_LATERAL_CUNEIFORM_R",
+    "BONE_LATERAL_CUNEIFORM_L",
+    "BONE_INCUS_L",
+    "BONE_PAR_R",
+    "BONE_LUNATE_L",
+    "BONE_C4",
+    "BONE_LUNATE_R",
+    "BONE_MT1_R",
+    "BONE_ULNA_L",
+    "BONE_TALUS_R",
+    "BONE_RIB8_L",
+    "BONE_MT2_R",
+    "BONE_L3",
+    "BONE_TIBIA_R",
+    "BONE_T_PHAL_3_2_L",
+    "BONE_PHAL_4_3_R",
+    "BONE_T6",
+    "BONE_T_PHAL_3_2_R",
+    "BONE_CLAVICLE_L",
+    "BONE_CAPITATE_L",
+    "BONE_RIB10_R",
+    "BONE_RIB3_R",
+    "BONE_T_PHAL_4_3_L",
+    "BONE_INCUS_R",
+    "BONE_META2_L",
+    "BONE_L1",
+    "BONE_PHAL_4_1_L",
+    "BONE_RIB7_R",
+    "BONE_HIP_L",
+    "BONE_RIB12_L",
+    "BONE_RIB3_L",
+    "BONE_TIBIA_L",
+    "BONE_T4",
+    "BONE_PHAL_5_2_L",
+    "BONE_COCCYX",
+    "BONE_C5",
+    "BONE_PAR_L",
+    "BONE_PHAL_2_2_L",
+    "BONE_PHAL_4_2_R",
+    "BONE_RIB9_R",
+    "BONE_PHAL_3_3_R",
+    "BONE_SCAPHOID_R",
+    "BONE_T_PHAL_2_2_L",
+    "BONE_PHAL_4_1_R",
+    "BONE_CUBOID_R",
+    "BONE_FRONTAL",
+    "BONE_RIB7_L",
+    "BONE_META4_L",
+    "BONE_RIB11_L",
+    "BONE_T_PHAL_1_1_R",
+    "BONE_T_PHAL_5_3_R",
+    "BONE_T_PHAL_3_1_L",
+    "BONE_T8",
+    "BONE_MT2_L",
+    "BONE_C3",
+    "BONE_T_PHAL_1_1_L",
+    "BONE_HAMATE_R",
+    "BONE_RIB6_R",
+    "BONE_T_PHAL_4_3_R",
+    "BONE_ETHMOID",
+    "BONE_INTERMEDIATE_CUNEIFORM_R",
+    "BONE_T_PHAL_3_1_R",
+    "BONE_PHAL_2_1_R",
+    "BONE_PHAL_2_3_L",
+    "BONE_HAMATE_L",
+    "BONE_RIB9_L",
+    "BONE_PHAL_3_2_R",
+    "BONE_CLAVICLE_R",
+    "BONE_C1",
+    "BONE_PHAL_5_3_L",
+    "BONE_HUMERUS_L",
+    "BONE_RIB11_R",
+    "BONE_T_PHAL_3_3_L",
+    "BONE_META2_R",
+    "BONE_TRIQUETRUM_L",
+    "BONE_MANDIBLE",
+    "BONE_PHAL_5_3_R",
+    "BONE_CUBOID_L",
+    "BONE_RIB2_L",
+    "BONE_PHAL_2_2_R",
+    "BONE_PHAL_1_2_R",
+    "BONE_FEMUR_L",
+    "BONE_MT5_R",
+    "BONE_T2",
+    "BONE_MT1_L",
+    "BONE_T_PHAL_5_2_L",
+    "BONE_SCAPULA_L",
+    "BONE_PHAL_3_1_L",
+    "BONE_L5",
+    "BONE_RIB1_R",
+    "BONE_MEDIAL_CUNEIFORM_R",
+    "BONE_CALCANEUS_L",
+    "BONE_T_PHAL_5_1_L",
+    "BONE_TEMP_L",
+    "BONE_PHAL_3_3_L",
+    "BONE_PHAL_3_2_L",
+    "BONE_T_PHAL_1_2_R",
+    "BONE_SCAPULA_R",
+    "BONE_PHAL_2_3_R",
+    "BONE_RIB5_R",
+    "BONE_T_PHAL_3_3_R",
+    "BONE_RIB8_R",
+    "BONE_PATELLA_L"
+  ],
+  "mass_inertia_plausibility": [],
+  "dataset_schema_mismatch": [],
+  "export_readiness": {
+    "ready": false,
+    "issues": [
+      "Validation failures detected"
+    ]
+  }
+}

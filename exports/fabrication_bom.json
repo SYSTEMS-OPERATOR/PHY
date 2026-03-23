@@ -1,0 +1,1742 @@
+{
+  "count": 193,
+  "items": [
+    {
+      "part_number": "BONE_C1",
+      "name": "C1",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_C2",
+      "name": "C2",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_C3",
+      "name": "C3",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_C4",
+      "name": "C4",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_C5",
+      "name": "C5",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_C6",
+      "name": "C6",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_C7",
+      "name": "C7",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_CALCANEUS_L",
+      "name": "Calcaneus",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_CALCANEUS_R",
+      "name": "Calcaneus",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_CAPITATE_L",
+      "name": "Capitate",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_CAPITATE_R",
+      "name": "Capitate",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_CLAVICLE_L",
+      "name": "Clavicle",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_CLAVICLE_R",
+      "name": "Clavicle",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_COCCYX",
+      "name": "Coccyx",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_CUBOID_L",
+      "name": "Cuboid",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_CUBOID_R",
+      "name": "Cuboid",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_ETHMOID",
+      "name": "Ethmoid",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_FEMUR_L",
+      "name": "Femur",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_FEMUR_R",
+      "name": "Femur",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_FIBULA_L",
+      "name": "Fibula",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_FIBULA_R",
+      "name": "Fibula",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_FRONTAL",
+      "name": "Frontal",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_HAMATE_L",
+      "name": "Hamate",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_HAMATE_R",
+      "name": "Hamate",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_HIP_L",
+      "name": "HipBone",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_HIP_R",
+      "name": "HipBone",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_HUMERUS_L",
+      "name": "Humerus",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_HUMERUS_R",
+      "name": "Humerus",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_HYOID",
+      "name": "Hyoid",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_INCUS_L",
+      "name": "Incus",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_INCUS_R",
+      "name": "Incus",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_INTERMEDIATE_CUNEIFORM_L",
+      "name": "Intermediate Cuneiform",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_INTERMEDIATE_CUNEIFORM_R",
+      "name": "Intermediate Cuneiform",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_L1",
+      "name": "L1",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_L2",
+      "name": "L2",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_L3",
+      "name": "L3",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_L4",
+      "name": "L4",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_L5",
+      "name": "L5",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_LATERAL_CUNEIFORM_L",
+      "name": "Lateral Cuneiform",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_LATERAL_CUNEIFORM_R",
+      "name": "Lateral Cuneiform",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_LUNATE_L",
+      "name": "Lunate",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_LUNATE_R",
+      "name": "Lunate",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_MALLEUS_L",
+      "name": "Malleus",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_MALLEUS_R",
+      "name": "Malleus",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_MANDIBLE",
+      "name": "Mandible",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_MEDIAL_CUNEIFORM_L",
+      "name": "Medial Cuneiform",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_MEDIAL_CUNEIFORM_R",
+      "name": "Medial Cuneiform",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_META1_L",
+      "name": "Metacarpal 1",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_META1_R",
+      "name": "Metacarpal 1",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_META2_L",
+      "name": "Metacarpal 2",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_META2_R",
+      "name": "Metacarpal 2",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_META3_L",
+      "name": "Metacarpal 3",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_META3_R",
+      "name": "Metacarpal 3",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_META4_L",
+      "name": "Metacarpal 4",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_META4_R",
+      "name": "Metacarpal 4",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_META5_L",
+      "name": "Metacarpal 5",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_META5_R",
+      "name": "Metacarpal 5",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_MT1_L",
+      "name": "Metatarsal 1",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_MT1_R",
+      "name": "Metatarsal 1",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_MT2_L",
+      "name": "Metatarsal 2",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_MT2_R",
+      "name": "Metatarsal 2",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_MT3_L",
+      "name": "Metatarsal 3",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_MT3_R",
+      "name": "Metatarsal 3",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_MT4_L",
+      "name": "Metatarsal 4",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_MT4_R",
+      "name": "Metatarsal 4",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_MT5_L",
+      "name": "Metatarsal 5",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_MT5_R",
+      "name": "Metatarsal 5",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_NAVICULAR_L",
+      "name": "Navicular",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_NAVICULAR_R",
+      "name": "Navicular",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_OCCIPITAL",
+      "name": "Occipital",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_PAR_L",
+      "name": "Parietal",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_PAR_R",
+      "name": "Parietal",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_PATELLA_L",
+      "name": "Patella",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_PATELLA_R",
+      "name": "Patella",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_PHAL_1_1_L",
+      "name": "Proximal Phalanx 1",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_PHAL_1_1_R",
+      "name": "Proximal Phalanx 1",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_PHAL_1_2_L",
+      "name": "Distal Phalanx 1",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_PHAL_1_2_R",
+      "name": "Distal Phalanx 1",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_PHAL_2_1_L",
+      "name": "Proximal Phalanx 2",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_PHAL_2_1_R",
+      "name": "Proximal Phalanx 2",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_PHAL_2_2_L",
+      "name": "Middle Phalanx 2",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_PHAL_2_2_R",
+      "name": "Middle Phalanx 2",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_PHAL_2_3_L",
+      "name": "Distal Phalanx 2",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_PHAL_2_3_R",
+      "name": "Distal Phalanx 2",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_PHAL_3_1_L",
+      "name": "Proximal Phalanx 3",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_PHAL_3_1_R",
+      "name": "Proximal Phalanx 3",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_PHAL_3_2_L",
+      "name": "Middle Phalanx 3",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_PHAL_3_2_R",
+      "name": "Middle Phalanx 3",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_PHAL_3_3_L",
+      "name": "Distal Phalanx 3",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_PHAL_3_3_R",
+      "name": "Distal Phalanx 3",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_PHAL_4_1_L",
+      "name": "Proximal Phalanx 4",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_PHAL_4_1_R",
+      "name": "Proximal Phalanx 4",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_PHAL_4_2_L",
+      "name": "Middle Phalanx 4",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_PHAL_4_2_R",
+      "name": "Middle Phalanx 4",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_PHAL_4_3_L",
+      "name": "Distal Phalanx 4",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_PHAL_4_3_R",
+      "name": "Distal Phalanx 4",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_PHAL_5_1_L",
+      "name": "Proximal Phalanx 5",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_PHAL_5_1_R",
+      "name": "Proximal Phalanx 5",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_PHAL_5_2_L",
+      "name": "Middle Phalanx 5",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_PHAL_5_2_R",
+      "name": "Middle Phalanx 5",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_PHAL_5_3_L",
+      "name": "Distal Phalanx 5",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_PHAL_5_3_R",
+      "name": "Distal Phalanx 5",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_PISIFORM_L",
+      "name": "Pisiform",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_PISIFORM_R",
+      "name": "Pisiform",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_RADIUS_L",
+      "name": "Radius",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_RADIUS_R",
+      "name": "Radius",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_RIB10_L",
+      "name": "Rib 10",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_RIB10_R",
+      "name": "Rib 10",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_RIB11_L",
+      "name": "Rib 11",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_RIB11_R",
+      "name": "Rib 11",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_RIB12_L",
+      "name": "Rib 12",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_RIB12_R",
+      "name": "Rib 12",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_RIB1_L",
+      "name": "Rib 1",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_RIB1_R",
+      "name": "Rib 1",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_RIB2_L",
+      "name": "Rib 2",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_RIB2_R",
+      "name": "Rib 2",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_RIB3_L",
+      "name": "Rib 3",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_RIB3_R",
+      "name": "Rib 3",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_RIB4_L",
+      "name": "Rib 4",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_RIB4_R",
+      "name": "Rib 4",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_RIB5_L",
+      "name": "Rib 5",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_RIB5_R",
+      "name": "Rib 5",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_RIB6_L",
+      "name": "Rib 6",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_RIB6_R",
+      "name": "Rib 6",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_RIB7_L",
+      "name": "Rib 7",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_RIB7_R",
+      "name": "Rib 7",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_RIB8_L",
+      "name": "Rib 8",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_RIB8_R",
+      "name": "Rib 8",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_RIB9_L",
+      "name": "Rib 9",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_RIB9_R",
+      "name": "Rib 9",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_SACRUM",
+      "name": "Sacrum",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_SCAPHOID_L",
+      "name": "Scaphoid",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_SCAPHOID_R",
+      "name": "Scaphoid",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_SCAPULA_L",
+      "name": "Scapula",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_SCAPULA_R",
+      "name": "Scapula",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_SPHENOID",
+      "name": "Sphenoid",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_STAPES_L",
+      "name": "Stapes",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_STAPES_R",
+      "name": "Stapes",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_STERNUM",
+      "name": "Sternum",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_T1",
+      "name": "T1",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_T10",
+      "name": "T10",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_T11",
+      "name": "T11",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_T12",
+      "name": "T12",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_T2",
+      "name": "T2",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_T3",
+      "name": "T3",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_T4",
+      "name": "T4",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_T5",
+      "name": "T5",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_T6",
+      "name": "T6",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_T7",
+      "name": "T7",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_T8",
+      "name": "T8",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_T9",
+      "name": "T9",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_TALUS_L",
+      "name": "Talus",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_TALUS_R",
+      "name": "Talus",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_TEMP_L",
+      "name": "Temporal",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_TEMP_R",
+      "name": "Temporal",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_TIBIA_L",
+      "name": "Tibia",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_TIBIA_R",
+      "name": "Tibia",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_TRAPEZIUM_L",
+      "name": "Trapezium",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_TRAPEZIUM_R",
+      "name": "Trapezium",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_TRAPEZOID_L",
+      "name": "Trapezoid",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_TRAPEZOID_R",
+      "name": "Trapezoid",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_TRIQUETRUM_L",
+      "name": "Triquetrum",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_TRIQUETRUM_R",
+      "name": "Triquetrum",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_T_PHAL_1_1_L",
+      "name": "Proximal Toe Phalanx 1",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_T_PHAL_1_1_R",
+      "name": "Proximal Toe Phalanx 1",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_T_PHAL_1_2_L",
+      "name": "Distal Toe Phalanx 1",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_T_PHAL_1_2_R",
+      "name": "Distal Toe Phalanx 1",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_T_PHAL_2_1_L",
+      "name": "Proximal Toe Phalanx 2",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_T_PHAL_2_1_R",
+      "name": "Proximal Toe Phalanx 2",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_T_PHAL_2_2_L",
+      "name": "Middle Toe Phalanx 2",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_T_PHAL_2_2_R",
+      "name": "Middle Toe Phalanx 2",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_T_PHAL_2_3_L",
+      "name": "Distal Toe Phalanx 2",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_T_PHAL_2_3_R",
+      "name": "Distal Toe Phalanx 2",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_T_PHAL_3_1_L",
+      "name": "Proximal Toe Phalanx 3",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_T_PHAL_3_1_R",
+      "name": "Proximal Toe Phalanx 3",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_T_PHAL_3_2_L",
+      "name": "Middle Toe Phalanx 3",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_T_PHAL_3_2_R",
+      "name": "Middle Toe Phalanx 3",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_T_PHAL_3_3_L",
+      "name": "Distal Toe Phalanx 3",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_T_PHAL_3_3_R",
+      "name": "Distal Toe Phalanx 3",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_T_PHAL_4_1_L",
+      "name": "Proximal Toe Phalanx 4",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_T_PHAL_4_1_R",
+      "name": "Proximal Toe Phalanx 4",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_T_PHAL_4_2_L",
+      "name": "Middle Toe Phalanx 4",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_T_PHAL_4_2_R",
+      "name": "Middle Toe Phalanx 4",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_T_PHAL_4_3_L",
+      "name": "Distal Toe Phalanx 4",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_T_PHAL_4_3_R",
+      "name": "Distal Toe Phalanx 4",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_T_PHAL_5_1_L",
+      "name": "Proximal Toe Phalanx 5",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_T_PHAL_5_1_R",
+      "name": "Proximal Toe Phalanx 5",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_T_PHAL_5_2_L",
+      "name": "Middle Toe Phalanx 5",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_T_PHAL_5_2_R",
+      "name": "Middle Toe Phalanx 5",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_T_PHAL_5_3_L",
+      "name": "Distal Toe Phalanx 5",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_T_PHAL_5_3_R",
+      "name": "Distal Toe Phalanx 5",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_ULNA_L",
+      "name": "Ulna",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    },
+    {
+      "part_number": "BONE_ULNA_R",
+      "name": "Ulna",
+      "material": "bone",
+      "revision": "1.0.0",
+      "tolerance": {
+        "default_mm": 0.5
+      }
+    }
+  ]
+}

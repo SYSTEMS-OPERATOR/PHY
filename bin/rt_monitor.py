@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 """Display simple jitter histogram from latency bench."""
 import subprocess
-import statistics
 
 
 def main() -> None:

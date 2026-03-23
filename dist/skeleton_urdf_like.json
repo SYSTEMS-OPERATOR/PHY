@@ -1,0 +1,1507 @@
+{
+  "robot": "phy_skeleton",
+  "links": [
+    {
+      "name": "C1",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "C2",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "C3",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "C4",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "C5",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "C6",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "C7",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Calcaneus",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Calcaneus",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Capitate",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Capitate",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Clavicle",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {
+        "shape": "box",
+        "length_cm": 14.0,
+        "width_cm": 1.0,
+        "thickness_cm": 1.0
+      }
+    },
+    {
+      "name": "Clavicle",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {
+        "shape": "box",
+        "length_cm": 14.0,
+        "width_cm": 1.0,
+        "thickness_cm": 1.0
+      }
+    },
+    {
+      "name": "Coccyx",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Cuboid",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Cuboid",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Ethmoid",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {
+        "shape": "box",
+        "length_cm": 5.0,
+        "width_cm": 5.0,
+        "thickness_cm": 0.4
+      }
+    },
+    {
+      "name": "Femur",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {
+        "shape": "box",
+        "length_cm": 48.0,
+        "width_cm": 2.8,
+        "thickness_cm": 2.8
+      }
+    },
+    {
+      "name": "Femur",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {
+        "shape": "box",
+        "length_cm": 48.0,
+        "width_cm": 2.8,
+        "thickness_cm": 2.8
+      }
+    },
+    {
+      "name": "Fibula",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {
+        "shape": "box",
+        "length_cm": 40.0,
+        "width_cm": 1.5,
+        "thickness_cm": 1.5
+      }
+    },
+    {
+      "name": "Fibula",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {
+        "shape": "box",
+        "length_cm": 40.0,
+        "width_cm": 1.5,
+        "thickness_cm": 1.5
+      }
+    },
+    {
+      "name": "Frontal",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {
+        "shape": "box",
+        "length_cm": 13.5,
+        "width_cm": 14.5,
+        "thickness_cm": 0.6
+      }
+    },
+    {
+      "name": "Hamate",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Hamate",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "HipBone",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "HipBone",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Humerus",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {
+        "shape": "box",
+        "length_cm": 35.0,
+        "width_cm": 2.5,
+        "thickness_cm": 2.5
+      }
+    },
+    {
+      "name": "Humerus",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {
+        "shape": "box",
+        "length_cm": 35.0,
+        "width_cm": 2.5,
+        "thickness_cm": 2.5
+      }
+    },
+    {
+      "name": "Hyoid",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {
+        "shape": "box",
+        "length_cm": 2.5,
+        "width_cm": 3.5,
+        "thickness_cm": 1.0
+      }
+    },
+    {
+      "name": "Incus",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {
+        "shape": "box",
+        "length_cm": 0.8,
+        "width_cm": 0.4,
+        "thickness_cm": 0.3
+      }
+    },
+    {
+      "name": "Incus",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {
+        "shape": "box",
+        "length_cm": 0.8,
+        "width_cm": 0.4,
+        "thickness_cm": 0.3
+      }
+    },
+    {
+      "name": "Intermediate Cuneiform",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Intermediate Cuneiform",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "L1",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "L2",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "L3",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "L4",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "L5",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Lateral Cuneiform",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Lateral Cuneiform",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Lunate",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Lunate",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Malleus",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {
+        "shape": "box",
+        "length_cm": 0.8,
+        "width_cm": 0.4,
+        "thickness_cm": 0.3
+      }
+    },
+    {
+      "name": "Malleus",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {
+        "shape": "box",
+        "length_cm": 0.8,
+        "width_cm": 0.4,
+        "thickness_cm": 0.3
+      }
+    },
+    {
+      "name": "Mandible",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {
+        "shape": "box",
+        "length_cm": 17.0,
+        "width_cm": 12.0,
+        "thickness_cm": 1.0
+      }
+    },
+    {
+      "name": "Medial Cuneiform",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Medial Cuneiform",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Metacarpal 1",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Metacarpal 1",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Metacarpal 2",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Metacarpal 2",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Metacarpal 3",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Metacarpal 3",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Metacarpal 4",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Metacarpal 4",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Metacarpal 5",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Metacarpal 5",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Metatarsal 1",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Metatarsal 1",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Metatarsal 2",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Metatarsal 2",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Metatarsal 3",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Metatarsal 3",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Metatarsal 4",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Metatarsal 4",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Metatarsal 5",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Metatarsal 5",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Navicular",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Navicular",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Occipital",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {
+        "shape": "box",
+        "length_cm": 12.0,
+        "width_cm": 11.0,
+        "thickness_cm": 0.6
+      }
+    },
+    {
+      "name": "Parietal",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {
+        "shape": "box",
+        "length_cm": 14.0,
+        "width_cm": 10.0,
+        "thickness_cm": 0.5
+      }
+    },
+    {
+      "name": "Parietal",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {
+        "shape": "box",
+        "length_cm": 14.0,
+        "width_cm": 10.0,
+        "thickness_cm": 0.5
+      }
+    },
+    {
+      "name": "Patella",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Patella",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Proximal Phalanx 1",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Proximal Phalanx 1",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Distal Phalanx 1",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Distal Phalanx 1",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Proximal Phalanx 2",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Proximal Phalanx 2",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Middle Phalanx 2",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Middle Phalanx 2",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Distal Phalanx 2",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Distal Phalanx 2",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Proximal Phalanx 3",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Proximal Phalanx 3",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Middle Phalanx 3",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Middle Phalanx 3",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Distal Phalanx 3",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Distal Phalanx 3",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Proximal Phalanx 4",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Proximal Phalanx 4",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Middle Phalanx 4",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Middle Phalanx 4",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Distal Phalanx 4",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Distal Phalanx 4",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Proximal Phalanx 5",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Proximal Phalanx 5",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Middle Phalanx 5",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Middle Phalanx 5",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Distal Phalanx 5",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Distal Phalanx 5",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Pisiform",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Pisiform",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Radius",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {
+        "shape": "box",
+        "length_cm": 24.0,
+        "width_cm": 1.5,
+        "thickness_cm": 1.5
+      }
+    },
+    {
+      "name": "Radius",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {
+        "shape": "box",
+        "length_cm": 24.0,
+        "width_cm": 1.5,
+        "thickness_cm": 1.5
+      }
+    },
+    {
+      "name": "Rib 10",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Rib 10",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Rib 11",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Rib 11",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Rib 12",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Rib 12",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Rib 1",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Rib 1",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Rib 2",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Rib 2",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Rib 3",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Rib 3",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Rib 4",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Rib 4",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Rib 5",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Rib 5",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Rib 6",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Rib 6",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Rib 7",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Rib 7",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Rib 8",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Rib 8",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Rib 9",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Rib 9",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Sacrum",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Scaphoid",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Scaphoid",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Scapula",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Scapula",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Sphenoid",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {
+        "shape": "box",
+        "length_cm": 6.0,
+        "width_cm": 8.0,
+        "thickness_cm": 0.5
+      }
+    },
+    {
+      "name": "Stapes",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {
+        "shape": "box",
+        "length_cm": 0.8,
+        "width_cm": 0.4,
+        "thickness_cm": 0.3
+      }
+    },
+    {
+      "name": "Stapes",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {
+        "shape": "box",
+        "length_cm": 0.8,
+        "width_cm": 0.4,
+        "thickness_cm": 0.3
+      }
+    },
+    {
+      "name": "Sternum",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "T1",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "T10",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "T11",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "T12",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "T2",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "T3",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "T4",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "T5",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "T6",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "T7",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "T8",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "T9",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Talus",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Talus",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Temporal",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {
+        "shape": "box",
+        "length_cm": 7.0,
+        "width_cm": 7.0,
+        "thickness_cm": 0.5
+      }
+    },
+    {
+      "name": "Temporal",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {
+        "shape": "box",
+        "length_cm": 7.0,
+        "width_cm": 7.0,
+        "thickness_cm": 0.5
+      }
+    },
+    {
+      "name": "Tibia",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {
+        "shape": "box",
+        "length_cm": 40.0,
+        "width_cm": 2.5,
+        "thickness_cm": 2.5
+      }
+    },
+    {
+      "name": "Tibia",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {
+        "shape": "box",
+        "length_cm": 40.0,
+        "width_cm": 2.5,
+        "thickness_cm": 2.5
+      }
+    },
+    {
+      "name": "Trapezium",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Trapezium",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Trapezoid",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Trapezoid",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Triquetrum",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Triquetrum",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Proximal Toe Phalanx 1",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Proximal Toe Phalanx 1",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Distal Toe Phalanx 1",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Distal Toe Phalanx 1",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Proximal Toe Phalanx 2",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Proximal Toe Phalanx 2",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Middle Toe Phalanx 2",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Middle Toe Phalanx 2",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Distal Toe Phalanx 2",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Distal Toe Phalanx 2",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Proximal Toe Phalanx 3",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Proximal Toe Phalanx 3",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Middle Toe Phalanx 3",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Middle Toe Phalanx 3",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Distal Toe Phalanx 3",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Distal Toe Phalanx 3",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Proximal Toe Phalanx 4",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Proximal Toe Phalanx 4",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Middle Toe Phalanx 4",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Middle Toe Phalanx 4",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Distal Toe Phalanx 4",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Distal Toe Phalanx 4",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Proximal Toe Phalanx 5",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Proximal Toe Phalanx 5",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Middle Toe Phalanx 5",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Middle Toe Phalanx 5",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Distal Toe Phalanx 5",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Distal Toe Phalanx 5",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {}
+    },
+    {
+      "name": "Ulna",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {
+        "shape": "box",
+        "length_cm": 25.0,
+        "width_cm": 1.5,
+        "thickness_cm": 1.5
+      }
+    },
+    {
+      "name": "Ulna",
+      "inertial": {
+        "mass_kg": null
+      },
+      "geometry": {
+        "shape": "box",
+        "length_cm": 25.0,
+        "width_cm": 1.5,
+        "thickness_cm": 1.5
+      }
+    }
+  ],
+  "joints": []
+}

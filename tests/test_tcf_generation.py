@@ -1,4 +1,3 @@
-from pathlib import Path
 from docs.compliance_doc_gen import ComplianceDocGen
 import json
 

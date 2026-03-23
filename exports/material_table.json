@@ -1,0 +1,967 @@
+[
+  {
+    "bone": "C1",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "C2",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "C3",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "C4",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "C5",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "C6",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "C7",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Calcaneus",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Calcaneus",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Capitate",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Capitate",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Clavicle",
+    "material": "bone",
+    "density": 1850
+  },
+  {
+    "bone": "Clavicle",
+    "material": "bone",
+    "density": 1850
+  },
+  {
+    "bone": "Coccyx",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Cuboid",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Cuboid",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Ethmoid",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Femur",
+    "material": "bone",
+    "density": 1900
+  },
+  {
+    "bone": "Femur",
+    "material": "bone",
+    "density": 1900
+  },
+  {
+    "bone": "Fibula",
+    "material": "bone",
+    "density": 1900
+  },
+  {
+    "bone": "Fibula",
+    "material": "bone",
+    "density": 1900
+  },
+  {
+    "bone": "Frontal",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Hamate",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Hamate",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "HipBone",
+    "material": "bone",
+    "density": 1800
+  },
+  {
+    "bone": "HipBone",
+    "material": "bone",
+    "density": 1800
+  },
+  {
+    "bone": "Humerus",
+    "material": "bone",
+    "density": 1900
+  },
+  {
+    "bone": "Humerus",
+    "material": "bone",
+    "density": 1900
+  },
+  {
+    "bone": "Hyoid",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Incus",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Incus",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Intermediate Cuneiform",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Intermediate Cuneiform",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "L1",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "L2",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "L3",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "L4",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "L5",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Lateral Cuneiform",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Lateral Cuneiform",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Lunate",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Lunate",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Malleus",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Malleus",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Mandible",
+    "material": "bone",
+    "density": 1800
+  },
+  {
+    "bone": "Medial Cuneiform",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Medial Cuneiform",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Metacarpal 1",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Metacarpal 1",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Metacarpal 2",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Metacarpal 2",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Metacarpal 3",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Metacarpal 3",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Metacarpal 4",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Metacarpal 4",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Metacarpal 5",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Metacarpal 5",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Metatarsal 1",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Metatarsal 1",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Metatarsal 2",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Metatarsal 2",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Metatarsal 3",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Metatarsal 3",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Metatarsal 4",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Metatarsal 4",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Metatarsal 5",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Metatarsal 5",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Navicular",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Navicular",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Occipital",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Parietal",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Parietal",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Patella",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Patella",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Proximal Phalanx 1",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Proximal Phalanx 1",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Distal Phalanx 1",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Distal Phalanx 1",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Proximal Phalanx 2",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Proximal Phalanx 2",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Middle Phalanx 2",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Middle Phalanx 2",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Distal Phalanx 2",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Distal Phalanx 2",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Proximal Phalanx 3",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Proximal Phalanx 3",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Middle Phalanx 3",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Middle Phalanx 3",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Distal Phalanx 3",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Distal Phalanx 3",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Proximal Phalanx 4",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Proximal Phalanx 4",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Middle Phalanx 4",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Middle Phalanx 4",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Distal Phalanx 4",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Distal Phalanx 4",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Proximal Phalanx 5",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Proximal Phalanx 5",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Middle Phalanx 5",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Middle Phalanx 5",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Distal Phalanx 5",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Distal Phalanx 5",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Pisiform",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Pisiform",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Radius",
+    "material": "bone",
+    "density": 1900
+  },
+  {
+    "bone": "Radius",
+    "material": "bone",
+    "density": 1900
+  },
+  {
+    "bone": "Rib 10",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Rib 10",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Rib 11",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Rib 11",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Rib 12",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Rib 12",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Rib 1",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Rib 1",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Rib 2",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Rib 2",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Rib 3",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Rib 3",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Rib 4",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Rib 4",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Rib 5",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Rib 5",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Rib 6",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Rib 6",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Rib 7",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Rib 7",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Rib 8",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Rib 8",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Rib 9",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Rib 9",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Sacrum",
+    "material": "bone",
+    "density": 1500
+  },
+  {
+    "bone": "Scaphoid",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Scaphoid",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Scapula",
+    "material": "bone",
+    "density": 1800
+  },
+  {
+    "bone": "Scapula",
+    "material": "bone",
+    "density": 1800
+  },
+  {
+    "bone": "Sphenoid",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Stapes",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Stapes",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Sternum",
+    "material": "bone",
+    "density": 1800
+  },
+  {
+    "bone": "T1",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "T10",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "T11",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "T12",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "T2",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "T3",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "T4",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "T5",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "T6",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "T7",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "T8",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "T9",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Talus",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Talus",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Temporal",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Temporal",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Tibia",
+    "material": "bone",
+    "density": 1900
+  },
+  {
+    "bone": "Tibia",
+    "material": "bone",
+    "density": 1900
+  },
+  {
+    "bone": "Trapezium",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Trapezium",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Trapezoid",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Trapezoid",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Triquetrum",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Triquetrum",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Proximal Toe Phalanx 1",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Proximal Toe Phalanx 1",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Distal Toe Phalanx 1",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Distal Toe Phalanx 1",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Proximal Toe Phalanx 2",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Proximal Toe Phalanx 2",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Middle Toe Phalanx 2",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Middle Toe Phalanx 2",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Distal Toe Phalanx 2",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Distal Toe Phalanx 2",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Proximal Toe Phalanx 3",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Proximal Toe Phalanx 3",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Middle Toe Phalanx 3",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Middle Toe Phalanx 3",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Distal Toe Phalanx 3",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Distal Toe Phalanx 3",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Proximal Toe Phalanx 4",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Proximal Toe Phalanx 4",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Middle Toe Phalanx 4",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Middle Toe Phalanx 4",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Distal Toe Phalanx 4",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Distal Toe Phalanx 4",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Proximal Toe Phalanx 5",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Proximal Toe Phalanx 5",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Middle Toe Phalanx 5",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Middle Toe Phalanx 5",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Distal Toe Phalanx 5",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Distal Toe Phalanx 5",
+    "material": "bone",
+    "density": 1800.0
+  },
+  {
+    "bone": "Ulna",
+    "material": "bone",
+    "density": 1900
+  },
+  {
+    "bone": "Ulna",
+    "material": "bone",
+    "density": 1900
+  }
+]

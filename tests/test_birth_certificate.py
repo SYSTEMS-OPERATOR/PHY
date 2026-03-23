@@ -1,5 +1,4 @@
 from manufacturing.cal_rig import CalibrationRig
-from pathlib import Path
 
 
 def test_birth_certificate(tmp_path):

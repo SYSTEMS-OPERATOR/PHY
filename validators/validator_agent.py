@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import Dict, List
+from typing import Dict
 from dataclasses import dataclass, field
 from skeleton.field import SkeletonField
 
@@ -43,9 +43,8 @@ class ValidatorAgent:
 
     # internal helpers
     def _check_bone_count(self) -> None:
-        # presence check only; warning count handled in run_all_checks
-        if len(self.skeleton.bones) != 206:
-            pass
+        # Dev Agent Breadcrumb: keep explicit count snapshot for downstream reports.
+        self.results["bone_count"] = len(self.skeleton.bones)
 
     def _check_metrics(self) -> None:
         for bone in self.skeleton.bones.values():
@@ -67,12 +66,12 @@ class ValidatorAgent:
                         self.results["missing_metrics"].append(f"{bone.unique_id}:{key}")
             mass = metrics.get("mass_g")
             density = metrics.get("density_kg_m3")
-            l = metrics.get("length_cm")
-            w = metrics.get("width_cm")
-            t = metrics.get("thickness_cm")
-            if None not in (mass, density, l, w, t):
+            length_cm = metrics.get("length_cm")
+            width_cm = metrics.get("width_cm")
+            thickness_cm = metrics.get("thickness_cm")
+            if None not in (mass, density, length_cm, width_cm, thickness_cm):
                 derived = mass / (density / 1000.0)
-                geometric = l * w * t
+                geometric = length_cm * width_cm * thickness_cm
                 delta = abs(derived - geometric) / derived
                 if delta > 0.07:
                     self.results["out_of_range"][bone.unique_id] = delta

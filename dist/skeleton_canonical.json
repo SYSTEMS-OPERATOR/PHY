@@ -1,0 +1,8107 @@
+[
+  {
+    "name": "C1",
+    "latin_name": "C1",
+    "bone_type": "irregular",
+    "region": "cervical vertebrae",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "skull",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_C1"
+    ],
+    "unique_id": "BONE_C1"
+  },
+  {
+    "name": "C2",
+    "latin_name": "C2",
+    "bone_type": "irregular",
+    "region": "cervical vertebrae",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "C1",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_C2"
+    ],
+    "unique_id": "BONE_C2"
+  },
+  {
+    "name": "C3",
+    "latin_name": "C3",
+    "bone_type": "irregular",
+    "region": "cervical vertebrae",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "C2",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_C3"
+    ],
+    "unique_id": "BONE_C3"
+  },
+  {
+    "name": "C4",
+    "latin_name": "C4",
+    "bone_type": "irregular",
+    "region": "cervical vertebrae",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "C3",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_C4"
+    ],
+    "unique_id": "BONE_C4"
+  },
+  {
+    "name": "C5",
+    "latin_name": "C5",
+    "bone_type": "irregular",
+    "region": "cervical vertebrae",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "C4",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_C5"
+    ],
+    "unique_id": "BONE_C5"
+  },
+  {
+    "name": "C6",
+    "latin_name": "C6",
+    "bone_type": "irregular",
+    "region": "cervical vertebrae",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "C5",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_C6"
+    ],
+    "unique_id": "BONE_C6"
+  },
+  {
+    "name": "C7",
+    "latin_name": "C7",
+    "bone_type": "irregular",
+    "region": "cervical vertebrae",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "C6",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_C7"
+    ],
+    "unique_id": "BONE_C7"
+  },
+  {
+    "name": "Calcaneus",
+    "latin_name": "Calcaneus",
+    "bone_type": "short",
+    "region": "tarsal",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "tibia/fibula",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_CALCANEUS_L"
+    ],
+    "unique_id": "BONE_CALCANEUS_L"
+  },
+  {
+    "name": "Calcaneus",
+    "latin_name": "Calcaneus",
+    "bone_type": "short",
+    "region": "tarsal",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "tibia/fibula",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_CALCANEUS_R"
+    ],
+    "unique_id": "BONE_CALCANEUS_R"
+  },
+  {
+    "name": "Capitate",
+    "latin_name": "Capitate",
+    "bone_type": "short",
+    "region": "carpal",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "radius/ulna",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_CAPITATE_L"
+    ],
+    "unique_id": "BONE_CAPITATE_L"
+  },
+  {
+    "name": "Capitate",
+    "latin_name": "Capitate",
+    "bone_type": "short",
+    "region": "carpal",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "radius/ulna",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_CAPITATE_R"
+    ],
+    "unique_id": "BONE_CAPITATE_R"
+  },
+  {
+    "name": "Clavicle",
+    "latin_name": "Clavicle",
+    "bone_type": "long",
+    "region": "shoulder",
+    "dimensions": {
+      "length_mm": 140.0,
+      "width_mm": 12.0,
+      "thickness_mm": 12.0
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {
+      "shape": "box",
+      "length_cm": 14.0,
+      "width_cm": 1.0,
+      "thickness_cm": 1.0
+    },
+    "material": {
+      "name": "bone",
+      "density": 1850,
+      "mass_g": 16
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "sternum",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_CLAVICLE_L"
+    ],
+    "unique_id": "BONE_CLAVICLE_L"
+  },
+  {
+    "name": "Clavicle",
+    "latin_name": "Clavicle",
+    "bone_type": "long",
+    "region": "shoulder",
+    "dimensions": {
+      "length_mm": 140.0,
+      "width_mm": 12.0,
+      "thickness_mm": 12.0
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {
+      "shape": "box",
+      "length_cm": 14.0,
+      "width_cm": 1.0,
+      "thickness_cm": 1.0
+    },
+    "material": {
+      "name": "bone",
+      "density": 1850,
+      "mass_g": 16
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "sternum",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_CLAVICLE_R"
+    ],
+    "unique_id": "BONE_CLAVICLE_R"
+  },
+  {
+    "name": "Coccyx",
+    "latin_name": "Coccyx",
+    "bone_type": "irregular",
+    "region": "coccyx",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "sacrum",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_COCCYX"
+    ],
+    "unique_id": "BONE_COCCYX"
+  },
+  {
+    "name": "Cuboid",
+    "latin_name": "Cuboid",
+    "bone_type": "short",
+    "region": "tarsal",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "tibia/fibula",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_CUBOID_L"
+    ],
+    "unique_id": "BONE_CUBOID_L"
+  },
+  {
+    "name": "Cuboid",
+    "latin_name": "Cuboid",
+    "bone_type": "short",
+    "region": "tarsal",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "tibia/fibula",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_CUBOID_R"
+    ],
+    "unique_id": "BONE_CUBOID_R"
+  },
+  {
+    "name": "Ethmoid",
+    "latin_name": "Ethmoid",
+    "bone_type": "irregular",
+    "region": "skull",
+    "dimensions": {
+      "length_mm": 50.0,
+      "width_mm": 50.0,
+      "thickness_mm": 4.0
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {
+      "shape": "box",
+      "length_cm": 5.0,
+      "width_cm": 5.0,
+      "thickness_cm": 0.4
+    },
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "frontal",
+      "children": [
+        "vomer"
+      ]
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_ETHMOID"
+    ],
+    "unique_id": "BONE_ETHMOID"
+  },
+  {
+    "name": "Femur",
+    "latin_name": "Femur",
+    "bone_type": "long",
+    "region": "thigh",
+    "dimensions": {
+      "length_mm": 420.0,
+      "width_mm": 40.0,
+      "thickness_mm": 40.0
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {
+      "shape": "box",
+      "length_cm": 48.0,
+      "width_cm": 2.8,
+      "thickness_cm": 2.8
+    },
+    "material": {
+      "name": "bone",
+      "density": 1900,
+      "mass_g": 350
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "hip",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_FEMUR_L"
+    ],
+    "unique_id": "BONE_FEMUR_L"
+  },
+  {
+    "name": "Femur",
+    "latin_name": "Femur",
+    "bone_type": "long",
+    "region": "thigh",
+    "dimensions": {
+      "length_mm": 420.0,
+      "width_mm": 40.0,
+      "thickness_mm": 40.0
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {
+      "shape": "box",
+      "length_cm": 48.0,
+      "width_cm": 2.8,
+      "thickness_cm": 2.8
+    },
+    "material": {
+      "name": "bone",
+      "density": 1900,
+      "mass_g": 350
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "hip",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_FEMUR_R"
+    ],
+    "unique_id": "BONE_FEMUR_R"
+  },
+  {
+    "name": "Fibula",
+    "latin_name": "Fibula",
+    "bone_type": "long",
+    "region": "leg",
+    "dimensions": {
+      "length_mm": 355.0,
+      "width_mm": 15.0,
+      "thickness_mm": 15.0
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {
+      "shape": "box",
+      "length_cm": 40.0,
+      "width_cm": 1.5,
+      "thickness_cm": 1.5
+    },
+    "material": {
+      "name": "bone",
+      "density": 1900,
+      "mass_g": 40
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "tibia",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_FIBULA_L"
+    ],
+    "unique_id": "BONE_FIBULA_L"
+  },
+  {
+    "name": "Fibula",
+    "latin_name": "Fibula",
+    "bone_type": "long",
+    "region": "leg",
+    "dimensions": {
+      "length_mm": 355.0,
+      "width_mm": 15.0,
+      "thickness_mm": 15.0
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {
+      "shape": "box",
+      "length_cm": 40.0,
+      "width_cm": 1.5,
+      "thickness_cm": 1.5
+    },
+    "material": {
+      "name": "bone",
+      "density": 1900,
+      "mass_g": 40
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "tibia",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_FIBULA_R"
+    ],
+    "unique_id": "BONE_FIBULA_R"
+  },
+  {
+    "name": "Frontal",
+    "latin_name": "Frontal",
+    "bone_type": "flat",
+    "region": "skull",
+    "dimensions": {
+      "length_mm": 135.0,
+      "width_mm": 145.0,
+      "thickness_mm": 6.0
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {
+      "shape": "box",
+      "length_cm": 13.5,
+      "width_cm": 14.5,
+      "thickness_cm": 0.6
+    },
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "",
+      "children": [
+        "parietal"
+      ]
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_FRONTAL"
+    ],
+    "unique_id": "BONE_FRONTAL"
+  },
+  {
+    "name": "Hamate",
+    "latin_name": "Hamate",
+    "bone_type": "short",
+    "region": "carpal",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "radius/ulna",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_HAMATE_L"
+    ],
+    "unique_id": "BONE_HAMATE_L"
+  },
+  {
+    "name": "Hamate",
+    "latin_name": "Hamate",
+    "bone_type": "short",
+    "region": "carpal",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "radius/ulna",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_HAMATE_R"
+    ],
+    "unique_id": "BONE_HAMATE_R"
+  },
+  {
+    "name": "HipBone",
+    "latin_name": "HipBone",
+    "bone_type": "irregular",
+    "region": "pelvis",
+    "dimensions": {
+      "length_mm": 230.0,
+      "width_mm": 140.0,
+      "thickness_mm": 50.0
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800,
+      "mass_g": 120
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "sacrum",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_HIP_L"
+    ],
+    "unique_id": "BONE_HIP_L"
+  },
+  {
+    "name": "HipBone",
+    "latin_name": "HipBone",
+    "bone_type": "irregular",
+    "region": "pelvis",
+    "dimensions": {
+      "length_mm": 230.0,
+      "width_mm": 140.0,
+      "thickness_mm": 50.0
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800,
+      "mass_g": 120
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "sacrum",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_HIP_R"
+    ],
+    "unique_id": "BONE_HIP_R"
+  },
+  {
+    "name": "Humerus",
+    "latin_name": "Humerus",
+    "bone_type": "long",
+    "region": "upper arm",
+    "dimensions": {
+      "length_mm": 310.0,
+      "width_mm": 30.0,
+      "thickness_mm": 30.0
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {
+      "shape": "box",
+      "length_cm": 35.0,
+      "width_cm": 2.5,
+      "thickness_cm": 2.5
+    },
+    "material": {
+      "name": "bone",
+      "density": 1900,
+      "mass_g": 100
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "scapula",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_HUMERUS_L"
+    ],
+    "unique_id": "BONE_HUMERUS_L"
+  },
+  {
+    "name": "Humerus",
+    "latin_name": "Humerus",
+    "bone_type": "long",
+    "region": "upper arm",
+    "dimensions": {
+      "length_mm": 310.0,
+      "width_mm": 30.0,
+      "thickness_mm": 30.0
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {
+      "shape": "box",
+      "length_cm": 35.0,
+      "width_cm": 2.5,
+      "thickness_cm": 2.5
+    },
+    "material": {
+      "name": "bone",
+      "density": 1900,
+      "mass_g": 100
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "scapula",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_HUMERUS_R"
+    ],
+    "unique_id": "BONE_HUMERUS_R"
+  },
+  {
+    "name": "Hyoid",
+    "latin_name": "Hyoid",
+    "bone_type": "sesamoid",
+    "region": "neck",
+    "dimensions": {
+      "length_mm": 25.0,
+      "width_mm": 35.0,
+      "thickness_mm": 10.0
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {
+      "shape": "box",
+      "length_cm": 2.5,
+      "width_cm": 3.5,
+      "thickness_cm": 1.0
+    },
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_HYOID"
+    ],
+    "unique_id": "BONE_HYOID"
+  },
+  {
+    "name": "Incus",
+    "latin_name": "Incus",
+    "bone_type": "irregular",
+    "region": "middle ear",
+    "dimensions": {
+      "length_mm": 8.0,
+      "width_mm": 4.0,
+      "thickness_mm": 3.0
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {
+      "shape": "box",
+      "length_cm": 0.8,
+      "width_cm": 0.4,
+      "thickness_cm": 0.3
+    },
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_INCUS_L"
+    ],
+    "unique_id": "BONE_INCUS_L"
+  },
+  {
+    "name": "Incus",
+    "latin_name": "Incus",
+    "bone_type": "irregular",
+    "region": "middle ear",
+    "dimensions": {
+      "length_mm": 8.0,
+      "width_mm": 4.0,
+      "thickness_mm": 3.0
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {
+      "shape": "box",
+      "length_cm": 0.8,
+      "width_cm": 0.4,
+      "thickness_cm": 0.3
+    },
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_INCUS_R"
+    ],
+    "unique_id": "BONE_INCUS_R"
+  },
+  {
+    "name": "Intermediate Cuneiform",
+    "latin_name": "Intermediate Cuneiform",
+    "bone_type": "short",
+    "region": "tarsal",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "tibia/fibula",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_INTERMEDIATE_CUNEIFORM_L"
+    ],
+    "unique_id": "BONE_INTERMEDIATE_CUNEIFORM_L"
+  },
+  {
+    "name": "Intermediate Cuneiform",
+    "latin_name": "Intermediate Cuneiform",
+    "bone_type": "short",
+    "region": "tarsal",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "tibia/fibula",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_INTERMEDIATE_CUNEIFORM_R"
+    ],
+    "unique_id": "BONE_INTERMEDIATE_CUNEIFORM_R"
+  },
+  {
+    "name": "L1",
+    "latin_name": "L1",
+    "bone_type": "irregular",
+    "region": "lumbar vertebrae",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "T12",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_L1"
+    ],
+    "unique_id": "BONE_L1"
+  },
+  {
+    "name": "L2",
+    "latin_name": "L2",
+    "bone_type": "irregular",
+    "region": "lumbar vertebrae",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "L1",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_L2"
+    ],
+    "unique_id": "BONE_L2"
+  },
+  {
+    "name": "L3",
+    "latin_name": "L3",
+    "bone_type": "irregular",
+    "region": "lumbar vertebrae",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "L2",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_L3"
+    ],
+    "unique_id": "BONE_L3"
+  },
+  {
+    "name": "L4",
+    "latin_name": "L4",
+    "bone_type": "irregular",
+    "region": "lumbar vertebrae",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "L3",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_L4"
+    ],
+    "unique_id": "BONE_L4"
+  },
+  {
+    "name": "L5",
+    "latin_name": "L5",
+    "bone_type": "irregular",
+    "region": "lumbar vertebrae",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "L4",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_L5"
+    ],
+    "unique_id": "BONE_L5"
+  },
+  {
+    "name": "Lateral Cuneiform",
+    "latin_name": "Lateral Cuneiform",
+    "bone_type": "short",
+    "region": "tarsal",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "tibia/fibula",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_LATERAL_CUNEIFORM_L"
+    ],
+    "unique_id": "BONE_LATERAL_CUNEIFORM_L"
+  },
+  {
+    "name": "Lateral Cuneiform",
+    "latin_name": "Lateral Cuneiform",
+    "bone_type": "short",
+    "region": "tarsal",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "tibia/fibula",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_LATERAL_CUNEIFORM_R"
+    ],
+    "unique_id": "BONE_LATERAL_CUNEIFORM_R"
+  },
+  {
+    "name": "Lunate",
+    "latin_name": "Lunate",
+    "bone_type": "short",
+    "region": "carpal",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "radius/ulna",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_LUNATE_L"
+    ],
+    "unique_id": "BONE_LUNATE_L"
+  },
+  {
+    "name": "Lunate",
+    "latin_name": "Lunate",
+    "bone_type": "short",
+    "region": "carpal",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "radius/ulna",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_LUNATE_R"
+    ],
+    "unique_id": "BONE_LUNATE_R"
+  },
+  {
+    "name": "Malleus",
+    "latin_name": "Malleus",
+    "bone_type": "irregular",
+    "region": "middle ear",
+    "dimensions": {
+      "length_mm": 8.0,
+      "width_mm": 4.0,
+      "thickness_mm": 3.0
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {
+      "shape": "box",
+      "length_cm": 0.8,
+      "width_cm": 0.4,
+      "thickness_cm": 0.3
+    },
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_MALLEUS_L"
+    ],
+    "unique_id": "BONE_MALLEUS_L"
+  },
+  {
+    "name": "Malleus",
+    "latin_name": "Malleus",
+    "bone_type": "irregular",
+    "region": "middle ear",
+    "dimensions": {
+      "length_mm": 8.0,
+      "width_mm": 4.0,
+      "thickness_mm": 3.0
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {
+      "shape": "box",
+      "length_cm": 0.8,
+      "width_cm": 0.4,
+      "thickness_cm": 0.3
+    },
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_MALLEUS_R"
+    ],
+    "unique_id": "BONE_MALLEUS_R"
+  },
+  {
+    "name": "Mandible",
+    "latin_name": "Mandible",
+    "bone_type": "irregular",
+    "region": "face",
+    "dimensions": {
+      "length_mm": 130.0,
+      "width_mm": 120.0,
+      "thickness_mm": 13.0,
+      "height_mm": 70.0
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {
+      "shape": "box",
+      "length_cm": 17.0,
+      "width_cm": 12.0,
+      "thickness_cm": 1.0
+    },
+    "material": {
+      "name": "bone",
+      "density": 1800,
+      "mass_g": 75
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "temporal",
+      "children": [
+        "temporal"
+      ]
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_MANDIBLE"
+    ],
+    "unique_id": "BONE_MANDIBLE"
+  },
+  {
+    "name": "Medial Cuneiform",
+    "latin_name": "Medial Cuneiform",
+    "bone_type": "short",
+    "region": "tarsal",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "tibia/fibula",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_MEDIAL_CUNEIFORM_L"
+    ],
+    "unique_id": "BONE_MEDIAL_CUNEIFORM_L"
+  },
+  {
+    "name": "Medial Cuneiform",
+    "latin_name": "Medial Cuneiform",
+    "bone_type": "short",
+    "region": "tarsal",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "tibia/fibula",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_MEDIAL_CUNEIFORM_R"
+    ],
+    "unique_id": "BONE_MEDIAL_CUNEIFORM_R"
+  },
+  {
+    "name": "Metacarpal 1",
+    "latin_name": "Metacarpal 1",
+    "bone_type": "long",
+    "region": "hand",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "carpals",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_META1_L"
+    ],
+    "unique_id": "BONE_META1_L"
+  },
+  {
+    "name": "Metacarpal 1",
+    "latin_name": "Metacarpal 1",
+    "bone_type": "long",
+    "region": "hand",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "carpals",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_META1_R"
+    ],
+    "unique_id": "BONE_META1_R"
+  },
+  {
+    "name": "Metacarpal 2",
+    "latin_name": "Metacarpal 2",
+    "bone_type": "long",
+    "region": "hand",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "carpals",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_META2_L"
+    ],
+    "unique_id": "BONE_META2_L"
+  },
+  {
+    "name": "Metacarpal 2",
+    "latin_name": "Metacarpal 2",
+    "bone_type": "long",
+    "region": "hand",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "carpals",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_META2_R"
+    ],
+    "unique_id": "BONE_META2_R"
+  },
+  {
+    "name": "Metacarpal 3",
+    "latin_name": "Metacarpal 3",
+    "bone_type": "long",
+    "region": "hand",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "carpals",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_META3_L"
+    ],
+    "unique_id": "BONE_META3_L"
+  },
+  {
+    "name": "Metacarpal 3",
+    "latin_name": "Metacarpal 3",
+    "bone_type": "long",
+    "region": "hand",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "carpals",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_META3_R"
+    ],
+    "unique_id": "BONE_META3_R"
+  },
+  {
+    "name": "Metacarpal 4",
+    "latin_name": "Metacarpal 4",
+    "bone_type": "long",
+    "region": "hand",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "carpals",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_META4_L"
+    ],
+    "unique_id": "BONE_META4_L"
+  },
+  {
+    "name": "Metacarpal 4",
+    "latin_name": "Metacarpal 4",
+    "bone_type": "long",
+    "region": "hand",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "carpals",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_META4_R"
+    ],
+    "unique_id": "BONE_META4_R"
+  },
+  {
+    "name": "Metacarpal 5",
+    "latin_name": "Metacarpal 5",
+    "bone_type": "long",
+    "region": "hand",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "carpals",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_META5_L"
+    ],
+    "unique_id": "BONE_META5_L"
+  },
+  {
+    "name": "Metacarpal 5",
+    "latin_name": "Metacarpal 5",
+    "bone_type": "long",
+    "region": "hand",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "carpals",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_META5_R"
+    ],
+    "unique_id": "BONE_META5_R"
+  },
+  {
+    "name": "Metatarsal 1",
+    "latin_name": "Metatarsal 1",
+    "bone_type": "long",
+    "region": "foot",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "tarsals",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_MT1_L"
+    ],
+    "unique_id": "BONE_MT1_L"
+  },
+  {
+    "name": "Metatarsal 1",
+    "latin_name": "Metatarsal 1",
+    "bone_type": "long",
+    "region": "foot",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "tarsals",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_MT1_R"
+    ],
+    "unique_id": "BONE_MT1_R"
+  },
+  {
+    "name": "Metatarsal 2",
+    "latin_name": "Metatarsal 2",
+    "bone_type": "long",
+    "region": "foot",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "tarsals",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_MT2_L"
+    ],
+    "unique_id": "BONE_MT2_L"
+  },
+  {
+    "name": "Metatarsal 2",
+    "latin_name": "Metatarsal 2",
+    "bone_type": "long",
+    "region": "foot",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "tarsals",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_MT2_R"
+    ],
+    "unique_id": "BONE_MT2_R"
+  },
+  {
+    "name": "Metatarsal 3",
+    "latin_name": "Metatarsal 3",
+    "bone_type": "long",
+    "region": "foot",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "tarsals",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_MT3_L"
+    ],
+    "unique_id": "BONE_MT3_L"
+  },
+  {
+    "name": "Metatarsal 3",
+    "latin_name": "Metatarsal 3",
+    "bone_type": "long",
+    "region": "foot",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "tarsals",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_MT3_R"
+    ],
+    "unique_id": "BONE_MT3_R"
+  },
+  {
+    "name": "Metatarsal 4",
+    "latin_name": "Metatarsal 4",
+    "bone_type": "long",
+    "region": "foot",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "tarsals",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_MT4_L"
+    ],
+    "unique_id": "BONE_MT4_L"
+  },
+  {
+    "name": "Metatarsal 4",
+    "latin_name": "Metatarsal 4",
+    "bone_type": "long",
+    "region": "foot",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "tarsals",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_MT4_R"
+    ],
+    "unique_id": "BONE_MT4_R"
+  },
+  {
+    "name": "Metatarsal 5",
+    "latin_name": "Metatarsal 5",
+    "bone_type": "long",
+    "region": "foot",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "tarsals",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_MT5_L"
+    ],
+    "unique_id": "BONE_MT5_L"
+  },
+  {
+    "name": "Metatarsal 5",
+    "latin_name": "Metatarsal 5",
+    "bone_type": "long",
+    "region": "foot",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "tarsals",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_MT5_R"
+    ],
+    "unique_id": "BONE_MT5_R"
+  },
+  {
+    "name": "Navicular",
+    "latin_name": "Navicular",
+    "bone_type": "short",
+    "region": "tarsal",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "tibia/fibula",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_NAVICULAR_L"
+    ],
+    "unique_id": "BONE_NAVICULAR_L"
+  },
+  {
+    "name": "Navicular",
+    "latin_name": "Navicular",
+    "bone_type": "short",
+    "region": "tarsal",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "tibia/fibula",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_NAVICULAR_R"
+    ],
+    "unique_id": "BONE_NAVICULAR_R"
+  },
+  {
+    "name": "Occipital",
+    "latin_name": "Occipital",
+    "bone_type": "flat",
+    "region": "skull",
+    "dimensions": {
+      "length_mm": 120.0,
+      "width_mm": 110.0,
+      "thickness_mm": 6.0
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {
+      "shape": "box",
+      "length_cm": 12.0,
+      "width_cm": 11.0,
+      "thickness_cm": 0.6
+    },
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "parietal",
+      "children": [
+        "atlas"
+      ]
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_OCCIPITAL"
+    ],
+    "unique_id": "BONE_OCCIPITAL"
+  },
+  {
+    "name": "Parietal",
+    "latin_name": "Parietal",
+    "bone_type": "flat",
+    "region": "skull",
+    "dimensions": {
+      "length_mm": 140.0,
+      "width_mm": 100.0,
+      "thickness_mm": 5.0
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {
+      "shape": "box",
+      "length_cm": 14.0,
+      "width_cm": 10.0,
+      "thickness_cm": 0.5
+    },
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "frontal",
+      "children": [
+        "frontal",
+        "occipital"
+      ]
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_PAR_L"
+    ],
+    "unique_id": "BONE_PAR_L"
+  },
+  {
+    "name": "Parietal",
+    "latin_name": "Parietal",
+    "bone_type": "flat",
+    "region": "skull",
+    "dimensions": {
+      "length_mm": 140.0,
+      "width_mm": 100.0,
+      "thickness_mm": 5.0
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {
+      "shape": "box",
+      "length_cm": 14.0,
+      "width_cm": 10.0,
+      "thickness_cm": 0.5
+    },
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "frontal",
+      "children": [
+        "frontal",
+        "occipital"
+      ]
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_PAR_R"
+    ],
+    "unique_id": "BONE_PAR_R"
+  },
+  {
+    "name": "Patella",
+    "latin_name": "Patella",
+    "bone_type": "sesamoid",
+    "region": "knee",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "femur",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_PATELLA_L"
+    ],
+    "unique_id": "BONE_PATELLA_L"
+  },
+  {
+    "name": "Patella",
+    "latin_name": "Patella",
+    "bone_type": "sesamoid",
+    "region": "knee",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "femur",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_PATELLA_R"
+    ],
+    "unique_id": "BONE_PATELLA_R"
+  },
+  {
+    "name": "Proximal Phalanx 1",
+    "latin_name": "Proximal Phalanx 1",
+    "bone_type": "long",
+    "region": "finger",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "metacarpal",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_PHAL_1_1_L"
+    ],
+    "unique_id": "BONE_PHAL_1_1_L"
+  },
+  {
+    "name": "Proximal Phalanx 1",
+    "latin_name": "Proximal Phalanx 1",
+    "bone_type": "long",
+    "region": "finger",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "metacarpal",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_PHAL_1_1_R"
+    ],
+    "unique_id": "BONE_PHAL_1_1_R"
+  },
+  {
+    "name": "Distal Phalanx 1",
+    "latin_name": "Distal Phalanx 1",
+    "bone_type": "long",
+    "region": "finger",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "Proximal phalanx",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_PHAL_1_2_L"
+    ],
+    "unique_id": "BONE_PHAL_1_2_L"
+  },
+  {
+    "name": "Distal Phalanx 1",
+    "latin_name": "Distal Phalanx 1",
+    "bone_type": "long",
+    "region": "finger",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "Proximal phalanx",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_PHAL_1_2_R"
+    ],
+    "unique_id": "BONE_PHAL_1_2_R"
+  },
+  {
+    "name": "Proximal Phalanx 2",
+    "latin_name": "Proximal Phalanx 2",
+    "bone_type": "long",
+    "region": "finger",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "metacarpal",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_PHAL_2_1_L"
+    ],
+    "unique_id": "BONE_PHAL_2_1_L"
+  },
+  {
+    "name": "Proximal Phalanx 2",
+    "latin_name": "Proximal Phalanx 2",
+    "bone_type": "long",
+    "region": "finger",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "metacarpal",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_PHAL_2_1_R"
+    ],
+    "unique_id": "BONE_PHAL_2_1_R"
+  },
+  {
+    "name": "Middle Phalanx 2",
+    "latin_name": "Middle Phalanx 2",
+    "bone_type": "long",
+    "region": "finger",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "Proximal phalanx",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_PHAL_2_2_L"
+    ],
+    "unique_id": "BONE_PHAL_2_2_L"
+  },
+  {
+    "name": "Middle Phalanx 2",
+    "latin_name": "Middle Phalanx 2",
+    "bone_type": "long",
+    "region": "finger",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "Proximal phalanx",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_PHAL_2_2_R"
+    ],
+    "unique_id": "BONE_PHAL_2_2_R"
+  },
+  {
+    "name": "Distal Phalanx 2",
+    "latin_name": "Distal Phalanx 2",
+    "bone_type": "long",
+    "region": "finger",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "Middle phalanx",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_PHAL_2_3_L"
+    ],
+    "unique_id": "BONE_PHAL_2_3_L"
+  },
+  {
+    "name": "Distal Phalanx 2",
+    "latin_name": "Distal Phalanx 2",
+    "bone_type": "long",
+    "region": "finger",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "Middle phalanx",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_PHAL_2_3_R"
+    ],
+    "unique_id": "BONE_PHAL_2_3_R"
+  },
+  {
+    "name": "Proximal Phalanx 3",
+    "latin_name": "Proximal Phalanx 3",
+    "bone_type": "long",
+    "region": "finger",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "metacarpal",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_PHAL_3_1_L"
+    ],
+    "unique_id": "BONE_PHAL_3_1_L"
+  },
+  {
+    "name": "Proximal Phalanx 3",
+    "latin_name": "Proximal Phalanx 3",
+    "bone_type": "long",
+    "region": "finger",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "metacarpal",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_PHAL_3_1_R"
+    ],
+    "unique_id": "BONE_PHAL_3_1_R"
+  },
+  {
+    "name": "Middle Phalanx 3",
+    "latin_name": "Middle Phalanx 3",
+    "bone_type": "long",
+    "region": "finger",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "Proximal phalanx",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_PHAL_3_2_L"
+    ],
+    "unique_id": "BONE_PHAL_3_2_L"
+  },
+  {
+    "name": "Middle Phalanx 3",
+    "latin_name": "Middle Phalanx 3",
+    "bone_type": "long",
+    "region": "finger",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "Proximal phalanx",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_PHAL_3_2_R"
+    ],
+    "unique_id": "BONE_PHAL_3_2_R"
+  },
+  {
+    "name": "Distal Phalanx 3",
+    "latin_name": "Distal Phalanx 3",
+    "bone_type": "long",
+    "region": "finger",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "Middle phalanx",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_PHAL_3_3_L"
+    ],
+    "unique_id": "BONE_PHAL_3_3_L"
+  },
+  {
+    "name": "Distal Phalanx 3",
+    "latin_name": "Distal Phalanx 3",
+    "bone_type": "long",
+    "region": "finger",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "Middle phalanx",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_PHAL_3_3_R"
+    ],
+    "unique_id": "BONE_PHAL_3_3_R"
+  },
+  {
+    "name": "Proximal Phalanx 4",
+    "latin_name": "Proximal Phalanx 4",
+    "bone_type": "long",
+    "region": "finger",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "metacarpal",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_PHAL_4_1_L"
+    ],
+    "unique_id": "BONE_PHAL_4_1_L"
+  },
+  {
+    "name": "Proximal Phalanx 4",
+    "latin_name": "Proximal Phalanx 4",
+    "bone_type": "long",
+    "region": "finger",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "metacarpal",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_PHAL_4_1_R"
+    ],
+    "unique_id": "BONE_PHAL_4_1_R"
+  },
+  {
+    "name": "Middle Phalanx 4",
+    "latin_name": "Middle Phalanx 4",
+    "bone_type": "long",
+    "region": "finger",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "Proximal phalanx",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_PHAL_4_2_L"
+    ],
+    "unique_id": "BONE_PHAL_4_2_L"
+  },
+  {
+    "name": "Middle Phalanx 4",
+    "latin_name": "Middle Phalanx 4",
+    "bone_type": "long",
+    "region": "finger",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "Proximal phalanx",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_PHAL_4_2_R"
+    ],
+    "unique_id": "BONE_PHAL_4_2_R"
+  },
+  {
+    "name": "Distal Phalanx 4",
+    "latin_name": "Distal Phalanx 4",
+    "bone_type": "long",
+    "region": "finger",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "Middle phalanx",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_PHAL_4_3_L"
+    ],
+    "unique_id": "BONE_PHAL_4_3_L"
+  },
+  {
+    "name": "Distal Phalanx 4",
+    "latin_name": "Distal Phalanx 4",
+    "bone_type": "long",
+    "region": "finger",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "Middle phalanx",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_PHAL_4_3_R"
+    ],
+    "unique_id": "BONE_PHAL_4_3_R"
+  },
+  {
+    "name": "Proximal Phalanx 5",
+    "latin_name": "Proximal Phalanx 5",
+    "bone_type": "long",
+    "region": "finger",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "metacarpal",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_PHAL_5_1_L"
+    ],
+    "unique_id": "BONE_PHAL_5_1_L"
+  },
+  {
+    "name": "Proximal Phalanx 5",
+    "latin_name": "Proximal Phalanx 5",
+    "bone_type": "long",
+    "region": "finger",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "metacarpal",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_PHAL_5_1_R"
+    ],
+    "unique_id": "BONE_PHAL_5_1_R"
+  },
+  {
+    "name": "Middle Phalanx 5",
+    "latin_name": "Middle Phalanx 5",
+    "bone_type": "long",
+    "region": "finger",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "Proximal phalanx",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_PHAL_5_2_L"
+    ],
+    "unique_id": "BONE_PHAL_5_2_L"
+  },
+  {
+    "name": "Middle Phalanx 5",
+    "latin_name": "Middle Phalanx 5",
+    "bone_type": "long",
+    "region": "finger",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "Proximal phalanx",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_PHAL_5_2_R"
+    ],
+    "unique_id": "BONE_PHAL_5_2_R"
+  },
+  {
+    "name": "Distal Phalanx 5",
+    "latin_name": "Distal Phalanx 5",
+    "bone_type": "long",
+    "region": "finger",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "Middle phalanx",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_PHAL_5_3_L"
+    ],
+    "unique_id": "BONE_PHAL_5_3_L"
+  },
+  {
+    "name": "Distal Phalanx 5",
+    "latin_name": "Distal Phalanx 5",
+    "bone_type": "long",
+    "region": "finger",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "Middle phalanx",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_PHAL_5_3_R"
+    ],
+    "unique_id": "BONE_PHAL_5_3_R"
+  },
+  {
+    "name": "Pisiform",
+    "latin_name": "Pisiform",
+    "bone_type": "short",
+    "region": "carpal",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "radius/ulna",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_PISIFORM_L"
+    ],
+    "unique_id": "BONE_PISIFORM_L"
+  },
+  {
+    "name": "Pisiform",
+    "latin_name": "Pisiform",
+    "bone_type": "short",
+    "region": "carpal",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "radius/ulna",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_PISIFORM_R"
+    ],
+    "unique_id": "BONE_PISIFORM_R"
+  },
+  {
+    "name": "Radius",
+    "latin_name": "Radius",
+    "bone_type": "long",
+    "region": "forearm",
+    "dimensions": {
+      "length_mm": 240.0,
+      "width_mm": 15.0,
+      "thickness_mm": 15.0
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {
+      "shape": "box",
+      "length_cm": 24.0,
+      "width_cm": 1.5,
+      "thickness_cm": 1.5
+    },
+    "material": {
+      "name": "bone",
+      "density": 1900,
+      "mass_g": 30
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "humerus",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_RADIUS_L"
+    ],
+    "unique_id": "BONE_RADIUS_L"
+  },
+  {
+    "name": "Radius",
+    "latin_name": "Radius",
+    "bone_type": "long",
+    "region": "forearm",
+    "dimensions": {
+      "length_mm": 240.0,
+      "width_mm": 15.0,
+      "thickness_mm": 15.0
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {
+      "shape": "box",
+      "length_cm": 24.0,
+      "width_cm": 1.5,
+      "thickness_cm": 1.5
+    },
+    "material": {
+      "name": "bone",
+      "density": 1900,
+      "mass_g": 30
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "humerus",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_RADIUS_R"
+    ],
+    "unique_id": "BONE_RADIUS_R"
+  },
+  {
+    "name": "Rib 10",
+    "latin_name": "Rib 10",
+    "bone_type": "flat",
+    "region": "thorax",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "thoracic vertebrae",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_RIB10_L"
+    ],
+    "unique_id": "BONE_RIB10_L"
+  },
+  {
+    "name": "Rib 10",
+    "latin_name": "Rib 10",
+    "bone_type": "flat",
+    "region": "thorax",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "thoracic vertebrae",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_RIB10_R"
+    ],
+    "unique_id": "BONE_RIB10_R"
+  },
+  {
+    "name": "Rib 11",
+    "latin_name": "Rib 11",
+    "bone_type": "flat",
+    "region": "thorax",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "thoracic vertebrae",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_RIB11_L"
+    ],
+    "unique_id": "BONE_RIB11_L"
+  },
+  {
+    "name": "Rib 11",
+    "latin_name": "Rib 11",
+    "bone_type": "flat",
+    "region": "thorax",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "thoracic vertebrae",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_RIB11_R"
+    ],
+    "unique_id": "BONE_RIB11_R"
+  },
+  {
+    "name": "Rib 12",
+    "latin_name": "Rib 12",
+    "bone_type": "flat",
+    "region": "thorax",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "thoracic vertebrae",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_RIB12_L"
+    ],
+    "unique_id": "BONE_RIB12_L"
+  },
+  {
+    "name": "Rib 12",
+    "latin_name": "Rib 12",
+    "bone_type": "flat",
+    "region": "thorax",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "thoracic vertebrae",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_RIB12_R"
+    ],
+    "unique_id": "BONE_RIB12_R"
+  },
+  {
+    "name": "Rib 1",
+    "latin_name": "Rib 1",
+    "bone_type": "flat",
+    "region": "thorax",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "thoracic vertebrae",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_RIB1_L"
+    ],
+    "unique_id": "BONE_RIB1_L"
+  },
+  {
+    "name": "Rib 1",
+    "latin_name": "Rib 1",
+    "bone_type": "flat",
+    "region": "thorax",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "thoracic vertebrae",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_RIB1_R"
+    ],
+    "unique_id": "BONE_RIB1_R"
+  },
+  {
+    "name": "Rib 2",
+    "latin_name": "Rib 2",
+    "bone_type": "flat",
+    "region": "thorax",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "thoracic vertebrae",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_RIB2_L"
+    ],
+    "unique_id": "BONE_RIB2_L"
+  },
+  {
+    "name": "Rib 2",
+    "latin_name": "Rib 2",
+    "bone_type": "flat",
+    "region": "thorax",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "thoracic vertebrae",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_RIB2_R"
+    ],
+    "unique_id": "BONE_RIB2_R"
+  },
+  {
+    "name": "Rib 3",
+    "latin_name": "Rib 3",
+    "bone_type": "flat",
+    "region": "thorax",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "thoracic vertebrae",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_RIB3_L"
+    ],
+    "unique_id": "BONE_RIB3_L"
+  },
+  {
+    "name": "Rib 3",
+    "latin_name": "Rib 3",
+    "bone_type": "flat",
+    "region": "thorax",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "thoracic vertebrae",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_RIB3_R"
+    ],
+    "unique_id": "BONE_RIB3_R"
+  },
+  {
+    "name": "Rib 4",
+    "latin_name": "Rib 4",
+    "bone_type": "flat",
+    "region": "thorax",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "thoracic vertebrae",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_RIB4_L"
+    ],
+    "unique_id": "BONE_RIB4_L"
+  },
+  {
+    "name": "Rib 4",
+    "latin_name": "Rib 4",
+    "bone_type": "flat",
+    "region": "thorax",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "thoracic vertebrae",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_RIB4_R"
+    ],
+    "unique_id": "BONE_RIB4_R"
+  },
+  {
+    "name": "Rib 5",
+    "latin_name": "Rib 5",
+    "bone_type": "flat",
+    "region": "thorax",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "thoracic vertebrae",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_RIB5_L"
+    ],
+    "unique_id": "BONE_RIB5_L"
+  },
+  {
+    "name": "Rib 5",
+    "latin_name": "Rib 5",
+    "bone_type": "flat",
+    "region": "thorax",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "thoracic vertebrae",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_RIB5_R"
+    ],
+    "unique_id": "BONE_RIB5_R"
+  },
+  {
+    "name": "Rib 6",
+    "latin_name": "Rib 6",
+    "bone_type": "flat",
+    "region": "thorax",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "thoracic vertebrae",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_RIB6_L"
+    ],
+    "unique_id": "BONE_RIB6_L"
+  },
+  {
+    "name": "Rib 6",
+    "latin_name": "Rib 6",
+    "bone_type": "flat",
+    "region": "thorax",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "thoracic vertebrae",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_RIB6_R"
+    ],
+    "unique_id": "BONE_RIB6_R"
+  },
+  {
+    "name": "Rib 7",
+    "latin_name": "Rib 7",
+    "bone_type": "flat",
+    "region": "thorax",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "thoracic vertebrae",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_RIB7_L"
+    ],
+    "unique_id": "BONE_RIB7_L"
+  },
+  {
+    "name": "Rib 7",
+    "latin_name": "Rib 7",
+    "bone_type": "flat",
+    "region": "thorax",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "thoracic vertebrae",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_RIB7_R"
+    ],
+    "unique_id": "BONE_RIB7_R"
+  },
+  {
+    "name": "Rib 8",
+    "latin_name": "Rib 8",
+    "bone_type": "flat",
+    "region": "thorax",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "thoracic vertebrae",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_RIB8_L"
+    ],
+    "unique_id": "BONE_RIB8_L"
+  },
+  {
+    "name": "Rib 8",
+    "latin_name": "Rib 8",
+    "bone_type": "flat",
+    "region": "thorax",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "thoracic vertebrae",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_RIB8_R"
+    ],
+    "unique_id": "BONE_RIB8_R"
+  },
+  {
+    "name": "Rib 9",
+    "latin_name": "Rib 9",
+    "bone_type": "flat",
+    "region": "thorax",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "thoracic vertebrae",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_RIB9_L"
+    ],
+    "unique_id": "BONE_RIB9_L"
+  },
+  {
+    "name": "Rib 9",
+    "latin_name": "Rib 9",
+    "bone_type": "flat",
+    "region": "thorax",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "thoracic vertebrae",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_RIB9_R"
+    ],
+    "unique_id": "BONE_RIB9_R"
+  },
+  {
+    "name": "Sacrum",
+    "latin_name": "Sacrum",
+    "bone_type": "irregular",
+    "region": "sacrum",
+    "dimensions": {
+      "length_mm": 100.0,
+      "width_mm": 110.0,
+      "thickness_mm": 10.0
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1500,
+      "mass_g": 30
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "L5",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_SACRUM"
+    ],
+    "unique_id": "BONE_SACRUM"
+  },
+  {
+    "name": "Scaphoid",
+    "latin_name": "Scaphoid",
+    "bone_type": "short",
+    "region": "carpal",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "radius/ulna",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_SCAPHOID_L"
+    ],
+    "unique_id": "BONE_SCAPHOID_L"
+  },
+  {
+    "name": "Scaphoid",
+    "latin_name": "Scaphoid",
+    "bone_type": "short",
+    "region": "carpal",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "radius/ulna",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_SCAPHOID_R"
+    ],
+    "unique_id": "BONE_SCAPHOID_R"
+  },
+  {
+    "name": "Scapula",
+    "latin_name": "Scapula",
+    "bone_type": "flat",
+    "region": "shoulder",
+    "dimensions": {
+      "length_mm": 145.0,
+      "width_mm": 105.0,
+      "thickness_mm": 3.0
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800,
+      "mass_g": 45
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "clavicle",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_SCAPULA_L"
+    ],
+    "unique_id": "BONE_SCAPULA_L"
+  },
+  {
+    "name": "Scapula",
+    "latin_name": "Scapula",
+    "bone_type": "flat",
+    "region": "shoulder",
+    "dimensions": {
+      "length_mm": 145.0,
+      "width_mm": 105.0,
+      "thickness_mm": 3.0
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800,
+      "mass_g": 45
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "clavicle",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_SCAPULA_R"
+    ],
+    "unique_id": "BONE_SCAPULA_R"
+  },
+  {
+    "name": "Sphenoid",
+    "latin_name": "Sphenoid",
+    "bone_type": "irregular",
+    "region": "skull",
+    "dimensions": {
+      "length_mm": 60.0,
+      "width_mm": 80.0,
+      "thickness_mm": 5.0
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {
+      "shape": "box",
+      "length_cm": 6.0,
+      "width_cm": 8.0,
+      "thickness_cm": 0.5
+    },
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "frontal",
+      "children": [
+        "frontal"
+      ]
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_SPHENOID"
+    ],
+    "unique_id": "BONE_SPHENOID"
+  },
+  {
+    "name": "Stapes",
+    "latin_name": "Stapes",
+    "bone_type": "irregular",
+    "region": "middle ear",
+    "dimensions": {
+      "length_mm": 8.0,
+      "width_mm": 4.0,
+      "thickness_mm": 3.0
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {
+      "shape": "box",
+      "length_cm": 0.8,
+      "width_cm": 0.4,
+      "thickness_cm": 0.3
+    },
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_STAPES_L"
+    ],
+    "unique_id": "BONE_STAPES_L"
+  },
+  {
+    "name": "Stapes",
+    "latin_name": "Stapes",
+    "bone_type": "irregular",
+    "region": "middle ear",
+    "dimensions": {
+      "length_mm": 8.0,
+      "width_mm": 4.0,
+      "thickness_mm": 3.0
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {
+      "shape": "box",
+      "length_cm": 0.8,
+      "width_cm": 0.4,
+      "thickness_cm": 0.3
+    },
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_STAPES_R"
+    ],
+    "unique_id": "BONE_STAPES_R"
+  },
+  {
+    "name": "Sternum",
+    "latin_name": "Sternum",
+    "bone_type": "flat",
+    "region": "thorax",
+    "dimensions": {
+      "length_mm": 170.0,
+      "width_mm": 50.0,
+      "thickness_mm": 10.0
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800,
+      "mass_g": 15
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "clavicle",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_STERNUM"
+    ],
+    "unique_id": "BONE_STERNUM"
+  },
+  {
+    "name": "T1",
+    "latin_name": "T1",
+    "bone_type": "irregular",
+    "region": "thoracic vertebrae",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "C7",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_T1"
+    ],
+    "unique_id": "BONE_T1"
+  },
+  {
+    "name": "T10",
+    "latin_name": "T10",
+    "bone_type": "irregular",
+    "region": "thoracic vertebrae",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "T9",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_T10"
+    ],
+    "unique_id": "BONE_T10"
+  },
+  {
+    "name": "T11",
+    "latin_name": "T11",
+    "bone_type": "irregular",
+    "region": "thoracic vertebrae",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "T10",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_T11"
+    ],
+    "unique_id": "BONE_T11"
+  },
+  {
+    "name": "T12",
+    "latin_name": "T12",
+    "bone_type": "irregular",
+    "region": "thoracic vertebrae",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "T11",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_T12"
+    ],
+    "unique_id": "BONE_T12"
+  },
+  {
+    "name": "T2",
+    "latin_name": "T2",
+    "bone_type": "irregular",
+    "region": "thoracic vertebrae",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "T1",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_T2"
+    ],
+    "unique_id": "BONE_T2"
+  },
+  {
+    "name": "T3",
+    "latin_name": "T3",
+    "bone_type": "irregular",
+    "region": "thoracic vertebrae",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "T2",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_T3"
+    ],
+    "unique_id": "BONE_T3"
+  },
+  {
+    "name": "T4",
+    "latin_name": "T4",
+    "bone_type": "irregular",
+    "region": "thoracic vertebrae",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "T3",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_T4"
+    ],
+    "unique_id": "BONE_T4"
+  },
+  {
+    "name": "T5",
+    "latin_name": "T5",
+    "bone_type": "irregular",
+    "region": "thoracic vertebrae",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "T4",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_T5"
+    ],
+    "unique_id": "BONE_T5"
+  },
+  {
+    "name": "T6",
+    "latin_name": "T6",
+    "bone_type": "irregular",
+    "region": "thoracic vertebrae",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "T5",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_T6"
+    ],
+    "unique_id": "BONE_T6"
+  },
+  {
+    "name": "T7",
+    "latin_name": "T7",
+    "bone_type": "irregular",
+    "region": "thoracic vertebrae",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "T6",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_T7"
+    ],
+    "unique_id": "BONE_T7"
+  },
+  {
+    "name": "T8",
+    "latin_name": "T8",
+    "bone_type": "irregular",
+    "region": "thoracic vertebrae",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "T7",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_T8"
+    ],
+    "unique_id": "BONE_T8"
+  },
+  {
+    "name": "T9",
+    "latin_name": "T9",
+    "bone_type": "irregular",
+    "region": "thoracic vertebrae",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "T8",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_T9"
+    ],
+    "unique_id": "BONE_T9"
+  },
+  {
+    "name": "Talus",
+    "latin_name": "Talus",
+    "bone_type": "short",
+    "region": "tarsal",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "tibia/fibula",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_TALUS_L"
+    ],
+    "unique_id": "BONE_TALUS_L"
+  },
+  {
+    "name": "Talus",
+    "latin_name": "Talus",
+    "bone_type": "short",
+    "region": "tarsal",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "tibia/fibula",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_TALUS_R"
+    ],
+    "unique_id": "BONE_TALUS_R"
+  },
+  {
+    "name": "Temporal",
+    "latin_name": "Temporal",
+    "bone_type": "irregular",
+    "region": "skull",
+    "dimensions": {
+      "length_mm": 70.0,
+      "width_mm": 70.0,
+      "thickness_mm": 5.0
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {
+      "shape": "box",
+      "length_cm": 7.0,
+      "width_cm": 7.0,
+      "thickness_cm": 0.5
+    },
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "parietal",
+      "children": [
+        "mandible"
+      ]
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_TEMP_L"
+    ],
+    "unique_id": "BONE_TEMP_L"
+  },
+  {
+    "name": "Temporal",
+    "latin_name": "Temporal",
+    "bone_type": "irregular",
+    "region": "skull",
+    "dimensions": {
+      "length_mm": 70.0,
+      "width_mm": 70.0,
+      "thickness_mm": 5.0
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {
+      "shape": "box",
+      "length_cm": 7.0,
+      "width_cm": 7.0,
+      "thickness_cm": 0.5
+    },
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "parietal",
+      "children": [
+        "mandible"
+      ]
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_TEMP_R"
+    ],
+    "unique_id": "BONE_TEMP_R"
+  },
+  {
+    "name": "Tibia",
+    "latin_name": "Tibia",
+    "bone_type": "long",
+    "region": "leg",
+    "dimensions": {
+      "length_mm": 375.0,
+      "width_mm": 35.0,
+      "thickness_mm": 35.0
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {
+      "shape": "box",
+      "length_cm": 40.0,
+      "width_cm": 2.5,
+      "thickness_cm": 2.5
+    },
+    "material": {
+      "name": "bone",
+      "density": 1900,
+      "mass_g": 200
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "femur",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_TIBIA_L"
+    ],
+    "unique_id": "BONE_TIBIA_L"
+  },
+  {
+    "name": "Tibia",
+    "latin_name": "Tibia",
+    "bone_type": "long",
+    "region": "leg",
+    "dimensions": {
+      "length_mm": 375.0,
+      "width_mm": 35.0,
+      "thickness_mm": 35.0
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {
+      "shape": "box",
+      "length_cm": 40.0,
+      "width_cm": 2.5,
+      "thickness_cm": 2.5
+    },
+    "material": {
+      "name": "bone",
+      "density": 1900,
+      "mass_g": 200
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "femur",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_TIBIA_R"
+    ],
+    "unique_id": "BONE_TIBIA_R"
+  },
+  {
+    "name": "Trapezium",
+    "latin_name": "Trapezium",
+    "bone_type": "short",
+    "region": "carpal",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "radius/ulna",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_TRAPEZIUM_L"
+    ],
+    "unique_id": "BONE_TRAPEZIUM_L"
+  },
+  {
+    "name": "Trapezium",
+    "latin_name": "Trapezium",
+    "bone_type": "short",
+    "region": "carpal",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "radius/ulna",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_TRAPEZIUM_R"
+    ],
+    "unique_id": "BONE_TRAPEZIUM_R"
+  },
+  {
+    "name": "Trapezoid",
+    "latin_name": "Trapezoid",
+    "bone_type": "short",
+    "region": "carpal",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "radius/ulna",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_TRAPEZOID_L"
+    ],
+    "unique_id": "BONE_TRAPEZOID_L"
+  },
+  {
+    "name": "Trapezoid",
+    "latin_name": "Trapezoid",
+    "bone_type": "short",
+    "region": "carpal",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "radius/ulna",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_TRAPEZOID_R"
+    ],
+    "unique_id": "BONE_TRAPEZOID_R"
+  },
+  {
+    "name": "Triquetrum",
+    "latin_name": "Triquetrum",
+    "bone_type": "short",
+    "region": "carpal",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "radius/ulna",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_TRIQUETRUM_L"
+    ],
+    "unique_id": "BONE_TRIQUETRUM_L"
+  },
+  {
+    "name": "Triquetrum",
+    "latin_name": "Triquetrum",
+    "bone_type": "short",
+    "region": "carpal",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "radius/ulna",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_TRIQUETRUM_R"
+    ],
+    "unique_id": "BONE_TRIQUETRUM_R"
+  },
+  {
+    "name": "Proximal Toe Phalanx 1",
+    "latin_name": "Proximal Toe Phalanx 1",
+    "bone_type": "long",
+    "region": "toe",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "metatarsal",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_T_PHAL_1_1_L"
+    ],
+    "unique_id": "BONE_T_PHAL_1_1_L"
+  },
+  {
+    "name": "Proximal Toe Phalanx 1",
+    "latin_name": "Proximal Toe Phalanx 1",
+    "bone_type": "long",
+    "region": "toe",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "metatarsal",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_T_PHAL_1_1_R"
+    ],
+    "unique_id": "BONE_T_PHAL_1_1_R"
+  },
+  {
+    "name": "Distal Toe Phalanx 1",
+    "latin_name": "Distal Toe Phalanx 1",
+    "bone_type": "long",
+    "region": "toe",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "Proximal phalanx",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_T_PHAL_1_2_L"
+    ],
+    "unique_id": "BONE_T_PHAL_1_2_L"
+  },
+  {
+    "name": "Distal Toe Phalanx 1",
+    "latin_name": "Distal Toe Phalanx 1",
+    "bone_type": "long",
+    "region": "toe",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "Proximal phalanx",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_T_PHAL_1_2_R"
+    ],
+    "unique_id": "BONE_T_PHAL_1_2_R"
+  },
+  {
+    "name": "Proximal Toe Phalanx 2",
+    "latin_name": "Proximal Toe Phalanx 2",
+    "bone_type": "long",
+    "region": "toe",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "metatarsal",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_T_PHAL_2_1_L"
+    ],
+    "unique_id": "BONE_T_PHAL_2_1_L"
+  },
+  {
+    "name": "Proximal Toe Phalanx 2",
+    "latin_name": "Proximal Toe Phalanx 2",
+    "bone_type": "long",
+    "region": "toe",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "metatarsal",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_T_PHAL_2_1_R"
+    ],
+    "unique_id": "BONE_T_PHAL_2_1_R"
+  },
+  {
+    "name": "Middle Toe Phalanx 2",
+    "latin_name": "Middle Toe Phalanx 2",
+    "bone_type": "long",
+    "region": "toe",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "Proximal phalanx",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_T_PHAL_2_2_L"
+    ],
+    "unique_id": "BONE_T_PHAL_2_2_L"
+  },
+  {
+    "name": "Middle Toe Phalanx 2",
+    "latin_name": "Middle Toe Phalanx 2",
+    "bone_type": "long",
+    "region": "toe",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "Proximal phalanx",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_T_PHAL_2_2_R"
+    ],
+    "unique_id": "BONE_T_PHAL_2_2_R"
+  },
+  {
+    "name": "Distal Toe Phalanx 2",
+    "latin_name": "Distal Toe Phalanx 2",
+    "bone_type": "long",
+    "region": "toe",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "Middle phalanx",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_T_PHAL_2_3_L"
+    ],
+    "unique_id": "BONE_T_PHAL_2_3_L"
+  },
+  {
+    "name": "Distal Toe Phalanx 2",
+    "latin_name": "Distal Toe Phalanx 2",
+    "bone_type": "long",
+    "region": "toe",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "Middle phalanx",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_T_PHAL_2_3_R"
+    ],
+    "unique_id": "BONE_T_PHAL_2_3_R"
+  },
+  {
+    "name": "Proximal Toe Phalanx 3",
+    "latin_name": "Proximal Toe Phalanx 3",
+    "bone_type": "long",
+    "region": "toe",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "metatarsal",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_T_PHAL_3_1_L"
+    ],
+    "unique_id": "BONE_T_PHAL_3_1_L"
+  },
+  {
+    "name": "Proximal Toe Phalanx 3",
+    "latin_name": "Proximal Toe Phalanx 3",
+    "bone_type": "long",
+    "region": "toe",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "metatarsal",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_T_PHAL_3_1_R"
+    ],
+    "unique_id": "BONE_T_PHAL_3_1_R"
+  },
+  {
+    "name": "Middle Toe Phalanx 3",
+    "latin_name": "Middle Toe Phalanx 3",
+    "bone_type": "long",
+    "region": "toe",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "Proximal phalanx",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_T_PHAL_3_2_L"
+    ],
+    "unique_id": "BONE_T_PHAL_3_2_L"
+  },
+  {
+    "name": "Middle Toe Phalanx 3",
+    "latin_name": "Middle Toe Phalanx 3",
+    "bone_type": "long",
+    "region": "toe",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "Proximal phalanx",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_T_PHAL_3_2_R"
+    ],
+    "unique_id": "BONE_T_PHAL_3_2_R"
+  },
+  {
+    "name": "Distal Toe Phalanx 3",
+    "latin_name": "Distal Toe Phalanx 3",
+    "bone_type": "long",
+    "region": "toe",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "Middle phalanx",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_T_PHAL_3_3_L"
+    ],
+    "unique_id": "BONE_T_PHAL_3_3_L"
+  },
+  {
+    "name": "Distal Toe Phalanx 3",
+    "latin_name": "Distal Toe Phalanx 3",
+    "bone_type": "long",
+    "region": "toe",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "Middle phalanx",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_T_PHAL_3_3_R"
+    ],
+    "unique_id": "BONE_T_PHAL_3_3_R"
+  },
+  {
+    "name": "Proximal Toe Phalanx 4",
+    "latin_name": "Proximal Toe Phalanx 4",
+    "bone_type": "long",
+    "region": "toe",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "metatarsal",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_T_PHAL_4_1_L"
+    ],
+    "unique_id": "BONE_T_PHAL_4_1_L"
+  },
+  {
+    "name": "Proximal Toe Phalanx 4",
+    "latin_name": "Proximal Toe Phalanx 4",
+    "bone_type": "long",
+    "region": "toe",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "metatarsal",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_T_PHAL_4_1_R"
+    ],
+    "unique_id": "BONE_T_PHAL_4_1_R"
+  },
+  {
+    "name": "Middle Toe Phalanx 4",
+    "latin_name": "Middle Toe Phalanx 4",
+    "bone_type": "long",
+    "region": "toe",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "Proximal phalanx",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_T_PHAL_4_2_L"
+    ],
+    "unique_id": "BONE_T_PHAL_4_2_L"
+  },
+  {
+    "name": "Middle Toe Phalanx 4",
+    "latin_name": "Middle Toe Phalanx 4",
+    "bone_type": "long",
+    "region": "toe",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "Proximal phalanx",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_T_PHAL_4_2_R"
+    ],
+    "unique_id": "BONE_T_PHAL_4_2_R"
+  },
+  {
+    "name": "Distal Toe Phalanx 4",
+    "latin_name": "Distal Toe Phalanx 4",
+    "bone_type": "long",
+    "region": "toe",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "Middle phalanx",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_T_PHAL_4_3_L"
+    ],
+    "unique_id": "BONE_T_PHAL_4_3_L"
+  },
+  {
+    "name": "Distal Toe Phalanx 4",
+    "latin_name": "Distal Toe Phalanx 4",
+    "bone_type": "long",
+    "region": "toe",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "Middle phalanx",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_T_PHAL_4_3_R"
+    ],
+    "unique_id": "BONE_T_PHAL_4_3_R"
+  },
+  {
+    "name": "Proximal Toe Phalanx 5",
+    "latin_name": "Proximal Toe Phalanx 5",
+    "bone_type": "long",
+    "region": "toe",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "metatarsal",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_T_PHAL_5_1_L"
+    ],
+    "unique_id": "BONE_T_PHAL_5_1_L"
+  },
+  {
+    "name": "Proximal Toe Phalanx 5",
+    "latin_name": "Proximal Toe Phalanx 5",
+    "bone_type": "long",
+    "region": "toe",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "metatarsal",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_T_PHAL_5_1_R"
+    ],
+    "unique_id": "BONE_T_PHAL_5_1_R"
+  },
+  {
+    "name": "Middle Toe Phalanx 5",
+    "latin_name": "Middle Toe Phalanx 5",
+    "bone_type": "long",
+    "region": "toe",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "Proximal phalanx",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_T_PHAL_5_2_L"
+    ],
+    "unique_id": "BONE_T_PHAL_5_2_L"
+  },
+  {
+    "name": "Middle Toe Phalanx 5",
+    "latin_name": "Middle Toe Phalanx 5",
+    "bone_type": "long",
+    "region": "toe",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "Proximal phalanx",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_T_PHAL_5_2_R"
+    ],
+    "unique_id": "BONE_T_PHAL_5_2_R"
+  },
+  {
+    "name": "Distal Toe Phalanx 5",
+    "latin_name": "Distal Toe Phalanx 5",
+    "bone_type": "long",
+    "region": "toe",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "Middle phalanx",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_T_PHAL_5_3_L"
+    ],
+    "unique_id": "BONE_T_PHAL_5_3_L"
+  },
+  {
+    "name": "Distal Toe Phalanx 5",
+    "latin_name": "Distal Toe Phalanx 5",
+    "bone_type": "long",
+    "region": "toe",
+    "dimensions": {
+      "length_cm": null,
+      "width_cm": null,
+      "thickness_cm": null
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {},
+    "material": {
+      "name": "bone",
+      "density": 1800.0
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "Middle phalanx",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_T_PHAL_5_3_R"
+    ],
+    "unique_id": "BONE_T_PHAL_5_3_R"
+  },
+  {
+    "name": "Ulna",
+    "latin_name": "Ulna",
+    "bone_type": "long",
+    "region": "forearm",
+    "dimensions": {
+      "length_mm": 250.0,
+      "width_mm": 15.0,
+      "thickness_mm": 15.0
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {
+      "shape": "box",
+      "length_cm": 25.0,
+      "width_cm": 1.5,
+      "thickness_cm": 1.5
+    },
+    "material": {
+      "name": "bone",
+      "density": 1900,
+      "mass_g": 40
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "humerus",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_ULNA_L"
+    ],
+    "unique_id": "BONE_ULNA_L"
+  },
+  {
+    "name": "Ulna",
+    "latin_name": "Ulna",
+    "bone_type": "long",
+    "region": "forearm",
+    "dimensions": {
+      "length_mm": 250.0,
+      "width_mm": 15.0,
+      "thickness_mm": 15.0
+    },
+    "units": {
+      "length": "mm",
+      "mass": "kg",
+      "density": "kg/m^3",
+      "inertia": "kg*m^2"
+    },
+    "geometry": {
+      "shape": "box",
+      "length_cm": 25.0,
+      "width_cm": 1.5,
+      "thickness_cm": 1.5
+    },
+    "material": {
+      "name": "bone",
+      "density": 1900,
+      "mass_g": 40
+    },
+    "physics": {
+      "mass_kg": null
+    },
+    "connections": {
+      "parent": "humerus",
+      "children": []
+    },
+    "joint_interfaces": [],
+    "mount_points": [],
+    "manufacturing_notes": [],
+    "tolerance": {
+      "default_mm": 0.5
+    },
+    "references": [],
+    "revision": "1.0.0",
+    "source_ids": [
+      "BONE_ULNA_R"
+    ],
+    "unique_id": "BONE_ULNA_R"
+  }
+]

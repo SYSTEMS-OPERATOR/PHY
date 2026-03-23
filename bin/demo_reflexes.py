@@ -2,7 +2,6 @@
 from __future__ import annotations
 
 import argparse
-import time
 
 from skeleton.bones import load_bones
 from geometry.geometry_agent import GeometryAgent

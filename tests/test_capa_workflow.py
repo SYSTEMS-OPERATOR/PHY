@@ -1,5 +1,4 @@
 from qms.qms_manager import QMSManager
-from pathlib import Path
 
 
 def test_capa_workflow(tmp_path):

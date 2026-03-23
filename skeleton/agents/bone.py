@@ -1,7 +1,6 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
 from typing import Dict, Any, List, Optional
-import math
 
 @dataclass
 class BoneAgent:

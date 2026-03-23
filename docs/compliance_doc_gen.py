@@ -4,8 +4,6 @@ import json
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Dict, Any
-from reportlab.lib.pagesizes import letter
-from reportlab.pdfgen import canvas
 
 
 @dataclass

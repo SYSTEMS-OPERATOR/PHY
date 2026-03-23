@@ -1,7 +1,9 @@
 from __future__ import annotations
 from typing import Dict, Any, List
 from dataclasses import dataclass, field
-import yaml, json, pathlib
+import yaml
+import json
+import pathlib
 from .bone import BoneAgent
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]

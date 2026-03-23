@@ -4,7 +4,6 @@
 from __future__ import annotations
 
 import argparse
-from pathlib import Path
 
 from skeleton.bones import load_bones
 from skeleton.datasets import load_dataset

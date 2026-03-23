@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 from __future__ import annotations
 
-import sys
-from pathlib import Path
 
 from cortex.cortical_agent import CorticalAgent
 from training.curriculum_runner import CurriculumRunner

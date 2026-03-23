@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import List, Tuple
+from typing import List
 
 try:
     from stable_baselines3.common.monitor import Monitor  # type: ignore
@@ -24,7 +24,6 @@ except Exception:  # pragma: no cover
 from cortex.cortical_agent import CorticalAgent
 from envs.flat_ground import FlatGroundEnv
 from envs.uneven_ground import UnevenGroundEnv
-from envs.stairs import StairsEnv
 from envs.ramp import RampEnv
 from envs.obstacles import ObstaclesEnv
 

@@ -1,6 +1,8 @@
 from __future__ import annotations
 from typing import Dict, List
-import yaml, csv, pathlib
+import yaml
+import csv
+import pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 INDEX = ROOT / "references" / "index.yml"

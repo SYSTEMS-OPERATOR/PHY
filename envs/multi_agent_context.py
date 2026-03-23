@@ -4,7 +4,6 @@ from dataclasses import dataclass, field
 from typing import Dict, Tuple
 
 import numpy as np
-import gymnasium as gym
 
 from envs.base_env import BaseEnv
 

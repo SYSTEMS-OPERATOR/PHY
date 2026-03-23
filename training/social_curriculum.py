@@ -4,7 +4,6 @@ from dataclasses import dataclass
 from typing import List
 
 from training.curriculum_runner import CurriculumRunner
-from cortex.cortical_agent import CorticalAgent
 from tasks.cooperative_tasks import PassTheCubeEnv
 from tasks.competitive_tasks import TugOfWarEnv
 

@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 from __future__ import annotations
-import json, pathlib, sys
+import json
+import pathlib
+import sys
 import yaml
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]

@@ -6,7 +6,7 @@ from .base import BoneSpec
 
 
 class SkeletonField:
-    """Container tracking an entangled network of bones."""
+    """Container tracking a network of bones and their relationships."""
 
     def __init__(self, bones: Optional[List[BoneSpec]] = None) -> None:
         self.bones: Dict[str, BoneSpec] = {}
@@ -32,27 +32,13 @@ class SkeletonField:
                     bone.entangle(partner)
 
     def broadcast(self, voltage: float, signal_type: str = "EMG") -> None:
-        """Broadcast a signal to all bones simultaneously."""
-        regulated_values: Dict[str, float] = {}
         for bone in self.bones.values():
-            regulated = bone.marrow.regulate(voltage, signal_type)
-            bone.voltage_potential = regulated
-            regulated_values[bone.domain_id] = regulated
-
-        for bone in self.bones.values():
-            value = regulated_values[bone.domain_id]
-            for link_id in bone.entanglement_links:
-                other = self.bones.get(link_id)
-                if other is not None:
-                    other.receive_signal(value, signal_type, from_domain=bone.domain_id)
-
+            bone.receive_signal(voltage, signal_type)
 
     def summary(self) -> Dict[str, float]:
         return {d: b.voltage_potential for d, b in self.bones.items()}
 
-
     def propagate(self, from_domain: str, signal: Dict[str, float]) -> None:
-        """Propagate a signal through the entanglement network."""
         origin = self.bones.get(from_domain)
         if not origin:
             return
@@ -72,16 +58,14 @@ class SkeletonField:
         _prop(origin)
 
     def total_voltage(self) -> float:
-        """Return the summed voltage potential of all bones."""
         return sum(b.voltage_potential for b in self.bones.values())
 
     def meta_breath(self, word: str) -> None:
-        """Invoke a metaphysical intent across all bones."""
+        """Compatibility API for symbolic overlays (no fabrication impact)."""
         for bone in self.bones.values():
             bone.transcend(intent=word)
 
     def collapse(self) -> None:
-        """Remove all entanglement links between bones."""
         for bone in self.bones.values():
             bone.entanglement_links.clear()
 
@@ -89,15 +73,12 @@ class SkeletonField:
         return {d: {"voltage": b.voltage_potential, "links": list(b.entanglement_links)} for d, b in self.bones.items()}
 
     def health(self) -> Dict[str, bool]:
-        """Return health status for each bone."""
         return {d: b.is_healthy() for d, b in self.bones.items()}
 
     def faults(self) -> Dict[str, List[str]]:
-        """Return fault lists per bone."""
         return {d: b.report_faults() for d, b in self.bones.items() if not b.is_healthy()}
 
     def audit_metrics(self) -> Dict[str, Dict[str, Tuple[Optional[float], Optional[float]]]]:
-        """Return dataset metric discrepancies for all bones."""
         report: Dict[str, Dict[str, Tuple[Optional[float], Optional[float]]]] = {}
         for bone in self.bones.values():
             diff = bone.validate_metrics()
@@ -105,8 +86,6 @@ class SkeletonField:
                 report[bone.unique_id] = diff
         return report
 
-
-    # Visualization helpers
     def to_render_nodes(self, color_by: str = 'material') -> List['SkeletonRenderNode']:
         from .visualization import SkeletonRenderNode
 
@@ -144,6 +123,6 @@ class SkeletonField:
         elif mode == '3d_points':
             viz = SkeletonVisualizer3D()
             viz.render_points(nodes, **vis_kwargs)
-        else:  # default to 3d_cylinders
+        else:
             viz = SkeletonVisualizer3D()
             viz.render_cylinders(nodes, connections, **vis_kwargs)

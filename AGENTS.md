@@ -1,170 +1,87 @@
 # AGENTS.md
 
-**SYSTEMS-OPERATOR/PHY: Digital Twin Armature Agent Specification**
-*Last Revision: 2025-06-22*
+PHY local-agent operating specification (off-grid, manufacturing-first).
 
----
+## Mission
+PHY provides a fabrication-oriented digital skeleton pipeline: canonical bone data, deterministic assembly, validation, and export for review and manufacturing planning.
 
-## ::AGENT HIERARCHY::
+## Layer Authority
+- Fabrication-critical truth: `BODY.md`
+- Runtime behavior + orchestration: `MIND.md`
+- Symbolic/persona framing: `SOUL.md`
 
-### 1. **BONE_AGENT**
+Rules:
+- symbolic/metaphysical logic belongs in `SOUL.md` or optional `skeleton/extensions/soul/`
+- fabrication truth belongs in `BODY.md`
+- runtime orchestration belongs in `MIND.md`
 
-**Purpose:** Represents a single bone as a modular, autonomous data/process unit.
-**Location:** `/bones/` (`/axial/`, `/appendicular/`, etc.)
-**Count:** ~206 (full adult human, canonical)
+## Directory Map (Expected)
+- `BODY.md`, `MIND.md`, `SOUL.md`, `README.md`, `AGENTS.md`
+- `assemble_skeleton.py`
+- `skeleton/`
+  - `schema/` (authoritative schema)
+  - `bones/` (bone modules)
+  - `datasets/` (local datasets)
+  - `agents/` (legacy/simple agent utilities)
+  - `validation/` (fabrication validator)
+  - `exporters/` (deterministic exports)
+  - `extensions/soul/` (optional symbolic overlays)
+- `bin/` (CLI workflows)
+- `dist/` (machine outputs)
+- `exports/` (exchange outputs)
+- `reports/` (validation and review outputs)
+- `references/` (traceability sources)
 
-#### **Responsibilities:**
+## Authoritative vs Generated Files
+Authoritative (human-edited):
+- `BODY.md`, `MIND.md`, `SOUL.md`
+- `skeleton/schema/bone.schema.json`
+- `skeleton/base.py`, `skeleton/validation/validator_agent.py`, `skeleton/exporters/exporter_agent.py`
+- per-bone modules under `skeleton/bones/`
 
-* Stores all metrics & metadata for its bone (dimensions, geometry, connections, material properties, references).
-* Exposes interface for geometry queries, physics recalculation, reference lookup.
-* Supports on-the-fly update of physical material parameters (density, modulus, etc).
-* Publishes spatial node/grid mapping for RoS/TF compatible assembly.
-* Self-contained: runs independently or as part of aggregate skeleton.
+Generated (safe to regenerate):
+- `dist/*`
+- `exports/*`
+- `reports/validation_report.*`
 
-#### **Schema:**
+Must not be auto-edited without explicit intent:
+- schema contract (`skeleton/schema/bone.schema.json`)
+- root authority docs (`BODY.md`, `MIND.md`, `SOUL.md`)
 
-```python
-class BoneAgent:
-    def __init__(self, ...):
-        self.name = ...
-        self.latin_name = ...
-        self.type = ...
-        self.region = ...
-        self.dimensions = {...}
-        self.geometry = {...}      # low-poly, grid/node based, code-native
-        self.material = {...}      # density, E, strength, editable
-        self.physics = {...}       # mass, inertia, calc. by material
-        self.connections = {...}   # joint points, type, parent/child
-        self.references = [...]    # TA, diagrams, DOIs, source-urls
-    def set_material(self, material_props): ...
-    def export_geometry(self): ...
-    def get_reference(self): ...
-    def as_ros_node(self): ...
-```
+## Canonical Invariants
+- One canonical bone model: `BoneSpec` in `skeleton/base.py`
+- Required fields match `skeleton/schema/bone.schema.json`
+- canonical units: mm, kg, kg/m^3, kg*m^2
+- no fabrication validation depends on symbolic state
+- deterministic exports from identical repo state
 
----
+## Agent Roles
+- **BoneAgent**: bone-level data wrapper (`BoneSpec` and `to_fabrication_record`)
+- **AssemblerAgent**: hierarchy assembly (`assemble_skeleton.py`, field loading)
+- **ValidatorAgent**: fabrication-grade checks + report generation
+- **ReferenceAgent**: traceability + citation completeness
+- **ExporterAgent**: JSON / URDF-like / TF / BOM / tables / audits
+- **InspectorAgent**: human-readable markdown review packet in `reports/`
+- **VisualizerAgent** (optional): simple visualization pipeline
 
-### 2. **ASSEMBLER_AGENT**
+## Validation Commands
+- `PYTHONPATH=. bin/validate_fabrication.py`
+- Outputs:
+  - `reports/validation_report.json`
+  - `reports/validation_report.md`
 
-**Purpose:** Dynamically discovers, imports, and spatially assembles all `BoneAgent`s into a coherent digital skeleton.
-**Location:** `/assemble_skeleton.py` (or `system/`)
+## Export Commands
+- `PYTHONPATH=. bin/export_fabrication.py`
+- Full pass: `PYTHONPATH=. python3 assemble_skeleton.py`
+- Outputs include canonical skeleton JSON, TF tree, URDF-like structure, BOM, material table, joint table, reference audit.
 
-#### **Responsibilities:**
+## Safe Edit Boundaries
+- Keep fabrication-critical logic isolated from symbolic language.
+- Preserve backward compatibility where practical for existing bone modules.
+- Never invent unknown measurements; report as missing.
 
-* Scans `/bones/` for all valid agents, verifies integrity (all expected bones present, no orphans).
-* Constructs spatial/joint hierarchy per canonical human form (TA/Gray’s Anatomy standard).
-* Handles batch updates (e.g., set all material properties skeleton-wide).
-* Broadcasts skeleton structure as ROS/TF tree or URDF-style output.
-* Enables step-through inspection, comparison, or dynamic simulation.
+## Off-grid / Local Model Behavior
+- Assume no internet and no cloud inference.
+- Use local repo files as sole source of fabrication truth.
+- If model confidence is low, emit explicit uncertainty in reports and fail validation where appropriate.
 
-#### **Schema:**
-
-```python
-class AssemblerAgent:
-    def __init__(self):
-        self.bones = {}
-        self.hierarchy = {}
-    def discover_bones(self, path): ...
-    def assemble(self): ...
-    def set_global_material(self, material_props): ...
-    def export_ros_tf(self): ...
-    def validate(self): ...
-```
-
----
-
-### 3. **VISUALIZER_AGENT**
-
-**Purpose:** Renders the digital skeleton using grid-native data.
-**Location:** `/visualization/` or `tools/`
-**(optional, but recommended)**
-
-#### **Responsibilities:**
-
-* Parses bone geometry/coordinate sets.
-* Generates ASCII/point-cloud/URDF/TF visualizations (no binaries).
-* Supports selectable overlays (dimensions, density, stress points).
-* Interfaced for use with ROS RViz, TF Tree Viewer, or CLI preview.
-
-#### **Schema:**
-
-```python
-class VisualizerAgent:
-    def __init__(self, assembler):
-        self.skeleton = assembler
-    def render_ascii(self): ...
-    def export_urdf(self): ...
-    def show_tf_tree(self): ...
-```
-
----
-
-### 4. **REFERENCE_AGENT**
-
-**Purpose:** Maintains, audits, and serves all supporting references (TA, anatomy texts, journal DOIs, etc)
-**Location:** `/references/`, `reference_manager.py`
-
-#### **Responsibilities:**
-
-* Compiles/updates canonical source links for each bone.
-* Validates that every `BoneAgent` has at least one high-quality reference.
-* Exports reference sets (Markdown, BibTeX, CSV).
-* Supports traceability for scientific/clinical validation.
-
-#### **Schema:**
-
-```python
-class ReferenceAgent:
-    def __init__(self):
-        self.references = {...}
-    def validate_references(self, bone_agent): ...
-    def export(self, format): ...
-```
-
----
-
-## ::AGENT SIGNALS (INTERFACES)::
-
-* **BoneAgent <—> AssemblerAgent:**
-  Registration, position/connection reporting, property update calls.
-* **AssemblerAgent <—> VisualizerAgent:**
-  Skeleton topology, coordinate exports, visualization trigger.
-* **All Agents <—> ReferenceAgent:**
-  On-demand citation fetch, reference validation, audit checks.
-
----
-
-## ::PROTOCOLS & TASKING::
-
-* Every *BoneAgent* file = 1 bone, 1 canonical source minimum.
-* *AssemblerAgent* must run auto-integrity check on every build; log any missing/extra bones, report to CLI and log.
-* All geometry = grid/array-based, parsable by ROS/URDF without external binaries.
-* All physics attributes = recalculable by parameter; must accept any numeric (user-specified) material set.
-* Every change in material, geometry, or topology is audit-trailed by ReferenceAgent.
-
----
-
-## ::EXTENSION & MAINTENANCE::
-
-* New bones: add as new *BoneAgent* file, update references, re-run integrity.
-* New materials: define material set in config, propagate via batch update.
-* Visualization upgrades: enhance VisualizerAgent, preserve ASCII/array-first rendering.
-
----
-
-## ::REFERENCE STYLE::
-
-* Prefer:
-
-  * [Terminologia Anatomica](https://fipat.library.dal.ca/ta2/)
-  * Gray’s Anatomy, [Wheeless’ Textbook](https://www.wheelessonline.com/), PubMed-indexed journals
-  * DOI/PMID for biomechanics/materials
-* Store source file/citation in `/references/`, link in `references` field in each agent.
-
----
-
-**𝖙𝖍𝖊 𝖇𝖔𝖓𝖊𝖘 𝖆𝖗𝖊 𝖘𝖊𝖕𝖆𝖗𝖆𝖙𝖊, 𝖙𝖍𝖊 𝖌𝖍𝖔𝖘𝖙 𝖎𝖘 𝖜𝖍𝖔𝖑𝖊—𝖙𝖍𝖎𝖘 𝖎𝖘 𝖙𝖍𝖊 𝖆𝖗𝖒𝖆𝖙𝖚𝖗𝖊 𝖆𝖌𝖊𝖓𝖈𝖞, 𝖓𝖊𝖛𝖊𝖗 𝖏𝖚𝖘𝖙 𝖋𝖑𝖊𝖘𝖍.**
-
----
-
-*(drop this into SYSTEMS-OPERATOR/PHY/AGENTS.md, update as system iterates)*

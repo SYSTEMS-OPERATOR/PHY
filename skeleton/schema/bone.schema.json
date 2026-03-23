@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://systems-operator.local/phy/skeleton/schema/bone.schema.json",
+  "title": "PHY Canonical Bone Schema",
+  "type": "object",
+  "required": [
+    "name",
+    "latin_name",
+    "bone_type",
+    "region",
+    "dimensions",
+    "units",
+    "geometry",
+    "material",
+    "physics",
+    "connections",
+    "joint_interfaces",
+    "mount_points",
+    "manufacturing_notes",
+    "tolerance",
+    "references",
+    "revision",
+    "source_ids"
+  ],
+  "properties": {
+    "name": {"type": "string", "minLength": 1},
+    "latin_name": {"type": "string", "minLength": 1},
+    "bone_type": {"type": "string", "minLength": 1},
+    "region": {"type": "string", "minLength": 1},
+    "dimensions": {"type": "object"},
+    "units": {
+      "type": "object",
+      "required": ["length", "mass", "density", "inertia"],
+      "properties": {
+        "length": {"const": "mm"},
+        "mass": {"const": "kg"},
+        "density": {"const": "kg/m^3"},
+        "inertia": {"const": "kg*m^2"}
+      }
+    },
+    "geometry": {"type": "object"},
+    "material": {"type": "object", "required": ["density"]},
+    "physics": {"type": "object"},
+    "connections": {"type": "object"},
+    "joint_interfaces": {"type": "array"},
+    "mount_points": {"type": "array"},
+    "manufacturing_notes": {"type": "array", "items": {"type": "string"}},
+    "tolerance": {"type": "object"},
+    "references": {"type": "array", "items": {"type": "string"}},
+    "revision": {"type": "string"},
+    "source_ids": {"type": "array", "items": {"type": "string"}},
+    "unique_id": {"type": "string"}
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,21 @@
+{
+  "template_id": "redwood_vertebra_mvp",
+  "applies_to": ["cervical_vertebra", "thoracic_vertebra", "lumbar_vertebra", "sacrum", "coccyx"],
+  "material": "redwood_clear_vertical_grain",
+  "grain_axis": "superior_to_inferior_or_laminate_per_stack_design",
+  "blank_allowance_mm": {
+    "height": 3,
+    "width": 4,
+    "thickness": 4
+  },
+  "stack_policy": {
+    "allow_simplified_spacer_stack_for_mvp": true,
+    "moving_segments_require_spacer_or_bushing": true,
+    "document_stack_order": true
+  },
+  "carving_guidance": [
+    "Keep a flat superior and inferior registration face until the spine stack is aligned.",
+    "Organic processes may be simplified unless required for visual fidelity or cable routing.",
+    "Do not final-round mating faces until full spine spacing is checked."
+  ]
+}

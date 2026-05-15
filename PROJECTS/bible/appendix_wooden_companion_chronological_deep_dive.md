@@ -133,22 +133,90 @@ mechanical record = build truth
 validation = threshold keeper
 ```
 
-## G2.7 Working source families for this block
+## G2.7 c. 500-1500 CE — Sacred wooden figures, ancestor bodies, and container-presences
+
+Across many cultures, wooden figures served as sacred presences, ancestors, guardians, containers, reliquaries, and ritual participants.
+
+Relevant families:
+
+- ancestor figures
+- divine images
+- guardian figures
+- reliquary or container bodies
+- shrine figures
+- processional figures
+- hollow figures with concealed interiors
+
+A key design-reference family is the hollow anthropomorphic figure: a wooden body that is not solid mass, but a container with a visible exterior and hidden interior.
+
+### Design lessons
+
+- a wooden companion can be both exterior body and interior chamber
+- hollowing can reduce weight while preserving visible form
+- removable panels and hidden cavities can be part of the object's meaning
+- internal space can hold relics, offerings, symbolic contents, mechanism, sound, or later sensors
+
+### PHY import
+
+Do not treat cavities as empty defects. Treat them as service spaces, memory spaces, weight reduction, and signal-routing opportunities.
+
+```text
+hollow cavity = weight reduction + access + memory chamber + sensor bay
+```
+
+## G2.8 c. 1200-1600 CE — Medieval and Renaissance devotional wooden bodies
+
+European devotional wooden sculpture used limewood, poplar, pearwood, walnut, and other carving woods for crucifixes, saints, altarpieces, processional bodies, and expressive full-body figures.
+
+Examples currently tracked:
+
+- Donatello's Penitent Magdalene, a life-size wooden figure.
+- Brunelleschi's Crucifix, a wooden sculpture associated with Santa Maria Novella.
+- Tilman Riemenschneider's limewood figures and altarpieces.
+
+### What this period adds
+
+Here, wood becomes encounter.
+
+The body is carved not only to represent anatomy, but to receive attention across distance, ritual, candlelight, procession, touch, and repeated viewing.
+
+### Design lessons
+
+- surface finish is part of presence
+- posture carries emotion
+- gaze direction changes relationship
+- visible tool marks can be expressive or disruptive
+- joined blocks and hollow construction may support large forms
+- paint, gilding, and surface treatment are meaning layers, not merely coatings
+
+### PHY import
+
+Visible redwood should be treated as encounter surface, not just structure.
+
+Questions for each visible component:
+
+- is the grain meant to be seen?
+- is the surface meant to invite touch?
+- should edges be softened or crisp?
+- does the finish preserve warmth or create distance?
+- is the part structural, symbolic, tactile, or all three?
+
+## G2.9 Working source families for this block
 
 Source families to harden in future passes:
 
 - museum records for Dagenham Idol, Roos Carr figures, Ralaghan Idol, Broddenbjerg Idol, and Braak Bog Figures
-- archaeological summaries on Iron Age wooden cult figures
 - museum records for Egyptian wooden tomb models and boats
-- object records for Meketre wooden models
+- object records for Meketre wooden models and Middle Kingdom funerary models
 - ancient mythological references for Hephaestus, Daedalus, Pygmalion, and Talos
+- British Museum object records for hollow anthropomorphic figures such as A'a from Rurutu
+- conservation records for medieval and Renaissance wooden devotional sculpture
+- museum records for Donatello, Brunelleschi, and Riemenschneider wooden works
 
-## G2.8 Next chronological blocks to expand
+## G2.10 Next chronological blocks to expand
 
 Next pass should add:
 
-- 500-1500 CE sacred wooden figures and ancestor bodies
-- 1200-1600 CE medieval and Renaissance devotional sculpture
 - 1500-1800 CE anatomy, ecorche, lay figures, and dissection culture
 - 1600-present Japanese puppets, karakuri, and articulated bodies
 - 1700-1900 automata and mechanical companion bodies

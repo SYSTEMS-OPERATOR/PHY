@@ -134,6 +134,49 @@ Not authorized by current local records:
 - cut-list use
 - material substitution into component guides
 
+## Offline sample-test gate
+
+Before any final component cuts, each candidate stock type should have a small physical test coupon set.
+
+Minimum coupon set:
+
+- one long-grain strip
+- one cross-grain strip
+- one drilled block
+- one end-grain sealed block
+- one finish test block
+- one hardware contact block
+- one bushing or pin retention block
+
+Minimum observations:
+
+- visible checking after drying or humidity swing
+- drill tearout at entry and exit
+- splitting around pins or bushings
+- finish adhesion after surface preparation
+- extractive bleed through finish
+- staining around copper, brass, stainless, and any test steel
+- smell, dust, and handling behavior during shaping
+- dimensional change after humidity exposure
+
+Pass condition:
+
+- no uncontrolled splitting around holes
+- acceptable tearout under planned bit and feed conditions
+- stable bushing or pin fit after humidity exposure
+- acceptable surface finish behavior
+- no unacceptable staining at planned hardware interfaces
+- no unresolved unknown for the intended component role
+
+Fail condition:
+
+- checking crosses a critical load or visual surface
+- bushing fit loosens after humidity exposure
+- finish fails adhesion or bleeds badly
+- hardware contact stains beyond acceptable visual limits
+- grain runout makes the part unsafe or unstable
+- stock cannot be legally or repeatably sourced
+
 ## Project hypothesis
 
 Extreme tree age correlates with survival traits, not guaranteed engineering strength.

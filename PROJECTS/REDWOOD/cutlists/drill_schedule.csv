@@ -1,0 +1,3 @@
+operation_id,part_id,operation,diameter_mm,depth_mm,reference_face,hardware,status,notes
+FEMUR_L_HIP_BUSHING_PILOT,BONE_FEMUR_L,pilot_drill,TBD,TBD,proximal_end_centerline,BRASS_BUSHING_8MM_ID_12MM_OD,TBD_REQUIRES_HIP_MODULE,Do not drill final diameter until hip module is designed
+FEMUR_L_KNEE_BUSHING_PILOT,BONE_FEMUR_L,pilot_drill,TBD,TBD,distal_end_centerline,BRASS_BUSHING_8MM_ID_12MM_OD,TBD_REQUIRES_KNEE_MODULE,Do not drill final diameter until knee module axis is designed

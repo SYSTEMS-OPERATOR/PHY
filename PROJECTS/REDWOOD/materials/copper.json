@@ -1,0 +1,30 @@
+{
+  "material_id": "copper_c110_or_equivalent",
+  "project": "REDWOOD",
+  "category": "pin_and_accent_hardware",
+  "status": "mvp_placeholder_requires_reference_upgrade",
+  "canonical_units": {
+    "density": "kg/m^3",
+    "modulus": "GPa",
+    "strength": "MPa",
+    "dimension": "mm"
+  },
+  "properties": {
+    "density_kg_m3": 8960,
+    "elastic_modulus_GPa": 117,
+    "yield_strength_MPa": null,
+    "shear_strength_MPa": null
+  },
+  "fabrication_rules": {
+    "preferred_uses": ["visible pins", "retention collars", "decorative hardware", "low_speed_rotation_pins"],
+    "avoid_direct_wood_bearing_for_repeated_motion": true,
+    "pair_with_bushing_material": "brass_c360_or_equivalent",
+    "deburr_all_edges": true
+  },
+  "risk_notes": [
+    "Copper is visually appropriate but softer than many steels; do not assume high load capacity without calculation.",
+    "Use larger pin diameters or brass bearing sleeves where wear or repeated articulation is expected.",
+    "MVP strength fields require reference upgrade before structural certification."
+  ],
+  "source_status": "project_estimate_until_local_references_are_added"
+}

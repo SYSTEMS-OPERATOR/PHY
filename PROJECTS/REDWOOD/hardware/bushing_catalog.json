@@ -1,0 +1,44 @@
+{
+  "catalog_id": "redwood_bushing_catalog_mvp",
+  "project": "REDWOOD",
+  "unit": "mm",
+  "items": [
+    {
+      "part_id": "BRASS_BUSHING_3MM_ID_6MM_OD",
+      "material": "brass_c360_or_equivalent",
+      "inner_diameter_mm": 3,
+      "outer_diameter_mm": 6,
+      "nominal_length_mm": 6,
+      "preferred_use": ["fingers", "toes"]
+    },
+    {
+      "part_id": "BRASS_BUSHING_4MM_ID_8MM_OD",
+      "material": "brass_c360_or_equivalent",
+      "inner_diameter_mm": 4,
+      "outer_diameter_mm": 8,
+      "nominal_length_mm": 8,
+      "preferred_use": ["wrist", "ankle", "small linkages"]
+    },
+    {
+      "part_id": "BRASS_BUSHING_6MM_ID_10MM_OD",
+      "material": "brass_c360_or_equivalent",
+      "inner_diameter_mm": 6,
+      "outer_diameter_mm": 10,
+      "nominal_length_mm": 12,
+      "preferred_use": ["elbow", "knee_light", "shoulder_secondary"]
+    },
+    {
+      "part_id": "BRASS_BUSHING_8MM_ID_12MM_OD",
+      "material": "brass_c360_or_equivalent",
+      "inner_diameter_mm": 8,
+      "outer_diameter_mm": 12,
+      "nominal_length_mm": 14,
+      "preferred_use": ["hip_primary", "knee_primary", "shoulder_primary"]
+    }
+  ],
+  "rules": [
+    "Bushing outer diameter defines the redwood drill or ream target, not the pin diameter.",
+    "Bushings should be bedded or press fit only after test coupons confirm split resistance.",
+    "Leave extra carving mass around every bushing until final articulation is verified."
+  ]
+}

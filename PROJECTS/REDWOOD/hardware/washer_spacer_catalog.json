@@ -1,0 +1,36 @@
+{
+  "catalog_id": "redwood_washer_spacer_catalog_mvp",
+  "project": "REDWOOD",
+  "unit": "mm",
+  "items": [
+    {
+      "part_id": "BRASS_WASHER_3MM",
+      "material": "brass_c360_or_equivalent",
+      "inner_diameter_mm": 3,
+      "preferred_use": ["digits", "small linkages"]
+    },
+    {
+      "part_id": "BRASS_WASHER_4MM",
+      "material": "brass_c360_or_equivalent",
+      "inner_diameter_mm": 4,
+      "preferred_use": ["wrist", "ankle", "small plates"]
+    },
+    {
+      "part_id": "BRASS_WASHER_6MM",
+      "material": "brass_c360_or_equivalent",
+      "inner_diameter_mm": 6,
+      "preferred_use": ["elbow", "knee", "shoulder secondary"]
+    },
+    {
+      "part_id": "BRASS_WASHER_8MM",
+      "material": "brass_c360_or_equivalent",
+      "inner_diameter_mm": 8,
+      "preferred_use": ["hip", "knee primary", "shoulder primary"]
+    }
+  ],
+  "rules": [
+    "Use washers or spacers wherever moving redwood parts could rub directly.",
+    "Spacer thickness is project-specific and should be derived during joint mockup.",
+    "Document final spacer stack in each bone guide before declaring fabrication-ready."
+  ]
+}

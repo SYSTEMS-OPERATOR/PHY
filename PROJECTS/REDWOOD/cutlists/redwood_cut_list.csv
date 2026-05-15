@@ -1,0 +1,2 @@
+part_id,name,qty,material,finished_length_mm,finished_width_mm,finished_thickness_mm,blank_length_mm,blank_width_mm,blank_thickness_mm,grain_axis,status,notes
+BONE_FEMUR_L,Femur Left,1,redwood_clear_vertical_grain,420,40,40,430,44,44,proximal_to_distal,MVP_STARTER_GUIDE_NOT_FABRICATION_READY,Initial demonstrator row; verify width thickness joint centers and hardware before cutting

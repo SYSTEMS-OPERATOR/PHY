@@ -1,0 +1,22 @@
+{
+  "template_id": "redwood_rib_mvp",
+  "applies_to": ["rib"],
+  "material": "redwood_clear_vertical_grain",
+  "grain_axis": "along_rib_arc_where_possible",
+  "blank_allowance_mm": {
+    "length": 8,
+    "width": 3,
+    "thickness": 3
+  },
+  "fabrication_policy": {
+    "allow_laminated_or_steam_bent_strategy": true,
+    "allow_simplified_arc_for_mvp": true,
+    "sternum_attachment_requires_documented_mount": true,
+    "spine_attachment_requires_documented_mount": true
+  },
+  "carving_guidance": [
+    "Ribs are thin and split-prone; avoid drilling close to ends without reinforcement.",
+    "For MVP, use consistent arcs and labeled left/right rib order before chasing perfect anatomical curvature.",
+    "Consider lamination or bent stock where straight-grain carving would cut across too much grain."
+  ]
+}

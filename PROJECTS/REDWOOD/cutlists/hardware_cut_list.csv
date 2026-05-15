@@ -1,0 +1,4 @@
+part_id,description,qty,material,used_on,status,notes
+COPPER_PIN_8MM,8 mm copper pin family,TBD,copper_c110_or_equivalent,BONE_FEMUR_L hip and knee,MVP_FAMILY_NOT_FINAL_SKU,Confirm pin length after joint module spacing
+BRASS_BUSHING_8MM_ID_12MM_OD,8 mm ID 12 mm OD brass bushing family,TBD,brass_c360_or_equivalent,BONE_FEMUR_L hip and knee,MVP_FAMILY_NOT_FINAL_SKU,Confirm bushing length after redwood section thickness
+BRASS_WASHER_8MM,8 mm brass washer spacer family,TBD,brass_c360_or_equivalent,BONE_FEMUR_L hip and knee,MVP_FAMILY_NOT_FINAL_SKU,Spacer stack TBD during joint mockup

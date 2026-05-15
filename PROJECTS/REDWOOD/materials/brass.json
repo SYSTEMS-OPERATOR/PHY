@@ -1,0 +1,30 @@
+{
+  "material_id": "brass_c360_or_equivalent",
+  "project": "REDWOOD",
+  "category": "bushing_plate_and_hinge_hardware",
+  "status": "mvp_placeholder_requires_reference_upgrade",
+  "canonical_units": {
+    "density": "kg/m^3",
+    "modulus": "GPa",
+    "strength": "MPa",
+    "dimension": "mm"
+  },
+  "properties": {
+    "density_kg_m3": 8500,
+    "elastic_modulus_GPa": 97,
+    "yield_strength_MPa": null,
+    "shear_strength_MPa": null
+  },
+  "fabrication_rules": {
+    "preferred_uses": ["bushings", "wear sleeves", "hinge leaves", "washers", "spacers", "threaded inserts"],
+    "moving_joint_bearing_surface": true,
+    "deburr_all_edges": true,
+    "isolate_from_raw_wood_with_epoxy_bed_when_fit_is_loose": true
+  },
+  "risk_notes": [
+    "Brass is preferred over raw wood bearing surfaces for repeated movement.",
+    "Thin hinge plates must be sized against expected torque and screw pull-out.",
+    "MVP strength fields require reference upgrade before structural certification."
+  ],
+  "source_status": "project_estimate_until_local_references_are_added"
+}

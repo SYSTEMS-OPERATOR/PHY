@@ -1,0 +1,37 @@
+{
+  "material_id": "redwood_clear_vertical_grain",
+  "project": "REDWOOD",
+  "category": "wood_structural_primary",
+  "status": "mvp_placeholder_requires_reference_upgrade",
+  "preferred_stock": "clear, straight-grained, knot-free redwood with grain running along primary load axis",
+  "canonical_units": {
+    "density": "kg/m^3",
+    "modulus": "GPa",
+    "strength": "MPa",
+    "dimension": "mm"
+  },
+  "properties": {
+    "density_kg_m3": 450,
+    "elastic_modulus_GPa": null,
+    "compressive_strength_parallel_MPa": null,
+    "bending_strength_MPa": null,
+    "shear_strength_MPa": null
+  },
+  "fabrication_rules": {
+    "grain_axis_default": "proximal_to_distal_for_long_bones",
+    "avoid_knots_at_joint_centers": true,
+    "require_bushing_for_repeated_motion": true,
+    "minimum_edge_distance_rule": "max(2 * pin_diameter_mm, 8)",
+    "rough_blank_extra_length_mm_long_bone": 10,
+    "rough_blank_extra_width_mm": 4,
+    "rough_blank_extra_thickness_mm": 4,
+    "final_sanding_target_grit": 320
+  },
+  "risk_notes": [
+    "Wood movement with humidity must be considered before final pin fit.",
+    "Moving joints should not run raw pin-on-redwood; use brass bushing, sleeve, or bearing surface.",
+    "Thin sections near drilled holes are split-prone; leave extra material around all joint ends during first carving pass.",
+    "MVP mechanical constants require reference upgrade before load-bearing use."
+  ],
+  "source_status": "project_estimate_until_local_references_are_added"
+}

@@ -1,0 +1,21 @@
+{
+  "template_id": "redwood_flat_bone_mvp",
+  "applies_to": ["scapula", "hip_bone", "sternum", "cranial_plate"],
+  "material": "redwood_clear_vertical_grain",
+  "grain_axis": "dominant_load_or_longest_axis",
+  "blank_allowance_mm": {
+    "length": 8,
+    "width": 8,
+    "thickness": 4
+  },
+  "joint_mount_policy": {
+    "use_plate_or_bushing_where_motion_occurs": true,
+    "avoid_thin_drilled_tabs": true,
+    "minimum_edge_distance_rule": "max(2 * pin_diameter_mm, 8)"
+  },
+  "carving_guidance": [
+    "Lay out a flat reference face before sculpting surface curvature.",
+    "Leave broad pads where straps, plates, or bushings attach.",
+    "Shape visible elegance after mounting faces and joint centers are stable."
+  ]
+}

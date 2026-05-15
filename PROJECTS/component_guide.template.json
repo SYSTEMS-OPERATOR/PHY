@@ -1,0 +1,33 @@
+{
+  "component_id": "",
+  "project": "",
+  "source_bone_id": "",
+  "material_id": "",
+  "finished_envelope_mm": {
+    "length": null,
+    "width": null,
+    "thickness": null
+  },
+  "rough_blank_mm": {
+    "length": null,
+    "width": null,
+    "thickness": null
+  },
+  "grain_direction": "unknown",
+  "joint_centers_mm": {
+    "proximal": null,
+    "distal": null
+  },
+  "hardware_assignments": [],
+  "drill_schedule_refs": [],
+  "adjacent_connections": [],
+  "simulation": {
+    "mass_kg": null,
+    "center_of_mass_mm": null,
+    "inertia_kg_m2": null
+  },
+  "fabrication_allowance_mm": null,
+  "validation_status": "missing | incomplete | draft | ready",
+  "unknowns": [],
+  "references": []
+}

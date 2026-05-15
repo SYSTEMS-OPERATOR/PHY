@@ -1,0 +1,40 @@
+{
+  "catalog_id": "redwood_pin_catalog_mvp",
+  "project": "REDWOOD",
+  "unit": "mm",
+  "items": [
+    {
+      "part_id": "COPPER_PIN_3MM",
+      "material": "copper_c110_or_equivalent",
+      "diameter_mm": 3,
+      "preferred_use": ["fingers", "toes", "small linkages"],
+      "requires_bushing": true
+    },
+    {
+      "part_id": "COPPER_PIN_4MM",
+      "material": "copper_c110_or_equivalent",
+      "diameter_mm": 4,
+      "preferred_use": ["wrist_cluster", "ankle_secondary", "small plates"],
+      "requires_bushing": true
+    },
+    {
+      "part_id": "COPPER_PIN_6MM",
+      "material": "copper_c110_or_equivalent",
+      "diameter_mm": 6,
+      "preferred_use": ["elbow", "knee_light", "shoulder_secondary", "hip_secondary"],
+      "requires_bushing": true
+    },
+    {
+      "part_id": "COPPER_PIN_8MM",
+      "material": "copper_c110_or_equivalent",
+      "diameter_mm": 8,
+      "preferred_use": ["hip_primary", "knee_primary", "shoulder_primary"],
+      "requires_bushing": true
+    }
+  ],
+  "rules": [
+    "All pin ends must be deburred.",
+    "Moving joints require a bushing or sleeve; raw pin-on-redwood is not MVP-approved.",
+    "Pin diameter must be checked against local redwood section thickness and minimum edge distance."
+  ]
+}

@@ -34,6 +34,106 @@ Clear water-repellent finishes should be treated as renewable maintenance layers
 
 Extractive-rich woods may bleed through finishes. Tannin-rich woods may stain around reactive metal contact.
 
+## Species-level refined-aging notes
+
+### REDWOOD: coast redwood
+
+Expected refined aging profile:
+
+- low density and low shrinkage favor stable carved components
+- decay resistance and dimensional stability are project advantages
+- extractive bleed and reactive metal staining are important finish and hardware risks
+- exterior UV exposure will gray and weather exposed surfaces unless protected
+
+Best use:
+
+- visible long members
+- carved forms
+- low-mass components
+- controlled indoor or sheltered service
+
+Required tests before final cuts:
+
+- finish adhesion test
+- end-grain seal test
+- drill tearout test
+- bushing retention test
+- nonferrous hardware staining test
+
+### CYPRESS: bald cypress
+
+Expected refined aging profile:
+
+- useful decay-resistance comparator
+- old-growth cypress is reported as more durable than younger-tree material in the current local record
+- good nailing, gluing, finishing, and paint-holding behavior is source-supported in the current local record
+- raw unfinished surfaces may feel greasy
+
+Best use:
+
+- damp-risk components
+- endurance comparison parts
+- test pieces where decay resistance is prioritized over redwood appearance
+
+Required tests:
+
+- surface preparation and finish test
+- pin and bushing retention test
+- tearout test using sharp cutters and light passes
+
+### JUNIPER: western juniper
+
+Expected refined aging profile:
+
+- durable and resistant to decay and termite attack according to the current local record
+- harder than redwood and cypress in the current matrix
+- knots and grain irregularity can complicate shaping
+- radial and tangential shrinkage split remains unknown locally
+
+Best use:
+
+- small members
+- inserts
+- joint blocks
+- dense detail parts
+
+Required tests:
+
+- predrill behavior
+- checking around holes
+- bushing retention
+- knot and grain rejection criteria
+- humidity movement test because shrinkage split is incomplete
+
+### DEFAULT: prototype woods
+
+Douglas fir is the strength and stiffness prototype baseline, but it has higher shrinkage values than redwood and is only moderately durable by the current local record.
+
+Hard maple is the dense and hard prototype-control material, but it is not a decay-endurance material in the current local record.
+
+Yellow poplar is the easy-carve draft stock. It is useful for shape studies and drill mockups, not endurance decisions.
+
+### BRISTLECONE: Great Basin bristlecone pine
+
+Expected refined aging profile:
+
+- reference-only material in this project
+- current record supports species-level density and specific gravity only
+- no local Janka, MOR, MOE, crushing, or shrinkage values are available
+- ecological endurance does not automatically transfer to cut-stock fabrication
+
+Best use:
+
+- endurance philosophy
+- age-attribute hypothesis
+- design reference for slow growth, austerity, persistence, and partial-survival architecture
+
+Not authorized by current local records:
+
+- fabrication use
+- cut-list use
+- material substitution into component guides
+
 ## Project hypothesis
 
 Extreme tree age correlates with survival traits, not guaranteed engineering strength.

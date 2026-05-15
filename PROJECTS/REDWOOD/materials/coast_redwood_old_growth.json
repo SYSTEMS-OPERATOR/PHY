@@ -1,0 +1,53 @@
+{
+  "material_id": "coast_redwood_old_growth",
+  "project": "REDWOOD",
+  "common_name": "Coast redwood",
+  "latin_name": "Sequoia sempervirens",
+  "grade": "old_growth",
+  "source_status": "partial",
+  "properties": {
+    "density_kg_m3": 450,
+    "specific_gravity_basic": null,
+    "specific_gravity_12_percent_mc": null,
+    "janka_lbf": 480,
+    "modulus_of_rupture_MPa": 69.0,
+    "modulus_of_elasticity_GPa": 9.24,
+    "crushing_strength_MPa": 42.4,
+    "radial_shrinkage_percent": null,
+    "tangential_shrinkage_percent": null,
+    "volumetric_shrinkage_percent": null
+  },
+  "qualitative": {
+    "decay_resistance": "old-growth tends to be more durable than younger second-growth material",
+    "workability": "typically easy to work with hand tools or machinery; figured stock can tear out",
+    "fastener_behavior": "unknown",
+    "grain_behavior": "generally straight; figured pieces may be wavy or irregular",
+    "dimensional_stability": "exceptionally stable with very little shrinkage or seasonal movement"
+  },
+  "component_use_score": {
+    "long_members": null,
+    "flat_members": null,
+    "small_members": null,
+    "joint_blocks": null,
+    "sensor_channels": null,
+    "anchor_zones": null,
+    "pin_and_bushing_interfaces": null,
+    "surface_finish": null,
+    "repairability": null,
+    "endurance_value": null
+  },
+  "availability": {
+    "legal_sourcing_notes": "Use only legally documented old-growth or reclaimed material. No sourcing claim is made in this record.",
+    "ancient_grade_availability_probability_percent": null,
+    "market_notes": "Clear or figured woodworking lumber can be much more expensive than construction lumber."
+  },
+  "fabrication_notes": [],
+  "unknowns": [
+    "old-growth specific gravity not separately listed in reference",
+    "old-growth shrinkage not separately listed in reference",
+    "component-use scores not assigned yet"
+  ],
+  "references": [
+    "https://www.wood-database.com/coast-redwood/"
+  ]
+}

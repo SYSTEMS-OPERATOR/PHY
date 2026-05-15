@@ -1,0 +1,22 @@
+{
+  "template_id": "redwood_small_bone_mvp",
+  "applies_to": ["carpal", "tarsal", "metacarpal", "metatarsal", "phalange", "ossicle"],
+  "material": "redwood_clear_vertical_grain",
+  "grain_axis": "longest_axis_where_visible_or_structural",
+  "blank_allowance_mm": {
+    "length": 4,
+    "width": 2,
+    "thickness": 2
+  },
+  "hardware_policy": {
+    "default_pin": "COPPER_PIN_3MM",
+    "default_bushing": "BRASS_BUSHING_3MM_ID_6MM_OD",
+    "allow_fixed_dummy_joint_for_nonfunctional_mvp": true,
+    "minimum_edge_distance_rule": "max(2 * pin_diameter_mm, 8)"
+  },
+  "carving_guidance": [
+    "Small bones may be grouped into simplified functional clusters during MVP if individual articulation is not required.",
+    "Mark left/right and digit index before cutting.",
+    "Prefer conservative oversized blanks for hand finishing."
+  ]
+}

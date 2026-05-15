@@ -1,0 +1,33 @@
+{
+  "catalog_id": "redwood_hinge_catalog_mvp",
+  "project": "REDWOOD",
+  "unit": "mm",
+  "items": [
+    {
+      "part_id": "BRASS_SINGLE_AXIS_HINGE_SMALL",
+      "material": "brass_c360_or_equivalent",
+      "preferred_use": ["small digits", "secondary wrist/ankle motion"],
+      "pin_family": "COPPER_PIN_3MM",
+      "bushing_family": "BRASS_BUSHING_3MM_ID_6MM_OD"
+    },
+    {
+      "part_id": "BRASS_SINGLE_AXIS_HINGE_MEDIUM",
+      "material": "brass_c360_or_equivalent",
+      "preferred_use": ["elbow", "knee light", "ankle rocker"],
+      "pin_family": "COPPER_PIN_6MM",
+      "bushing_family": "BRASS_BUSHING_6MM_ID_10MM_OD"
+    },
+    {
+      "part_id": "BRASS_SINGLE_AXIS_HINGE_LARGE",
+      "material": "brass_c360_or_equivalent",
+      "preferred_use": ["knee primary", "hip limiter", "shoulder limiter"],
+      "pin_family": "COPPER_PIN_8MM",
+      "bushing_family": "BRASS_BUSHING_8MM_ID_12MM_OD"
+    }
+  ],
+  "rules": [
+    "Hinge plates must be sized per bone envelope before final drilling.",
+    "Do not let hinge screws define structure alone; capture major loads through pins, collars, or nested wood geometry.",
+    "Hinge catalogs are MVP families, not final purchased SKUs."
+  ]
+}

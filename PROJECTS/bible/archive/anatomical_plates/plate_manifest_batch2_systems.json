@@ -1,0 +1,103 @@
+{
+  "archive_id": "anatomical_plates_v0_2_systems",
+  "purpose": "Second anatomical image batch for systems, soft-tension, sensor-routing, vascular/service-channel logic, and full-page layout inspiration.",
+  "status": "source-url manifest; image binaries pending local import",
+  "notes": [
+    "This batch complements the first skeleton/bone manifest.",
+    "Images are selected for signal routing, soft-tension analogies, vessel/channel planning, and full-page anatomical table structure.",
+    "All image binaries should be pulled into the local archive by running the importer with this manifest."
+  ],
+  "plates": [
+    {
+      "plate_id": "EUSTACHI_T18_BRAIN_SPINAL_CORD_NERVES",
+      "status": "KEEP",
+      "source_family": "Eustachi / Tabulae anatomicae",
+      "source_page": "https://www.nlm.nih.gov/exhibition/historicalanatomies/eustachi_home.html",
+      "image_url": "https://www.nlm.nih.gov/exhibition/historicalanatomies/Images/1200_pixels/Eustachi_t18.jpg",
+      "local_path": "PROJECTS/bible/archive/anatomical_plates/eustachi/eustachi_t18_brain_spinal_cord_nerves.jpg",
+      "manual_section": "G4.15 Nervous / sensor-routing plate set; Sensor / Signal Routing System appendix material",
+      "caption": "Eustachi, Tabulae anatomicae, Table 18: brain and spinal cord with nerve emergence. Use as a historical signal-routing plate for sensor channels, spine service paths, and nerve-density metaphor.",
+      "technical_use": "Sensor routing metaphor, spine-to-limb signal branching, future connector density planning.",
+      "inspection_notes": "KEEP. Strong systems reference. Not a fabrication drawing; use for signal topology and visual language.",
+      "rights_note": "NLM Historical Anatomies source target; confirm rights during hardening."
+    },
+    {
+      "plate_id": "EUSTACHI_T19_FULL_BODY_NERVE_PATHS",
+      "status": "KEEP",
+      "source_family": "Eustachi / Tabulae anatomicae",
+      "source_page": "https://www.nlm.nih.gov/exhibition/historicalanatomies/eustachi_home.html",
+      "image_url": "https://www.nlm.nih.gov/exhibition/historicalanatomies/Images/1200_pixels/Eustachi_t19.jpg",
+      "local_path": "PROJECTS/bible/archive/anatomical_plates/eustachi/eustachi_t19_full_body_nerve_paths.jpg",
+      "manual_section": "G4.15 Nervous / sensor-routing; G4.14 Muscular / tension-routing",
+      "caption": "Eustachi, Table 19: standing figure with muscle and joint exposure showing nerve pathways from brain and spinal cord throughout the body. Use as a full-body signal-routing and motion-layer reference.",
+      "technical_use": "Full-body nerve pathway metaphor, sensor trunk routing, limb channel planning, soft-tension adjacency.",
+      "inspection_notes": "KEEP if local import succeeds at sufficient resolution. If the source URL fails, harden against the NLM page image link.",
+      "rights_note": "NLM Historical Anatomies source target; confirm rights during hardening."
+    },
+    {
+      "plate_id": "EUSTACHI_T22_POSTERIOR_ARTERY_PATHS",
+      "status": "KEEP",
+      "source_family": "Eustachi / Tabulae anatomicae",
+      "source_page": "https://www.nlm.nih.gov/exhibition/historicalanatomies/eustachi_home.html",
+      "image_url": "https://www.nlm.nih.gov/exhibition/historicalanatomies/Images/1200_pixels/Eustachi_t22.jpg",
+      "local_path": "PROJECTS/bible/archive/anatomical_plates/eustachi/eustachi_t22_posterior_artery_paths.jpg",
+      "manual_section": "G4.16 Vascular / service-channel plate set; posterior service-channel analogy",
+      "caption": "Eustachi, Table 22: posterior figure showing artery pathways. Use as a service-channel and posterior routing analogy for wiring, cooling, and access paths.",
+      "technical_use": "Posterior channel routing, limb service lines, channel density comparison.",
+      "inspection_notes": "KEEP if source resolves. If not, harden from NLM table image link.",
+      "rights_note": "NLM Historical Anatomies source target; confirm rights during hardening."
+    },
+    {
+      "plate_id": "EUSTACHI_T23_POSTERIOR_NERVE_PATHS",
+      "status": "KEEP",
+      "source_family": "Eustachi / Tabulae anatomicae",
+      "source_page": "https://www.nlm.nih.gov/exhibition/historicalanatomies/eustachi_home.html",
+      "image_url": "https://www.nlm.nih.gov/exhibition/historicalanatomies/Images/1200_pixels/Eustachi_t23.jpg",
+      "local_path": "PROJECTS/bible/archive/anatomical_plates/eustachi/eustachi_t23_posterior_nerve_paths.jpg",
+      "manual_section": "G4.15 Nervous / sensor-routing plate set; posterior signal path analogy",
+      "caption": "Eustachi, Table 23: posterior figure showing nerve pathways. Use as a posterior sensor-routing and spine-to-limb branching reference.",
+      "technical_use": "Back-side service channel planning, posterior sensor routes, shoulder and hip branch planning.",
+      "inspection_notes": "KEEP if import succeeds. Important complement to Eustachi Table 19.",
+      "rights_note": "NLM Historical Anatomies source target; confirm rights during hardening."
+    },
+    {
+      "plate_id": "EUSTACHI_T43_SKELETON_MASTOID_CAVITIES",
+      "status": "KEEP",
+      "source_family": "Eustachi / Tabulae anatomicae",
+      "source_page": "https://www.nlm.nih.gov/exhibition/historicalanatomies/eustachi_home.html",
+      "image_url": "https://www.nlm.nih.gov/exhibition/historicalanatomies/Images/1200_pixels/Eustachi_t43.jpg",
+      "local_path": "PROJECTS/bible/archive/anatomical_plates/eustachi/eustachi_t43_skeleton_mastoid_cavities.jpg",
+      "manual_section": "G4.6 Axial core; head mount; hollow/cavity doctrine",
+      "caption": "Eustachi, Table 43: skeleton figure with mastoid-bone cross sections. Use as a historical cavity/cross-section reference for head, skull, and hidden chamber design thinking.",
+      "technical_use": "Cavity/cross-section metaphor, skull support, head-mount internal access thinking.",
+      "inspection_notes": "KEEP if import succeeds. Valuable bridge between skeleton and hollow-body doctrine.",
+      "rights_note": "NLM Historical Anatomies source target; confirm rights during hardening."
+    },
+    {
+      "plate_id": "BOURDON_FULL_TABLE_5_SKELETON_BONES",
+      "status": "KEEP",
+      "source_family": "Bourdon / Nouvelles tables anatomiques",
+      "source_page": "https://www.nlm.nih.gov/exhibition/historicalanatomies/bourdon_home.html",
+      "image_url": "https://www.nlm.nih.gov/exhibition/historicalanatomies/Images/1200_pixels/Bourdon-t05t05a.jpg",
+      "local_path": "PROJECTS/bible/archive/anatomical_plates/bourdon/bourdon_full_table_5_skeleton_bones.jpg",
+      "manual_section": "G4.5 Full-body canon; G4.6 Axial core; diagram-layout precedent",
+      "caption": "Bourdon, Nouvelles tables anatomiques, full Table 5: large standing skeleton with surrounding bone and anatomical details. Use as a full-page diagram-layout precedent combining figure, details, and labels.",
+      "technical_use": "Layout inspiration, full skeleton with bone detail callouts, plate design for the Bible.",
+      "inspection_notes": "KEEP if import succeeds. Strong diagram-composition reference, not the cleanest fabrication baseline.",
+      "rights_note": "NLM Historical Anatomies source target; confirm rights during hardening."
+    },
+    {
+      "plate_id": "BOURDON_FULL_TABLE_8_NERVOUS_FEMALE_SYSTEM",
+      "status": "KEEP",
+      "source_family": "Bourdon / Nouvelles tables anatomiques",
+      "source_page": "https://www.nlm.nih.gov/exhibition/historicalanatomies/bourdon_home.html",
+      "image_url": "https://www.nlm.nih.gov/exhibition/historicalanatomies/Images/1200_pixels/Bourdon-t08t08a.jpg",
+      "local_path": "PROJECTS/bible/archive/anatomical_plates/bourdon/bourdon_full_table_8_nervous_female_system.jpg",
+      "manual_section": "G4.15 Nervous / sensor-routing; visual system-map plate",
+      "caption": "Bourdon, full Table 8: female figure with exposed organs and nervous system, paired with a full nervous-system diagram. Use as a visual precedent for combining body presence with system routing in one full-page plate.",
+      "technical_use": "Sensor-routing layout inspiration, body/system split composition, full-page diagram design.",
+      "inspection_notes": "KEEP. Source image directly inspected and visually strong. Technical anatomy is historical; use mainly for system-map layout and inspiration.",
+      "rights_note": "NLM Historical Anatomies source target; confirm rights during hardening."
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "material_id": "western_juniper_standard",
+  "project": "JUNIPER",
+  "common_name": "Western juniper",
+  "latin_name": "Juniperus occidentalis",
+  "grade": "standard",
+  "source_status": "partial",
+  "properties": {
+    "density_kg_m3": 440,
+    "specific_gravity_basic": 0.40,
+    "specific_gravity_12_percent_mc": 0.44,
+    "janka_lbf": 680,
+    "janka_N": 3020,
+    "modulus_of_rupture_MPa": 61.4,
+    "modulus_of_elasticity_GPa": 4.43,
+    "crushing_strength_MPa": 32.5,
+    "radial_shrinkage_percent": null,
+    "tangential_shrinkage_percent": null,
+    "volumetric_shrinkage_percent": 8.0,
+    "t_r_ratio": null
+  },
+  "qualitative": {
+    "decay_resistance": "rated durable; resistant to decay and termite attack according to source",
+    "workability": "generally easy to work with hand or machine tools, though knots or grain irregularity may cause difficulty",
+    "fastener_behavior": "unknown in this record",
+    "grain_behavior": "usually straight grain with fine even texture; knots and irregularity possible",
+    "dimensional_stability": "source lists volumetric shrinkage only; radial and tangential split not provided"
+  },
+  "component_use_score": {
+    "long_members": null,
+    "flat_members": null,
+    "small_members": null,
+    "joint_blocks": null,
+    "sensor_channels": null,
+    "anchor_zones": null,
+    "pin_and_bushing_interfaces": null,
+    "surface_finish": null,
+    "repairability": null,
+    "endurance_value": null
+  },
+  "availability": {
+    "legal_sourcing_notes": "Wood Database states this species is not listed in CITES Appendices and is reported by IUCN as least concern.",
+    "ancient_grade_availability_probability_percent": null,
+    "market_notes": "Source notes prices are moderate for a domestic wood, though supply is limited and large boards can be difficult to source."
+  },
+  "fabrication_notes": [],
+  "unknowns": [
+    "radial shrinkage not provided by cited source",
+    "tangential shrinkage not provided by cited source",
+    "fastener behavior requires a source or local test",
+    "component-use scores not assigned yet",
+    "ancient-grade availability requires separate legal/sourcing audit"
+  ],
+  "references": [
+    "https://www.wood-database.com/western-juniper/"
+  ]
+}

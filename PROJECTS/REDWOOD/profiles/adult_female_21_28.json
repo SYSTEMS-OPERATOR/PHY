@@ -1,0 +1,49 @@
+{
+  "profile_id": "adult_female_21_28",
+  "status": "mvp_reference_profile",
+  "description": "Project-local adult female proportion profile for REDWOOD armature sizing. Values are base build targets and may be replaced by measured references in later passes.",
+  "pose": "neutral_anatomical_t_pose",
+  "age_reference": "21-28",
+  "height_mm": 1650,
+  "arm_span_mm": 1650,
+  "head_height_ratio": 7.5,
+  "major_widths_mm": {
+    "biacromial_shoulder_breadth": 370,
+    "pelvis_breadth": 285,
+    "ribcage_max_width": 280,
+    "waist_clearance_width": 210
+  },
+  "primary_lengths_mm": {
+    "skull_height": 220,
+    "cervical_stack": 95,
+    "thoracic_stack": 280,
+    "lumbar_stack": 170,
+    "sacrum_coccyx_stack": 125,
+    "clavicle": 140,
+    "scapula_height": 145,
+    "humerus": 310,
+    "radius": 240,
+    "ulna": 250,
+    "hand_total": 175,
+    "hip_bone_height": 230,
+    "femur": 420,
+    "tibia": 375,
+    "fibula": 355,
+    "foot_total": 240
+  },
+  "bilateral_symmetry_policy": {
+    "left_right_lengths_match_initially": true,
+    "allow_hand_carved_asymmetry_after_blank_layout": true
+  },
+  "derivation_tags": {
+    "height_mm": "project_design_decision",
+    "arm_span_mm": "vitruvian_ratio_height_equals_armspan",
+    "primary_lengths_mm": "baseline_anthropometric_targets_for_mvp",
+    "major_widths_mm": "baseline_anthropometric_targets_for_mvp"
+  },
+  "notes": [
+    "This file sets REDWOOD project targets only; it does not change universal PHY proportions.",
+    "Exact curvature is intentionally left to carving guides and builder judgment; this profile supplies base envelopes and length targets.",
+    "Later passes should replace or cite each MVP target with traceable measured or published anthropometric references."
+  ]
+}

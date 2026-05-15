@@ -1,0 +1,53 @@
+{
+  "material_id": "coast_redwood_average",
+  "project": "REDWOOD",
+  "common_name": "Coast redwood",
+  "latin_name": "Sequoia sempervirens",
+  "grade": "standard",
+  "source_status": "verified",
+  "properties": {
+    "density_kg_m3": 415,
+    "specific_gravity_basic": 0.36,
+    "specific_gravity_12_percent_mc": 0.42,
+    "janka_lbf": 450,
+    "modulus_of_rupture_MPa": 61.7,
+    "modulus_of_elasticity_GPa": 8.41,
+    "crushing_strength_MPa": 39.2,
+    "radial_shrinkage_percent": 2.4,
+    "tangential_shrinkage_percent": 4.7,
+    "volumetric_shrinkage_percent": 6.9
+  },
+  "qualitative": {
+    "decay_resistance": "moderately durable to very durable; old-growth tends to be more durable than younger second-growth",
+    "workability": "typically easy to work with hand or machine tools; figured stock may tear out",
+    "fastener_behavior": "unknown",
+    "grain_behavior": "generally straight; figured pieces may be wavy or irregular",
+    "dimensional_stability": "source notes exceptional stability and very little shrinkage or seasonal movement"
+  },
+  "component_use_score": {
+    "long_members": null,
+    "flat_members": null,
+    "small_members": null,
+    "joint_blocks": null,
+    "sensor_channels": null,
+    "anchor_zones": null,
+    "pin_and_bushing_interfaces": null,
+    "surface_finish": null,
+    "repairability": null,
+    "endurance_value": null
+  },
+  "availability": {
+    "legal_sourcing_notes": "Not listed in CITES appendices; IUCN Red List status noted by source.",
+    "ancient_grade_availability_probability_percent": null,
+    "market_notes": "Mid to upper price range as construction lumber; clear or figured woodworking lumber more expensive."
+  },
+  "fabrication_notes": [],
+  "unknowns": [
+    "component-use scores not assigned yet",
+    "fastener behavior requires additional source or test data",
+    "ancient-grade availability requires separate legal/sourcing audit"
+  ],
+  "references": [
+    "https://www.wood-database.com/coast-redwood/"
+  ]
+}

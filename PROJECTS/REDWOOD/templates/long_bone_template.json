@@ -1,0 +1,39 @@
+{
+  "template_id": "redwood_long_bone_mvp",
+  "applies_to": ["femur", "tibia", "fibula", "humerus", "radius", "ulna", "clavicle"],
+  "material": "redwood_clear_vertical_grain",
+  "grain_axis": "proximal_to_distal",
+  "blank_allowance_mm": {
+    "length": 10,
+    "width": 4,
+    "thickness": 4
+  },
+  "joint_end_policy": {
+    "leave_extra_mass_until_trial_fit": true,
+    "minimum_edge_distance_rule": "max(2 * pin_diameter_mm, 8)",
+    "moving_joint_requires_bushing": true
+  },
+  "default_hardware_groups": {
+    "large_primary": {
+      "pin": "COPPER_PIN_8MM",
+      "bushing": "BRASS_BUSHING_8MM_ID_12MM_OD",
+      "washer": "BRASS_WASHER_8MM"
+    },
+    "medium_primary": {
+      "pin": "COPPER_PIN_6MM",
+      "bushing": "BRASS_BUSHING_6MM_ID_10MM_OD",
+      "washer": "BRASS_WASHER_6MM"
+    },
+    "small_primary": {
+      "pin": "COPPER_PIN_4MM",
+      "bushing": "BRASS_BUSHING_4MM_ID_8MM_OD",
+      "washer": "BRASS_WASHER_4MM"
+    }
+  },
+  "carving_guidance": [
+    "Rough cut oversized and square before marking joint centers.",
+    "Mark centerline along grain before shaping.",
+    "Drill bushing holes before final organic contouring.",
+    "Preserve enough redwood around each bushing for the minimum edge-distance rule."
+  ]
+}

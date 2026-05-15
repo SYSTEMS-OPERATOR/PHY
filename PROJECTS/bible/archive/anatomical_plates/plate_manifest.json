@@ -1,0 +1,179 @@
+{
+  "archive_id": "anatomical_plates_v0_1",
+  "purpose": "High-value anatomical reference plates for the Wooden Armature Bible.",
+  "status": "source-url manifest; image binaries pending local import",
+  "policy": {
+    "accept": [
+      "high-resolution institutional scans",
+      "public-domain historical anatomy plates",
+      "technically useful anatomy references",
+      "full-page or near-full-page plates",
+      "images with clear source, author, title, and section address"
+    ],
+    "reject": [
+      "low-resolution thumbnails",
+      "untraceable reposts",
+      "modern copyrighted textbook scans without rights path",
+      "decorative images with no technical role",
+      "AI-generated anatomy images"
+    ]
+  },
+  "plates": [
+    {
+      "plate_id": "VESALIUS_163_FRONTAL_SKELETON",
+      "status": "KEEP",
+      "source_family": "Vesalius / De humani corporis fabrica",
+      "source_page": "https://www.nlm.nih.gov/exhibition/historicalanatomies/vesalius_home.html",
+      "image_url": "https://www.nlm.nih.gov/exhibition/historicalanatomies/Images/1200_pixels/Vesalius_Pg_163.jpg",
+      "local_path": "PROJECTS/bible/archive/anatomical_plates/vesalius/vesalius_pg_163_frontal_skeleton.jpg",
+      "manual_section": "G4.5 Full-body canon and proportion plates; Part I System Overview; opening anatomical lineage plate",
+      "caption": "Vesalius, De humani corporis fabrica, page 163: full-length frontal skeleton leaning on a shovel. Use as an inspirational full-body skeleton plate showing anatomy as staged presence rather than inert diagram.",
+      "technical_use": "Full-body proportion, axial stance, skeletal silhouette, historical anatomy-as-presence reference.",
+      "inspection_notes": "KEEP. Highly inspirational and section-relevant. Not a modern measurement baseline; pair with Albinus and Cheselden for more technical proportion checks.",
+      "rights_note": "NLM Historical Anatomies public-domain historical source target; final rights note should be confirmed during image hardening."
+    },
+    {
+      "plate_id": "VESALIUS_164_SIDE_SKELETON",
+      "status": "KEEP",
+      "source_family": "Vesalius / De humani corporis fabrica",
+      "source_page": "https://www.nlm.nih.gov/exhibition/historicalanatomies/vesalius_home.html",
+      "image_url": "https://www.nlm.nih.gov/exhibition/historicalanatomies/Images/1200_pixels/Vesalius_Pg_164.jpg",
+      "local_path": "PROJECTS/bible/archive/anatomical_plates/vesalius/vesalius_pg_164_side_skeleton.jpg",
+      "manual_section": "G4.5 Full-body canon and proportion plates; axial posture comparison",
+      "caption": "Vesalius, page 164: full-length side skeleton contemplating a skull. Use for side-view posture, axial curve, and historical body-theatre reference.",
+      "technical_use": "Side silhouette, spine curvature, head/pelvis balance, full-body attitude.",
+      "inspection_notes": "KEEP. Strong side-reference companion to Vesalius page 163. Use as inspirational and proportional cross-check, not fabrication drawing.",
+      "rights_note": "NLM Historical Anatomies source target; confirm rights during hardening."
+    },
+    {
+      "plate_id": "VESALIUS_165_POSTERIOR_SKELETON",
+      "status": "KEEP",
+      "source_family": "Vesalius / De humani corporis fabrica",
+      "source_page": "https://www.nlm.nih.gov/exhibition/historicalanatomies/vesalius_home.html",
+      "image_url": "https://www.nlm.nih.gov/exhibition/historicalanatomies/Images/1200_pixels/Vesalius_Pg_165.jpg",
+      "local_path": "PROJECTS/bible/archive/anatomical_plates/vesalius/vesalius_pg_165_posterior_skeleton.jpg",
+      "manual_section": "G4.5 Full-body canon and proportion plates; posterior full-body reference",
+      "caption": "Vesalius, page 165: posterior skeleton leaning on the hands. Use as a dramatic posterior skeletal reference and early evidence of skeleton-as-posed-body.",
+      "technical_use": "Posterior silhouette, shoulder/pelvis relation, spine and scapular presence.",
+      "inspection_notes": "KEEP. Excellent historical posterior plate; not a modern orthographic reference.",
+      "rights_note": "NLM Historical Anatomies source target; confirm rights during hardening."
+    },
+    {
+      "plate_id": "ALBINUS_T01_FRONTAL_SKELETON",
+      "status": "KEEP",
+      "source_family": "Albinus / Wandelaar / Tabulae sceleti et musculorum",
+      "source_page": "https://www.nlm.nih.gov/exhibition/historicalanatomies/albinus_home.html",
+      "image_url": "https://www.nlm.nih.gov/exhibition/historicalanatomies/Images/1200_pixels/Albinus_t01.jpg",
+      "local_path": "PROJECTS/bible/archive/anatomical_plates/albinus/albinus_t01_frontal_skeleton.jpg",
+      "manual_section": "G4.5 Full-body canon and proportion plates; G4.7 Pelvic bowl; G4.8 Shoulder girdle",
+      "caption": "Albinus and Wandelaar, Table 1: full-length frontal skeleton. Use as a clean idealized standing proportion plate for the complete armature.",
+      "technical_use": "Frontal skeleton proportions, shoulder width, pelvic attitude, limb axis checks.",
+      "inspection_notes": "KEEP. High technical value for full-body proportional oath; more formal and measured than Vesalius.",
+      "rights_note": "NLM Historical Anatomies source target; confirm rights during hardening."
+    },
+    {
+      "plate_id": "ALBINUS_T02_POSTERIOR_SKELETON",
+      "status": "KEEP",
+      "source_family": "Albinus / Wandelaar / Tabulae sceleti et musculorum",
+      "source_page": "https://www.nlm.nih.gov/exhibition/historicalanatomies/albinus_home.html",
+      "image_url": "https://www.nlm.nih.gov/exhibition/historicalanatomies/Images/1200_pixels/Albinus_t02.jpg",
+      "local_path": "PROJECTS/bible/archive/anatomical_plates/albinus/albinus_t02_posterior_skeleton.jpg",
+      "manual_section": "G4.5 Full-body canon; G4.8 Shoulder girdle; posterior structural check",
+      "caption": "Albinus and Wandelaar, Table 2: full-length posterior skeleton. Use for posterior scapula, pelvis, spine, and long-limb balance checks.",
+      "technical_use": "Posterior shoulder girdle, spine/pelvis relation, lower limb verticality.",
+      "inspection_notes": "KEEP. Critical posterior complement to Table 1.",
+      "rights_note": "NLM Historical Anatomies source target; confirm rights during hardening."
+    },
+    {
+      "plate_id": "ALBINUS_T03_SIDE_SKELETON",
+      "status": "KEEP",
+      "source_family": "Albinus / Wandelaar / Tabulae sceleti et musculorum",
+      "source_page": "https://www.nlm.nih.gov/exhibition/historicalanatomies/albinus_home.html",
+      "image_url": "https://www.nlm.nih.gov/exhibition/historicalanatomies/Images/1200_pixels/Albinus_t03.jpg",
+      "local_path": "PROJECTS/bible/archive/anatomical_plates/albinus/albinus_t03_side_skeleton.jpg",
+      "manual_section": "G4.5 Full-body canon; axial posture; side silhouette",
+      "caption": "Albinus and Wandelaar, Table 3: full-length left-side skeleton. Use for side-view posture, spine curvature, and skull-pelvis-foot balance.",
+      "technical_use": "Side proportion, sagittal alignment, foot/stance reference.",
+      "inspection_notes": "KEEP. Essential side-view technical plate.",
+      "rights_note": "NLM Historical Anatomies source target; confirm rights during hardening."
+    },
+    {
+      "plate_id": "CHESELDEN_T19_ANTERIOR_TRUNK",
+      "status": "KEEP",
+      "source_family": "Cheselden / Osteographia",
+      "source_page": "https://www.nlm.nih.gov/exhibition/historicalanatomies/cheselden_home.html",
+      "image_url": "https://www.nlm.nih.gov/exhibition/historicalanatomies/Images/1200_pixels/cheselden_t19.jpg",
+      "local_path": "PROJECTS/bible/archive/anatomical_plates/cheselden/cheselden_t19_anterior_trunk.jpg",
+      "manual_section": "G4.6 Axial core; G4.7 Pelvic bowl; G4.8 Shoulder girdle",
+      "caption": "Cheselden, Osteographia, Plate 19: anterior trunk skeleton including rib cage, vertebral column, and pelvis. Use for axial-core, rib, sternum, pelvis, and shoulder-girdle layout.",
+      "technical_use": "Anterior rib cage, sternum, pelvis, vertebral column, shoulder relation.",
+      "inspection_notes": "KEEP. High-value regional plate for translating torso anatomy into armature assemblies.",
+      "rights_note": "NLM Historical Anatomies source target; confirm rights during hardening."
+    },
+    {
+      "plate_id": "CHESELDEN_T20_POSTERIOR_TRUNK",
+      "status": "KEEP",
+      "source_family": "Cheselden / Osteographia",
+      "source_page": "https://www.nlm.nih.gov/exhibition/historicalanatomies/cheselden_home.html",
+      "image_url": "https://www.nlm.nih.gov/exhibition/historicalanatomies/Images/1200_pixels/cheselden_t20.jpg",
+      "local_path": "PROJECTS/bible/archive/anatomical_plates/cheselden/cheselden_t20_posterior_trunk.jpg",
+      "manual_section": "G4.6 Axial core; posterior rib/spine/pelvis reference",
+      "caption": "Cheselden, Plate 20: posterior trunk skeleton including rib cage, vertebral column, and pelvis. Use for posterior axial-core and scapular planning.",
+      "technical_use": "Posterior spine, ribs, pelvis, scapular context.",
+      "inspection_notes": "KEEP. Necessary paired posterior plate for Plate 19.",
+      "rights_note": "NLM Historical Anatomies source target; confirm rights during hardening."
+    },
+    {
+      "plate_id": "CHESELDEN_T25A_HAND_BONES",
+      "status": "KEEP",
+      "source_family": "Cheselden / Osteographia",
+      "source_page": "https://www.nlm.nih.gov/exhibition/historicalanatomies/cheselden_home.html",
+      "image_url": "https://www.nlm.nih.gov/exhibition/historicalanatomies/Images/1200_pixels/cheselden_t25a.jpg",
+      "local_path": "PROJECTS/bible/archive/anatomical_plates/cheselden/cheselden_t25a_hand_bones.jpg",
+      "manual_section": "G4.10 Hands; phalanx templates; miniature joint design",
+      "caption": "Cheselden, Plate 25a: hand bones, internal and external views. Use as a bone-first reference for carpals, metacarpals, phalanges, and miniature component segmentation.",
+      "technical_use": "Hand bone proportions, palm/finger relation, phalanx and metacarpal separation.",
+      "inspection_notes": "KEEP. Critical for avoiding mannequin-hand simplification.",
+      "rights_note": "NLM Historical Anatomies source target; confirm rights during hardening."
+    },
+    {
+      "plate_id": "CHESELDEN_T29_FOOT_BONES",
+      "status": "KEEP",
+      "source_family": "Cheselden / Osteographia",
+      "source_page": "https://www.nlm.nih.gov/exhibition/historicalanatomies/cheselden_home.html",
+      "image_url": "https://www.nlm.nih.gov/exhibition/historicalanatomies/Images/1200_pixels/cheselden_t29.jpg",
+      "local_path": "PROJECTS/bible/archive/anatomical_plates/cheselden/cheselden_t29_foot_bones.jpg",
+      "manual_section": "G4.12 Feet; stance and base-contact architecture",
+      "caption": "Cheselden, Plate 29: foot bones from above, below, and side. Use as the primary osteological reference for foot assemblies, arches, toe segmentation, and contact logic.",
+      "technical_use": "Foot arch, tarsals, metatarsals, toes, ground-contact geometry.",
+      "inspection_notes": "KEEP. Essential for foot component design.",
+      "rights_note": "NLM Historical Anatomies source target; confirm rights during hardening."
+    },
+    {
+      "plate_id": "CHESELDEN_T34_STANDING_FEMALE_SKELETON",
+      "status": "KEEP",
+      "source_family": "Cheselden / Osteographia",
+      "source_page": "https://www.nlm.nih.gov/exhibition/historicalanatomies/cheselden_home.html",
+      "image_url": "https://www.nlm.nih.gov/exhibition/historicalanatomies/Images/1200_pixels/cheselden_t34.jpg",
+      "local_path": "PROJECTS/bible/archive/anatomical_plates/cheselden/cheselden_t34_standing_female_skeleton.jpg",
+      "manual_section": "G4.5 Full-body canon; proportion audit; female armature reference",
+      "caption": "Cheselden, Plate 34: standing female skeleton. Use as a historical full-body female skeletal proportion reference for the armature's visible body plan.",
+      "technical_use": "Female skeletal proportion, pelvis, stance, rib/shoulder/hip relation.",
+      "inspection_notes": "KEEP. High priority because PHY is targeting elegant adult female proportions; must be paired with modern references later.",
+      "rights_note": "NLM Historical Anatomies source target; confirm rights during hardening."
+    },
+    {
+      "plate_id": "CHESELDEN_T35_STANDING_MALE_SKELETON",
+      "status": "KEEP",
+      "source_family": "Cheselden / Osteographia",
+      "source_page": "https://www.nlm.nih.gov/exhibition/historicalanatomies/cheselden_home.html",
+      "image_url": "https://www.nlm.nih.gov/exhibition/historicalanatomies/Images/1200_pixels/cheselden_t35.jpg",
+      "local_path": "PROJECTS/bible/archive/anatomical_plates/cheselden/cheselden_t35_standing_male_skeleton.jpg",
+      "manual_section": "G4.5 Full-body canon; comparative skeletal proportion",
+      "caption": "Cheselden, Plate 35: standing male skeleton. Use as a comparative proportion reference against the female skeleton plate and other full-body canons.",
+      "technical_use": "Comparative skeletal proportion, shoulder/pelvis differences, stance.",
+      "inspection_notes": "KEEP. Useful comparator, not primary target body plan.",
+      "rights_note": "NLM Historical Anatomies source target; confirm rights during hardening."
+    }
+  ]
+}

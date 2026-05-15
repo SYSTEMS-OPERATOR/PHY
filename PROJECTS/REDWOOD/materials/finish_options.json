@@ -1,0 +1,26 @@
+{
+  "finish_options_id": "redwood_finish_options_mvp",
+  "project": "REDWOOD",
+  "status": "mvp_placeholder_requires_test_coupons",
+  "options": [
+    {
+      "finish_id": "clear_oil_test_coupon",
+      "description": "Clear penetrating oil finish candidate for natural redwood appearance.",
+      "requires_test_coupon": true,
+      "notes": ["Verify darkening, tackiness, and joint-hole swelling before applying to finished parts."]
+    },
+    {
+      "finish_id": "shellac_test_coupon",
+      "description": "Shellac candidate for sealed studio/display surface.",
+      "requires_test_coupon": true,
+      "notes": ["Test for brittleness near moving joints and compatibility with brass/copper hardware."]
+    },
+    {
+      "finish_id": "unfinished_reference_coupon",
+      "description": "Unfinished redwood control coupon for dimensional movement comparison.",
+      "requires_test_coupon": true,
+      "notes": ["Keep one labeled sample in the project kit for humidity comparison."]
+    }
+  ],
+  "project_rule": "No final finish should be selected until drilled redwood, brass bushing, and copper pin coupons are tested together."
+}

@@ -6,7 +6,9 @@
   "grade": "theoretical",
   "source_status": "partial",
   "properties": {
-    "density_kg_m3": null,
+    "density_kg_m3": 429.8,
+    "wood_density_lb_ft3": 26.83,
+    "specific_gravity_fia": 0.43,
     "specific_gravity_basic": null,
     "specific_gravity_12_percent_mc": null,
     "janka_lbf": null,
@@ -20,7 +22,7 @@
     "t_r_ratio": null
   },
   "qualitative": {
-    "decay_resistance": "not quantified in this record",
+    "decay_resistance": "not quantified as a wood engineering property in this record",
     "workability": "not quantified in this record",
     "fastener_behavior": "not quantified in this record",
     "grain_behavior": "not quantified in this record",
@@ -45,11 +47,12 @@
   },
   "fabrication_notes": [
     "Reference-only material. No fabrication use is authorized by this record.",
-    "Use this record as an endurance comparison target, not as a cut-stock material specification."
+    "Use this record as an endurance comparison target, not as a cut-stock material specification.",
+    "FIA biomass source lists Great Basin bristlecone pine with specific gravity 0.43 and wood density 26.83 lb/ft3. The kg/m3 value is a unit conversion of that listed density."
   ],
   "unknowns": [
-    "density not entered because no acceptable exact material-property source has been attached",
-    "specific gravity not entered because no acceptable exact material-property source has been attached",
+    "specific_gravity_basic not entered because the FIA source labels only a general species specific gravity value",
+    "specific_gravity_12_percent_mc not entered because no acceptable exact 12 percent MC source has been attached",
     "Janka hardness not entered because no acceptable exact material-property source has been attached",
     "MOR not entered because no acceptable exact material-property source has been attached",
     "MOE not entered because no acceptable exact material-property source has been attached",
@@ -57,6 +60,8 @@
     "shrinkage values not entered because no acceptable exact material-property source has been attached"
   ],
   "references": [
-    "Great Basin National Park Superintendent's Compendium: https://www.nps.gov/grba/learn/management/superintendent-s-compendium.htm"
+    "FIA regional biomass equations table: https://climateactionreserve.org/wp-content/uploads/2018/04/2014_FIA-Biomass_CAORWA.pdf",
+    "Great Basin National Park Superintendent's Compendium: https://www.nps.gov/grba/learn/management/superintendent-s-compendium.htm",
+    "USDA FEIS Pinus longaeva species review: https://www.fs.usda.gov/database/feis/plants/tree/pinlon/all.html"
   ]
 }

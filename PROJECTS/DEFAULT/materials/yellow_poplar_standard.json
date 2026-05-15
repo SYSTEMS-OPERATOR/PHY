@@ -1,0 +1,57 @@
+{
+  "material_id": "yellow_poplar_standard",
+  "project": "DEFAULT",
+  "common_name": "Yellow poplar",
+  "latin_name": "Liriodendron tulipifera",
+  "grade": "standard",
+  "source_status": "verified",
+  "properties": {
+    "density_kg_m3": 455,
+    "specific_gravity_basic": 0.40,
+    "specific_gravity_12_percent_mc": 0.46,
+    "janka_lbf": 540,
+    "janka_N": 2400,
+    "modulus_of_rupture_MPa": 69.7,
+    "modulus_of_elasticity_GPa": 10.90,
+    "crushing_strength_MPa": 38.2,
+    "radial_shrinkage_percent": 4.6,
+    "tangential_shrinkage_percent": 8.2,
+    "volumetric_shrinkage_percent": 12.7,
+    "t_r_ratio": 1.8
+  },
+  "qualitative": {
+    "decay_resistance": "heartwood rated moderately durable to non-durable and susceptible to insect attack",
+    "workability": "very easy to work in almost all regards; low density can leave fuzzy surfaces and edges during shaping or sanding",
+    "fastener_behavior": "unknown in this record",
+    "grain_behavior": "typically straight, uniform grain with medium texture and low natural luster",
+    "dimensional_stability": "not separately scored in this record"
+  },
+  "component_use_score": {
+    "long_members": null,
+    "flat_members": null,
+    "small_members": null,
+    "joint_blocks": null,
+    "sensor_channels": null,
+    "anchor_zones": null,
+    "pin_and_bushing_interfaces": null,
+    "surface_finish": null,
+    "repairability": null,
+    "endurance_value": null
+  },
+  "availability": {
+    "legal_sourcing_notes": "Wood Database states this species is not listed in the CITES Appendices or on the IUCN Red List of Threatened Species.",
+    "ancient_grade_availability_probability_percent": null,
+    "market_notes": "Among the most economical and inexpensive domestic hardwoods; especially affordable in the eastern United States."
+  },
+  "fabrication_notes": [
+    "DEFAULT low-cost carving and rough-prototype baseline."
+  ],
+  "unknowns": [
+    "fastener behavior requires a source or local test",
+    "component-use scores not assigned yet",
+    "ancient-grade availability requires separate legal/sourcing audit"
+  ],
+  "references": [
+    "https://www.wood-database.com/yellow-poplar/"
+  ]
+}

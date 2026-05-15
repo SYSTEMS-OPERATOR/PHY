@@ -1,0 +1,62 @@
+{
+  "material_id": "great_basin_bristlecone_reference",
+  "project": "BRISTLECONE",
+  "common_name": "Great Basin bristlecone pine",
+  "latin_name": "Pinus longaeva",
+  "grade": "theoretical",
+  "source_status": "partial",
+  "properties": {
+    "density_kg_m3": null,
+    "specific_gravity_basic": null,
+    "specific_gravity_12_percent_mc": null,
+    "janka_lbf": null,
+    "janka_N": null,
+    "modulus_of_rupture_MPa": null,
+    "modulus_of_elasticity_GPa": null,
+    "crushing_strength_MPa": null,
+    "radial_shrinkage_percent": null,
+    "tangential_shrinkage_percent": null,
+    "volumetric_shrinkage_percent": null,
+    "t_r_ratio": null
+  },
+  "qualitative": {
+    "decay_resistance": "not quantified in this record",
+    "workability": "not quantified in this record",
+    "fastener_behavior": "not quantified in this record",
+    "grain_behavior": "not quantified in this record",
+    "dimensional_stability": "not quantified in this record"
+  },
+  "component_use_score": {
+    "long_members": null,
+    "flat_members": null,
+    "small_members": null,
+    "joint_blocks": null,
+    "sensor_channels": null,
+    "anchor_zones": null,
+    "pin_and_bushing_interfaces": null,
+    "surface_finish": null,
+    "repairability": null,
+    "endurance_value": null
+  },
+  "availability": {
+    "legal_sourcing_notes": "Great Basin National Park Superintendent's Compendium prohibits burning, gathering, possessing, collecting, or using Bristlecone Pine wood in any form within or from the park.",
+    "ancient_grade_availability_probability_percent": null,
+    "market_notes": "Treat actual ancient bristlecone as unavailable unless a separate legal provenance record proves otherwise."
+  },
+  "fabrication_notes": [
+    "Reference-only material. No fabrication use is authorized by this record.",
+    "Use this record as an endurance comparison target, not as a cut-stock material specification."
+  ],
+  "unknowns": [
+    "density not entered because no acceptable exact material-property source has been attached",
+    "specific gravity not entered because no acceptable exact material-property source has been attached",
+    "Janka hardness not entered because no acceptable exact material-property source has been attached",
+    "MOR not entered because no acceptable exact material-property source has been attached",
+    "MOE not entered because no acceptable exact material-property source has been attached",
+    "crushing strength not entered because no acceptable exact material-property source has been attached",
+    "shrinkage values not entered because no acceptable exact material-property source has been attached"
+  ],
+  "references": [
+    "Great Basin National Park Superintendent's Compendium: https://www.nps.gov/grba/learn/management/superintendent-s-compendium.htm"
+  ]
+}

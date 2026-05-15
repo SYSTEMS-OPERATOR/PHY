@@ -1,0 +1,48 @@
+{
+  "project_id": "REDWOOD",
+  "phy_compatibility": "1.0",
+  "project_type": "fabrication_overlay",
+  "core_rule": "Do not hard-code REDWOOD-specific assumptions into the universal PHY framework.",
+  "target": {
+    "type": "adult_female_armature",
+    "age_reference": "21-28",
+    "pose": "neutral_anatomical_t_pose",
+    "proportion_profile": "profiles/adult_female_21_28.json",
+    "primary_build_goal": "bone_by_bone_redwood_cut_carve_drill_guidance"
+  },
+  "materials": {
+    "primary_structure": "materials/redwood.json",
+    "pin_material": "materials/copper.json",
+    "bushing_and_plate_material": "materials/brass.json"
+  },
+  "hardware_catalogs": [
+    "hardware/pin_catalog.json",
+    "hardware/bushing_catalog.json",
+    "hardware/hinge_catalog.json",
+    "hardware/washer_spacer_catalog.json"
+  ],
+  "templates": {
+    "bone_guide": "templates/bone_guide_template.md",
+    "long_bone": "templates/long_bone_template.json",
+    "flat_bone": "templates/flat_bone_template.json",
+    "small_bone": "templates/small_bone_template.json",
+    "vertebra": "templates/vertebra_template.json",
+    "rib": "templates/rib_template.json"
+  },
+  "outputs": {
+    "bone_guides": "bone_guides/",
+    "cutlists": "cutlists/",
+    "simulation": "simulation/",
+    "reports": "reports/"
+  },
+  "validation_policy": {
+    "fail_on_missing_finished_dimensions": true,
+    "fail_on_missing_blank_dimensions": true,
+    "fail_on_missing_grain_axis": true,
+    "fail_on_missing_joint_centers": true,
+    "fail_on_missing_hardware_assignment": true,
+    "fail_on_missing_drill_schedule": true,
+    "fail_on_missing_connection_map": true,
+    "allow_explicit_unknowns_in_mvp": true
+  }
+}

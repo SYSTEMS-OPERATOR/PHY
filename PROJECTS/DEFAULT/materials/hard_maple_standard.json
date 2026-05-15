@@ -1,0 +1,57 @@
+{
+  "material_id": "hard_maple_standard",
+  "project": "DEFAULT",
+  "common_name": "Hard maple",
+  "latin_name": "Acer saccharum",
+  "grade": "standard",
+  "source_status": "verified",
+  "properties": {
+    "density_kg_m3": 705,
+    "specific_gravity_basic": 0.56,
+    "specific_gravity_12_percent_mc": 0.71,
+    "janka_lbf": 1450,
+    "janka_N": 6450,
+    "modulus_of_rupture_MPa": 109.0,
+    "modulus_of_elasticity_GPa": 12.62,
+    "crushing_strength_MPa": 54.0,
+    "radial_shrinkage_percent": 4.8,
+    "tangential_shrinkage_percent": 9.9,
+    "volumetric_shrinkage_percent": 14.7,
+    "t_r_ratio": 1.9
+  },
+  "qualitative": {
+    "decay_resistance": "rated non-durable to perishable and susceptible to insect attack",
+    "workability": "fairly easy to work with hand and machine tools, though harder than soft maple; can burn with high-speed cutters; turns, glues, and finishes well",
+    "fastener_behavior": "unknown in this record",
+    "grain_behavior": "generally straight but may be wavy; fine even texture",
+    "dimensional_stability": "not separately scored in this record"
+  },
+  "component_use_score": {
+    "long_members": null,
+    "flat_members": null,
+    "small_members": null,
+    "joint_blocks": null,
+    "sensor_channels": null,
+    "anchor_zones": null,
+    "pin_and_bushing_interfaces": null,
+    "surface_finish": null,
+    "repairability": null,
+    "endurance_value": null
+  },
+  "availability": {
+    "legal_sourcing_notes": "Wood Database states this species is not listed in the CITES Appendices or on the IUCN Red List of Threatened Species.",
+    "ancient_grade_availability_probability_percent": null,
+    "market_notes": "Moderately priced; figured pieces such as birdseye, curl, or quilt are likely to be much more expensive."
+  },
+  "fabrication_notes": [
+    "DEFAULT dense/hard control material for prototype comparison."
+  ],
+  "unknowns": [
+    "fastener behavior requires a source or local test",
+    "component-use scores not assigned yet",
+    "ancient-grade availability requires separate legal/sourcing audit"
+  ],
+  "references": [
+    "https://www.wood-database.com/hard-maple/"
+  ]
+}

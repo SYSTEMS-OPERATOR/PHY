@@ -1,0 +1,46 @@
+{
+  "material_id": "",
+  "project": "",
+  "common_name": "",
+  "latin_name": "",
+  "grade": "prototype | standard | reclaimed | old_growth | ancient_grade | theoretical",
+  "source_status": "missing | partial | verified",
+  "properties": {
+    "density_kg_m3": null,
+    "specific_gravity": null,
+    "janka_lbf": null,
+    "modulus_of_rupture_MPa": null,
+    "modulus_of_elasticity_GPa": null,
+    "crushing_strength_MPa": null,
+    "radial_shrinkage_percent": null,
+    "tangential_shrinkage_percent": null,
+    "volumetric_shrinkage_percent": null
+  },
+  "qualitative": {
+    "decay_resistance": "unknown",
+    "workability": "unknown",
+    "fastener_behavior": "unknown",
+    "grain_behavior": "unknown",
+    "dimensional_stability": "unknown"
+  },
+  "component_use_score": {
+    "long_members": null,
+    "flat_members": null,
+    "small_members": null,
+    "joint_blocks": null,
+    "sensor_channels": null,
+    "anchor_zones": null,
+    "pin_and_bushing_interfaces": null,
+    "surface_finish": null,
+    "repairability": null,
+    "endurance_value": null
+  },
+  "availability": {
+    "legal_sourcing_notes": "",
+    "ancient_grade_availability_probability_percent": null,
+    "market_notes": ""
+  },
+  "fabrication_notes": [],
+  "unknowns": [],
+  "references": []
+}

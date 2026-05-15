@@ -1,0 +1,43 @@
+{
+  "rule_set_id": "redwood_mvp_proportion_rules",
+  "purpose": "Describe how REDWOOD project measurements are derived without changing universal PHY data.",
+  "unit": "mm",
+  "rules": [
+    {
+      "rule_id": "arm_span_equals_height",
+      "expression": "arm_span_mm = height_mm",
+      "source_type": "proportion_rule",
+      "notes": "Vitruvian working target for neutral T-pose layout."
+    },
+    {
+      "rule_id": "rough_blank_allowance_long_bone",
+      "expression": "blank_length_mm = finished_length_mm + 10",
+      "source_type": "fabrication_allowance",
+      "notes": "Initial 5 mm end allowance per side for trimming, squaring, and hand carving."
+    },
+    {
+      "rule_id": "rough_blank_allowance_small_bone",
+      "expression": "blank_length_mm = finished_length_mm + 4",
+      "source_type": "fabrication_allowance",
+      "notes": "Small bones need smaller trimming allowance to avoid excessive waste."
+    },
+    {
+      "rule_id": "grain_axis_long_bone",
+      "expression": "grain_axis = proximal_to_distal",
+      "source_type": "material_orientation_rule",
+      "notes": "Long grain follows load path through limb bones."
+    },
+    {
+      "rule_id": "minimum_pin_edge_distance",
+      "expression": "minimum_edge_distance_mm >= max(2 * pin_diameter_mm, 8)",
+      "source_type": "fabrication_safety_rule",
+      "notes": "MVP rule to keep drilled pin holes from splitting redwood near joint ends."
+    },
+    {
+      "rule_id": "bushing_preferred_at_moving_joints",
+      "expression": "moving_joint_requires_bushing = true",
+      "source_type": "hardware_design_rule",
+      "notes": "Brass bushings prevent copper/brass pins from wallowing redwood holes during repeated motion."
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "material_id": "douglas_fir_standard",
+  "project": "DEFAULT",
+  "common_name": "Douglas fir",
+  "latin_name": "Pseudotsuga menziesii",
+  "grade": "standard",
+  "source_status": "verified",
+  "properties": {
+    "density_kg_m3": 510,
+    "specific_gravity_basic": 0.45,
+    "specific_gravity_12_percent_mc": 0.51,
+    "janka_lbf": 620,
+    "janka_N": 2760,
+    "modulus_of_rupture_MPa": 86.2,
+    "modulus_of_elasticity_GPa": 12.17,
+    "crushing_strength_MPa": 47.9,
+    "radial_shrinkage_percent": 4.5,
+    "tangential_shrinkage_percent": 7.3,
+    "volumetric_shrinkage_percent": 11.6,
+    "t_r_ratio": 1.6
+  },
+  "qualitative": {
+    "decay_resistance": "heartwood rated moderately durable for decay, but susceptible to insect attack",
+    "workability": "typically machines well, has a moderate blunting effect on cutters, and accepts stains, glues, and finishes well",
+    "fastener_behavior": "unknown in this record",
+    "grain_behavior": "generally straight or slightly wavy with medium to coarse texture",
+    "dimensional_stability": "not separately scored in this record"
+  },
+  "component_use_score": {
+    "long_members": null,
+    "flat_members": null,
+    "small_members": null,
+    "joint_blocks": null,
+    "sensor_channels": null,
+    "anchor_zones": null,
+    "pin_and_bushing_interfaces": null,
+    "surface_finish": null,
+    "repairability": null,
+    "endurance_value": null
+  },
+  "availability": {
+    "legal_sourcing_notes": "Wood Database states this species is not listed in CITES Appendices and is reported by IUCN as least concern.",
+    "ancient_grade_availability_probability_percent": null,
+    "market_notes": "Widely available as construction lumber for a modest price; old-growth or reclaimed boards can be much more expensive."
+  },
+  "fabrication_notes": [
+    "DEFAULT baseline material because source describes Douglas fir as stiff and strong for its weight and widely used in construction and building."
+  ],
+  "unknowns": [
+    "fastener behavior requires a source or local test",
+    "component-use scores not assigned yet",
+    "ancient-grade availability requires separate legal/sourcing audit"
+  ],
+  "references": [
+    "https://www.wood-database.com/douglas-fir/"
+  ]
+}

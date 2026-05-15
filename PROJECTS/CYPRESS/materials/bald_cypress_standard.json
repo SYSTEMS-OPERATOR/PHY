@@ -1,0 +1,57 @@
+{
+  "material_id": "bald_cypress_standard",
+  "project": "CYPRESS",
+  "common_name": "Bald cypress",
+  "latin_name": "Taxodium distichum",
+  "grade": "standard",
+  "source_status": "verified",
+  "properties": {
+    "density_kg_m3": 515,
+    "specific_gravity_basic": 0.42,
+    "specific_gravity_12_percent_mc": 0.51,
+    "janka_lbf": 510,
+    "janka_N": 2270,
+    "modulus_of_rupture_MPa": 73.1,
+    "modulus_of_elasticity_GPa": 9.93,
+    "crushing_strength_MPa": 43.9,
+    "radial_shrinkage_percent": 3.8,
+    "tangential_shrinkage_percent": 6.2,
+    "volumetric_shrinkage_percent": 10.5,
+    "t_r_ratio": 1.6
+  },
+  "qualitative": {
+    "decay_resistance": "old-growth rated durable to very durable; younger-tree wood rated moderately durable",
+    "workability": "sharp cutters and light passes recommended to avoid tearout; good gluing, nailing, finishing, and paint-holding properties",
+    "fastener_behavior": "good nailing properties reported by source",
+    "grain_behavior": "straight grain, medium to coarse texture; raw unfinished surfaces may feel greasy",
+    "dimensional_stability": "not separately scored in this record"
+  },
+  "component_use_score": {
+    "long_members": null,
+    "flat_members": null,
+    "small_members": null,
+    "joint_blocks": null,
+    "sensor_channels": null,
+    "anchor_zones": null,
+    "pin_and_bushing_interfaces": null,
+    "surface_finish": null,
+    "repairability": null,
+    "endurance_value": null
+  },
+  "availability": {
+    "legal_sourcing_notes": "Wood Database states this species is not listed in the CITES Appendices and is reported by IUCN as least concern.",
+    "ancient_grade_availability_probability_percent": null,
+    "market_notes": "Specialty lumber such as reclaimed sinker cypress or pecky cypress is much more expensive than construction-grade material."
+  },
+  "fabrication_notes": [
+    "USDA FPL Wood Handbook Chapter 5 Table 5-3a independently lists baldcypress at 12 percent MC with specific gravity 0.46, MOR 73,000 kPa, MOE 9,900 MPa, compression parallel 43,900 kPa, and side hardness 2,300 N."
+  ],
+  "unknowns": [
+    "component-use scores not assigned yet",
+    "sinker or ancient-grade mechanical differences are not assumed in this standard record"
+  ],
+  "references": [
+    "https://www.wood-database.com/bald-cypress/",
+    "USDA Forest Products Laboratory, Wood Handbook FPL-GTR-282, Chapter 5, Table 5-3a: https://www.fpl.fs.usda.gov/documnts/fplgtr/fplgtr282/chapter_05_fpl_gtr282.pdf"
+  ]
+}

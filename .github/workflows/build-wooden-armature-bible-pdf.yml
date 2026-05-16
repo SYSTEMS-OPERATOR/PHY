@@ -1,0 +1,39 @@
+name: Build Wooden Armature Bible PDF
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-wooden-armature-bible-pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install PDF dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install reportlab
+
+      - name: Build compiled Markdown Bible
+        run: |
+          python PROJECTS/bible/build_bible.py
+
+      - name: Build PDF
+        run: |
+          python PROJECTS/bible/build_pdf.py
+
+      - name: Commit compiled PDF artifact
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add PROJECTS/reports/WOODEN_ARMATURE_BIBLE.md PROJECTS/reports/WOODEN_ARMATURE_BIBLE.build_report.json PROJECTS/reports/WOODEN_ARMATURE_BIBLE.pdf PROJECTS/reports/WOODEN_ARMATURE_BIBLE.pdf_report.json
+          if git diff --cached --quiet; then
+            echo "No PDF changes to commit."
+          else
+            git commit -m "Build Wooden Armature Bible PDF artifact"
+            git push
+          fi

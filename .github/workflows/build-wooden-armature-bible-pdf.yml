@@ -22,18 +22,25 @@ jobs:
         run: |
           python PROJECTS/bible/build_bible.py
 
-      - name: Build PDF
+      - name: Build working PDF
         run: |
           python PROJECTS/bible/build_pdf.py
 
-      - name: Commit compiled PDF artifact
+      - name: Preserve rebuilt PDF as v002
+        run: |
+          python PROJECTS/bible/version_pdf.py \
+            --version v002_stateful_footer_svg \
+            --note "State-aware footer render with expanded Part II and SVG figure embedding attempt." \
+            --overwrite
+
+      - name: Commit compiled and versioned PDF artifacts
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add PROJECTS/reports/WOODEN_ARMATURE_BIBLE.md PROJECTS/reports/WOODEN_ARMATURE_BIBLE.build_report.json PROJECTS/reports/WOODEN_ARMATURE_BIBLE.pdf PROJECTS/reports/WOODEN_ARMATURE_BIBLE.pdf_report.json
+          git add PROJECTS/reports/WOODEN_ARMATURE_BIBLE.md PROJECTS/reports/WOODEN_ARMATURE_BIBLE.build_report.json PROJECTS/reports/WOODEN_ARMATURE_BIBLE.pdf PROJECTS/reports/WOODEN_ARMATURE_BIBLE.pdf_report.json PROJECTS/reports/pdf_versions
           if git diff --cached --quiet; then
             echo "No PDF changes to commit."
           else
-            git commit -m "Build Wooden Armature Bible PDF artifact"
+            git commit -m "Build and version Wooden Armature Bible PDF v002"
             git push
           fi

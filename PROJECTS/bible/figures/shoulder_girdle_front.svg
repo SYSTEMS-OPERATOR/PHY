@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="950" viewBox="0 0 900 950">
+  <defs><style>.bg{fill:#f4ead2}.ink{stroke:#241811;fill:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}.thin{stroke:#241811;fill:none;stroke-width:2}.wood{fill:#c9824a;stroke:#6e2f1a;stroke-width:4}.brass{fill:#b08a3c;stroke:#241811;stroke-width:3}.label{font-family:serif;font-size:28px;fill:#241811}.small{font-family:serif;font-size:21px;fill:#241811}.title{font-family:serif;font-size:40px;font-weight:bold;fill:#6e2f1a}.ghost{stroke:#b08a3c;fill:none;stroke-width:3;stroke-dasharray:10 8}</style></defs>
+  <rect class="bg" width="900" height="950"/>
+  <text class="title" x="70" y="75">Shoulder Girdle - Suspended Bridge</text>
+  <text class="small" x="70" y="110">clavicles, scapula plates, sternoclavicular interface, glenoid/shoulder sockets</text>
+  <rect class="wood" x="405" y="220" width="90" height="270" rx="25"/>
+  <path class="wood" d="M420 250 C330 210 210 220 145 300 C245 320 330 315 420 280Z"/>
+  <path class="wood" d="M480 250 C570 210 690 220 755 300 C655 320 570 315 480 280Z"/>
+  <path class="wood" d="M185 345 C250 310 340 355 365 460 C300 530 215 490 185 345Z"/>
+  <path class="wood" d="M715 345 C650 310 560 355 535 460 C600 530 685 490 715 345Z"/>
+  <circle class="brass" cx="180" cy="335" r="42"/>
+  <circle class="brass" cx="720" cy="335" r="42"/>
+  <circle class="bg" cx="180" cy="335" r="20" stroke="#241811" stroke-width="4"/>
+  <circle class="bg" cx="720" cy="335" r="20" stroke="#241811" stroke-width="4"/>
+  <line class="ghost" x1="450" y1="210" x2="450" y2="540"/>
+  <path class="ghost" d="M170 335 C240 410 310 455 385 500"/>
+  <path class="ghost" d="M730 335 C660 410 590 455 515 500"/>
+  <text class="label" x="80" y="210">clavicle rails</text><line class="thin" x1="250" y1="220" x2="350" y2="248"/>
+  <text class="label" x="605" y="210">sternum rail</text><line class="thin" x1="605" y1="220" x2="495" y2="250"/>
+  <text class="label" x="60" y="385">glenoid cup</text><line class="thin" x1="200" y1="375" x2="180" y2="335"/>
+  <text class="label" x="605" y="385">scapula plate</text><line class="thin" x1="605" y1="375" x2="620" y2="430"/>
+  <text class="small" x="90" y="770">Design pressure: suspend the arm without droop, preserve shoulder height symmetry, and route tension lines without splitting thin plates.</text>
+</svg>

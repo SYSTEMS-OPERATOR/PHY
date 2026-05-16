@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="950" viewBox="0 0 900 950">
+  <defs><style>.bg{fill:#f4ead2}.ink{stroke:#241811;fill:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}.thin{stroke:#241811;fill:none;stroke-width:2}.wood{fill:#c9824a;stroke:#6e2f1a;stroke-width:4}.brass{fill:#b08a3c;stroke:#241811;stroke-width:3}.label{font-family:serif;font-size:28px;fill:#241811}.small{font-family:serif;font-size:21px;fill:#241811}.title{font-family:serif;font-size:40px;font-weight:bold;fill:#6e2f1a}.ghost{stroke:#b08a3c;fill:none;stroke-width:3;stroke-dasharray:10 8}</style></defs>
+  <rect class="bg" width="900" height="950"/>
+  <text class="title" x="70" y="75">Pelvic Bowl - Load Basin</text>
+  <text class="small" x="70" y="110">left/right hip plates, sacral lock, front bridge, acetabular socket blocks</text>
+  <path class="wood" d="M255 210 C160 290 160 505 310 600 C380 650 520 650 590 600 C740 505 740 290 645 210 C585 275 520 315 450 315 C380 315 315 275 255 210Z"/>
+  <path class="bg" d="M330 330 C350 455 392 515 450 515 C508 515 550 455 570 330 C520 360 485 378 450 378 C415 378 380 360 330 330Z" stroke="#241811" stroke-width="4"/>
+  <path class="brass" d="M382 208 C410 180 490 180 518 208 L500 292 C470 315 430 315 400 292Z"/>
+  <rect class="brass" x="335" y="590" width="230" height="44" rx="16"/>
+  <circle class="brass" cx="295" cy="465" r="52"/>
+  <circle class="brass" cx="605" cy="465" r="52"/>
+  <circle class="bg" cx="295" cy="465" r="26" stroke="#241811" stroke-width="4"/>
+  <circle class="bg" cx="605" cy="465" r="26" stroke="#241811" stroke-width="4"/>
+  <line class="ghost" x1="295" y1="465" x2="605" y2="465"/>
+  <line class="ghost" x1="450" y1="190" x2="450" y2="650"/>
+  <text class="label" x="80" y="250">iliac plates</text><line class="thin" x1="220" y1="240" x2="282" y2="250"/>
+  <text class="label" x="625" y="295">sacral lock</text><line class="thin" x1="625" y1="285" x2="515" y2="220"/>
+  <text class="label" x="75" y="455">hip socket</text><line class="thin" x1="215" y1="445" x2="260" y2="455"/>
+  <text class="label" x="620" y="455">hip socket</text><line class="thin" x1="620" y1="445" x2="640" y2="455"/>
+  <text class="label" x="320" y="710">front bridge / seated load path</text><line class="thin" x1="450" y1="685" x2="450" y2="635"/>
+  <text class="small" x="95" y="820">Design pressure: hold bilateral hip centers, transfer torso load into femurs, resist seat compression, and preserve service access.</text>
+</svg>

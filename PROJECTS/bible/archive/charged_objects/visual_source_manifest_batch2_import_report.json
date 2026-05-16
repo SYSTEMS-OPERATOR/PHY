@@ -1,0 +1,59 @@
+{
+  "manifest": "PROJECTS/bible/archive/charged_objects/visual_source_manifest_batch2.json",
+  "allowed_statuses": [
+    "KEEP_READY_FOR_IMPORT"
+  ],
+  "count": 10,
+  "results": [
+    {
+      "plate_id": "CHARGED_BRITISH_MUSEUM_ST_EUSTACE_RELIQUARY_SOURCE",
+      "review_status": "KEEP_SOURCE_ONLY",
+      "status": "skipped_review_status"
+    },
+    {
+      "plate_id": "CHARGED_LIMOGES_CHASSE_WOODEN_CORE_REFERENCE",
+      "review_status": "KEEP_SOURCE_ONLY",
+      "status": "skipped_review_status"
+    },
+    {
+      "plate_id": "CHARGED_BECKET_CASKET_VA_SOURCE_TARGET",
+      "review_status": "KEEP_SOURCE_ONLY",
+      "status": "skipped_review_status"
+    },
+    {
+      "plate_id": "CHARGED_WITCH_BOTTLE_REFERENCE",
+      "review_status": "KEEP_SOURCE_ONLY",
+      "status": "skipped_review_status"
+    },
+    {
+      "plate_id": "CHARGED_WITCH_LADDER_PITT_RIVERS_TARGET",
+      "review_status": "KEEP_SOURCE_ONLY",
+      "status": "skipped_review_status"
+    },
+    {
+      "plate_id": "CHARGED_BOCIO_VODUN_SOURCE_FAMILY",
+      "review_status": "KEEP_SOURCE_ONLY",
+      "status": "skipped_review_status"
+    },
+    {
+      "plate_id": "CHARGED_VODUN_ART_BOCHIO_REFERENCE_TEXT",
+      "review_status": "KEEP_SOURCE_ONLY",
+      "status": "skipped_review_status"
+    },
+    {
+      "plate_id": "CHARGED_NINGYO_KUYO_SOURCE_TARGET",
+      "review_status": "SEEK_BETTER_SOURCE",
+      "status": "skipped_review_status"
+    },
+    {
+      "plate_id": "CHARGED_OKIKU_HAUNTED_DOLL_SOURCE_REJECT_UNTIL_HARDENED",
+      "review_status": "SEEK_BETTER_SOURCE",
+      "status": "skipped_review_status"
+    },
+    {
+      "plate_id": "CHARGED_KITCHEN_WITCH_POPPET_REFERENCE",
+      "review_status": "KEEP_SOURCE_ONLY",
+      "status": "skipped_review_status"
+    }
+  ]
+}

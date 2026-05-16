@@ -1,0 +1,11 @@
+{
+  "manifests": [
+    "PROJECTS/bible/archive/charged_objects/visual_source_manifest.json",
+    "PROJECTS/bible/archive/charged_objects/visual_source_manifest_batch2.json"
+  ],
+  "allowed_statuses": [
+    "KEEP_READY_FOR_IMPORT"
+  ],
+  "manifest_count": 2,
+  "error_count": 0
+}

@@ -1,0 +1,74 @@
+{
+  "manifest": "PROJECTS/bible/archive/charged_objects/visual_source_manifest.json",
+  "allowed_statuses": [
+    "KEEP_READY_FOR_IMPORT"
+  ],
+  "count": 9,
+  "results": [
+    {
+      "status": "downloaded",
+      "path": "PROJECTS/bible/archive/charged_objects/nkisi/brooklyn_56_6_98_nkisi_nkondi_front.jpg",
+      "sha256": "86d793eddda365a0ddf4f1f362d9b6815a2602c2d476a18963534fe69e1f197d",
+      "bytes": 138711,
+      "content_type": "image/jpeg",
+      "plate_id": "CHARGED_BROOKLYN_NKISI_NKONDI_56_6_98_FRONT",
+      "review_status": "KEEP_READY_FOR_IMPORT",
+      "image_url": "https://imgsrv.brooklynmuseum.org/collections/objects/56.6.98_front_PS6.jpg?quality=75&width=3840"
+    },
+    {
+      "plate_id": "CHARGED_MET_NKISI_NKONDI_1979_206_50",
+      "review_status": "KEEP_SOURCE_ONLY",
+      "status": "skipped_review_status"
+    },
+    {
+      "plate_id": "CHARGED_BRITISH_MUSEUM_AA_RURUTU",
+      "review_status": "KEEP_SOURCE_ONLY",
+      "status": "skipped_review_status"
+    },
+    {
+      "status": "downloaded",
+      "path": "PROJECTS/bible/archive/charged_objects/thought_forms/thought_forms_color_key.jpg",
+      "sha256": "b49eca87569746cbcb9698837c6fd030d7c0e45d0004addf926cf84057db1867",
+      "bytes": 767957,
+      "content_type": "image/jpeg",
+      "plate_id": "CHARGED_THOUGHT_FORMS_COLOR_KEY",
+      "review_status": "KEEP_READY_FOR_IMPORT",
+      "image_url": "https://www.gutenberg.org/files/16269/16269-h/images/colorchart.jpg"
+    },
+    {
+      "status": "downloaded",
+      "path": "PROJECTS/bible/archive/charged_objects/thought_forms/thought_forms_fig16_self_renunciation.jpg",
+      "sha256": "b0684a045fcda390cc467879690869b8990beeeced7c89490141af7830c79e06",
+      "bytes": 38004,
+      "content_type": "image/jpeg",
+      "plate_id": "CHARGED_THOUGHT_FORMS_SELF_RENUNCIATION_FIG16",
+      "review_status": "KEEP_READY_FOR_IMPORT",
+      "image_url": "https://www.gutenberg.org/files/16269/16269-h/images/fig16.jpg"
+    },
+    {
+      "status": "downloaded",
+      "path": "PROJECTS/bible/archive/charged_objects/thought_forms/thought_forms_plate_g_music_gounod.jpg",
+      "sha256": "388a078ec88e92c282c9ef3deb9dc1b66798ddb96221c0d892e8e8321e91cf81",
+      "bytes": 79365,
+      "content_type": "image/jpeg",
+      "plate_id": "CHARGED_THOUGHT_FORMS_MUSIC_GOUNOD_PLATE_G",
+      "review_status": "KEEP_READY_FOR_IMPORT",
+      "image_url": "https://www.gutenberg.org/files/16269/16269-h/images/figg.jpg"
+    },
+    {
+      "plate_id": "CHARGED_MET_IYOBA_PROTECTIVE_AMULET_COMPARATIVE",
+      "review_status": "KEEP_COMPARATIVE",
+      "status": "skipped_review_status"
+    },
+    {
+      "plate_id": "CHARGED_POPPET_EFFIGY_SOURCE_PENDING",
+      "review_status": "SEEK_BETTER_SOURCE",
+      "status": "skipped_review_status"
+    },
+    {
+      "plate_id": "CHARGED_JAPANESE_NINGYO_MEMORIAL_SOURCE_PENDING",
+      "review_status": "SEEK_BETTER_SOURCE",
+      "status": "skipped_review_status"
+    }
+  ]
+}

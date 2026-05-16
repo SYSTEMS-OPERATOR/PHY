@@ -1,0 +1,21 @@
+{
+  "version": "v002_stateful_footer_svg",
+  "note": "State-aware footer render with expanded Part II. SVG embedding is optional and can be restored in a later renderer pass.",
+  "source_pdf": "PROJECTS/reports/WOODEN_ARMATURE_BIBLE.pdf",
+  "version_pdf": "PROJECTS/reports/pdf_versions/WOODEN_ARMATURE_BIBLE_v002_stateful_footer_svg.pdf",
+  "source_report": "PROJECTS/reports/WOODEN_ARMATURE_BIBLE.pdf_report.json",
+  "version_report": "PROJECTS/reports/pdf_versions/WOODEN_ARMATURE_BIBLE_v002_stateful_footer_svg.pdf_report.json",
+  "sha256": "80b1c99acb142d9a29407b096c2287383dae3bd8a69cd4fc084e3b60a497c4ce",
+  "bytes": 402800,
+  "created_utc": "2026-05-16T21:27:53.404343+00:00",
+  "source_pdf_report": {
+    "input": "PROJECTS/reports/WOODEN_ARMATURE_BIBLE.md",
+    "output": "PROJECTS/reports/WOODEN_ARMATURE_BIBLE.pdf",
+    "pages": 190,
+    "top_level_sections_seen": 26,
+    "figures_embedded": 0,
+    "svg_embedding_available": false,
+    "style": "redwood_pdf_v2_stateful_footer_svg",
+    "generated_utc": "2026-05-16T21:27:53.344585+00:00"
+  }
+}

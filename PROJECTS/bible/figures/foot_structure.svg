@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="800" viewBox="0 0 1000 800">
+  <defs><style>.bg{fill:#f4ead2}.ink{stroke:#241811;fill:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}.thin{stroke:#241811;fill:none;stroke-width:2}.wood{fill:#c9824a;stroke:#6e2f1a;stroke-width:4}.brass{fill:#b08a3c;stroke:#241811;stroke-width:3}.label{font-family:serif;font-size:28px;fill:#241811}.small{font-family:serif;font-size:21px;fill:#241811}.title{font-family:serif;font-size:40px;font-weight:bold;fill:#6e2f1a}.ghost{stroke:#b08a3c;fill:none;stroke-width:3;stroke-dasharray:10 8}</style></defs>
+  <rect class="bg" width="1000" height="800"/>
+  <text class="title" x="70" y="75">Foot Structure - Ground Oath</text>
+  <text class="small" x="70" y="110">talus interface, calcaneus heel block, tarsal bridge, metatarsals, toe phalanges, sole pad</text>
+  <path class="wood" d="M205 360 C275 280 430 270 590 310 C750 350 855 430 880 535 C730 580 495 590 260 555 C170 540 145 430 205 360Z"/>
+  <ellipse class="brass" cx="300" cy="375" rx="62" ry="45"/>
+  <ellipse class="wood" cx="235" cy="485" rx="88" ry="58"/>
+  <path class="brass" d="M350 395 C420 365 520 370 600 420 C520 455 420 455 350 425Z"/>
+  <g>
+    <rect class="wood" x="600" y="385" width="130" height="42" rx="18" transform="rotate(8 600 385)"/>
+    <rect class="wood" x="610" y="438" width="125" height="38" rx="16" transform="rotate(5 610 438)"/>
+    <rect class="wood" x="610" y="490" width="118" height="35" rx="15" transform="rotate(2 610 490)"/>
+    <rect class="wood" x="595" y="540" width="105" height="32" rx="14" transform="rotate(-2 595 540)"/>
+    <rect class="wood" x="575" y="585" width="88" height="30" rx="13" transform="rotate(-6 575 585)"/>
+  </g>
+  <g>
+    <circle class="brass" cx="745" cy="410" r="18"/><circle class="brass" cx="752" cy="462" r="16"/><circle class="brass" cx="738" cy="512" r="15"/><circle class="brass" cx="705" cy="558" r="14"/><circle class="brass" cx="665" cy="600" r="13"/>
+  </g>
+  <path class="ghost" d="M210 565 C390 620 680 620 880 550"/>
+  <path class="ghost" d="M310 350 C430 300 660 335 845 510"/>
+  <text class="label" x="80" y="310">ankle / talus</text><line class="thin" x1="250" y1="305" x2="300" y2="360"/>
+  <text class="label" x="80" y="505">calcaneus</text><line class="thin" x1="220" y1="495" x2="235" y2="485"/>
+  <text class="label" x="405" y="340">tarsal bridge</text><line class="thin" x1="550" y1="335" x2="475" y2="405"/>
+  <text class="label" x="620" y="345">metatarsals</text><line class="thin" x1="745" y1="340" x2="672" y2="400"/>
+  <text class="label" x="730" y="635">toe hinges</text><line class="thin" x1="730" y1="625" x2="665" y2="600"/>
+  <text class="small" x="82" y="720">Design pressure: enough footprint to stand, enough toe logic to read human, replaceable sole surfaces, and moisture isolation from ground contact.</text>
+</svg>

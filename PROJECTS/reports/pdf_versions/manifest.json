@@ -1,0 +1,23 @@
+{
+  "versions": [
+    {
+      "version": "v001_original_relic_draft",
+      "note": "Original redwood parchment relic draft render before stateful footer and SVG figure pass.",
+      "source_pdf": "PROJECTS/reports/WOODEN_ARMATURE_BIBLE.pdf",
+      "version_pdf": "PROJECTS/reports/pdf_versions/WOODEN_ARMATURE_BIBLE_v001_original_relic_draft.pdf",
+      "source_report": "PROJECTS/reports/WOODEN_ARMATURE_BIBLE.pdf_report.json",
+      "version_report": "PROJECTS/reports/pdf_versions/WOODEN_ARMATURE_BIBLE_v001_original_relic_draft.pdf_report.json",
+      "sha256": "12e1ae2e88284ae33354c9058b9e3c901c664ecb2ab76a617238c122c44191e3",
+      "bytes": 349249,
+      "created_utc": "2026-05-16T18:35:39.834261+00:00",
+      "source_pdf_report": {
+        "input": "PROJECTS/reports/WOODEN_ARMATURE_BIBLE.md",
+        "output": "PROJECTS/reports/WOODEN_ARMATURE_BIBLE.pdf",
+        "pages": 160,
+        "top_level_sections_seen": 22,
+        "style": "redwood_pdf_v1",
+        "generated_utc": "2026-05-16T16:13:04.767228+00:00"
+      }
+    }
+  ]
+}

@@ -3,65 +3,58 @@
   "count": 7,
   "results": [
     {
-      "status": "downloaded",
+      "status": "skipped_exists",
       "path": "PROJECTS/bible/archive/anatomical_plates/eustachi/eustachi_t18_brain_spinal_cord_nerves.jpg",
       "sha256": "ed23903c736a57f021a806907a66759b1371953f7a4b1b1b3de8177a51ed6384",
       "bytes": 817112,
-      "content_type": "image/jpeg",
       "plate_id": "EUSTACHI_T18_BRAIN_SPINAL_CORD_NERVES",
       "image_url": "https://www.nlm.nih.gov/exhibition/historicalanatomies/Images/1200_pixels/Eustachi_t18.jpg"
     },
     {
-      "status": "downloaded",
+      "status": "skipped_exists",
       "path": "PROJECTS/bible/archive/anatomical_plates/eustachi/eustachi_t19_full_body_nerve_paths.jpg",
       "sha256": "dcc1d0ffbd8cb2d5790dcab1c9d50dfbdc92b72b3ef88615771ff8a63f8b6bc6",
       "bytes": 785063,
-      "content_type": "image/jpeg",
       "plate_id": "EUSTACHI_T19_FULL_BODY_NERVE_PATHS",
       "image_url": "https://www.nlm.nih.gov/exhibition/historicalanatomies/Images/1200_pixels/Eustachi_t19.jpg"
     },
     {
-      "status": "downloaded",
+      "status": "skipped_exists",
       "path": "PROJECTS/bible/archive/anatomical_plates/eustachi/eustachi_t22_posterior_artery_paths.jpg",
       "sha256": "9465c91aa77f899a9e858d161971e12691fe1700ef662fd67567984b6f568dd0",
       "bytes": 980236,
-      "content_type": "image/jpeg",
       "plate_id": "EUSTACHI_T22_POSTERIOR_ARTERY_PATHS",
       "image_url": "https://www.nlm.nih.gov/exhibition/historicalanatomies/Images/1200_pixels/Eustachi_t22.jpg"
     },
     {
-      "status": "downloaded",
+      "status": "skipped_exists",
       "path": "PROJECTS/bible/archive/anatomical_plates/eustachi/eustachi_t23_posterior_nerve_paths.jpg",
       "sha256": "72f4d01444ce4aab0d6ca4ad60e36f4f8f8425f880f57e1a3a9bdc16bcbce8c0",
       "bytes": 796175,
-      "content_type": "image/jpeg",
       "plate_id": "EUSTACHI_T23_POSTERIOR_NERVE_PATHS",
       "image_url": "https://www.nlm.nih.gov/exhibition/historicalanatomies/Images/1200_pixels/Eustachi_t23.jpg"
     },
     {
-      "status": "downloaded",
+      "status": "skipped_exists",
       "path": "PROJECTS/bible/archive/anatomical_plates/eustachi/eustachi_t43_skeleton_mastoid_cavities.jpg",
       "sha256": "eede185be366e481446fd07f82d25ebad8921102addf139ea79e33d53733383d",
       "bytes": 691516,
-      "content_type": "image/jpeg",
       "plate_id": "EUSTACHI_T43_SKELETON_MASTOID_CAVITIES",
       "image_url": "https://www.nlm.nih.gov/exhibition/historicalanatomies/Images/1200_pixels/Eustachi_t43.jpg"
     },
     {
-      "status": "downloaded",
+      "status": "skipped_exists",
       "path": "PROJECTS/bible/archive/anatomical_plates/bourdon/bourdon_full_table_5_skeleton_bones.jpg",
       "sha256": "610375eb2d2e270412c1268293b68d2c277b812864913cb9ecc4a716a9b78829",
       "bytes": 333059,
-      "content_type": "image/jpeg",
       "plate_id": "BOURDON_FULL_TABLE_5_SKELETON_BONES",
       "image_url": "https://www.nlm.nih.gov/exhibition/historicalanatomies/Images/1200_pixels/Bourdon-t05t05a.jpg"
     },
     {
-      "status": "downloaded",
+      "status": "skipped_exists",
       "path": "PROJECTS/bible/archive/anatomical_plates/bourdon/bourdon_full_table_8_nervous_female_system.jpg",
       "sha256": "a848fb3a4159bde6e47f339d9906622fbb9154e3f47b6d326d78c8f845b27371",
       "bytes": 287909,
-      "content_type": "image/jpeg",
       "plate_id": "BOURDON_FULL_TABLE_8_NERVOUS_FEMALE_SYSTEM",
       "image_url": "https://www.nlm.nih.gov/exhibition/historicalanatomies/Images/1200_pixels/Bourdon-t08t08a.jpg"
     }

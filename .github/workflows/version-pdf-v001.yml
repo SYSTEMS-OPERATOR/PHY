@@ -1,0 +1,29 @@
+name: Version PDF v001
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  version-pdf-v001:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Preserve current PDF as v001
+        run: python PROJECTS/bible/version_pdf.py --version v001_original_relic_draft --note "Original redwood parchment relic draft render before stateful footer and SVG figure pass."
+
+      - name: Commit versioned PDF
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add PROJECTS/reports/pdf_versions
+          if git diff --cached --quiet; then
+            echo "No PDF version changes to commit."
+          else
+            git commit -m "Version Wooden Armature Bible PDF v001"
+            git push
+          fi

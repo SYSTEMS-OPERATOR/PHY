@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1000" viewBox="0 0 900 1000">
+  <defs><style>.bg{fill:#f4ead2}.ink{stroke:#241811;fill:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}.thin{stroke:#241811;fill:none;stroke-width:2}.wood{fill:#c9824a;stroke:#6e2f1a;stroke-width:4}.brass{fill:#b08a3c;stroke:#241811;stroke-width:3}.label{font-family:serif;font-size:28px;fill:#241811}.small{font-family:serif;font-size:21px;fill:#241811}.title{font-family:serif;font-size:40px;font-weight:bold;fill:#6e2f1a}.ghost{stroke:#b08a3c;fill:none;stroke-width:3;stroke-dasharray:10 8}</style></defs>
+  <rect class="bg" width="900" height="1000"/>
+  <text class="title" x="70" y="75">Upper Limb Chain</text>
+  <text class="small" x="70" y="110">shoulder ball, humerus, elbow hinge, radius/ulna pair, wrist block</text>
+  <circle class="brass" cx="450" cy="185" r="55"/>
+  <path class="wood" d="M425 245 C405 350 405 455 435 555 C448 575 472 575 485 555 C515 455 515 350 475 245Z"/>
+  <circle class="brass" cx="455" cy="590" r="42"/>
+  <path class="wood" d="M400 635 C365 745 360 835 390 890 C410 905 430 900 442 880 C430 780 435 710 450 635Z"/>
+  <path class="wood" d="M500 635 C535 745 540 835 510 890 C490 905 470 900 458 880 C470 780 465 710 450 635Z"/>
+  <rect class="brass" x="395" y="890" width="115" height="42" rx="14"/>
+  <path class="ghost" d="M510 185 A85 85 0 0 1 390 185"/>
+  <path class="ghost" d="M410 590 A70 70 0 0 0 505 640"/>
+  <text class="label" x="80" y="190">shoulder ball</text><line class="thin" x1="270" y1="180" x2="395" y2="185"/>
+  <text class="label" x="610" y="360">humerus</text><line class="thin" x1="610" y1="350" x2="485" y2="360"/>
+  <text class="label" x="80" y="610">elbow hinge</text><line class="thin" x1="250" y1="600" x2="415" y2="590"/>
+  <text class="label" x="585" y="750">radius / ulna pair</text><line class="thin" x1="585" y1="740" x2="500" y2="735"/>
+  <text class="label" x="80" y="910">wrist block</text><line class="thin" x1="230" y1="900" x2="395" y2="910"/>
+  <text class="small" x="75" y="970">Design pressure: expressive reach with serviceable axes; preserve long grain through humerus and paired forearm members.</text>
+</svg>

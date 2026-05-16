@@ -12,6 +12,13 @@ from reportlab.lib.pagesizes import letter
 from reportlab.lib.units import inch
 from reportlab.pdfgen import canvas
 
+try:
+    from svglib.svglib import svg2rlg
+    from reportlab.graphics import renderPDF
+except Exception:  # SVG embedding is optional; text PDF still builds.
+    svg2rlg = None
+    renderPDF = None
+
 SRC = Path("PROJECTS/reports/WOODEN_ARMATURE_BIBLE.md")
 OUT = Path("PROJECTS/reports/WOODEN_ARMATURE_BIBLE.pdf")
 REPORT = Path("PROJECTS/reports/WOODEN_ARMATURE_BIBLE.pdf_report.json")
@@ -37,6 +44,19 @@ def plain(s: str) -> str:
     return s.encode("latin-1", "ignore").decode("latin-1")
 
 
+def state_for_heading(title: str) -> str:
+    t = title.lower()
+    if "mind / body / soul" in t or "shape review" in t:
+        return "MIND | BODY | SOUL"
+    if any(k in t for k in ["companion", "tulpa", "charged object", "soul"]):
+        return "SOUL"
+    if any(k in t for k in ["archive", "plate review", "figure index", "source notes", "research", "mind", "build report"]):
+        return "MIND"
+    if any(k in t for k in ["component", "joint", "material", "build workflow", "diagrams", "anatomical", "carpentry", "skeleton", "body"]):
+        return "BODY"
+    return "BODY"
+
+
 class Pdf:
     def __init__(self):
         OUT.parent.mkdir(parents=True, exist_ok=True)
@@ -44,6 +64,9 @@ class Pdf:
         self.page = 0
         self.y = H - MT
         self.h1 = 0
+        self.state = "BODY"
+        self.figures = 0
+        self.svg_available = svg2rlg is not None and renderPDF is not None
 
     def bg(self):
         c = self.c
@@ -69,7 +92,8 @@ class Pdf:
             self.c.drawRightString(W - MR, H - 0.55 * inch, "PHY / REDWOOD / ARCHIVE")
             self.c.setStrokeColor(BRASS)
             self.c.line(ML, H - 0.62 * inch, W - MR, H - 0.62 * inch)
-            self.c.drawString(ML, 0.43 * inch, "MIND | BODY | SOUL")
+            self.c.setFillColor(BARK)
+            self.c.drawString(ML, 0.43 * inch, self.state)
             self.c.drawRightString(W - MR, 0.43 * inch, str(self.page))
             self.y = H - 0.9 * inch
 
@@ -78,6 +102,7 @@ class Pdf:
             self.new_page()
 
     def title(self):
+        self.state = "MIND | BODY | SOUL"
         self.new_page()
         c = self.c
         c.setFillColor(REDWOOD)
@@ -102,6 +127,7 @@ class Pdf:
         c.drawCentredString(W / 2, H - 5.5 * inch, "RECORDS FIRST")
         c.setFont("Times-Italic", 10)
         c.drawCentredString(W / 2, 1.15 * inch, datetime.now(timezone.utc).strftime("Generated UTC %Y-%m-%d %H:%M:%S"))
+        self.state = "BODY"
         self.new_page()
 
     def para(self, s, font="Times-Roman", size=10.2, lead=13.4, indent=0):
@@ -125,6 +151,7 @@ class Pdf:
     def heading(self, s, level):
         s = plain(s)
         if level == 1:
+            self.state = state_for_heading(s)
             self.h1 += 1
             if self.page > 2:
                 self.new_page()
@@ -155,6 +182,10 @@ class Pdf:
     def code(self, lines):
         if not lines:
             return
+        stripped = [x.strip() for x in lines if x.strip()]
+        if len(stripped) == 1 and stripped[0].endswith(".svg") and Path(stripped[0]).exists():
+            self.figure(Path(stripped[0]))
+            return
         for i in range(0, len(lines), 24):
             chunk = lines[i:i+24]
             h = len(chunk) * 10 + 12
@@ -169,6 +200,34 @@ class Pdf:
                 self.c.drawString(ML + 4, y, plain(raw)[:100])
                 y -= 10
             self.y = y - 8
+
+    def figure(self, path: Path):
+        self.ensure(5.4 * inch)
+        if not self.svg_available:
+            self.para(f"[Figure not embedded: {path}]", font="Times-Italic", size=9.5)
+            return
+        drawing = svg2rlg(str(path))
+        if drawing is None:
+            self.para(f"[Figure could not be loaded: {path}]", font="Times-Italic", size=9.5)
+            return
+        max_w = CW
+        max_h = 5.0 * inch
+        scale = min(max_w / drawing.width, max_h / drawing.height)
+        fig_w = drawing.width * scale
+        fig_h = drawing.height * scale
+        if self.y - fig_h < MB:
+            self.new_page()
+        self.c.saveState()
+        self.c.translate(ML + (CW - fig_w) / 2, self.y - fig_h)
+        self.c.scale(scale, scale)
+        renderPDF.draw(drawing, self.c, 0, 0)
+        self.c.restoreState()
+        self.y -= fig_h + 8
+        self.c.setFillColor(BARK)
+        self.c.setFont("Times-Italic", 8.5)
+        self.c.drawCentredString(W / 2, self.y, str(path))
+        self.y -= 16
+        self.figures += 1
 
     def save(self):
         self.c.save()
@@ -205,7 +264,7 @@ def main():
     if in_code:
         pdf.code(code)
     pdf.save()
-    report = {"input": str(SRC), "output": str(OUT), "pages": pdf.page, "top_level_sections_seen": pdf.h1, "style": "redwood_pdf_v1", "generated_utc": datetime.now(timezone.utc).isoformat()}
+    report = {"input": str(SRC), "output": str(OUT), "pages": pdf.page, "top_level_sections_seen": pdf.h1, "figures_embedded": pdf.figures, "svg_embedding_available": pdf.svg_available, "style": "redwood_pdf_v2_stateful_footer_svg", "generated_utc": datetime.now(timezone.utc).isoformat()}
     REPORT.write_text(json.dumps(report, indent=2), encoding="utf-8")
     print(json.dumps(report, indent=2))
 

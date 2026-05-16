@@ -1,0 +1,97 @@
+{
+  "artifact_name": "WOODEN_ARMATURE_BIBLE",
+  "output_path": "PROJECTS/reports/WOODEN_ARMATURE_BIBLE.md",
+  "source_root": "PROJECTS/bible",
+  "status": "first compile order",
+  "notes": [
+    "This build order favors narrative and technical readability over strict file creation chronology.",
+    "Plate review files are included as reviewed archive appendices, but raw JSON manifests are not included in the first compiled artifact.",
+    "Future PDF generation should use this Markdown output as the canonical source."
+  ],
+  "sections": [
+    {
+      "title": "Front Matter",
+      "path": "00_front_matter.md"
+    },
+    {
+      "title": "System Overview",
+      "path": "01_system_overview.md"
+    },
+    {
+      "title": "Primary Component Assemblies",
+      "path": "02_primary_components.md"
+    },
+    {
+      "title": "Joint Geometry and Degrees of Freedom",
+      "path": "03_joint_geometry.md"
+    },
+    {
+      "title": "Materials and Aging",
+      "path": "04_materials_and_aging.md"
+    },
+    {
+      "title": "Build Workflow",
+      "path": "05_build_workflow.md"
+    },
+    {
+      "title": "Material Specifications Appendix",
+      "path": "appendix_material_specs.md"
+    },
+    {
+      "title": "Ancient Wood Carpentry Appendix",
+      "path": "appendix_ancient_wood_carpentry.md"
+    },
+    {
+      "title": "Wooden Skeleton Precedents",
+      "path": "appendix_wooden_skeleton_precedents.md"
+    },
+    {
+      "title": "Wooden Companion Precedents",
+      "path": "appendix_wooden_companion_precedents.md"
+    },
+    {
+      "title": "Wooden Companion Chronological Deep Dive",
+      "path": "appendix_wooden_companion_chronological_deep_dive.md"
+    },
+    {
+      "title": "Wooden Tulpa / Charged Object Precedents",
+      "path": "appendix_wooden_tulpa_precedents.md"
+    },
+    {
+      "title": "Anatomical Reference Plate Index",
+      "path": "appendix_anatomical_reference_plates.md"
+    },
+    {
+      "title": "Anatomical Plate Review",
+      "path": "archive/anatomical_plates/PLATE_REVIEW.md"
+    },
+    {
+      "title": "Companion Visual Reference Index",
+      "path": "appendix_companion_visual_reference_index.md"
+    },
+    {
+      "title": "Wooden Tulpa / Charged Object Visual Reference Index",
+      "path": "appendix_wooden_tulpa_visual_reference_index.md"
+    },
+    {
+      "title": "Charged Object Visual Review",
+      "path": "archive/charged_objects/CHARGED_OBJECT_VISUAL_REVIEW.md"
+    },
+    {
+      "title": "Diagrams Appendix",
+      "path": "appendix_diagrams.md"
+    },
+    {
+      "title": "Research Backlog",
+      "path": "appendix_research_backlog.md"
+    },
+    {
+      "title": "Shape Review",
+      "path": "BIBLE_SHAPE_REVIEW.md"
+    },
+    {
+      "title": "Appendix X — MIND / BODY / SOUL Decoder Ring",
+      "path": "appendix_x_mind_body_soul_decoder.md"
+    }
+  ]
+}

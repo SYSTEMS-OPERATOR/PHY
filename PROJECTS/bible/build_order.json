@@ -2,11 +2,12 @@
   "artifact_name": "WOODEN_ARMATURE_BIBLE",
   "output_path": "PROJECTS/reports/WOODEN_ARMATURE_BIBLE.md",
   "source_root": "PROJECTS/bible",
-  "status": "first compile order",
+  "status": "review-rake compile order",
   "notes": [
     "This build order favors narrative and technical readability over strict file creation chronology.",
-    "Plate review files are included as reviewed archive appendices, but raw JSON manifests are not included in the first compiled artifact.",
-    "Future PDF generation should use this Markdown output as the canonical source."
+    "Plate review files and archive status are included as reviewed archive appendices, but raw JSON manifests are not included in the compiled artifact.",
+    "Future PDF generation should use this Markdown output as the canonical source.",
+    "Image embedding remains deferred until rights and layout review are complete."
   ],
   "sections": [
     {
@@ -76,6 +77,10 @@
     {
       "title": "Charged Object Visual Review",
       "path": "archive/charged_objects/CHARGED_OBJECT_VISUAL_REVIEW.md"
+    },
+    {
+      "title": "Archive Import Status",
+      "path": "archive/ARCHIVE_IMPORT_STATUS.md"
     },
     {
       "title": "Diagrams Appendix",

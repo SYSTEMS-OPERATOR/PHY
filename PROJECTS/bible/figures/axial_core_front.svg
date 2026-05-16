@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1200" viewBox="0 0 900 1200">
+  <defs><style>.bg{fill:#f4ead2}.ink{stroke:#241811;fill:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}.thin{stroke:#241811;fill:none;stroke-width:2}.wood{fill:#c9824a;stroke:#6e2f1a;stroke-width:4}.brass{fill:#b08a3c;stroke:#241811;stroke-width:3}.label{font-family:serif;font-size:28px;fill:#241811}.small{font-family:serif;font-size:21px;fill:#241811}.title{font-family:serif;font-size:40px;font-weight:bold;fill:#6e2f1a}.ghost{stroke:#b08a3c;fill:none;stroke-width:3;stroke-dasharray:10 8}</style></defs>
+  <rect class="bg" width="900" height="1200"/>
+  <text class="title" x="70" y="75">Axial Core - Front Reference</text>
+  <text class="small" x="70" y="110">stacked head mount, cervical/thoracic/lumbar spacers, sternum, ribs, sacral interface</text>
+  <circle class="wood" cx="450" cy="190" r="70"/>
+  <rect class="brass" x="405" y="270" width="90" height="28" rx="10"/>
+  <g>
+    <rect class="wood" x="390" y="315" width="120" height="44" rx="15"/>
+    <rect class="wood" x="384" y="370" width="132" height="48" rx="15"/>
+    <rect class="wood" x="378" y="430" width="144" height="52" rx="15"/>
+    <rect class="wood" x="370" y="495" width="160" height="56" rx="16"/>
+    <rect class="wood" x="365" y="565" width="170" height="60" rx="16"/>
+    <rect class="wood" x="372" y="640" width="156" height="58" rx="16"/>
+    <rect class="wood" x="388" y="715" width="124" height="56" rx="16"/>
+  </g>
+  <line class="ink" x1="450" y1="298" x2="450" y2="810"/>
+  <path class="wood" d="M270 360 C160 460 150 650 275 745"/>
+  <path class="wood" d="M630 360 C740 460 750 650 625 745"/>
+  <path class="thin" d="M312 410 C250 480 245 600 315 675"/>
+  <path class="thin" d="M588 410 C650 480 655 600 585 675"/>
+  <rect class="brass" x="408" y="395" width="84" height="310" rx="22" opacity="0.85"/>
+  <path class="wood" d="M345 815 C380 865 520 865 555 815 L520 905 C488 930 412 930 380 905Z"/>
+  <circle class="brass" cx="345" cy="830" r="25"/><circle class="brass" cx="555" cy="830" r="25"/>
+  <path class="ghost" d="M285 325 C225 465 225 650 290 790"/>
+  <path class="ghost" d="M615 325 C675 465 675 650 610 790"/>
+  <text class="label" x="80" y="250">head mount</text><line class="thin" x1="245" y1="240" x2="392" y2="190"/>
+  <text class="label" x="80" y="355">cervical stack</text><line class="thin" x1="260" y1="345" x2="390" y2="340"/>
+  <text class="label" x="80" y="540">rib cage frame</text><line class="thin" x1="255" y1="530" x2="315" y2="520"/>
+  <text class="label" x="590" y="470">sternum rail</text><line class="thin" x1="590" y1="460" x2="492" y2="455"/>
+  <text class="label" x="590" y="735">lumbar stack</text><line class="thin" x1="590" y1="725" x2="512" y2="740"/>
+  <text class="label" x="575" y="885">sacral lock</text><line class="thin" x1="575" y1="875" x2="525" y2="850"/>
+  <text class="small" x="95" y="1040">Design pressure: carry posture, preserve centerline, leave channels for signal routing, and resist cumulative stack drift.</text>
+</svg>

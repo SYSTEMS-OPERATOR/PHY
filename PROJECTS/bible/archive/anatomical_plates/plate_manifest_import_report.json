@@ -1,0 +1,114 @@
+{
+  "manifest": "PROJECTS/bible/archive/anatomical_plates/plate_manifest.json",
+  "count": 12,
+  "results": [
+    {
+      "status": "downloaded",
+      "path": "PROJECTS/bible/archive/anatomical_plates/vesalius/vesalius_pg_163_frontal_skeleton.jpg",
+      "sha256": "5f7043d07f87ef78856db4db11f683f5a6aa66a55decd9b728f0ee2739e48c88",
+      "bytes": 248589,
+      "content_type": "image/jpeg",
+      "plate_id": "VESALIUS_163_FRONTAL_SKELETON",
+      "image_url": "https://www.nlm.nih.gov/exhibition/historicalanatomies/Images/1200_pixels/Vesalius_Pg_163.jpg"
+    },
+    {
+      "status": "downloaded",
+      "path": "PROJECTS/bible/archive/anatomical_plates/vesalius/vesalius_pg_164_side_skeleton.jpg",
+      "sha256": "93bfe2134b33a4fd1d4d075d33052b128242dfceaa4fb4c1a368562f47d8f44c",
+      "bytes": 161518,
+      "content_type": "image/jpeg",
+      "plate_id": "VESALIUS_164_SIDE_SKELETON",
+      "image_url": "https://www.nlm.nih.gov/exhibition/historicalanatomies/Images/1200_pixels/Vesalius_Pg_164.jpg"
+    },
+    {
+      "status": "downloaded",
+      "path": "PROJECTS/bible/archive/anatomical_plates/vesalius/vesalius_pg_165_posterior_skeleton.jpg",
+      "sha256": "aedd1eae99cc9ba161dd6f75fb43775bb8834c9132786668369ba7c45672f49a",
+      "bytes": 234452,
+      "content_type": "image/jpeg",
+      "plate_id": "VESALIUS_165_POSTERIOR_SKELETON",
+      "image_url": "https://www.nlm.nih.gov/exhibition/historicalanatomies/Images/1200_pixels/Vesalius_Pg_165.jpg"
+    },
+    {
+      "status": "downloaded",
+      "path": "PROJECTS/bible/archive/anatomical_plates/albinus/albinus_t01_frontal_skeleton.jpg",
+      "sha256": "a252bf560d20228b1398012f9316165e76675b0b486896e0b5557ac89c9a5db3",
+      "bytes": 977740,
+      "content_type": "image/jpeg",
+      "plate_id": "ALBINUS_T01_FRONTAL_SKELETON",
+      "image_url": "https://www.nlm.nih.gov/exhibition/historicalanatomies/Images/1200_pixels/Albinus_t01.jpg"
+    },
+    {
+      "status": "downloaded",
+      "path": "PROJECTS/bible/archive/anatomical_plates/albinus/albinus_t02_posterior_skeleton.jpg",
+      "sha256": "215852524dd2e209b6c58dac43371185ebcf44f1fded9f385ec69b8bec055e4c",
+      "bytes": 902495,
+      "content_type": "image/jpeg",
+      "plate_id": "ALBINUS_T02_POSTERIOR_SKELETON",
+      "image_url": "https://www.nlm.nih.gov/exhibition/historicalanatomies/Images/1200_pixels/Albinus_t02.jpg"
+    },
+    {
+      "status": "downloaded",
+      "path": "PROJECTS/bible/archive/anatomical_plates/albinus/albinus_t03_side_skeleton.jpg",
+      "sha256": "6b7ca06256400eba6a0e96f9abd001b30f3507021ab4b668e10b387ed685dce9",
+      "bytes": 953976,
+      "content_type": "image/jpeg",
+      "plate_id": "ALBINUS_T03_SIDE_SKELETON",
+      "image_url": "https://www.nlm.nih.gov/exhibition/historicalanatomies/Images/1200_pixels/Albinus_t03.jpg"
+    },
+    {
+      "status": "downloaded",
+      "path": "PROJECTS/bible/archive/anatomical_plates/cheselden/cheselden_t19_anterior_trunk.jpg",
+      "sha256": "eb7aedec97184a1afcc169e3e3eda9bb09d6dc703001ca9743b863ffaa6d27b5",
+      "bytes": 192833,
+      "content_type": "image/jpeg",
+      "plate_id": "CHESELDEN_T19_ANTERIOR_TRUNK",
+      "image_url": "https://www.nlm.nih.gov/exhibition/historicalanatomies/Images/1200_pixels/cheselden_t19.jpg"
+    },
+    {
+      "status": "downloaded",
+      "path": "PROJECTS/bible/archive/anatomical_plates/cheselden/cheselden_t20_posterior_trunk.jpg",
+      "sha256": "a6b54a9c7af90daae8ac4c4844a21f59e0b157ff4d6efd5f5ca2e0d9188767a0",
+      "bytes": 200877,
+      "content_type": "image/jpeg",
+      "plate_id": "CHESELDEN_T20_POSTERIOR_TRUNK",
+      "image_url": "https://www.nlm.nih.gov/exhibition/historicalanatomies/Images/1200_pixels/cheselden_t20.jpg"
+    },
+    {
+      "status": "downloaded",
+      "path": "PROJECTS/bible/archive/anatomical_plates/cheselden/cheselden_t25a_hand_bones.jpg",
+      "sha256": "ac282a6be51f1f232e78f17bc5f1ab28456e343463ab79fe42c80baea383ba0c",
+      "bytes": 128775,
+      "content_type": "image/jpeg",
+      "plate_id": "CHESELDEN_T25A_HAND_BONES",
+      "image_url": "https://www.nlm.nih.gov/exhibition/historicalanatomies/Images/1200_pixels/cheselden_t25a.jpg"
+    },
+    {
+      "status": "downloaded",
+      "path": "PROJECTS/bible/archive/anatomical_plates/cheselden/cheselden_t29_foot_bones.jpg",
+      "sha256": "3647761ffb1704378fad8f59e93d93076978116adf861b33b074ed3bed02be5b",
+      "bytes": 167732,
+      "content_type": "image/jpeg",
+      "plate_id": "CHESELDEN_T29_FOOT_BONES",
+      "image_url": "https://www.nlm.nih.gov/exhibition/historicalanatomies/Images/1200_pixels/cheselden_t29.jpg"
+    },
+    {
+      "status": "downloaded",
+      "path": "PROJECTS/bible/archive/anatomical_plates/cheselden/cheselden_t34_standing_female_skeleton.jpg",
+      "sha256": "3bcf2bd66112b2708c7448cee17426316eeb4ccd8f7d12674d9b29cc122bfe4a",
+      "bytes": 110557,
+      "content_type": "image/jpeg",
+      "plate_id": "CHESELDEN_T34_STANDING_FEMALE_SKELETON",
+      "image_url": "https://www.nlm.nih.gov/exhibition/historicalanatomies/Images/1200_pixels/cheselden_t34.jpg"
+    },
+    {
+      "status": "downloaded",
+      "path": "PROJECTS/bible/archive/anatomical_plates/cheselden/cheselden_t35_standing_male_skeleton.jpg",
+      "sha256": "269cf32366df3d5f7ac7857bc9a160d52ea3b457df68fce76421cfd47d9cbed7",
+      "bytes": 177625,
+      "content_type": "image/jpeg",
+      "plate_id": "CHESELDEN_T35_STANDING_MALE_SKELETON",
+      "image_url": "https://www.nlm.nih.gov/exhibition/historicalanatomies/Images/1200_pixels/cheselden_t35.jpg"
+    }
+  ]
+}

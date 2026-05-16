@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1000" viewBox="0 0 900 1000">
+  <defs><style>.bg{fill:#f4ead2}.ink{stroke:#241811;fill:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}.thin{stroke:#241811;fill:none;stroke-width:2}.wood{fill:#c9824a;stroke:#6e2f1a;stroke-width:4}.brass{fill:#b08a3c;stroke:#241811;stroke-width:3}.label{font-family:serif;font-size:28px;fill:#241811}.small{font-family:serif;font-size:21px;fill:#241811}.title{font-family:serif;font-size:40px;font-weight:bold;fill:#6e2f1a}.ghost{stroke:#b08a3c;fill:none;stroke-width:3;stroke-dasharray:10 8}</style></defs>
+  <rect class="bg" width="900" height="1000"/>
+  <text class="title" x="70" y="75">Hand Structure - Fine Terminal Assembly</text>
+  <text class="small" x="70" y="110">carpal block, metacarpals, phalanges, thumb saddle, tendon/cord routing</text>
+  <rect class="wood" x="360" y="720" width="180" height="95" rx="28"/>
+  <path class="wood" d="M345 520 C365 445 425 405 500 425 C565 445 595 520 560 650 C540 710 390 710 360 650 C345 610 335 570 345 520Z"/>
+  <circle class="brass" cx="405" cy="700" r="20"/><circle class="brass" cx="450" cy="695" r="20"/><circle class="brass" cx="495" cy="700" r="20"/>
+  <g id="fingers">
+    <g transform="translate(335 230) rotate(-12 40 220)"><rect class="wood" x="40" y="220" width="42" height="130" rx="18"/><rect class="wood" x="42" y="95" width="38" height="115" rx="16"/><rect class="wood" x="44" y="0" width="34" height="85" rx="15"/><circle class="brass" cx="61" cy="220" r="16"/><circle class="brass" cx="61" cy="95" r="15"/></g>
+    <g transform="translate(405 185) rotate(-4 35 260)"><rect class="wood" x="35" y="260" width="44" height="145" rx="18"/><rect class="wood" x="37" y="120" width="40" height="130" rx="16"/><rect class="wood" x="39" y="0" width="36" height="110" rx="15"/><circle class="brass" cx="57" cy="260" r="16"/><circle class="brass" cx="57" cy="120" r="15"/></g>
+    <g transform="translate(475 205) rotate(5 35 240)"><rect class="wood" x="35" y="240" width="42" height="135" rx="18"/><rect class="wood" x="37" y="115" width="38" height="115" rx="16"/><rect class="wood" x="39" y="0" width="34" height="100" rx="15"/><circle class="brass" cx="56" cy="240" r="16"/><circle class="brass" cx="56" cy="115" r="15"/></g>
+    <g transform="translate(545 280) rotate(14 32 185)"><rect class="wood" x="32" y="185" width="38" height="110" rx="16"/><rect class="wood" x="34" y="85" width="34" height="90" rx="15"/><rect class="wood" x="36" y="0" width="30" height="72" rx="14"/><circle class="brass" cx="51" cy="185" r="14"/><circle class="brass" cx="51" cy="85" r="13"/></g>
+  </g>
+  <g transform="translate(275 565) rotate(-45 80 80)"><rect class="wood" x="40" y="80" width="46" height="125" rx="20"/><rect class="wood" x="43" y="0" width="40" height="72" rx="18"/><circle class="brass" cx="63" cy="80" r="18"/></g>
+  <path class="ghost" d="M405 695 C390 620 385 480 390 320"/>
+  <path class="ghost" d="M450 695 C455 600 458 450 460 210"/>
+  <path class="ghost" d="M500 700 C530 600 560 455 585 290"/>
+  <text class="label" x="80" y="310">phalanges</text><line class="thin" x1="225" y1="300" x2="380" y2="265"/>
+  <text class="label" x="620" y="485">metacarpals</text><line class="thin" x1="620" y1="475" x2="540" y2="535"/>
+  <text class="label" x="80" y="650">thumb saddle</text><line class="thin" x1="255" y1="640" x2="330" y2="620"/>
+  <text class="label" x="620" y="750">carpal block</text><line class="thin" x1="620" y1="740" x2="540" y2="760"/>
+  <text class="small" x="82" y="910">Design pressure: preserve human hand readability, thumb opposition, serviceable micro-pins, and replaceable high-wear contact surfaces.</text>
+</svg>

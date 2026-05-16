@@ -1,0 +1,30 @@
+name: Build Wooden Armature Bible
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-wooden-armature-bible:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build compiled Markdown Bible
+        run: |
+          python PROJECTS/bible/build_bible.py
+
+      - name: Commit compiled Bible artifact
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add PROJECTS/reports/WOODEN_ARMATURE_BIBLE.md PROJECTS/reports/WOODEN_ARMATURE_BIBLE.build_report.json
+          if git diff --cached --quiet; then
+            echo "No compiled Bible changes to commit."
+          else
+            git commit -m "Build Wooden Armature Bible Markdown artifact"
+            git push
+          fi

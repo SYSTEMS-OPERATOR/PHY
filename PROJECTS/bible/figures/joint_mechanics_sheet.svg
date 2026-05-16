@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">
+  <defs>
+    <style>
+      .bg{fill:#f4ead2}.ink{stroke:#241811;fill:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}.thin{stroke:#241811;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}.wood{fill:#c9824a;stroke:#6e2f1a;stroke-width:4}.brass{fill:#b08a3c;stroke:#241811;stroke-width:3}.label{font-family:serif;font-size:28px;fill:#241811}.small{font-family:serif;font-size:20px;fill:#241811}.title{font-family:serif;font-size:38px;font-weight:bold;fill:#6e2f1a}.ghost{stroke:#b08a3c;fill:none;stroke-width:3;stroke-dasharray:10 8}
+    </style>
+  </defs>
+  <rect class="bg" x="0" y="0" width="1200" height="900"/>
+  <text class="title" x="60" y="70">Joint Mechanics Sheet</text>
+  <text class="small" x="60" y="105">Elementary motion primitives for the wooden armature</text>
+
+  <g transform="translate(70 160)">
+    <text class="label" x="0" y="-35">1. Pin / Hinge Joint</text>
+    <rect class="wood" x="0" y="10" width="230" height="70" rx="18"/>
+    <rect class="wood" x="250" y="10" width="230" height="70" rx="18"/>
+    <circle class="brass" cx="240" cy="45" r="34"/>
+    <circle class="ink" cx="240" cy="45" r="10"/>
+    <path class="ghost" d="M210 115 A85 85 0 0 0 315 75"/>
+    <text class="small" x="0" y="130">one rotational axis; record pin, washer, bushing stack</text>
+  </g>
+
+  <g transform="translate(670 160)">
+    <text class="label" x="0" y="-35">2. Ball-and-Socket Envelope</text>
+    <path class="wood" d="M80 95 C20 70 20 10 90 0 C180 -10 235 35 215 105 C195 175 95 165 80 95Z"/>
+    <circle class="brass" cx="145" cy="78" r="44"/>
+    <line class="ink" x1="145" y1="122" x2="145" y2="210"/>
+    <path class="ghost" d="M72 78 A73 73 0 0 1 220 78"/>
+    <text class="small" x="0" y="245">socket rim defines hard-stop envelope; soft stops restrain flop</text>
+  </g>
+
+  <g transform="translate(70 430)">
+    <text class="label" x="0" y="-35">3. Sliding Slot</text>
+    <rect class="wood" x="0" y="0" width="470" height="115" rx="18"/>
+    <rect class="bg" x="75" y="38" width="310" height="40" rx="20" stroke="#241811" stroke-width="4"/>
+    <circle class="brass" cx="180" cy="58" r="27"/>
+    <path class="ghost" d="M180 105 L330 105"/>
+    <path class="thin" d="M330 105 l-18 -12 M330 105 l-18 12"/>
+    <text class="small" x="0" y="155">translation or adjustment; reinforce slot ends and washer coverage</text>
+  </g>
+
+  <g transform="translate(670 430)">
+    <text class="label" x="0" y="-35">4. Soft Stop / Hard Stop</text>
+    <circle class="brass" cx="90" cy="75" r="25"/>
+    <line class="ink" x1="90" y1="75" x2="230" y2="35"/>
+    <path class="ghost" d="M110 125 A135 135 0 0 0 260 45"/>
+    <line class="ink" x1="255" y1="30" x2="285" y2="85"/>
+    <text class="small" x="300" y="60">hard stop</text>
+    <path class="thin" d="M185 125 C220 130 250 118 280 105"/>
+    <text class="small" x="300" y="115">soft stop zone</text>
+    <text class="small" x="0" y="180">soft stop improves feel; hard stop protects structure</text>
+  </g>
+
+  <g transform="translate(70 710)">
+    <text class="label" x="0" y="-35">5. Washer / Bushing Stack</text>
+    <rect class="wood" x="155" y="0" width="160" height="80" rx="12"/>
+    <rect class="brass" x="95" y="5" width="35" height="70" rx="8"/>
+    <rect class="brass" x="340" y="5" width="35" height="70" rx="8"/>
+    <line class="ink" x1="60" y1="40" x2="410" y2="40"/>
+    <circle class="bg" cx="235" cy="40" r="22" stroke="#241811" stroke-width="4"/>
+    <text class="small" x="0" y="120">nut | washer | side plate | bushing | component | bushing | side plate | washer | nut</text>
+  </g>
+</svg>

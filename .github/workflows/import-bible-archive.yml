@@ -1,0 +1,62 @@
+name: Import Bible Archive Images
+
+on:
+  workflow_dispatch:
+    inputs:
+      overwrite:
+        description: "Overwrite existing image files"
+        required: false
+        default: "false"
+        type: choice
+        options:
+          - "false"
+          - "true"
+      include_comparative:
+        description: "Include comparative charged-object images"
+        required: false
+        default: "false"
+        type: choice
+        options:
+          - "false"
+          - "true"
+
+permissions:
+  contents: write
+
+jobs:
+  import-bible-archive-images:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Import anatomical plates
+        run: |
+          if [ "${{ github.event.inputs.overwrite }}" = "true" ]; then
+            python PROJECTS/bible/archive/anatomical_plates/import_all_anatomical_plates.py --overwrite
+          else
+            python PROJECTS/bible/archive/anatomical_plates/import_all_anatomical_plates.py
+          fi
+
+      - name: Import charged-object visuals
+        run: |
+          FLAGS=""
+          if [ "${{ github.event.inputs.overwrite }}" = "true" ]; then
+            FLAGS="$FLAGS --overwrite"
+          fi
+          if [ "${{ github.event.inputs.include_comparative }}" = "true" ]; then
+            FLAGS="$FLAGS --include-comparative"
+          fi
+          python PROJECTS/bible/archive/charged_objects/import_charged_object_visuals.py $FLAGS
+
+      - name: Commit imported archive files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add PROJECTS/bible/archive
+          if git diff --cached --quiet; then
+            echo "No new archive files to commit."
+          else
+            git commit -m "Import Wooden Armature Bible archive images"
+            git push
+          fi

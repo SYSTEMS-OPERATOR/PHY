@@ -12,13 +12,6 @@ from reportlab.lib.pagesizes import letter
 from reportlab.lib.units import inch
 from reportlab.pdfgen import canvas
 
-try:
-    from svglib.svglib import svg2rlg
-    from reportlab.graphics import renderPDF
-except Exception:  # SVG embedding is optional; text PDF still builds.
-    svg2rlg = None
-    renderPDF = None
-
 SRC = Path("PROJECTS/reports/WOODEN_ARMATURE_BIBLE.md")
 OUT = Path("PROJECTS/reports/WOODEN_ARMATURE_BIBLE.pdf")
 REPORT = Path("PROJECTS/reports/WOODEN_ARMATURE_BIBLE.pdf_report.json")
@@ -52,8 +45,6 @@ def state_for_heading(title: str) -> str:
         return "SOUL"
     if any(k in t for k in ["archive", "plate review", "figure index", "source notes", "research", "mind", "build report"]):
         return "MIND"
-    if any(k in t for k in ["component", "joint", "material", "build workflow", "diagrams", "anatomical", "carpentry", "skeleton", "body"]):
-        return "BODY"
     return "BODY"
 
 
@@ -66,7 +57,7 @@ class Pdf:
         self.h1 = 0
         self.state = "BODY"
         self.figures = 0
-        self.svg_available = svg2rlg is not None and renderPDF is not None
+        self.figure_placeholders = 0
 
     def bg(self):
         c = self.c
@@ -184,7 +175,7 @@ class Pdf:
             return
         stripped = [x.strip() for x in lines if x.strip()]
         if len(stripped) == 1 and stripped[0].endswith(".svg") and Path(stripped[0]).exists():
-            self.figure(Path(stripped[0]))
+            self.figure_from_svg_path(Path(stripped[0]))
             return
         for i in range(0, len(lines), 24):
             chunk = lines[i:i+24]
@@ -201,31 +192,26 @@ class Pdf:
                 y -= 10
             self.y = y - 8
 
-    def figure(self, path: Path):
-        self.ensure(5.4 * inch)
-        if not self.svg_available:
-            self.para(f"[Figure not embedded: {path}]", font="Times-Italic", size=9.5)
+    def figure_from_svg_path(self, svg_path: Path):
+        png_path = svg_path.with_suffix(".png")
+        if not png_path.exists():
+            self.para(f"[Figure PNG not found: {png_path}; SVG master preserved: {svg_path}]", font="Times-Italic", size=9.5)
+            self.figure_placeholders += 1
             return
-        drawing = svg2rlg(str(path))
-        if drawing is None:
-            self.para(f"[Figure could not be loaded: {path}]", font="Times-Italic", size=9.5)
-            return
-        max_w = CW
-        max_h = 5.0 * inch
-        scale = min(max_w / drawing.width, max_h / drawing.height)
-        fig_w = drawing.width * scale
-        fig_h = drawing.height * scale
-        if self.y - fig_h < MB:
+        self.figure_png(png_path, svg_path)
+
+    def figure_png(self, png_path: Path, svg_path: Path):
+        max_h = 5.4 * inch
+        self.ensure(max_h + 0.35 * inch)
+        if self.y - max_h < MB:
             self.new_page()
-        self.c.saveState()
-        self.c.translate(ML + (CW - fig_w) / 2, self.y - fig_h)
-        self.c.scale(scale, scale)
-        renderPDF.draw(drawing, self.c, 0, 0)
-        self.c.restoreState()
-        self.y -= fig_h + 8
+        x = ML
+        y = self.y - max_h
+        self.c.drawImage(str(png_path), x, y, width=CW, height=max_h, preserveAspectRatio=True, anchor="c", mask="auto")
+        self.y = y - 10
         self.c.setFillColor(BARK)
         self.c.setFont("Times-Italic", 8.5)
-        self.c.drawCentredString(W / 2, self.y, str(path))
+        self.c.drawCentredString(W / 2, self.y, f"{png_path}  (SVG master: {svg_path.name})")
         self.y -= 16
         self.figures += 1
 
@@ -264,7 +250,16 @@ def main():
     if in_code:
         pdf.code(code)
     pdf.save()
-    report = {"input": str(SRC), "output": str(OUT), "pages": pdf.page, "top_level_sections_seen": pdf.h1, "figures_embedded": pdf.figures, "svg_embedding_available": pdf.svg_available, "style": "redwood_pdf_v2_stateful_footer_svg", "generated_utc": datetime.now(timezone.utc).isoformat()}
+    report = {
+        "input": str(SRC),
+        "output": str(OUT),
+        "pages": pdf.page,
+        "top_level_sections_seen": pdf.h1,
+        "figures_embedded": pdf.figures,
+        "figure_placeholders": pdf.figure_placeholders,
+        "style": "redwood_pdf_v3_png_figures",
+        "generated_utc": datetime.now(timezone.utc).isoformat(),
+    }
     REPORT.write_text(json.dumps(report, indent=2), encoding="utf-8")
     print(json.dumps(report, indent=2))
 

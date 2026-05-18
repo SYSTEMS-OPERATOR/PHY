@@ -1,0 +1,65 @@
+{
+  "generated_utc": "2026-05-18T07:32:32.756914+00:00",
+  "source_dir": "PROJECTS/bible/figures",
+  "count": 8,
+  "exported": 8,
+  "errors": 0,
+  "results": [
+    {
+      "status": "exported",
+      "method": "rsvg-convert",
+      "svg": "PROJECTS/bible/figures/axial_core_front.svg",
+      "png": "PROJECTS/bible/figures/axial_core_front.png",
+      "bytes": 275835
+    },
+    {
+      "status": "exported",
+      "method": "rsvg-convert",
+      "svg": "PROJECTS/bible/figures/foot_structure.svg",
+      "png": "PROJECTS/bible/figures/foot_structure.png",
+      "bytes": 232002
+    },
+    {
+      "status": "exported",
+      "method": "rsvg-convert",
+      "svg": "PROJECTS/bible/figures/hand_structure.svg",
+      "png": "PROJECTS/bible/figures/hand_structure.png",
+      "bytes": 273217
+    },
+    {
+      "status": "exported",
+      "method": "rsvg-convert",
+      "svg": "PROJECTS/bible/figures/joint_mechanics_sheet.svg",
+      "png": "PROJECTS/bible/figures/joint_mechanics_sheet.png",
+      "bytes": 248174
+    },
+    {
+      "status": "exported",
+      "method": "rsvg-convert",
+      "svg": "PROJECTS/bible/figures/lower_limb_chain.svg",
+      "png": "PROJECTS/bible/figures/lower_limb_chain.png",
+      "bytes": 193515
+    },
+    {
+      "status": "exported",
+      "method": "rsvg-convert",
+      "svg": "PROJECTS/bible/figures/pelvic_bowl_front.svg",
+      "png": "PROJECTS/bible/figures/pelvic_bowl_front.png",
+      "bytes": 235451
+    },
+    {
+      "status": "exported",
+      "method": "rsvg-convert",
+      "svg": "PROJECTS/bible/figures/shoulder_girdle_front.svg",
+      "png": "PROJECTS/bible/figures/shoulder_girdle_front.png",
+      "bytes": 216473
+    },
+    {
+      "status": "exported",
+      "method": "rsvg-convert",
+      "svg": "PROJECTS/bible/figures/upper_limb_chain.svg",
+      "png": "PROJECTS/bible/figures/upper_limb_chain.png",
+      "bytes": 190010
+    }
+  ]
+}

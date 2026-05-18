@@ -1,0 +1,21 @@
+{
+  "version": "v003_png_figures",
+  "note": "PNG figure render pass. SVG masters preserved; PNG derivatives embedded into the PDF when referenced by SVG path.",
+  "source_pdf": "PROJECTS/reports/WOODEN_ARMATURE_BIBLE.pdf",
+  "version_pdf": "PROJECTS/reports/pdf_versions/WOODEN_ARMATURE_BIBLE_v003_png_figures.pdf",
+  "source_report": "PROJECTS/reports/WOODEN_ARMATURE_BIBLE.pdf_report.json",
+  "version_report": "PROJECTS/reports/pdf_versions/WOODEN_ARMATURE_BIBLE_v003_png_figures.pdf_report.json",
+  "sha256": "16fd4198cf395f4dabfcc830ab12b5a84863fda63509f66fed9ddde1f1607344",
+  "bytes": 2215954,
+  "created_utc": "2026-05-18T07:32:34.485160+00:00",
+  "source_pdf_report": {
+    "input": "PROJECTS/reports/WOODEN_ARMATURE_BIBLE.md",
+    "output": "PROJECTS/reports/WOODEN_ARMATURE_BIBLE.pdf",
+    "pages": 200,
+    "top_level_sections_seen": 26,
+    "figures_embedded": 16,
+    "figure_placeholders": 0,
+    "style": "redwood_pdf_v3_png_figures",
+    "generated_utc": "2026-05-18T07:32:34.420188+00:00"
+  }
+}

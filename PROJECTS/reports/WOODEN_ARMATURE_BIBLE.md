@@ -1,6 +1,6 @@
 <!--
 Generated artifact: WOODEN_ARMATURE_BIBLE
-Generated at UTC: 2026-05-16T21:27:52.767026+00:00
+Generated at UTC: 2026-05-18T07:32:32.800412+00:00
 Source: PROJECTS/bible/build_order.json
 Note: This is a compiled Markdown draft. Image embedding and PDF layout are future passes.
 -->

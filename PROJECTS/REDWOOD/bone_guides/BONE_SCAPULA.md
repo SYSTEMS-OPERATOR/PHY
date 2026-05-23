@@ -1,31 +1,31 @@
-# BONE_FEMUR_L — Femur (l)
+# BONE_SCAPULA — Scapula (midline)
 
 ## Purpose
 
-Fabrication guide for l Femur as a REDWOOD reference.  
+Fabrication guide for midline Scapula as a REDWOOD reference.  
 Auto-generated from project anthropometric and anatomical datasets.
 
 ## Finished target envelope
 
-- Finished length: `420 mm` *(see: adult_female_21_28.json)*
-- Finished width: `40 mm`
-- Finished thickness: `40 mm`
-- Target side: `l`
-- Bone class: `long_bone`
+- Finished length: `N/A mm` *(see: adult_female_21_28.json)*
+- Finished width: `N/A mm`
+- Finished thickness: `N/A mm`
+- Target side: `midline`
+- Bone class: `flat_bone`
 
 ## Biological reference (21-year-old female, avg)
 
-- Biological length: `42.0 cm`
-- Biological width: `4.0 cm`
-- Biological thickness: `4.0 cm`
-- Mass: `350 g`
-- Density: `1900 kg/m³`
+- Biological length: `14.5 cm`
+- Biological width: `10.5 cm`
+- Biological thickness: `0.3 cm`
+- Mass: `45 g`
+- Density: `1800 kg/m³`
 
 ## Rough Redwood blank
 
-- Blank length: `430 mm`
-- Blank width: `44 mm`
-- Blank thickness: `44 mm`
+- Blank length: ` mm`
+- Blank width: ` mm`
+- Blank thickness: ` mm`
 - Grain axis: `proximal_to_distal`
 - Allowance notes: `10 mm length, 4 mm width/thickness added`
 
@@ -53,8 +53,8 @@ Auto-generated from project anthropometric and anatomical datasets.
 
 | Operation                  | Diameter     | Depth    | Reference face        | Notes                           |
 |----------------------------|-------------|----------|----------------------|----------------------------------|
-| BONE_FEMUR_L_HIP_BUSHING_PILOT   | 12 mm      | TBD      | proximal end         | Validate with parent module      |
-| BONE_FEMUR_L_KNEE_BUSHING_PILOT  | 12 mm      | TBD      | distal end           | Validate with distal module      |
+| BONE_SCAPULA_HIP_BUSHING_PILOT   | 12 mm      | TBD      | proximal end         | Validate with parent module      |
+| BONE_SCAPULA_KNEE_BUSHING_PILOT  | 12 mm      | TBD      | distal end           | Validate with distal module      |
 
 ## Simulation fields
 

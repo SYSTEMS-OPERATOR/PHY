@@ -1,8 +1,8 @@
-# BONE_FEMUR_L — Femur (l)
+# BONE_FEMUR_R — Femur (r)
 
 ## Purpose
 
-Fabrication guide for l Femur as a REDWOOD reference.  
+Fabrication guide for r Femur as a REDWOOD reference.  
 Auto-generated from project anthropometric and anatomical datasets.
 
 ## Finished target envelope
@@ -10,7 +10,7 @@ Auto-generated from project anthropometric and anatomical datasets.
 - Finished length: `420 mm` *(see: adult_female_21_28.json)*
 - Finished width: `40 mm`
 - Finished thickness: `40 mm`
-- Target side: `l`
+- Target side: `r`
 - Bone class: `long_bone`
 
 ## Biological reference (21-year-old female, avg)
@@ -53,8 +53,8 @@ Auto-generated from project anthropometric and anatomical datasets.
 
 | Operation                  | Diameter     | Depth    | Reference face        | Notes                           |
 |----------------------------|-------------|----------|----------------------|----------------------------------|
-| BONE_FEMUR_L_HIP_BUSHING_PILOT   | 12 mm      | TBD      | proximal end         | Validate with parent module      |
-| BONE_FEMUR_L_KNEE_BUSHING_PILOT  | 12 mm      | TBD      | distal end           | Validate with distal module      |
+| BONE_FEMUR_R_HIP_BUSHING_PILOT   | 12 mm      | TBD      | proximal end         | Validate with parent module      |
+| BONE_FEMUR_R_KNEE_BUSHING_PILOT  | 12 mm      | TBD      | distal end           | Validate with distal module      |
 
 ## Simulation fields
 

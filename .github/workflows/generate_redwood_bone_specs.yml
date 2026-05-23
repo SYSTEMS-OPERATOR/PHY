@@ -1,0 +1,28 @@
+name: Generate Redwood Bone Specs
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'bin/generate_redwood_bone_specs.py'
+      - 'PROJECTS/REDWOOD/profiles/adult_female_21_28.json'
+      - 'skeleton/datasets/female_21_baseline.json'
+      - '.github/workflows/generate_redwood_bone_specs.yml'
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+      - name: Run bone spec generator
+        run: python bin/generate_redwood_bone_specs.py
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: 'chore: regenerate Redwood bone fabrication specs'
+          file_pattern: 'PROJECTS/REDWOOD/bone_guides/*.md'

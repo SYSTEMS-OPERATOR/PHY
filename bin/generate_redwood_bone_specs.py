@@ -1,14 +1,13 @@
 #!/usr/bin/env python3
 
 import json
-import os
 from pathlib import Path
 
-# Paths
-ROOT = Path(__file__).resolve().parents[2] if len(Path(__file__).resolve().parents) > 1 else Path.cwd()
-PROJ_PROFILE_PATH = ROOT / "PROJECTS/REDWOOD/profiles/adult_female_21_28.json"
-BIO_BASELINE_PATH = ROOT / "skeleton/datasets/female_21_baseline.json"
-GUIDE_OUT_DIR = ROOT / "PROJECTS/REDWOOD/bone_guides"
+# Get repo root (bin/ is one below repo root)
+REPO_ROOT = Path(__file__).resolve().parent.parent
+PROJ_PROFILE_PATH = REPO_ROOT / "PROJECTS/REDWOOD/profiles/adult_female_21_28.json"
+BIO_BASELINE_PATH = REPO_ROOT / "skeleton/datasets/female_21_baseline.json"
+GUIDE_OUT_DIR = REPO_ROOT / "PROJECTS/REDWOOD/bone_guides"
 GUIDE_OUT_DIR.mkdir(exist_ok=True, parents=True)
 
 def load_json(path):
@@ -60,25 +59,20 @@ BONE_CLASS = {
 }
 
 def fabricate_guide(bone, side, proj, bio):
-    # Unique ID and name logic
     side_s = f"_{side}" if side else ""
     unique_id = f"BONE_{bone.upper()}{side_s}"
     bone_label = bone
     side_human = side.lower() if side else "midline"
-    # Project specs
     plen, pwidth, pthick = get_project_envelope(proj, bone)
-    # Biological specs
     bio_data = bio.get(bone, {})
     bio_len = bio_data.get("length_cm", bio_data.get("avg_height_cm", None))
     bio_width = bio_data.get("width_cm", bio_data.get("avg_width_cm", None))
     bio_thick = bio_data.get("thickness_cm", bio_data.get("avg_thickness_cm", None))
     bio_mass = bio_data.get("mass_g", bio_data.get("avg_mass_g", None))
     bio_density = bio_data.get("density_kg_m3", None)
-    # Blank (add 10mm length, 4mm width/thick if present)
     blank_len = mm(plen) + 10 if plen else ""
     blank_width = mm(pwidth) + 4 if pwidth else ""
     blank_thick = mm(pthick) + 4 if pthick else ""
-    # Markdown template
     md = f"""# {unique_id} — {bone_label} ({side_human})
 
 ## Purpose
@@ -150,8 +144,7 @@ Auto-generated from project anthropometric and anatomical datasets.
 - Biological values: [`skeleton/datasets/female_21_baseline.json`](../../../skeleton/datasets/female_21_baseline.json)
 
 ---
-"""
-    # Output path
+"
     md_name = f"BONE_{bone.upper()}{side_s}.md"
     with open(GUIDE_OUT_DIR / md_name, "w") as out:
         out.write(md)

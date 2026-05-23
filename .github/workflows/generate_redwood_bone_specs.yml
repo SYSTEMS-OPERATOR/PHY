@@ -9,6 +9,9 @@ on:
       - 'skeleton/datasets/female_21_baseline.json'
       - '.github/workflows/generate_redwood_bone_specs.yml'
 
+permissions:
+  contents: write
+
 jobs:
   generate:
     runs-on: ubuntu-latest

@@ -144,7 +144,7 @@ Auto-generated from project anthropometric and anatomical datasets.
 - Biological values: [`skeleton/datasets/female_21_baseline.json`](../../../skeleton/datasets/female_21_baseline.json)
 
 ---
-"
+"""
     md_name = f"BONE_{bone.upper()}{side_s}.md"
     with open(GUIDE_OUT_DIR / md_name, "w") as out:
         out.write(md)

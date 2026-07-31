@@ -1,0 +1,46 @@
+{
+  "assembly_id": "T56_NESTED_THORAX",
+  "project": "T56_CARBON",
+  "status": "concept_scaffold_not_fabrication_ready",
+  "purpose": "Define the component hierarchy and interface order for the T-5.6 nested thorax.",
+  "design_sentence": "Metal heart. Isolated breath. Carbon ribs. Soft contour.",
+  "layer_order_inside_to_outside": [
+    "T56_INNER_THORACIC_HOUSING",
+    "T56_THORACIC_ISOLATION_STACK",
+    "T56_SECONDARY_CARBON_RIBCAGE",
+    "T56_THORACIC_COMPLIANCE_PADDING",
+    "T56_OUTER_FORM_SUPPORT_POINTS"
+  ],
+  "component_files": {
+    "inner_housing": "inner_thoracic_housing.json",
+    "isolation_stack": "thoracic_isolation_stack.json",
+    "secondary_ribcage": "secondary_carbon_ribcage.json",
+    "compliance_padding": "thoracic_compliance_padding.json",
+    "outer_form_support": "outer_form_support_points.json",
+    "validation": "../tests/thorax_validation_plan.json"
+  },
+  "primary_interfaces": [
+    "cervical_stack",
+    "left_shoulder_cartridge",
+    "right_shoulder_cartridge",
+    "segmented_spine",
+    "pelvic_sacral_bridge",
+    "power_and_data_core",
+    "artificial_fascia_network"
+  ],
+  "forbidden_assumptions": [
+    "visual_reference_dimensions_are_fabrication_dimensions",
+    "outer_carbon_ribs_are_primary_structure_without_validation",
+    "padding_can_conceal inaccessible_service_hardware",
+    "carbon_may_contact_aluminum_without_dielectric_isolation",
+    "cosmetic_contour_members_may_carry untracked_actuator_reactions"
+  ],
+  "release_state": {
+    "fabrication_ready": false,
+    "simulation_ready": false,
+    "anthropometry_locked": false,
+    "materials_locked": false,
+    "load_cases_locked": false,
+    "coupon_testing_complete": false
+  }
+}

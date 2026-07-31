@@ -1,0 +1,141 @@
+{
+  "component_id": "T56_PELVIC_MODULE_CONCEPT",
+  "project": "T56_CARBON",
+  "status": "concept_scaffold_not_fabrication_ready",
+  "purpose": "Define the non-dimensional architecture, service hierarchy, and validation boundaries for the T-5.6 composite pelvis.",
+  "primary_load_path": {
+    "entry": "lumbar_stack_to_central_sacral_bridge",
+    "distribution": [
+      "left_hip_suspension_node",
+      "right_hip_suspension_node"
+    ],
+    "forbidden_assumption": "outer_iliac_service_panels_are_primary_structure"
+  },
+  "assemblies": {
+    "central_sacral_bridge": {
+      "role": "primary_structural_member",
+      "material_family": "carbon_composite_with_validated_metal_inserts",
+      "interfaces": [
+        "lumbar_stack",
+        "left_hip_suspension_node",
+        "right_hip_suspension_node",
+        "central_service_channel"
+      ],
+      "dimensions_mm": null,
+      "laminate_schedule": null,
+      "design_loads": null
+    },
+    "left_iliac_assembly": {
+      "role": "secondary_structure_and_service_shell",
+      "removable": true,
+      "interfaces": [
+        "fascia_anchors",
+        "tactile_wiring",
+        "local_electronics",
+        "impact_cover",
+        "hip_access_guard"
+      ]
+    },
+    "right_iliac_assembly": {
+      "role": "secondary_structure_and_service_shell",
+      "removable": true,
+      "interfaces": [
+        "fascia_anchors",
+        "tactile_wiring",
+        "local_electronics",
+        "impact_cover",
+        "hip_access_guard"
+      ]
+    },
+    "left_hip_cartridge": {
+      "role": "replaceable_concentrated_load_and_motion_module",
+      "bearing_family": null,
+      "actuation": null,
+      "joint_axes": null,
+      "joint_limits_deg": null,
+      "hard_stops": null,
+      "load_sensing": true,
+      "position_sensing": true,
+      "pinch_guard_required": true
+    },
+    "right_hip_cartridge": {
+      "role": "replaceable_concentrated_load_and_motion_module",
+      "bearing_family": null,
+      "actuation": null,
+      "joint_axes": null,
+      "joint_limits_deg": null,
+      "hard_stops": null,
+      "load_sensing": true,
+      "position_sensing": true,
+      "pinch_guard_required": true
+    },
+    "tensile_stabilization_network": {
+      "role": "non_primary_compliance_damping_and_sensing_layer",
+      "sole_load_path_prohibited": true,
+      "pretension": null,
+      "material": null,
+      "replaceable": true
+    }
+  },
+  "service_hierarchy": [
+    {
+      "level": 1,
+      "access": "central_pelvis_panel",
+      "serves": [
+        "spine_routing",
+        "power_bus",
+        "data_bus",
+        "trunk_tendon_or_cable_routing"
+      ]
+    },
+    {
+      "level": 2,
+      "access": "bilateral_iliac_panels",
+      "serves": [
+        "fascia_anchors",
+        "sensor_harness",
+        "local_electronics",
+        "hip_support_hardware"
+      ]
+    },
+    {
+      "level": 3,
+      "access": "dedicated_hip_cartridge_ports",
+      "serves": [
+        "bearing_replacement",
+        "actuator_service",
+        "position_sensor_service",
+        "hard_stop_inspection"
+      ]
+    }
+  ],
+  "domestic_contact_rules": [
+    "Pelvis breadth must come from the validated T-5.6 anthropometric profile, never from visual-reference pixel scaling.",
+    "External iliac corners require rounded sacrificial covers or compliant overmolded contact layers.",
+    "Fasteners within likely contact zones must be recessed or covered.",
+    "Hip pinch zones require guards that remain effective through the validated joint range.",
+    "Hard structural surfaces require thermal and pressure isolation from the outer contact layer.",
+    "Primary service operations must be possible with the body safely supported in a reclined maintenance posture."
+  ],
+  "validation_plan": [
+    "define pelvis static and dynamic design load cases",
+    "resolve validated anthropometric pelvis targets",
+    "analyze sacral bridge bending and torsion",
+    "test bonded and mechanically captured hip-node inserts",
+    "validate left and right hip cartridge retention",
+    "cycle-test hip motion with guards installed",
+    "measure pelvis acoustic output and vibration transmission",
+    "validate fascia-anchor pull-out and load spreading",
+    "perform service-access rehearsal in supported reclined posture",
+    "perform contact-pressure and thermal-surface review"
+  ],
+  "release_blockers": [
+    "validated T-5.6 pelvis dimensions",
+    "defined load cases and safety factors",
+    "selected composite system and traceable datasheet",
+    "selected insert alloy and dielectric isolation system",
+    "resolved hip kinematics and actuation",
+    "validated laminate and insert geometry",
+    "passed destructive coupons and pelvic subassembly tests"
+  ]
+}

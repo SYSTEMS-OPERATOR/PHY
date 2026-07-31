@@ -1,0 +1,84 @@
+{
+  "component_id": "T56_LEFT_FOREARM_DEMONSTRATOR",
+  "project": "T56_CARBON",
+  "status": "concept_scaffold_not_fabrication_ready",
+  "purpose": "First complete systems article for validating composite members, bonded inserts, serviceable joints, wiring, tactile sensing, fascia mounts, and repairability.",
+  "phy_members": [
+    "BONE_RADIUS_L",
+    "BONE_ULNA_L"
+  ],
+  "architecture": {
+    "radius_member": {
+      "topology": "dual_rail_or_closed_truss_carbon_member",
+      "finished_length_mm": null,
+      "cross_section": null,
+      "laminate_schedule": null
+    },
+    "ulna_member": {
+      "topology": "dual_rail_or_closed_truss_carbon_member",
+      "finished_length_mm": null,
+      "cross_section": null,
+      "laminate_schedule": null
+    },
+    "elbow_interface": {
+      "type": "replaceable_metal_joint_cartridge",
+      "joint_axis": null,
+      "joint_limits_deg": null,
+      "bearing_family": null
+    },
+    "wrist_interface": {
+      "type": "replaceable_metal_joint_cartridge",
+      "joint_axes": null,
+      "joint_limits_deg": null,
+      "bearing_family": null
+    },
+    "service_channel": {
+      "minimum_clearance_mm": null,
+      "contents": [
+        "tendon or cable routing",
+        "sensor wiring",
+        "power and data segmentation",
+        "strain and temperature sensing"
+      ],
+      "access": "removable_nonstructural_cover"
+    },
+    "tactile_segments": {
+      "count": null,
+      "electrical_isolation_required": true,
+      "frame_conductivity_must_be_modeled": true
+    },
+    "fascia_mounts": {
+      "count": null,
+      "load_rating_N": null,
+      "replaceable": true
+    }
+  },
+  "insert_doctrine": [
+    "Internal inserts must use keyed anti-rotation geometry.",
+    "Bond length and local laminate reinforcement are determined by coupon and subcomponent testing.",
+    "A secondary capture feature is required so adhesive is not the sole retention mechanism.",
+    "Bearing and threaded surfaces remain replaceable without damaging the primary carbon member."
+  ],
+  "validation_sequence": [
+    "material witness coupons",
+    "adhesive lap-shear and peel-representative coupons",
+    "insert pull-out test",
+    "insert torsional-slip test",
+    "member bending test",
+    "member torsion test",
+    "joint-cycle and acoustic test",
+    "electrical isolation and capacitive-sensing test",
+    "service-access rehearsal",
+    "guarding and contact-comfort review"
+  ],
+  "release_blockers": [
+    "validated forearm dimensions",
+    "selected carbon product and datasheet",
+    "selected insert alloy",
+    "selected adhesive system",
+    "resolved elbow and wrist kinematics",
+    "defined design loads and safety factors",
+    "passed destructive coupon tests",
+    "passed subcomponent fatigue test"
+  ]
+}

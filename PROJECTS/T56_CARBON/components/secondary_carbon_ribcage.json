@@ -1,0 +1,94 @@
+{
+  "component_id": "T56_SECONDARY_CARBON_RIBCAGE",
+  "project": "T56_CARBON",
+  "status": "concept_scaffold_not_fabrication_ready",
+  "role": "secondary_thoracic_envelope_fascia_anchor_and_removable_shell_support",
+  "primary_load_path": false,
+  "architecture": {
+    "left_rib_array": {
+      "member_count": null,
+      "attachment_nodes": null,
+      "removable_as_unit": true
+    },
+    "right_rib_array": {
+      "member_count": null,
+      "attachment_nodes": null,
+      "removable_as_unit": true
+    },
+    "sternum_link": {
+      "type": "isolated_secondary_attachment",
+      "fully_rigid_to_inner_housing": false,
+      "geometry": null
+    },
+    "lower_rib_transition": {
+      "type": "tapered_or_partially_floating",
+      "interfaces": [
+        "abdominal_fascia_network",
+        "lower_thorax_service_zone",
+        "pelvic_transition"
+      ]
+    }
+  },
+  "material_system": {
+    "fiber_family": "carbon_fiber",
+    "matrix_family": null,
+    "manufacturing_process": null,
+    "laminate_schedule": null,
+    "core_material": null,
+    "datasheet_reference": null
+  },
+  "form_requirements": [
+    "adult_female_domestic_thoracic_profile",
+    "elegant_clavicle_transition",
+    "restrained_chest_projection",
+    "underbust_taper",
+    "lateral_rib_softness",
+    "believable_waist_transition",
+    "no_armored_barrel_chest"
+  ],
+  "carried_functions": [
+    "outer_form_support",
+    "fascia_anchor_distribution",
+    "removable_shell_support",
+    "service_window_organization",
+    "local_impact_load_spreading",
+    "tactile_and_structural_health_sensor_mounting"
+  ],
+  "interfaces": {
+    "inboard": "T56_THORACIC_ISOLATION_STACK",
+    "outboard": "T56_THORACIC_COMPLIANCE_PADDING",
+    "superior": [
+      "left_clavicle_region",
+      "right_clavicle_region",
+      "upper_thoracic_frame"
+    ],
+    "inferior": [
+      "abdominal_fascia_network",
+      "pelvic_transition"
+    ]
+  },
+  "geometry": {
+    "thorax_width_mm": null,
+    "thorax_depth_mm": null,
+    "rib_member_cross_sections_mm": null,
+    "service_window_locations": null,
+    "fascia_anchor_locations": null,
+    "mass_target_kg": null
+  },
+  "forbidden_assumptions": [
+    "rib_geometry_may_be_scaled_from_concept_art_pixels",
+    "carbon_ribs_carry_primary_spine_or_shoulder_loads_without_validation",
+    "raw_drilled_laminate_may_accept_repeated_joint_or_fastener_loads",
+    "aesthetic_symmetry_proves_structural_equivalence"
+  ],
+  "release_blockers": [
+    "validated thoracic anthropometry",
+    "selected composite material system",
+    "resolved attachment and isolation nodes",
+    "laminate analysis",
+    "impact and local attachment load cases",
+    "fascia anchor pull-out testing",
+    "rib subassembly bending and torsion testing",
+    "service removal rehearsal"
+  ]
+}

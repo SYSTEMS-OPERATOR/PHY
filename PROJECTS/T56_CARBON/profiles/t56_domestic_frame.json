@@ -1,0 +1,48 @@
+{
+  "profile_id": "t56_domestic_frame",
+  "project": "T56_CARBON",
+  "status": "scaffold_requires_anthropometric_validation",
+  "description": "Project-local proportion and behavior profile for the T-5.6 domestic carbon-composite armature.",
+  "height_mm": 1676.4,
+  "arm_span_mm": 1676.4,
+  "height_code": "T-5.6",
+  "lineage": "mature domestic evolution of T-5.5(5)",
+  "pose_baseline": "neutral_anatomical_t_pose",
+  "design_mode": "domestic_close_proximity",
+  "proportion_targets": {
+    "head_height_mm": null,
+    "biacromial_shoulder_breadth_mm": null,
+    "pelvis_breadth_mm": null,
+    "ribcage_max_width_mm": null,
+    "humerus_length_mm": null,
+    "radius_length_mm": null,
+    "ulna_length_mm": null,
+    "hand_total_length_mm": null,
+    "femur_length_mm": null,
+    "tibia_length_mm": null,
+    "fibula_length_mm": null,
+    "foot_total_length_mm": null
+  },
+  "proportion_policy": {
+    "adult_capable_anatomy": true,
+    "avoid_exaggerated_display_anatomy": true,
+    "bilateral_symmetry_initially": true,
+    "allow_calibrated_asymmetry_after_fit_testing": true,
+    "preserve_domestic_clearance_envelopes": true
+  },
+  "domestic_performance_targets": {
+    "quiet_motion_priority": "high",
+    "close_contact_compliance_priority": "high",
+    "reclining_posture_priority": "high",
+    "serviceability_priority": "high",
+    "tactile_sensor_density_priority": "high",
+    "pinch_point_guarding_priority": "high",
+    "thermal_surface_stability_priority": "high"
+  },
+  "validation_rules": [
+    "Height and arm span are project decisions.",
+    "All remaining anatomical dimensions require traceable anthropometric references or measured fit targets.",
+    "Visual concept art may guide topology and service architecture but may not supply fabrication dimensions.",
+    "Joint-center locations must be resolved through project joint modules before fabrication release."
+  ]
+}

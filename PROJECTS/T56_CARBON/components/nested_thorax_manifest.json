@@ -31,9 +31,9 @@
   "forbidden_assumptions": [
     "visual_reference_dimensions_are_fabrication_dimensions",
     "outer_carbon_ribs_are_primary_structure_without_validation",
-    "padding_can_conceal inaccessible_service_hardware",
+    "padding_can_conceal_inaccessible_service_hardware",
     "carbon_may_contact_aluminum_without_dielectric_isolation",
-    "cosmetic_contour_members_may_carry untracked_actuator_reactions"
+    "cosmetic_contour_members_may_carry_untracked_actuator_reactions"
   ],
   "release_state": {
     "fabrication_ready": false,

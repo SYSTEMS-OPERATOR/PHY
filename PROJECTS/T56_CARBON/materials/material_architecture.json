@@ -1,0 +1,105 @@
+{
+  "project": "T56_CARBON",
+  "status": "scaffold_unvalidated",
+  "material_families": {
+    "carbon_epoxy_primary_members": {
+      "use": [
+        "long-bone truss rails",
+        "torso shells",
+        "pelvic shells",
+        "rib and clavicle members",
+        "hand and foot structural plates"
+      ],
+      "required_properties": [
+        "fiber architecture",
+        "laminate schedule",
+        "density_kg_m3",
+        "longitudinal_modulus_GPa",
+        "transverse_modulus_GPa",
+        "shear_modulus_GPa",
+        "tensile_strength_MPa",
+        "compressive_strength_MPa",
+        "interlaminar_shear_strength_MPa",
+        "glass_transition_temperature_C"
+      ],
+      "rules": [
+        "No fabrication release without traceable datasheet or tested coupon values.",
+        "Fiber orientation must follow the local load path.",
+        "Drilled interfaces require local laminate reinforcement and bearing validation.",
+        "Conductive dust controls are mandatory for machining."
+      ]
+    },
+    "metal_joint_cartridges": {
+      "use": [
+        "bearing races",
+        "threaded interfaces",
+        "actuator mounts",
+        "shaft supports",
+        "replaceable wear surfaces"
+      ],
+      "candidate_families": [
+        "titanium alloy",
+        "corrosion-resistant steel",
+        "other validated corrosion-resistant insert alloy"
+      ],
+      "rules": [
+        "Metal choice remains unresolved until load, corrosion, mass, and manufacturing studies are complete.",
+        "Direct carbon-to-aluminum contact is prohibited without validated dielectric isolation.",
+        "All cartridges must be replaceable without cutting primary composite members."
+      ]
+    },
+    "dielectric_isolation": {
+      "use": [
+        "carbon-metal galvanic isolation",
+        "sensor-zone segmentation",
+        "power-system isolation"
+      ],
+      "candidate_families": [
+        "glass-fiber composite interlayer",
+        "validated polymer sleeve",
+        "sealed dielectric coating system"
+      ]
+    },
+    "structural_adhesive": {
+      "use": [
+        "bonded internal inserts",
+        "secondary composite assembly",
+        "local load-spreading doublers"
+      ],
+      "required_properties": [
+        "substrate compatibility",
+        "lap shear strength",
+        "peel resistance",
+        "service temperature range",
+        "cure schedule",
+        "humidity resistance",
+        "fatigue behavior"
+      ],
+      "rules": [
+        "No adhesive is selected by brand reputation alone.",
+        "Production bond geometry must be represented by destructive test coupons.",
+        "Bonded inserts require keyed geometry and secondary mechanical capture."
+      ]
+    },
+    "artificial_fascia": {
+      "use": [
+        "tension distribution",
+        "vibration damping",
+        "outer-body support",
+        "sensor and cable attachment",
+        "joint-area continuity"
+      ],
+      "candidate_families": [
+        "high-strength braided fiber",
+        "elastic technical textile",
+        "hybrid compliant mesh"
+      ]
+    }
+  },
+  "global_rules": [
+    "No raw bolt or washer may concentrate load directly into unreinforced laminate.",
+    "Every concentrated load enters through a validated insert, doubler, or cartridge.",
+    "Electrical conductivity of carbon must be treated as an explicit system property.",
+    "Unknown material constants remain null until referenced or tested."
+  ]
+}

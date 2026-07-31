@@ -16,6 +16,10 @@ Project overlays live here. Each project may define local material records, comp
 - `JUNIPER/` — juniper comparison project.
 - `CYPRESS/` — cypress and reclaimed cypress comparison project.
 
+## Composite armature projects
+
+- `T56_CARBON/` — 1676.4 mm domestic humanoid armature using hybrid carbon-composite members, replaceable metallic joint cartridges, tendon-driven distal mechanisms, and compliant artificial fascia. The current scaffold is conceptual and explicitly not fabrication-ready.
+
 ## Rule
 
 Project overlays may specialize fabrication assumptions locally. Universal PHY files remain species-agnostic.

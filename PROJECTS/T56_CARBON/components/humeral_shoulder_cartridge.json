@@ -1,0 +1,85 @@
+{
+  "component_id": "T56_HUMERAL_SHOULDER_CARTRIDGE",
+  "project": "T56_CARBON",
+  "status": "concept_scaffold_not_fabrication_ready",
+  "instance_model": "replaceable_bilateral_cartridge",
+  "role": "carry_shoulder_bearings_shafts_sensing_hard_stops_actuator_interfaces_and_the_humeral_member_connection",
+  "interfaces": {
+    "proximal": "lateral_shoulder_yoke_on_floating_scapular_girdle",
+    "distal": "humeral_member_insert_or_end_node",
+    "power_and_data": "guarded_service_loop",
+    "tendon_or_transmission": null,
+    "outer_form": "removable_compliant_guard"
+  },
+  "degrees_of_freedom": {
+    "count": null,
+    "axis_definitions": null,
+    "joint_ranges_deg": null,
+    "coupled_axes": null,
+    "singularity_management": null
+  },
+  "bearing_and_structure": {
+    "bearing_type": null,
+    "shaft_material": null,
+    "housing_material": null,
+    "insert_material": null,
+    "preload_strategy": null,
+    "sealing_and_contamination_control": null,
+    "mass_target_kg": null
+  },
+  "hard_stops_and_retention": {
+    "mechanical_joint_limits": null,
+    "secondary_shaft_retention": null,
+    "passive_arm_retention_on_power_loss": null,
+    "energy_absorbing_stop": null,
+    "software_limit_as_only_stop_prohibited": true
+  },
+  "load_cases": {
+    "static_arm_weight": null,
+    "dynamic_arm_acceleration": null,
+    "supported_body_contact": null,
+    "accidental_pull_or_push": null,
+    "minor_impact": null,
+    "maintenance_handling": null,
+    "safety_factors": null
+  },
+  "sensor_reservations": [
+    "absolute_joint_position_per_axis",
+    "motor_or_transmission_position",
+    "bearing_temperature",
+    "reaction_load_or_torque",
+    "vibration_and_impact",
+    "hard_stop_contact",
+    "cartridge_latch_or_retainer_state"
+  ],
+  "service_requirements": [
+    "cartridge_removable_without_realigning_the_thoracic_root",
+    "humeral_member_detachable_at_defined_service_interface",
+    "bearing_and_seal_replacement_path",
+    "sensor_connector_access",
+    "repeatable_zero_and_alignment_features",
+    "guard_removal_without_cutting_fascia"
+  ],
+  "domestic_contact_rules": [
+    "The cartridge remains behind a rounded compliant guard.",
+    "External temperature remains within the future domestic contact limit.",
+    "Pinch shear and entrapment zones require validated guards.",
+    "Unexpected power loss must not permit uncontrolled arm fall."
+  ],
+  "forbidden_assumptions": [
+    "a_rendered_ball_joint_defines_the_required_internal_mechanism",
+    "carbon_may_function_directly_as_a_bearing_race",
+    "one_position_sensor_is_sufficient_for_a_multi_axis_cartridge",
+    "cosmetic_shells_may_provide_required_shaft_retention"
+  ],
+  "release_blockers": [
+    "resolved joint axes and ranges",
+    "defined loads and safety factors",
+    "selected bearing shaft housing and insert system",
+    "actuator and transmission architecture",
+    "hard-stop and power-loss behavior",
+    "thermal model",
+    "fatigue wear and impact validation",
+    "guard and service validation"
+  ]
+}

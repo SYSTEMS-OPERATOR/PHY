@@ -1,0 +1,66 @@
+{
+  "component_id": "T56_CLAVICULAR_LINKAGE",
+  "project": "T56_CARBON",
+  "status": "concept_scaffold_not_fabrication_ready",
+  "instance_model": "bilateral_template",
+  "role": "anterior_superior_guidance_and_load_sharing_between_the_thoracic_root_and_lateral_shoulder_yoke",
+  "interfaces": {
+    "inboard_root": "T56_SHOULDER_GIRDLE_ROOT_INTERFACE",
+    "outboard": "scapular_carriage_or_lateral_shoulder_yoke",
+    "fascia_and_outer_form": "non_primary_compliant_bridge_only"
+  },
+  "kinematics": {
+    "link_count": null,
+    "joint_types": null,
+    "root_joint_center_mm": null,
+    "outboard_joint_center_mm": null,
+    "effective_length_mm": null,
+    "angular_range_deg": null,
+    "coupling_to_scapular_carriage": null
+  },
+  "load_share": {
+    "axial_force_N": null,
+    "bending_moment_Nm": null,
+    "torsional_moment_Nm": null,
+    "buckling_margin": null,
+    "fatigue_target_cycles": null
+  },
+  "structure": {
+    "primary_material": null,
+    "candidate_families": [
+      "machined_metal_link",
+      "isolated_carbon_link_with_metal_end_nodes",
+      "hybrid_laminate_link"
+    ],
+    "bearing_and_joint_hardware": null,
+    "secondary_capture": null
+  },
+  "sensor_reservations": [
+    "root_joint_position",
+    "outboard_joint_position",
+    "link_strain_or_axial_load",
+    "temperature",
+    "joint_play_or_wear_indicator"
+  ],
+  "domestic_rules": [
+    "The linkage remains beneath a guarded or compliant clavicle transition.",
+    "No sharp edge or open shear gap may enter the contact envelope.",
+    "The exterior shoulder slope must remain restrained and non-armored.",
+    "Service access may not require destruction of the outer form."
+  ],
+  "forbidden_assumptions": [
+    "the_clavicular_link_is_decorative_only",
+    "a_thin_visual_plate_has_sufficient_buckling_and_fatigue_margin",
+    "biological_clavicle_dimensions_may_be_scaled_directly_without_project_anthropometry",
+    "the_linkage_may_bottom_out_against_padding_as_a_motion_stop"
+  ],
+  "release_blockers": [
+    "locked root and outboard joint centers",
+    "resolved linkage topology",
+    "defined load share",
+    "buckling and fatigue analysis",
+    "selected joints bearings and retention",
+    "guard and fascia interface",
+    "cyclic coupled-motion validation"
+  ]
+}

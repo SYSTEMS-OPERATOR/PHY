@@ -15,8 +15,8 @@
   "carried_functions": [
     "sternum_tower",
     "cervical_and_spine_interface",
-    "left_shoulder_yoke",
-    "right_shoulder_yoke",
+    "left_shoulder_girdle_root_nodes",
+    "right_shoulder_girdle_root_nodes",
     "actuator_mounts",
     "electronics_cradle",
     "thermal_paths",
@@ -25,12 +25,11 @@
   ],
   "structural_interfaces": {
     "superior": [
-      "cervical_stack",
-      "left_shoulder_cartridge",
-      "right_shoulder_cartridge"
+      "cervical_stack"
     ],
     "posterior": [
-      "segmented_spine"
+      "segmented_spine",
+      "T56_SHOULDER_GIRDLE_ROOT_INTERFACE"
     ],
     "inferior": [
       "pelvic_sacral_bridge"
@@ -42,16 +41,17 @@
   "geometry": {
     "overall_envelope_mm": null,
     "sternum_tower_dimensions_mm": null,
-    "shoulder_yoke_spacing_mm": null,
+    "shoulder_root_node_locations_mm": null,
+    "shoulder_root_axis_vectors": null,
     "wall_thickness_mm": null,
     "mass_target_kg": null,
     "center_of_mass": null
   },
   "service_zones": [
     "anterior_core_panel",
-    "left_shoulder_access",
-    "right_shoulder_access",
-    "posterior_spine_access",
+    "left_shoulder_root_access",
+    "right_shoulder_root_access",
+    "posterior_spine_and_carriage_access",
     "inferior_pelvis_interface_access"
   ],
   "thermal_requirements": {
@@ -60,6 +60,12 @@
     "maximum_contact_side_temperature_C": null,
     "padding_as_primary_heat_sink_prohibited": true
   },
+  "shoulder_load_path_rules": [
+    "Primary shoulder reactions enter through T56_SHOULDER_GIRDLE_ROOT_INTERFACE.",
+    "The secondary carbon ribcage is excluded from the primary arm reaction path.",
+    "Shoulder root adjustment must preserve the thoracic coordinate datum.",
+    "Root-node fasteners inserts dielectric barriers and sensors remain inspectable."
+  ],
   "domestic_contact_rules": [
     "Hard corners require guarded or compliant outer treatment.",
     "Fasteners near likely contact zones must be recessed or covered.",
@@ -69,7 +75,7 @@
     "validated thoracic envelope",
     "defined structural load cases",
     "selected alloy and heat treatment",
-    "resolved shoulder yoke geometry",
+    "resolved floating scapular girdle root geometry and load transfer",
     "resolved spine and pelvis interfaces",
     "thermal model",
     "fastener and insert validation"

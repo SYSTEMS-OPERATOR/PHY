@@ -8,7 +8,7 @@ This document defines the nested thorax architecture for the T-5.6 domestic huma
 
 ## Layer stack
 
-1. **Primary inner housing** — a compact metal thoracic chassis carrying the sternum tower, spine interface, shoulder yokes, actuator mounts, electronics cradle, thermal paths, service anchors, and pelvic hard-mount path.
+1. **Primary inner housing** — a compact metal thoracic chassis carrying the sternum tower, spine interface, floating shoulder-girdle root nodes, actuator mounts, electronics cradle, thermal paths, service anchors, and pelvic hard-mount path.
 2. **Isolation and spacer stack** — dielectric standoffs, vibration isolators, thermal breaks, service gaps, airflow paths, and cable corridors separating the metal chassis from carbon structure.
 3. **Secondary carbon ribcage** — a lightweight bilateral rib system defining the thoracic envelope, fascia anchors, removable-shell support, service windows, and non-primary contour loads.
 4. **Compliant contour system** — replaceable padding, spacer textile, foam, gel, and elastomer layers providing pressure diffusion, body continuity, contact softness, and outer-form support.
@@ -16,7 +16,8 @@ This document defines the nested thorax architecture for the T-5.6 domestic huma
 ## Structural boundary
 
 - The inner housing carries primary machine alignment and concentrated hard mounts.
-- The carbon ribcage does not become a primary chassis member unless separately analyzed and validated.
+- Primary arm reactions enter through the project-local floating scapular-girdle root interface and terminate in the inner housing and segmented spine.
+- The carbon ribcage does not become a primary chassis or shoulder-reaction member unless separately analyzed and validated.
 - The isolation stack must prevent direct carbon-to-aluminum contact.
 - Padding and contour layers are contact systems, not hidden primary load paths.
 
@@ -30,12 +31,13 @@ The module must support independent access to:
 
 - central sternum and electronics core
 - left and right rib assemblies
-- shoulder-yoke interfaces
+- floating shoulder-girdle root nodes
+- scapular-carriage, clavicular-link, and shoulder-cartridge service zones
 - cable and airflow corridors
 - fascia and outer-form supports
 - lower-thorax and pelvic transition hardware
 
-No critical fastener, connector, thermal path, or isolation element may be permanently buried beneath the contour system.
+No critical fastener, connector, thermal path, isolation element, shoulder retainer, or motion stop may be permanently buried beneath the contour system.
 
 ## Electrical and materials doctrine
 
@@ -52,9 +54,10 @@ No critical fastener, connector, thermal path, or isolation element may be perma
 - selected carbon system and laminate schedule
 - isolation-stack materials and compression limits
 - rib attachment geometry
-- shoulder and pelvic interface geometry
+- floating scapular-girdle root geometry, trajectory, and shoulder-cartridge interfaces
+- pelvic interface geometry
 - thermal and acoustic acceptance criteria
-- destructive coupons and thorax subassembly testing
+- destructive coupons and thorax-plus-shoulder subassembly testing
 
 ## Design sentence
 

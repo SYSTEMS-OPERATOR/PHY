@@ -1,0 +1,81 @@
+{
+  "component_id": "T56_SCAPULAR_CARRIAGE",
+  "project": "T56_CARBON",
+  "status": "concept_scaffold_not_fabrication_ready",
+  "instance_model": "bilateral_template_with_independent_left_and_right_calibration",
+  "role": "movable_structural_carriage_that_positions_the_lateral_shoulder_center_and_transfers_load_to_the_thoracic_root_interface",
+  "architecture": {
+    "inboard_interface": "T56_SHOULDER_GIRDLE_ROOT_INTERFACE",
+    "anterior_superior_interface": "T56_CLAVICULAR_LINKAGE",
+    "outboard_interface": "lateral_shoulder_yoke_and_T56_HUMERAL_SHOULDER_CARTRIDGE",
+    "guide_concept": "guided_carriage_coupled_linkage_or_hybrid",
+    "positive_retention_required": true,
+    "replaceable_wear_surfaces_required": true
+  },
+  "kinematics": {
+    "protraction_retraction_travel_mm": null,
+    "elevation_depression_travel_mm": null,
+    "upward_downward_rotation_deg": null,
+    "anterior_posterior_tilt_deg": null,
+    "trajectory_coupling": null,
+    "left_right_calibration_independent": true
+  },
+  "structure": {
+    "primary_material": null,
+    "candidate_families": [
+      "machined_metal_carriage",
+      "metal_node_with_carbon_or_glass_composite_web",
+      "isolated_hybrid_carriage"
+    ],
+    "bearing_or_guide_type": null,
+    "lubrication_strategy": null,
+    "mass_target_kg": null
+  },
+  "hard_stops_and_retention": {
+    "mechanical_min_stop": null,
+    "mechanical_max_stop": null,
+    "secondary_retention": null,
+    "elastomeric_or_damped_stop": null,
+    "software_limit_as_only_stop_prohibited": true
+  },
+  "sensor_reservations": [
+    "absolute_carriage_position",
+    "relative_linkage_state",
+    "root_reaction_or_strain",
+    "guide_temperature",
+    "vibration_and_impact",
+    "hard_stop_contact"
+  ],
+  "collision_and_guarding": {
+    "neck_clearance_volume": null,
+    "ribcage_clearance_volume": null,
+    "outer_form_clearance_volume": null,
+    "arm_clearance_volume": null,
+    "pinch_and_shear_guards_required": true,
+    "exposed_telescoping_shafts_in_contact_envelope_prohibited": true
+  },
+  "service_requirements": [
+    "carriage_removable_without_disturbing_thoracic_alignment",
+    "wear_surfaces_replaceable",
+    "sensor_zeroing_access",
+    "root_fastener_access",
+    "cable_service_loop_access",
+    "left_and_right_units_independently_serviceable"
+  ],
+  "forbidden_assumptions": [
+    "a_single_linear_slide_reproduces_the_required_shoulder_trajectory",
+    "visual_plate_geometry_defines_carriage_geometry",
+    "cosmetic_rib_or_shell_panels_may_retain_the_carriage",
+    "equal_left_and_right_command_values_produce_equal_motion_without_calibration"
+  ],
+  "release_blockers": [
+    "locked shoulder trajectory",
+    "resolved guide and linkage geometry",
+    "defined loads and safety factors",
+    "selected material bearing and wear system",
+    "hard-stop and passive-retention design",
+    "collision model",
+    "cyclic bench test",
+    "contamination and service-life test"
+  ]
+}

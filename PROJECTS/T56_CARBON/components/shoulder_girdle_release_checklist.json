@@ -1,0 +1,28 @@
+{
+  "checklist_id": "T56_SHOULDER_GIRDLE_RELEASE_CHECKLIST",
+  "project": "T56_CARBON",
+  "status": "concept_scaffold_not_fabrication_ready",
+  "required_before_test_drawing_release": [
+    "thoracic_coordinate_frame_locked",
+    "shoulder_anthropometric_envelope_locked",
+    "shoulder_center_trajectory_defined",
+    "root_and_cartridge_load_cases_approved",
+    "materials_bearings_inserts_and_isolation_selected",
+    "hard_stops_passive_retention_and_power_loss_behavior_defined",
+    "collision_guarding_and_service_envelopes_resolved",
+    "sensor_channel_counts_and_fault_behavior_defined"
+  ],
+  "required_before_fabrication_release": [
+    "root_node_coupon_tests_passed",
+    "carriage_linkage_and_cartridge_bench_tests_passed",
+    "single_side_subassembly_passed",
+    "paired_thoracic_subassembly_passed",
+    "domestic_contact_and_acoustic_limits_passed",
+    "endurance_and_post_test_inspection_passed",
+    "service_procedure_repeatability_validated"
+  ],
+  "release_state": {
+    "test_drawing_release": false,
+    "fabrication_release": false
+  }
+}

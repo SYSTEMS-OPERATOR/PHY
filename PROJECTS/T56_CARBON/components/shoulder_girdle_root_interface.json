@@ -1,0 +1,87 @@
+{
+  "component_id": "T56_SHOULDER_GIRDLE_ROOT_INTERFACE",
+  "project": "T56_CARBON",
+  "status": "concept_scaffold_not_fabrication_ready",
+  "role": "transfer_bilateral_shoulder_reactions_into_the_primary_inner_thoracic_housing_and_segmented_spine",
+  "receiving_structures": [
+    "T56_INNER_THORACIC_HOUSING",
+    "segmented_spine"
+  ],
+  "root_node_classes": [
+    {
+      "node_class": "posterior_scapular_carriage_root",
+      "instances": ["left", "right"],
+      "coordinates_mm": null,
+      "allowable_forces_N": null,
+      "allowable_moments_Nm": null,
+      "stiffness_targets": null
+    },
+    {
+      "node_class": "anterior_clavicular_link_root",
+      "instances": ["left", "right"],
+      "coordinates_mm": null,
+      "allowable_forces_N": null,
+      "allowable_moments_Nm": null,
+      "stiffness_targets": null
+    },
+    {
+      "node_class": "upper_thoracic_cross_brace_or_equivalent",
+      "instances": ["central"],
+      "coordinates_mm": null,
+      "allowable_forces_N": null,
+      "allowable_moments_Nm": null,
+      "stiffness_targets": null
+    }
+  ],
+  "interface_rules": [
+    "Primary arm reactions terminate in the inner housing and segmented spine, not the secondary carbon ribcage.",
+    "Root nodes require defined load spreading, bearing surfaces, fastener retention, and inspection access.",
+    "No root node may depend on a removable cosmetic or contour panel.",
+    "Dissimilar conductive materials require a validated dielectric and galvanic-isolation strategy.",
+    "Root removal or adjustment must not disturb the central thoracic coordinate datum."
+  ],
+  "material_strategy": {
+    "primary_node_material": null,
+    "candidate_families": [
+      "machined_aluminum_alloy_with_validated_isolation",
+      "titanium_local_node",
+      "steel_or_titanium_threaded_insert",
+      "hybrid_metal_composite_load_spreader"
+    ],
+    "material_selection_locked": false
+  },
+  "geometry": {
+    "root_node_coordinates_mm": null,
+    "guide_axis_vectors": null,
+    "clavicular_root_axis_vectors": null,
+    "fastener_pattern_mm": null,
+    "service_clearance_mm": null
+  },
+  "load_cases": {
+    "static_arm_weight": null,
+    "arm_acceleration": null,
+    "supported_recline": null,
+    "accidental_pull_or_push": null,
+    "minor_contact_impact": null,
+    "maintenance_handling": null,
+    "safety_factors": null
+  },
+  "inspection_and_service": [
+    "root_fastener_torque_or_preload_check",
+    "bearing_or_bushing_wear_check",
+    "dielectric_barrier_integrity_check",
+    "strain_sensor_zero_check",
+    "crack_delamination_and_fretting_inspection",
+    "repeatable_alignment_verification"
+  ],
+  "release_blockers": [
+    "locked thoracic coordinate frame",
+    "resolved root-node geometry",
+    "defined shoulder load cases",
+    "selected material and insert system",
+    "finite-element or equivalent load-path analysis",
+    "static proof test",
+    "cyclic and impact validation",
+    "service-access rehearsal"
+  ]
+}

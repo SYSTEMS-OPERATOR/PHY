@@ -1,0 +1,107 @@
+{
+  "component_id": "T56_SHOULDER_SENSOR_SERVICE_MAP",
+  "project": "T56_CARBON",
+  "status": "concept_scaffold_not_fabrication_ready",
+  "role": "reserve_sensor_routing_guard_and_service_interfaces_for_the_floating_scapular_girdle",
+  "sensor_channels": [
+    {
+      "channel_class": "shoulder_cartridge_absolute_position",
+      "instances": ["left", "right"],
+      "count_per_instance": null,
+      "location_mm": null,
+      "sample_rate_Hz": null,
+      "accuracy_requirement": null
+    },
+    {
+      "channel_class": "scapular_carriage_or_linkage_state",
+      "instances": ["left", "right"],
+      "count_per_instance": null,
+      "location_mm": null,
+      "sample_rate_Hz": null,
+      "accuracy_requirement": null
+    },
+    {
+      "channel_class": "root_reaction_strain_or_load",
+      "instances": ["left", "right"],
+      "count_per_instance": null,
+      "location_mm": null,
+      "sample_rate_Hz": null,
+      "accuracy_requirement": null
+    },
+    {
+      "channel_class": "temperature",
+      "instances": ["left", "right"],
+      "count_per_instance": null,
+      "location_mm": null,
+      "sample_rate_Hz": null,
+      "accuracy_requirement": null
+    },
+    {
+      "channel_class": "vibration_impact_and_hard_stop_contact",
+      "instances": ["left", "right"],
+      "count_per_instance": null,
+      "location_mm": null,
+      "sample_rate_Hz": null,
+      "accuracy_requirement": null
+    },
+    {
+      "channel_class": "guard_panel_and_retainer_state",
+      "instances": ["left", "right"],
+      "count_per_instance": null,
+      "location_mm": null,
+      "sample_rate_Hz": null,
+      "accuracy_requirement": null
+    }
+  ],
+  "routing_zones": [
+    "posterior_root_service_loop",
+    "anterior_clavicular_link_service_loop",
+    "lateral_cartridge_service_loop",
+    "humeral_transition_loop",
+    "fascia_bridge_sensor_zone"
+  ],
+  "routing_rules": [
+    "No cable may act as a mechanical motion stop or cartridge retainer.",
+    "Service loops must tolerate the full validated shoulder trajectory without tension abrasion or snagging.",
+    "Power conductors remain separated from low-level strain and tactile sensing where practical.",
+    "Routing may not cross unguarded pinch or shear zones.",
+    "Connectors require positive retention and keyed left-right identification.",
+    "Sensor replacement must not require removal of the central thoracic electronics core."
+  ],
+  "service_zones": [
+    {
+      "zone_id": "posterior_carriage_access",
+      "side": "bilateral",
+      "required_access_mm": null,
+      "supported_body_postures": ["upright_supported", "reclined_supported"]
+    },
+    {
+      "zone_id": "anterior_clavicular_root_access",
+      "side": "bilateral",
+      "required_access_mm": null,
+      "supported_body_postures": ["upright_supported", "reclined_supported"]
+    },
+    {
+      "zone_id": "lateral_cartridge_access",
+      "side": "bilateral",
+      "required_access_mm": null,
+      "supported_body_postures": ["upright_supported", "reclined_supported", "side_supported_if_validated"]
+    }
+  ],
+  "failure_behavior": [
+    "Loss of one position channel must be detectable.",
+    "Implausible carriage and cartridge state disagreement must be detectable.",
+    "Guard or retainer removal must inhibit unsafe powered motion.",
+    "Overtemperature hard-stop contact and abnormal impact states require defined safe behavior.",
+    "A single cable failure may not release the arm or carriage."
+  ],
+  "release_blockers": [
+    "locked sensor classes and channel counts",
+    "defined routing geometry",
+    "selected connectors and cable families",
+    "electromagnetic compatibility plan",
+    "fault detection and safe-state definition",
+    "full-range flex and abrasion testing",
+    "service-time and replacement validation"
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "assembly_id": "T56_FLOATING_SCAPULAR_GIRDLE",
+  "project": "T56_CARBON",
+  "status": "concept_scaffold_not_fabrication_ready",
+  "purpose": "Define the bilateral floating scapular girdle, clavicular guidance, and removable humeral shoulder cartridges for T-5.6.",
+  "design_sentence": "Spine roots. Scapulae travel. Clavicles guide. Cartridges carry the arms. Softness guards the motion.",
+  "coordinate_frame_reference": {
+    "file": "outer_form_support_points.json",
+    "origin": "thoracic_midline_at_sternum_spine_reference_plane",
+    "axes": {
+      "x": "left_to_right",
+      "y": "posterior_to_anterior",
+      "z": "inferior_to_superior"
+    }
+  },
+  "component_files": {
+    "architecture": "floating_scapular_girdle_architecture.md",
+    "root_interface": "shoulder_girdle_root_interface.json",
+    "scapular_carriage": "scapular_carriage.json",
+    "clavicular_linkage": "clavicular_linkage.json",
+    "shoulder_cartridge": "humeral_shoulder_cartridge.json",
+    "sensor_and_service_map": "shoulder_sensor_service_map.json",
+    "release_checklist": "shoulder_girdle_release_checklist.json",
+    "validation": "../tests/shoulder_girdle_validation_plan.json",
+    "reference_notes": "../references/shoulder_girdle_visual_reference_notes.md"
+  },
+  "bilateral_instances": {
+    "left": {
+      "side": "left",
+      "root_interface_instance": "T56_SHOULDER_ROOT_L",
+      "scapular_carriage_instance": "T56_SCAPULAR_CARRIAGE_L",
+      "clavicular_linkage_instance": "T56_CLAVICULAR_LINKAGE_L",
+      "shoulder_cartridge_instance": "T56_HUMERAL_SHOULDER_CARTRIDGE_L"
+    },
+    "right": {
+      "side": "right",
+      "root_interface_instance": "T56_SHOULDER_ROOT_R",
+      "scapular_carriage_instance": "T56_SCAPULAR_CARRIAGE_R",
+      "clavicular_linkage_instance": "T56_CLAVICULAR_LINKAGE_R",
+      "shoulder_cartridge_instance": "T56_HUMERAL_SHOULDER_CARTRIDGE_R"
+    }
+  },
+  "primary_load_path": [
+    "humeral_member",
+    "humeral_shoulder_cartridge",
+    "lateral_shoulder_yoke",
+    "scapular_carriage_and_clavicular_linkage",
+    "shoulder_girdle_root_interface",
+    "inner_thoracic_housing_and_segmented_spine"
+  ],
+  "excluded_primary_load_paths": [
+    "secondary_carbon_ribcage",
+    "thoracic_compliance_padding",
+    "outer_form_support",
+    "artificial_fascia",
+    "cosmetic_service_panels"
+  ],
+  "kinematic_targets": {
+    "scapular_protraction_retraction_mm": null,
+    "scapular_elevation_depression_mm": null,
+    "scapular_upward_downward_rotation_deg": null,
+    "scapular_tilt_deg": null,
+    "shoulder_center_translation_mm": null,
+    "trajectory_definition": null
+  },
+  "forbidden_assumptions": [
+    "concept_art_dimensions_are_fabrication_dimensions",
+    "visible_plate_shapes_define_required_part_geometry",
+    "secondary_carbon_ribs_may_carry_primary_arm_reactions",
+    "bilateral_visual_symmetry_proves_mechanical_equivalence",
+    "software_limits_are_sufficient_without_physical_stops",
+    "a_cosmetic_cover_may_function_as_a_required_structural_retainer"
+  ],
+  "release_state": {
+    "fabrication_ready": false,
+    "simulation_ready": false,
+    "coordinate_frame_locked": false,
+    "anthropometry_locked": false,
+    "trajectory_locked": false,
+    "materials_locked": false,
+    "load_cases_locked": false,
+    "paired_subassembly_tested": false
+  }
+}

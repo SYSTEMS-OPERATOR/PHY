@@ -1,0 +1,142 @@
+{
+  "plan_id": "T56_SHOULDER_GIRDLE_VALIDATION_PLAN",
+  "project": "T56_CARBON",
+  "status": "concept_scaffold_not_fabrication_ready",
+  "purpose": "Validate the root interface, floating scapular carriages, clavicular linkages, shoulder cartridges, routing, guarding, and paired thoracic integration before fabrication release.",
+  "test_articles": [
+    "material_and_bond_coupons",
+    "root_node_and_insert_coupon",
+    "single_scapular_carriage_bench_article",
+    "single_clavicular_linkage_bench_article",
+    "single_humeral_shoulder_cartridge",
+    "single_side_root_to_dummy_humerus_subassembly",
+    "paired_shoulders_on_representative_thoracic_subassembly",
+    "guard_fascia_and_routing_article"
+  ],
+  "phases": [
+    {
+      "phase": 0,
+      "name": "document_and_coordinate_audit",
+      "checks": [
+        "all component identifiers and file references resolve",
+        "thoracic coordinate frame is inherited consistently",
+        "all unknown fabrication-critical values remain null",
+        "reference imagery is not stored as fabrication geometry"
+      ],
+      "pass_criteria": null
+    },
+    {
+      "phase": 1,
+      "name": "anthropometric_envelope_and_collision_model",
+      "checks": [
+        "shoulder center trajectory fits the locked T-5.6 envelope",
+        "neck ribcage outer-form and arm collision volumes are modeled",
+        "left and right service envelopes remain accessible",
+        "reclining and side-contact postures are evaluated"
+      ],
+      "pass_criteria": null
+    },
+    {
+      "phase": 2,
+      "name": "materials_inserts_bearings_and_wear_coupons",
+      "checks": [
+        "root-node insert pull-out and shear",
+        "guide and bearing friction wear and contamination",
+        "dielectric barrier compression and integrity",
+        "linkage buckling and fatigue coupons",
+        "fastener retention and fretting"
+      ],
+      "pass_criteria": null
+    },
+    {
+      "phase": 3,
+      "name": "static_root_and_load_path_proof",
+      "checks": [
+        "static arm-weight reaction",
+        "fore-aft and lateral pull or push",
+        "supported-recline load",
+        "maintenance handling load",
+        "load bypass into the secondary carbon ribcage is measured and bounded"
+      ],
+      "pass_criteria": null
+    },
+    {
+      "phase": 4,
+      "name": "single_side_kinematic_bench",
+      "checks": [
+        "full carriage and linkage trajectory",
+        "mechanical hard stops and secondary retention",
+        "position repeatability and hysteresis",
+        "cable and tendon service-loop behavior",
+        "noise vibration and temperature"
+      ],
+      "pass_criteria": null
+    },
+    {
+      "phase": 5,
+      "name": "shoulder_cartridge_and_dummy_humerus",
+      "checks": [
+        "all shoulder axes and ranges",
+        "bearing preload and wear",
+        "power-loss arm behavior",
+        "hard-stop energy handling",
+        "cartridge removal replacement and re-zeroing"
+      ],
+      "pass_criteria": null
+    },
+    {
+      "phase": 6,
+      "name": "guards_fascia_and_domestic_contact",
+      "checks": [
+        "pinch shear and entrapment guarding",
+        "outer-surface temperature",
+        "compliant clavicle and scapular transitions",
+        "impact and accidental close contact",
+        "guard and retainer state sensing"
+      ],
+      "pass_criteria": null
+    },
+    {
+      "phase": 7,
+      "name": "paired_shoulder_thoracic_integration",
+      "checks": [
+        "bilateral calibration",
+        "simultaneous arm motion and root loading",
+        "thoracic alignment stability",
+        "service access with both assemblies installed",
+        "electrical thermal acoustic and structural interaction"
+      ],
+      "pass_criteria": null
+    },
+    {
+      "phase": 8,
+      "name": "endurance_and_release_review",
+      "checks": [
+        "cyclic motion to the defined life target",
+        "periodic wear and crack inspection",
+        "sensor drift and fault detection",
+        "maintenance time and repeatability",
+        "post-test destructive inspection"
+      ],
+      "pass_criteria": null
+    }
+  ],
+  "release_gates": [
+    "coordinate_and_anthropometry_locked",
+    "load_cases_and_safety_factors_approved",
+    "materials_and_joint_hardware_selected",
+    "single_side_subassembly_passed",
+    "paired_thoracic_subassembly_passed",
+    "guarding_and_power_loss_behavior_passed",
+    "endurance_target_passed",
+    "service_procedure_validated"
+  ],
+  "release_state": {
+    "fabrication_ready": false,
+    "test_drawings_ready": false,
+    "single_side_validated": false,
+    "paired_integration_validated": false,
+    "domestic_contact_validated": false,
+    "endurance_validated": false
+  }
+}

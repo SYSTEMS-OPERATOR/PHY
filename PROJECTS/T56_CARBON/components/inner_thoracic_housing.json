@@ -1,0 +1,77 @@
+{
+  "component_id": "T56_INNER_THORACIC_HOUSING",
+  "project": "T56_CARBON",
+  "status": "concept_scaffold_not_fabrication_ready",
+  "role": "primary_machine_chassis_and_protected_thoracic_core",
+  "material_strategy": {
+    "primary_metal_family": null,
+    "candidate_families": [
+      "machined_aluminum_alloy",
+      "titanium_local_nodes",
+      "steel_or_titanium_threaded_inserts"
+    ],
+    "material_selection_locked": false
+  },
+  "carried_functions": [
+    "sternum_tower",
+    "cervical_and_spine_interface",
+    "left_shoulder_yoke",
+    "right_shoulder_yoke",
+    "actuator_mounts",
+    "electronics_cradle",
+    "thermal_paths",
+    "power_and_data_service_anchors",
+    "pelvic_hard_mount_path"
+  ],
+  "structural_interfaces": {
+    "superior": [
+      "cervical_stack",
+      "left_shoulder_cartridge",
+      "right_shoulder_cartridge"
+    ],
+    "posterior": [
+      "segmented_spine"
+    ],
+    "inferior": [
+      "pelvic_sacral_bridge"
+    ],
+    "outboard": [
+      "thoracic_isolation_stack"
+    ]
+  },
+  "geometry": {
+    "overall_envelope_mm": null,
+    "sternum_tower_dimensions_mm": null,
+    "shoulder_yoke_spacing_mm": null,
+    "wall_thickness_mm": null,
+    "mass_target_kg": null,
+    "center_of_mass": null
+  },
+  "service_zones": [
+    "anterior_core_panel",
+    "left_shoulder_access",
+    "right_shoulder_access",
+    "posterior_spine_access",
+    "inferior_pelvis_interface_access"
+  ],
+  "thermal_requirements": {
+    "continuous_heat_rejection_W": null,
+    "peak_heat_rejection_W": null,
+    "maximum_contact_side_temperature_C": null,
+    "padding_as_primary_heat_sink_prohibited": true
+  },
+  "domestic_contact_rules": [
+    "Hard corners require guarded or compliant outer treatment.",
+    "Fasteners near likely contact zones must be recessed or covered.",
+    "Service access must remain possible in a safely supported reclined posture."
+  ],
+  "release_blockers": [
+    "validated thoracic envelope",
+    "defined structural load cases",
+    "selected alloy and heat treatment",
+    "resolved shoulder yoke geometry",
+    "resolved spine and pelvis interfaces",
+    "thermal model",
+    "fastener and insert validation"
+  ]
+}

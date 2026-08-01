@@ -1,0 +1,70 @@
+{
+  "component_id": "T56_THORACIC_ISOLATION_STACK",
+  "project": "T56_CARBON",
+  "status": "concept_scaffold_not_fabrication_ready",
+  "role": "dielectric_vibration_thermal_and_service_separation_between_metal_core_and_carbon_ribcage",
+  "required_functions": [
+    "prevent_direct_carbon_to_aluminum_contact",
+    "reduce_vibration_transmission",
+    "interrupt_galvanic_paths",
+    "provide_tolerance_compliance",
+    "maintain_service_gap",
+    "support_airflow_and_cable_corridors",
+    "limit_thermal_transfer_into_contour_layers"
+  ],
+  "candidate_elements": [
+    {
+      "type": "structural_standoff",
+      "candidate_materials": ["PEEK", "acetal", "glass_filled_polymer"],
+      "dimensions_mm": null,
+      "compression_limit_N": null
+    },
+    {
+      "type": "vibration_isolator",
+      "candidate_materials": ["silicone", "TPU", "engineered_elastomer"],
+      "durometer": null,
+      "preload_N": null
+    },
+    {
+      "type": "dielectric_barrier",
+      "candidate_materials": ["G10", "glass_fiber_laminate", "nonconductive_coating"],
+      "thickness_mm": null,
+      "breakdown_voltage_V": null
+    },
+    {
+      "type": "nonconductive_fastener_interface",
+      "candidate_materials": ["polymer_bushing", "dielectric_washer", "isolating_sleeve"],
+      "dimensions_mm": null
+    }
+  ],
+  "interface_map": {
+    "inboard": "T56_INNER_THORACIC_HOUSING",
+    "outboard": "T56_SECONDARY_CARBON_RIBCAGE",
+    "service_corridors": [
+      "left_power_and_data_corridor",
+      "right_power_and_data_corridor",
+      "anterior_airflow_corridor",
+      "posterior_sensor_corridor"
+    ]
+  },
+  "acceptance_metrics": {
+    "minimum_dielectric_resistance_ohm": null,
+    "maximum_vibration_transmissibility": null,
+    "maximum_compression_set_percent": null,
+    "minimum_service_gap_mm": null,
+    "maximum_temperature_at_carbon_interface_C": null
+  },
+  "inspection_requirements": [
+    "Isolation elements must remain visible or inspectable after shell removal.",
+    "Crushed, cracked, conductive, or permanently compressed isolators are replaceable service items.",
+    "No cable may become the unintended mechanical spacer between metal and carbon."
+  ],
+  "release_blockers": [
+    "selected materials with traceable datasheets",
+    "defined compression and shear loads",
+    "galvanic isolation test",
+    "vibration transmissibility test",
+    "thermal soak test",
+    "service-gap and cable-clearance verification"
+  ]
+}

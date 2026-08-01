@@ -1,0 +1,86 @@
+{
+  "component_id": "T56_THORACIC_COMPLIANCE_PADDING",
+  "project": "T56_CARBON",
+  "status": "concept_scaffold_not_fabrication_ready",
+  "role": "replaceable_contact_comfort_pressure_diffusion_and_body_contour_layer",
+  "primary_load_path": false,
+  "functional_zones": {
+    "upper_chest": [
+      "clavicle_transition",
+      "upper_thorax_smoothing",
+      "shoulder_continuity"
+    ],
+    "anterior_chest": [
+      "pressure_diffusion",
+      "contour_support",
+      "hard_edge_print_through_reduction"
+    ],
+    "lateral_thorax": [
+      "side_torso_softness",
+      "underarm_transition",
+      "rib_edge_isolation"
+    ],
+    "lower_thorax": [
+      "underbust_taper",
+      "upper_abdominal_transition",
+      "floating_rib_continuity"
+    ],
+    "posterior_thorax": [
+      "spine_module_isolation",
+      "scapular_contour_support",
+      "service_panel_smoothing"
+    ]
+  },
+  "candidate_layer_families": [
+    {
+      "type": "load_spreading_spacer_textile",
+      "material": null,
+      "thickness_mm": null
+    },
+    {
+      "type": "shaped_compliant_foam",
+      "material": null,
+      "density_kg_m3": null,
+      "thickness_mm": null
+    },
+    {
+      "type": "localized_gel_or_elastomer_insert",
+      "material": null,
+      "durometer": null,
+      "thickness_mm": null
+    },
+    {
+      "type": "outer_tension_textile",
+      "material": null,
+      "pretension": null
+    }
+  ],
+  "interfaces": {
+    "inboard": "T56_SECONDARY_CARBON_RIBCAGE",
+    "outboard": "future_outer_skin_or_body_shell",
+    "anchors": "T56_OUTER_FORM_SUPPORT_POINTS"
+  },
+  "contact_requirements": {
+    "maximum_static_interface_pressure_kPa": null,
+    "maximum_surface_temperature_C": null,
+    "minimum_recovery_after_compression_percent": null,
+    "maximum_permanent_set_percent": null,
+    "cleaning_method": null,
+    "replaceable_without_structural_disassembly": true
+  },
+  "service_rules": [
+    "Padding modules must be removable without cutting structural members.",
+    "Padding must not conceal uninspectable high-load fasteners or isolation points.",
+    "Heat-producing electronics may not rely on padding as a heat rejection path.",
+    "Moisture-trapping cavities require drainage, ventilation, or removable liners."
+  ],
+  "release_blockers": [
+    "validated outer form envelope",
+    "selected compliant material stack",
+    "pressure mapping",
+    "thermal soak testing",
+    "compression set and recovery testing",
+    "cleanability and moisture review",
+    "service removal rehearsal"
+  ]
+}

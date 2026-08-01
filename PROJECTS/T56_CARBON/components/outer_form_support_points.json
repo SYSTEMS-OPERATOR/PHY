@@ -1,0 +1,77 @@
+{
+  "component_id": "T56_OUTER_FORM_SUPPORT_POINTS",
+  "project": "T56_CARBON",
+  "status": "concept_scaffold_not_fabrication_ready",
+  "role": "distributed_replaceable_interfaces_between_secondary_ribcage_compliance_layers_fascia_and_future_outer_body",
+  "support_classes": [
+    {
+      "class_id": "fascia_anchor",
+      "intended_loads": ["distributed_tension", "shape_control"],
+      "count": null,
+      "locations": null,
+      "allowable_load_N": null
+    },
+    {
+      "class_id": "padding_retainer",
+      "intended_loads": ["compression_retention", "shear_control"],
+      "count": null,
+      "locations": null,
+      "allowable_load_N": null
+    },
+    {
+      "class_id": "removable_shell_support",
+      "intended_loads": ["panel_retention", "light_impact_spreading"],
+      "count": null,
+      "locations": null,
+      "allowable_load_N": null
+    },
+    {
+      "class_id": "sensor_mount",
+      "intended_loads": ["tactile_sensor_support", "strain_sensor_support", "temperature_sensor_support"],
+      "count": null,
+      "locations": null,
+      "allowable_load_N": null
+    },
+    {
+      "class_id": "service_alignment_feature",
+      "intended_loads": ["repeatable_panel_alignment", "assembly_error_prevention"],
+      "count": null,
+      "locations": null,
+      "allowable_load_N": null
+    }
+  ],
+  "interface_rules": [
+    "Every support point must identify its receiving structural layer.",
+    "Loads must spread into reinforced rib regions or validated local inserts.",
+    "No support point may drill through unreinforced laminate without a defined insert or hardpoint.",
+    "Support points in contact zones must be recessed, covered, or compliant.",
+    "Outer form removal must not disturb primary machine alignment."
+  ],
+  "coordinate_system": {
+    "origin": "thoracic_midline_at_sternum_spine_reference_plane",
+    "axes": {
+      "x": "left_to_right",
+      "y": "posterior_to_anterior",
+      "z": "inferior_to_superior"
+    },
+    "coordinates_mm": null
+  },
+  "service_metadata_required_per_point": [
+    "support_id",
+    "support_class",
+    "coordinates_mm",
+    "receiving_component",
+    "fastener_or_attachment_type",
+    "allowable_load_N",
+    "inspection_interval",
+    "replacement_method"
+  ],
+  "release_blockers": [
+    "locked thoracic coordinate frame",
+    "resolved outer form envelope",
+    "resolved rib reinforcement zones",
+    "validated attachment hardware",
+    "pull-out and shear testing",
+    "repeatable assembly and removal test"
+  ]
+}

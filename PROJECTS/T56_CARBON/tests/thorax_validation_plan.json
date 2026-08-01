@@ -1,0 +1,94 @@
+{
+  "validation_id": "T56_NESTED_THORAX_VALIDATION",
+  "project": "T56_CARBON",
+  "status": "plan_scaffold_not_executed",
+  "applies_to": [
+    "T56_INNER_THORACIC_HOUSING",
+    "T56_THORACIC_ISOLATION_STACK",
+    "T56_SECONDARY_CARBON_RIBCAGE",
+    "T56_THORACIC_COMPLIANCE_PADDING",
+    "T56_OUTER_FORM_SUPPORT_POINTS"
+  ],
+  "test_phases": [
+    {
+      "phase": 1,
+      "name": "materials_and_witness_coupons",
+      "tests": [
+        "metal_material_verification",
+        "composite_witness_coupon_tension_and_flexure",
+        "adhesive_and_insert_coupon_tests",
+        "dielectric_barrier_resistance",
+        "isolator_compression_set",
+        "padding_recovery_and_thermal_aging"
+      ]
+    },
+    {
+      "phase": 2,
+      "name": "interface_subassemblies",
+      "tests": [
+        "metal_to_isolator_interface",
+        "isolator_to_carbon_interface",
+        "rib_attachment_pull_out",
+        "rib_attachment_shear",
+        "support_point_pull_out",
+        "support_point_repeat_assembly"
+      ]
+    },
+    {
+      "phase": 3,
+      "name": "structural_thorax_subassembly",
+      "tests": [
+        "inner_housing_static_load",
+        "inner_housing_torsion",
+        "ribcage_bending_and_torsion",
+        "combined_attachment_fatigue",
+        "shoulder_reaction_load_simulation",
+        "spine_to_pelvis_load_path_simulation"
+      ]
+    },
+    {
+      "phase": 4,
+      "name": "electrical_thermal_and_acoustic",
+      "tests": [
+        "galvanic_isolation_soak",
+        "frame_continuity_and_leakage",
+        "power_to_tactile_sensor_isolation",
+        "thermal_steady_state",
+        "thermal_peak_event",
+        "vibration_transmission",
+        "operational_acoustic_measurement"
+      ]
+    },
+    {
+      "phase": 5,
+      "name": "contact_and_service",
+      "tests": [
+        "contour_pressure_mapping",
+        "hard_edge_print_through_review",
+        "contact_surface_temperature_review",
+        "moisture_and_cleanability_review",
+        "anterior_service_access_rehearsal",
+        "bilateral_rib_removal_rehearsal",
+        "supported_reclined_maintenance_rehearsal"
+      ]
+    }
+  ],
+  "acceptance_criteria": {
+    "structural_safety_factor": null,
+    "maximum_permanent_deformation_mm": null,
+    "minimum_dielectric_resistance_ohm": null,
+    "maximum_surface_temperature_C": null,
+    "maximum_operational_sound_dBA": null,
+    "maximum_contact_pressure_kPa": null,
+    "minimum_fatigue_cycles": null,
+    "maximum_service_time_minutes": null
+  },
+  "required_reports": [
+    "thorax_materials_report",
+    "thorax_interface_test_report",
+    "thorax_structural_report",
+    "thorax_electrical_thermal_acoustic_report",
+    "thorax_contact_and_service_report"
+  ],
+  "release_rule": "No thorax component may be marked fabrication_ready until all applicable acceptance criteria are defined, traceable, tested, and passed."
+}

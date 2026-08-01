@@ -20,6 +20,7 @@
     "clavicular_linkage": "clavicular_linkage.json",
     "shoulder_cartridge": "humeral_shoulder_cartridge.json",
     "sensor_and_service_map": "shoulder_sensor_service_map.json",
+    "release_checklist": "shoulder_girdle_release_checklist.json",
     "validation": "../tests/shoulder_girdle_validation_plan.json",
     "reference_notes": "../references/shoulder_girdle_visual_reference_notes.md"
   },

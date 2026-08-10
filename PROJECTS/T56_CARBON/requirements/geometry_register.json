@@ -1,0 +1,236 @@
+{
+  "schema_version": "0.1.0",
+  "register_id": "T56_GEOMETRY_REGISTER",
+  "project": "T56_CARBON",
+  "status": "datum_defined_geometry_open_not_simulation_ready",
+  "purpose": "Define the minimum dimensioned geometry needed to simulate the pelvis, nested thorax, and single-side floating shoulder article.",
+  "coordinate_frame": {
+    "frame_id": "FRAME_T56_THORAX",
+    "origin_definition": "thoracic_midline_at_sternum_spine_reference_plane",
+    "axes": {
+      "x": "left_to_right",
+      "y": "posterior_to_anterior",
+      "z": "inferior_to_superior"
+    },
+    "handedness": "right_handed_to_be_verified",
+    "definition_status": "locked",
+    "dimensioned_datum_status": "open",
+    "source": "components/outer_form_support_points.json and components/floating_scapular_girdle_architecture.md"
+  },
+  "locked_parameters": [
+    {
+      "id": "GEO-GLOBAL-001",
+      "name": "overall_height",
+      "value": 1676.4,
+      "units": "mm",
+      "status": "locked",
+      "source": "profiles/t56_domestic_frame.json"
+    },
+    {
+      "id": "GEO-GLOBAL-002",
+      "name": "baseline_arm_span",
+      "value": 1676.4,
+      "units": "mm",
+      "status": "locked",
+      "source": "profiles/t56_domestic_frame.json"
+    }
+  ],
+  "parameters": [
+    {
+      "id": "GEO-THX-001",
+      "name": "structural_thorax_width",
+      "value": null,
+      "units": "mm",
+      "status": "open",
+      "required_for_simulation": true,
+      "source_requirement": "traceable anthropometric target plus packaging allocation",
+      "consumers": ["inner_thoracic_housing", "shoulder_girdle_root_interface"]
+    },
+    {
+      "id": "GEO-THX-002",
+      "name": "structural_thorax_depth",
+      "value": null,
+      "units": "mm",
+      "status": "open",
+      "required_for_simulation": true,
+      "source_requirement": "traceable anthropometric target plus packaging allocation",
+      "consumers": ["inner_thoracic_housing", "nested_thorax"]
+    },
+    {
+      "id": "GEO-THX-003",
+      "name": "structural_thorax_height",
+      "value": null,
+      "units": "mm",
+      "status": "open",
+      "required_for_simulation": true,
+      "source_requirement": "traceable anthropometric target and spine-to-pelvis interface study",
+      "consumers": ["inner_thoracic_housing", "segmented_spine", "pelvic_sacral_bridge"]
+    },
+    {
+      "id": "GEO-THX-004",
+      "name": "sternum_to_spine_reference_offset",
+      "value": null,
+      "units": "mm",
+      "status": "open",
+      "required_for_simulation": true,
+      "source_requirement": "dimensioned thoracic packaging model",
+      "consumers": ["coordinate_frame", "shoulder_girdle_root_interface"]
+    },
+    {
+      "id": "GEO-PEL-001",
+      "name": "structural_pelvis_breadth",
+      "value": null,
+      "units": "mm",
+      "status": "open",
+      "required_for_simulation": true,
+      "source_requirement": "validated T-5.6 anthropometric target",
+      "consumers": ["pelvic_sacral_bridge", "bilateral_hip_nodes"]
+    },
+    {
+      "id": "GEO-PEL-002",
+      "name": "sacral_bridge_reference_transform",
+      "value": null,
+      "units": "mm_and_deg",
+      "status": "open",
+      "required_for_simulation": true,
+      "source_requirement": "dimensioned trunk load-path model",
+      "consumers": ["pelvic_sacral_bridge", "inner_thoracic_housing"]
+    },
+    {
+      "id": "GEO-PEL-003",
+      "name": "left_hip_center_in_thorax_frame",
+      "value": null,
+      "units": "mm",
+      "status": "open",
+      "required_for_simulation": true,
+      "source_requirement": "validated anthropometry and hip cartridge packaging",
+      "consumers": ["left_hip_cartridge", "trunk_load_path"]
+    },
+    {
+      "id": "GEO-PEL-004",
+      "name": "right_hip_center_in_thorax_frame",
+      "value": null,
+      "units": "mm",
+      "status": "open",
+      "required_for_simulation": true,
+      "source_requirement": "validated anthropometry and hip cartridge packaging",
+      "consumers": ["right_hip_cartridge", "trunk_load_path"]
+    },
+    {
+      "id": "GEO-SHO-001",
+      "name": "left_posterior_carriage_root_coordinates",
+      "value": null,
+      "units": "mm",
+      "status": "open",
+      "required_for_simulation": true,
+      "source_requirement": "dimensioned thorax and shoulder envelope",
+      "consumers": ["shoulder_girdle_root_interface", "scapular_carriage"]
+    },
+    {
+      "id": "GEO-SHO-002",
+      "name": "left_anterior_clavicular_root_coordinates",
+      "value": null,
+      "units": "mm",
+      "status": "open",
+      "required_for_simulation": true,
+      "source_requirement": "dimensioned thorax and shoulder envelope",
+      "consumers": ["shoulder_girdle_root_interface", "clavicular_linkage"]
+    },
+    {
+      "id": "GEO-SHO-003",
+      "name": "left_carriage_guide_axis_or_path",
+      "value": null,
+      "units": "mm_and_unit_vector",
+      "status": "open",
+      "required_for_simulation": true,
+      "source_requirement": "selected shoulder mechanism trade study",
+      "consumers": ["scapular_carriage"]
+    },
+    {
+      "id": "GEO-SHO-004",
+      "name": "left_clavicular_link_joint_centers",
+      "value": null,
+      "units": "mm",
+      "status": "open",
+      "required_for_simulation": true,
+      "source_requirement": "selected shoulder mechanism trade study",
+      "consumers": ["clavicular_linkage"]
+    },
+    {
+      "id": "GEO-SHO-005",
+      "name": "left_shoulder_center_trajectory",
+      "value": null,
+      "units": "mm_and_deg_by_pose",
+      "status": "open",
+      "required_for_simulation": true,
+      "source_requirement": "task-space requirement and kinematic optimization",
+      "consumers": ["scapular_carriage", "clavicular_linkage", "humeral_shoulder_cartridge"]
+    },
+    {
+      "id": "GEO-SHO-006",
+      "name": "left_shoulder_cartridge_joint_center",
+      "value": null,
+      "units": "mm",
+      "status": "open",
+      "required_for_simulation": true,
+      "source_requirement": "selected shoulder cartridge architecture",
+      "consumers": ["humeral_shoulder_cartridge", "dummy_humerus_test_article"]
+    },
+    {
+      "id": "GEO-SHO-007",
+      "name": "left_shoulder_cartridge_axes_and_ranges",
+      "value": null,
+      "units": "unit_vectors_and_deg",
+      "status": "open",
+      "required_for_simulation": true,
+      "source_requirement": "task-space requirement, collision model, and hard-stop design",
+      "consumers": ["humeral_shoulder_cartridge", "collision_model"]
+    },
+    {
+      "id": "GEO-ARM-001",
+      "name": "humerus_effective_length",
+      "value": null,
+      "units": "mm",
+      "status": "open",
+      "required_for_simulation": true,
+      "source_requirement": "validated T-5.6 anthropometric target",
+      "consumers": ["dummy_humerus_test_article", "shoulder_load_cases"]
+    },
+    {
+      "id": "GEO-CLR-001",
+      "name": "neck_collision_volume",
+      "value": null,
+      "units": "mm",
+      "status": "open",
+      "required_for_simulation": true,
+      "source_requirement": "locked structural and compliant outer-form envelopes",
+      "consumers": ["shoulder_collision_model"]
+    },
+    {
+      "id": "GEO-CLR-002",
+      "name": "ribcage_and_outer_form_collision_volume",
+      "value": null,
+      "units": "mm",
+      "status": "open",
+      "required_for_simulation": true,
+      "source_requirement": "locked nested-thorax and outer-form envelopes",
+      "consumers": ["shoulder_collision_model", "guarding"]
+    },
+    {
+      "id": "GEO-CLR-003",
+      "name": "shoulder_service_access_envelope",
+      "value": null,
+      "units": "mm",
+      "status": "open",
+      "required_for_simulation": true,
+      "source_requirement": "reclined and upright maintenance rehearsal model",
+      "consumers": ["service_plan", "routing", "guards"]
+    }
+  ],
+  "symmetry_policy": {
+    "initial_geometry": "bilateral_template_permitted",
+    "calibration": "left_and_right_independent",
+    "rule": "Mirroring may seed geometry but does not prove equal stiffness, friction, travel, or sensor zero."
+  },
+  "closure_rule": "Every parameter marked required_for_simulation must have status locked, a non-null value, units, a traceable source, and a tolerance before the thorax or shoulder manifests may set simulation_ready true."
+}

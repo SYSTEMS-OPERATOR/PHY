@@ -1,0 +1,198 @@
+{
+  "schema_version": "0.1.0",
+  "register_id": "T56_MISSION_ENVELOPE",
+  "project": "T56_CARBON",
+  "status": "requirements_open_not_simulation_ready",
+  "purpose": "Define the operating inputs and scope boundaries required to calculate T-5.6 trunk and shoulder loads without inventing fabrication values.",
+  "authority": {
+    "source_pull_requests": [85, 86, 87, 88],
+    "source_files": [
+      "../PROJECT.md",
+      "../profiles/t56_domestic_frame.json",
+      "../components/pelvic_module_concept.json",
+      "../components/nested_thorax_manifest.json",
+      "../components/shoulder_girdle_manifest.json"
+    ],
+    "rule": "A locked value requires a project decision or traceable engineering source. Concept imagery is never dimensional authority."
+  },
+  "locked_project_decisions": [
+    {
+      "id": "ME-GEO-001",
+      "parameter": "height_mm",
+      "value": 1676.4,
+      "units": "mm",
+      "status": "locked",
+      "authority": "PROJECTS/T56_CARBON/PROJECT.md and profiles/t56_domestic_frame.json"
+    },
+    {
+      "id": "ME-GEO-002",
+      "parameter": "arm_span_mm",
+      "value": 1676.4,
+      "units": "mm",
+      "status": "locked",
+      "authority": "PROJECTS/T56_CARBON/PROJECT.md and profiles/t56_domestic_frame.json"
+    },
+    {
+      "id": "ME-ENV-001",
+      "parameter": "operating_environment",
+      "value": "quiet_indoor_domestic",
+      "units": null,
+      "status": "locked",
+      "authority": "PROJECTS/T56_CARBON/PROJECT.md"
+    },
+    {
+      "id": "ME-POSE-001",
+      "parameter": "geometry_pose_baseline",
+      "value": "neutral_anatomical_t_pose",
+      "units": null,
+      "status": "locked",
+      "authority": "profiles/t56_domestic_frame.json"
+    },
+    {
+      "id": "ME-ARTICLE-001",
+      "parameter": "next_convergence_article",
+      "value": "single_side_thoracic_root_to_dummy_humerus",
+      "units": null,
+      "status": "locked",
+      "authority": "tests/shoulder_girdle_validation_plan.json"
+    }
+  ],
+  "required_inputs": [
+    {
+      "id": "ME-MASS-001",
+      "parameter": "total_operating_mass",
+      "value": null,
+      "units": "kg",
+      "status": "open",
+      "question": "What is the maximum ready-to-operate mass including batteries, covers, fascia, and nominal carried equipment?",
+      "required_for": ["LC-TRUNK-001", "LC-REC-001"]
+    },
+    {
+      "id": "ME-MASS-002",
+      "parameter": "single_arm_assembly_mass",
+      "value": null,
+      "units": "kg",
+      "status": "open",
+      "question": "What mass is carried outboard of one humeral shoulder cartridge, including hand, forearm, humerus, wiring, guards, and nominal payload interface?",
+      "required_for": ["LC-SHO-001", "LC-SHO-002", "LC-SHO-005", "LC-BIL-001"]
+    },
+    {
+      "id": "ME-PAYLOAD-001",
+      "parameter": "maximum_domestic_hand_payload",
+      "value": null,
+      "units": "kg",
+      "status": "open",
+      "question": "What maximum payload may one hand carry during ordinary domestic manipulation?",
+      "required_for": ["LC-SHO-001", "LC-SHO-002", "LC-BIL-001"]
+    },
+    {
+      "id": "ME-MOTION-001",
+      "parameter": "maximum_shoulder_angular_velocity",
+      "value": null,
+      "units": "deg/s",
+      "status": "open",
+      "question": "What commanded shoulder angular velocity bounds normal operation?",
+      "required_for": ["LC-SHO-002", "LC-BIL-001"]
+    },
+    {
+      "id": "ME-MOTION-002",
+      "parameter": "maximum_shoulder_angular_acceleration",
+      "value": null,
+      "units": "deg/s^2",
+      "status": "open",
+      "question": "What commanded angular acceleration bounds normal and emergency stopping motion?",
+      "required_for": ["LC-SHO-002", "LC-BIL-001"]
+    },
+    {
+      "id": "ME-EXT-001",
+      "parameter": "accidental_arm_push_pull_force",
+      "value": null,
+      "units": "N",
+      "status": "open",
+      "question": "What accidental fore-aft or lateral force must the arm and shoulder withstand without structural release?",
+      "required_for": ["LC-SHO-003"]
+    },
+    {
+      "id": "ME-IMPACT-001",
+      "parameter": "minor_contact_impact_energy",
+      "value": null,
+      "units": "J",
+      "status": "open",
+      "question": "What impact energy defines a minor domestic collision rather than an out-of-scope crash?",
+      "required_for": ["LC-SHO-004"]
+    },
+    {
+      "id": "ME-LIFE-001",
+      "parameter": "shoulder_design_life",
+      "value": null,
+      "units": "cycles",
+      "status": "open",
+      "question": "How many representative shoulder cycles define the design life before overhaul?",
+      "required_for": ["LC-SHO-002", "LC-BIL-001"]
+    },
+    {
+      "id": "ME-SF-001",
+      "parameter": "structural_safety_factor_policy",
+      "value": null,
+      "units": null,
+      "status": "open",
+      "question": "Which safety factors apply to yield, ultimate, buckling, joint retention, bonded inserts, and fatigue?",
+      "required_for": ["all_structural_load_cases"]
+    },
+    {
+      "id": "ME-CONTACT-001",
+      "parameter": "maximum_domestic_contact_surface_temperature",
+      "value": null,
+      "units": "degC",
+      "status": "open",
+      "question": "What maximum accessible surface temperature is acceptable for sustained domestic contact?",
+      "required_for": ["LC-REC-001"]
+    },
+    {
+      "id": "ME-CONTACT-002",
+      "parameter": "maximum_sustained_contact_pressure",
+      "value": null,
+      "units": "kPa",
+      "status": "open",
+      "question": "What sustained pressure limit applies to reclined and side-contact postures?",
+      "required_for": ["LC-REC-001"]
+    },
+    {
+      "id": "ME-ACOUSTIC-001",
+      "parameter": "maximum_operational_sound_level",
+      "value": null,
+      "units": "dBA",
+      "status": "open",
+      "question": "At what measurement distance and operating condition is the shoulder acoustic limit defined?",
+      "required_for": ["LC-SHO-002", "LC-BIL-001"]
+    },
+    {
+      "id": "ME-SERVICE-001",
+      "parameter": "maximum_maintenance_handling_force",
+      "value": null,
+      "units": "N",
+      "status": "open",
+      "question": "What external force may be applied during cartridge removal, transport, or supported maintenance?",
+      "required_for": ["LC-MNT-001"]
+    }
+  ],
+  "required_operating_scenarios": [
+    "neutral_supported_stance",
+    "supported_sitting",
+    "supported_recline",
+    "validated_side_contact",
+    "single_arm_domestic_manipulation",
+    "bilateral_arm_motion",
+    "cartridge_service_and_replacement",
+    "controlled_power_loss"
+  ],
+  "excluded_until_explicitly_approved": [
+    "human_lifting_or_transfer",
+    "fall_arrest",
+    "body_weight_support_through_one_arm",
+    "high_energy_collision",
+    "outdoor_weather_exposure",
+    "unvalidated stair_or_ladder recovery"
+  ],
+  "closure_rule": "Every required input must have status locked, a non-null value, units where applicable, an authority, and an evidence reference before load cases may be approved."
+}

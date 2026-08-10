@@ -1,0 +1,150 @@
+{
+  "schema_version": "0.1.0",
+  "register_id": "T56_LOAD_CASE_REGISTER",
+  "project": "T56_CARBON",
+  "status": "load_cases_defined_inputs_open_not_approved",
+  "purpose": "Define the minimum cases required to size and validate the T-5.6 trunk-to-shoulder load path and single-side test article.",
+  "input_registers": [
+    "mission_envelope.json",
+    "geometry_register.json"
+  ],
+  "approval_rule": "A load case is approved only when all referenced inputs and geometry are locked, the pose and restraints are dimensioned, safety factors are assigned, and numeric pass/fail criteria are recorded.",
+  "load_cases": [
+    {
+      "id": "LC-SHO-001",
+      "name": "static_arm_weight_and_payload",
+      "status": "blocked_by_inputs",
+      "article": "single_side_thoracic_root_to_dummy_humerus",
+      "input_refs": ["ME-MASS-002", "ME-PAYLOAD-001", "ME-SF-001"],
+      "geometry_refs": ["GEO-SHO-001", "GEO-SHO-002", "GEO-SHO-005", "GEO-SHO-006", "GEO-ARM-001"],
+      "boundary_condition": "thoracic root fixture restrained at the representative inner-housing and spine interfaces",
+      "load_application": "gravity and payload reactions applied through the dummy humerus across the approved shoulder poses",
+      "required_outputs": ["root_node_forces_N", "root_node_moments_Nm", "carriage_reactions", "clavicular_load_share", "cartridge_bearing_loads", "deflection_mm"],
+      "failure_modes": ["root_yield_or_slip", "link_buckling", "bearing_overload", "insert_pull_out", "excessive_deflection"],
+      "acceptance_criteria": null
+    },
+    {
+      "id": "LC-SHO-002",
+      "name": "commanded_arm_acceleration_and_stop",
+      "status": "blocked_by_inputs",
+      "article": "single_side_thoracic_root_to_dummy_humerus",
+      "input_refs": ["ME-MASS-002", "ME-PAYLOAD-001", "ME-MOTION-001", "ME-MOTION-002", "ME-LIFE-001", "ME-SF-001", "ME-ACOUSTIC-001"],
+      "geometry_refs": ["GEO-SHO-003", "GEO-SHO-004", "GEO-SHO-005", "GEO-SHO-006", "GEO-SHO-007", "GEO-ARM-001"],
+      "boundary_condition": "representative thoracic root fixture with selected guides, bearings, stops, and retention installed",
+      "load_application": "commanded acceleration, deceleration, and ordinary stop across the approved trajectory",
+      "required_outputs": ["peak_root_reactions", "guide_and_bearing_loads", "stop_energy_J", "hysteresis", "temperature", "sound_dBA"],
+      "failure_modes": ["fatigue", "guide_binding", "stop_damage", "retention_loss", "overtemperature", "acoustic_limit_exceeded"],
+      "acceptance_criteria": null
+    },
+    {
+      "id": "LC-SHO-003",
+      "name": "accidental_fore_aft_and_lateral_push_pull",
+      "status": "blocked_by_inputs",
+      "article": "single_side_thoracic_root_to_dummy_humerus",
+      "input_refs": ["ME-EXT-001", "ME-SF-001"],
+      "geometry_refs": ["GEO-SHO-001", "GEO-SHO-002", "GEO-SHO-005", "GEO-SHO-006", "GEO-ARM-001"],
+      "boundary_condition": "arm held at the load-case poses with physical stops and passive retention active",
+      "load_application": "fore-aft and lateral forces applied at defined humeral or hand-equivalent stations",
+      "required_outputs": ["root_forces_and_moments", "link_axial_and_bending_load", "cartridge_retention_load", "permanent_set_mm"],
+      "failure_modes": ["root_fastener_slip", "clavicular_link_buckling", "carriage_release", "cartridge_release", "permanent_deformation"],
+      "acceptance_criteria": null
+    },
+    {
+      "id": "LC-SHO-004",
+      "name": "minor_contact_impact_and_hard_stop_event",
+      "status": "blocked_by_inputs",
+      "article": "single_side_thoracic_root_to_dummy_humerus",
+      "input_refs": ["ME-IMPACT-001", "ME-SF-001"],
+      "geometry_refs": ["GEO-SHO-005", "GEO-SHO-006", "GEO-SHO-007", "GEO-CLR-001", "GEO-CLR-002"],
+      "boundary_condition": "guards, compliant stop elements, sensors, and secondary retention installed",
+      "load_application": "approved impact pulse or equivalent energy at the representative arm station and mechanical travel limits",
+      "required_outputs": ["peak_reaction", "stop_deformation", "guard_deflection", "retention_state", "post_impact_alignment"],
+      "failure_modes": ["guard_intrusion", "hard_stop_fracture", "secondary_retention_failure", "hidden_root_damage", "unsafe_rebound"],
+      "acceptance_criteria": null
+    },
+    {
+      "id": "LC-SHO-005",
+      "name": "controlled_power_loss_arm_retention",
+      "status": "blocked_by_inputs",
+      "article": "single_side_thoracic_root_to_dummy_humerus",
+      "input_refs": ["ME-MASS-002", "ME-PAYLOAD-001", "ME-SF-001"],
+      "geometry_refs": ["GEO-SHO-005", "GEO-SHO-006", "GEO-SHO-007", "GEO-ARM-001"],
+      "boundary_condition": "actuator torque removed at the critical approved poses",
+      "load_application": "gravity-driven arm reaction with passive retention, damping, and physical limits active",
+      "required_outputs": ["maximum_drop_angle_deg", "maximum_drop_speed", "retention_load", "stop_energy_J", "safe_state_detection_time"],
+      "failure_modes": ["uncontrolled_arm_fall", "single_point_retention_failure", "cable_as_retainer", "unsafe_stop_impact"],
+      "acceptance_criteria": null
+    },
+    {
+      "id": "LC-REC-001",
+      "name": "supported_recline_and_side_contact",
+      "status": "blocked_by_inputs",
+      "article": "representative_thorax_and_shoulder_outer_layers",
+      "input_refs": ["ME-MASS-001", "ME-CONTACT-001", "ME-CONTACT-002", "ME-SF-001"],
+      "geometry_refs": ["GEO-THX-001", "GEO-THX-002", "GEO-THX-003", "GEO-CLR-001", "GEO-CLR-002", "GEO-CLR-003"],
+      "boundary_condition": "body supported in the defined reclined and validated side-contact postures",
+      "load_application": "distributed support reactions through compliant contour layers with shoulder assemblies installed",
+      "required_outputs": ["root_reaction", "contact_pressure_map", "surface_temperature", "guard_clearance", "service_access_clearance"],
+      "failure_modes": ["pressure_hotspot", "hard_edge_print_through", "guard_collapse", "routing_entrapment", "blocked_service_access"],
+      "acceptance_criteria": null
+    },
+    {
+      "id": "LC-MNT-001",
+      "name": "maintenance_handling_and_cartridge_replacement",
+      "status": "blocked_by_inputs",
+      "article": "single_side_thoracic_root_to_dummy_humerus",
+      "input_refs": ["ME-SERVICE-001", "ME-SF-001"],
+      "geometry_refs": ["GEO-SHO-001", "GEO-SHO-002", "GEO-SHO-006", "GEO-CLR-003"],
+      "boundary_condition": "article safely supported in each approved maintenance posture",
+      "load_application": "handling, tool, extraction, insertion, and re-zeroing forces at defined service interfaces",
+      "required_outputs": ["root_alignment_change", "fastener_preload_change", "connector_clearance", "service_time", "repeatability"],
+      "failure_modes": ["datum_loss", "hidden_fastener_damage", "connector_overload", "fascia_cutting_required", "incorrect_reassembly"],
+      "acceptance_criteria": null
+    },
+    {
+      "id": "LC-BIL-001",
+      "name": "simultaneous_bilateral_arm_motion",
+      "status": "blocked_by_inputs",
+      "article": "paired_shoulders_on_representative_thoracic_subassembly",
+      "input_refs": ["ME-MASS-002", "ME-PAYLOAD-001", "ME-MOTION-001", "ME-MOTION-002", "ME-LIFE-001", "ME-SF-001", "ME-ACOUSTIC-001"],
+      "geometry_refs": ["GEO-THX-001", "GEO-THX-003", "GEO-SHO-005", "GEO-SHO-007", "GEO-CLR-001", "GEO-CLR-002"],
+      "boundary_condition": "paired shoulder assemblies installed on a representative inner housing and segmented spine interface",
+      "load_application": "symmetric and asymmetric simultaneous arm trajectories including emergency stop",
+      "required_outputs": ["thoracic_alignment_change", "cross_torso_load_transfer", "root_reactions", "vibration", "sound_dBA", "sensor_disagreement"],
+      "failure_modes": ["thoracic_racking", "root_interaction_overload", "collision", "calibration_divergence", "unbounded_rib_load_bypass"],
+      "acceptance_criteria": null
+    },
+    {
+      "id": "LC-TRUNK-001",
+      "name": "spine_to_sacral_bridge_load_transfer",
+      "status": "blocked_by_inputs",
+      "article": "representative_inner_thoracic_housing_spine_and_pelvic_bridge",
+      "input_refs": ["ME-MASS-001", "ME-SF-001"],
+      "geometry_refs": ["GEO-THX-003", "GEO-THX-004", "GEO-PEL-001", "GEO-PEL-002", "GEO-PEL-003", "GEO-PEL-004"],
+      "boundary_condition": "bilateral hip nodes restrained according to the approved support posture",
+      "load_application": "trunk gravity, shoulder reactions, bending, and torsion transferred through the inner housing and segmented spine",
+      "required_outputs": ["sacral_bridge_bending_moment", "sacral_bridge_torsion", "hip_node_reactions", "spine_interface_reactions", "load_path_deflection"],
+      "failure_modes": ["sacral_bridge_overload", "hip_node_insert_failure", "spine_interface_slip", "iliac_shell_as_untracked_primary_path", "excessive_torsional_deflection"],
+      "acceptance_criteria": null
+    }
+  ],
+  "global_required_outputs": [
+    "input_revision_and_evidence",
+    "coordinate_frame_revision",
+    "free_body_diagram",
+    "forces_and_moments_at_every_primary_interface",
+    "load_share_through_each_parallel_path",
+    "deflection_and_permanent_set",
+    "safety_factor_by_failure_mode",
+    "raw_measurements_or_solver_results",
+    "pass_fail_and_anomaly_record"
+  ],
+  "explicit_scope_questions": [
+    "Are human lifting and transfer permanently out of scope or a future rated mode?",
+    "Must either arm ever support body weight?",
+    "What event separates minor domestic impact from crash or fall loading?",
+    "Which reclined and side-contact postures are required rather than merely possible?",
+    "What passive behavior is required after complete power loss?",
+    "How much primary shoulder reaction may bypass into the secondary carbon ribcage?"
+  ]
+}

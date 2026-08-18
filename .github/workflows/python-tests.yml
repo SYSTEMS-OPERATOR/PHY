@@ -23,6 +23,12 @@ jobs:
         pip install cryptography requests
     - name: Run tests
       run: pytest -q
+    - name: Validate deterministic SOPHY canon
+      run: |
+        PYTHONPATH=. python bin/export_sophy_canon.py \
+          --height-mm 1676.4 \
+          --output /tmp/sophy_canonical_geometry.json \
+          --validation-report /tmp/sophy_canon_validation_report.json
     - name: Hardware benches
       run: |
         PYTHONPATH=. python bin/rt_monitor.py || true

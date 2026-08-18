@@ -1,0 +1,130 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://systems-operator.local/phy/skeleton/schema/sophy_canonical_geometry.schema.json",
+  "title": "SOPHY Canonical Geometry Artifact",
+  "type": "object",
+  "required": [
+    "schema_path",
+    "artifact",
+    "canon",
+    "instance",
+    "coordinate_system",
+    "neutral_reference_pose",
+    "midsagittal_plane",
+    "constants",
+    "canonical_dimensions_mm",
+    "canonical_dimension_derivations",
+    "symmetry",
+    "constructions",
+    "proportional_operators",
+    "landmarks",
+    "deferred_identity_decisions",
+    "provenance"
+  ],
+  "properties": {
+    "schema_path": {
+      "const": "skeleton/schema/sophy_canonical_geometry.schema.json"
+    },
+    "artifact": {"const": "SOPHY_CANONICAL_GEOMETRY"},
+    "canon": {
+      "type": "object",
+      "required": ["version", "law_hash_sha256", "authority"],
+      "properties": {
+        "version": {"type": "string", "minLength": 1},
+        "law_hash_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "authority": {"const": "BODY.md"}
+      },
+      "additionalProperties": false
+    },
+    "instance": {
+      "type": "object",
+      "required": ["master_variable", "height_mm", "units"],
+      "properties": {
+        "master_variable": {"const": "H"},
+        "height_mm": {"type": "number", "exclusiveMinimum": 0},
+        "units": {"const": "mm"}
+      },
+      "additionalProperties": false
+    },
+    "coordinate_system": {"type": "object"},
+    "neutral_reference_pose": {"type": "object"},
+    "midsagittal_plane": {"type": "object"},
+    "constants": {
+      "type": "object",
+      "required": ["phi", "phi_expression"],
+      "properties": {
+        "phi": {"type": "number", "exclusiveMinimum": 1},
+        "phi_expression": {"const": "(1 + sqrt(5)) / 2"}
+      },
+      "additionalProperties": false
+    },
+    "canonical_dimensions_mm": {
+      "type": "object",
+      "required": ["standing_height", "arm_span"],
+      "properties": {
+        "standing_height": {"type": "number", "exclusiveMinimum": 0},
+        "arm_span": {"type": "number", "exclusiveMinimum": 0}
+      },
+      "additionalProperties": false
+    },
+    "canonical_dimension_derivations": {"type": "object"},
+    "symmetry": {"type": "object"},
+    "constructions": {"type": "object"},
+    "proportional_operators": {"type": "object"},
+    "landmarks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "canonical_id",
+          "family",
+          "parent_frame",
+          "side",
+          "normalized_coordinates_H",
+          "coordinates_mm",
+          "derivation",
+          "provenance",
+          "tolerance_category",
+          "downstream_dependents"
+        ],
+        "properties": {
+          "canonical_id": {"type": "string", "minLength": 1},
+          "family": {"type": "string", "minLength": 1},
+          "parent_frame": {"type": "string", "minLength": 1},
+          "side": {"enum": ["LEFT", "MIDLINE", "RIGHT"]},
+          "normalized_coordinates_H": {"$ref": "#/$defs/point3"},
+          "coordinates_mm": {"$ref": "#/$defs/point3"},
+          "derivation": {
+            "type": "object",
+            "required": ["operator", "inputs"],
+            "properties": {
+              "operator": {"enum": ["mirror_x", "scale_normalized_by_H"]},
+              "inputs": {"type": "array", "items": {"type": "string"}},
+              "mirrored_from": {"type": "string"}
+            },
+            "additionalProperties": false
+          },
+          "provenance": {"type": "string", "minLength": 1},
+          "tolerance_category": {"type": "string", "minLength": 1},
+          "downstream_dependents": {"type": "array", "items": {"type": "string"}}
+        },
+        "additionalProperties": false
+      }
+    },
+    "deferred_identity_decisions": {"type": "array", "items": {"type": "object"}},
+    "provenance": {"type": "object"}
+  },
+  "$defs": {
+    "point3": {
+      "type": "array",
+      "prefixItems": [
+        {"type": "number"},
+        {"type": "number"},
+        {"type": "number"}
+      ],
+      "minItems": 3,
+      "maxItems": 3
+    }
+  },
+  "additionalProperties": false
+}

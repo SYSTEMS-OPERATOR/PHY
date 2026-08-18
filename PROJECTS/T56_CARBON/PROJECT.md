@@ -8,7 +8,8 @@ This project does not redefine universal PHY anatomy or fabrication policy. It s
 
 - Project ID: `T56_CARBON`
 - Height: `1676.4 mm`
-- Baseline arm span: `1676.4 mm`
+- Canon binding: `SOPHY_CANON(H=1676.4 mm, canon_version=1.0.0)`
+- Arm span: derived as `H = 1676.4 mm`
 - Lineage: mature domestic evolution of the utilitarian `T-5.5(5)` concept
 - Pose baseline: neutral anatomical T-pose
 - Frame class: hybrid carbon-composite armature
@@ -25,6 +26,8 @@ T-5.6 prioritizes:
 - high tactile-sensor density
 - guarded pinch points and compliant contact surfaces
 - adult, capable proportions without exaggerated display anatomy
+
+The last item is embodiment intent, not an optimizer for SOPHY identity geometry. Canonical left/right coordinates remain exact reflections. Independent sensor, friction, stiffness, actuator, or fit calibration is mechanical state; any article coordinate difference is recorded as a measured deviation from canon.
 
 ## Structural doctrine
 
@@ -82,7 +85,7 @@ The first complete systems article is the left forearm:
 
 Status: `SCAFFOLD_NOT_FABRICATION_READY`
 
-All laminate schedules, dimensions, material constants, adhesives, insert geometries, load ratings, joint limits, and safety factors remain unvalidated until supported by traceable references and physical coupon testing.
+All laminate schedules, project envelopes, material constants, adhesives, insert geometries, load ratings, joint limits, and safety factors remain unvalidated until supported by traceable references and physical coupon testing. Identity coordinates come only from the bound canon revision.
 
 Unknown values must be marked explicitly. No fabrication-critical value may be inferred from visual concept art.
 

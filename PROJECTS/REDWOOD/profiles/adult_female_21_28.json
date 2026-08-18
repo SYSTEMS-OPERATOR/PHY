@@ -1,7 +1,13 @@
 {
   "profile_id": "adult_female_21_28",
-  "status": "mvp_reference_profile",
-  "description": "Project-local adult female proportion profile for REDWOOD armature sizing. Values are base build targets and may be replaced by measured references in later passes.",
+  "status": "legacy_provisional_engineering_reference",
+  "authority": "project_local_non_canonical",
+  "description": "Legacy REDWOOD anthropometric-style MVP targets retained for dependent build guides. These values are engineering references, not SOPHY identity geometry.",
+  "canon_reference": {
+    "canon_version": "1.0.0",
+    "height_mm": 1650,
+    "binding": "SOPHY_CANON(H=1650, canon_version=1.0.0)"
+  },
   "pose": "neutral_anatomical_t_pose",
   "age_reference": "21-28",
   "height_mm": 1650,
@@ -32,18 +38,36 @@
     "foot_total": 240
   },
   "bilateral_symmetry_policy": {
-    "left_right_lengths_match_initially": true,
-    "allow_hand_carved_asymmetry_after_blank_layout": true
+    "canonical_geometry": "right_authored_left_mirror_derived",
+    "canonical_asymmetry_allowed": false,
+    "manufactured_difference_representation": "measured_deviation_from_canon",
+    "legacy_policy_superseded": {
+      "left_right_lengths_match_initially": true,
+      "allow_hand_carved_asymmetry_after_blank_layout": true
+    }
+  },
+  "geometry_classification": {
+    "height_mm": "canon_instance_input_H",
+    "arm_span_mm": "derived_canonical_value_retained_for_legacy_compatibility",
+    "head_height_ratio": "legacy_provisional",
+    "major_widths_mm": "legacy_provisional_anthropometric_engineering_reference",
+    "primary_lengths_mm": "legacy_provisional_anthropometric_engineering_reference"
   },
   "derivation_tags": {
-    "height_mm": "project_design_decision",
-    "arm_span_mm": "vitruvian_ratio_height_equals_armspan",
-    "primary_lengths_mm": "baseline_anthropometric_targets_for_mvp",
-    "major_widths_mm": "baseline_anthropometric_targets_for_mvp"
+    "height_mm": "SOPHY_CANON_instance_input_H",
+    "arm_span_mm": "SOPHY_CANON_arm_span_equals_H",
+    "primary_lengths_mm": "legacy_baseline_anthropometric_targets_for_mvp",
+    "major_widths_mm": "legacy_baseline_anthropometric_targets_for_mvp"
+  },
+  "migration": {
+    "dependent_consumer": "bin/generate_redwood_bone_specs.py",
+    "current_fallback": "primary_lengths_mm",
+    "target": "resolve canonical landmark-derived dimensions first; use explicitly named legacy fallback only for unbound canon landmarks",
+    "removal_gate": "all REDWOOD build-guide dimensions have canonical or mechanical provenance"
   },
   "notes": [
-    "This file sets REDWOOD project targets only; it does not change universal PHY proportions.",
-    "Exact curvature is intentionally left to carving guides and builder judgment; this profile supplies base envelopes and length targets.",
-    "Later passes should replace or cite each MVP target with traceable measured or published anthropometric references."
+    "This file sets REDWOOD engineering targets only; it does not change SOPHY_CANON.",
+    "Exact curvature remains a fabrication decision, but any article asymmetry must be measured against rather than written into canon.",
+    "Legacy values remain visible because generated guides depend on them; status metadata prevents them from masquerading as identity law."
   ]
 }

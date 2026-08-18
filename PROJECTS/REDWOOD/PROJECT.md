@@ -8,6 +8,8 @@ This directory must not redefine the universal PHY framework. It supplies one co
 
 Core PHY stays universal. REDWOOD stays project-specific.
 
+REDWOOD binds to `SOPHY_CANON(H=1650 mm, canon_version=1.0.0)`. Material, hardware, blank allowances, carving envelopes, and measured article deviations remain project data. The legacy `adult_female_21_28` measurements are explicit engineering fallbacks for existing build-guide dependencies; they are not SOPHY identity coordinates.
+
 Do not hard-code redwood assumptions into:
 
 - `skeleton/base.py`
@@ -15,6 +17,8 @@ Do not hard-code redwood assumptions into:
 - `skeleton/bones/`
 - `BODY.md`
 - `MIND.md`
+
+Canonical left geometry is mirror-derived from canonical right geometry. Hand-carved differences may be retained only as measured deviations from that canon, not as project-authored identity asymmetry.
 
 Project-specific truth belongs here under `PROJECTS/REDWOOD/`.
 
@@ -34,7 +38,7 @@ The builder may refine curves by eye, but the project must provide:
 - simulation mass properties when enough data exists
 - explicit unknowns where data is missing
 
-## Target
+## Embodiment target
 
 - adult female armature
 - age reference: 21-28
@@ -42,6 +46,8 @@ The builder may refine curves by eye, but the project must provide:
 - redwood primary structure
 - copper/brass pins, collars, bushings, hinge plates, washers, and spacers
 - offline fabrication and simulation use
+
+The age and adult-female labels describe the legacy reference profile and embodiment intent. They do not select or optimize the universal canon.
 
 ## Definition of done
 

@@ -1,0 +1,10 @@
+{
+  "issues": [],
+  "summary": {
+    "canon_version": "1.0.0",
+    "height_mm": 1676.4,
+    "issue_count": 0,
+    "numerical_tolerance_mm": 1.6764000000000001e-09,
+    "pass": true
+  }
+}

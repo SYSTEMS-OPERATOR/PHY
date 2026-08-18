@@ -8,14 +8,14 @@ This document defines the project-local shoulder architecture that branches from
 
 ## Coordinate frame
 
-The shoulder assembly inherits the thoracic coordinate frame:
+The shoulder assembly uses a project thoracic frame transformed from `SOPHY_CANON(H=1676.4 mm, canon_version=1.0.0)`:
 
 - origin: `thoracic_midline_at_sternum_spine_reference_plane`
 - `x`: left to right
 - `y`: posterior to anterior
 - `z`: inferior to superior
 
-All shoulder coordinates, travel envelopes, joint centers, and collision volumes remain `null` until the T-5.6 thoracic anthropometric envelope is locked.
+The transform, shoulder coordinates, travel envelopes, joint centers, and collision volumes remain `null` until the relevant canonical landmarks and T-5.6 mechanical envelope are locked. The thoracic frame is not a competing identity frame.
 
 ## Assembly stack
 
@@ -46,7 +46,7 @@ The assembly must provide controlled machine equivalents of:
 
 The architecture does not require literal replication of biological scapular sliding. A compact guided carriage, coupled linkage, or hybrid mechanism may be used if it reproduces the required shoulder-center trajectory, load transfer, serviceability, and domestic safety behavior.
 
-Left and right assemblies share topology but require independent calibration. Visual symmetry is not proof of equal stiffness, friction, travel, or sensor zero.
+Canonical left geometry is the exact midsagittal reflection of canonical right geometry. Physical assemblies share topology but may require independent mechanical calibration because geometric symmetry is not proof of equal stiffness, friction, travel, or sensor zero. Calibration and article metrology must not rewrite the canonical coordinates.
 
 ## Mechanical boundaries
 

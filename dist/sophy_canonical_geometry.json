@@ -1,0 +1,291 @@
+{
+  "artifact": "SOPHY_CANONICAL_GEOMETRY",
+  "canon": {
+    "authority": "BODY.md",
+    "law_hash_sha256": "1f52ef958a382e7a50bef5d13d58682b57596979eec0f79cca3a057116d8bf32",
+    "version": "1.0.0"
+  },
+  "canonical_dimension_derivations": {
+    "arm_span": {
+      "inputs": [
+        "H"
+      ],
+      "operator": "identity"
+    },
+    "standing_height": {
+      "inputs": [
+        "H"
+      ],
+      "operator": "identity"
+    }
+  },
+  "canonical_dimensions_mm": {
+    "arm_span": 1676.4,
+    "standing_height": 1676.4
+  },
+  "constants": {
+    "phi": 1.618033988749895,
+    "phi_expression": "(1 + sqrt(5)) / 2"
+  },
+  "constructions": {
+    "canonical_circle": {
+      "cardinal_landmarks": [
+        "body.plantar_midpoint",
+        "cranial.vertex",
+        "construction.arm_span_endpoint.left",
+        "construction.arm_span_endpoint.right"
+      ],
+      "center_landmark": "body.canonical_center",
+      "classification": "PHY/SOPHY canonical design law",
+      "historical_attribution": "none",
+      "historical_boundary": "Not the Vitruvian/Leonardian navel-centred spread-pose circle.",
+      "plane": "XZ",
+      "radius_mm": 838.2
+    },
+    "vitruvian_square": {
+      "center_landmark": "body.canonical_center",
+      "classification": "PHY/SOPHY canonical design law",
+      "historical_basis": "Vitruvius Book III, Chapter I: height equals outstretched arm span.",
+      "historical_source": "https://www.gutenberg.org/files/20239/20239-h/20239-h.htm#Page_72",
+      "maximum_mm": [
+        838.2,
+        0.0,
+        1676.4
+      ],
+      "minimum_mm": [
+        -838.2,
+        0.0,
+        0.0
+      ],
+      "plane": "XZ"
+    }
+  },
+  "coordinate_system": {
+    "axes": {
+      "x": "subject_right",
+      "y": "subject_anterior",
+      "z": "superior"
+    },
+    "handedness": "right_handed",
+    "midsagittal_plane": "x = 0",
+    "origin": "body.plantar_midpoint",
+    "units": "mm"
+  },
+  "deferred_identity_decisions": [
+    {
+      "decision_id": "anatomical_navel_coordinate",
+      "reason": "Vitruvius describes a navel-centred spread-pose circle, but BODY has not selected SOPHY's normalized navel coordinate.",
+      "status": "unbound"
+    },
+    {
+      "decision_id": "anatomical_phi_bindings",
+      "reason": "The phi operators are executable, but no anatomical landmark may inherit them from symbolic language alone.",
+      "status": "unbound"
+    },
+    {
+      "decision_id": "head_face_hand_foot_and_limb_ratios",
+      "reason": "Historical fractions and legacy anthropometric values remain comparison data until adopted as explicit SOPHY design law.",
+      "status": "unbound"
+    },
+    {
+      "decision_id": "neutral_pose_joint_landmarks",
+      "reason": "The neutral pose and global frame are fixed; joint-centre coordinates require a canon revision after ratio selection.",
+      "status": "unbound"
+    },
+    {
+      "decision_id": "canonical_neutral_face",
+      "reason": "The facial schema is specified in documentation; identity coordinates require a dedicated canon decision and revision.",
+      "status": "unbound"
+    }
+  ],
+  "instance": {
+    "height_mm": 1676.4,
+    "master_variable": "H",
+    "units": "mm"
+  },
+  "landmarks": [
+    {
+      "canonical_id": "body.canonical_center",
+      "coordinates_mm": [
+        0.0,
+        0.0,
+        838.2
+      ],
+      "derivation": {
+        "inputs": [
+          "H"
+        ],
+        "operator": "scale_normalized_by_H"
+      },
+      "downstream_dependents": [
+        "construction.canonical_circle"
+      ],
+      "family": "body_center",
+      "normalized_coordinates_H": [
+        0.0,
+        0.0,
+        0.5
+      ],
+      "parent_frame": "SOPHY_CANON",
+      "provenance": "PHY/SOPHY canonical design law",
+      "side": "MIDLINE",
+      "tolerance_category": "canonical_exact"
+    },
+    {
+      "canonical_id": "body.plantar_midpoint",
+      "coordinates_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "derivation": {
+        "inputs": [
+          "H"
+        ],
+        "operator": "scale_normalized_by_H"
+      },
+      "downstream_dependents": [
+        "construction.canonical_circle",
+        "construction.vitruvian_square"
+      ],
+      "family": "lower_limb",
+      "normalized_coordinates_H": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "parent_frame": "SOPHY_CANON",
+      "provenance": "PHY/SOPHY canonical design law",
+      "side": "MIDLINE",
+      "tolerance_category": "canonical_exact"
+    },
+    {
+      "canonical_id": "construction.arm_span_endpoint.left",
+      "coordinates_mm": [
+        -838.2,
+        0.0,
+        838.2
+      ],
+      "derivation": {
+        "inputs": [
+          "construction.arm_span_endpoint.right",
+          "midsagittal_plane"
+        ],
+        "mirrored_from": "construction.arm_span_endpoint.right",
+        "operator": "mirror_x"
+      },
+      "downstream_dependents": [
+        "dimensions.arm_span",
+        "construction.canonical_circle"
+      ],
+      "family": "upper_limb",
+      "normalized_coordinates_H": [
+        -0.5,
+        0.0,
+        0.5
+      ],
+      "parent_frame": "SOPHY_CANON",
+      "provenance": "derived from PHY/SOPHY canonical design law",
+      "side": "LEFT",
+      "tolerance_category": "canonical_exact"
+    },
+    {
+      "canonical_id": "construction.arm_span_endpoint.right",
+      "coordinates_mm": [
+        838.2,
+        0.0,
+        838.2
+      ],
+      "derivation": {
+        "inputs": [
+          "H"
+        ],
+        "operator": "scale_normalized_by_H"
+      },
+      "downstream_dependents": [
+        "dimensions.arm_span",
+        "construction.canonical_circle"
+      ],
+      "family": "upper_limb",
+      "normalized_coordinates_H": [
+        0.5,
+        0.0,
+        0.5
+      ],
+      "parent_frame": "SOPHY_CANON",
+      "provenance": "PHY/SOPHY canonical design law",
+      "side": "RIGHT",
+      "tolerance_category": "canonical_exact"
+    },
+    {
+      "canonical_id": "cranial.vertex",
+      "coordinates_mm": [
+        0.0,
+        0.0,
+        1676.4
+      ],
+      "derivation": {
+        "inputs": [
+          "H"
+        ],
+        "operator": "scale_normalized_by_H"
+      },
+      "downstream_dependents": [
+        "construction.canonical_circle",
+        "construction.vitruvian_square"
+      ],
+      "family": "cranial",
+      "normalized_coordinates_H": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "parent_frame": "SOPHY_CANON",
+      "provenance": "PHY/SOPHY canonical design law",
+      "side": "MIDLINE",
+      "tolerance_category": "canonical_exact"
+    }
+  ],
+  "midsagittal_plane": {
+    "equation": "x = 0",
+    "normal": [
+      1.0,
+      0.0,
+      0.0
+    ]
+  },
+  "neutral_reference_pose": {
+    "id": "SOPHY_NEUTRAL_T_POSE_V1",
+    "status": "global_frame_and_span_construction_bound; joint landmarks deferred"
+  },
+  "proportional_operators": {
+    "golden_major": {
+      "expression": "segment / phi",
+      "identity_binding": null
+    },
+    "golden_minor": {
+      "expression": "segment / phi^2",
+      "identity_binding": null
+    },
+    "golden_recurse": {
+      "expression": "repeat(golden_major|golden_minor, depth)",
+      "identity_binding": null
+    }
+  },
+  "provenance": {
+    "historical_reference": {
+      "source": "https://www.gutenberg.org/files/20239/20239-h/20239-h.htm#Page_72",
+      "use": "provenance and comparison; only explicitly adopted rules are executable canon"
+    },
+    "symbolic_inheritance": {
+      "source": "SOUL.md",
+      "use": "non-operational until formalized in BODY and this kernel"
+    }
+  },
+  "schema_path": "skeleton/schema/sophy_canonical_geometry.schema.json",
+  "symmetry": {
+    "independently_authored_left_landmarks": false,
+    "law": "LEFT(P) = mirror_x(RIGHT(P))",
+    "plane": "x = 0"
+  }
+}

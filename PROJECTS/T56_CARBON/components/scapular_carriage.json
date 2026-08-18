@@ -2,7 +2,7 @@
   "component_id": "T56_SCAPULAR_CARRIAGE",
   "project": "T56_CARBON",
   "status": "concept_scaffold_not_fabrication_ready",
-  "instance_model": "bilateral_template_with_independent_left_and_right_calibration",
+  "instance_model": "canonical_mirror_pair_with_independent_mechanical_calibration",
   "role": "movable_structural_carriage_that_positions_the_lateral_shoulder_center_and_transfers_load_to_the_thoracic_root_interface",
   "architecture": {
     "inboard_interface": "T56_SHOULDER_GIRDLE_ROOT_INTERFACE",
@@ -18,7 +18,9 @@
     "upward_downward_rotation_deg": null,
     "anterior_posterior_tilt_deg": null,
     "trajectory_coupling": null,
-    "left_right_calibration_independent": true
+    "left_right_calibration_independent": true,
+    "canonical_geometry_must_remain_mirrored": true,
+    "coordinate_difference_representation": "measured_deviation_from_canon"
   },
   "structure": {
     "primary_material": null,

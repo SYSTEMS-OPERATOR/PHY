@@ -1,3 +1,8 @@
 femur_left:
   - https://fipat.library.dal.ca/ta2/
   - https://www.wheelessonline.com/
+
+sophy_geometry_historical_vitruvius_book_3_chapter_1:
+  classification: historical_reference_not_automatic_canon
+  sources:
+    - https://www.gutenberg.org/files/20239/20239-h/20239-h.htm#Page_72

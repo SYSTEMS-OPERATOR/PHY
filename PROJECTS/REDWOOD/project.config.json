@@ -7,7 +7,13 @@
     "type": "adult_female_armature",
     "age_reference": "21-28",
     "pose": "neutral_anatomical_t_pose",
+    "canon_reference": {
+      "canon_version": "1.0.0",
+      "height_mm": 1650,
+      "binding": "SOPHY_CANON(H=1650, canon_version=1.0.0)"
+    },
     "proportion_profile": "profiles/adult_female_21_28.json",
+    "proportion_profile_role": "legacy_provisional_engineering_reference",
     "primary_build_goal": "bone_by_bone_redwood_cut_carve_drill_guidance"
   },
   "materials": {

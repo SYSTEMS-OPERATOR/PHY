@@ -6,8 +6,9 @@
     {
       "rule_id": "arm_span_equals_height",
       "expression": "arm_span_mm = height_mm",
-      "source_type": "proportion_rule",
-      "notes": "Vitruvian working target for neutral T-pose layout."
+      "source_type": "SOPHY_CANON_reference",
+      "canon_version": "1.0.0",
+      "notes": "Project binds to the canonical law arm_span = H. Historical Vitruvian provenance is documented by the canon; REDWOOD does not own this relationship."
     },
     {
       "rule_id": "rough_blank_allowance_long_bone",

@@ -26,6 +26,8 @@ If `MIND.md` conflicts with symbolic framing, `MIND.md` wins.
 Given identical repository state and dataset:
 - exported canonical JSON, TF tree, URDF-like output, BOM, material table, joint table, and reference audit are deterministic.
 - export ordering is stable by `unique_id`.
+- `SOPHY_CANON(H, canon_version)` produces identical whole-body geometry and byte-stable JSON for identical inputs.
+- project overlays cannot replace canonical coordinates; article differences remain measured deviations.
 
 ## Local / Off-grid Constraints
 All manufacturing workflows must run from local files only:
@@ -37,6 +39,7 @@ All manufacturing workflows must run from local files only:
 ## Validation + Export Commands
 - Validate fabrication readiness: `PYTHONPATH=. bin/validate_fabrication.py`
 - Export fabrication artifacts: `PYTHONPATH=. bin/export_fabrication.py`
+- Instantiate, validate, and export SOPHY canon: `PYTHONPATH=. bin/export_sophy_canon.py --height-mm 1676.4`
 - Full assemble + validate + export pass: `PYTHONPATH=. python3 assemble_skeleton.py`
 
 ## Manufacturing Assistant Workflows
@@ -47,4 +50,3 @@ The repo supports local workflows for:
 - report missing dimensions/references (`validation_report.*`)
 - export URDF-like and TF outputs (`dist/`)
 - prepare review packet (`reports/` + `exports/` + `dist/`)
-

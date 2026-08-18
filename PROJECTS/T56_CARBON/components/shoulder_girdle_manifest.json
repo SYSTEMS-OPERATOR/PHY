@@ -2,6 +2,11 @@
   "assembly_id": "T56_FLOATING_SCAPULAR_GIRDLE",
   "project": "T56_CARBON",
   "status": "concept_scaffold_not_fabrication_ready",
+  "canon_reference": {
+    "canon_version": "1.0.0",
+    "height_mm": 1676.4,
+    "coordinate_relationship": "thoracic frame is a project transform from SOPHY_CANON"
+  },
   "purpose": "Define the bilateral floating scapular girdle, clavicular guidance, and removable humeral shoulder cartridges for T-5.6.",
   "design_sentence": "Spine roots. Scapulae travel. Clavicles guide. Cartridges carry the arms. Softness guards the motion.",
   "coordinate_frame_reference": {
@@ -25,6 +30,8 @@
     "reference_notes": "../references/shoulder_girdle_visual_reference_notes.md"
   },
   "bilateral_instances": {
+    "canonical_rule": "left canonical coordinates are mirror_x(right) across the SOPHY midsagittal plane",
+    "mechanical_calibration": "independent calibration may correct article behavior without changing canonical coordinates",
     "left": {
       "side": "left",
       "root_interface_instance": "T56_SHOULDER_ROOT_L",

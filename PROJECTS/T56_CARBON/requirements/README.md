@@ -18,6 +18,7 @@ The registers answer four questions in machine-readable form:
 - mission_envelope.json records locked project decisions, open operating inputs, and conservative scope exclusions.
 - geometry_register.json defines the shared datum and every geometry item needed by the trunk-to-left-shoulder convergence article.
 - load_case_register.json defines the minimum structural, contact, maintenance, and power-loss cases.
+- single_side_article_closure.json selects the exact dependency union for the next single-side kinematic and structural article.
 - ../tools/check_convergence.py audits identifiers, references, locked values, and readiness blockers without external dependencies.
 
 ## Gate sequence
@@ -44,9 +45,23 @@ Run from the repository root:
 
     python3 PROJECTS/T56_CARBON/tools/check_convergence.py
 
-The default audit returns success when the files are internally valid and reports every remaining blocker. Strict mode returns a non-zero status until the package is simulation-ready:
+The default audit returns success when the files are internally valid and reports every full-system blocker. Strict mode returns a non-zero status until the package is simulation-ready:
 
     python3 PROJECTS/T56_CARBON/tools/check_convergence.py --strict
+
+Audit the next article without weakening the full-system gate:
+
+    python3 PROJECTS/T56_CARBON/tools/check_convergence.py --profile single-side
+    python3 PROJECTS/T56_CARBON/tools/check_convergence.py --profile single-side --strict
+
+The single-side profile is the exact dependency union of the six canonical load cases assigned to the thoracic-root-to-dummy-humerus article. It reduces the active closure surface from 13 mission inputs, 19 geometry parameters, and 9 load cases to:
+
+- 10 mission inputs;
+- 11 geometry parameters;
+- 6 load cases;
+- 5 evidence packages covering the article fixture, mechanism and retention, material and joint stack, kinematic/collision/service model, and analysis/test record.
+
+The profile supplies no values. Every numeric closure still requires the authority, evidence, tolerance, acceptance criteria, and approval evidence required by the source registers.
 
 ## Change rule
 

@@ -1,0 +1,177 @@
+{
+  "schema_version": "0.1.0",
+  "profile_id": "T56_SINGLE_SIDE_KINEMATIC_STRUCTURAL_CLOSURE",
+  "project": "T56_CARBON",
+  "article": "single_side_thoracic_root_to_dummy_humerus",
+  "proof_scope": "full_single_side_kinematics_and_structural_loads",
+  "status": "closure_inputs_open",
+  "basis": {
+    "rule": "Include every mission input and geometry parameter referenced by every canonical load case assigned to this article. Do not infer or copy numeric values.",
+    "load_case_source": "load_case_register.json",
+    "evidence_boundary": "Values close only with the authority and evidence fields required by the source registers."
+  },
+  "required_mission_inputs": [
+    "ME-MASS-002",
+    "ME-PAYLOAD-001",
+    "ME-MOTION-001",
+    "ME-MOTION-002",
+    "ME-EXT-001",
+    "ME-IMPACT-001",
+    "ME-LIFE-001",
+    "ME-SF-001",
+    "ME-ACOUSTIC-001",
+    "ME-SERVICE-001"
+  ],
+  "required_geometry_parameters": [
+    "GEO-SHO-001",
+    "GEO-SHO-002",
+    "GEO-SHO-003",
+    "GEO-SHO-004",
+    "GEO-SHO-005",
+    "GEO-SHO-006",
+    "GEO-SHO-007",
+    "GEO-ARM-001",
+    "GEO-CLR-001",
+    "GEO-CLR-002",
+    "GEO-CLR-003"
+  ],
+  "required_load_cases": [
+    "LC-SHO-001",
+    "LC-SHO-002",
+    "LC-SHO-003",
+    "LC-SHO-004",
+    "LC-SHO-005",
+    "LC-MNT-001"
+  ],
+  "excluded_from_this_article_gate": {
+    "mission_inputs": [
+      {
+        "id": "ME-MASS-001",
+        "reason": "whole-body trunk and recline cases"
+      },
+      {
+        "id": "ME-CONTACT-001",
+        "reason": "outer-layer domestic contact case"
+      },
+      {
+        "id": "ME-CONTACT-002",
+        "reason": "outer-layer domestic contact case"
+      }
+    ],
+    "geometry_parameters": [
+      {
+        "id": "GEO-THX-001",
+        "reason": "whole-thorax envelope; article uses a dimensioned representative root fixture"
+      },
+      {
+        "id": "GEO-THX-002",
+        "reason": "whole-thorax envelope; article uses a dimensioned representative root fixture"
+      },
+      {
+        "id": "GEO-THX-003",
+        "reason": "whole-thorax and trunk-transfer geometry"
+      },
+      {
+        "id": "GEO-THX-004",
+        "reason": "whole-trunk datum transfer; article root coordinates remain in FRAME_T56_THORAX"
+      },
+      {
+        "id": "GEO-PEL-001",
+        "reason": "pelvic and trunk-transfer geometry"
+      },
+      {
+        "id": "GEO-PEL-002",
+        "reason": "pelvic and trunk-transfer geometry"
+      },
+      {
+        "id": "GEO-PEL-003",
+        "reason": "pelvic and trunk-transfer geometry"
+      },
+      {
+        "id": "GEO-PEL-004",
+        "reason": "pelvic and trunk-transfer geometry"
+      }
+    ],
+    "load_cases": [
+      {
+        "id": "LC-REC-001",
+        "reason": "representative thorax and outer-layer contact article"
+      },
+      {
+        "id": "LC-BIL-001",
+        "reason": "paired-shoulder article"
+      },
+      {
+        "id": "LC-TRUNK-001",
+        "reason": "thorax-spine-pelvic bridge article"
+      }
+    ]
+  },
+  "article_evidence_packages": [
+    {
+      "id": "EV-ARTICLE-001",
+      "name": "article_datum_root_fixture_and_interface_drawing",
+      "status": "open",
+      "required_contents": [
+        "dimensioned FRAME_T56_THORAX realization",
+        "representative thoracic-root restraints",
+        "interface coordinates and tolerances"
+      ],
+      "evidence_refs": []
+    },
+    {
+      "id": "EV-ARTICLE-002",
+      "name": "mechanism_hard_stop_and_passive_retention_decision",
+      "status": "open",
+      "required_contents": [
+        "carriage guide or path selection",
+        "clavicular linkage topology",
+        "shoulder cartridge axes",
+        "mechanical hard stops",
+        "power-loss retention"
+      ],
+      "evidence_refs": []
+    },
+    {
+      "id": "EV-ARTICLE-003",
+      "name": "materials_joints_bearings_and_insert_decision",
+      "status": "open",
+      "required_contents": [
+        "primary member materials",
+        "root and cartridge inserts",
+        "bearings and wear surfaces",
+        "fasteners and secondary retention",
+        "dielectric interfaces"
+      ],
+      "evidence_refs": []
+    },
+    {
+      "id": "EV-ARTICLE-004",
+      "name": "kinematic_collision_and_service_model",
+      "status": "open",
+      "required_contents": [
+        "full single-side trajectory",
+        "joint ranges and hard-stop states",
+        "neck and ribcage collision clearance",
+        "service-access envelope",
+        "routing clearance"
+      ],
+      "evidence_refs": []
+    },
+    {
+      "id": "EV-ARTICLE-005",
+      "name": "analysis_coupon_and_article_test_record",
+      "status": "open",
+      "required_contents": [
+        "free-body diagrams",
+        "interface forces moments and load share",
+        "deflection and safety factor by failure mode",
+        "coupon or component allowables",
+        "raw kinematic and structural test results",
+        "pass fail and anomaly record"
+      ],
+      "evidence_refs": []
+    }
+  ],
+  "closure_rule": "The article profile is ready only when every listed mission input and geometry parameter is locked with its source-register trace fields, every listed load case is approved with numeric acceptance criteria and approval evidence, and every article evidence package is approved with evidence references."
+}

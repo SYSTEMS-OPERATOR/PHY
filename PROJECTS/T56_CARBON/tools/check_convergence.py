@@ -9,6 +9,15 @@ import sys
 from pathlib import Path
 from typing import Any
 
+# Support direct execution from any working directory, including off-grid use.
+REPO_ROOT = Path(__file__).resolve().parents[3]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+
+from skeleton.canon import instantiate_sophy_canon
+from PROJECTS.T56_CARBON.tools.geometry_contracts import (
+    CONTRACTS, FRAME_ID, finite_number, text, validate_record,
+)
 
 PROJECT_DIR = Path(__file__).resolve().parents[1]
 REQUIREMENTS_DIR = PROJECT_DIR / "requirements"
@@ -71,7 +80,7 @@ def audit(profile_name: str | None = None) -> dict[str, Any]:
         geometry = load_json(REGISTER_PATHS["geometry"])
         loads = load_json(REGISTER_PATHS["loads"])
         closure_profile = load_json(PROFILE_PATHS[profile_name]) if profile_name else None
-    except (OSError, ValueError, json.JSONDecodeError) as exc:
+    except (OSError, ValueError, KeyError) as exc:
         return {
             "schema_valid": False,
             "simulation_ready": False,
@@ -92,8 +101,8 @@ def audit(profile_name: str | None = None) -> dict[str, Any]:
         ("parameters", geometry_parameters),
         ("load_cases", load_cases),
     ):
-        if not isinstance(value, list):
-            errors.append(f"{name} must be an array")
+        if not isinstance(value, list) or not value or not all(isinstance(row, dict) for row in value):
+            errors.append(f"{name} must be a non-empty array of objects")
 
     if errors:
         return {
@@ -114,6 +123,39 @@ def audit(profile_name: str | None = None) -> dict[str, Any]:
     )
     collect_unique_ids([("load_cases", load_cases)], errors)
 
+    # Invalid IDs must not reach dictionary/set indexing below.
+    if errors:
+        return {"schema_valid": False, "scope_ready": False, "errors": errors, "blockers": []}
+
+    geometry_ids_present = {item["id"] for item in geometry_parameters}
+    for missing in sorted(set(CONTRACTS) - geometry_ids_present):
+        errors.append(f"missing required geometry parameter {missing}")
+    for record in geometry_parameters:
+        errors.extend(validate_record(record))
+
+    frame = geometry.get("coordinate_frame")
+    expected_axes = {"x": "left_to_right", "y": "posterior_to_anterior", "z": "inferior_to_superior"}
+    if not isinstance(frame, dict) or frame.get("frame_id") != FRAME_ID or frame.get("axes") != expected_axes:
+        errors.append("geometry coordinate frame must retain the declared T56 XYZ convention")
+    elif frame.get("dimensioned_datum_status") != "locked":
+        blockers.append("geometry datum has no dimensioned fixture realization")
+    elif (
+        frame.get("definition_status") != "locked"
+        or frame.get("handedness") != "right_handed"
+        or not text(frame.get("origin_definition"))
+        or not text(frame.get("datum_revision"))
+        or not text(frame.get("dimensioned_datum_evidence"))
+    ):
+        blockers.append("locked geometry datum requires verified handedness, origin, revision, and evidence")
+
+    for case in load_cases:
+        for field in ("input_refs", "geometry_refs"):
+            refs = case.get(field)
+            if not isinstance(refs, list) or not refs or not all(text(ref) for ref in refs):
+                errors.append(f"load case {case['id']} {field} must be a non-empty array of IDs")
+    if errors:
+        return {"schema_valid": False, "scope_ready": False, "errors": sorted(set(errors)), "blockers": blockers}
+
     required_inputs_to_gate = required_inputs
     geometry_to_gate = [
         item for item in geometry_parameters
@@ -133,8 +175,15 @@ def audit(profile_name: str | None = None) -> dict[str, Any]:
             ("required_geometry_parameters", geometry_ids),
             ("required_load_cases", load_case_ids),
         ):
-            if not isinstance(ids, list) or not ids or len(ids) != len(set(ids)):
+            if not isinstance(ids, list) or not ids or not all(text(item) for item in ids) or len(ids) != len(set(ids)):
                 errors.append(f"closure profile {field_name} must be a non-empty unique array")
+
+        if not isinstance(evidence_packages, list) or not evidence_packages or not all(isinstance(row, dict) for row in evidence_packages):
+            errors.append("closure profile article_evidence_packages must be a non-empty array of objects")
+        else:
+            collect_unique_ids([("article_evidence_packages", evidence_packages)], errors)
+        if errors:
+            return {"schema_valid": False, "scope_ready": False, "errors": errors, "blockers": blockers}
 
         mission_by_id = {item.get("id"): item for item in required_inputs}
         geometry_by_id = {item.get("id"): item for item in geometry_parameters}
@@ -151,6 +200,9 @@ def audit(profile_name: str | None = None) -> dict[str, Any]:
                 errors.append(f"closure profile references unknown load case {record_id}")
 
         selected_cases = [load_by_id[item] for item in load_case_ids if item in load_by_id]
+        assigned_cases = {case["id"] for case in load_cases if case.get("article") == closure_profile.get("article")}
+        if set(load_case_ids) != assigned_cases:
+            errors.append("closure profile must include every load case assigned to its article")
         derived_mission_ids = {
             ref for case in selected_cases for ref in case.get("input_refs", [])
             if isinstance(ref, str) and ref.startswith("ME-")
@@ -257,15 +309,27 @@ def audit(profile_name: str | None = None) -> dict[str, Any]:
         errors.append("arm span differs between mission and geometry registers")
 
     profile_path = PROJECT_DIR / "profiles" / "t56_domestic_frame.json"
-    if profile_path.exists():
-        try:
-            profile = load_json(profile_path)
-            if profile.get("height_mm") != locked_values.get("height_mm"):
-                errors.append("mission height differs from t56_domestic_frame.json")
-            if profile.get("arm_span_mm") != locked_values.get("arm_span_mm"):
-                errors.append("mission arm span differs from t56_domestic_frame.json")
-        except (OSError, ValueError, json.JSONDecodeError) as exc:
-            errors.append(f"cannot validate t56_domestic_frame.json: {exc}")
+    try:
+        profile = load_json(profile_path)
+        reference = profile.get("canon_reference")
+        if not isinstance(reference, dict) or not finite_number(reference.get("height_mm")):
+            raise ValueError("canon_reference requires a finite numeric height_mm")
+        if not text(reference.get("canon_version")):
+            raise ValueError("canon_reference requires an explicit canon_version")
+        canon = instantiate_sophy_canon(reference["height_mm"], canon_version=reference["canon_version"])
+        for name, expected in (("height_mm", canon.height_mm), ("arm_span_mm", canon.arm_span_mm)):
+            if not finite_number(profile.get(name)) or profile.get(name) != expected:
+                errors.append(f"profile {name} differs from bound SOPHY canon")
+            if not finite_number(locked_values.get(name)) or locked_values.get(name) != expected:
+                errors.append(f"mission {name} differs from bound SOPHY canon")
+        for name, expected in (("overall_height", canon.height_mm), ("baseline_arm_span", canon.arm_span_mm)):
+            if not finite_number(locked_geometry_values.get(name)) or locked_geometry_values.get(name) != expected:
+                errors.append(f"geometry {name} differs from bound SOPHY canon")
+        for record in locked_geometry + [row for row in locked_mission if row.get("parameter") in ("height_mm", "arm_span_mm")]:
+            if record.get("units") != "mm":
+                errors.append(f"locked scale {record.get('id')} must use mm")
+    except (OSError, ValueError, TypeError) as exc:
+        errors.append(f"cannot validate t56_domestic_frame.json: {exc}")
 
     blockers = sorted(set(blockers))
     errors = sorted(set(errors))

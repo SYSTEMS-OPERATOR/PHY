@@ -20,6 +20,7 @@ The registers answer four questions in machine-readable form:
 - load_case_register.json defines the minimum structural, contact, maintenance, and power-loss cases.
 - single_side_article_closure.json selects the exact dependency union for the next single-side kinematic and structural article.
 - ../tools/check_convergence.py audits identifiers, references, locked values, and readiness blockers without external dependencies.
+- geometry_contracts.md defines typed dimension, datum, path, joint, and envelope inputs; ../tools/geometry_contracts.py validates them without supplying measurements.
 
 ## Gate sequence
 
@@ -30,6 +31,12 @@ Close every required input in mission_envelope.json with a value, unit, authorit
 ### Gate G1 — simulation geometry
 
 Dimension and lock every geometry_register.json parameter marked required_for_simulation. Structural geometry and outer-form geometry remain separate.
+
+Supplied geometry must satisfy the [typed input contract](geometry_contracts.md),
+including finite numeric values, exact units, explicit frames, and positive
+engineering tolerances. The local fixture datum must also be dimensioned with a
+revision and drawing evidence. Both scopes verify scale/span against the executable
+canon; repeated matching profile numbers are not sufficient authority.
 
 ### Gate G2 — load cases
 
@@ -62,6 +69,13 @@ The single-side profile is the exact dependency union of the six canonical load 
 - 5 evidence packages covering the article fixture, mechanism and retention, material and joint stack, kinematic/collision/service model, and analysis/test record.
 
 The profile supplies no values. Every numeric closure still requires the authority, evidence, tolerance, acceptance criteria, and approval evidence required by the source registers.
+
+## Software stabilization evidence
+
+`tests/test_t56_geometry_contracts.py` exercises malformed geometry and gate-bypass
+regressions, plus synthetic positive controls. This stabilizes input validation;
+it does not close physical geometry or article evidence. See the contract's
+verification section for offline commands and remaining validation limits.
 
 ## Change rule
 

@@ -69,7 +69,20 @@ The pelvis is not monolithic. It consists of:
 
 Hands use light distal linkages with tendons routed to serviceable forearm actuators. Feet use a broader hidden sole structure, pressure sensing, compliant heel/toe elements, and replaceable contact surfaces.
 
-## MVP demonstrator
+## Prototype sequence
+
+The next convergence article is the **single-side thoracic root to dummy
+humerus**, as locked in `requirements/mission_envelope.json`. Its purpose is to
+prove shoulder motion, load transfer, passive retention, and service access on a
+representative fixture before paired integration. See
+`requirements/SHOULDER_DIMENSIONING.md` for the endpoint mapping and drawing work.
+
+The left forearm remains the first complete distal systems demonstrator below.
+It follows the shoulder article in the integration sequence; material and insert
+coupons may be developed alongside it. A shoulder result does not qualify the
+forearm, and a forearm result does not qualify the shoulder.
+
+## Distal systems demonstrator
 
 The first complete systems article is the left forearm:
 

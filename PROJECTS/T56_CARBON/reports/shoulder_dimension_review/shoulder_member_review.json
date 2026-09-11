@@ -1,0 +1,73 @@
+{
+  "blockers": [
+    "pose_id remains open",
+    "datum_drawing remains open",
+    "shoulder_output: measurement/design dimension remains open",
+    "shoulder_output: tolerance remains open",
+    "shoulder_output: drawing/measurement evidence remains open",
+    "dummy_elbow_station: measurement/design dimension remains open",
+    "dummy_elbow_station: tolerance remains open",
+    "dummy_elbow_station: drawing/measurement evidence remains open",
+    "shoulder_offset: measurement/design dimension remains open",
+    "shoulder_offset: tolerance remains open",
+    "shoulder_offset: drawing/measurement evidence remains open",
+    "elbow_offset: measurement/design dimension remains open",
+    "elbow_offset: tolerance remains open",
+    "elbow_offset: drawing/measurement evidence remains open",
+    "shoulder_insertion: measurement/design dimension remains open",
+    "shoulder_insertion: tolerance remains open",
+    "shoulder_insertion: drawing/measurement evidence remains open",
+    "elbow_insertion: measurement/design dimension remains open",
+    "elbow_insertion: tolerance remains open",
+    "elbow_insertion: drawing/measurement evidence remains open"
+  ],
+  "canon_adopted": false,
+  "errors": [],
+  "fabrication_ready": false,
+  "input_sha256": "3e77df90dc4f101e71d424349b81245f756a259a3a8eebd5bdb1cbbe0adcb3ec",
+  "inputs": {
+    "datum_drawing": null,
+    "frame_id": "FRAME_T56_THORAX",
+    "model": "straight_collinear_dummy_member_v1",
+    "pose_id": null,
+    "records": {
+      "dummy_elbow_station": {
+        "evidence": null,
+        "tolerance_mm": null,
+        "units": "mm",
+        "value": null
+      },
+      "elbow_insertion": {
+        "evidence": null,
+        "tolerance_mm": null,
+        "units": "mm",
+        "value": null
+      },
+      "elbow_offset": {
+        "evidence": null,
+        "tolerance_mm": null,
+        "units": "mm",
+        "value": null
+      },
+      "shoulder_insertion": {
+        "evidence": null,
+        "tolerance_mm": null,
+        "units": "mm",
+        "value": null
+      },
+      "shoulder_offset": {
+        "evidence": null,
+        "tolerance_mm": null,
+        "units": "mm",
+        "value": null
+      },
+      "shoulder_output": {
+        "evidence": null,
+        "tolerance_mm": null,
+        "units": "mm",
+        "value": null
+      }
+    }
+  },
+  "status": "blocked"
+}

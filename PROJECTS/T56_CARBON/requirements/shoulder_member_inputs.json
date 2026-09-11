@@ -1,0 +1,44 @@
+{
+  "model": "straight_collinear_dummy_member_v1",
+  "frame_id": "FRAME_T56_THORAX",
+  "pose_id": null,
+  "datum_drawing": null,
+  "records": {
+    "shoulder_output": {
+      "value": null,
+      "units": "mm",
+      "tolerance_mm": null,
+      "evidence": null
+    },
+    "dummy_elbow_station": {
+      "value": null,
+      "units": "mm",
+      "tolerance_mm": null,
+      "evidence": null
+    },
+    "shoulder_offset": {
+      "value": null,
+      "units": "mm",
+      "tolerance_mm": null,
+      "evidence": null
+    },
+    "elbow_offset": {
+      "value": null,
+      "units": "mm",
+      "tolerance_mm": null,
+      "evidence": null
+    },
+    "shoulder_insertion": {
+      "value": null,
+      "units": "mm",
+      "tolerance_mm": null,
+      "evidence": null
+    },
+    "elbow_insertion": {
+      "value": null,
+      "units": "mm",
+      "tolerance_mm": null,
+      "evidence": null
+    }
+  }
+}

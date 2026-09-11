@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0.0",
+  "status": "selected_reference_evidence_not_canon_adoption",
+  "ansur": {
+    "source_id": "ANSUR_II_FEMALE_2012",
+    "producer": "U.S. Army Natick Soldier Research, Development and Engineering Center",
+    "title": "2012 Anthropometric Survey of U.S. Army Personnel: Methods and Summary Statistics",
+    "report_number": "NATICK/TR-15/007",
+    "report_date": "2014-12",
+    "acquisition_page": "https://www.openlab.psu.edu/ansur2/",
+    "official_catalog": "https://ph.health.mil/topics/workplacehealth/ergo/Pages/Anthropometric-Database.aspx",
+    "data_url": "https://tools.openlab.psu.edu/publicData/ANSUR_II_FEMALE_Public.csv",
+    "report_url": "https://tools.openlab.psu.edu/publicData/ANSURII-TR15-007.pdf",
+    "retrieved_on": "2026-09-08",
+    "csv_sha256": "ed7e800aa97a4d42f8286b988be2fe1883a2e789588169db959864b707d1757a",
+    "projected_snapshot_sha256": "e1ebce0d5dba49abf5a1a4753a942d6a1e8ccff26fd2d98d6b5f87760346d60c",
+    "report_sha256": "c43cfc2142bb71efaa02581aef5c6ceb813217fcd232b426b68de24ca5e9a740",
+    "expected_rows": 1986,
+    "length_units": "mm",
+    "summary_table_units": "cm",
+    "population": "Measured female US Army personnel, 2010-2012; not a representative civilian sample.",
+    "unit_warning": "Use measured stature and span, not self-reported Heightin. Excluded weightkg is in hectograms, not kg.",
+    "distribution": "Army report approved for public release; university hosts the public working database. Host is a mirror, not the study author."
+  },
+  "supporting_references": [
+    {
+      "source_id": "NASA_3001_VOL2_APPENDIX_E_WEB",
+      "title": "NASA-STD-3001 Volume 2, Appendix E: Physical Characteristics and Capabilities Data Sets",
+      "url": "https://www.nasa.gov/reference/appendix-e-vol-2/",
+      "retrieved_on": "2026-09-08",
+      "locators": ["E.2", "E.3", "E.5"],
+      "role": "landmark_and_motion_review_guidance_no_numeric_import",
+      "provenance": "E.2 uses ANSUR 1988 projected to 2015, distinct from ANSUR II. E.3 distinguishes unsuited and suited motion. E.5 discusses skeletal landmark axes.",
+      "limitation": "Microgravity allowances and human mass regressions do not transfer automatically to a terrestrial armature. Exact NASA edition used previously in PHY was not recovered."
+    }
+  ],
+  "historical": {
+    "source_id": "VITRUVIUS_III_I",
+    "title": "The Ten Books on Architecture, Book III, Chapter I, paragraphs 2-3",
+    "edition": "Morris Hicky Morgan translation, Harvard University Press, 1914",
+    "url": "https://www.gutenberg.org/files/20239/20239-h/20239-h.htm#Page_72",
+    "classification": "historical_reference_not_automatic_canon",
+    "ratios": {"handlength": [1, 10], "footlength": [1, 6]},
+    "limitation": "These historical fractions are compared, never silently adopted. They are not empirical female measurements."
+  },
+  "measurements": {
+    "stature": {"section": 75, "printed_page": 193, "pdf_page": 203, "female_mean_cm": 162.85, "definition": "Standing surface to vertex; erect, head in Frankfurt plane.", "mapping": "canon_scale_comparison", "target": null},
+    "span": {"section": 74, "printed_page": 191, "pdf_page": 201, "female_mean_cm": 166.03, "definition": "Middle fingertip to middle fingertip with arms extended horizontally.", "mapping": "canon_span_comparison", "target": null},
+    "acromionradialelength": {"section": 3, "printed_page": 49, "pdf_page": 59, "female_mean_cm": 31.12, "definition": "Right acromion to radiale, measured parallel to relaxed upper arm.", "mapping": "external_segment_proxy_not_bone_or_joint_center_length", "target": ["primary_lengths_mm", "humerus"]},
+    "biacromialbreadth": {"section": 8, "printed_page": 59, "pdf_page": 69, "female_mean_cm": 36.53, "definition": "Between acromion landmarks, seated with shoulders relaxed at quiet respiration.", "mapping": "same_named_measure_requires_endpoint_confirmation", "target": ["major_widths_mm", "biacromial_shoulder_breadth"]},
+    "bicristalbreadth": {"section": 10, "printed_page": 63, "pdf_page": 73, "female_mean_cm": 27.33, "definition": "Between iliocristale landmarks with tissue compressed toward the bony landmarks.", "mapping": "pelvis_breadth_definition_unresolved_not_hip_center_spacing", "target": ["major_widths_mm", "pelvis_breadth"]},
+    "chestbreadth": {"section": 23, "printed_page": 89, "pdf_page": 99, "female_mean_cm": 26.93, "definition": "Chest width at anterior chest-point level; tissue compressed, maximum inspiration.", "mapping": "external_envelope_proxy_not_structural_housing", "target": ["major_widths_mm", "ribcage_max_width"]},
+    "chestdepth": {"section": 25, "printed_page": 93, "pdf_page": 103, "female_mean_cm": 24.74, "definition": "Anterior chest point to back at matching level during quiet respiration.", "mapping": "external_envelope_proxy_not_structural_housing", "target": null},
+    "radialestylionlength": {"section": 67, "printed_page": 177, "pdf_page": 187, "female_mean_cm": 24.13, "definition": "Right radiale to stylion, measured parallel to forearm with palm forward.", "mapping": "external_segment_proxy_not_bone_or_joint_center_length", "target": ["primary_lengths_mm", "radius"]},
+    "handlength": {"section": 44, "printed_page": 131, "pdf_page": 141, "female_mean_cm": 18.11, "definition": "Right wrist stylion to middle fingertip using the report's supported-hand posture.", "mapping": "same_named_measure_requires_endpoint_confirmation", "target": ["primary_lengths_mm", "hand_total"]},
+    "footlength": {"section": 36, "printed_page": 115, "pdf_page": 125, "female_mean_cm": 24.63, "definition": "Weight-bearing right heel to longest toe, measured along the foot device.", "mapping": "same_named_measure_requires_endpoint_confirmation", "target": ["primary_lengths_mm", "foot_total"]}
+  },
+  "unresolved_targets": {
+    "head_height_mm": "ANSUR headlength is front-to-back, not chin-to-crown height; select a matched endpoint source.",
+    "humerus_length_mm": "Acromion-radiale is a proxy; osteometric endpoints and shoulder/elbow centers require separate definition.",
+    "radius_length_mm": "Radiale-stylion is a proxy; bone ends and cartridge datums require separate definition.",
+    "ulna_length_mm": "Do not copy radius or forearm length into ulna length.",
+    "femur_length_mm": "Standing external heights are not femoral head-to-condyle length.",
+    "tibia_length_mm": "Tibiale height is not isolated tibia length or knee-to-ankle center spacing.",
+    "fibula_length_mm": "Do not derive from tibia length without a selected endpoint model.",
+    "joint_centers_and_mechanism_paths": "Scalar anthropometry cannot determine 3D centers, shoulder trajectories, bearings, stops, or fixture interfaces."
+  }
+}

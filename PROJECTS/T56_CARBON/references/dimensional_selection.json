@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0.0",
+  "policy_id": "T56_ANSUR_REFERENCE_COMPARISON_V1",
+  "authority": "analysis_selection_not_fabrication_tolerance",
+  "age_years": [21, 28],
+  "stature_band_mm": 25,
+  "span_band_mm": 25,
+  "minimum_cohort_size": 20,
+  "sensitivity_bands_mm": [10, 25, 50],
+  "rationale": "Adult female age band follows the existing REDWOOD reference. Filter on measured stature and measured span near the T56 canon target; do not select on desired limb results or silently expand an insufficient cohort.",
+  "statistics": "Unweighted observed marginal median and linearly interpolated p05/p95. These are neither confidence intervals nor manufacturing tolerances.",
+  "shape_rule": "Also show one actual cohort row nearest the marginal medians by summed relative absolute deviation, with source-row tie break; do not present independent percentile dimensions as one observed person.",
+  "legacy_comparison": "Only the legacy reference numbers are scaled by H/1650 for comparison. Measured people are not rescaled. No legacy value is promoted to canon."
+}

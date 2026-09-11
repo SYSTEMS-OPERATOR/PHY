@@ -15,6 +15,12 @@ The registers answer four questions in machine-readable form:
 
 ## Files
 
+- [SHOULDER_DIMENSIONING.md](SHOULDER_DIMENSIONING.md) defines the next article's
+  endpoint mapping, dummy-member dimensional convention, and drawing work order.
+- shoulder_member_inputs.json records unresolved mechanical dimensions for the
+  offline shoulder_dimensions.py review tool. These are not canon landmarks or
+  locked register values; the tool cannot release fabrication.
+
 - mission_envelope.json records locked project decisions, open operating inputs, and conservative scope exclusions.
 - geometry_register.json defines the shared datum and every geometry item needed by the trunk-to-left-shoulder convergence article.
 - load_case_register.json defines the minimum structural, contact, maintenance, and power-loss cases.

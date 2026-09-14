@@ -1,0 +1,815 @@
+{
+  "artifact": "PHY_SOURCE_COMPONENT_REVIEW_KIT",
+  "units": "mm",
+  "fabrication_ready": false,
+  "assembled_body": false,
+  "representation": "Unplaced local solids. Boxes are dimension envelopes, not anatomical meshes.",
+  "local_frame": "X=source width, Y=source thickness, Z=source length; not anatomical axes. Bottom center origin is a display convention.",
+  "no_rescaling": "REDWOOD and biological dimensions retained as recorded; not rescaled to T56.",
+  "canon": {
+    "canon_version": "1.0.0",
+    "height_mm": 1676.4,
+    "binding": "SOPHY_CANON(H=1676.4, canon_version=1.0.0)"
+  },
+  "components": [
+    {
+      "id": "REF_FEMUR",
+      "name": "Femur reference envelope",
+      "kind": "box",
+      "xyz_mm": [
+        40.0,
+        40.0,
+        420.0
+      ],
+      "source": "skeleton/datasets/female_21_baseline.json",
+      "source_keys": [
+        "Femur.width_cm",
+        "Femur.thickness_cm",
+        "Femur.length_cm"
+      ],
+      "authority": "legacy biological reference; not SOPHY canon or finished bone geometry",
+      "assembly_transform": null
+    },
+    {
+      "id": "REF_TIBIA",
+      "name": "Tibia reference envelope",
+      "kind": "box",
+      "xyz_mm": [
+        35.0,
+        35.0,
+        375.0
+      ],
+      "source": "skeleton/datasets/female_21_baseline.json",
+      "source_keys": [
+        "Tibia.width_cm",
+        "Tibia.thickness_cm",
+        "Tibia.length_cm"
+      ],
+      "authority": "legacy biological reference; not SOPHY canon or finished bone geometry",
+      "assembly_transform": null
+    },
+    {
+      "id": "REF_FIBULA",
+      "name": "Fibula reference envelope",
+      "kind": "box",
+      "xyz_mm": [
+        15.0,
+        15.0,
+        355.0
+      ],
+      "source": "skeleton/datasets/female_21_baseline.json",
+      "source_keys": [
+        "Fibula.width_cm",
+        "Fibula.thickness_cm",
+        "Fibula.length_cm"
+      ],
+      "authority": "legacy biological reference; not SOPHY canon or finished bone geometry",
+      "assembly_transform": null
+    },
+    {
+      "id": "REF_HUMERUS",
+      "name": "Humerus reference envelope",
+      "kind": "box",
+      "xyz_mm": [
+        30.0,
+        30.0,
+        310.0
+      ],
+      "source": "skeleton/datasets/female_21_baseline.json",
+      "source_keys": [
+        "Humerus.width_cm",
+        "Humerus.thickness_cm",
+        "Humerus.length_cm"
+      ],
+      "authority": "legacy biological reference; not SOPHY canon or finished bone geometry",
+      "assembly_transform": null
+    },
+    {
+      "id": "REF_RADIUS",
+      "name": "Radius reference envelope",
+      "kind": "box",
+      "xyz_mm": [
+        15.0,
+        15.0,
+        240.0
+      ],
+      "source": "skeleton/datasets/female_21_baseline.json",
+      "source_keys": [
+        "Radius.width_cm",
+        "Radius.thickness_cm",
+        "Radius.length_cm"
+      ],
+      "authority": "legacy biological reference; not SOPHY canon or finished bone geometry",
+      "assembly_transform": null
+    },
+    {
+      "id": "REF_ULNA",
+      "name": "Ulna reference envelope",
+      "kind": "box",
+      "xyz_mm": [
+        15.0,
+        15.0,
+        250.0
+      ],
+      "source": "skeleton/datasets/female_21_baseline.json",
+      "source_keys": [
+        "Ulna.width_cm",
+        "Ulna.thickness_cm",
+        "Ulna.length_cm"
+      ],
+      "authority": "legacy biological reference; not SOPHY canon or finished bone geometry",
+      "assembly_transform": null
+    },
+    {
+      "id": "REF_CLAVICLE",
+      "name": "Clavicle reference envelope",
+      "kind": "box",
+      "xyz_mm": [
+        12.0,
+        12.0,
+        140.0
+      ],
+      "source": "skeleton/datasets/female_21_baseline.json",
+      "source_keys": [
+        "Clavicle.width_cm",
+        "Clavicle.thickness_cm",
+        "Clavicle.length_cm"
+      ],
+      "authority": "legacy biological reference; not SOPHY canon or finished bone geometry",
+      "assembly_transform": null
+    },
+    {
+      "id": "REF_SCAPULA",
+      "name": "Scapula reference envelope",
+      "kind": "box",
+      "xyz_mm": [
+        105.0,
+        3.0,
+        145.0
+      ],
+      "source": "skeleton/datasets/female_21_baseline.json",
+      "source_keys": [
+        "Scapula.width_cm",
+        "Scapula.thickness_cm",
+        "Scapula.length_cm"
+      ],
+      "authority": "legacy biological reference; not SOPHY canon or finished bone geometry",
+      "assembly_transform": null
+    },
+    {
+      "id": "REF_HIPBONE",
+      "name": "HipBone reference envelope",
+      "kind": "box",
+      "xyz_mm": [
+        140.0,
+        50.0,
+        230.0
+      ],
+      "source": "skeleton/datasets/female_21_baseline.json",
+      "source_keys": [
+        "HipBone.width_cm",
+        "HipBone.thickness_cm",
+        "HipBone.length_cm"
+      ],
+      "authority": "legacy biological reference; not SOPHY canon or finished bone geometry",
+      "assembly_transform": null
+    },
+    {
+      "id": "REF_VERTEBRA",
+      "name": "Vertebra reference envelope",
+      "kind": "box",
+      "xyz_mm": [
+        35.0,
+        25.0,
+        20.0
+      ],
+      "source": "skeleton/datasets/female_21_baseline.json",
+      "source_keys": [
+        "Vertebra.avg_width_cm",
+        "Vertebra.avg_thickness_cm",
+        "Vertebra.avg_height_cm"
+      ],
+      "authority": "legacy biological reference; not SOPHY canon or finished bone geometry",
+      "assembly_transform": null
+    },
+    {
+      "id": "REF_SACRUM",
+      "name": "Sacrum reference envelope",
+      "kind": "box",
+      "xyz_mm": [
+        110.0,
+        10.0,
+        100.0
+      ],
+      "source": "skeleton/datasets/female_21_baseline.json",
+      "source_keys": [
+        "Sacrum.width_cm",
+        "Sacrum.thickness_cm",
+        "Sacrum.length_cm"
+      ],
+      "authority": "legacy biological reference; not SOPHY canon or finished bone geometry",
+      "assembly_transform": null
+    },
+    {
+      "id": "REF_RIB",
+      "name": "Rib reference envelope",
+      "kind": "box",
+      "xyz_mm": [
+        12.0,
+        5.0,
+        240.0
+      ],
+      "source": "skeleton/datasets/female_21_baseline.json",
+      "source_keys": [
+        "Rib.avg_width_cm",
+        "Rib.avg_thickness_cm",
+        "Rib.avg_length_cm"
+      ],
+      "authority": "legacy biological reference; not SOPHY canon or finished bone geometry",
+      "assembly_transform": null
+    },
+    {
+      "id": "REF_STERNUM",
+      "name": "Sternum reference envelope",
+      "kind": "box",
+      "xyz_mm": [
+        50.0,
+        10.0,
+        170.0
+      ],
+      "source": "skeleton/datasets/female_21_baseline.json",
+      "source_keys": [
+        "Sternum.width_cm",
+        "Sternum.thickness_cm",
+        "Sternum.length_cm"
+      ],
+      "authority": "legacy biological reference; not SOPHY canon or finished bone geometry",
+      "assembly_transform": null
+    },
+    {
+      "id": "REDWOOD_FEMUR_BLANK",
+      "name": "REDWOOD femur rough blank",
+      "kind": "box",
+      "xyz_mm": [
+        44.0,
+        44.0,
+        430.0
+      ],
+      "source": "PROJECTS/REDWOOD/bone_guides/BONE_FEMUR_R.md",
+      "source_keys": [
+        "Rough Redwood blank"
+      ],
+      "authority": "provisional REDWOOD blank; joint centers and drilling unresolved",
+      "assembly_transform": null
+    },
+    {
+      "id": "BRASS_BUSHING_3MM_ID_6MM_OD",
+      "name": "BRASS BUSHING 3MM ID 6MM OD",
+      "kind": "bushing",
+      "id_od_length_mm": [
+        3,
+        6,
+        6
+      ],
+      "xyz_mm": [
+        6,
+        6,
+        6
+      ],
+      "source": "PROJECTS/REDWOOD/hardware/bushing_catalog.json",
+      "source_keys": [
+        "BRASS_BUSHING_3MM_ID_6MM_OD"
+      ],
+      "authority": "nominal catalog geometry; fits, tolerances and placement unresolved",
+      "assembly_transform": null
+    },
+    {
+      "id": "BRASS_BUSHING_4MM_ID_8MM_OD",
+      "name": "BRASS BUSHING 4MM ID 8MM OD",
+      "kind": "bushing",
+      "id_od_length_mm": [
+        4,
+        8,
+        8
+      ],
+      "xyz_mm": [
+        8,
+        8,
+        8
+      ],
+      "source": "PROJECTS/REDWOOD/hardware/bushing_catalog.json",
+      "source_keys": [
+        "BRASS_BUSHING_4MM_ID_8MM_OD"
+      ],
+      "authority": "nominal catalog geometry; fits, tolerances and placement unresolved",
+      "assembly_transform": null
+    },
+    {
+      "id": "BRASS_BUSHING_6MM_ID_10MM_OD",
+      "name": "BRASS BUSHING 6MM ID 10MM OD",
+      "kind": "bushing",
+      "id_od_length_mm": [
+        6,
+        10,
+        12
+      ],
+      "xyz_mm": [
+        10,
+        10,
+        12
+      ],
+      "source": "PROJECTS/REDWOOD/hardware/bushing_catalog.json",
+      "source_keys": [
+        "BRASS_BUSHING_6MM_ID_10MM_OD"
+      ],
+      "authority": "nominal catalog geometry; fits, tolerances and placement unresolved",
+      "assembly_transform": null
+    },
+    {
+      "id": "BRASS_BUSHING_8MM_ID_12MM_OD",
+      "name": "BRASS BUSHING 8MM ID 12MM OD",
+      "kind": "bushing",
+      "id_od_length_mm": [
+        8,
+        12,
+        14
+      ],
+      "xyz_mm": [
+        12,
+        12,
+        14
+      ],
+      "source": "PROJECTS/REDWOOD/hardware/bushing_catalog.json",
+      "source_keys": [
+        "BRASS_BUSHING_8MM_ID_12MM_OD"
+      ],
+      "authority": "nominal catalog geometry; fits, tolerances and placement unresolved",
+      "assembly_transform": null
+    }
+  ],
+  "omitted": [
+    {
+      "id": "Skull",
+      "reason": "No unambiguous width/thickness/length triple; axis remapping not inferred."
+    },
+    {
+      "id": "Mandible",
+      "reason": "No unambiguous width/thickness/length triple; axis remapping not inferred."
+    }
+  ],
+  "open_t56_inputs": [
+    {
+      "id": "GEO-THX-001",
+      "name": "structural_thorax_width",
+      "value": null,
+      "units": "mm",
+      "status": "open",
+      "required_for_simulation": true,
+      "source_requirement": "traceable anthropometric target plus packaging allocation",
+      "consumers": [
+        "inner_thoracic_housing",
+        "shoulder_girdle_root_interface"
+      ]
+    },
+    {
+      "id": "GEO-THX-002",
+      "name": "structural_thorax_depth",
+      "value": null,
+      "units": "mm",
+      "status": "open",
+      "required_for_simulation": true,
+      "source_requirement": "traceable anthropometric target plus packaging allocation",
+      "consumers": [
+        "inner_thoracic_housing",
+        "nested_thorax"
+      ]
+    },
+    {
+      "id": "GEO-THX-003",
+      "name": "structural_thorax_height",
+      "value": null,
+      "units": "mm",
+      "status": "open",
+      "required_for_simulation": true,
+      "source_requirement": "traceable anthropometric target and spine-to-pelvis interface study",
+      "consumers": [
+        "inner_thoracic_housing",
+        "segmented_spine",
+        "pelvic_sacral_bridge"
+      ]
+    },
+    {
+      "id": "GEO-THX-004",
+      "name": "sternum_to_spine_reference_offset",
+      "value": null,
+      "units": "mm",
+      "status": "open",
+      "required_for_simulation": true,
+      "source_requirement": "dimensioned thoracic packaging model",
+      "consumers": [
+        "coordinate_frame",
+        "shoulder_girdle_root_interface"
+      ]
+    },
+    {
+      "id": "GEO-PEL-001",
+      "name": "structural_pelvis_breadth",
+      "value": null,
+      "units": "mm",
+      "status": "open",
+      "required_for_simulation": true,
+      "source_requirement": "validated T-5.6 anthropometric target",
+      "consumers": [
+        "pelvic_sacral_bridge",
+        "bilateral_hip_nodes"
+      ]
+    },
+    {
+      "id": "GEO-PEL-002",
+      "name": "sacral_bridge_reference_transform",
+      "value": null,
+      "units": "mm_and_deg",
+      "status": "open",
+      "required_for_simulation": true,
+      "source_requirement": "dimensioned trunk load-path model",
+      "consumers": [
+        "pelvic_sacral_bridge",
+        "inner_thoracic_housing"
+      ]
+    },
+    {
+      "id": "GEO-PEL-003",
+      "name": "left_hip_center_in_thorax_frame",
+      "value": null,
+      "units": "mm",
+      "status": "open",
+      "required_for_simulation": true,
+      "source_requirement": "validated anthropometry and hip cartridge packaging",
+      "consumers": [
+        "left_hip_cartridge",
+        "trunk_load_path"
+      ]
+    },
+    {
+      "id": "GEO-PEL-004",
+      "name": "right_hip_center_in_thorax_frame",
+      "value": null,
+      "units": "mm",
+      "status": "open",
+      "required_for_simulation": true,
+      "source_requirement": "validated anthropometry and hip cartridge packaging",
+      "consumers": [
+        "right_hip_cartridge",
+        "trunk_load_path"
+      ]
+    },
+    {
+      "id": "GEO-SHO-001",
+      "name": "left_posterior_carriage_root_coordinates",
+      "value": null,
+      "units": "mm",
+      "status": "open",
+      "required_for_simulation": true,
+      "source_requirement": "dimensioned thorax and shoulder envelope",
+      "consumers": [
+        "shoulder_girdle_root_interface",
+        "scapular_carriage"
+      ]
+    },
+    {
+      "id": "GEO-SHO-002",
+      "name": "left_anterior_clavicular_root_coordinates",
+      "value": null,
+      "units": "mm",
+      "status": "open",
+      "required_for_simulation": true,
+      "source_requirement": "dimensioned thorax and shoulder envelope",
+      "consumers": [
+        "shoulder_girdle_root_interface",
+        "clavicular_linkage"
+      ]
+    },
+    {
+      "id": "GEO-SHO-003",
+      "name": "left_carriage_guide_axis_or_path",
+      "value": null,
+      "units": "mm_and_unit_vector",
+      "status": "open",
+      "required_for_simulation": true,
+      "source_requirement": "selected shoulder mechanism trade study",
+      "consumers": [
+        "scapular_carriage"
+      ]
+    },
+    {
+      "id": "GEO-SHO-004",
+      "name": "left_clavicular_link_joint_centers",
+      "value": null,
+      "units": "mm",
+      "status": "open",
+      "required_for_simulation": true,
+      "source_requirement": "selected shoulder mechanism trade study",
+      "consumers": [
+        "clavicular_linkage"
+      ]
+    },
+    {
+      "id": "GEO-SHO-005",
+      "name": "left_shoulder_center_trajectory",
+      "value": null,
+      "units": "mm_and_deg_by_pose",
+      "status": "open",
+      "required_for_simulation": true,
+      "source_requirement": "task-space requirement and kinematic optimization",
+      "consumers": [
+        "scapular_carriage",
+        "clavicular_linkage",
+        "humeral_shoulder_cartridge"
+      ]
+    },
+    {
+      "id": "GEO-SHO-006",
+      "name": "left_shoulder_cartridge_joint_center",
+      "value": null,
+      "units": "mm",
+      "status": "open",
+      "required_for_simulation": true,
+      "source_requirement": "selected shoulder cartridge architecture",
+      "consumers": [
+        "humeral_shoulder_cartridge",
+        "dummy_humerus_test_article"
+      ]
+    },
+    {
+      "id": "GEO-SHO-007",
+      "name": "left_shoulder_cartridge_axes_and_ranges",
+      "value": null,
+      "units": "unit_vectors_and_deg",
+      "status": "open",
+      "required_for_simulation": true,
+      "source_requirement": "task-space requirement, collision model, and hard-stop design",
+      "consumers": [
+        "humeral_shoulder_cartridge",
+        "collision_model"
+      ]
+    },
+    {
+      "id": "GEO-ARM-001",
+      "name": "humerus_effective_length",
+      "value": null,
+      "units": "mm",
+      "status": "open",
+      "required_for_simulation": true,
+      "source_requirement": "validated T-5.6 anthropometric target",
+      "consumers": [
+        "dummy_humerus_test_article",
+        "shoulder_load_cases"
+      ]
+    },
+    {
+      "id": "GEO-CLR-001",
+      "name": "neck_collision_volume",
+      "value": null,
+      "units": "mm",
+      "status": "open",
+      "required_for_simulation": true,
+      "source_requirement": "locked structural and compliant outer-form envelopes",
+      "consumers": [
+        "shoulder_collision_model"
+      ]
+    },
+    {
+      "id": "GEO-CLR-002",
+      "name": "ribcage_and_outer_form_collision_volume",
+      "value": null,
+      "units": "mm",
+      "status": "open",
+      "required_for_simulation": true,
+      "source_requirement": "locked nested-thorax and outer-form envelopes",
+      "consumers": [
+        "shoulder_collision_model",
+        "guarding"
+      ]
+    },
+    {
+      "id": "GEO-CLR-003",
+      "name": "shoulder_service_access_envelope",
+      "value": null,
+      "units": "mm",
+      "status": "open",
+      "required_for_simulation": true,
+      "source_requirement": "reclined and upright maintenance rehearsal model",
+      "consumers": [
+        "service_plan",
+        "routing",
+        "guards"
+      ]
+    }
+  ],
+  "source_sha256": {
+    "skeleton/datasets/female_21_baseline.json": "e431459dae115d63cf1b2fc58f8d16b0409115e74b129783a160d328ecaf3a30",
+    "PROJECTS/REDWOOD/hardware/bushing_catalog.json": "80b6fba50d13f1ddfc4070ba0e7e9097b5d9d5b7e841e78f1f29355377160c16",
+    "PROJECTS/REDWOOD/bone_guides/BONE_FEMUR_R.md": "9ddd6d076824e29bd5f776bfd9f451ef33732293bf75b6aea192e904346a98e9",
+    "PROJECTS/T56_CARBON/requirements/geometry_register.json": "f811c3e2009438df605d683b3c59246eadbb02621e20e19cbdf83a07a755f98a"
+  },
+  "geometry_checks": [
+    {
+      "id": "REF_FEMUR",
+      "valid_solid": true,
+      "bounds_mm": [
+        40.0,
+        40.0,
+        420.0
+      ],
+      "volume_mm3": 672000.0000000001,
+      "step_round_trip": "pass"
+    },
+    {
+      "id": "REF_TIBIA",
+      "valid_solid": true,
+      "bounds_mm": [
+        35.0,
+        35.0,
+        375.0
+      ],
+      "volume_mm3": 459375.0,
+      "step_round_trip": "pass"
+    },
+    {
+      "id": "REF_FIBULA",
+      "valid_solid": true,
+      "bounds_mm": [
+        15.0,
+        15.0,
+        355.0
+      ],
+      "volume_mm3": 79875.0,
+      "step_round_trip": "pass"
+    },
+    {
+      "id": "REF_HUMERUS",
+      "valid_solid": true,
+      "bounds_mm": [
+        30.0,
+        30.0,
+        310.0
+      ],
+      "volume_mm3": 279000.00000000006,
+      "step_round_trip": "pass"
+    },
+    {
+      "id": "REF_RADIUS",
+      "valid_solid": true,
+      "bounds_mm": [
+        15.0,
+        15.0,
+        240.0
+      ],
+      "volume_mm3": 54000.0,
+      "step_round_trip": "pass"
+    },
+    {
+      "id": "REF_ULNA",
+      "valid_solid": true,
+      "bounds_mm": [
+        15.0,
+        15.0,
+        250.0
+      ],
+      "volume_mm3": 56250.0,
+      "step_round_trip": "pass"
+    },
+    {
+      "id": "REF_CLAVICLE",
+      "valid_solid": true,
+      "bounds_mm": [
+        12.0,
+        12.0,
+        140.0
+      ],
+      "volume_mm3": 20160.0,
+      "step_round_trip": "pass"
+    },
+    {
+      "id": "REF_SCAPULA",
+      "valid_solid": true,
+      "bounds_mm": [
+        105.0,
+        3.0,
+        145.0
+      ],
+      "volume_mm3": 45675.0,
+      "step_round_trip": "pass"
+    },
+    {
+      "id": "REF_HIPBONE",
+      "valid_solid": true,
+      "bounds_mm": [
+        140.0,
+        50.0,
+        230.0
+      ],
+      "volume_mm3": 1609999.9999999998,
+      "step_round_trip": "pass"
+    },
+    {
+      "id": "REF_VERTEBRA",
+      "valid_solid": true,
+      "bounds_mm": [
+        35.0,
+        25.0,
+        20.0
+      ],
+      "volume_mm3": 17500.0,
+      "step_round_trip": "pass"
+    },
+    {
+      "id": "REF_SACRUM",
+      "valid_solid": true,
+      "bounds_mm": [
+        110.0,
+        10.0,
+        100.0
+      ],
+      "volume_mm3": 110000.0,
+      "step_round_trip": "pass"
+    },
+    {
+      "id": "REF_RIB",
+      "valid_solid": true,
+      "bounds_mm": [
+        12.0,
+        5.0,
+        240.0
+      ],
+      "volume_mm3": 14400.0,
+      "step_round_trip": "pass"
+    },
+    {
+      "id": "REF_STERNUM",
+      "valid_solid": true,
+      "bounds_mm": [
+        50.0,
+        10.0,
+        170.0
+      ],
+      "volume_mm3": 84999.99999999997,
+      "step_round_trip": "pass"
+    },
+    {
+      "id": "REDWOOD_FEMUR_BLANK",
+      "valid_solid": true,
+      "bounds_mm": [
+        44.0,
+        44.0,
+        430.0
+      ],
+      "volume_mm3": 832480.0,
+      "step_round_trip": "pass"
+    },
+    {
+      "id": "BRASS_BUSHING_3MM_ID_6MM_OD",
+      "valid_solid": true,
+      "bounds_mm": [
+        6.0,
+        6.0,
+        6.0
+      ],
+      "volume_mm3": 127.23450247038662,
+      "step_round_trip": "pass"
+    },
+    {
+      "id": "BRASS_BUSHING_4MM_ID_8MM_OD",
+      "valid_solid": true,
+      "bounds_mm": [
+        8.0,
+        8.0,
+        8.0
+      ],
+      "volume_mm3": 301.59289474462014,
+      "step_round_trip": "pass"
+    },
+    {
+      "id": "BRASS_BUSHING_6MM_ID_10MM_OD",
+      "valid_solid": true,
+      "bounds_mm": [
+        10.0,
+        10.0,
+        12.0
+      ],
+      "volume_mm3": 603.1857894892403,
+      "step_round_trip": "pass"
+    },
+    {
+      "id": "BRASS_BUSHING_8MM_ID_12MM_OD",
+      "valid_solid": true,
+      "bounds_mm": [
+        12.0,
+        12.0,
+        14.0
+      ],
+      "volume_mm3": 879.645943005142,
+      "step_round_trip": "pass"
+    }
+  ]
+}

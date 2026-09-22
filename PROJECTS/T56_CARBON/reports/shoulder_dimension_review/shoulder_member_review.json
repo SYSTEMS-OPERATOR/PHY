@@ -1,73 +1,110 @@
 {
-  "blockers": [
-    "pose_id remains open",
-    "datum_drawing remains open",
-    "shoulder_output: measurement/design dimension remains open",
-    "shoulder_output: tolerance remains open",
-    "shoulder_output: drawing/measurement evidence remains open",
-    "dummy_elbow_station: measurement/design dimension remains open",
-    "dummy_elbow_station: tolerance remains open",
-    "dummy_elbow_station: drawing/measurement evidence remains open",
-    "shoulder_offset: measurement/design dimension remains open",
-    "shoulder_offset: tolerance remains open",
-    "shoulder_offset: drawing/measurement evidence remains open",
-    "elbow_offset: measurement/design dimension remains open",
-    "elbow_offset: tolerance remains open",
-    "elbow_offset: drawing/measurement evidence remains open",
-    "shoulder_insertion: measurement/design dimension remains open",
-    "shoulder_insertion: tolerance remains open",
-    "shoulder_insertion: drawing/measurement evidence remains open",
-    "elbow_insertion: measurement/design dimension remains open",
-    "elbow_insertion: tolerance remains open",
-    "elbow_insertion: drawing/measurement evidence remains open"
+  "axis_unit": [
+    -1.0,
+    0.0,
+    0.0
   ],
+  "blockers": [],
   "canon_adopted": false,
+  "dimensions_mm": {
+    "effective_length": 317.0,
+    "seat_gap": 267.0,
+    "stock_cut_length": 327.0
+  },
   "errors": [],
   "fabrication_ready": false,
-  "input_sha256": "3e77df90dc4f101e71d424349b81245f756a259a3a8eebd5bdb1cbbe0adcb3ec",
+  "formula": "stock_cut_length = |E-S| - oS - oE + iS + iE",
+  "frame_id": "FRAME_T56_THORAX",
+  "input_sha256": "1f7f09f2397f2bb2b46401f31df1fa97dd439a09b7111ab82f424dd307e97cc6",
   "inputs": {
-    "datum_drawing": null,
+    "datum_drawing": "fabrication/a0_packet/drawings/A0-D001-fixture-datum.svg",
     "frame_id": "FRAME_T56_THORAX",
     "model": "straight_collinear_dummy_member_v1",
-    "pose_id": null,
+    "pose_id": "A0_NEUTRAL_LOCKED",
     "records": {
       "dummy_elbow_station": {
-        "evidence": null,
-        "tolerance_mm": null,
+        "evidence": "requirements/a0_shoulder_mechanism.json; project-local 317 mm A0 load station, not a canon landmark",
+        "tolerance_mm": 0.5,
         "units": "mm",
-        "value": null
+        "value": [
+          -522,
+          -10,
+          70
+        ]
       },
       "elbow_insertion": {
-        "evidence": null,
-        "tolerance_mm": null,
+        "evidence": "fabrication/a0_packet/drawings/A0-D003-dummy-member.svg",
+        "tolerance_mm": 0.25,
         "units": "mm",
-        "value": null
+        "value": 30
       },
       "elbow_offset": {
-        "evidence": null,
-        "tolerance_mm": null,
+        "evidence": "fabrication/a0_packet/drawings/A0-D003-dummy-member.svg",
+        "tolerance_mm": 0.25,
         "units": "mm",
-        "value": null
+        "value": 25
       },
       "shoulder_insertion": {
-        "evidence": null,
-        "tolerance_mm": null,
+        "evidence": "fabrication/a0_packet/drawings/A0-D004-cartridge-interface.svg",
+        "tolerance_mm": 0.25,
         "units": "mm",
-        "value": null
+        "value": 30
       },
       "shoulder_offset": {
-        "evidence": null,
-        "tolerance_mm": null,
+        "evidence": "fabrication/a0_packet/drawings/A0-D003-dummy-member.svg",
+        "tolerance_mm": 0.25,
         "units": "mm",
-        "value": null
+        "value": 25
       },
       "shoulder_output": {
-        "evidence": null,
-        "tolerance_mm": null,
+        "evidence": "requirements/a0_shoulder_mechanism.json; A0-D001-R0 and A0-D002-R0",
+        "tolerance_mm": 0.5,
         "units": "mm",
-        "value": null
+        "value": [
+          -205,
+          -10,
+          70
+        ]
       }
     }
   },
-  "status": "blocked"
+  "points_mm": {
+    "E": [
+      -522,
+      -10,
+      70
+    ],
+    "S": [
+      -205,
+      -10,
+      70
+    ],
+    "cut_E": [
+      -527.0,
+      -10.0,
+      70.0
+    ],
+    "cut_S": [
+      -200.0,
+      -10.0,
+      70.0
+    ],
+    "seat_E": [
+      -497.0,
+      -10.0,
+      70.0
+    ],
+    "seat_S": [
+      -230.0,
+      -10.0,
+      70.0
+    ]
+  },
+  "pose_id": "A0_NEUTRAL_LOCKED",
+  "status": "dimensional_review_only",
+  "worst_case_bounds_mm": {
+    "effective_length": 1.0,
+    "seat_gap": 1.5,
+    "stock_cut_length": 2.0
+  }
 }

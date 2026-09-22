@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+<rect width="1400" height="900" fill="white"/><g font-family="monospace" fill="#172230">
+<text x="40" y="48" font-size="25">A0-D003-R0 — DUMMY HUMERAL MEMBER</text><text x="40" y="78" font-size="15">Straight removable A0 load member; project-local mechanics, not an anatomical bone or canon landmark</text>
+<rect x="25" y="20" width="1350" height="850" fill="none" stroke="#172230" stroke-width="2"/><rect x="180" y="350" width="930" height="72" fill="#eef2f3" stroke="#172230" stroke-width="3"/>
+<line x1="180" y1="290" x2="1110" y2="290" stroke="#bf4b3f" stroke-width="2"/><text x="570" y="275" font-size="19">CUT 327 ±0.5</text>
+<line x1="250" y1="470" x2="1035" y2="470" stroke="#156f88" stroke-width="3"/><text x="535" y="505" font-size="18">S–E EFFECTIVE 317 ±1.0</text>
+<text x="180" y="570" font-size="17">SECTION: 6061-T6 SQ TUBE 25.4 × 25.4 × 3.175 WALL</text>
+<rect x="1140" y="330" width="120" height="120" fill="none" stroke="#172230" stroke-width="3"/><rect x="1155" y="345" width="90" height="90" fill="white" stroke="#172230" stroke-width="2"/>
+<text x="180" y="615" font-size="15">S=(-205,-10,70); E=(-522,-10,70); shoulder/elbow offsets 25; insertions 30</text>
+<text x="180" y="650" font-size="15">Worst-case resolver stack: effective ±1.0; seat gap ±1.5; cut length ±2.0</text>
+<text x="180" y="685" font-size="15">Deburr 0.2–0.5; break edges; straightness 0.75 per 300; record as-built mass and COG.</text>
+<text x="40" y="842" font-size="14">A0 SHOP REVIEW CANDIDATE — NOT FABRICATION RELEASED — ALL DIMENSIONS mm — DO NOT SCALE</text>
+</g></svg>

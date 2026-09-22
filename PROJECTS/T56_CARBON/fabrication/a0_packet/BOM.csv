@@ -1,0 +1,21 @@
+item_id,qty,description,material_or_standard,size_or_procurement_note
+A0-101,1,fixture base plate,A36 steel plate,300 x 240 x 8 mm; A0-D001
+A0-102,2,parallel four-bar rocker,6061-T6 plate,70 x 25 x 6 mm; 55 mm centers
+A0-103,1,moving carriage plate,6061-T6 plate,70 x 120 x 8 mm
+A0-104,2,pitch yoke side plate,6061-T6 plate,60 x 70 x 8 mm; bearing bore 35 H7
+A0-105,1,split-clamp output hub,6061-T6 billet,55 x 40 x 55 mm; 25.50 mm socket
+A0-106,1,index sector,6061-T6 plate,90 OD x 6 mm; 15 degree index
+A0-107,4,replaceable stop pad,acetal,20 x 15 x 10 mm
+A0-108,1,dummy humeral member,6061-T6 square tube,25.4 x 25.4 x 3.175 wall x 327 mm
+A0-201,1,pitch shaft,4140 prehard ground bar,17 h6 x 70 mm; 5 x 5 mm keyway; ends retained
+A0-202,1,parallel key,"hardened steel, DIN 6885 form A",5 x 5 x 30 mm
+A0-301,2,deep-groove bearing,6003-2RS,17 x 35 x 10 mm; supplier lot recorded
+A0-302,4,pivot shoulder bolt,ISO 898-1 class 10.9,M10 x 1.5; 10 mm shoulder
+A0-303,4,pivot locknut,all-metal prevailing torque,M10 x 1.5; single-use
+A0-304,2,spring indexing plunger,"steel, pull-ring type",M16 x 1.5 body; 8 mm pin; vendor cross-check open
+A0-305,1,carriage clamp screw,ISO 898-1 class 10.9,M8 x 1.25 with captive hand knob
+A0-306,2,hub pinch bolt,ISO 898-1 class 10.9,M6 x 1.0 x 35 mm
+A0-307,1,secondary retention tether,steel wire rope,6 mm; rated >= 1 kN; thimbles and swages
+A0-308,4,bench mounting fastener,ISO 898-1 class 10.9,M10 x 1.5; length to bench fixture
+A0-309,1,passive friction stack,dry friction washers plus Belleville washers,set breakaway torque >= 7 N m; witness mark adjuster
+A0-401,1,galvanic isolation kit,PET plus zinc-rich primer,0.5 mm PET; seal all aluminum/steel interfaces

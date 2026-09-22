@@ -1,0 +1,146 @@
+{
+  "packet_id": "T56_A0_SINGLE_SIDE_SHOULDER",
+  "status": "closed_form_analysis_complete_physical_validation_open",
+  "fabrication_released": false,
+  "physical_evidence_complete": false,
+  "inputs": {
+    "mass_kg": 2.5,
+    "payload_kg": 0.5,
+    "effective_length_mm": 317,
+    "tube_area_mm2": 282.25750000000005,
+    "tube_inertia_mm4": 23711.10009114583,
+    "tube_section_modulus_mm3": 1867.015755208333
+  },
+  "cases": {
+    "LC-SHO-001": {
+      "status": "analysis_complete_physical_validation_open",
+      "measured_evidence": false,
+      "method": "closed_form",
+      "results": {
+        "service_gravity_moment_Nm": 5.4402390875,
+        "yield_design_moment_Nm": 10.880478175,
+        "ultimate_design_moment_Nm": 16.3207172625,
+        "conservative_tip_deflection_mm": 0.19121745625179742
+      },
+      "acceptance_criteria": {
+        "proof_multiplier_x_service": 2.0,
+        "maximum_elastic_deflection_mm": 2.0,
+        "maximum_permanent_set_mm": 0.25,
+        "minimum_yield_safety_factor": 2.0,
+        "minimum_ultimate_safety_factor": 3.0
+      }
+    },
+    "LC-SHO-002": {
+      "status": "analysis_complete_physical_validation_open",
+      "measured_evidence": false,
+      "method": "closed_form",
+      "results": {
+        "rotational_inertia_kg_m2": 0.113050125,
+        "commanded_acceleration_torque_Nm": 0.07892387604164618,
+        "gravity_plus_acceleration_moment_Nm": 5.519162963541646,
+        "ordinary_stop_energy_J": 0.006887407476812975
+      },
+      "acceptance_criteria": {
+        "maximum_speed_deg_s": 20.0,
+        "maximum_acceleration_deg_s2": 40.0,
+        "cycle_count": 10000,
+        "maximum_hysteresis_deg": 1.0,
+        "maximum_ordinary_stop_energy_J": 0.25,
+        "maximum_temperature_rise_C": 20,
+        "maximum_sound_dBA_at_1m": 50.0
+      }
+    },
+    "LC-SHO-003": {
+      "status": "analysis_complete_physical_validation_open",
+      "measured_evidence": false,
+      "method": "closed_form",
+      "results": {
+        "service_force_N": 100.0,
+        "service_root_moment_Nm": 31.7,
+        "retention_design_moment_Nm": 95.1,
+        "tube_stress_at_retention_design_MPa": 50.93690277369307,
+        "tube_yield_margin_x": 4.711711685068348
+      },
+      "acceptance_criteria": {
+        "service_force_each_direction_N": 100.0,
+        "proof_force_each_direction_N": 200.0,
+        "retention_force_each_direction_N": 300.0,
+        "maximum_permanent_set_mm": 0.25,
+        "maximum_datum_shift_mm": 0.25
+      }
+    },
+    "LC-SHO-004": {
+      "status": "analysis_complete_physical_validation_open",
+      "measured_evidence": false,
+      "method": "closed_form",
+      "results": {
+        "service_energy_J": 2.0,
+        "design_energy_J": 6.0,
+        "linear_spring_peak_stop_force_N": 3000.0,
+        "peak_stop_moment_Nm": 105.00000000000001,
+        "tube_stress_at_design_energy_MPa": 56.23948255770529,
+        "shaft_von_mises_stress_MPa": 188.5268765130492,
+        "shaft_yield_margin_x": 3.4743056911286763,
+        "rocker_weak_axis_euler_buckling_N": 101159.36676223985
+      },
+      "acceptance_criteria": {
+        "impact_energy_J": 2.0,
+        "repetitions_per_direction": 3,
+        "minimum_usable_stop_travel_mm": 4,
+        "maximum_post_impact_alignment_shift_mm": 0.5,
+        "maximum_post_impact_zero_shift_deg": 0.5,
+        "maximum_rebound_deg": 10,
+        "retainers_remaining_engaged": 1
+      }
+    },
+    "LC-SHO-005": {
+      "status": "analysis_complete_physical_validation_open",
+      "measured_evidence": false,
+      "method": "closed_form",
+      "results": {
+        "maximum_gravity_moment_Nm": 5.4402390875,
+        "specified_friction_breakaway_Nm": 7,
+        "friction_to_gravity_ratio": 1.2867081551771964,
+        "degraded_single_fault_index_interval_deg": 15,
+        "degraded_single_fault_catch_energy_J": 1.4080374857561588,
+        "frictionless_degraded_peak_speed_deg_s": 285.9625856885199
+      },
+      "acceptance_criteria": {
+        "minimum_friction_breakaway_Nm": 7,
+        "normal_power_loss_maximum_drop_deg": 2,
+        "single_fault_maximum_drop_deg": 15,
+        "single_fault_maximum_catch_energy_J": 2.0,
+        "single_fault_maximum_drop_speed_deg_s": 300,
+        "maximum_safe_state_detection_ms": 100,
+        "secondary_tether_minimum_rating_N": 1000
+      }
+    },
+    "LC-MNT-001": {
+      "status": "analysis_complete_physical_validation_open",
+      "measured_evidence": false,
+      "method": "closed_form",
+      "results": {
+        "service_handling_force_N": 100.0,
+        "service_handle_moment_Nm": 5.5,
+        "proof_handling_force_N": 200.0,
+        "retention_handling_force_N": 300.0
+      },
+      "acceptance_criteria": {
+        "service_handling_force_N": 100.0,
+        "maximum_root_datum_shift_mm": 0.25,
+        "maximum_reassembled_output_position_error_mm": 0.5,
+        "maximum_reassembled_zero_error_deg": 0.5,
+        "maximum_fastener_preload_change_percent": 10,
+        "minimum_tool_clearance_mm": 25,
+        "maximum_service_time_min": 30
+      }
+    }
+  },
+  "method_limits": [
+    "closed-form rigid-joint checks do not replace FEA, coupon data, or article test",
+    "nominal mass is conservatively represented at half-span and payload at the load station",
+    "linear stop force assumes full usable pad travel and triangular force-displacement response",
+    "bearing load sharing, friction, damping, backlash, acoustic output, temperature and fatigue remain physical measurements",
+    "no calculated result is a measured capability"
+  ]
+}

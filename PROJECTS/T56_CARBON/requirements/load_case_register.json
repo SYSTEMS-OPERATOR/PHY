@@ -2,7 +2,7 @@
   "schema_version": "0.1.0",
   "register_id": "T56_LOAD_CASE_REGISTER",
   "project": "T56_CARBON",
-  "status": "load_cases_defined_inputs_open_not_approved",
+  "status": "a0_single_side_closed_form_analysis_complete_physical_validation_open",
   "purpose": "Define the minimum cases required to size and validate the T-5.6 trunk-to-shoulder load path and single-side test article.",
   "input_registers": [
     "mission_envelope.json",
@@ -13,7 +13,7 @@
     {
       "id": "LC-SHO-001",
       "name": "static_arm_weight_and_payload",
-      "status": "blocked_by_inputs",
+      "status": "analysis_complete_physical_validation_open",
       "article": "single_side_thoracic_root_to_dummy_humerus",
       "input_refs": ["ME-MASS-002", "ME-PAYLOAD-001", "ME-SF-001"],
       "geometry_refs": ["GEO-SHO-001", "GEO-SHO-002", "GEO-SHO-005", "GEO-SHO-006", "GEO-ARM-001"],
@@ -21,12 +21,19 @@
       "load_application": "gravity and payload reactions applied through the dummy humerus across the approved shoulder poses",
       "required_outputs": ["root_node_forces_N", "root_node_moments_Nm", "carriage_reactions", "clavicular_load_share", "cartridge_bearing_loads", "deflection_mm"],
       "failure_modes": ["root_yield_or_slip", "link_buckling", "bearing_overload", "insert_pull_out", "excessive_deflection"],
-      "acceptance_criteria": null
+      "acceptance_criteria": {
+        "proof_multiplier_x_service": 2.0,
+        "maximum_elastic_deflection_mm": 2.0,
+        "maximum_permanent_set_mm": 0.25,
+        "minimum_yield_safety_factor": 2.0,
+        "minimum_ultimate_safety_factor": 3.0
+      },
+      "analysis_evidence": "fabrication/a0_packet/analysis/A0_LOAD_CASES.json#LC-SHO-001; physical proof record open"
     },
     {
       "id": "LC-SHO-002",
       "name": "commanded_arm_acceleration_and_stop",
-      "status": "blocked_by_inputs",
+      "status": "analysis_complete_physical_validation_open",
       "article": "single_side_thoracic_root_to_dummy_humerus",
       "input_refs": ["ME-MASS-002", "ME-PAYLOAD-001", "ME-MOTION-001", "ME-MOTION-002", "ME-LIFE-001", "ME-SF-001", "ME-ACOUSTIC-001"],
       "geometry_refs": ["GEO-SHO-003", "GEO-SHO-004", "GEO-SHO-005", "GEO-SHO-006", "GEO-SHO-007", "GEO-ARM-001"],
@@ -34,12 +41,21 @@
       "load_application": "commanded acceleration, deceleration, and ordinary stop across the approved trajectory",
       "required_outputs": ["peak_root_reactions", "guide_and_bearing_loads", "stop_energy_J", "hysteresis", "temperature", "sound_dBA"],
       "failure_modes": ["fatigue", "guide_binding", "stop_damage", "retention_loss", "overtemperature", "acoustic_limit_exceeded"],
-      "acceptance_criteria": null
+      "acceptance_criteria": {
+        "maximum_speed_deg_s": 20.0,
+        "maximum_acceleration_deg_s2": 40.0,
+        "cycle_count": 10000,
+        "maximum_hysteresis_deg": 1.0,
+        "maximum_ordinary_stop_energy_J": 0.25,
+        "maximum_temperature_rise_C": 20,
+        "maximum_sound_dBA_at_1m": 50.0
+      },
+      "analysis_evidence": "fabrication/a0_packet/analysis/A0_LOAD_CASES.json#LC-SHO-002; cycle, thermal and acoustic records open"
     },
     {
       "id": "LC-SHO-003",
       "name": "accidental_fore_aft_and_lateral_push_pull",
-      "status": "blocked_by_inputs",
+      "status": "analysis_complete_physical_validation_open",
       "article": "single_side_thoracic_root_to_dummy_humerus",
       "input_refs": ["ME-EXT-001", "ME-SF-001"],
       "geometry_refs": ["GEO-SHO-001", "GEO-SHO-002", "GEO-SHO-005", "GEO-SHO-006", "GEO-ARM-001"],
@@ -47,12 +63,19 @@
       "load_application": "fore-aft and lateral forces applied at defined humeral or hand-equivalent stations",
       "required_outputs": ["root_forces_and_moments", "link_axial_and_bending_load", "cartridge_retention_load", "permanent_set_mm"],
       "failure_modes": ["root_fastener_slip", "clavicular_link_buckling", "carriage_release", "cartridge_release", "permanent_deformation"],
-      "acceptance_criteria": null
+      "acceptance_criteria": {
+        "service_force_each_direction_N": 100.0,
+        "proof_force_each_direction_N": 200.0,
+        "retention_force_each_direction_N": 300.0,
+        "maximum_permanent_set_mm": 0.25,
+        "maximum_datum_shift_mm": 0.25
+      },
+      "analysis_evidence": "fabrication/a0_packet/analysis/A0_LOAD_CASES.json#LC-SHO-003; directional proof records open"
     },
     {
       "id": "LC-SHO-004",
       "name": "minor_contact_impact_and_hard_stop_event",
-      "status": "blocked_by_inputs",
+      "status": "analysis_complete_physical_validation_open",
       "article": "single_side_thoracic_root_to_dummy_humerus",
       "input_refs": ["ME-IMPACT-001", "ME-SF-001"],
       "geometry_refs": ["GEO-SHO-005", "GEO-SHO-006", "GEO-SHO-007", "GEO-CLR-001", "GEO-CLR-002"],
@@ -60,12 +83,21 @@
       "load_application": "approved impact pulse or equivalent energy at the representative arm station and mechanical travel limits",
       "required_outputs": ["peak_reaction", "stop_deformation", "guard_deflection", "retention_state", "post_impact_alignment"],
       "failure_modes": ["guard_intrusion", "hard_stop_fracture", "secondary_retention_failure", "hidden_root_damage", "unsafe_rebound"],
-      "acceptance_criteria": null
+      "acceptance_criteria": {
+        "impact_energy_J": 2.0,
+        "repetitions_per_direction": 3,
+        "minimum_usable_stop_travel_mm": 4,
+        "maximum_post_impact_alignment_shift_mm": 0.5,
+        "maximum_post_impact_zero_shift_deg": 0.5,
+        "maximum_rebound_deg": 10,
+        "retainers_remaining_engaged": 1
+      },
+      "analysis_evidence": "fabrication/a0_packet/analysis/A0_LOAD_CASES.json#LC-SHO-004; impact records and post-impact inspection open"
     },
     {
       "id": "LC-SHO-005",
       "name": "controlled_power_loss_arm_retention",
-      "status": "blocked_by_inputs",
+      "status": "analysis_complete_physical_validation_open",
       "article": "single_side_thoracic_root_to_dummy_humerus",
       "input_refs": ["ME-MASS-002", "ME-PAYLOAD-001", "ME-SF-001"],
       "geometry_refs": ["GEO-SHO-005", "GEO-SHO-006", "GEO-SHO-007", "GEO-ARM-001"],
@@ -73,7 +105,16 @@
       "load_application": "gravity-driven arm reaction with passive retention, damping, and physical limits active",
       "required_outputs": ["maximum_drop_angle_deg", "maximum_drop_speed", "retention_load", "stop_energy_J", "safe_state_detection_time"],
       "failure_modes": ["uncontrolled_arm_fall", "single_point_retention_failure", "cable_as_retainer", "unsafe_stop_impact"],
-      "acceptance_criteria": null
+      "acceptance_criteria": {
+        "minimum_friction_breakaway_Nm": 7,
+        "normal_power_loss_maximum_drop_deg": 2,
+        "single_fault_maximum_drop_deg": 15,
+        "single_fault_maximum_catch_energy_J": 2.0,
+        "single_fault_maximum_drop_speed_deg_s": 300,
+        "maximum_safe_state_detection_ms": 100,
+        "secondary_tether_minimum_rating_N": 1000
+      },
+      "analysis_evidence": "fabrication/a0_packet/analysis/A0_LOAD_CASES.json#LC-SHO-005; power-loss and single-fault records open"
     },
     {
       "id": "LC-REC-001",
@@ -91,7 +132,7 @@
     {
       "id": "LC-MNT-001",
       "name": "maintenance_handling_and_cartridge_replacement",
-      "status": "blocked_by_inputs",
+      "status": "analysis_complete_physical_validation_open",
       "article": "single_side_thoracic_root_to_dummy_humerus",
       "input_refs": ["ME-SERVICE-001", "ME-SF-001"],
       "geometry_refs": ["GEO-SHO-001", "GEO-SHO-002", "GEO-SHO-006", "GEO-CLR-003"],
@@ -99,7 +140,16 @@
       "load_application": "handling, tool, extraction, insertion, and re-zeroing forces at defined service interfaces",
       "required_outputs": ["root_alignment_change", "fastener_preload_change", "connector_clearance", "service_time", "repeatability"],
       "failure_modes": ["datum_loss", "hidden_fastener_damage", "connector_overload", "fascia_cutting_required", "incorrect_reassembly"],
-      "acceptance_criteria": null
+      "acceptance_criteria": {
+        "service_handling_force_N": 100.0,
+        "maximum_root_datum_shift_mm": 0.25,
+        "maximum_reassembled_output_position_error_mm": 0.5,
+        "maximum_reassembled_zero_error_deg": 0.5,
+        "maximum_fastener_preload_change_percent": 10,
+        "minimum_tool_clearance_mm": 25,
+        "maximum_service_time_min": 30
+      },
+      "analysis_evidence": "fabrication/a0_packet/analysis/A0_LOAD_CASES.json#LC-MNT-001; service rehearsal record open"
     },
     {
       "id": "LC-BIL-001",

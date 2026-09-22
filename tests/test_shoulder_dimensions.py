@@ -76,15 +76,17 @@ class ShoulderDimensionTests(unittest.TestCase):
         data = synthetic(); data["records"]["dummy_elbow_station"]["value"] = [0, 0, 0]
         self.assertTrue(module.review(data)["errors"])
 
-    def test_current_input_is_blocked_and_not_mutated(self):
+    def test_current_a0_input_resolves_without_mutation_or_release(self):
         path = ROOT / "PROJECTS/T56_CARBON/requirements/shoulder_member_inputs.json"
         data = json.loads(path.read_text()); original = copy.deepcopy(data)
         result = module.review(data)
         self.assertFalse(result["errors"])
-        self.assertTrue(result["blockers"])
+        self.assertFalse(result["blockers"])
+        self.assertEqual(result["status"], "dimensional_review_only")
+        self.assertFalse(result["fabrication_ready"])
+        self.assertFalse(result["canon_adopted"])
         self.assertEqual(data, original)
-        with self.assertRaises(ValueError):
-            module.svg(result)
+        self.assertIn("NOT FOR FABRICATION", module.svg(result))
 
     def test_cli_determinism_and_stale_drawing_removal(self):
         with tempfile.TemporaryDirectory() as tmp:

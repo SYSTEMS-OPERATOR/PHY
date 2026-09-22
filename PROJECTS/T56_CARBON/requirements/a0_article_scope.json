@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0.0",
+  "packet_id": "T56_A0_SINGLE_SIDE_SHOULDER",
+  "article": "single_side_thoracic_root_to_dummy_humerus",
+  "status": "provisional_design_requirements_locked_physical_qualification_open",
+  "canon_binding": {
+    "canon_version": "1.0.0",
+    "height_mm": 1676.4,
+    "arm_span_mm": 1676.4,
+    "mutation_permitted": false
+  },
+  "prototype_class": {
+    "use": "guarded_bench_article_for_geometry_load_path_and_service_validation",
+    "power": "umbilical",
+    "motion": "low_speed_supervised_only",
+    "load_bearing": false,
+    "human_contact": "test_personnel_outside_swept_volume_during_motion"
+  },
+  "required_exclusions": [
+    "human_lifting_or_transfer",
+    "fall_arrest",
+    "body_weight_support",
+    "unsupervised_operation",
+    "operation_without_physical_guards",
+    "outdoor_or_wet_operation",
+    "high_energy_collision",
+    "production_or_clinical_use"
+  ],
+  "mission_inputs": {
+    "ME-MASS-002": {"value": 2.5, "units": "kg", "basis": "maximum outboard arm-assembly design mass excluding payload"},
+    "ME-PAYLOAD-001": {"value": 0.5, "units": "kg", "basis": "A0 light domestic-object design payload"},
+    "ME-MOTION-001": {"value": 20.0, "units": "deg/s", "basis": "supervised low-speed bench motion ceiling"},
+    "ME-MOTION-002": {"value": 40.0, "units": "deg/s^2", "basis": "command and controlled-stop acceleration ceiling"},
+    "ME-EXT-001": {"value": 100.0, "units": "N", "basis": "bounded accidental push/pull proof requirement"},
+    "ME-IMPACT-001": {"value": 2.0, "units": "J", "basis": "minor guarded bench contact energy; higher events are out of scope"},
+    "ME-LIFE-001": {"value": 10000, "units": "cycles", "basis": "A0 inspection-interval demonstration target, not production life"},
+    "ME-SF-001": {
+      "value": {
+        "yield": 2.0,
+        "ultimate": 3.0,
+        "buckling": 3.0,
+        "joint_retention": 3.0,
+        "bonded_or_keyed_insert": 4.0,
+        "fatigue": "demonstrate_10000_cycles_then_inspect"
+      },
+      "units": null,
+      "basis": "conservative A0 design factors; physical proof and coupon allowables remain required"
+    },
+    "ME-ACOUSTIC-001": {"value": 50.0, "units": "dBA", "basis": "design target at 1 m under no-payload 20 deg/s motion"},
+    "ME-SERVICE-001": {"value": 100.0, "units": "N", "basis": "supported cartridge handling and extraction load ceiling"}
+  },
+  "qualification_boundary": {
+    "design_values_are_measured_capabilities": false,
+    "simulation_closes_physical_evidence": false,
+    "required_before_motion": [
+      "drawing review",
+      "independent fastener and retention inspection",
+      "static proof",
+      "guard installation",
+      "manual sweep and interference check",
+      "emergency stop rehearsal"
+    ]
+  }
+}

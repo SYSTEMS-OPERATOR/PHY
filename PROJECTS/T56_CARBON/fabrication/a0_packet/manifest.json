@@ -1,0 +1,119 @@
+{
+  "packet_id": "T56_A0_SINGLE_SIDE_SHOULDER",
+  "revision": "A0-R0",
+  "status": "shop_review_candidate_not_fabrication_released",
+  "fabrication_released": false,
+  "physical_evidence_complete": false,
+  "canon_effect": "none",
+  "units": "mm",
+  "source": "PROJECTS/T56_CARBON/requirements/a0_shoulder_mechanism.json",
+  "source_sha256": "34c58f9e7503cb5e67079b7f2b896607e4c921d77e32944100b86ff59a56d65e",
+  "parts": [
+    {
+      "part": "A0-101_fixture_base",
+      "valid_solid": true,
+      "step_round_trip": "pass",
+      "bounds_mm": [
+        300.00000020000016,
+        240.00000020000016,
+        8.00341919799105
+      ],
+      "volume_mm3": 571347.3012800335
+    },
+    {
+      "part": "A0-102_rocker",
+      "valid_solid": true,
+      "step_round_trip": "pass",
+      "bounds_mm": [
+        70.00000020000003,
+        25.00000020000003,
+        6.003170543591688
+      ],
+      "volume_mm3": 9519.446100961555
+    },
+    {
+      "part": "A0-103_carriage",
+      "valid_solid": true,
+      "step_round_trip": "pass",
+      "bounds_mm": [
+        70.00000020000004,
+        120.00000020000004,
+        8.003170543591688
+      ],
+      "volume_mm3": 65345.20369732059
+    },
+    {
+      "part": "A0-104_yoke_side",
+      "valid_solid": true,
+      "step_round_trip": "pass",
+      "bounds_mm": [
+        60.000000200000024,
+        16.010878829971436,
+        70.00000020000002
+      ],
+      "volume_mm3": 50711.41378948703
+    },
+    {
+      "part": "A0-105_output_hub",
+      "valid_solid": true,
+      "step_round_trip": "pass",
+      "bounds_mm": [
+        55.00000020000002,
+        40.00729055033242,
+        55.00000020000002
+      ],
+      "volume_mm3": 95550.68642834247
+    },
+    {
+      "part": "A0-106_index_sector",
+      "valid_solid": true,
+      "step_round_trip": "pass",
+      "bounds_mm": [
+        90.02797381992656,
+        12.027973819926553,
+        90.00000020000003
+      ],
+      "volume_mm3": 69280.03482514196
+    },
+    {
+      "part": "A0-107_stop_pad",
+      "valid_solid": true,
+      "step_round_trip": "pass",
+      "bounds_mm": [
+        20.000000200000002,
+        15.0000002,
+        10.0000002
+      ],
+      "volume_mm3": 3000.0
+    },
+    {
+      "part": "A0-108_dummy_member",
+      "valid_solid": true,
+      "step_round_trip": "pass",
+      "bounds_mm": [
+        327.00000020000004,
+        25.4000002,
+        25.4000002
+      ],
+      "volume_mm3": 92298.20249999996
+    },
+    {
+      "part": "A0-201_pitch_shaft",
+      "valid_solid": true,
+      "step_round_trip": "pass",
+      "bounds_mm": [
+        17.005284105986128,
+        70.00528410598614,
+        17.000000200000006
+      ],
+      "volume_mm3": 15888.604845530377
+    }
+  ],
+  "drawing_files": [
+    "A0-D001-fixture-datum.svg",
+    "A0-D002-mechanism-assembly.svg",
+    "A0-D003-dummy-member.svg",
+    "A0-D004-cartridge-interface.svg"
+  ],
+  "bom_items": 20
+}

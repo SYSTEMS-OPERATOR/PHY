@@ -26,7 +26,11 @@ class SourceGeometryTests(unittest.TestCase):
         before = json.dumps(register, sort_keys=True)
         module.component_specs()
         self.assertEqual(json.dumps(module.read(module.REGISTER), sort_keys=True), before)
-        self.assertEqual(sum(r["value"] is None for r in register["parameters"]), 19)
+        open_ids = {r["id"] for r in register["parameters"] if r["value"] is None}
+        self.assertEqual(open_ids, {
+            "GEO-THX-001", "GEO-THX-002", "GEO-THX-003", "GEO-THX-004",
+            "GEO-PEL-001", "GEO-PEL-002", "GEO-PEL-003", "GEO-PEL-004",
+        })
 
     @unittest.skipUnless(importlib.util.find_spec("cadquery"), "optional CadQuery unavailable")
     def test_bushing_keeps_axial_bore(self):

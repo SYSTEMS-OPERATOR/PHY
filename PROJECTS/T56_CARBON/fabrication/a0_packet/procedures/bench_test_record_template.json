@@ -1,0 +1,21 @@
+{
+  "record_type": "T56_A0_BENCH_TEST",
+  "status": "not_run_template_only",
+  "measured_evidence": false,
+  "article_serial": null,
+  "drawing_revision": "A0-R0",
+  "operator": null,
+  "reviewer": null,
+  "date": null,
+  "instrument_calibration_refs": [],
+  "raw_data_refs": [],
+  "cases": {
+    "LC-SHO-001": {"result": "not_run", "measurements": {}, "anomalies": []},
+    "LC-SHO-002": {"result": "not_run", "measurements": {}, "anomalies": []},
+    "LC-SHO-003": {"result": "not_run", "measurements": {}, "anomalies": []},
+    "LC-SHO-004": {"result": "not_run", "measurements": {}, "anomalies": []},
+    "LC-SHO-005": {"result": "not_run", "measurements": {}, "anomalies": []},
+    "LC-MNT-001": {"result": "not_run", "measurements": {}, "anomalies": []}
+  },
+  "overall_disposition": "not_run"
+}

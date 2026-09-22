@@ -1,0 +1,171 @@
+{
+  "schema_version": "0.1.0",
+  "decision_id": "DR-T56-A0-SHOULDER-001",
+  "packet_id": "T56_A0_SINGLE_SIDE_SHOULDER",
+  "status": "provisional_geometry_locked_shop_review_candidate_physical_qualification_open",
+  "authority": "project-local A0 design decision under requirements/a0_article_scope.json",
+  "canon_effect": "none",
+  "frame_id": "FRAME_T56_THORAX",
+  "side": "left",
+  "pose_id": "A0_NEUTRAL_LOCKED",
+  "mechanism": {
+    "selection": "planar_parallel_four_bar_scapular_carriage_with_single_axis_humeral_pitch_cartridge",
+    "reason": "one-degree-of-freedom submechanisms, flat stock, inspectable pivots, direct hard stops, and no compound anatomical joint claim",
+    "scapular_stage": {
+      "plane": "XY",
+      "pivot_axis_unit": [0, 0, 1],
+      "posterior_root_mm": [-130, -60, 35],
+      "anterior_root_mm": [-130, 40, 35],
+      "posterior_carriage_pivot_mm": [-185, -60, 35],
+      "anterior_carriage_pivot_mm": [-185, 40, 35],
+      "rocker_center_distance_mm": 55,
+      "coupler_center_distance_mm": 100,
+      "range_deg": [-10, 10],
+      "hard_stop_range_deg": [-10, 10],
+      "passive_retention": "M8 clamp screw plus spring-biased neutral indexing plunger; neither electrical power nor software is required to retain the carriage",
+      "secondary_retention": "all four M10 pivot shoulder bolts use prevailing-torque all-metal locknuts and captured washers"
+    },
+    "humeral_stage": {
+      "joint_center_mm": [-205, -10, 70],
+      "axis_unit": [0, 1, 0],
+      "command_range_deg": [-30, 90],
+      "hard_stop_range_deg": [-32, 92],
+      "passive_retention": "Belleville-preloaded dry friction stack set to at least 7 N m breakaway torque plus a spring-biased 8 mm indexing plunger into 15 degree sector holes; maximum degraded single-fault free interval 15 degrees",
+      "secondary_retention": "6 mm steel tether rated not less than 1 kN between hub and carriage; tether is not the primary retainer",
+      "drive_interface": "removable umbilical-powered low-speed actuator may drive the keyed shaft input; actuator selection is outside the fabricated load path",
+      "software_limit_as_only_stop": false
+    }
+  },
+  "trajectory": [
+    {
+      "pose_id": "A0_SCAPULAR_POSTERIOR_STOP",
+      "position_mm": [-204.164, -19.551, 70],
+      "rpy_deg": [0, 0, 0]
+    },
+    {
+      "pose_id": "A0_NEUTRAL_LOCKED",
+      "position_mm": [-205, -10, 70],
+      "rpy_deg": [0, 0, 0]
+    },
+    {
+      "pose_id": "A0_SCAPULAR_ANTERIOR_STOP",
+      "position_mm": [-204.164, -0.449, 70],
+      "rpy_deg": [0, 0, 0]
+    }
+  ],
+  "dummy_member": {
+    "shoulder_output_mm": [-205, -10, 70],
+    "dummy_elbow_station_mm": [-522, -10, 70],
+    "effective_length_mm": 317,
+    "external_reference_context": "ANSUR II acromion-radiale median from PR #92 is a comparison only; the 317 mm A0 load station is a project-local mechanical decision and not a canon landmark",
+    "section": "ASTM B221 6061-T6 square tube 25.4 x 25.4 x 3.175 mm",
+    "stock_cut_length_mm": 327,
+    "cut_tolerance_mm": 0.5,
+    "straightness_mm_per_300_mm": 0.75
+  },
+  "datum_fixture": {
+    "revision": "A0-D001-R0",
+    "origin": "scribed cross and 6 mm H7 tooling hole at upper surface of base plate; coordinates refer to the tooling-hole axis at plate Z=0",
+    "handedness": "right_handed",
+    "base_plate": {
+      "material": "ASTM A36 steel plate",
+      "size_xyz_mm": [300, 240, 8],
+      "frame_bounds_mm": {
+        "min": [-280, -120, -8],
+        "max": [20, 120, 0]
+      },
+      "bench_mount_holes_mm": [
+        [-250, -90, 0],
+        [-250, 90, 0],
+        [-10, -90, 0],
+        [-10, 90, 0]
+      ],
+      "bench_mount_hole_diameter_mm": 11,
+      "root_pivot_holes_mm": [
+        [-130, -60, 0],
+        [-130, 40, 0]
+      ],
+      "root_pivot_hole_diameter_mm": 10.5
+    },
+    "datum_tolerance_mm": 0.25,
+    "root_position_tolerance_mm": 0.25,
+    "root_height_tolerance_mm": 0.25
+  },
+  "materials_and_sections": {
+    "base_plate": "ASTM A36 steel, 8 mm plate",
+    "rockers_and_carriage": "ASTM B209 6061-T6 aluminum plate, 6 mm and 8 mm",
+    "yoke_and_sector": "ASTM B209 6061-T6 aluminum plate, 8 mm and 6 mm",
+    "dummy_member": "ASTM B221 6061-T6 square tube, 25.4 x 25.4 x 3.175 mm",
+    "pivot_shaft": "AISI 4140 prehardened steel, 17 mm ground shaft with 5 x 5 mm parallel key",
+    "fasteners": "ISO 898-1 class 10.9 zinc-plated steel unless otherwise noted",
+    "wear_pads": "acetal, 3 mm replaceable pads",
+    "isolation": "0.5 mm PET barrier and zinc-rich primer between aluminum and A36 steel; seal exposed edges"
+  },
+  "fits": [
+    {
+      "interface": "17 mm pivot shaft to 6003 bearing inner ring",
+      "fit": "shaft h6; 16.989 to 17.000 mm",
+      "inspection": "micrometer at three axial stations"
+    },
+    {
+      "interface": "6003 bearing outer ring to yoke bore",
+      "fit": "housing H7; 35.000 to 35.025 mm",
+      "inspection": "three-point bore gauge"
+    },
+    {
+      "interface": "M10 shoulder-bolt pivots to link plates",
+      "fit": "10.2 +0.10/-0.00 mm reamed clearance",
+      "inspection": "plug gauge and free-pivot check"
+    },
+    {
+      "interface": "dummy tube to split clamp socket",
+      "fit": "25.50 +0.15/-0.00 mm across flats before clamp preload",
+      "inspection": "caliper plus full-depth blue-contact check"
+    },
+    {
+      "interface": "8 mm indexing plunger to sector holes",
+      "fit": "8.2 +0.10/-0.00 mm",
+      "inspection": "plug gauge and all-position engagement check"
+    }
+  ],
+  "tolerance_stack": {
+    "shoulder_output_position_mm": 0.5,
+    "dummy_elbow_station_position_mm": 0.5,
+    "shoulder_offset_mm": 0.25,
+    "elbow_offset_mm": 0.25,
+    "shoulder_insertion_mm": 0.25,
+    "elbow_insertion_mm": 0.25,
+    "effective_length_worst_case_plus_minus_mm": 1.0,
+    "seat_gap_worst_case_plus_minus_mm": 1.5,
+    "stock_cut_length_worst_case_plus_minus_mm": 2.0,
+    "axis_parallelism_deg": 0.25,
+    "carriage_pivot_pattern_true_position_mm": 0.3
+  },
+  "collision_and_service_envelopes": {
+    "neck_exclusion_aabb_mm": {
+      "min_mm": [-90, -75, 0],
+      "max_mm": [90, 75, 210]
+    },
+    "representative_ribcage_exclusion_aabb_mm": {
+      "min_mm": [-170, -110, -300],
+      "max_mm": [170, 110, 0]
+    },
+    "shoulder_service_access_aabb_mm": {
+      "min_mm": [-280, -130, 15],
+      "max_mm": [-90, 130, 180]
+    },
+    "authority_note": "fixture guarding and tool-access design volumes only; not anatomical or outer-form measurements"
+  },
+  "release_boundary": {
+    "shop_reviewable": true,
+    "fabrication_released": false,
+    "simulation_qualified": false,
+    "physical_evidence_complete": false,
+    "required_before_cutting": [
+      "independent drawing and load-path review",
+      "shop confirmation of stock and process capability",
+      "bearing and indexing-plunger procurement cross-check",
+      "signed deviation record for any substituted material, fit, or fastener"
+    ]
+  }
+}

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="720" viewBox="0 0 1100 720">
+<rect width="1100" height="720" fill="white"/>
+<g font-family="monospace" fill="#172230">
+<text x="32" y="35" font-size="20">T56 DUMMY MEMBER — DIMENSION REVIEW ONLY</text>
+<text x="32" y="62" font-size="14">NOT FOR FABRICATION • centerlines only • no section, holes or load rating</text>
+<text x="30" y="100" font-size="16">XZ FRONT (+axes right/up)</text>
+<line x1="301.4831804281346" y1="230.0" x2="78.51681957186545" y2="230.0" stroke="#8292a1" stroke-width="2"/>
+<line x1="305.0" y1="230.0" x2="75.0" y2="230.0" stroke="#156f88" stroke-width="5"/>
+<circle cx="301.4831804281346" cy="230.0" r="4" fill="#172230"/>
+<text x="30" y="390" font-size="12">S: (-205.000, 70.000) mm</text>
+<circle cx="78.51681957186545" cy="230.0" r="4" fill="#172230"/>
+<text x="30" y="411" font-size="12">E: (-522.000, 70.000) mm</text>
+<circle cx="283.89908256880733" cy="230.0" r="4" fill="#172230"/>
+<text x="30" y="432" font-size="12">seat_S: (-230.000, 70.000) mm</text>
+<circle cx="96.10091743119267" cy="230.0" r="4" fill="#172230"/>
+<text x="30" y="453" font-size="12">seat_E: (-497.000, 70.000) mm</text>
+<circle cx="305.0" cy="230.0" r="4" fill="#172230"/>
+<text x="30" y="474" font-size="12">cut_S: (-200.000, 70.000) mm</text>
+<circle cx="75.0" cy="230.0" r="4" fill="#172230"/>
+<text x="30" y="495" font-size="12">cut_E: (-527.000, 70.000) mm</text>
+<text x="390" y="100" font-size="16">YZ SIDE (+axes right/up)</text>
+<line x1="550.0" y1="230.0" x2="550.0" y2="230.0" stroke="#8292a1" stroke-width="2"/>
+<line x1="550.0" y1="230.0" x2="550.0" y2="230.0" stroke="#156f88" stroke-width="5"/>
+<circle cx="550.0" cy="230.0" r="4" fill="#172230"/>
+<text x="390" y="390" font-size="12">S: (-10.000, 70.000) mm</text>
+<circle cx="550.0" cy="230.0" r="4" fill="#172230"/>
+<text x="390" y="411" font-size="12">E: (-10.000, 70.000) mm</text>
+<circle cx="550.0" cy="230.0" r="4" fill="#172230"/>
+<text x="390" y="432" font-size="12">seat_S: (-10.000, 70.000) mm</text>
+<circle cx="550.0" cy="230.0" r="4" fill="#172230"/>
+<text x="390" y="453" font-size="12">seat_E: (-10.000, 70.000) mm</text>
+<circle cx="550.0" cy="230.0" r="4" fill="#172230"/>
+<text x="390" y="474" font-size="12">cut_S: (-10.000, 70.000) mm</text>
+<circle cx="550.0" cy="230.0" r="4" fill="#172230"/>
+<text x="390" y="495" font-size="12">cut_E: (-10.000, 70.000) mm</text>
+<text x="750" y="100" font-size="16">XY TOP (+axes right/up)</text>
+<line x1="1021.4831804281346" y1="230.0" x2="798.5168195718654" y2="230.0" stroke="#8292a1" stroke-width="2"/>
+<line x1="1025.0" y1="230.0" x2="795.0" y2="230.0" stroke="#156f88" stroke-width="5"/>
+<circle cx="1021.4831804281346" cy="230.0" r="4" fill="#172230"/>
+<text x="750" y="390" font-size="12">S: (-205.000, -10.000) mm</text>
+<circle cx="798.5168195718654" cy="230.0" r="4" fill="#172230"/>
+<text x="750" y="411" font-size="12">E: (-522.000, -10.000) mm</text>
+<circle cx="1003.8990825688073" cy="230.0" r="4" fill="#172230"/>
+<text x="750" y="432" font-size="12">seat_S: (-230.000, -10.000) mm</text>
+<circle cx="816.1009174311927" cy="230.0" r="4" fill="#172230"/>
+<text x="750" y="453" font-size="12">seat_E: (-497.000, -10.000) mm</text>
+<circle cx="1025.0" cy="230.0" r="4" fill="#172230"/>
+<text x="750" y="474" font-size="12">cut_S: (-200.000, -10.000) mm</text>
+<circle cx="795.0" cy="230.0" r="4" fill="#172230"/>
+<text x="750" y="495" font-size="12">cut_E: (-527.000, -10.000) mm</text>
+<text x="32" y="545" font-size="17">effective_length: 317.000 ± 1.000 mm (worst case)</text>
+<text x="32" y="573" font-size="17">seat_gap: 267.000 ± 1.500 mm (worst case)</text>
+<text x="32" y="601" font-size="17">stock_cut_length: 327.000 ± 2.000 mm (worst case)</text>
+<text x="32" y="645" font-size="13">Input SHA-256: 1f7f09f2397f2bb2b46401f31df1fa97dd439a09b7111ab82f424dd307e97cc6</text>
+<text x="32" y="675" font-size="13">Views fit to page independently; coordinate tables control. No printed drawing scale.</text></g></svg>

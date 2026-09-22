@@ -4,7 +4,7 @@
   "project": "T56_CARBON",
   "article": "single_side_thoracic_root_to_dummy_humerus",
   "proof_scope": "full_single_side_kinematics_and_structural_loads",
-  "status": "closure_inputs_open",
+  "status": "a0_shop_review_candidate_physical_validation_open",
   "basis": {
     "rule": "Include every mission input and geometry parameter referenced by every canonical load case assigned to this article. Do not infer or copy numeric values.",
     "load_case_source": "load_case_register.json",
@@ -111,18 +111,22 @@
     {
       "id": "EV-ARTICLE-001",
       "name": "article_datum_root_fixture_and_interface_drawing",
-      "status": "open",
+      "status": "design_package_present_physical_inspection_open",
       "required_contents": [
         "dimensioned FRAME_T56_THORAX realization",
         "representative thoracic-root restraints",
         "interface coordinates and tolerances"
       ],
-      "evidence_refs": []
+      "evidence_refs": [
+        "fabrication/a0_packet/drawings/A0-D001-fixture-datum.svg",
+        "requirements/geometry_register.json",
+        "fabrication/a0_packet/procedures/inspection_record_template.json (not run)"
+      ]
     },
     {
       "id": "EV-ARTICLE-002",
       "name": "mechanism_hard_stop_and_passive_retention_decision",
-      "status": "open",
+      "status": "design_package_present_physical_test_open",
       "required_contents": [
         "carriage guide or path selection",
         "clavicular linkage topology",
@@ -130,12 +134,17 @@
         "mechanical hard stops",
         "power-loss retention"
       ],
-      "evidence_refs": []
+      "evidence_refs": [
+        "requirements/a0_shoulder_mechanism.json",
+        "fabrication/a0_packet/drawings/A0-D002-mechanism-assembly.svg",
+        "fabrication/a0_packet/drawings/A0-D004-cartridge-interface.svg",
+        "fabrication/a0_packet/procedures/bench_test_record_template.json (not run)"
+      ]
     },
     {
       "id": "EV-ARTICLE-003",
       "name": "materials_joints_bearings_and_insert_decision",
-      "status": "open",
+      "status": "design_package_present_procurement_and_coupon_evidence_open",
       "required_contents": [
         "primary member materials",
         "root and cartridge inserts",
@@ -143,12 +152,17 @@
         "fasteners and secondary retention",
         "dielectric interfaces"
       ],
-      "evidence_refs": []
+      "evidence_refs": [
+        "requirements/a0_shoulder_mechanism.json",
+        "requirements/a0_analysis_basis.json",
+        "fabrication/a0_packet/BOM.csv",
+        "fabrication/a0_packet/procedures/inspection_record_template.json (not run)"
+      ]
     },
     {
       "id": "EV-ARTICLE-004",
       "name": "kinematic_collision_and_service_model",
-      "status": "open",
+      "status": "design_model_present_sweep_and_service_rehearsal_open",
       "required_contents": [
         "full single-side trajectory",
         "joint ranges and hard-stop states",
@@ -156,12 +170,16 @@
         "service-access envelope",
         "routing clearance"
       ],
-      "evidence_refs": []
+      "evidence_refs": [
+        "requirements/geometry_register.json",
+        "fabrication/a0_packet/drawings/A0-D002-mechanism-assembly.svg",
+        "fabrication/a0_packet/procedures/A0_BUILD_INSPECT_TEST.md"
+      ]
     },
     {
       "id": "EV-ARTICLE-005",
       "name": "analysis_coupon_and_article_test_record",
-      "status": "open",
+      "status": "closed_form_analysis_present_physical_test_records_open",
       "required_contents": [
         "free-body diagrams",
         "interface forces moments and load share",
@@ -170,7 +188,11 @@
         "raw kinematic and structural test results",
         "pass fail and anomaly record"
       ],
-      "evidence_refs": []
+      "evidence_refs": [
+        "fabrication/a0_packet/analysis/A0_LOAD_CASES.json",
+        "fabrication/a0_packet/analysis/A0_LOAD_CASES.md",
+        "fabrication/a0_packet/procedures/bench_test_record_template.json (not run)"
+      ]
     }
   ],
   "closure_rule": "The article profile is ready only when every listed mission input and geometry parameter is locked with its source-register trace fields, every listed load case is approved with numeric acceptance criteria and approval evidence, and every article evidence package is approved with evidence references."

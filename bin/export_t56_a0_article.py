@@ -11,6 +11,7 @@ import csv
 import hashlib
 import json
 import math
+import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -27,13 +28,14 @@ def bom_rows():
         ("A0-101", 1, "fixture base plate", "A36 steel plate", "300 x 240 x 8 mm; A0-D001"),
         ("A0-102", 2, "parallel four-bar rocker", "6061-T6 plate", "70 x 25 x 6 mm; 55 mm centers"),
         ("A0-103", 1, "moving carriage plate", "6061-T6 plate", "70 x 120 x 8 mm"),
-        ("A0-104", 2, "pitch yoke side plate", "6061-T6 plate", "60 x 70 x 8 mm; bearing bore 28 H7"),
+        ("A0-104", 2, "pitch yoke side plate", "6061-T6 plate", "60 x 70 x 8 mm; bearing bore 35 H7"),
         ("A0-105", 1, "split-clamp output hub", "6061-T6 billet", "55 x 40 x 55 mm; 25.50 mm socket"),
         ("A0-106", 1, "index sector", "6061-T6 plate", "90 OD x 6 mm; 15 degree index"),
         ("A0-107", 4, "replaceable stop pad", "acetal", "20 x 15 x 10 mm"),
         ("A0-108", 1, "dummy humeral member", "6061-T6 square tube", "25.4 x 25.4 x 3.175 wall x 327 mm"),
-        ("A0-201", 1, "pitch shaft", "4140 prehard ground bar", "12 h6 x 70 mm; ends retained"),
-        ("A0-301", 2, "deep-groove bearing", "6001-2RS", "12 x 28 x 8 mm; supplier lot recorded"),
+        ("A0-201", 1, "pitch shaft", "4140 prehard ground bar", "17 h6 x 70 mm; 5 x 5 mm keyway; ends retained"),
+        ("A0-202", 1, "parallel key", "hardened steel, DIN 6885 form A", "5 x 5 x 30 mm"),
+        ("A0-301", 2, "deep-groove bearing", "6003-2RS", "17 x 35 x 10 mm; supplier lot recorded"),
         ("A0-302", 4, "pivot shoulder bolt", "ISO 898-1 class 10.9", "M10 x 1.5; 10 mm shoulder"),
         ("A0-303", 4, "pivot locknut", "all-metal prevailing torque", "M10 x 1.5; single-use"),
         ("A0-304", 2, "spring indexing plunger", "steel, pull-ring type", "M16 x 1.5 body; 8 mm pin; vendor cross-check open"),
@@ -41,6 +43,7 @@ def bom_rows():
         ("A0-306", 2, "hub pinch bolt", "ISO 898-1 class 10.9", "M6 x 1.0 x 35 mm"),
         ("A0-307", 1, "secondary retention tether", "steel wire rope", "6 mm; rated >= 1 kN; thimbles and swages"),
         ("A0-308", 4, "bench mounting fastener", "ISO 898-1 class 10.9", "M10 x 1.5; length to bench fixture"),
+        ("A0-309", 1, "passive friction stack", "dry friction washers plus Belleville washers", "set breakaway torque >= 7 N m; witness mark adjuster"),
         ("A0-401", 1, "galvanic isolation kit", "PET plus zinc-rich primer", "0.5 mm PET; seal all aluminum/steel interfaces"),
     ]
 
@@ -66,11 +69,11 @@ def build_parts():
     )
     yoke = (
         cq.Workplane("XZ").rect(60, 70).extrude(8, both=True)
-        .faces(">Y").workplane().hole(28)
+        .faces(">Y").workplane().hole(35)
         .faces(">Y").workplane().pushPoints([(-15, -27.5), (15, -27.5)]).hole(6.6)
     )
     hub = cq.Workplane("XY").box(55, 40, 55)
-    hub = hub.cut(cq.Solid.makeCylinder(6, 42, cq.Vector(0, -21, 0), cq.Vector(0, 1, 0)))
+    hub = hub.cut(cq.Solid.makeCylinder(8.5, 42, cq.Vector(0, -21, 0), cq.Vector(0, 1, 0)))
     hub = hub.cut(cq.Workplane("YZ").rect(25.5, 25.5).extrude(31).translate((-28, 0, 0)))
     hub = hub.cut(cq.Workplane("XY").box(32, 1.5, 30).translate((-12, 0, 20)))
     sector = cq.Workplane("XZ").circle(45).circle(6).extrude(6, both=True)
@@ -78,7 +81,7 @@ def build_parts():
     sector = sector.faces(">Y").workplane().pushPoints(holes).hole(8.2)
     dummy = cq.Workplane("YZ").rect(25.4, 25.4).extrude(327)
     dummy = dummy.cut(cq.Workplane("YZ").rect(19.05, 19.05).extrude(329).translate((-1, 0, 0)))
-    shaft = cq.Workplane("XZ").circle(6).extrude(70)
+    shaft = cq.Workplane("XZ").circle(8.5).extrude(70)
     stop = cq.Workplane("XY").box(20, 15, 10)
     return {
         "A0-101_fixture_base": base,
@@ -129,8 +132,8 @@ def drawings(design):
 <path d="M 760 425 Q 790 460 760 495" fill="none" stroke="#bf4b3f" stroke-width="3"/><text x="820" y="420" font-size="15">scapular stops ±10°</text>
 <text x="930" y="270" font-size="16">S = (-205,-10,70) ±0.5</text><text x="930" y="305" font-size="16">pitch axis = (0,1,0)</text>
 <text x="930" y="340" font-size="16">command: -30° to +90°</text><text x="930" y="375" font-size="16">hard stops: -32° / +92°</text>
-<text x="930" y="425" font-size="15">RETENTION:</text><text x="930" y="455" font-size="14">8 mm spring index pin, 15° holes</text>
-<text x="930" y="480" font-size="14">6 mm secondary steel tether ≥1 kN</text><text x="930" y="520" font-size="14">software is never the sole stop</text>
+<text x="930" y="425" font-size="15">RETENTION:</text><text x="930" y="455" font-size="14">dry friction stack ≥7 N m + index pin</text>
+<text x="930" y="480" font-size="14">8 mm pin / 15° holes; tether ≥1 kN</text><text x="930" y="520" font-size="14">software is never the sole stop</text>
 <text x="930" y="580" font-size="14">Pivot pattern true position: Ø0.30</text><text x="930" y="605" font-size="14">Axis parallelism: 0.25°</text>''')
     member = drawing(
         "A0-D003-R0 — DUMMY HUMERAL MEMBER",
@@ -149,10 +152,10 @@ def drawings(design):
         '''<circle cx="380" cy="430" r="190" fill="#eef2f3" stroke="#172230" stroke-width="4"/><circle cx="380" cy="430" r="26" fill="white" stroke="#172230" stroke-width="3"/>
 <g fill="none" stroke="#156f88" stroke-width="3"><circle cx="545" cy="335" r="12"/><circle cx="570" cy="375" r="12"/><circle cx="580" cy="430" r="12"/><circle cx="570" cy="485" r="12"/><circle cx="545" cy="525" r="12"/></g>
 <line x1="380" y1="430" x2="760" y2="430" stroke="#bf4b3f" stroke-width="3"/><text x="650" y="415" font-size="16">PITCH AXIS +Y</text>
-<text x="850" y="240" font-size="16">SHAFT: Ø12 h6 = 11.989–12.000</text><text x="850" y="275" font-size="16">BEARING: 6001-2RS, 12×28×8</text>
-<text x="850" y="310" font-size="16">HOUSING: Ø28 H7 = 28.000–28.021</text><text x="850" y="345" font-size="16">INDEX HOLES: Ø8.2 +0.10/-0.00</text>
+<text x="850" y="240" font-size="16">SHAFT: Ø17 h6 = 16.989–17.000</text><text x="850" y="275" font-size="16">BEARING: 6003-2RS, 17×35×10</text>
+<text x="850" y="310" font-size="16">HOUSING: Ø35 H7 = 35.000–35.025</text><text x="850" y="345" font-size="16">INDEX HOLES: Ø8.2 +0.10/-0.00</text>
 <text x="850" y="380" font-size="16">SECTOR: Ø90 × 6; HOLES EACH 15°</text><text x="850" y="415" font-size="16">HUB SOCKET: 25.50 +0.15/-0.00</text>
-<text x="850" y="465" font-size="15">2× M6-10.9 PINCH BOLTS</text><text x="850" y="500" font-size="15">SHAFT: CAPTURED END WASHERS + LOCKNUT</text>
+<text x="850" y="465" font-size="15">2× M6-10.9 PINCH BOLTS; 5×5 KEY</text><text x="850" y="500" font-size="15">SHAFT: CAPTURED ENDS; FRICTION ≥7 N m</text>
 <text x="850" y="535" font-size="15">HARD STOPS: ACETAL PADS AT -32°/+92°</text><text x="850" y="570" font-size="15">INDEX ENGAGEMENT DEPTH ≥6 mm</text>
 <text x="850" y="625" font-size="14">Procurement lot and actual bearing/plunger dimensions</text><text x="850" y="650" font-size="14">must be checked before machining mating features.</text>''')
     return {
@@ -180,6 +183,18 @@ def export(output):
         stl = cad_dir / "stl" / f"{name}.stl"
         cq.exporters.export(shape, str(step))
         cq.exporters.export(shape, str(stl), tolerance=0.05, angularTolerance=0.1)
+        # Open CASCADE writes a wall-clock timestamp and trailing blanks.  Remove
+        # both so a geometrically identical export is byte-for-byte stable.
+        step_text = step.read_text(encoding="utf-8")
+        step_text = re.sub(
+            r"(FILE_NAME\('Open CASCADE Shape Model',')[^']+(')",
+            r"\g<1>1970-01-01T00:00:00\2",
+            step_text,
+        )
+        step.write_text(
+            "\n".join(line.rstrip() for line in step_text.splitlines()) + "\n",
+            encoding="utf-8",
+        )
         reloaded = cq.importers.importStep(str(step)).val()
         if not reloaded.isValid() or not math.isclose(reloaded.Volume(), shape.Volume(), rel_tol=1e-6):
             raise ValueError(f"STEP round trip failed: {name}")
@@ -190,7 +205,7 @@ def export(output):
     for name, content in drawings(design).items():
         (drawing_dir / name).write_text(content, encoding="utf-8")
     with (output / "BOM.csv").open("w", newline="", encoding="utf-8") as handle:
-        writer = csv.writer(handle)
+        writer = csv.writer(handle, lineterminator="\n")
         writer.writerow(["item_id", "qty", "description", "material_or_standard", "size_or_procurement_note"])
         writer.writerows(bom_rows())
     manifest = {

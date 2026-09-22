@@ -30,9 +30,9 @@
       "axis_unit": [0, 1, 0],
       "command_range_deg": [-30, 90],
       "hard_stop_range_deg": [-32, 92],
-      "passive_retention": "spring-biased 8 mm indexing plunger into 15 degree sector holes; maximum free interval 15 degrees",
+      "passive_retention": "Belleville-preloaded dry friction stack set to at least 7 N m breakaway torque plus a spring-biased 8 mm indexing plunger into 15 degree sector holes; maximum degraded single-fault free interval 15 degrees",
       "secondary_retention": "6 mm steel tether rated not less than 1 kN between hub and carriage; tether is not the primary retainer",
-      "drive_interface": "removable umbilical-powered low-speed actuator may drive the 8 mm keyed input; actuator selection is outside the fabricated load path",
+      "drive_interface": "removable umbilical-powered low-speed actuator may drive the keyed shaft input; actuator selection is outside the fabricated load path",
       "software_limit_as_only_stop": false
     }
   },
@@ -96,20 +96,20 @@
     "rockers_and_carriage": "ASTM B209 6061-T6 aluminum plate, 6 mm and 8 mm",
     "yoke_and_sector": "ASTM B209 6061-T6 aluminum plate, 8 mm and 6 mm",
     "dummy_member": "ASTM B221 6061-T6 square tube, 25.4 x 25.4 x 3.175 mm",
-    "pivot_shaft": "AISI 4140 prehardened steel, 12 mm ground shaft",
+    "pivot_shaft": "AISI 4140 prehardened steel, 17 mm ground shaft with 5 x 5 mm parallel key",
     "fasteners": "ISO 898-1 class 10.9 zinc-plated steel unless otherwise noted",
     "wear_pads": "acetal, 3 mm replaceable pads",
     "isolation": "0.5 mm PET barrier and zinc-rich primer between aluminum and A36 steel; seal exposed edges"
   },
   "fits": [
     {
-      "interface": "12 mm pivot shaft to 6001 bearing inner ring",
-      "fit": "shaft h6; 11.989 to 12.000 mm",
+      "interface": "17 mm pivot shaft to 6003 bearing inner ring",
+      "fit": "shaft h6; 16.989 to 17.000 mm",
       "inspection": "micrometer at three axial stations"
     },
     {
-      "interface": "6001 bearing outer ring to yoke bore",
-      "fit": "housing H7; 28.000 to 28.021 mm",
+      "interface": "6003 bearing outer ring to yoke bore",
+      "fit": "housing H7; 35.000 to 35.025 mm",
       "inspection": "three-point bore gauge"
     },
     {

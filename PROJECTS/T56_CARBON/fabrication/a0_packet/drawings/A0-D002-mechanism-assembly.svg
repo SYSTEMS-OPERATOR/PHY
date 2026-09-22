@@ -9,8 +9,8 @@
 <path d="M 760 425 Q 790 460 760 495" fill="none" stroke="#bf4b3f" stroke-width="3"/><text x="820" y="420" font-size="15">scapular stops ±10°</text>
 <text x="930" y="270" font-size="16">S = (-205,-10,70) ±0.5</text><text x="930" y="305" font-size="16">pitch axis = (0,1,0)</text>
 <text x="930" y="340" font-size="16">command: -30° to +90°</text><text x="930" y="375" font-size="16">hard stops: -32° / +92°</text>
-<text x="930" y="425" font-size="15">RETENTION:</text><text x="930" y="455" font-size="14">8 mm spring index pin, 15° holes</text>
-<text x="930" y="480" font-size="14">6 mm secondary steel tether ≥1 kN</text><text x="930" y="520" font-size="14">software is never the sole stop</text>
+<text x="930" y="425" font-size="15">RETENTION:</text><text x="930" y="455" font-size="14">dry friction stack ≥7 N m + index pin</text>
+<text x="930" y="480" font-size="14">8 mm pin / 15° holes; tether ≥1 kN</text><text x="930" y="520" font-size="14">software is never the sole stop</text>
 <text x="930" y="580" font-size="14">Pivot pattern true position: Ø0.30</text><text x="930" y="605" font-size="14">Axis parallelism: 0.25°</text>
 <text x="40" y="842" font-size="14">A0 SHOP REVIEW CANDIDATE — NOT FABRICATION RELEASED — ALL DIMENSIONS mm — DO NOT SCALE</text>
 </g></svg>

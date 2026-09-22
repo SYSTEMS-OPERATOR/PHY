@@ -1,0 +1,60 @@
+{
+  "schema_version": "0.1.0",
+  "basis_id": "T56_A0_SINGLE_SIDE_ANALYSIS_BASIS",
+  "status": "provisional_closed_form_analysis_basis_physical_validation_open",
+  "scope_authority": "a0_article_scope.json",
+  "geometry_authority": "a0_shoulder_mechanism.json",
+  "units": "N_mm_MPa_kg_s_deg",
+  "constants": {
+    "gravity_m_s2": 9.80665,
+    "stop_pad_usable_travel_mm": 4,
+    "pitch_stop_radius_mm": 35,
+    "pitch_friction_breakaway_min_Nm": 7,
+    "degraded_index_interval_deg": 15,
+    "service_handle_lever_mm": 55
+  },
+  "material_minima": {
+    "6061_T6": {
+      "elastic_modulus_MPa": 68900,
+      "yield_MPa": 240,
+      "ultimate_MPa": 260,
+      "basis": "project minimum for ASTM B221 tube and ASTM B209 plate; verify mill certification by lot"
+    },
+    "A36": {
+      "yield_MPa": 250,
+      "basis": "project minimum; verify plate certification by lot"
+    },
+    "4140_PREHARD": {
+      "yield_MPa": 655,
+      "basis": "project procurement minimum; verify heat-treatment certification by lot"
+    },
+    "ISO_10_9": {
+      "proof_MPa": 830,
+      "ultimate_MPa": 1000,
+      "basis": "project procurement minimum; verify fastener markings and lot certificate"
+    }
+  },
+  "section": {
+    "dummy_tube_outer_mm": 25.4,
+    "dummy_tube_wall_mm": 3.175,
+    "pitch_shaft_diameter_mm": 17,
+    "rocker_width_mm": 25,
+    "rocker_thickness_mm": 6,
+    "rocker_pin_center_mm": 55,
+    "index_pin_diameter_mm": 8,
+    "index_sector_thickness_mm": 6
+  },
+  "bearing_procurement_acceptance": {
+    "type": "6003-2RS",
+    "minimum_static_rating_per_bearing_N": 3000,
+    "minimum_dynamic_rating_per_bearing_N": 5500,
+    "note": "ratings are procurement thresholds, not evidence that an unverified supplier part meets them"
+  },
+  "method_limits": [
+    "closed-form rigid-joint checks do not replace FEA, coupon data, or article test",
+    "nominal mass is conservatively represented at half-span and payload at the load station",
+    "linear stop force assumes full usable pad travel and triangular force-displacement response",
+    "bearing load sharing, friction, damping, backlash, acoustic output, temperature and fatigue remain physical measurements",
+    "no calculated result is a measured capability"
+  ]
+}

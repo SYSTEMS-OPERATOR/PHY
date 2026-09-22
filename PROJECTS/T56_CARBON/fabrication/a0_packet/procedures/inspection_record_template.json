@@ -1,0 +1,32 @@
+{
+  "record_type": "T56_A0_FIRST_ARTICLE_INSPECTION",
+  "status": "not_run_template_only",
+  "measured_evidence": false,
+  "article_serial": null,
+  "drawing_revision": "A0-R0",
+  "instrument_calibration_refs": [],
+  "material_lot_refs": [],
+  "measurements": {
+    "base_flatness_mm": null,
+    "datum_hole_diameter_mm": null,
+    "posterior_root_position_error_mm": null,
+    "anterior_root_position_error_mm": null,
+    "root_height_error_mm": null,
+    "rocker_center_distance_mm": [],
+    "pivot_true_position_mm": [],
+    "shaft_diameter_mm": [],
+    "bearing_bore_diameter_mm": [],
+    "hub_socket_across_flats_mm": [],
+    "index_hole_diameter_mm": [],
+    "index_pin_engagement_mm": [],
+    "dummy_member_cut_length_mm": null,
+    "dummy_member_straightness_mm_per_300_mm": null,
+    "as_built_moving_mass_kg": null,
+    "as_built_center_of_gravity_mm_from_S": null,
+    "minimum_tool_clearance_mm": null
+  },
+  "deviations": [],
+  "inspector": null,
+  "date": null,
+  "disposition": "not_run"
+}

@@ -17,7 +17,8 @@ point `S=(-205,-10,70) mm`, with a commanded range of -30 to +90 degrees and
 independent mechanical stops at -32 and +92 degrees.
 
 Retention does not depend on power or software. The carriage uses a clamp and
-spring-biased neutral index. The pitch sector uses an 8 mm spring-biased plunger
+spring-biased neutral index. The pitch stage uses a Belleville-preloaded dry
+friction stack set to at least 7 N·m plus an 8 mm spring-biased sector plunger
 at 15 degree intervals; a 6 mm, at-least-1 kN steel tether is secondary
 retention, not the primary retainer. A removable low-speed actuator may use the
 8 mm keyed drive interface. Its selection is outside the A0 fabricated load
@@ -53,6 +54,7 @@ Regenerate the packet from the repository root with:
 python bin/export_t56_a0_article.py
 ```
 
-The next checkpoint adds the six calculation sheets, numeric acceptance
-criteria, assembly/inspection/bench-test procedures, and updated evidence and
-convergence status.
+Closed-form calculation sheets and numeric acceptance criteria are in
+`analysis/`; controlled build, inspection and bench-test steps plus deliberately
+blank record templates are in `procedures/`. The checked-in records do not claim
+that any physical test has run.

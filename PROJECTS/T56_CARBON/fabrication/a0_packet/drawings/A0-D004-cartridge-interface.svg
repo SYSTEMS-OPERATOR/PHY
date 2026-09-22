@@ -4,10 +4,10 @@
 <rect x="25" y="20" width="1350" height="850" fill="none" stroke="#172230" stroke-width="2"/><circle cx="380" cy="430" r="190" fill="#eef2f3" stroke="#172230" stroke-width="4"/><circle cx="380" cy="430" r="26" fill="white" stroke="#172230" stroke-width="3"/>
 <g fill="none" stroke="#156f88" stroke-width="3"><circle cx="545" cy="335" r="12"/><circle cx="570" cy="375" r="12"/><circle cx="580" cy="430" r="12"/><circle cx="570" cy="485" r="12"/><circle cx="545" cy="525" r="12"/></g>
 <line x1="380" y1="430" x2="760" y2="430" stroke="#bf4b3f" stroke-width="3"/><text x="650" y="415" font-size="16">PITCH AXIS +Y</text>
-<text x="850" y="240" font-size="16">SHAFT: Ø12 h6 = 11.989–12.000</text><text x="850" y="275" font-size="16">BEARING: 6001-2RS, 12×28×8</text>
-<text x="850" y="310" font-size="16">HOUSING: Ø28 H7 = 28.000–28.021</text><text x="850" y="345" font-size="16">INDEX HOLES: Ø8.2 +0.10/-0.00</text>
+<text x="850" y="240" font-size="16">SHAFT: Ø17 h6 = 16.989–17.000</text><text x="850" y="275" font-size="16">BEARING: 6003-2RS, 17×35×10</text>
+<text x="850" y="310" font-size="16">HOUSING: Ø35 H7 = 35.000–35.025</text><text x="850" y="345" font-size="16">INDEX HOLES: Ø8.2 +0.10/-0.00</text>
 <text x="850" y="380" font-size="16">SECTOR: Ø90 × 6; HOLES EACH 15°</text><text x="850" y="415" font-size="16">HUB SOCKET: 25.50 +0.15/-0.00</text>
-<text x="850" y="465" font-size="15">2× M6-10.9 PINCH BOLTS</text><text x="850" y="500" font-size="15">SHAFT: CAPTURED END WASHERS + LOCKNUT</text>
+<text x="850" y="465" font-size="15">2× M6-10.9 PINCH BOLTS; 5×5 KEY</text><text x="850" y="500" font-size="15">SHAFT: CAPTURED ENDS; FRICTION ≥7 N m</text>
 <text x="850" y="535" font-size="15">HARD STOPS: ACETAL PADS AT -32°/+92°</text><text x="850" y="570" font-size="15">INDEX ENGAGEMENT DEPTH ≥6 mm</text>
 <text x="850" y="625" font-size="14">Procurement lot and actual bearing/plunger dimensions</text><text x="850" y="650" font-size="14">must be checked before machining mating features.</text>
 <text x="40" y="842" font-size="14">A0 SHOP REVIEW CANDIDATE — NOT FABRICATION RELEASED — ALL DIMENSIONS mm — DO NOT SCALE</text>

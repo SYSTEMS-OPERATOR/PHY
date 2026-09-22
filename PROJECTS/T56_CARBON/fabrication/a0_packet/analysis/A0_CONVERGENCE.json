@@ -1,0 +1,32 @@
+{
+  "article_ready": false,
+  "blockers": [
+    "article evidence package EV-ARTICLE-001 is not approved",
+    "article evidence package EV-ARTICLE-002 is not approved",
+    "article evidence package EV-ARTICLE-003 is not approved",
+    "article evidence package EV-ARTICLE-004 is not approved",
+    "article evidence package EV-ARTICLE-005 is not approved",
+    "load case LC-MNT-001 is not approved",
+    "load case LC-SHO-001 is not approved",
+    "load case LC-SHO-002 is not approved",
+    "load case LC-SHO-003 is not approved",
+    "load case LC-SHO-004 is not approved",
+    "load case LC-SHO-005 is not approved"
+  ],
+  "counts": {
+    "approved_article_evidence_packages": 0,
+    "approved_load_cases_in_scope": 0,
+    "article_evidence_packages_in_scope": 5,
+    "geometry_parameters_in_scope": 11,
+    "load_cases_in_scope": 6,
+    "locked_project_decisions": 5,
+    "mission_inputs_in_scope": 10,
+    "open_geometry_parameters_in_scope": 0,
+    "open_mission_inputs_in_scope": 0
+  },
+  "errors": [],
+  "project": "T56_CARBON",
+  "schema_valid": true,
+  "scope": "T56_SINGLE_SIDE_KINEMATIC_STRUCTURAL_CLOSURE",
+  "scope_ready": false
+}

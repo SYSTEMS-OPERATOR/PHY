@@ -7,7 +7,7 @@
   "canon_effect": "none",
   "units": "mm",
   "source": "PROJECTS/T56_CARBON/requirements/a0_shoulder_mechanism.json",
-  "source_sha256": "f32118647766aac20ac10fa3c575006c98ea9a7524a2bd31b71d3e563c50e8ba",
+  "source_sha256": "34c58f9e7503cb5e67079b7f2b896607e4c921d77e32944100b86ff59a56d65e",
   "parts": [
     {
       "part": "A0-101_fixture_base",
@@ -48,10 +48,10 @@
       "step_round_trip": "pass",
       "bounds_mm": [
         60.000000200000024,
-        16.00870310397715,
+        16.010878829971436,
         70.00000020000002
       ],
-      "volume_mm3": 56253.18323041944
+      "volume_mm3": 50711.41378948703
     },
     {
       "part": "A0-105_output_hub",
@@ -59,10 +59,10 @@
       "step_round_trip": "pass",
       "bounds_mm": [
         55.00000020000002,
-        40.005874031616074,
+        40.00729055033242,
         55.00000020000002
       ],
-      "volume_mm3": 98255.127099982
+      "volume_mm3": 95550.68642834247
     },
     {
       "part": "A0-106_index_sector",
@@ -102,11 +102,11 @@
       "valid_solid": true,
       "step_round_trip": "pass",
       "bounds_mm": [
-        12.003730015990207,
-        70.00373001599021,
-        12.000000200000004
+        17.005284105986128,
+        70.00528410598614,
+        17.000000200000006
       ],
-      "volume_mm3": 7916.81348704628
+      "volume_mm3": 15888.604845530377
     }
   ],
   "drawing_files": [
@@ -115,5 +115,5 @@
     "A0-D003-dummy-member.svg",
     "A0-D004-cartridge-interface.svg"
   ],
-  "bom_items": 18
+  "bom_items": 20
 }

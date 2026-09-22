@@ -69,7 +69,8 @@ class T56A0GeometryTest(unittest.TestCase):
         self.assertFalse(manifest["physical_evidence_complete"])
         with (PACKET / "BOM.csv").open(newline="", encoding="utf-8") as handle:
             rows = list(csv.DictReader(handle))
-        self.assertEqual(len(rows), 18)
+        self.assertEqual(len(rows), manifest["bom_items"])
+        self.assertGreaterEqual(len(rows), 18)
         self.assertEqual(len({row["item_id"] for row in rows}), len(rows))
         for name in manifest["drawing_files"]:
             drawing = (PACKET / "drawings" / name).read_text(encoding="utf-8")

@@ -1,28 +1,17 @@
 # Shoulder member dimensional review
 
-Status: **blocked**
+Status: **dimensional_review_only**
 
 Fabrication ready: **false**. Canon adoption: **false**.
 
-Input SHA-256: `3e77df90dc4f101e71d424349b81245f756a259a3a8eebd5bdb1cbbe0adcb3ec`
+Input SHA-256: `1f7f09f2397f2bb2b46401f31df1fa97dd439a09b7111ab82f424dd307e97cc6`
 
-- pose_id remains open
-- datum_drawing remains open
-- shoulder_output: measurement/design dimension remains open
-- shoulder_output: tolerance remains open
-- shoulder_output: drawing/measurement evidence remains open
-- dummy_elbow_station: measurement/design dimension remains open
-- dummy_elbow_station: tolerance remains open
-- dummy_elbow_station: drawing/measurement evidence remains open
-- shoulder_offset: measurement/design dimension remains open
-- shoulder_offset: tolerance remains open
-- shoulder_offset: drawing/measurement evidence remains open
-- elbow_offset: measurement/design dimension remains open
-- elbow_offset: tolerance remains open
-- elbow_offset: drawing/measurement evidence remains open
-- shoulder_insertion: measurement/design dimension remains open
-- shoulder_insertion: tolerance remains open
-- shoulder_insertion: drawing/measurement evidence remains open
-- elbow_insertion: measurement/design dimension remains open
-- elbow_insertion: tolerance remains open
-- elbow_insertion: drawing/measurement evidence remains open
+| Dimension | Nominal mm | Worst-case ± mm |
+| --- | ---: | ---: |
+| effective_length | 317.000000 | 1.000000 |
+| seat_gap | 267.000000 | 1.500000 |
+| stock_cut_length | 327.000000 | 2.000000 |
+
+stock_cut_length = |E-S| - oS - oE + iS + iE
+
+Centerline review only; no cross-section, drill schedule or load approval.

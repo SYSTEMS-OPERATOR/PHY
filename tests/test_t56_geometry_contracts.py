@@ -127,7 +127,12 @@ class ConvergenceRegressionTest(unittest.TestCase):
             self.assertEqual(report, self.run_gate(scope))
             self.assertTrue(report["schema_valid"], report)
             self.assertFalse(report["scope_ready"])
-            self.assertEqual(report["counts"]["open_geometry_parameters_in_scope"], 19 if scope is None else 11)
+            selected = self.geometry["parameters"]
+            if scope == "single-side":
+                ids = set(self.closure["required_geometry_parameters"])
+                selected = [row for row in selected if row["id"] in ids]
+            expected = sum(row["status"] != "locked" for row in selected)
+            self.assertEqual(report["counts"]["open_geometry_parameters_in_scope"], expected)
 
     def test_synthetic_complete_packet_can_pass_both_scopes(self):
         self.synthetic_closed_packet()

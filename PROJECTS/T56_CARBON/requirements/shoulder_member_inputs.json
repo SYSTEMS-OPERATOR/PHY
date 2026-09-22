@@ -1,44 +1,44 @@
 {
   "model": "straight_collinear_dummy_member_v1",
   "frame_id": "FRAME_T56_THORAX",
-  "pose_id": null,
-  "datum_drawing": null,
+  "pose_id": "A0_NEUTRAL_LOCKED",
+  "datum_drawing": "fabrication/a0_packet/drawings/A0-D001-fixture-datum.svg",
   "records": {
     "shoulder_output": {
-      "value": null,
+      "value": [-205, -10, 70],
       "units": "mm",
-      "tolerance_mm": null,
-      "evidence": null
+      "tolerance_mm": 0.5,
+      "evidence": "requirements/a0_shoulder_mechanism.json; A0-D001-R0 and A0-D002-R0"
     },
     "dummy_elbow_station": {
-      "value": null,
+      "value": [-522, -10, 70],
       "units": "mm",
-      "tolerance_mm": null,
-      "evidence": null
+      "tolerance_mm": 0.5,
+      "evidence": "requirements/a0_shoulder_mechanism.json; project-local 317 mm A0 load station, not a canon landmark"
     },
     "shoulder_offset": {
-      "value": null,
+      "value": 25,
       "units": "mm",
-      "tolerance_mm": null,
-      "evidence": null
+      "tolerance_mm": 0.25,
+      "evidence": "fabrication/a0_packet/drawings/A0-D003-dummy-member.svg"
     },
     "elbow_offset": {
-      "value": null,
+      "value": 25,
       "units": "mm",
-      "tolerance_mm": null,
-      "evidence": null
+      "tolerance_mm": 0.25,
+      "evidence": "fabrication/a0_packet/drawings/A0-D003-dummy-member.svg"
     },
     "shoulder_insertion": {
-      "value": null,
+      "value": 30,
       "units": "mm",
-      "tolerance_mm": null,
-      "evidence": null
+      "tolerance_mm": 0.25,
+      "evidence": "fabrication/a0_packet/drawings/A0-D004-cartridge-interface.svg"
     },
     "elbow_insertion": {
-      "value": null,
+      "value": 30,
       "units": "mm",
-      "tolerance_mm": null,
-      "evidence": null
+      "tolerance_mm": 0.25,
+      "evidence": "fabrication/a0_packet/drawings/A0-D003-dummy-member.svg"
     }
   }
 }

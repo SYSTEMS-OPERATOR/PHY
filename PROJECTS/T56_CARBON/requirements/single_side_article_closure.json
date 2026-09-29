@@ -118,7 +118,7 @@
         "interface coordinates and tolerances"
       ],
       "evidence_refs": [
-        "fabrication/a0_packet/drawings/A0-D001-fixture-datum.svg",
+        "fabrication/a0_packet/drawings/A0-D001-R1-fixture-datum.svg",
         "requirements/geometry_register.json",
         "fabrication/a0_packet/procedures/inspection_record_template.json (not run)"
       ]
@@ -136,8 +136,8 @@
       ],
       "evidence_refs": [
         "requirements/a0_shoulder_mechanism.json",
-        "fabrication/a0_packet/drawings/A0-D002-mechanism-assembly.svg",
-        "fabrication/a0_packet/drawings/A0-D004-cartridge-interface.svg",
+        "fabrication/a0_packet/drawings/A0-D002-R1-mechanism-assembly.svg",
+        "fabrication/a0_packet/drawings/A0-D004-R1-cartridge-interfaces.svg",
         "fabrication/a0_packet/procedures/bench_test_record_template.json (not run)"
       ]
     },
@@ -172,7 +172,7 @@
       ],
       "evidence_refs": [
         "requirements/geometry_register.json",
-        "fabrication/a0_packet/drawings/A0-D002-mechanism-assembly.svg",
+        "fabrication/a0_packet/drawings/A0-D002-R1-mechanism-assembly.svg",
         "fabrication/a0_packet/procedures/A0_BUILD_INSPECT_TEST.md"
       ]
     },

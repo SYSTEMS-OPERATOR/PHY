@@ -101,23 +101,25 @@ class T56A0GeometryTest(unittest.TestCase):
         parts = exporter.build_parts(design)
         instances = {iid: shape.val().BoundingBox() for iid, _, shape in exporter.located_instances(parts, design)}
         member, shaft = instances["dummy_member"], instances["shaft"]
-        self.assertAlmostEqual(member.xmax, -215.0)
-        self.assertAlmostEqual(member.xmin, -542.0)
+        self.assertAlmostEqual(member.xmax, -217.0)
+        self.assertAlmostEqual(member.xmin, -544.0)
         self.assertAlmostEqual(shaft.xmin, -213.5)
-        self.assertGreater(shaft.xmin - member.xmax, 1.0)
+        self.assertGreaterEqual(shaft.xmin - member.xmax, 3.5)
         result = review(self.load(PROJECT / "requirements" / "shoulder_member_inputs.json"))
-        self.assertEqual(result["points_mm"]["cut_S"], [-215.0, -10.0, 70.0])
-        self.assertEqual(result["points_mm"]["cut_E"], [-542.0, -10.0, 70.0])
+        self.assertEqual(result["points_mm"]["cut_S"], [-217.0, -10.0, 70.0])
+        self.assertEqual(result["points_mm"]["cut_E"], [-544.0, -10.0, 70.0])
 
     @unittest.skipUnless(importlib.util.find_spec("cadquery"), "optional CadQuery unavailable")
     def test_located_assembly_has_required_interfaces_and_quantities(self):
         rows = exporter.located_instances(exporter.build_parts())
         ids = [row[0] for row in rows]
-        self.assertEqual(len(ids), 23)
+        self.assertEqual(len(ids), 35)
         self.assertEqual(len(ids), len(set(ids)))
         for required in ("root_standoff_P", "root_standoff_A", "yoke_1", "yoke_2",
                          "bearing_1", "bearing_2", "shaft", "key", "sector",
-                         "friction_stack", "retainer_1", "retainer_2", "index_plunger"):
+                         "bearing_cap_1", "bearing_cap_2", "friction_stack",
+                         "retainer_1", "retainer_2", "index_plunger",
+                         "scapular_index_plunger", "secondary_tether"):
             self.assertIn(required, ids)
 
     def test_sampled_motion_is_explicitly_not_continuous_proof(self):

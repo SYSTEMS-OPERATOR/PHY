@@ -23,8 +23,12 @@ def calculate():
     scope = read("a0_article_scope.json")
     design = read("a0_shoulder_mechanism.json")
     basis = read("a0_analysis_basis.json")
-    constants, section = basis["constants"], basis["section"]
+    constants = basis["constants"]
     material = basis["material_minima"]
+    fabrication = design["fabrication_geometry"]
+    cartridge = fabrication["cartridge"]
+    member = fabrication["dummy_member"]
+    four_bar = fabrication["four_bar"]
 
     g = constants["gravity_m_s2"]
     mass = value(scope, "ME-MASS-002")
@@ -38,8 +42,8 @@ def calculate():
     length_mm = design["dummy_member"]["effective_length_mm"]
     length_m = length_mm / 1000
 
-    outer = section["dummy_tube_outer_mm"]
-    inner = outer - 2 * section["dummy_tube_wall_mm"]
+    outer = member["outer"]
+    inner = outer - 2 * member["wall"]
     area = outer**2 - inner**2
     inertia = (outer**4 - inner**4) / 12
     section_modulus = inertia / (outer / 2)
@@ -64,13 +68,50 @@ def calculate():
     impact_peak_moment = impact_peak_force * stop_radius_m
     impact_tube_stress = impact_peak_moment * 1000 / section_modulus
 
-    shaft_d = section["pitch_shaft_diameter_mm"]
+    shaft_d = cartridge["shaft_diameter"]
     shaft_tau = 16 * impact_peak_moment * 1000 / (math.pi * shaft_d**3)
-    shaft_vm = math.sqrt(3) * shaft_tau
-    shaft_yield_sf = material["4140_PREHARD"]["yield_MPa"] / shaft_vm
+    shaft_bending_stress = 32 * push_moment * 1000 / (math.pi * shaft_d**3)
+    shaft_vm = math.hypot(shaft_bending_stress, math.sqrt(3) * shaft_tau)
+    shaft_keyway_factor = 1.6
+    shaft_vm_with_keyway = shaft_vm * shaft_keyway_factor
+    shaft_yield_sf = material["4140_PREHARD"]["yield_MPa"] / shaft_vm_with_keyway
 
-    rocker_i = section["rocker_width_mm"] * section["rocker_thickness_mm"]**3 / 12
-    rocker_buckling = math.pi**2 * material["6061_T6"]["elastic_modulus_MPa"] * rocker_i / section["rocker_pin_center_mm"]**2
+    key_width, key_height, _ = cartridge["shaft_key_width_height_length"]
+    key_length = constants["key_effective_length_mm"]
+    key_force = 2 * impact_peak_moment * 1000 / shaft_d
+    key_shear = key_force / (key_width * key_length)
+    key_bearing = key_force / (0.5 * key_height * key_length)
+    key_shear_margin = (material["HARDENED_KEY_STEEL"]["yield_MPa"] / math.sqrt(3)) / key_shear
+    key_bearing_margin = material["HARDENED_KEY_STEEL"]["yield_MPa"] / key_bearing
+
+    bearing_span_m = constants["bearing_center_span_mm"] / 1000
+    bearing_direct_reaction = impact_peak_force / 2
+    bearing_couple_reaction = impact_peak_moment / bearing_span_m
+    maximum_bearing_reaction = bearing_direct_reaction + bearing_couple_reaction
+    bearing_static_threshold = basis["bearing_procurement_acceptance"]["minimum_static_rating_per_bearing_N"]
+    bearing_static_screen_margin = bearing_static_threshold / maximum_bearing_reaction
+
+    yoke_t = cartridge["yoke_plate_size_xzy"][2]
+    yoke_net_width = cartridge["yoke_plate_size_xzy"][0] - cartridge["bearing_housing_diameter"]
+    yoke_net_stress = maximum_bearing_reaction / (yoke_t * yoke_net_width)
+
+    root_couple_force = push_retention_moment * 1000 / constants["root_pair_spacing_mm"]
+    root_bolt_area = math.pi * four_bar["pivot_bore_diameter"]**2 / 4
+    root_bolt_shear = root_couple_force / root_bolt_area
+    root_bolt_shear_margin = (material["ISO_10_9"]["proof_MPa"] / math.sqrt(3)) / root_bolt_shear
+    bench_tension = push_retention_moment * 1000 / constants["bench_fastener_lever_mm"]
+    bench_tension_stress = bench_tension / constants["m10_tensile_stress_area_mm2"]
+    bench_fastener_margin = material["ISO_10_9"]["proof_MPa"] / bench_tension_stress
+
+    stop_fastener_area = math.pi * constants["stop_attachment_fastener_diameter_mm"]**2 / 4
+    stop_fastener_shear = impact_peak_force / constants["stop_attachment_fastener_count"] / stop_fastener_area
+    stop_fastener_margin = (material["ISO_10_9"]["proof_MPa"] / math.sqrt(3)) / stop_fastener_shear
+    index_pin_area = math.pi * cartridge["plunger_envelope_body_pin_length"][1]**2 / 4
+    index_pin_double_shear = impact_peak_force / (2 * index_pin_area)
+
+    rocker_width, _, rocker_thickness = four_bar["rocker_size_xyz"]
+    rocker_i = rocker_width * rocker_thickness**3 / 12
+    rocker_buckling = math.pi**2 * material["6061_T6"]["elastic_modulus_MPa"] * rocker_i / four_bar["rocker_centers"]**2
     index_energy = gravity_moment * math.sin(math.radians(constants["degraded_index_interval_deg"]))
     degraded_speed = math.sqrt(2 * index_energy / mass_inertia)
     service_moment = service_force * constants["service_handle_lever_mm"] / 1000
@@ -118,6 +159,11 @@ def calculate():
                 "retention_design_moment_Nm": push_retention_moment,
                 "tube_stress_at_retention_design_MPa": push_tube_stress,
                 "tube_yield_margin_x": material["6061_T6"]["yield_MPa"] / push_tube_stress,
+                "root_pair_couple_force_N": root_couple_force,
+                "root_pivot_bolt_shear_stress_MPa": root_bolt_shear,
+                "root_pivot_bolt_shear_margin_x": root_bolt_shear_margin,
+                "bench_fastener_tension_stress_MPa": bench_tension_stress,
+                "bench_fastener_proof_margin_x": bench_fastener_margin,
             },
             "acceptance_criteria": {
                 "service_force_each_direction_N": external_force,
@@ -134,8 +180,23 @@ def calculate():
                 "peak_stop_moment_Nm": impact_peak_moment,
                 "tube_stress_at_design_energy_MPa": impact_tube_stress,
                 "shaft_von_mises_stress_MPa": shaft_vm,
+                "shaft_keyway_factor": shaft_keyway_factor,
+                "shaft_factored_von_mises_stress_MPa": shaft_vm_with_keyway,
                 "shaft_yield_margin_x": shaft_yield_sf,
+                "key_tangential_force_N": key_force,
+                "key_shear_stress_MPa": key_shear,
+                "key_bearing_stress_MPa": key_bearing,
+                "key_shear_margin_x": key_shear_margin,
+                "key_bearing_margin_x": key_bearing_margin,
+                "maximum_screened_bearing_reaction_N": maximum_bearing_reaction,
+                "bearing_static_threshold_N": bearing_static_threshold,
+                "bearing_static_screen_margin_x": bearing_static_screen_margin,
+                "yoke_net_section_stress_MPa": yoke_net_stress,
+                "stop_attachment_fastener_shear_MPa": stop_fastener_shear,
+                "stop_attachment_fastener_margin_x": stop_fastener_margin,
+                "index_pin_double_shear_stress_MPa": index_pin_double_shear,
                 "rocker_weak_axis_euler_buckling_N": rocker_buckling,
+                "stop_compliance_basis_verified": False,
             },
             "acceptance_criteria": {
                 "impact_energy_J": impact_energy,
@@ -190,7 +251,13 @@ def calculate():
             "mass_kg": mass, "payload_kg": payload, "effective_length_mm": length_mm,
             "tube_area_mm2": area, "tube_inertia_mm4": inertia,
             "tube_section_modulus_mm3": section_modulus,
+            "fabrication_geometry_revision": fabrication["revision"],
         },
+        "screening_blockers": [
+            "bearing static screen margin is below 1.0 at the provisional 6 J design-energy load; revise load distribution, bearing selection or accepted impact model before release" if bearing_static_screen_margin < 1 else "bearing static rating remains supplier verification",
+            "4 mm stop travel and force-displacement response require supplier/coupon verification before impact testing",
+            "combined-load calculations remain closed-form screens and require independent load-path review",
+        ],
         "cases": cases,
         "method_limits": basis["method_limits"],
     }
@@ -213,6 +280,7 @@ def markdown(result):
         value = result["cases"][case_id]["results"][key]
         lines.append(f"| {case_id} | {key} = {value:.6g} | test record open |")
     lines += ["", "## Method limits", ""] + [f"- {item}" for item in result["method_limits"]]
+    lines += ["", "## Shop-review release blockers", ""] + [f"- {item}" for item in result["screening_blockers"]]
     lines += ["", "Numeric acceptance criteria are recorded in `load_case_register.json`. Passing the arithmetic does not approve a load case; approval requires the corresponding signed bench record."]
     return "\n".join(lines) + "\n"
 

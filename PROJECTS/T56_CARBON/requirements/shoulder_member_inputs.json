@@ -2,13 +2,13 @@
   "model": "straight_collinear_dummy_member_v1",
   "frame_id": "FRAME_T56_THORAX",
   "pose_id": "A0_NEUTRAL_LOCKED",
-  "datum_drawing": "fabrication/a0_packet/drawings/A0-D001-fixture-datum.svg",
+  "datum_drawing": "fabrication/a0_packet/drawings/A0-D001-R1-fixture-datum.svg",
   "records": {
     "shoulder_output": {
       "value": [-205, -10, 70],
       "units": "mm",
       "tolerance_mm": 0.5,
-      "evidence": "requirements/a0_shoulder_mechanism.json; A0-D001-R0 and A0-D002-R0"
+      "evidence": "requirements/a0_shoulder_mechanism.json; A0-D001-R1 and A0-D002-R1"
     },
     "dummy_elbow_station": {
       "value": [-522, -10, 70],
@@ -20,25 +20,25 @@
       "value": 40,
       "units": "mm",
       "tolerance_mm": 0.25,
-      "evidence": "fabrication/a0_packet/drawings/A0-D003-dummy-member.svg"
+      "evidence": "fabrication/a0_packet/drawings/A0-D003-R1-dummy-member.svg"
     },
     "elbow_offset": {
       "value": 25,
       "units": "mm",
       "tolerance_mm": 0.25,
-      "evidence": "fabrication/a0_packet/drawings/A0-D003-dummy-member.svg"
+      "evidence": "fabrication/a0_packet/drawings/A0-D003-R1-dummy-member.svg"
     },
     "shoulder_insertion": {
-      "value": 30,
+      "value": 28,
       "units": "mm",
       "tolerance_mm": 0.25,
-      "evidence": "fabrication/a0_packet/drawings/A0-D004-cartridge-interface.svg"
+      "evidence": "fabrication/a0_packet/drawings/A0-D004-R1-cartridge-interfaces.svg"
     },
     "elbow_insertion": {
-      "value": 45,
+      "value": 47,
       "units": "mm",
       "tolerance_mm": 0.25,
-      "evidence": "fabrication/a0_packet/drawings/A0-D003-dummy-member.svg"
+      "evidence": "fabrication/a0_packet/drawings/A0-D003-R1-dummy-member.svg"
     }
   }
 }

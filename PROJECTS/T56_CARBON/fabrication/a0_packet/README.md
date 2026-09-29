@@ -24,10 +24,10 @@ retention, not the primary retainer. A removable low-speed actuator may use the
 17 mm shaft and 5 x 5 mm keyed drive interface. Its selection is outside the A0 fabricated load
 path and must not alter the stops or passive retention.
 
-R1 separates the pitch shaft from the dummy-tube socket: the tube begins 10 mm
+R1 separates the pitch shaft from the dummy-tube socket: the tube begins 12 mm
 outboard of S and seats 40 mm outboard, leaving nominal clearance to the 17 mm
-shaft. The resolver therefore uses a 40 mm shoulder offset, 30 mm shoulder
-insertion, 25 mm distal offset and 45 mm distal insertion. The 317 mm S-to-E
+shaft. The resolver therefore uses a 40 mm shoulder offset, 28 mm shoulder
+insertion, 25 mm distal offset and 47 mm distal insertion. The 317 mm S-to-E
 station and 327 mm stock length remain unchanged and project-local.
 
 ## Drawing register
@@ -74,3 +74,8 @@ Closed-form calculation sheets and numeric acceptance criteria are in
 `analysis/`; controlled build, inspection and bench-test steps plus deliberately
 blank record templates are in `procedures/`. The checked-in records do not claim
 that any physical test has run.
+
+`analysis/A0_R1_VALIDATION.md` records the focused test, STEP, deterministic
+export and canon-regression results together with the broader-suite dependency
+errors. `INDEPENDENT_REVIEW_CHECKLIST.md` is the controlled handoff for the next
+reviewer; it does not authorize fabrication.

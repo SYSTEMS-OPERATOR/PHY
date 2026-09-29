@@ -124,6 +124,9 @@ def build_parts(design=None):
     stop = cq.Workplane("XY").box(*c["stop_pad_size_xyz"])
     bracket = cq.Workplane("XY").box(*c["stop_bracket_size_xyz"])
     plunger = cq.Workplane("XZ").circle(c["plunger_envelope_body_pin_length"][0] / 2).extrude(c["plunger_envelope_body_pin_length"][2] / 2, both=True)
+    pivot_bolt = cq.Workplane("XY").circle(5).extrude(10, both=True)
+    bearing_cap = cq.Workplane("XZ").circle(22.5).circle(17.5).extrude(1.5, both=True)
+    tether = cq.Workplane("YZ").circle(3).extrude(60)
     return {
         "A0-101_fixture_base": base, "A0-102_rocker": rocker, "A0-103_carriage": carriage,
         "A0-104_yoke_side": yoke, "A0-105_output_hub": hub, "A0-106_index_sector": sector,
@@ -131,6 +134,8 @@ def build_parts(design=None):
         "A0-110_stop_bracket": bracket, "A0-201_pitch_shaft": shaft, "A0-202_key": key,
         "A0-203_end_retainer": retainer, "A0-301_bearing_envelope": bearing,
         "A0-304_plunger_envelope": plunger, "A0-309_friction_stack_envelope": friction,
+        "A0-302_pivot_bolt_envelope": pivot_bolt, "A0-307_tether_envelope": tether,
+        "A0-310_bearing_cap": bearing_cap,
     }
 
 
@@ -151,9 +156,13 @@ def located_instances(parts, design=None):
     add("rocker_PB", "A0-102_rocker", parts["A0-102_rocker"].translate(mid(p, b)))
     add("rocker_AC", "A0-102_rocker", parts["A0-102_rocker"].translate(mid(a, cc)))
     add("carriage", "A0-103_carriage", parts["A0-103_carriage"].translate(mid(b, cc)))
+    for name, point in (("P", p), ("A", a), ("B", b), ("C", cc)):
+        add(f"pivot_bolt_{name}", "A0-302_pivot_bolt_envelope", parts["A0-302_pivot_bolt_envelope"].translate(point))
     for index, ypos in enumerate(c["yoke_plate_center_y"]):
         add(f"yoke_{index+1}", "A0-104_yoke_side", parts["A0-104_yoke_side"].translate((s[0], ypos, s[2])))
         add(f"bearing_{index+1}", "A0-301_bearing_envelope", parts["A0-301_bearing_envelope"].translate((s[0], ypos, s[2])))
+    for index, ypos in enumerate((-46.5, 26.5)):
+        add(f"bearing_cap_{index+1}", "A0-310_bearing_cap", parts["A0-310_bearing_cap"].translate((s[0], ypos, s[2])))
     add("hub", "A0-105_output_hub", parts["A0-105_output_hub"].translate(s))
     add("shaft", "A0-201_pitch_shaft", parts["A0-201_pitch_shaft"].translate(s))
     add("key", "A0-202_key", parts["A0-202_key"].translate((s[0], s[1], s[2] + c["shaft_diameter"] / 2 + 1.25)))
@@ -169,6 +178,12 @@ def located_instances(parts, design=None):
         add(f"pitch_stop_pad_{index+1}", "A0-107_stop_pad", parts["A0-107_stop_pad"].translate((s[0] + 35, s[1], s[2] + zoff)))
         add(f"pitch_stop_bracket_{index+1}", "A0-110_stop_bracket", parts["A0-110_stop_bracket"].translate((s[0] + 52, s[1], s[2] + zoff)))
     add("index_plunger", "A0-304_plunger_envelope", parts["A0-304_plunger_envelope"].translate((s[0] + 35, c["sector_center_y"], s[2])))
+    for index, ypos in enumerate((-72, 52)):
+        add(f"scapular_stop_pad_{index+1}", "A0-107_stop_pad", parts["A0-107_stop_pad"].translate((-185, ypos, 35)))
+        add(f"scapular_stop_bracket_{index+1}", "A0-110_stop_bracket", parts["A0-110_stop_bracket"].translate((-168, ypos, 35)))
+    add("scapular_index_plunger", "A0-304_plunger_envelope", parts["A0-304_plunger_envelope"].translate((-185, 40, 35)))
+    tether_start = c["tether_endpoints_neutral"][0]
+    add("secondary_tether", "A0-307_tether_envelope", parts["A0-307_tether_envelope"].rotate((0, 0, 0), (0, 0, 1), 180).translate(tether_start))
     return inst
 
 
@@ -227,9 +242,9 @@ def drawings(design):
     return {
         "A0-D001-R1-fixture-datum.svg": svg_sheet("A0-D001-R1", "FIXTURE DATUM AND ROOT INTERFACE", common + [("BASE", "A36 300 x 240 x 8; bounds X -280..20, Y +/-120, Z -8..0"), ("DATUM", "Ø6 H7 tooling axis at (0,0), plate top Z=0"), ("BENCH HOLES", "Ø11 at (-250,+/-90), (-10,+/-90)"), ("ROOT AXES", "P=(-130,-60,35), A=(-130,40,35), position +/-0.25"), ("STANDOFFS", "2 x 25 x 25 x 32; root axis Z=35"), ("ISOLATION", "0.5 PET + zinc-rich primer at Al/A36 contacts")]),
         "A0-D002-R1-mechanism-assembly.svg": svg_sheet("A0-D002-R1", "FOUR-BAR AND PITCH ASSEMBLY", common + [("FOUR-BAR", f"rockers {q['rocker_centers']} centers; coupler {q['carriage_pivot_centers']} centers; +/-10 deg"), ("OUTPUT S", "(-205,-10,70) neutral; sampled trajectory in motion_clearance_report.json"), ("PITCH", "axis +Y; command -30..+90; independent stops -32/+92"), ("YOKES", "2 x 70 x 70 x 8 at Y=-40,+20; 6003 seats Ø35 H7"), ("PASSIVE", ">=7 N m dry friction + 8 mm index at 15 deg"), ("SECONDARY", ">=1 kN tether; endpoints provisional pending fitting selection")]),
-        "A0-D003-R1-dummy-member.svg": svg_sheet("A0-D003-R1", "DUMMY MEMBER AND STATION STACK", common + [("SECTION", "6061-T6 tube 25.4 square x 3.175 wall"), ("CUT", "327 +/-0.5; cut_S=(-215,-10,70), cut_E=(-542,-10,70)"), ("STATIONS", "S=(-205,-10,70), E=(-522,-10,70), effective 317 +/-1.0"), ("SEATS", "shoulder offset 40/insertion 30; elbow offset 25/insertion 45"), ("CENTERLINE", "project-local mechanics only; not anatomical canon")]),
+        "A0-D003-R1-dummy-member.svg": svg_sheet("A0-D003-R1", "DUMMY MEMBER AND STATION STACK", common + [("SECTION", "6061-T6 tube 25.4 square x 3.175 wall"), ("CUT", "327 +/-0.5; cut_S=(-217,-10,70), cut_E=(-544,-10,70)"), ("STATIONS", "S=(-205,-10,70), E=(-522,-10,70), effective 317 +/-1.0"), ("SEATS", "shoulder offset 40/insertion 28; elbow offset 25/insertion 47"), ("CENTERLINE", "project-local mechanics only; not anatomical canon")]),
         "A0-D004-R1-cartridge-interfaces.svg": svg_sheet("A0-D004-R1", "PITCH CARTRIDGE INTERFACES", common + [("SHAFT", f"4140 Ø17 h6 x {c['shaft_length']}; keyed 5 x 5 x 30; captured ends"), ("BEARINGS", "2 x 6003-2RS, 17 x 35 x 10; yoke bores Ø35 H7"), ("HUB", "offset split clamp; socket 25.50 +0.15/-0.00; seat X=-40 from S"), ("PINCH", "2 x M6-10.9 at X=-20,-32 from S; provisional 12 N m"), ("SECTOR", "Ø90 x 6, keyed Ø17 interface, Ø8.2 holes each 15 deg"), ("SUPPLIER HOLD", "bearing reliefs, plunger thread/nose and friction stack correlation open")]),
-        "A0-D005-R1-assembly-register.svg": svg_sheet("A0-D005-R1", "LOCATED ASSEMBLY AND QUANTITY REGISTER", common + [("ASSEMBLY", "assembly/A0-R1-neutral-assembly.step and assembly_instances.json"), ("PRIMARY", "base 1; standoffs 2; rockers 2; carriage 1; yokes 2; hub 1; member 1"), ("CARTRIDGE", "shaft 1; key 1; bearings 2; sector 1; friction stack 1; end retainers 2"), ("SAFETY", "stop pads/brackets shown as provisional contact envelopes"), ("CONTACT", "intentional-contact classes declared in mechanism JSON"), ("LIMIT", "located neutral model is review geometry, not proof of tolerance or capacity")]),
+        "A0-D005-R1-assembly-register.svg": svg_sheet("A0-D005-R1", "LOCATED ASSEMBLY AND QUANTITY REGISTER", common + [("ASSEMBLY", "assembly/A0-R1-neutral-assembly.step and assembly_instances.json"), ("PRIMARY", "base 1; standoffs 2; rockers 2; carriage 1; yokes 2; hub 1; member 1"), ("CARTRIDGE", "shaft 1; key 1; bearings/caps 2 each; sector 1; friction stack 1; retainers 2"), ("SAFETY", "pivot bolts 4; stop pads/brackets 4 each; plungers 2; tether 1"), ("CONTACT", "intentional-contact classes declared in mechanism JSON"), ("LIMIT", "located neutral model is review geometry, not proof of tolerance or capacity")]),
         "A0-D006-R1-exploded-order.svg": svg_sheet("A0-D006-R1", "EXPLODED ORDER AND HOLD POINTS", common + [("1", "base -> isolation -> root standoffs -> four-bar -> carriage"), ("2", "yoke plates -> bearing seats/caps -> shaft/key -> hub"), ("3", "sector -> friction stack -> end retainers -> plunger -> hard stops"), ("4", "dummy member to 30 mm shoulder insertion mark -> tether -> guards"), ("HOLD", "supplier dimensions before mating features; independent load-path review before stock"), ("EVIDENCE", "inspection and bench records remain deliberately blank")]),
     }
 
@@ -261,7 +276,11 @@ def export(output):
     cq.exporters.export(compound, str(assembly_step)); normalize_step(assembly_step)
     if not cq.importers.importStep(str(assembly_step)).val().isValid():
         raise ValueError("assembly STEP round trip failed")
-    instance_rows = [{"instance_id": iid, "part_id": pid, "valid": shape.val().isValid()} for iid, pid, shape in instances]
+    instance_rows = []
+    for iid, pid, shape in instances:
+        box = shape.val().BoundingBox()
+        instance_rows.append({"instance_id": iid, "part_id": pid, "valid": shape.val().isValid(),
+                              "bounds_mm": {"min": [box.xmin, box.ymin, box.zmin], "max": [box.xmax, box.ymax, box.zmax]}})
     (assembly_dir / "assembly_instances.json").write_text(json.dumps({"frame_id": design["frame_id"], "pose_id": design["pose_id"], "instances": instance_rows}, indent=2) + "\n", encoding="utf-8")
     motion = motion_report(design)
     (assembly_dir / "motion_clearance_report.json").write_text(json.dumps(motion, indent=2) + "\n", encoding="utf-8")

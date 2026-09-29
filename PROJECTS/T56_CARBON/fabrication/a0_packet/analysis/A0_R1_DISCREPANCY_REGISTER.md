@@ -1,6 +1,6 @@
 # T56 A0-R1 discrepancy register
 
-Status: **AUDIT COMPLETE — CORRECTIONS PLANNED — NOT FABRICATION RELEASED**
+Status: **R1 CORRECTIONS MODELED — REVIEW BLOCKERS OPEN — NOT FABRICATION RELEASED**
 
 Scope is limited to the left thoracic-root-to-dummy-humerus A0 bench article.
 No item below changes SOPHY canon 1.0.0 or makes an anatomical claim.
@@ -10,7 +10,7 @@ No item below changes SOPHY canon 1.0.0 or makes an anatomical claim.
 | R1-001 | critical | `build_parts()` extrudes the yoke `8 mm` with `both=True`, producing a nominal 16 mm part; the BOM and mechanism decision specify 8 mm. The checked manifest reports 16.01 mm. | Generate one 8 mm side plate and instantiate two plates in the assembly. | Part bound is 8 mm; assembly contains two correctly spaced instances. |
 | R1-002 | critical | The index sector is extruded `6 mm` with `both=True`, producing 12 mm; the BOM and mechanism decision specify 6 mm. The checked manifest reports 12.03 mm. | Generate a 6 mm sector. | Part bound is 6 mm and drawing/BOM agree. |
 | R1-003 | critical | The sector center opening is modeled Ø12 while the controlled shaft is Ø17 h6. | Change the sector to a keyed Ø17 shaft interface; keep vendor-dependent plunger details open. | Nominal shaft passes the bore and key engagement is represented. |
-| R1-004 | critical | The output hub contains a Ø17 shaft opening and 25.5 mm tube socket whose volumes intersect; the model has no controlled tube insertion stop. | Separate the shaft hub from a coaxial tube clamp with a 30 mm insertion shoulder; document the load path. | No unintended void intersection; insertion depth and S/E closure are tested. |
+| R1-004 | critical | The output hub contains a Ø17 shaft opening and 25.5 mm tube socket whose volumes intersect; the model has no controlled tube insertion stop. | Separate the shaft hub from an offset tube clamp with a 28 mm shoulder insertion and documented load path. | No unintended void intersection; insertion depth and S/E closure are tested. |
 | R1-005 | major | README calls the removable actuator interface “8 mm keyed,” but the mechanism decision and BOM control a 17 mm shaft with a 5 × 5 mm key. | Correct all packet prose and drawings to the 17 mm keyed shaft. | Text scan finds no obsolete 8 mm drive-interface claim. |
 | R1-006 | critical | CAD omits the 5 × 5 keyway/key, M6 hub pinch holes, shaft end capture, bearing axial retention and friction-stack interfaces described by BOM/procedure. | Add simplified but dimensioned interface geometry and purchased-component envelopes. | Feature and assembly-instance tests; reviewer drawing callouts. |
 | R1-007 | critical | Root pivots are holes through the 8 mm base while P/A are specified 35 mm above its top; no standoffs realize that datum. | Add two root standoffs that locate the pivot axes at Z=35 mm. | Located pivot axes match P/A within numerical tolerance. |
@@ -35,3 +35,12 @@ No item below changes SOPHY canon 1.0.0 or makes an anatomical claim.
 The audit confirms internal inconsistencies; it does not validate the proposed
 corrections, supplier hardware, manufacturing process, structural safety or
 physical performance. Those claims remain blocked by review and measurement.
+
+## R1 disposition
+
+R1-001 through R1-008 and R1-010 through R1-011 are corrected in the generated
+geometry and covered by focused regression tests. R1-009 has review-level stop,
+plunger and tether geometry, but supplier-specific contact details remain open.
+R1-012 now includes combined shaft/key, bearing, yoke, root/bench-fastener,
+stop-fastener and pin screens. It exposed a bearing static-screen shortfall and
+an unverified stop-compliance assumption; both remain release blockers.

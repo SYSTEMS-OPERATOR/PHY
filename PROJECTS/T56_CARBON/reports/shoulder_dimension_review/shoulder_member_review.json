@@ -15,9 +15,9 @@
   "fabrication_ready": false,
   "formula": "stock_cut_length = |E-S| - oS - oE + iS + iE",
   "frame_id": "FRAME_T56_THORAX",
-  "input_sha256": "179933e01fd77e0a3d55281d282f9c2bf4431e09bbaf02ffa5d76495d0e3809b",
+  "input_sha256": "97480b3cc50ca006fe46062bd6ae1602ef58da589b981e7dff0c505275bc7a64",
   "inputs": {
-    "datum_drawing": "fabrication/a0_packet/drawings/A0-D001-fixture-datum.svg",
+    "datum_drawing": "fabrication/a0_packet/drawings/A0-D001-R1-fixture-datum.svg",
     "frame_id": "FRAME_T56_THORAX",
     "model": "straight_collinear_dummy_member_v1",
     "pose_id": "A0_NEUTRAL_LOCKED",
@@ -33,31 +33,31 @@
         ]
       },
       "elbow_insertion": {
-        "evidence": "fabrication/a0_packet/drawings/A0-D003-dummy-member.svg",
+        "evidence": "fabrication/a0_packet/drawings/A0-D003-R1-dummy-member.svg",
         "tolerance_mm": 0.25,
         "units": "mm",
-        "value": 45
+        "value": 47
       },
       "elbow_offset": {
-        "evidence": "fabrication/a0_packet/drawings/A0-D003-dummy-member.svg",
+        "evidence": "fabrication/a0_packet/drawings/A0-D003-R1-dummy-member.svg",
         "tolerance_mm": 0.25,
         "units": "mm",
         "value": 25
       },
       "shoulder_insertion": {
-        "evidence": "fabrication/a0_packet/drawings/A0-D004-cartridge-interface.svg",
+        "evidence": "fabrication/a0_packet/drawings/A0-D004-R1-cartridge-interfaces.svg",
         "tolerance_mm": 0.25,
         "units": "mm",
-        "value": 30
+        "value": 28
       },
       "shoulder_offset": {
-        "evidence": "fabrication/a0_packet/drawings/A0-D003-dummy-member.svg",
+        "evidence": "fabrication/a0_packet/drawings/A0-D003-R1-dummy-member.svg",
         "tolerance_mm": 0.25,
         "units": "mm",
         "value": 40
       },
       "shoulder_output": {
-        "evidence": "requirements/a0_shoulder_mechanism.json; A0-D001-R0 and A0-D002-R0",
+        "evidence": "requirements/a0_shoulder_mechanism.json; A0-D001-R1 and A0-D002-R1",
         "tolerance_mm": 0.5,
         "units": "mm",
         "value": [
@@ -80,12 +80,12 @@
       70
     ],
     "cut_E": [
-      -542.0,
+      -544.0,
       -10.0,
       70.0
     ],
     "cut_S": [
-      -215.0,
+      -217.0,
       -10.0,
       70.0
     ],

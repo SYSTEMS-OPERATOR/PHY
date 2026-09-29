@@ -26,7 +26,7 @@ motion, permanent set, datum shift or instrumentation fault.
 ## 2. Fabrication
 
 1. Confirm `manifest.json` source hash matches the reviewed mechanism JSON and
-   confirm the reviewed neutral assembly has 23 modeled instances.
+   confirm the reviewed neutral assembly has 35 modeled instances.
 2. Cut A0-101 through A0-110 and A0-201 through A0-203 from the BOM materials. Do not machine
    bearing bores or the index-plunger thread until the delivered parts are
    measured and the mating dimensions are confirmed.
@@ -75,10 +75,11 @@ Use calibrated instruments and the supplied inspection template. At minimum:
 5. Install the 6 mm steel tether with rated thimbles/swages. At every commanded
    pose it must remain slack during normal retention and prevent detached-member
    travel from reaching the guard.
-6. Install the 327 mm dummy member to the 30 mm shoulder insertion mark. Verify the
+6. Install the 327 mm dummy member to the 28 mm shoulder insertion mark. Verify the
    nominal S-to-E station is `317 mm` and output position is within the stated
-   stack; the distal insertion is 45 mm and the shoulder/distal offsets are
-   40/25 mm. Confirm nominal tube-to-shaft clearance before tightening the hub.
+   stack; the shoulder/distal offsets are 40/25 mm and the distal insertion is
+   47 mm. Confirm the nominal 3.5 mm
+   tube-to-shaft ligament before tightening the hub.
    Fit full guarding before applying power or proof load.
 
 ## 5. Bench tests

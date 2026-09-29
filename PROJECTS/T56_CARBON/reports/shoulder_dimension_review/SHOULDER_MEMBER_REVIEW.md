@@ -4,7 +4,7 @@ Status: **dimensional_review_only**
 
 Fabrication ready: **false**. Canon adoption: **false**.
 
-Input SHA-256: `179933e01fd77e0a3d55281d282f9c2bf4431e09bbaf02ffa5d76495d0e3809b`
+Input SHA-256: `97480b3cc50ca006fe46062bd6ae1602ef58da589b981e7dff0c505275bc7a64`
 
 | Dimension | Nominal mm | Worst-case ± mm |
 | --- | ---: | ---: |

@@ -98,7 +98,7 @@
     "dummy_member": "ASTM B221 6061-T6 square tube, 25.4 x 25.4 x 3.175 mm",
     "pivot_shaft": "AISI 4140 prehardened steel, 17 mm ground shaft with 5 x 5 mm parallel key",
     "fasteners": "ISO 898-1 class 10.9 zinc-plated steel unless otherwise noted",
-    "wear_pads": "acetal, 3 mm replaceable pads",
+    "wear_pads": "acetal, 10 mm replaceable hard-stop pads; usable compression remains supplier/coupon verification",
     "isolation": "0.5 mm PET barrier and zinc-rich primer between aluminum and A36 steel; seal exposed edges"
   },
   "fits": [
@@ -187,7 +187,7 @@
       "hub_size_xyz": [85, 40, 55],
       "hub_center_x_from_S": -22.5,
       "tube_socket_across_flats": 25.5,
-      "tube_socket_start_x_from_S": -10,
+      "tube_socket_start_x_from_S": -12,
       "tube_socket_seat_x_from_S": -40,
       "hub_pinch_bolt_diameter": 6.6,
       "hub_pinch_bolt_x_from_S": [-20, -32],
@@ -210,9 +210,9 @@
       "outer": 25.4,
       "wall": 3.175,
       "cut_length": 327,
-      "cut_start_x_from_S": -10,
+      "cut_start_x_from_S": -12,
       "shoulder_seat_x_from_S": -40,
-      "distal_end_x_from_S": -337
+      "distal_end_x_from_S": -339
     },
     "assembly": {
       "intentional_contact_classes": [

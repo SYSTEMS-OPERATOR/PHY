@@ -7,7 +7,7 @@
   "canon_effect": "none",
   "units": "mm",
   "source": "PROJECTS/T56_CARBON/requirements/a0_shoulder_mechanism.json",
-  "source_sha256": "6086393de64add639a173038566b3d837580bfccfd1b4867add6fa48068e0ed5",
+  "source_sha256": "969c1eeb5cba60b2dc5ab60a2e555fa33e3f57cf06e7548b18a23e9c9c2d4fb6",
   "parts": [
     {
       "part": "A0-101_fixture_base",
@@ -59,10 +59,10 @@
       "step_round_trip": "pass",
       "bounds_mm": [
         85.00000020000004,
-        40.01177689043073,
+        40.00528658637481,
         55.002044182346424
       ],
-      "volume_mm3": 154662.3949466821
+      "volume_mm3": 156003.0953840658
     },
     {
       "part": "A0-106_index_sector",
@@ -184,10 +184,43 @@
         45.00000020000002
       ],
       "volume_mm3": 12271.060904921731
+    },
+    {
+      "part": "A0-302_pivot_bolt_envelope",
+      "valid_solid": true,
+      "step_round_trip": "pass",
+      "bounds_mm": [
+        10.00310837999184,
+        10.000000200000002,
+        20.00310837999184
+      ],
+      "volume_mm3": 1570.7963267948965
+    },
+    {
+      "part": "A0-307_tether_envelope",
+      "valid_solid": true,
+      "step_round_trip": "pass",
+      "bounds_mm": [
+        60.0018651079951,
+        6.001865107995103,
+        6.0000002000000014
+      ],
+      "volume_mm3": 1696.4600329384882
+    },
+    {
+      "part": "A0-310_bearing_cap",
+      "valid_solid": true,
+      "step_round_trip": "pass",
+      "bounds_mm": [
+        45.01398700996328,
+        3.0139870099632766,
+        45.00000020000002
+      ],
+      "volume_mm3": 1884.9555921538756
     }
   ],
   "assembly_step": "assembly/A0-R1-neutral-assembly.step",
-  "assembly_instance_count": 23,
+  "assembly_instance_count": 35,
   "motion_clearance": {
     "method": "discrete centerline samples against registered AABBs",
     "continuous_clearance_proof": false,

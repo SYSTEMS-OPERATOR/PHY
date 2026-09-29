@@ -8,14 +8,14 @@
   "canon_adopted": false,
   "dimensions_mm": {
     "effective_length": 317.0,
-    "seat_gap": 267.0,
+    "seat_gap": 252.0,
     "stock_cut_length": 327.0
   },
   "errors": [],
   "fabrication_ready": false,
   "formula": "stock_cut_length = |E-S| - oS - oE + iS + iE",
   "frame_id": "FRAME_T56_THORAX",
-  "input_sha256": "1f7f09f2397f2bb2b46401f31df1fa97dd439a09b7111ab82f424dd307e97cc6",
+  "input_sha256": "179933e01fd77e0a3d55281d282f9c2bf4431e09bbaf02ffa5d76495d0e3809b",
   "inputs": {
     "datum_drawing": "fabrication/a0_packet/drawings/A0-D001-fixture-datum.svg",
     "frame_id": "FRAME_T56_THORAX",
@@ -36,7 +36,7 @@
         "evidence": "fabrication/a0_packet/drawings/A0-D003-dummy-member.svg",
         "tolerance_mm": 0.25,
         "units": "mm",
-        "value": 30
+        "value": 45
       },
       "elbow_offset": {
         "evidence": "fabrication/a0_packet/drawings/A0-D003-dummy-member.svg",
@@ -54,7 +54,7 @@
         "evidence": "fabrication/a0_packet/drawings/A0-D003-dummy-member.svg",
         "tolerance_mm": 0.25,
         "units": "mm",
-        "value": 25
+        "value": 40
       },
       "shoulder_output": {
         "evidence": "requirements/a0_shoulder_mechanism.json; A0-D001-R0 and A0-D002-R0",
@@ -80,12 +80,12 @@
       70
     ],
     "cut_E": [
-      -527.0,
+      -542.0,
       -10.0,
       70.0
     ],
     "cut_S": [
-      -200.0,
+      -215.0,
       -10.0,
       70.0
     ],
@@ -95,7 +95,7 @@
       70.0
     ],
     "seat_S": [
-      -230.0,
+      -245.0,
       -10.0,
       70.0
     ]

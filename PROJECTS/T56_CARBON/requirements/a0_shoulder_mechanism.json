@@ -64,7 +64,7 @@
     "straightness_mm_per_300_mm": 0.75
   },
   "datum_fixture": {
-    "revision": "A0-D001-R0",
+    "revision": "A0-D001-R1",
     "origin": "scribed cross and 6 mm H7 tooling hole at upper surface of base plate; coordinates refer to the tooling-hole axis at plate Z=0",
     "handedness": "right_handed",
     "base_plate": {
@@ -155,6 +155,85 @@
       "max_mm": [-90, 130, 180]
     },
     "authority_note": "fixture guarding and tool-access design volumes only; not anatomical or outer-form measurements"
+  },
+  "fabrication_geometry": {
+    "revision": "A0-R1",
+    "authority": "project-local dimensions controlling A0-R1 CAD, drawings, BOM and closed-form section inputs",
+    "units": "mm",
+    "root_axis_height": 35,
+    "fixture": {
+      "base_size_xyz": [300, 240, 8],
+      "tooling_hole_diameter": 6,
+      "bench_hole_diameter": 11,
+      "root_hole_diameter": 10.5,
+      "standoff_size_xyz": [25, 25, 32]
+    },
+    "four_bar": {
+      "rocker_size_xyz": [70, 25, 6],
+      "rocker_centers": 55,
+      "carriage_size_xyz": [70, 120, 8],
+      "carriage_pivot_centers": 100,
+      "pivot_bore_diameter": 10.2
+    },
+    "cartridge": {
+      "yoke_plate_size_xzy": [70, 70, 8],
+      "yoke_plate_center_y": [-40, 20],
+      "bearing_type": "6003-2RS",
+      "bearing_id_od_width": [17, 35, 10],
+      "bearing_housing_diameter": 35,
+      "shaft_diameter": 17,
+      "shaft_length": 104,
+      "shaft_key_width_height_length": [5, 5, 30],
+      "hub_size_xyz": [85, 40, 55],
+      "hub_center_x_from_S": -22.5,
+      "tube_socket_across_flats": 25.5,
+      "tube_socket_start_x_from_S": -10,
+      "tube_socket_seat_x_from_S": -40,
+      "hub_pinch_bolt_diameter": 6.6,
+      "hub_pinch_bolt_x_from_S": [-20, -32],
+      "sector_od": 90,
+      "sector_thickness": 6,
+      "sector_bore_diameter": 17,
+      "sector_center_y": 34,
+      "index_hole_diameter": 8.2,
+      "index_hole_radius": 35,
+      "index_increment_deg": 15,
+      "friction_stack_envelope_od_width": [45, 9],
+      "friction_stack_center_y": -50.5,
+      "end_retainer_od_width": [26, 4],
+      "stop_pad_size_xyz": [20, 15, 10],
+      "stop_bracket_size_xyz": [28, 20, 8],
+      "plunger_envelope_body_pin_length": [16, 8, 45],
+      "tether_endpoints_neutral": [[-185, -10, 70], [-245, -10, 70]]
+    },
+    "dummy_member": {
+      "outer": 25.4,
+      "wall": 3.175,
+      "cut_length": 327,
+      "cut_start_x_from_S": -10,
+      "shoulder_seat_x_from_S": -40,
+      "distal_end_x_from_S": -337
+    },
+    "assembly": {
+      "intentional_contact_classes": [
+        "pivot shoulder and link bore",
+        "shaft and bearing inner rings",
+        "bearing outer rings and yoke seats",
+        "shaft key and keyed hub/sector",
+        "dummy tube and split-clamp socket",
+        "stop pad and stop bracket only at declared hard stops"
+      ],
+      "sampled_scapular_angles_deg": [-10, -5, 0, 5, 10],
+      "sampled_pitch_angles_deg": [-32, -30, 0, 30, 60, 90, 92],
+      "continuous_clearance_proof": false
+    },
+    "supplier_dependent_open_items": [
+      "bearing corner radii and shoulder relief",
+      "index plunger body thread, nose length and engagement geometry",
+      "friction washer material and torque/preload correlation",
+      "tether end-fitting envelope and certified rating",
+      "bench interface capacity"
+    ]
   },
   "release_boundary": {
     "shop_reviewable": true,

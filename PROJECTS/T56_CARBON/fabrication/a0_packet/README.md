@@ -1,6 +1,6 @@
-# T56 A0 single-side shoulder fabrication packet
+# T56 A0-R1 single-side shoulder fabrication packet
 
-Status: **SHOP REVIEW CANDIDATE — NOT FABRICATION RELEASED**
+Status: **INDEPENDENT SHOP REVIEW CANDIDATE — NOT FABRICATION RELEASED**
 
 This packet covers only the left-side thoracic-root-to-dummy-humerus bench
 article. It implements the scope frozen in `../../requirements/A0_SCOPE.md` and
@@ -10,7 +10,7 @@ body, revise SOPHY canon 1.0.0, or claim physical qualification.
 
 ## Selected mechanism
 
-The scapular stage is a 55 mm planar parallel four-bar with 100 mm root and
+The scapular stage remains a 55 mm planar parallel four-bar with 100 mm root and
 coupler spacing and ±10 degree physical stops. The moving carriage remains
 parallel to the fixture. The cartridge is one pitch axis through the neutral
 point `S=(-205,-10,70) mm`, with a commanded range of -30 to +90 degrees and
@@ -21,22 +21,33 @@ spring-biased neutral index. The pitch stage uses a Belleville-preloaded dry
 friction stack set to at least 7 N·m plus an 8 mm spring-biased sector plunger
 at 15 degree intervals; a 6 mm, at-least-1 kN steel tether is secondary
 retention, not the primary retainer. A removable low-speed actuator may use the
-8 mm keyed drive interface. Its selection is outside the A0 fabricated load
+17 mm shaft and 5 x 5 mm keyed drive interface. Its selection is outside the A0 fabricated load
 path and must not alter the stops or passive retention.
+
+R1 separates the pitch shaft from the dummy-tube socket: the tube begins 10 mm
+outboard of S and seats 40 mm outboard, leaving nominal clearance to the 17 mm
+shaft. The resolver therefore uses a 40 mm shoulder offset, 30 mm shoulder
+insertion, 25 mm distal offset and 45 mm distal insertion. The 317 mm S-to-E
+station and 327 mm stock length remain unchanged and project-local.
 
 ## Drawing register
 
 | Drawing | Title | Controlling content |
 | --- | --- | --- |
-| A0-D001-R0 | Fixture datum and root interface | frame realization, base plate, mounting pattern, roots P/A |
-| A0-D002-R0 | Four-bar and pitch cartridge | pivot pattern, center S, ranges, stops and retention |
-| A0-D003-R0 | Dummy humeral member | 327 mm tube cut, section, S/E reference stack |
-| A0-D004-R0 | Cartridge interfaces | shaft/bearing fits, hub socket, index sector |
+| A0-D001-R1 | Fixture datum and root interface | frame realization, base plate, standoffs, mounting pattern, roots P/A |
+| A0-D002-R1 | Four-bar and pitch assembly | pivot pattern, center S, ranges, stops and retention |
+| A0-D003-R1 | Dummy humeral member | 327 mm tube cut, section and revised S/E seat stack |
+| A0-D004-R1 | Cartridge interfaces | shaft/bearing fits, offset hub socket, keyed sector |
+| A0-D005-R1 | Located assembly register | modeled quantities and intentional-contact boundary |
+| A0-D006-R1 | Exploded order and holds | build sequence and unresolved procurement gates |
 
-SVGs are review drawings and must be read at their stated dimensions; do not
+SVGs are dimension registers for review and must be read at their stated dimensions; do not
 scale the graphic. STEP files are neutral part solids. STL files are visual
-review meshes, not machining authority. `manifest.json` records solid and STEP
-round-trip checks. `BOM.csv` uses packet item IDs and vendor-neutral procurement
+review meshes, not machining authority. The neutral located assembly is
+`assembly/A0-R1-neutral-assembly.step`; its instance register and the discrete
+motion/clearance report sit beside it. The motion report is explicitly not a
+continuous swept-solid proof. `manifest.json` records solid and STEP round-trip
+checks. `BOM.csv` uses packet item IDs and vendor-neutral procurement
 specifications; the shop must record supplier lots and confirm actual bearing
 and plunger dimensions before machining mating features.
 
@@ -47,6 +58,11 @@ process-capability confirmation, procurement cross-check, and disposition of
 every substitution. As-built inspection, proof, cycling, impact and acoustic
 records remain open even after analytical validation. No unmeasured property is
 represented as evidence in this packet.
+
+The R1 discrepancy register documents the A0-R0 defects and their regression
+checks. Bearing shoulders/caps, index-plunger thread and nose, friction-stack
+preload correlation, tether fittings and the external bench remain
+supplier-dependent release blockers.
 
 Regenerate the packet from the repository root with:
 

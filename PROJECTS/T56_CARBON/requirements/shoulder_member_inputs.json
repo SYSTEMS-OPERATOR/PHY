@@ -17,7 +17,7 @@
       "evidence": "requirements/a0_shoulder_mechanism.json; project-local 317 mm A0 load station, not a canon landmark"
     },
     "shoulder_offset": {
-      "value": 25,
+      "value": 40,
       "units": "mm",
       "tolerance_mm": 0.25,
       "evidence": "fabrication/a0_packet/drawings/A0-D003-dummy-member.svg"
@@ -35,7 +35,7 @@
       "evidence": "fabrication/a0_packet/drawings/A0-D004-cartridge-interface.svg"
     },
     "elbow_insertion": {
-      "value": 30,
+      "value": 45,
       "units": "mm",
       "tolerance_mm": 0.25,
       "evidence": "fabrication/a0_packet/drawings/A0-D003-dummy-member.svg"

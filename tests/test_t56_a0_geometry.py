@@ -42,7 +42,7 @@ class T56A0GeometryTest(unittest.TestCase):
         result = review(inputs)
         self.assertEqual(result["status"], "dimensional_review_only")
         self.assertEqual(result["dimensions_mm"], {
-            "effective_length": 317, "seat_gap": 267, "stock_cut_length": 327,
+            "effective_length": 317, "seat_gap": 252, "stock_cut_length": 327,
         })
         self.assertEqual(result["worst_case_bounds_mm"], {
             "effective_length": 1.0, "seat_gap": 1.5, "stock_cut_length": 2.0,
@@ -84,6 +84,59 @@ class T56A0GeometryTest(unittest.TestCase):
                 self.assertTrue(shape.isValid())
                 self.assertEqual(len(shape.Solids()), 1)
                 self.assertGreater(shape.Volume(), 0)
+
+    @unittest.skipUnless(importlib.util.find_spec("cadquery"), "optional CadQuery unavailable")
+    def test_r1_stock_thicknesses_and_key_are_not_doubled(self):
+        parts = exporter.build_parts()
+        yoke = parts["A0-104_yoke_side"].val().BoundingBox()
+        sector = parts["A0-106_index_sector"].val().BoundingBox()
+        key = parts["A0-202_key"].val().BoundingBox()
+        self.assertAlmostEqual(yoke.ylen, 8.0)
+        self.assertAlmostEqual(sector.ylen, 6.0)
+        self.assertEqual(sorted(round(v, 6) for v in (key.xlen, key.ylen, key.zlen)), [5.0, 5.0, 30.0])
+
+    @unittest.skipUnless(importlib.util.find_spec("cadquery"), "optional CadQuery unavailable")
+    def test_neutral_member_closes_stack_without_crossing_shaft(self):
+        design = self.load(DESIGN)
+        parts = exporter.build_parts(design)
+        instances = {iid: shape.val().BoundingBox() for iid, _, shape in exporter.located_instances(parts, design)}
+        member, shaft = instances["dummy_member"], instances["shaft"]
+        self.assertAlmostEqual(member.xmax, -215.0)
+        self.assertAlmostEqual(member.xmin, -542.0)
+        self.assertAlmostEqual(shaft.xmin, -213.5)
+        self.assertGreater(shaft.xmin - member.xmax, 1.0)
+        result = review(self.load(PROJECT / "requirements" / "shoulder_member_inputs.json"))
+        self.assertEqual(result["points_mm"]["cut_S"], [-215.0, -10.0, 70.0])
+        self.assertEqual(result["points_mm"]["cut_E"], [-542.0, -10.0, 70.0])
+
+    @unittest.skipUnless(importlib.util.find_spec("cadquery"), "optional CadQuery unavailable")
+    def test_located_assembly_has_required_interfaces_and_quantities(self):
+        rows = exporter.located_instances(exporter.build_parts())
+        ids = [row[0] for row in rows]
+        self.assertEqual(len(ids), 23)
+        self.assertEqual(len(ids), len(set(ids)))
+        for required in ("root_standoff_P", "root_standoff_A", "yoke_1", "yoke_2",
+                         "bearing_1", "bearing_2", "shaft", "key", "sector",
+                         "friction_stack", "retainer_1", "retainer_2", "index_plunger"):
+            self.assertIn(required, ids)
+
+    def test_sampled_motion_is_explicitly_not_continuous_proof(self):
+        report = exporter.motion_report()
+        self.assertEqual(report["sample_count"], 35)
+        self.assertEqual(report["sampled_collision_count"], 0)
+        self.assertEqual(report["result"], "pass_at_samples_only")
+        self.assertFalse(report["continuous_clearance_proof"])
+
+    def test_bom_and_drawings_are_driven_by_r1_authority(self):
+        design = self.load(DESIGN)
+        fab = design["fabrication_geometry"]
+        rows = {row[0]: row for row in exporter.bom_rows(design)}
+        self.assertIn(str(fab["cartridge"]["shaft_length"]), rows["A0-201"][4])
+        self.assertIn(str(fab["dummy_member"]["cut_length"]), rows["A0-108"][4])
+        self.assertEqual(len(exporter.drawings(design)), 6)
+        rendered = "\n".join(exporter.drawings(design).values())
+        self.assertNotIn("8 mm keyed drive interface", rendered)
+        self.assertIn("17 h6", rendered)
 
 
 if __name__ == "__main__":

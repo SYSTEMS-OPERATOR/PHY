@@ -1,0 +1,121 @@
+{
+  "frame_id": "FRAME_T56_THORAX",
+  "pose_id": "A0_NEUTRAL_LOCKED",
+  "instances": [
+    {
+      "instance_id": "fixture",
+      "part_id": "A0-101_fixture_base",
+      "valid": true
+    },
+    {
+      "instance_id": "root_standoff_P",
+      "part_id": "A0-109_root_standoff",
+      "valid": true
+    },
+    {
+      "instance_id": "root_standoff_A",
+      "part_id": "A0-109_root_standoff",
+      "valid": true
+    },
+    {
+      "instance_id": "rocker_PB",
+      "part_id": "A0-102_rocker",
+      "valid": true
+    },
+    {
+      "instance_id": "rocker_AC",
+      "part_id": "A0-102_rocker",
+      "valid": true
+    },
+    {
+      "instance_id": "carriage",
+      "part_id": "A0-103_carriage",
+      "valid": true
+    },
+    {
+      "instance_id": "yoke_1",
+      "part_id": "A0-104_yoke_side",
+      "valid": true
+    },
+    {
+      "instance_id": "bearing_1",
+      "part_id": "A0-301_bearing_envelope",
+      "valid": true
+    },
+    {
+      "instance_id": "yoke_2",
+      "part_id": "A0-104_yoke_side",
+      "valid": true
+    },
+    {
+      "instance_id": "bearing_2",
+      "part_id": "A0-301_bearing_envelope",
+      "valid": true
+    },
+    {
+      "instance_id": "hub",
+      "part_id": "A0-105_output_hub",
+      "valid": true
+    },
+    {
+      "instance_id": "shaft",
+      "part_id": "A0-201_pitch_shaft",
+      "valid": true
+    },
+    {
+      "instance_id": "key",
+      "part_id": "A0-202_key",
+      "valid": true
+    },
+    {
+      "instance_id": "sector",
+      "part_id": "A0-106_index_sector",
+      "valid": true
+    },
+    {
+      "instance_id": "friction_stack",
+      "part_id": "A0-309_friction_stack_envelope",
+      "valid": true
+    },
+    {
+      "instance_id": "retainer_1",
+      "part_id": "A0-203_end_retainer",
+      "valid": true
+    },
+    {
+      "instance_id": "retainer_2",
+      "part_id": "A0-203_end_retainer",
+      "valid": true
+    },
+    {
+      "instance_id": "dummy_member",
+      "part_id": "A0-108_dummy_member",
+      "valid": true
+    },
+    {
+      "instance_id": "pitch_stop_pad_1",
+      "part_id": "A0-107_stop_pad",
+      "valid": true
+    },
+    {
+      "instance_id": "pitch_stop_bracket_1",
+      "part_id": "A0-110_stop_bracket",
+      "valid": true
+    },
+    {
+      "instance_id": "pitch_stop_pad_2",
+      "part_id": "A0-107_stop_pad",
+      "valid": true
+    },
+    {
+      "instance_id": "pitch_stop_bracket_2",
+      "part_id": "A0-110_stop_bracket",
+      "valid": true
+    },
+    {
+      "instance_id": "index_plunger",
+      "part_id": "A0-304_plunger_envelope",
+      "valid": true
+    }
+  ]
+}

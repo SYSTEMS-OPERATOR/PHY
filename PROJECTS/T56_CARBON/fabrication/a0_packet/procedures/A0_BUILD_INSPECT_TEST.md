@@ -1,4 +1,4 @@
-# A0 build, inspection and bench-test procedure
+# A0-R1 build, inspection and bench-test procedure
 
 Status: **PROCEDURE ISSUED FOR SHOP REVIEW — NO TESTS RECORDED**
 
@@ -25,8 +25,9 @@ motion, permanent set, datum shift or instrumentation fault.
 
 ## 2. Fabrication
 
-1. Confirm `manifest.json` source hash matches the reviewed mechanism JSON.
-2. Cut A0-101 through A0-108 and A0-201 from the BOM materials. Do not machine
+1. Confirm `manifest.json` source hash matches the reviewed mechanism JSON and
+   confirm the reviewed neutral assembly has 23 modeled instances.
+2. Cut A0-101 through A0-110 and A0-201 through A0-203 from the BOM materials. Do not machine
    bearing bores or the index-plunger thread until the delivered parts are
    measured and the mating dimensions are confirmed.
 3. Machine the base datum hole and face first. Establish the drawing origin from
@@ -66,7 +67,7 @@ Use calibrated instruments and the supplied inspection template. At minimum:
    all-metal locknuts. Tighten locknuts only to remove axial play while
    preserving free rotation; target end float is `0.05–0.15 mm`. Do not apply a
    generic clamp-bolt torque through a rotating link.
-3. Install both yoke plates, 6003 bearings, keyed 17 mm shaft, hub, captured end
+3. Install both 8 mm yoke plates, 6003 bearings, keyed 17 mm shaft, offset hub, captured end
    retainers, sector, hard-stop pads and index plunger. Torque M6-10.9 hub pinch
    bolts to provisional `12 N·m`; witness-mark after torque.
 4. Set the dry friction stack to a measured breakaway torque of at least `7 N·m`
@@ -74,9 +75,11 @@ Use calibrated instruments and the supplied inspection template. At minimum:
 5. Install the 6 mm steel tether with rated thimbles/swages. At every commanded
    pose it must remain slack during normal retention and prevent detached-member
    travel from reaching the guard.
-6. Install the 327 mm dummy member to the 30 mm insertion mark. Verify the
+6. Install the 327 mm dummy member to the 30 mm shoulder insertion mark. Verify the
    nominal S-to-E station is `317 mm` and output position is within the stated
-   stack. Fit full guarding before applying power or proof load.
+   stack; the distal insertion is 45 mm and the shoulder/distal offsets are
+   40/25 mm. Confirm nominal tube-to-shaft clearance before tightening the hub.
+   Fit full guarding before applying power or proof load.
 
 ## 5. Bench tests
 

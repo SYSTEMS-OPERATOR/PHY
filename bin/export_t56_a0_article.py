@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
-"""Export the bounded T56 A0 shoulder article CAD and review drawings.
+"""Export the bounded T56 A0-R1 shoulder article shop-review packet.
 
-Requires CadQuery 2.7.0.  The outputs are a shop-review candidate, not a
-fabrication release or physical qualification record.
+CadQuery 2.7.0 is required. Outputs remain unreleased and unqualified.
 """
 from __future__ import annotations
 
@@ -15,215 +14,274 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-DESIGN_PATH = ROOT / "PROJECTS/T56_CARBON/requirements/a0_shoulder_mechanism.json"
-DEFAULT_OUTPUT = ROOT / "PROJECTS/T56_CARBON/fabrication/a0_packet"
+PROJECT = ROOT / "PROJECTS/T56_CARBON"
+DESIGN_PATH = PROJECT / "requirements/a0_shoulder_mechanism.json"
+DEFAULT_OUTPUT = PROJECT / "fabrication/a0_packet"
+
+
+def load_json(path):
+    return json.loads(path.read_text(encoding="utf-8"))
 
 
 def load_design():
-    return json.loads(DESIGN_PATH.read_text(encoding="utf-8"))
+    return load_json(DESIGN_PATH)
 
 
-def bom_rows():
+def fabrication(design=None):
+    return (design or load_design())["fabrication_geometry"]
+
+
+def bom_rows(design=None):
+    f = fabrication(design)
+    c, d, q = f["cartridge"], f["dummy_member"], f["four_bar"]
     return [
-        ("A0-101", 1, "fixture base plate", "A36 steel plate", "300 x 240 x 8 mm; A0-D001"),
-        ("A0-102", 2, "parallel four-bar rocker", "6061-T6 plate", "70 x 25 x 6 mm; 55 mm centers"),
-        ("A0-103", 1, "moving carriage plate", "6061-T6 plate", "70 x 120 x 8 mm"),
-        ("A0-104", 2, "pitch yoke side plate", "6061-T6 plate", "60 x 70 x 8 mm; bearing bore 35 H7"),
-        ("A0-105", 1, "split-clamp output hub", "6061-T6 billet", "55 x 40 x 55 mm; 25.50 mm socket"),
-        ("A0-106", 1, "index sector", "6061-T6 plate", "90 OD x 6 mm; 15 degree index"),
-        ("A0-107", 4, "replaceable stop pad", "acetal", "20 x 15 x 10 mm"),
-        ("A0-108", 1, "dummy humeral member", "6061-T6 square tube", "25.4 x 25.4 x 3.175 wall x 327 mm"),
-        ("A0-201", 1, "pitch shaft", "4140 prehard ground bar", "17 h6 x 70 mm; 5 x 5 mm keyway; ends retained"),
-        ("A0-202", 1, "parallel key", "hardened steel, DIN 6885 form A", "5 x 5 x 30 mm"),
-        ("A0-301", 2, "deep-groove bearing", "6003-2RS", "17 x 35 x 10 mm; supplier lot recorded"),
-        ("A0-302", 4, "pivot shoulder bolt", "ISO 898-1 class 10.9", "M10 x 1.5; 10 mm shoulder"),
+        ("A0-101", 1, "fixture base plate", "A36 steel plate", f"{f['fixture']['base_size_xyz']}; A0-D001-R1"),
+        ("A0-102", 2, "parallel four-bar rocker", "6061-T6 plate", f"{q['rocker_size_xyz']}; {q['rocker_centers']} centers"),
+        ("A0-103", 1, "moving carriage plate", "6061-T6 plate", f"{q['carriage_size_xyz']}"),
+        ("A0-104", 2, "pitch yoke side plate", "6061-T6 plate", f"{c['yoke_plate_size_xzy']}; Ø35 H7 seat"),
+        ("A0-105", 1, "split-clamp offset output hub", "6061-T6 billet", f"{c['hub_size_xyz']}; {c['tube_socket_across_flats']} socket"),
+        ("A0-106", 1, "keyed index sector", "6061-T6 plate", f"Ø{c['sector_od']} x {c['sector_thickness']}; 15 degree index"),
+        ("A0-107", 4, "replaceable stop pad", "acetal", f"{c['stop_pad_size_xyz']}"),
+        ("A0-108", 1, "dummy humeral member", "6061-T6 square tube", f"{d['outer']} square x {d['wall']} wall x {d['cut_length']}"),
+        ("A0-109", 2, "root pivot standoff", "6061-T6 billet", f"{f['fixture']['standoff_size_xyz']}; axis Z={f['root_axis_height']}"),
+        ("A0-110", 4, "hard-stop bracket", "6061-T6 billet", f"{c['stop_bracket_size_xyz']}; final contact blue-check open"),
+        ("A0-201", 1, "pitch shaft", "4140 prehard ground bar", f"Ø17 h6 x {c['shaft_length']}; 5 x 5 keyway"),
+        ("A0-202", 1, "parallel key", "hardened steel, DIN 6885 form A", "5 x 5 x 30"),
+        ("A0-203", 2, "shaft end retainer", "4140 or class 10.9 steel", f"Ø{c['end_retainer_od_width'][0]} x {c['end_retainer_od_width'][1]}; detail review open"),
+        ("A0-301", 2, "deep-groove bearing", c["bearing_type"], "17 x 35 x 10; lot and corner geometry verified before machining"),
+        ("A0-302", 4, "pivot shoulder bolt", "ISO 898-1 class 10.9", "M10 x 1.5; 10 shoulder"),
         ("A0-303", 4, "pivot locknut", "all-metal prevailing torque", "M10 x 1.5; single-use"),
-        ("A0-304", 2, "spring indexing plunger", "steel, pull-ring type", "M16 x 1.5 body; 8 mm pin; vendor cross-check open"),
+        ("A0-304", 2, "spring indexing plunger", "steel, pull-ring type", "8 pin; body/thread and nose geometry supplier-open"),
         ("A0-305", 1, "carriage clamp screw", "ISO 898-1 class 10.9", "M8 x 1.25 with captive hand knob"),
-        ("A0-306", 2, "hub pinch bolt", "ISO 898-1 class 10.9", "M6 x 1.0 x 35 mm"),
-        ("A0-307", 1, "secondary retention tether", "steel wire rope", "6 mm; rated >= 1 kN; thimbles and swages"),
-        ("A0-308", 4, "bench mounting fastener", "ISO 898-1 class 10.9", "M10 x 1.5; length to bench fixture"),
-        ("A0-309", 1, "passive friction stack", "dry friction washers plus Belleville washers", "set breakaway torque >= 7 N m; witness mark adjuster"),
-        ("A0-401", 1, "galvanic isolation kit", "PET plus zinc-rich primer", "0.5 mm PET; seal all aluminum/steel interfaces"),
+        ("A0-306", 2, "hub pinch bolt", "ISO 898-1 class 10.9", "M6 x 1.0; length after first-article stack"),
+        ("A0-307", 1, "secondary retention tether", "steel wire rope", "6 mm; rated >=1 kN; end fittings supplier-open"),
+        ("A0-308", 4, "bench mounting fastener", "ISO 898-1 class 10.9", "M10 x 1.5; length to reviewed bench"),
+        ("A0-309", 1, "passive friction stack", "dry friction + Belleville washers", "breakaway >=7 N m; material/correlation supplier-open"),
+        ("A0-310", 2, "bearing retaining cap", "6061-T6", "captures protruding 6003 ring; detail review open"),
+        ("A0-401", 1, "galvanic isolation kit", "PET plus zinc-rich primer", "0.5 PET; seal aluminum/steel interfaces"),
     ]
 
 
-def build_parts():
+def build_parts(design=None):
     import cadquery as cq
 
-    base = (
-        cq.Workplane("XY").box(300, 240, 8)
-        .faces(">Z").workplane()
-        .pushPoints([(-120, -90), (-120, 90), (120, -90), (120, 90)]).hole(11)
-        .faces(">Z").workplane().pushPoints([(0, -60), (0, 40)]).hole(10.5)
-        .faces(">Z").workplane().pushPoints([(130, 0)]).hole(6)
-    )
-    rocker = (
-        cq.Workplane("XY").box(70, 25, 6)
-        .faces(">Z").workplane().pushPoints([(-27.5, 0), (27.5, 0)]).hole(10.2)
-    )
-    carriage = (
-        cq.Workplane("XY").box(70, 120, 8)
-        .faces(">Z").workplane().pushPoints([(10, -50), (10, 50)]).hole(10.2)
-        .faces(">Z").workplane().pushPoints([(-15, -35), (-15, 35)]).hole(6.6)
-    )
-    yoke = (
-        cq.Workplane("XZ").rect(60, 70).extrude(8, both=True)
-        .faces(">Y").workplane().hole(35)
-        .faces(">Y").workplane().pushPoints([(-15, -27.5), (15, -27.5)]).hole(6.6)
-    )
-    hub = cq.Workplane("XY").box(55, 40, 55)
-    hub = hub.cut(cq.Solid.makeCylinder(8.5, 42, cq.Vector(0, -21, 0), cq.Vector(0, 1, 0)))
-    hub = hub.cut(cq.Workplane("YZ").rect(25.5, 25.5).extrude(31).translate((-28, 0, 0)))
-    hub = hub.cut(cq.Workplane("XY").box(32, 1.5, 30).translate((-12, 0, 20)))
-    sector = cq.Workplane("XZ").circle(45).circle(6).extrude(6, both=True)
-    holes = [(35 * math.cos(math.radians(a)), 35 * math.sin(math.radians(a))) for a in range(-30, 91, 15)]
-    sector = sector.faces(">Y").workplane().pushPoints(holes).hole(8.2)
-    dummy = cq.Workplane("YZ").rect(25.4, 25.4).extrude(327)
-    dummy = dummy.cut(cq.Workplane("YZ").rect(19.05, 19.05).extrude(329).translate((-1, 0, 0)))
-    shaft = cq.Workplane("XZ").circle(8.5).extrude(70)
-    stop = cq.Workplane("XY").box(20, 15, 10)
+    design = design or load_design()
+    f = fabrication(design)
+    fixture, q, c, d = f["fixture"], f["four_bar"], f["cartridge"], f["dummy_member"]
+
+    sx, sy, sz = fixture["base_size_xyz"]
+    base = cq.Workplane("XY").box(sx, sy, sz).translate((0, 0, -sz / 2))
+    base = base.faces(">Z").workplane().pushPoints([(-120, -90), (-120, 90), (120, -90), (120, 90)]).hole(fixture["bench_hole_diameter"])
+    base = base.faces(">Z").workplane().pushPoints([(0, -60), (0, 40)]).hole(fixture["root_hole_diameter"])
+    base = base.faces(">Z").workplane().pushPoints([(130, 0)]).hole(fixture["tooling_hole_diameter"])
+
+    ss = fixture["standoff_size_xyz"]
+    standoff = cq.Workplane("XY").box(*ss).translate((0, 0, ss[2] / 2))
+    standoff = standoff.faces(">Z").workplane().hole(fixture["root_hole_diameter"])
+
+    rs = q["rocker_size_xyz"]
+    rocker = cq.Workplane("XY").box(*rs)
+    rocker = rocker.faces(">Z").workplane().pushPoints([(-q["rocker_centers"] / 2, 0), (q["rocker_centers"] / 2, 0)]).hole(q["pivot_bore_diameter"])
+    cs = q["carriage_size_xyz"]
+    carriage = cq.Workplane("XY").box(*cs)
+    carriage = carriage.faces(">Z").workplane().pushPoints([(0, -q["carriage_pivot_centers"] / 2), (0, q["carriage_pivot_centers"] / 2)]).hole(q["pivot_bore_diameter"])
+    carriage = carriage.faces(">Z").workplane().pushPoints([(-20, -30), (-20, 30)]).hole(6.6)
+
+    yx, yz, yt = c["yoke_plate_size_xzy"]
+    yoke = cq.Workplane("XZ").rect(yx, yz).extrude(yt / 2, both=True)
+    yoke = yoke.faces(">Y").workplane().hole(c["bearing_housing_diameter"])
+    yoke = yoke.faces(">Y").workplane().pushPoints([(-20, -27.5), (20, -27.5)]).hole(6.6)
+
+    hx, hy, hz = c["hub_size_xyz"]
+    hub = cq.Workplane("XY").box(hx, hy, hz).translate((c["hub_center_x_from_S"], 0, 0))
+    shaft_void = cq.Solid.makeCylinder(c["shaft_diameter"] / 2, hy + 2, cq.Vector(0, -hy / 2 - 1, 0), cq.Vector(0, 1, 0))
+    hub = hub.cut(shaft_void)
+    socket_length = abs(c["tube_socket_seat_x_from_S"] - c["tube_socket_start_x_from_S"]) + 1
+    socket_center = (c["tube_socket_seat_x_from_S"] + c["tube_socket_start_x_from_S"]) / 2
+    socket = cq.Workplane("XY").box(socket_length, c["tube_socket_across_flats"], c["tube_socket_across_flats"]).translate((socket_center, 0, 0))
+    hub = hub.cut(socket)
+    hub = hub.cut(cq.Workplane("XY").box(socket_length + 4, 1.5, hz / 2).translate((socket_center, 0, hz / 4)))
+    hub = hub.cut(cq.Workplane("XY").box(5, hy + 2, 5).translate((0, 0, c["shaft_diameter"] / 2)))
+    for xpos in c["hub_pinch_bolt_x_from_S"]:
+        hub = hub.cut(cq.Solid.makeCylinder(c["hub_pinch_bolt_diameter"] / 2, hz + 2, cq.Vector(xpos, 0, -hz / 2 - 1), cq.Vector(0, 0, 1)))
+
+    sector = cq.Workplane("XZ").circle(c["sector_od"] / 2).circle(c["sector_bore_diameter"] / 2).extrude(c["sector_thickness"] / 2, both=True)
+    sector = sector.cut(cq.Workplane("XZ").rect(5, 5).extrude(c["sector_thickness"], both=True).translate((0, 0, c["shaft_diameter"] / 2)))
+    angles = range(-30, 91, c["index_increment_deg"])
+    holes = [(c["index_hole_radius"] * math.cos(math.radians(a)), c["index_hole_radius"] * math.sin(math.radians(a))) for a in angles]
+    sector = sector.faces(">Y").workplane().pushPoints(holes).hole(c["index_hole_diameter"])
+
+    outer, wall, length = d["outer"], d["wall"], d["cut_length"]
+    dummy = cq.Workplane("YZ").rect(outer, outer).extrude(length)
+    dummy = dummy.cut(cq.Workplane("YZ").rect(outer - 2 * wall, outer - 2 * wall).extrude(length + 2).translate((-1, 0, 0)))
+    shaft = cq.Workplane("XZ").circle(c["shaft_diameter"] / 2).extrude(c["shaft_length"] / 2, both=True)
+    shaft = shaft.cut(cq.Workplane("XY").box(5, 30, 2.5).translate((0, 0, c["shaft_diameter"] / 2 - 1.25)))
+    kw, kh, kl = c["shaft_key_width_height_length"]
+    key = cq.Workplane("XY").box(kw, kl, kh)
+    bearing = cq.Workplane("XZ").circle(c["bearing_id_od_width"][1] / 2).circle(c["bearing_id_od_width"][0] / 2).extrude(c["bearing_id_od_width"][2] / 2, both=True)
+    friction = cq.Workplane("XZ").circle(c["friction_stack_envelope_od_width"][0] / 2).circle(c["shaft_diameter"] / 2).extrude(c["friction_stack_envelope_od_width"][1] / 2, both=True)
+    retainer = cq.Workplane("XZ").circle(c["end_retainer_od_width"][0] / 2).circle(c["shaft_diameter"] / 2).extrude(c["end_retainer_od_width"][1] / 2, both=True)
+    stop = cq.Workplane("XY").box(*c["stop_pad_size_xyz"])
+    bracket = cq.Workplane("XY").box(*c["stop_bracket_size_xyz"])
+    plunger = cq.Workplane("XZ").circle(c["plunger_envelope_body_pin_length"][0] / 2).extrude(c["plunger_envelope_body_pin_length"][2] / 2, both=True)
     return {
-        "A0-101_fixture_base": base,
-        "A0-102_rocker": rocker,
-        "A0-103_carriage": carriage,
-        "A0-104_yoke_side": yoke,
-        "A0-105_output_hub": hub,
-        "A0-106_index_sector": sector,
-        "A0-107_stop_pad": stop,
-        "A0-108_dummy_member": dummy,
-        "A0-201_pitch_shaft": shaft,
+        "A0-101_fixture_base": base, "A0-102_rocker": rocker, "A0-103_carriage": carriage,
+        "A0-104_yoke_side": yoke, "A0-105_output_hub": hub, "A0-106_index_sector": sector,
+        "A0-107_stop_pad": stop, "A0-108_dummy_member": dummy, "A0-109_root_standoff": standoff,
+        "A0-110_stop_bracket": bracket, "A0-201_pitch_shaft": shaft, "A0-202_key": key,
+        "A0-203_end_retainer": retainer, "A0-301_bearing_envelope": bearing,
+        "A0-304_plunger_envelope": plunger, "A0-309_friction_stack_envelope": friction,
     }
 
 
-def drawing(title, subtitle, body):
-    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
-<rect width="1400" height="900" fill="white"/><g font-family="monospace" fill="#172230">
-<text x="40" y="48" font-size="25">{title}</text><text x="40" y="78" font-size="15">{subtitle}</text>
-<rect x="25" y="20" width="1350" height="850" fill="none" stroke="#172230" stroke-width="2"/>{body}
-<text x="40" y="842" font-size="14">A0 SHOP REVIEW CANDIDATE — NOT FABRICATION RELEASED — ALL DIMENSIONS mm — DO NOT SCALE</text>
-</g></svg>\n'''
+def located_instances(parts, design=None):
+    """Return neutral-pose instances as (instance id, part id, shape)."""
+    design = design or load_design()
+    f = fabrication(design); c = f["cartridge"]
+    stage = design["mechanism"]["scapular_stage"]
+    s = design["mechanism"]["humeral_stage"]["joint_center_mm"]
+    p, a = stage["posterior_root_mm"], stage["anterior_root_mm"]
+    b, cc = stage["posterior_carriage_pivot_mm"], stage["anterior_carriage_pivot_mm"]
+    mid = lambda u, v: tuple((u[i] + v[i]) / 2 for i in range(3))
+    inst = []
+    add = lambda iid, pid, shape: inst.append((iid, pid, shape))
+    add("fixture", "A0-101_fixture_base", parts["A0-101_fixture_base"].translate((-130, 0, 0)))
+    for name, point in (("P", p), ("A", a)):
+        add(f"root_standoff_{name}", "A0-109_root_standoff", parts["A0-109_root_standoff"].translate((point[0], point[1], 0)))
+    add("rocker_PB", "A0-102_rocker", parts["A0-102_rocker"].translate(mid(p, b)))
+    add("rocker_AC", "A0-102_rocker", parts["A0-102_rocker"].translate(mid(a, cc)))
+    add("carriage", "A0-103_carriage", parts["A0-103_carriage"].translate(mid(b, cc)))
+    for index, ypos in enumerate(c["yoke_plate_center_y"]):
+        add(f"yoke_{index+1}", "A0-104_yoke_side", parts["A0-104_yoke_side"].translate((s[0], ypos, s[2])))
+        add(f"bearing_{index+1}", "A0-301_bearing_envelope", parts["A0-301_bearing_envelope"].translate((s[0], ypos, s[2])))
+    add("hub", "A0-105_output_hub", parts["A0-105_output_hub"].translate(s))
+    add("shaft", "A0-201_pitch_shaft", parts["A0-201_pitch_shaft"].translate(s))
+    add("key", "A0-202_key", parts["A0-202_key"].translate((s[0], s[1], s[2] + c["shaft_diameter"] / 2 + 1.25)))
+    add("sector", "A0-106_index_sector", parts["A0-106_index_sector"].translate((s[0], c["sector_center_y"], s[2])))
+    add("friction_stack", "A0-309_friction_stack_envelope", parts["A0-309_friction_stack_envelope"].translate((s[0], c["friction_stack_center_y"], s[2])))
+    shaft_half = c["shaft_length"] / 2
+    for index, ypos in enumerate((s[1] - shaft_half + 2, s[1] + shaft_half - 2)):
+        add(f"retainer_{index+1}", "A0-203_end_retainer", parts["A0-203_end_retainer"].translate((s[0], ypos, s[2])))
+    cut_start = s[0] + f["dummy_member"]["cut_start_x_from_S"]
+    member = parts["A0-108_dummy_member"].rotate((0, 0, 0), (0, 0, 1), 180).translate((cut_start, s[1], s[2]))
+    add("dummy_member", "A0-108_dummy_member", member)
+    for index, zoff in enumerate((-45, 45)):
+        add(f"pitch_stop_pad_{index+1}", "A0-107_stop_pad", parts["A0-107_stop_pad"].translate((s[0] + 35, s[1], s[2] + zoff)))
+        add(f"pitch_stop_bracket_{index+1}", "A0-110_stop_bracket", parts["A0-110_stop_bracket"].translate((s[0] + 52, s[1], s[2] + zoff)))
+    add("index_plunger", "A0-304_plunger_envelope", parts["A0-304_plunger_envelope"].translate((s[0] + 35, c["sector_center_y"], s[2])))
+    return inst
+
+
+def motion_report(design=None):
+    design = design or load_design(); f = fabrication(design)
+    stage = design["mechanism"]["scapular_stage"]
+    s0 = design["mechanism"]["humeral_stage"]["joint_center_mm"]
+    length = design["dummy_member"]["effective_length_mm"]
+    exclusions = design["collision_and_service_envelopes"]
+    samples, collision_count = [], 0
+    for scap in f["assembly"]["sampled_scapular_angles_deg"]:
+        sr = math.radians(scap)
+        s = [-130 - stage["rocker_center_distance_mm"] * math.cos(sr) - 20,
+             -10 + stage["rocker_center_distance_mm"] * math.sin(sr), s0[2]]
+        for pitch in f["assembly"]["sampled_pitch_angles_deg"]:
+            pr = math.radians(pitch)
+            e = [s[0] - length * math.cos(pr), s[1], s[2] + length * math.sin(pr)]
+            hit = []
+            for key in ("neck_exclusion_aabb_mm", "representative_ribcage_exclusion_aabb_mm"):
+                box = exclusions[key]; low, high = box["min_mm"], box["max_mm"]
+                for n in range(65):
+                    t = n / 64
+                    point = [s[i] + t * (e[i] - s[i]) for i in range(3)]
+                    if all(low[i] <= point[i] <= high[i] for i in range(3)):
+                        hit.append(key); break
+            collision_count += bool(hit)
+            samples.append({"scapular_deg": scap, "pitch_deg": pitch, "S_mm": [round(v, 6) for v in s], "E_mm": [round(v, 6) for v in e], "registered_exclusion_hits": sorted(set(hit))})
+    return {
+        "method": "discrete centerline samples against registered AABBs",
+        "continuous_clearance_proof": False, "sample_count": len(samples),
+        "sampled_collision_count": collision_count,
+        "result": "pass_at_samples_only" if collision_count == 0 else "blocked_collision_at_sample",
+        "intentional_contacts": f["assembly"]["intentional_contact_classes"],
+        "limitations": ["not a swept-solid or continuous collision proof", "purchased hardware envelopes are provisional", "guard and external bench are not modeled", "tool clearance requires independent drawing and dry-assembly review"],
+        "samples": samples,
+    }
+
+
+def normalize_step(path):
+    content = path.read_text(encoding="utf-8")
+    content = re.sub(r"(FILE_NAME\('Open CASCADE Shape Model',')[^']+(')", r"\g<1>1970-01-01T00:00:00\2", content)
+    path.write_text("\n".join(line.rstrip() for line in content.splitlines()) + "\n", encoding="utf-8")
+
+
+def svg_sheet(number, title, rows):
+    body = [f'<text x="40" y="50" font-size="25">{number} — {title}</text>', '<text x="40" y="80" font-size="14">A0-R1 SHOP REVIEW CANDIDATE — NOT FABRICATION RELEASED — ALL DIMENSIONS mm — DO NOT SCALE</text>', '<line x1="40" y1="105" x2="1360" y2="105" stroke="#172230" stroke-width="2"/>']
+    for index, (name, value) in enumerate(rows):
+        y = 145 + index * 29
+        body.append(f'<text x="60" y="{y}" font-size="15">{name}</text><text x="620" y="{y}" font-size="15">{value}</text>')
+    return '<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900"><rect width="1400" height="900" fill="white"/><g font-family="monospace" fill="#172230"><rect x="20" y="20" width="1360" height="860" fill="none" stroke="#172230" stroke-width="2"/>' + "".join(body) + '</g></svg>\n'
 
 
 def drawings(design):
-    fixture = drawing(
-        "A0-D001-R0 — FIXTURE DATUM AND ROOT INTERFACE",
-        "FRAME_T56_THORAX: +X right, +Y anterior, +Z superior; origin at Ø6 H7 tooling-hole axis, plate top Z=0",
-        '''<rect x="170" y="160" width="750" height="600" fill="#eef2f3" stroke="#172230" stroke-width="3"/>
-<line x1="845" y1="440" x2="1060" y2="440" stroke="#bf4b3f" stroke-width="3"/><text x="1070" y="446" font-size="17">+X</text>
-<line x1="845" y1="440" x2="845" y2="235" stroke="#2f7c5d" stroke-width="3"/><text x="830" y="220" font-size="17">+Y</text>
-<circle cx="845" cy="440" r="9" fill="none" stroke="#172230" stroke-width="3"/><text x="870" y="425" font-size="15">ORIGIN Ø6 H7</text>
-<g fill="none" stroke="#172230" stroke-width="3"><circle cx="245" cy="665" r="14"/><circle cx="245" cy="215" r="14"/><circle cx="845" cy="665" r="14"/><circle cx="845" cy="215" r="14"/></g>
-<g fill="#156f88"><circle cx="520" cy="590" r="12"/><circle cx="520" cy="340" r="12"/></g>
-<text x="955" y="175" font-size="16">PLATE: A36 300 × 240 × 8</text><text x="955" y="205" font-size="16">BENCH: 4× Ø11 THRU</text>
-<text x="955" y="235" font-size="16">ROOTS: 2× Ø10.5 THRU</text><text x="955" y="265" font-size="16">ROOT HEIGHT: Z=35 ±0.25</text>
-<text x="955" y="310" font-size="15">P = (-130,-60,35) ±0.25</text><text x="955" y="340" font-size="15">A = (-130, 40,35) ±0.25</text>
-<text x="955" y="390" font-size="15">BENCH HOLES:</text><text x="955" y="420" font-size="14">(-250,±90), (-10,±90)</text>
-<text x="955" y="470" font-size="15">DATUM: TRUE POSITION 0.25</text><text x="955" y="500" font-size="15">FLATNESS: 0.30 OVER PLATE</text>
-<text x="955" y="550" font-size="14">PET barrier + zinc-rich primer</text><text x="955" y="575" font-size="14">at aluminum/steel interfaces.</text>''')
-    mechanism = drawing(
-        "A0-D002-R0 — FOUR-BAR AND PITCH CARTRIDGE",
-        "Neutral top view; P-A fixed, B-C moving; shoulder output S shown at A0_NEUTRAL_LOCKED",
-        '''<g fill="none" stroke="#172230" stroke-width="8"><line x1="330" y1="620" x2="650" y2="620"/><line x1="330" y1="300" x2="650" y2="300"/><line x1="650" y1="300" x2="650" y2="620"/></g>
-<g fill="#156f88"><circle cx="330" cy="620" r="13"/><circle cx="330" cy="300" r="13"/><circle cx="650" cy="620" r="13"/><circle cx="650" cy="300" r="13"/><circle cx="770" cy="460" r="16"/></g>
-<text x="300" y="655" font-size="18">P</text><text x="300" y="285" font-size="18">A</text><text x="665" y="650" font-size="18">B</text><text x="665" y="285" font-size="18">C</text><text x="790" y="465" font-size="18">S</text>
-<line x1="330" y1="700" x2="650" y2="700" stroke="#bf4b3f" stroke-width="2"/><text x="455" y="730" font-size="18">55 ±0.25</text>
-<line x1="700" y1="300" x2="700" y2="620" stroke="#bf4b3f" stroke-width="2"/><text x="715" y="470" font-size="18">100 ±0.25</text>
-<path d="M 760 425 Q 790 460 760 495" fill="none" stroke="#bf4b3f" stroke-width="3"/><text x="820" y="420" font-size="15">scapular stops ±10°</text>
-<text x="930" y="270" font-size="16">S = (-205,-10,70) ±0.5</text><text x="930" y="305" font-size="16">pitch axis = (0,1,0)</text>
-<text x="930" y="340" font-size="16">command: -30° to +90°</text><text x="930" y="375" font-size="16">hard stops: -32° / +92°</text>
-<text x="930" y="425" font-size="15">RETENTION:</text><text x="930" y="455" font-size="14">dry friction stack ≥7 N m + index pin</text>
-<text x="930" y="480" font-size="14">8 mm pin / 15° holes; tether ≥1 kN</text><text x="930" y="520" font-size="14">software is never the sole stop</text>
-<text x="930" y="580" font-size="14">Pivot pattern true position: Ø0.30</text><text x="930" y="605" font-size="14">Axis parallelism: 0.25°</text>''')
-    member = drawing(
-        "A0-D003-R0 — DUMMY HUMERAL MEMBER",
-        "Straight removable A0 load member; project-local mechanics, not an anatomical bone or canon landmark",
-        '''<rect x="180" y="350" width="930" height="72" fill="#eef2f3" stroke="#172230" stroke-width="3"/>
-<line x1="180" y1="290" x2="1110" y2="290" stroke="#bf4b3f" stroke-width="2"/><text x="570" y="275" font-size="19">CUT 327 ±0.5</text>
-<line x1="250" y1="470" x2="1035" y2="470" stroke="#156f88" stroke-width="3"/><text x="535" y="505" font-size="18">S–E EFFECTIVE 317 ±1.0</text>
-<text x="180" y="570" font-size="17">SECTION: 6061-T6 SQ TUBE 25.4 × 25.4 × 3.175 WALL</text>
-<rect x="1140" y="330" width="120" height="120" fill="none" stroke="#172230" stroke-width="3"/><rect x="1155" y="345" width="90" height="90" fill="white" stroke="#172230" stroke-width="2"/>
-<text x="180" y="615" font-size="15">S=(-205,-10,70); E=(-522,-10,70); shoulder/elbow offsets 25; insertions 30</text>
-<text x="180" y="650" font-size="15">Worst-case resolver stack: effective ±1.0; seat gap ±1.5; cut length ±2.0</text>
-<text x="180" y="685" font-size="15">Deburr 0.2–0.5; break edges; straightness 0.75 per 300; record as-built mass and COG.</text>''')
-    interface = drawing(
-        "A0-D004-R0 — PITCH SHAFT, BEARING, INDEX AND HUB INTERFACES",
-        "Section schematic; coordinate and fit tables control over graphic",
-        '''<circle cx="380" cy="430" r="190" fill="#eef2f3" stroke="#172230" stroke-width="4"/><circle cx="380" cy="430" r="26" fill="white" stroke="#172230" stroke-width="3"/>
-<g fill="none" stroke="#156f88" stroke-width="3"><circle cx="545" cy="335" r="12"/><circle cx="570" cy="375" r="12"/><circle cx="580" cy="430" r="12"/><circle cx="570" cy="485" r="12"/><circle cx="545" cy="525" r="12"/></g>
-<line x1="380" y1="430" x2="760" y2="430" stroke="#bf4b3f" stroke-width="3"/><text x="650" y="415" font-size="16">PITCH AXIS +Y</text>
-<text x="850" y="240" font-size="16">SHAFT: Ø17 h6 = 16.989–17.000</text><text x="850" y="275" font-size="16">BEARING: 6003-2RS, 17×35×10</text>
-<text x="850" y="310" font-size="16">HOUSING: Ø35 H7 = 35.000–35.025</text><text x="850" y="345" font-size="16">INDEX HOLES: Ø8.2 +0.10/-0.00</text>
-<text x="850" y="380" font-size="16">SECTOR: Ø90 × 6; HOLES EACH 15°</text><text x="850" y="415" font-size="16">HUB SOCKET: 25.50 +0.15/-0.00</text>
-<text x="850" y="465" font-size="15">2× M6-10.9 PINCH BOLTS; 5×5 KEY</text><text x="850" y="500" font-size="15">SHAFT: CAPTURED ENDS; FRICTION ≥7 N m</text>
-<text x="850" y="535" font-size="15">HARD STOPS: ACETAL PADS AT -32°/+92°</text><text x="850" y="570" font-size="15">INDEX ENGAGEMENT DEPTH ≥6 mm</text>
-<text x="850" y="625" font-size="14">Procurement lot and actual bearing/plunger dimensions</text><text x="850" y="650" font-size="14">must be checked before machining mating features.</text>''')
+    f = fabrication(design); c = f["cartridge"]; q = f["four_bar"]
+    common = [("FRAME", design["frame_id"]), ("CANON EFFECT", "none"), ("STATUS", "independent review required; physical evidence open")]
     return {
-        "A0-D001-fixture-datum.svg": fixture,
-        "A0-D002-mechanism-assembly.svg": mechanism,
-        "A0-D003-dummy-member.svg": member,
-        "A0-D004-cartridge-interface.svg": interface,
+        "A0-D001-R1-fixture-datum.svg": svg_sheet("A0-D001-R1", "FIXTURE DATUM AND ROOT INTERFACE", common + [("BASE", "A36 300 x 240 x 8; bounds X -280..20, Y +/-120, Z -8..0"), ("DATUM", "Ø6 H7 tooling axis at (0,0), plate top Z=0"), ("BENCH HOLES", "Ø11 at (-250,+/-90), (-10,+/-90)"), ("ROOT AXES", "P=(-130,-60,35), A=(-130,40,35), position +/-0.25"), ("STANDOFFS", "2 x 25 x 25 x 32; root axis Z=35"), ("ISOLATION", "0.5 PET + zinc-rich primer at Al/A36 contacts")]),
+        "A0-D002-R1-mechanism-assembly.svg": svg_sheet("A0-D002-R1", "FOUR-BAR AND PITCH ASSEMBLY", common + [("FOUR-BAR", f"rockers {q['rocker_centers']} centers; coupler {q['carriage_pivot_centers']} centers; +/-10 deg"), ("OUTPUT S", "(-205,-10,70) neutral; sampled trajectory in motion_clearance_report.json"), ("PITCH", "axis +Y; command -30..+90; independent stops -32/+92"), ("YOKES", "2 x 70 x 70 x 8 at Y=-40,+20; 6003 seats Ø35 H7"), ("PASSIVE", ">=7 N m dry friction + 8 mm index at 15 deg"), ("SECONDARY", ">=1 kN tether; endpoints provisional pending fitting selection")]),
+        "A0-D003-R1-dummy-member.svg": svg_sheet("A0-D003-R1", "DUMMY MEMBER AND STATION STACK", common + [("SECTION", "6061-T6 tube 25.4 square x 3.175 wall"), ("CUT", "327 +/-0.5; cut_S=(-215,-10,70), cut_E=(-542,-10,70)"), ("STATIONS", "S=(-205,-10,70), E=(-522,-10,70), effective 317 +/-1.0"), ("SEATS", "shoulder offset 40/insertion 30; elbow offset 25/insertion 45"), ("CENTERLINE", "project-local mechanics only; not anatomical canon")]),
+        "A0-D004-R1-cartridge-interfaces.svg": svg_sheet("A0-D004-R1", "PITCH CARTRIDGE INTERFACES", common + [("SHAFT", f"4140 Ø17 h6 x {c['shaft_length']}; keyed 5 x 5 x 30; captured ends"), ("BEARINGS", "2 x 6003-2RS, 17 x 35 x 10; yoke bores Ø35 H7"), ("HUB", "offset split clamp; socket 25.50 +0.15/-0.00; seat X=-40 from S"), ("PINCH", "2 x M6-10.9 at X=-20,-32 from S; provisional 12 N m"), ("SECTOR", "Ø90 x 6, keyed Ø17 interface, Ø8.2 holes each 15 deg"), ("SUPPLIER HOLD", "bearing reliefs, plunger thread/nose and friction stack correlation open")]),
+        "A0-D005-R1-assembly-register.svg": svg_sheet("A0-D005-R1", "LOCATED ASSEMBLY AND QUANTITY REGISTER", common + [("ASSEMBLY", "assembly/A0-R1-neutral-assembly.step and assembly_instances.json"), ("PRIMARY", "base 1; standoffs 2; rockers 2; carriage 1; yokes 2; hub 1; member 1"), ("CARTRIDGE", "shaft 1; key 1; bearings 2; sector 1; friction stack 1; end retainers 2"), ("SAFETY", "stop pads/brackets shown as provisional contact envelopes"), ("CONTACT", "intentional-contact classes declared in mechanism JSON"), ("LIMIT", "located neutral model is review geometry, not proof of tolerance or capacity")]),
+        "A0-D006-R1-exploded-order.svg": svg_sheet("A0-D006-R1", "EXPLODED ORDER AND HOLD POINTS", common + [("1", "base -> isolation -> root standoffs -> four-bar -> carriage"), ("2", "yoke plates -> bearing seats/caps -> shaft/key -> hub"), ("3", "sector -> friction stack -> end retainers -> plunger -> hard stops"), ("4", "dummy member to 30 mm shoulder insertion mark -> tether -> guards"), ("HOLD", "supplier dimensions before mating features; independent load-path review before stock"), ("EVIDENCE", "inspection and bench records remain deliberately blank")]),
     }
 
 
 def export(output):
     import cadquery as cq
 
-    design = load_design()
-    cad_dir, drawing_dir = output / "cad", output / "drawings"
-    for folder in (cad_dir / "step", cad_dir / "stl", drawing_dir):
+    design = load_design(); f = fabrication(design)
+    cad_dir, drawing_dir, assembly_dir = output / "cad", output / "drawings", output / "assembly"
+    for folder in (cad_dir / "step", cad_dir / "stl", drawing_dir, assembly_dir):
         folder.mkdir(parents=True, exist_ok=True)
-    checks = []
-    parts = build_parts()
+    parts = build_parts(design); checks = []
     for name, workplane in parts.items():
         shape = workplane.val()
         if not shape.isValid() or len(shape.Solids()) != 1 or shape.Volume() <= 0:
             raise ValueError(f"invalid solid: {name}")
-        step = cad_dir / "step" / f"{name}.step"
-        stl = cad_dir / "stl" / f"{name}.stl"
-        cq.exporters.export(shape, str(step))
-        cq.exporters.export(shape, str(stl), tolerance=0.05, angularTolerance=0.1)
-        # Open CASCADE writes a wall-clock timestamp and trailing blanks.  Remove
-        # both so a geometrically identical export is byte-for-byte stable.
-        step_text = step.read_text(encoding="utf-8")
-        step_text = re.sub(
-            r"(FILE_NAME\('Open CASCADE Shape Model',')[^']+(')",
-            r"\g<1>1970-01-01T00:00:00\2",
-            step_text,
-        )
-        step.write_text(
-            "\n".join(line.rstrip() for line in step_text.splitlines()) + "\n",
-            encoding="utf-8",
-        )
+        step, stl = cad_dir / "step" / f"{name}.step", cad_dir / "stl" / f"{name}.stl"
+        cq.exporters.export(shape, str(step)); cq.exporters.export(shape, str(stl), tolerance=0.05, angularTolerance=0.1)
+        normalize_step(step)
         reloaded = cq.importers.importStep(str(step)).val()
         if not reloaded.isValid() or not math.isclose(reloaded.Volume(), shape.Volume(), rel_tol=1e-6):
             raise ValueError(f"STEP round trip failed: {name}")
         box = shape.BoundingBox()
-        checks.append({"part": name, "valid_solid": True, "step_round_trip": "pass",
-                       "bounds_mm": [box.xlen, box.ylen, box.zlen], "volume_mm3": shape.Volume()})
+        checks.append({"part": name, "valid_solid": True, "step_round_trip": "pass", "bounds_mm": [box.xlen, box.ylen, box.zlen], "volume_mm3": shape.Volume()})
 
-    for name, content in drawings(design).items():
+    instances = located_instances(parts, design)
+    compound = cq.Compound.makeCompound([item[2].val() for item in instances])
+    assembly_step = assembly_dir / "A0-R1-neutral-assembly.step"
+    cq.exporters.export(compound, str(assembly_step)); normalize_step(assembly_step)
+    if not cq.importers.importStep(str(assembly_step)).val().isValid():
+        raise ValueError("assembly STEP round trip failed")
+    instance_rows = [{"instance_id": iid, "part_id": pid, "valid": shape.val().isValid()} for iid, pid, shape in instances]
+    (assembly_dir / "assembly_instances.json").write_text(json.dumps({"frame_id": design["frame_id"], "pose_id": design["pose_id"], "instances": instance_rows}, indent=2) + "\n", encoding="utf-8")
+    motion = motion_report(design)
+    (assembly_dir / "motion_clearance_report.json").write_text(json.dumps(motion, indent=2) + "\n", encoding="utf-8")
+
+    drawing_set = drawings(design)
+    for name, content in drawing_set.items():
         (drawing_dir / name).write_text(content, encoding="utf-8")
     with (output / "BOM.csv").open("w", newline="", encoding="utf-8") as handle:
         writer = csv.writer(handle, lineterminator="\n")
-        writer.writerow(["item_id", "qty", "description", "material_or_standard", "size_or_procurement_note"])
-        writer.writerows(bom_rows())
+        writer.writerow(["item_id", "qty", "description", "material_or_standard", "size_or_procurement_note"]); writer.writerows(bom_rows(design))
     manifest = {
-        "packet_id": design["packet_id"],
-        "revision": "A0-R0",
-        "status": "shop_review_candidate_not_fabrication_released",
-        "fabrication_released": False,
-        "physical_evidence_complete": False,
-        "canon_effect": design["canon_effect"],
-        "units": "mm",
-        "source": str(DESIGN_PATH.relative_to(ROOT)),
-        "source_sha256": hashlib.sha256(DESIGN_PATH.read_bytes()).hexdigest(),
-        "parts": checks,
-        "drawing_files": sorted(drawings(design)),
-        "bom_items": len(bom_rows()),
+        "packet_id": design["packet_id"], "revision": f["revision"], "status": "independent_shop_review_candidate_not_fabrication_released",
+        "fabrication_released": False, "physical_evidence_complete": False, "canon_effect": design["canon_effect"], "units": "mm",
+        "source": str(DESIGN_PATH.relative_to(ROOT)), "source_sha256": hashlib.sha256(DESIGN_PATH.read_bytes()).hexdigest(),
+        "parts": checks, "assembly_step": str(assembly_step.relative_to(output)), "assembly_instance_count": len(instances),
+        "motion_clearance": {k: motion[k] for k in ("method", "continuous_clearance_proof", "sample_count", "sampled_collision_count", "result")},
+        "drawing_files": sorted(drawing_set), "bom_items": len(bom_rows(design)), "supplier_dependent_open_items": f["supplier_dependent_open_items"],
     }
     (output / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
-    print(f"Exported {len(parts)} part solids, {len(manifest['drawing_files'])} drawings, and {len(bom_rows())} BOM lines to {output}")
+    print(f"Exported A0-R1: {len(parts)} parts, {len(instances)} instances, {len(drawing_set)} drawings, {len(bom_rows(design))} BOM lines")
     return manifest
 
 

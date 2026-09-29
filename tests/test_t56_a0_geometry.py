@@ -4,6 +4,7 @@ import importlib.util
 import json
 import math
 from pathlib import Path
+import tarfile
 import unittest
 
 from PROJECTS.T56_CARBON.tools.shoulder_dimensions import review
@@ -139,6 +140,17 @@ class T56A0GeometryTest(unittest.TestCase):
         rendered = "\n".join(exporter.drawings(design).values())
         self.assertNotIn("8 mm keyed drive interface", rendered)
         self.assertIn("17 h6", rendered)
+
+    def test_packaged_neutral_exchange_artifacts_are_complete(self):
+        manifest = self.load(PACKET / "manifest.json")
+        parts_bundle = PACKET / manifest["parts_step_bundle"]
+        assembly_bundle = PACKET / manifest["assembly_step_gzip"]
+        self.assertTrue(parts_bundle.is_file())
+        self.assertTrue(assembly_bundle.is_file())
+        with tarfile.open(parts_bundle, "r:gz") as archive:
+            names = archive.getnames()
+        self.assertEqual(len(names), len(manifest["parts"]))
+        self.assertTrue(all(name.endswith(".step") for name in names))
 
 
 if __name__ == "__main__":

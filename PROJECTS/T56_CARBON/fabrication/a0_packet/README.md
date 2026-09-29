@@ -42,10 +42,11 @@ station and 327 mm stock length remain unchanged and project-local.
 | A0-D006-R1 | Exploded order and holds | build sequence and unresolved procurement gates |
 
 SVGs are dimension registers for review and must be read at their stated dimensions; do not
-scale the graphic. STEP files are neutral part solids. STL files are visual
-review meshes, not machining authority. The neutral located assembly is
-`assembly/A0-R1-neutral-assembly.step`; its instance register and the discrete
-motion/clearance report sit beside it. The motion report is explicitly not a
+scale the graphic. Neutral part STEP files are stored in the deterministic
+`cad/A0-R1-parts-step.tar.gz` exchange bundle; non-authoritative STL meshes are
+not checked in. The located neutral assembly is the deterministic
+`assembly/A0-R1-neutral-assembly.step.gz`; its instance register and the
+discrete motion/clearance report sit beside it. The motion report is explicitly not a
 continuous swept-solid proof. `manifest.json` records solid and STEP round-trip
 checks. `BOM.csv` uses packet item IDs and vendor-neutral procurement
 specifications; the shop must record supplier lots and confirm actual bearing

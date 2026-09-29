@@ -7,7 +7,7 @@
   "focused_tests": {"run": 62, "passed": 62, "failed": 0, "skipped": 0},
   "step_round_trips": {"parts": 19, "passed": 19, "assembly_import": "pass"},
   "located_assembly_instances": 35,
-  "repeat_export": {"files_compared": 47, "result": "byte_identical"},
+  "repeat_export": {"files_compared": 10, "result": "byte_identical"},
   "motion_screen": {"pose_pairs": 35, "registered_hits": 0, "continuous_proof": false},
   "convergence_schema_valid": true,
   "canon_controlled_files_changed": false,

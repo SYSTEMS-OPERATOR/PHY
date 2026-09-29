@@ -7,10 +7,13 @@ from __future__ import annotations
 
 import argparse
 import csv
+import gzip
 import hashlib
+import io
 import json
 import math
 import re
+import tarfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -228,6 +231,22 @@ def normalize_step(path):
     path.write_text("\n".join(line.rstrip() for line in content.splitlines()) + "\n", encoding="utf-8")
 
 
+def deterministic_gzip(source, target):
+    with target.open("wb") as handle, gzip.GzipFile(filename="", mode="wb", fileobj=handle, mtime=0) as archive:
+        archive.write(source.read_bytes())
+
+
+def deterministic_step_bundle(step_paths, target):
+    with target.open("wb") as handle, gzip.GzipFile(filename="", mode="wb", fileobj=handle, mtime=0) as compressed:
+        with tarfile.open(fileobj=compressed, mode="w") as archive:
+            for path in sorted(step_paths, key=lambda item: item.name):
+                data = path.read_bytes()
+                info = tarfile.TarInfo(path.name)
+                info.size = len(data); info.mtime = 0; info.mode = 0o644
+                info.uid = info.gid = 0; info.uname = info.gname = ""
+                archive.addfile(info, io.BytesIO(data))
+
+
 def svg_sheet(number, title, rows):
     body = [f'<text x="40" y="50" font-size="25">{number} — {title}</text>', '<text x="40" y="80" font-size="14">A0-R1 SHOP REVIEW CANDIDATE — NOT FABRICATION RELEASED — ALL DIMENSIONS mm — DO NOT SCALE</text>', '<line x1="40" y1="105" x2="1360" y2="105" stroke="#172230" stroke-width="2"/>']
     for index, (name, value) in enumerate(rows):
@@ -254,21 +273,34 @@ def export(output):
 
     design = load_design(); f = fabrication(design)
     cad_dir, drawing_dir, assembly_dir = output / "cad", output / "drawings", output / "assembly"
-    for folder in (cad_dir / "step", cad_dir / "stl", drawing_dir, assembly_dir):
+    for stale_dir in (cad_dir / "step", cad_dir / "stl"):
+        if stale_dir.exists():
+            for stale in stale_dir.iterdir():
+                if stale.is_file():
+                    stale.unlink()
+            stale_dir.rmdir()
+    for folder in (cad_dir / "step", drawing_dir, assembly_dir):
         folder.mkdir(parents=True, exist_ok=True)
-    parts = build_parts(design); checks = []
+    parts = build_parts(design); checks = []; step_paths = []
     for name, workplane in parts.items():
         shape = workplane.val()
         if not shape.isValid() or len(shape.Solids()) != 1 or shape.Volume() <= 0:
             raise ValueError(f"invalid solid: {name}")
-        step, stl = cad_dir / "step" / f"{name}.step", cad_dir / "stl" / f"{name}.stl"
-        cq.exporters.export(shape, str(step)); cq.exporters.export(shape, str(stl), tolerance=0.05, angularTolerance=0.1)
+        step = cad_dir / "step" / f"{name}.step"
+        cq.exporters.export(shape, str(step))
         normalize_step(step)
         reloaded = cq.importers.importStep(str(step)).val()
         if not reloaded.isValid() or not math.isclose(reloaded.Volume(), shape.Volume(), rel_tol=1e-6):
             raise ValueError(f"STEP round trip failed: {name}")
         box = shape.BoundingBox()
         checks.append({"part": name, "valid_solid": True, "step_round_trip": "pass", "bounds_mm": [box.xlen, box.ylen, box.zlen], "volume_mm3": shape.Volume()})
+        step_paths.append(step)
+
+    parts_bundle = cad_dir / "A0-R1-parts-step.tar.gz"
+    deterministic_step_bundle(step_paths, parts_bundle)
+    for step in step_paths:
+        step.unlink()
+    (cad_dir / "step").rmdir()
 
     instances = located_instances(parts, design)
     compound = cq.Compound.makeCompound([item[2].val() for item in instances])
@@ -276,6 +308,9 @@ def export(output):
     cq.exporters.export(compound, str(assembly_step)); normalize_step(assembly_step)
     if not cq.importers.importStep(str(assembly_step)).val().isValid():
         raise ValueError("assembly STEP round trip failed")
+    assembly_bundle = assembly_dir / "A0-R1-neutral-assembly.step.gz"
+    deterministic_gzip(assembly_step, assembly_bundle)
+    assembly_step.unlink()
     instance_rows = []
     for iid, pid, shape in instances:
         box = shape.val().BoundingBox()
@@ -295,7 +330,8 @@ def export(output):
         "packet_id": design["packet_id"], "revision": f["revision"], "status": "independent_shop_review_candidate_not_fabrication_released",
         "fabrication_released": False, "physical_evidence_complete": False, "canon_effect": design["canon_effect"], "units": "mm",
         "source": str(DESIGN_PATH.relative_to(ROOT)), "source_sha256": hashlib.sha256(DESIGN_PATH.read_bytes()).hexdigest(),
-        "parts": checks, "assembly_step": str(assembly_step.relative_to(output)), "assembly_instance_count": len(instances),
+        "parts": checks, "parts_step_bundle": str(parts_bundle.relative_to(output)),
+        "assembly_step_gzip": str(assembly_bundle.relative_to(output)), "assembly_instance_count": len(instances),
         "motion_clearance": {k: motion[k] for k in ("method", "continuous_clearance_proof", "sample_count", "sampled_collision_count", "result")},
         "drawing_files": sorted(drawing_set), "bom_items": len(bom_rows(design)), "supplier_dependent_open_items": f["supplier_dependent_open_items"],
     }

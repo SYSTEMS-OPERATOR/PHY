@@ -14,9 +14,9 @@
       "valid_solid": true,
       "step_round_trip": "pass",
       "bounds_mm": [
-        300.00000020000016,
-        240.00000020000016,
-        8.00341919799105
+        300.0,
+        240.0,
+        8.0
       ],
       "volume_mm3": 571347.3012800335
     },
@@ -25,9 +25,9 @@
       "valid_solid": true,
       "step_round_trip": "pass",
       "bounds_mm": [
-        70.00000020000003,
-        25.00000020000003,
-        6.003170543591688
+        70.0,
+        25.0,
+        6.0
       ],
       "volume_mm3": 9519.446100961555
     },
@@ -36,9 +36,9 @@
       "valid_solid": true,
       "step_round_trip": "pass",
       "bounds_mm": [
-        70.00000020000004,
-        120.00000020000004,
-        8.003170543591688
+        70.0,
+        120.0,
+        8.0
       ],
       "volume_mm3": 65345.20369732059
     },
@@ -47,9 +47,9 @@
       "valid_solid": true,
       "step_round_trip": "pass",
       "bounds_mm": [
-        70.00000020000002,
-        8.010878829971436,
-        70.00000020000002
+        70.0,
+        8.0,
+        70.0
       ],
       "volume_mm3": 30955.706894743525
     },
@@ -58,9 +58,9 @@
       "valid_solid": true,
       "step_round_trip": "pass",
       "bounds_mm": [
-        85.00000020000004,
-        40.00528658637481,
-        55.002044182346424
+        85.0,
+        40.0,
+        55.0
       ],
       "volume_mm3": 156003.0953840658
     },
@@ -69,9 +69,9 @@
       "valid_solid": true,
       "step_round_trip": "pass",
       "bounds_mm": [
-        90.02797381992656,
-        6.027973819926554,
-        90.00000020000003
+        90.0,
+        6.0,
+        90.0
       ],
       "volume_mm3": 33877.9952956984
     },
@@ -80,9 +80,9 @@
       "valid_solid": true,
       "step_round_trip": "pass",
       "bounds_mm": [
-        20.000000200000002,
-        15.0000002,
-        10.0000002
+        20.0,
+        15.0,
+        10.0
       ],
       "volume_mm3": 3000.0
     },
@@ -91,9 +91,9 @@
       "valid_solid": true,
       "step_round_trip": "pass",
       "bounds_mm": [
-        327.00000020000004,
-        25.4000002,
-        25.4000002
+        327.0,
+        25.4,
+        25.4
       ],
       "volume_mm3": 92298.20249999998
     },
@@ -102,9 +102,9 @@
       "valid_solid": true,
       "step_round_trip": "pass",
       "bounds_mm": [
-        25.000000200000006,
-        25.000000200000006,
-        32.00326378899143
+        25.0,
+        25.0,
+        32.0
       ],
       "volume_mm3": 17229.115279533802
     },
@@ -113,9 +113,9 @@
       "valid_solid": true,
       "step_round_trip": "pass",
       "bounds_mm": [
-        28.000000200000002,
-        20.000000200000002,
-        8.000000200000002
+        28.0,
+        20.0,
+        8.0
       ],
       "volume_mm3": 4480.0
     },
@@ -124,9 +124,9 @@
       "valid_solid": true,
       "step_round_trip": "pass",
       "bounds_mm": [
-        17.012101184492753,
-        104.01210118449275,
-        17.009459231499694
+        17.0,
+        104.0,
+        17.0
       ],
       "volume_mm3": 23249.55577265779
     },
@@ -135,9 +135,9 @@
       "valid_solid": true,
       "step_round_trip": "pass",
       "bounds_mm": [
-        5.000000200000001,
-        30.0000002,
-        5.000000200000001
+        5.0,
+        30.0,
+        5.0
       ],
       "volume_mm3": 750.0
     },
@@ -146,9 +146,9 @@
       "valid_solid": true,
       "step_round_trip": "pass",
       "bounds_mm": [
-        26.00808146797878,
-        4.008081467978781,
-        26.000000200000006
+        26.0,
+        4.0,
+        26.0
       ],
       "volume_mm3": 1215.7963569392496
     },
@@ -157,9 +157,9 @@
       "valid_solid": true,
       "step_round_trip": "pass",
       "bounds_mm": [
-        35.01087882997144,
-        10.010878829971436,
-        35.00000020000002
+        35.0,
+        10.0,
+        35.0
       ],
       "volume_mm3": 7351.326809400116
     },
@@ -168,9 +168,9 @@
       "valid_solid": true,
       "step_round_trip": "pass",
       "bounds_mm": [
-        16.004973287986942,
-        45.00497328798694,
-        16.000000200000002
+        16.0,
+        45.0,
+        16.0
       ],
       "volume_mm3": 9047.786842338603
     },
@@ -179,9 +179,9 @@
       "valid_solid": true,
       "step_round_trip": "pass",
       "bounds_mm": [
-        45.01398700996328,
-        9.013987009963277,
-        45.00000020000002
+        45.0,
+        9.0,
+        45.0
       ],
       "volume_mm3": 12271.060904921731
     },
@@ -190,9 +190,9 @@
       "valid_solid": true,
       "step_round_trip": "pass",
       "bounds_mm": [
-        10.00310837999184,
-        10.000000200000002,
-        20.00310837999184
+        10.0,
+        10.0,
+        20.0
       ],
       "volume_mm3": 1570.7963267948965
     },
@@ -201,9 +201,9 @@
       "valid_solid": true,
       "step_round_trip": "pass",
       "bounds_mm": [
-        60.0018651079951,
-        6.001865107995103,
-        6.0000002000000014
+        60.0,
+        6.0,
+        6.0
       ],
       "volume_mm3": 1696.4600329384882
     },
@@ -212,14 +212,15 @@
       "valid_solid": true,
       "step_round_trip": "pass",
       "bounds_mm": [
-        45.01398700996328,
-        3.0139870099632766,
-        45.00000020000002
+        45.0,
+        3.0,
+        45.0
       ],
       "volume_mm3": 1884.9555921538756
     }
   ],
-  "assembly_step": "assembly/A0-R1-neutral-assembly.step",
+  "parts_step_bundle": "cad/A0-R1-parts-step.tar.gz",
+  "assembly_step_gzip": "assembly/A0-R1-neutral-assembly.step.gz",
   "assembly_instance_count": 35,
   "motion_clearance": {
     "method": "discrete centerline samples against registered AABBs",

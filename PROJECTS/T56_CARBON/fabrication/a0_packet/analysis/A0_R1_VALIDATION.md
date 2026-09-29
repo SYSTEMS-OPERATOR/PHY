@@ -10,7 +10,7 @@ a fabrication release or physical qualification.
 | Focused A0, geometry-contract, resolver and canon regression suite | 62 passed; 0 failed; 0 skipped |
 | Part STEP round trips | 19 passed |
 | Neutral assembly STEP import | passed; 35 located instances |
-| Repeat export determinism | 47 generated CAD/assembly/drawing files byte-identical |
+| Repeat export determinism | 10 packaged CAD/assembly/drawing files byte-identical |
 | Discrete motion screen | 35 pose pairs; 0 registered centerline/AABB hits; not continuous proof |
 | Convergence schema | valid |
 | Fabrication release / physical evidence | false / false |

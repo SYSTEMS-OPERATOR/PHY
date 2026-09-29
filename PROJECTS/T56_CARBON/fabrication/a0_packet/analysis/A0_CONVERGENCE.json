@@ -25,8 +25,20 @@
     "open_mission_inputs_in_scope": 0
   },
   "errors": [],
+  "fabrication_released": false,
+  "packet_revision": "A0-R1",
+  "physical_evidence_complete": false,
   "project": "T56_CARBON",
   "schema_valid": true,
   "scope": "T56_SINGLE_SIDE_KINEMATIC_STRUCTURAL_CLOSURE",
-  "scope_ready": false
+  "scope_ready": false,
+  "shop_review_release_blockers": [
+    "bearing static screen margin is below 1.0 at the provisional 6 J design-energy load; revise load distribution, bearing selection or accepted impact model before release",
+    "4 mm stop travel and force-displacement response require supplier/coupon verification before impact testing",
+    "combined-load calculations remain closed-form screens and require independent load-path review",
+    "independent drawing and load-path review has not been signed",
+    "supplier-dependent bearing, plunger, friction-stack, tether and bench interfaces remain open",
+    "continuous swept-solid clearance and minimum tool access remain unverified",
+    "first-article inspection and all guarded bench evidence remain unmeasured"
+  ]
 }

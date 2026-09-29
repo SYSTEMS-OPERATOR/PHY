@@ -1,0 +1,27 @@
+{
+  "packet_id": "T56_A0_SINGLE_SIDE_SHOULDER",
+  "revision": "A0-R1",
+  "status": "focused_validation_pass_independent_review_and_physical_evidence_open",
+  "fabrication_released": false,
+  "physical_evidence_complete": false,
+  "focused_tests": {"run": 62, "passed": 62, "failed": 0, "skipped": 0},
+  "step_round_trips": {"parts": 19, "passed": 19, "assembly_import": "pass"},
+  "located_assembly_instances": 35,
+  "repeat_export": {"files_compared": 10, "result": "byte_identical"},
+  "motion_screen": {"pose_pairs": 35, "registered_hits": 0, "continuous_proof": false},
+  "convergence_schema_valid": true,
+  "canon_controlled_files_changed": false,
+  "wider_suite": {
+    "entries_run": 96,
+    "completed_without_reported_failure": 87,
+    "import_errors": 9,
+    "missing_dependencies": ["pytest", "fastapi", "gymnasium"]
+  },
+  "open_engineering_blockers": [
+    "bearing static screen: 3250 N reaction exceeds unverified 3000 N threshold",
+    "4 mm stop compliance input lacks accepted supplier or coupon curve",
+    "supplier-dependent interfaces remain open",
+    "continuous clearance, guarding and tool access are unverified",
+    "physical inspection and bench evidence remain unmeasured"
+  ]
+}

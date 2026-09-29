@@ -11,7 +11,14 @@
     "pitch_stop_radius_mm": 35,
     "pitch_friction_breakaway_min_Nm": 7,
     "degraded_index_interval_deg": 15,
-    "service_handle_lever_mm": 55
+    "service_handle_lever_mm": 55,
+    "key_effective_length_mm": 25,
+    "bearing_center_span_mm": 60,
+    "root_pair_spacing_mm": 100,
+    "bench_fastener_lever_mm": 90,
+    "m10_tensile_stress_area_mm2": 58,
+    "stop_attachment_fastener_count": 2,
+    "stop_attachment_fastener_diameter_mm": 6
   },
   "material_minima": {
     "6061_T6": {
@@ -32,18 +39,13 @@
       "proof_MPa": 830,
       "ultimate_MPa": 1000,
       "basis": "project procurement minimum; verify fastener markings and lot certificate"
+    },
+    "HARDENED_KEY_STEEL": {
+      "yield_MPa": 500,
+      "basis": "project procurement minimum for the parallel key; verify material and hardness by lot"
     }
   },
-  "section": {
-    "dummy_tube_outer_mm": 25.4,
-    "dummy_tube_wall_mm": 3.175,
-    "pitch_shaft_diameter_mm": 17,
-    "rocker_width_mm": 25,
-    "rocker_thickness_mm": 6,
-    "rocker_pin_center_mm": 55,
-    "index_pin_diameter_mm": 8,
-    "index_sector_thickness_mm": 6
-  },
+  "section_authority": "a0_shoulder_mechanism.json#fabrication_geometry",
   "bearing_procurement_acceptance": {
     "type": "6003-2RS",
     "minimum_static_rating_per_bearing_N": 3000,
@@ -53,8 +55,10 @@
   "method_limits": [
     "closed-form rigid-joint checks do not replace FEA, coupon data, or article test",
     "nominal mass is conservatively represented at half-span and payload at the load station",
-    "linear stop force assumes full usable pad travel and triangular force-displacement response",
+    "linear stop force assumes 4 mm usable pad travel and triangular force-displacement response; this assumption is not accepted until a compression curve and first-article stack verify it",
     "bearing load sharing, friction, damping, backlash, acoustic output, temperature and fatigue remain physical measurements",
+    "bearing reactions use a conservative force-plus-couple screen and do not replace supplier life/static calculations",
+    "key, pin, plate and fastener checks use nominal load distribution without notch, preload-loss or fatigue credit",
     "no calculated result is a measured capability"
   ]
 }

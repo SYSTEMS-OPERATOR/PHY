@@ -1,0 +1,548 @@
+{
+  "method": "discrete centerline samples against registered AABBs",
+  "continuous_clearance_proof": false,
+  "sample_count": 35,
+  "sampled_collision_count": 0,
+  "result": "pass_at_samples_only",
+  "intentional_contacts": [
+    "pivot shoulder and link bore",
+    "shaft and bearing inner rings",
+    "bearing outer rings and yoke seats",
+    "shaft key and keyed hub/sector",
+    "dummy tube and split-clamp socket",
+    "stop pad and stop bracket only at declared hard stops"
+  ],
+  "limitations": [
+    "not a swept-solid or continuous collision proof",
+    "purchased hardware envelopes are provisional",
+    "guard and external bench are not modeled",
+    "tool clearance requires independent drawing and dry-assembly review"
+  ],
+  "samples": [
+    {
+      "scapular_deg": -10,
+      "pitch_deg": -32,
+      "S_mm": [
+        -204.164426,
+        -19.55065,
+        70
+      ],
+      "E_mm": [
+        -472.995673,
+        -19.55065,
+        -97.984407
+      ],
+      "registered_exclusion_hits": []
+    },
+    {
+      "scapular_deg": -10,
+      "pitch_deg": -30,
+      "S_mm": [
+        -204.164426,
+        -19.55065,
+        70
+      ],
+      "E_mm": [
+        -478.694479,
+        -19.55065,
+        -88.5
+      ],
+      "registered_exclusion_hits": []
+    },
+    {
+      "scapular_deg": -10,
+      "pitch_deg": 0,
+      "S_mm": [
+        -204.164426,
+        -19.55065,
+        70
+      ],
+      "E_mm": [
+        -521.164426,
+        -19.55065,
+        70.0
+      ],
+      "registered_exclusion_hits": []
+    },
+    {
+      "scapular_deg": -10,
+      "pitch_deg": 30,
+      "S_mm": [
+        -204.164426,
+        -19.55065,
+        70
+      ],
+      "E_mm": [
+        -478.694479,
+        -19.55065,
+        228.5
+      ],
+      "registered_exclusion_hits": []
+    },
+    {
+      "scapular_deg": -10,
+      "pitch_deg": 60,
+      "S_mm": [
+        -204.164426,
+        -19.55065,
+        70
+      ],
+      "E_mm": [
+        -362.664426,
+        -19.55065,
+        344.530053
+      ],
+      "registered_exclusion_hits": []
+    },
+    {
+      "scapular_deg": -10,
+      "pitch_deg": 90,
+      "S_mm": [
+        -204.164426,
+        -19.55065,
+        70
+      ],
+      "E_mm": [
+        -204.164426,
+        -19.55065,
+        387.0
+      ],
+      "registered_exclusion_hits": []
+    },
+    {
+      "scapular_deg": -10,
+      "pitch_deg": 92,
+      "S_mm": [
+        -204.164426,
+        -19.55065,
+        70
+      ],
+      "E_mm": [
+        -193.101286,
+        -19.55065,
+        386.806892
+      ],
+      "registered_exclusion_hits": []
+    },
+    {
+      "scapular_deg": -5,
+      "pitch_deg": -32,
+      "S_mm": [
+        -204.790708,
+        -14.793566,
+        70
+      ],
+      "E_mm": [
+        -473.621955,
+        -14.793566,
+        -97.984407
+      ],
+      "registered_exclusion_hits": []
+    },
+    {
+      "scapular_deg": -5,
+      "pitch_deg": -30,
+      "S_mm": [
+        -204.790708,
+        -14.793566,
+        70
+      ],
+      "E_mm": [
+        -479.320761,
+        -14.793566,
+        -88.5
+      ],
+      "registered_exclusion_hits": []
+    },
+    {
+      "scapular_deg": -5,
+      "pitch_deg": 0,
+      "S_mm": [
+        -204.790708,
+        -14.793566,
+        70
+      ],
+      "E_mm": [
+        -521.790708,
+        -14.793566,
+        70.0
+      ],
+      "registered_exclusion_hits": []
+    },
+    {
+      "scapular_deg": -5,
+      "pitch_deg": 30,
+      "S_mm": [
+        -204.790708,
+        -14.793566,
+        70
+      ],
+      "E_mm": [
+        -479.320761,
+        -14.793566,
+        228.5
+      ],
+      "registered_exclusion_hits": []
+    },
+    {
+      "scapular_deg": -5,
+      "pitch_deg": 60,
+      "S_mm": [
+        -204.790708,
+        -14.793566,
+        70
+      ],
+      "E_mm": [
+        -363.290708,
+        -14.793566,
+        344.530053
+      ],
+      "registered_exclusion_hits": []
+    },
+    {
+      "scapular_deg": -5,
+      "pitch_deg": 90,
+      "S_mm": [
+        -204.790708,
+        -14.793566,
+        70
+      ],
+      "E_mm": [
+        -204.790708,
+        -14.793566,
+        387.0
+      ],
+      "registered_exclusion_hits": []
+    },
+    {
+      "scapular_deg": -5,
+      "pitch_deg": 92,
+      "S_mm": [
+        -204.790708,
+        -14.793566,
+        70
+      ],
+      "E_mm": [
+        -193.727568,
+        -14.793566,
+        386.806892
+      ],
+      "registered_exclusion_hits": []
+    },
+    {
+      "scapular_deg": 0,
+      "pitch_deg": -32,
+      "S_mm": [
+        -205.0,
+        -10.0,
+        70
+      ],
+      "E_mm": [
+        -473.831246,
+        -10.0,
+        -97.984407
+      ],
+      "registered_exclusion_hits": []
+    },
+    {
+      "scapular_deg": 0,
+      "pitch_deg": -30,
+      "S_mm": [
+        -205.0,
+        -10.0,
+        70
+      ],
+      "E_mm": [
+        -479.530053,
+        -10.0,
+        -88.5
+      ],
+      "registered_exclusion_hits": []
+    },
+    {
+      "scapular_deg": 0,
+      "pitch_deg": 0,
+      "S_mm": [
+        -205.0,
+        -10.0,
+        70
+      ],
+      "E_mm": [
+        -522.0,
+        -10.0,
+        70.0
+      ],
+      "registered_exclusion_hits": []
+    },
+    {
+      "scapular_deg": 0,
+      "pitch_deg": 30,
+      "S_mm": [
+        -205.0,
+        -10.0,
+        70
+      ],
+      "E_mm": [
+        -479.530053,
+        -10.0,
+        228.5
+      ],
+      "registered_exclusion_hits": []
+    },
+    {
+      "scapular_deg": 0,
+      "pitch_deg": 60,
+      "S_mm": [
+        -205.0,
+        -10.0,
+        70
+      ],
+      "E_mm": [
+        -363.5,
+        -10.0,
+        344.530053
+      ],
+      "registered_exclusion_hits": []
+    },
+    {
+      "scapular_deg": 0,
+      "pitch_deg": 90,
+      "S_mm": [
+        -205.0,
+        -10.0,
+        70
+      ],
+      "E_mm": [
+        -205.0,
+        -10.0,
+        387.0
+      ],
+      "registered_exclusion_hits": []
+    },
+    {
+      "scapular_deg": 0,
+      "pitch_deg": 92,
+      "S_mm": [
+        -205.0,
+        -10.0,
+        70
+      ],
+      "E_mm": [
+        -193.93686,
+        -10.0,
+        386.806892
+      ],
+      "registered_exclusion_hits": []
+    },
+    {
+      "scapular_deg": 5,
+      "pitch_deg": -32,
+      "S_mm": [
+        -204.790708,
+        -5.206434,
+        70
+      ],
+      "E_mm": [
+        -473.621955,
+        -5.206434,
+        -97.984407
+      ],
+      "registered_exclusion_hits": []
+    },
+    {
+      "scapular_deg": 5,
+      "pitch_deg": -30,
+      "S_mm": [
+        -204.790708,
+        -5.206434,
+        70
+      ],
+      "E_mm": [
+        -479.320761,
+        -5.206434,
+        -88.5
+      ],
+      "registered_exclusion_hits": []
+    },
+    {
+      "scapular_deg": 5,
+      "pitch_deg": 0,
+      "S_mm": [
+        -204.790708,
+        -5.206434,
+        70
+      ],
+      "E_mm": [
+        -521.790708,
+        -5.206434,
+        70.0
+      ],
+      "registered_exclusion_hits": []
+    },
+    {
+      "scapular_deg": 5,
+      "pitch_deg": 30,
+      "S_mm": [
+        -204.790708,
+        -5.206434,
+        70
+      ],
+      "E_mm": [
+        -479.320761,
+        -5.206434,
+        228.5
+      ],
+      "registered_exclusion_hits": []
+    },
+    {
+      "scapular_deg": 5,
+      "pitch_deg": 60,
+      "S_mm": [
+        -204.790708,
+        -5.206434,
+        70
+      ],
+      "E_mm": [
+        -363.290708,
+        -5.206434,
+        344.530053
+      ],
+      "registered_exclusion_hits": []
+    },
+    {
+      "scapular_deg": 5,
+      "pitch_deg": 90,
+      "S_mm": [
+        -204.790708,
+        -5.206434,
+        70
+      ],
+      "E_mm": [
+        -204.790708,
+        -5.206434,
+        387.0
+      ],
+      "registered_exclusion_hits": []
+    },
+    {
+      "scapular_deg": 5,
+      "pitch_deg": 92,
+      "S_mm": [
+        -204.790708,
+        -5.206434,
+        70
+      ],
+      "E_mm": [
+        -193.727568,
+        -5.206434,
+        386.806892
+      ],
+      "registered_exclusion_hits": []
+    },
+    {
+      "scapular_deg": 10,
+      "pitch_deg": -32,
+      "S_mm": [
+        -204.164426,
+        -0.44935,
+        70
+      ],
+      "E_mm": [
+        -472.995673,
+        -0.44935,
+        -97.984407
+      ],
+      "registered_exclusion_hits": []
+    },
+    {
+      "scapular_deg": 10,
+      "pitch_deg": -30,
+      "S_mm": [
+        -204.164426,
+        -0.44935,
+        70
+      ],
+      "E_mm": [
+        -478.694479,
+        -0.44935,
+        -88.5
+      ],
+      "registered_exclusion_hits": []
+    },
+    {
+      "scapular_deg": 10,
+      "pitch_deg": 0,
+      "S_mm": [
+        -204.164426,
+        -0.44935,
+        70
+      ],
+      "E_mm": [
+        -521.164426,
+        -0.44935,
+        70.0
+      ],
+      "registered_exclusion_hits": []
+    },
+    {
+      "scapular_deg": 10,
+      "pitch_deg": 30,
+      "S_mm": [
+        -204.164426,
+        -0.44935,
+        70
+      ],
+      "E_mm": [
+        -478.694479,
+        -0.44935,
+        228.5
+      ],
+      "registered_exclusion_hits": []
+    },
+    {
+      "scapular_deg": 10,
+      "pitch_deg": 60,
+      "S_mm": [
+        -204.164426,
+        -0.44935,
+        70
+      ],
+      "E_mm": [
+        -362.664426,
+        -0.44935,
+        344.530053
+      ],
+      "registered_exclusion_hits": []
+    },
+    {
+      "scapular_deg": 10,
+      "pitch_deg": 90,
+      "S_mm": [
+        -204.164426,
+        -0.44935,
+        70
+      ],
+      "E_mm": [
+        -204.164426,
+        -0.44935,
+        387.0
+      ],
+      "registered_exclusion_hits": []
+    },
+    {
+      "scapular_deg": 10,
+      "pitch_deg": 92,
+      "S_mm": [
+        -204.164426,
+        -0.44935,
+        70
+      ],
+      "E_mm": [
+        -193.101286,
+        -0.44935,
+        386.806892
+      ],
+      "registered_exclusion_hits": []
+    }
+  ]
+}

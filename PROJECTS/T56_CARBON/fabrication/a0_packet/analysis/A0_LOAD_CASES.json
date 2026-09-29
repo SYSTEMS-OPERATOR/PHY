@@ -9,8 +9,14 @@
     "effective_length_mm": 317,
     "tube_area_mm2": 282.25750000000005,
     "tube_inertia_mm4": 23711.10009114583,
-    "tube_section_modulus_mm3": 1867.015755208333
+    "tube_section_modulus_mm3": 1867.015755208333,
+    "fabrication_geometry_revision": "A0-R1"
   },
+  "screening_blockers": [
+    "bearing static screen margin is below 1.0 at the provisional 6 J design-energy load; revise load distribution, bearing selection or accepted impact model before release",
+    "4 mm stop travel and force-displacement response require supplier/coupon verification before impact testing",
+    "combined-load calculations remain closed-form screens and require independent load-path review"
+  ],
   "cases": {
     "LC-SHO-001": {
       "status": "analysis_complete_physical_validation_open",
@@ -59,7 +65,12 @@
         "service_root_moment_Nm": 31.7,
         "retention_design_moment_Nm": 95.1,
         "tube_stress_at_retention_design_MPa": 50.93690277369307,
-        "tube_yield_margin_x": 4.711711685068348
+        "tube_yield_margin_x": 4.711711685068348,
+        "root_pair_couple_force_N": 951.0,
+        "root_pivot_bolt_shear_stress_MPa": 11.638319944666858,
+        "root_pivot_bolt_shear_margin_x": 41.17438992102793,
+        "bench_fastener_tension_stress_MPa": 18.218390804597703,
+        "bench_fastener_proof_margin_x": 45.558359621451096
       },
       "acceptance_criteria": {
         "service_force_each_direction_N": 100.0,
@@ -79,9 +90,24 @@
         "linear_spring_peak_stop_force_N": 3000.0,
         "peak_stop_moment_Nm": 105.00000000000001,
         "tube_stress_at_design_energy_MPa": 56.23948255770529,
-        "shaft_von_mises_stress_MPa": 188.5268765130492,
-        "shaft_yield_margin_x": 3.4743056911286763,
-        "rocker_weak_axis_euler_buckling_N": 101159.36676223985
+        "shaft_von_mises_stress_MPa": 199.65420332617884,
+        "shaft_keyway_factor": 1.6,
+        "shaft_factored_von_mises_stress_MPa": 319.44672532188616,
+        "shaft_yield_margin_x": 2.050420142325761,
+        "key_tangential_force_N": 12352.94117647059,
+        "key_shear_stress_MPa": 98.82352941176471,
+        "key_bearing_stress_MPa": 197.64705882352942,
+        "key_shear_margin_x": 2.921117433399892,
+        "key_bearing_margin_x": 2.5297619047619047,
+        "maximum_screened_bearing_reaction_N": 3250.0,
+        "bearing_static_threshold_N": 3000,
+        "bearing_static_screen_margin_x": 0.9230769230769231,
+        "yoke_net_section_stress_MPa": 11.607142857142858,
+        "stop_attachment_fastener_shear_MPa": 53.05164769729845,
+        "stop_attachment_fastener_margin_x": 9.032720833886405,
+        "index_pin_double_shear_stress_MPa": 29.841551829730378,
+        "rocker_weak_axis_euler_buckling_N": 283246.2269342716,
+        "stop_compliance_basis_verified": false
       },
       "acceptance_criteria": {
         "impact_energy_J": 2.0,
@@ -139,8 +165,10 @@
   "method_limits": [
     "closed-form rigid-joint checks do not replace FEA, coupon data, or article test",
     "nominal mass is conservatively represented at half-span and payload at the load station",
-    "linear stop force assumes full usable pad travel and triangular force-displacement response",
+    "linear stop force assumes 4 mm usable pad travel and triangular force-displacement response; this assumption is not accepted until a compression curve and first-article stack verify it",
     "bearing load sharing, friction, damping, backlash, acoustic output, temperature and fatigue remain physical measurements",
+    "bearing reactions use a conservative force-plus-couple screen and do not replace supplier life/static calculations",
+    "key, pin, plate and fastener checks use nominal load distribution without notch, preload-loss or fatigue credit",
     "no calculated result is a measured capability"
   ]
 }

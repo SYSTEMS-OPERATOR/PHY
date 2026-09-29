@@ -15,9 +15,9 @@
     "handedness": "right_handed",
     "definition_status": "locked",
     "dimensioned_datum_status": "locked",
-    "datum_revision": "A0-D001-R0",
-    "dimensioned_datum_evidence": "fabrication/a0_packet/drawings/A0-D001-fixture-datum.svg",
-    "source": "requirements/a0_shoulder_mechanism.json; fabrication/a0_packet/drawings/A0-D001-fixture-datum.svg"
+    "datum_revision": "A0-D001-R1",
+    "dimensioned_datum_evidence": "fabrication/a0_packet/drawings/A0-D001-R1-fixture-datum.svg",
+    "source": "requirements/a0_shoulder_mechanism.json; fabrication/a0_packet/drawings/A0-D001-R1-fixture-datum.svg"
   },
   "locked_parameters": [
     {
@@ -128,7 +128,7 @@
       "source_requirement": "dimensioned representative root fixture for A0 article",
       "frame_id": "FRAME_T56_THORAX",
       "tolerance": {"linear_mm": 0.25},
-      "source": "A0-D001-R0; requirements/a0_shoulder_mechanism.json",
+      "source": "A0-D001-R1; requirements/a0_shoulder_mechanism.json",
       "consumers": ["shoulder_girdle_root_interface", "scapular_carriage"]
     },
     {
@@ -141,7 +141,7 @@
       "source_requirement": "dimensioned representative root fixture for A0 article",
       "frame_id": "FRAME_T56_THORAX",
       "tolerance": {"linear_mm": 0.25},
-      "source": "A0-D001-R0; requirements/a0_shoulder_mechanism.json",
+      "source": "A0-D001-R1; requirements/a0_shoulder_mechanism.json",
       "consumers": ["shoulder_girdle_root_interface", "clavicular_linkage"]
     },
     {
@@ -161,7 +161,7 @@
       "source_requirement": "selected planar parallel four-bar mechanism",
       "frame_id": "FRAME_T56_THORAX",
       "tolerance": {"linear_mm": 0.5},
-      "source": "DR-T56-A0-SHOULDER-001; A0-D002-R0",
+      "source": "DR-T56-A0-SHOULDER-001; A0-D002-R1",
       "consumers": ["scapular_carriage"]
     },
     {
@@ -174,7 +174,7 @@
       "source_requirement": "anterior rocker pair in selected parallel four-bar",
       "frame_id": "FRAME_T56_THORAX",
       "tolerance": {"linear_mm": 0.25},
-      "source": "DR-T56-A0-SHOULDER-001; A0-D002-R0",
+      "source": "DR-T56-A0-SHOULDER-001; A0-D002-R1",
       "consumers": ["clavicular_linkage"]
     },
     {
@@ -204,7 +204,7 @@
       "source_requirement": "selected A0 single-axis pitch cartridge neutral pose",
       "frame_id": "FRAME_T56_THORAX",
       "tolerance": {"linear_mm": 0.5},
-      "source": "DR-T56-A0-SHOULDER-001; A0-D002-R0 and A0-D004-R0",
+      "source": "DR-T56-A0-SHOULDER-001; A0-D002-R1 and A0-D004-R1",
       "consumers": ["humeral_shoulder_cartridge", "dummy_humerus_test_article"]
     },
     {
@@ -219,7 +219,7 @@
       "source_requirement": "A0 commanded range inside independent physical stops at -32 and +92 degrees",
       "frame_id": "FRAME_T56_THORAX",
       "tolerance": {"linear_mm": 0.5, "angular_deg": 0.5},
-      "source": "DR-T56-A0-SHOULDER-001; A0-D004-R0",
+      "source": "DR-T56-A0-SHOULDER-001; A0-D004-R1",
       "consumers": ["humeral_shoulder_cartridge", "collision_model"]
     },
     {
@@ -231,7 +231,7 @@
       "required_for_simulation": true,
       "source_requirement": "project-local A0 load-station decision compared with, but not adopted from, the PR #92 external upper-arm proxy",
       "tolerance": {"linear_mm": 1.0},
-      "source": "requirements/a0_shoulder_mechanism.json; reports/REFERENCE_DIMENSIONS.md; A0-D003-R0",
+      "source": "requirements/a0_shoulder_mechanism.json; reports/REFERENCE_DIMENSIONS.md; A0-D003-R1",
       "consumers": ["dummy_humerus_test_article", "shoulder_load_cases"]
     },
     {
@@ -244,7 +244,7 @@
       "source_requirement": "conservative A0 fixture guarding exclusion; not anatomical geometry",
       "frame_id": "FRAME_T56_THORAX",
       "tolerance": {"linear_mm": 2.0},
-      "source": "DR-T56-A0-SHOULDER-001; A0-D002-R0",
+      "source": "DR-T56-A0-SHOULDER-001; A0-D002-R1",
       "consumers": ["shoulder_collision_model"]
     },
     {
@@ -257,7 +257,7 @@
       "source_requirement": "conservative representative fixture exclusion; not anatomical or outer-form geometry",
       "frame_id": "FRAME_T56_THORAX",
       "tolerance": {"linear_mm": 2.0},
-      "source": "DR-T56-A0-SHOULDER-001; A0-D002-R0",
+      "source": "DR-T56-A0-SHOULDER-001; A0-D002-R1",
       "consumers": ["shoulder_collision_model", "guarding"]
     },
     {
@@ -270,7 +270,7 @@
       "source_requirement": "A0 tool, connector, and guard-removal access allocation",
       "frame_id": "FRAME_T56_THORAX",
       "tolerance": {"linear_mm": 2.0},
-      "source": "DR-T56-A0-SHOULDER-001; A0-D002-R0",
+      "source": "DR-T56-A0-SHOULDER-001; A0-D002-R1",
       "consumers": ["service_plan", "routing", "guards"]
     }
   ],

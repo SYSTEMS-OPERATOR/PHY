@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "profile_id": "PHY_F28_R1",
+  "age_years": 28,
+  "adult": true,
+  "sex_reference": "female",
+  "default_height": "age28_cohort_arithmetic_mean",
+  "aesthetic_adjustments_percent": {
+    "shoulder": -1.0,
+    "waist": -3.0,
+    "hip": 2.0
+  },
+  "maximum_absolute_adjustment_percent": 3.0,
+  "canon_effect": "none",
+  "status": "reference_assembly_and_passive_form_study_not_structural_release",
+  "design_choices_mm": {
+    "head_height": 220,
+    "shoulder_center_medial_offset": 14,
+    "hip_center_spacing_fraction_of_bicristal_breadth": 0.68,
+    "hip_center_height_above_trochanterion": 35,
+    "ankle_center_height": 70,
+    "wrist_to_fingertip": "handlength"
+  },
+  "design_note": "This is a proposed stylized mechanical armature, not a measured anatomical skeleton. Joint centers and curves are explicit design datums. No claim that the slight refinements objectively maximize attractiveness."
+}

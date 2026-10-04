@@ -1,0 +1,22 @@
+{
+  "name": "phy-studio",
+  "version": "1.0.0",
+  "description": "Offline PHY armature and A0-R1 review studio",
+  "scripts": {
+    "build": "node build.mjs",
+    "check": "node --check src/app.js",
+    "test:browser": "node tests/smoke.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "three": "0.180.0"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.10",
+    "playwright": "1.63.0"
+  },
+  "private": true
+}

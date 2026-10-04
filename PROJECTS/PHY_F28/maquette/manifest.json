@@ -1,0 +1,250 @@
+{
+  "scale": 0.25,
+  "height_mm": 408.1005435,
+  "status": "passive_supported_form_study",
+  "stock_thickness_mm": 3,
+  "cut_sheets": 2,
+  "cut_parts": 26,
+  "kerf_compensation_mm": 0,
+  "pin_hole_mm": 1.6,
+  "post_hole_mm": 4.2,
+  "material_qualification": "none; not a structural or actuated armature",
+  "former_positions": [
+    {
+      "part": "M-RIB_1",
+      "lower_face_z_mm": 259.6848
+    },
+    {
+      "part": "M-RIB_2",
+      "lower_face_z_mm": 268.635
+    },
+    {
+      "part": "M-RIB_3",
+      "lower_face_z_mm": 277.5851
+    },
+    {
+      "part": "M-RIB_4",
+      "lower_face_z_mm": 286.5353
+    },
+    {
+      "part": "M-RIB_5",
+      "lower_face_z_mm": 295.4855
+    },
+    {
+      "part": "M-RIB_6",
+      "lower_face_z_mm": 304.4357
+    },
+    {
+      "part": "M-RIB_7",
+      "lower_face_z_mm": 313.3859
+    },
+    {
+      "part": "M-PELVIS-1",
+      "lower_face_z_mm": 219.4321
+    },
+    {
+      "part": "M-PELVIS-2",
+      "lower_face_z_mm": 235.6821
+    }
+  ],
+  "bill_of_materials": [
+    {
+      "id": "M-UPPER",
+      "qty": 2,
+      "description": "upper-arm link",
+      "width_mm": 12,
+      "length_mm": 82.3105,
+      "stock": "3 mm birch plywood",
+      "note": "Hole centers 70.310 mm; \u00d81.6 mm for 1.5 mm wire pin"
+    },
+    {
+      "id": "M-FORE",
+      "qty": 2,
+      "description": "forearm link",
+      "width_mm": 12,
+      "length_mm": 66.8743,
+      "stock": "3 mm birch plywood",
+      "note": "Hole centers 54.874 mm; \u00d81.6 mm for 1.5 mm wire pin"
+    },
+    {
+      "id": "M-HAND",
+      "qty": 2,
+      "description": "hand form link",
+      "width_mm": 12,
+      "length_mm": 53.0797,
+      "stock": "3 mm birch plywood",
+      "note": "Hole centers 41.080 mm; \u00d81.6 mm for 1.5 mm wire pin"
+    },
+    {
+      "id": "M-THIGH",
+      "qty": 2,
+      "description": "thigh link",
+      "width_mm": 12,
+      "length_mm": 116.4911,
+      "stock": "3 mm birch plywood",
+      "note": "Hole centers 104.491 mm; \u00d81.6 mm for 1.5 mm wire pin"
+    },
+    {
+      "id": "M-SHANK",
+      "qty": 2,
+      "description": "shank link",
+      "width_mm": 12,
+      "length_mm": 111.0839,
+      "stock": "3 mm birch plywood",
+      "note": "Hole centers 99.084 mm; \u00d81.6 mm for 1.5 mm wire pin"
+    },
+    {
+      "id": "M-RIB_1",
+      "qty": 1,
+      "description": "thoracic former 1",
+      "width_mm": 55.193,
+      "length_mm": 37.9565,
+      "stock": "3 mm birch plywood",
+      "note": "Lower face Z=259.685 mm above base top; post axis y=-8 mm"
+    },
+    {
+      "id": "M-RIB_2",
+      "qty": 1,
+      "description": "thoracic former 2",
+      "width_mm": 61.5577,
+      "length_mm": 41.6297,
+      "stock": "3 mm birch plywood",
+      "note": "Lower face Z=268.635 mm above base top; post axis y=-8 mm"
+    },
+    {
+      "id": "M-RIB_3",
+      "qty": 1,
+      "description": "thoracic former 3",
+      "width_mm": 65.7386,
+      "length_mm": 44.3186,
+      "stock": "3 mm birch plywood",
+      "note": "Lower face Z=277.585 mm above base top; post axis y=-8 mm"
+    },
+    {
+      "id": "M-RIB_4",
+      "qty": 1,
+      "description": "thoracic former 4",
+      "width_mm": 67.0478,
+      "length_mm": 45.3029,
+      "stock": "3 mm birch plywood",
+      "note": "Lower face Z=286.535 mm above base top; post axis y=-8 mm"
+    },
+    {
+      "id": "M-RIB_5",
+      "qty": 1,
+      "description": "thoracic former 5",
+      "width_mm": 65.2701,
+      "length_mm": 44.3186,
+      "stock": "3 mm birch plywood",
+      "note": "Lower face Z=295.486 mm above base top; post axis y=-8 mm"
+    },
+    {
+      "id": "M-RIB_6",
+      "qty": 1,
+      "description": "thoracic former 6",
+      "width_mm": 60.6979,
+      "length_mm": 41.6297,
+      "stock": "3 mm birch plywood",
+      "note": "Lower face Z=304.436 mm above base top; post axis y=-8 mm"
+    },
+    {
+      "id": "M-RIB_7",
+      "qty": 1,
+      "description": "thoracic former 7",
+      "width_mm": 54.0832,
+      "length_mm": 37.9565,
+      "stock": "3 mm birch plywood",
+      "note": "Lower face Z=313.386 mm above base top; post axis y=-8 mm"
+    },
+    {
+      "id": "M-PELVIS-1",
+      "qty": 1,
+      "description": "pelvic former",
+      "width_mm": 69.3323,
+      "length_mm": 36,
+      "stock": "3 mm birch plywood",
+      "note": "Lower face Z=219.432 mm"
+    },
+    {
+      "id": "M-PELVIS-2",
+      "qty": 1,
+      "description": "pelvic former",
+      "width_mm": 69.3323,
+      "length_mm": 36,
+      "stock": "3 mm birch plywood",
+      "note": "Lower face Z=235.682 mm"
+    },
+    {
+      "id": "M-SHOULDER",
+      "qty": 1,
+      "description": "shoulder bridge",
+      "width_mm": 95.5608,
+      "length_mm": 16,
+      "stock": "3 mm birch plywood",
+      "note": "Horizontal shoulder pin axis Z=330.886 mm; wire-wrap to rear post"
+    },
+    {
+      "id": "M-HIP",
+      "qty": 1,
+      "description": "hip bridge",
+      "width_mm": 59.146,
+      "length_mm": 16,
+      "stock": "3 mm birch plywood",
+      "note": "Hip pin axis Z=220.682 mm; wire-wrap to rear post"
+    },
+    {
+      "id": "M-BASE",
+      "qty": 2,
+      "description": "support base",
+      "width_mm": 100,
+      "length_mm": 80,
+      "stock": "3 mm birch plywood",
+      "note": "Laminate two layers. Post passes through both: engagement 6 mm. Add scrap reinforcement if needed."
+    },
+    {
+      "id": "M-FOOT-R",
+      "qty": 1,
+      "description": "foot silhouette",
+      "width_mm": 23.2011,
+      "length_mm": 61.7826,
+      "stock": "3 mm birch plywood",
+      "note": "Glue ankle link to footprint; intended fixed standing maquette"
+    },
+    {
+      "id": "M-FOOT-L",
+      "qty": 1,
+      "description": "foot silhouette",
+      "width_mm": 23.2011,
+      "length_mm": 61.7826,
+      "stock": "3 mm birch plywood",
+      "note": "Glue ankle link to footprint; intended fixed standing maquette"
+    },
+    {
+      "id": "M-HEAD",
+      "qty": 1,
+      "description": "frontal head silhouette",
+      "width_mm": 36.9864,
+      "length_mm": 55.0,
+      "stock": "3 mm birch plywood",
+      "note": "Glue to upper post. Proposed head height, not measured chin\u2013crown."
+    },
+    {
+      "id": "M-POST",
+      "qty": 1,
+      "description": "rear support post",
+      "width_mm": 4,
+      "length_mm": 391.6005,
+      "stock": "4 mm hardwood dowel",
+      "note": "Includes 6 mm base engagement. Sand/test \u00d84.2 coupon before assembly."
+    },
+    {
+      "id": "M-PINS",
+      "qty": 10,
+      "description": "limb pins / bridge lashing",
+      "width_mm": 1.5,
+      "length_mm": 12,
+      "stock": "1.5 mm soft copper wire",
+      "note": "Bend/capture both ends. No load rating. Adjust wire length to actual stack."
+    }
+  ]
+}

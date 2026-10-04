@@ -1,0 +1,81 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs/promises';
+import os from 'node:os';
+import path from 'node:path';
+import { fileURLToPath, pathToFileURL } from 'node:url';
+import { chromium } from 'playwright';
+
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
+const output=process.env.PHY_TEST_OUTPUT||path.join(os.tmpdir(),'phy-studio-qa');
+await fs.mkdir(output,{recursive:true});
+const browser=await chromium.launch({headless:true,executablePath:process.env.PHY_CHROMIUM_EXECUTABLE||undefined,
+  args:['--no-sandbox','--enable-webgl','--ignore-gpu-blocklist','--use-angle=swiftshader']});
+const errors=[];
+try {
+  const page=await browser.newPage({viewport:{width:1440,height:1000},deviceScaleFactor:1});
+  page.on('pageerror',e=>errors.push(e.message));
+  page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});
+  await page.goto(pathToFileURL(path.join(root,'studio/dist/PHY-Studio.html')).href);
+  await page.waitForFunction(()=>window.PHY_STUDIO?.getState().webgl);
+  assert.equal(await page.evaluate(()=>PHY_STUDIO.getState().model),'F28_REFINED');
+  await page.screenshot({path:path.join(output,'desktop.png'),fullPage:true});
+  await page.click('#pose-t');await page.click('[data-view="front"]');
+  assert.equal(await page.evaluate(()=>PHY_STUDIO.getState().pose),0);
+  await page.screenshot({path:path.join(output,'t-pose.png')});
+  await page.click('[data-model="A0_R1"]');
+  assert.equal(await page.evaluate(()=>PHY_STUDIO.getState().modelParts),35);
+  assert.ok(await page.locator('#height-number').isDisabled());
+  await page.screenshot({path:path.join(output,'a0.png')});
+  await page.click('[data-model="REFERENCE_KIT"]');
+  assert.equal(await page.evaluate(()=>PHY_STUDIO.getState().modelParts),18);
+  await page.click('[data-model="F28_REFINED"]');
+  await page.fill('#height-number','1700');await page.locator('#height-number').press('Tab');
+  assert.equal(await page.evaluate(()=>PHY_STUDIO.getState().height),1700);
+  await page.selectOption('#part-select','femur_R');await page.click('#isolate');
+  assert.ok(await page.evaluate(()=>PHY_STUDIO.getState().isolated));await page.click('#show-all');
+  await page.click('#mat-carbon');assert.equal(await page.evaluate(()=>PHY_STUDIO.getState().palette),'carbon');
+  // Surface picking must work independently of the inspector dropdown.
+  await page.evaluate(()=>PHY_STUDIO.inspectPart(null));
+  const position=await page.evaluate(()=>PHY_STUDIO.projectPart('femur_R'));
+  await page.mouse.click(...position);
+  assert.ok(await page.evaluate(()=>PHY_STUDIO.getState().selected));
+  await page.click('#measure');
+  for(const id of ['femur_R','tibia_R']){const p=await page.evaluate(id=>PHY_STUDIO.projectPart(id),id);await page.mouse.click(...p);}
+  assert.equal(await page.evaluate(()=>PHY_STUDIO.getState().points.length),2);
+  await page.click('#measure');
+  await page.click('#open-build');assert.ok(await page.locator('#modal-backdrop').evaluate(e=>e.classList.contains('open')));
+  await page.click('[data-tab="readiness"]');assert.match(await page.locator('#modal-content').innerText(),/3.25 kN/);
+  await page.keyboard.press('Escape');
+  const getDownload=async(format,filename)=>{
+    await page.selectOption('#export-format',format);
+    const [download]=await Promise.all([page.waitForEvent('download'),page.click('#export')]);
+    const file=path.join(output,filename);await download.saveAs(file);return fs.readFile(file);
+  };
+  const stl=await getDownload('stl','armature.stl'),count=stl.readUInt32LE(80);
+  assert.equal(stl.length,84+count*50);assert.ok(count>10000);
+  let maxZ=-Infinity;
+  for(let i=0;i<count;i++)for(let v=0;v<3;v++)maxZ=Math.max(maxZ,stl.readFloatLE(84+i*50+12+v*12+8));
+  assert.ok(Math.abs(maxZ-1700)<.01,'STL must preserve current height in canonical millimeter coordinates');
+  const glb=await getDownload('glb','armature.glb');
+  assert.equal(glb.readUInt32LE(0),0x46546c67);assert.equal(glb.readUInt32LE(4),2);assert.equal(glb.readUInt32LE(8),glb.length);
+  const json=JSON.parse(glb.subarray(20,20+glb.readUInt32LE(12)).toString());assert.ok(json.meshes.length>80);
+  const review=JSON.parse(await getDownload('json','review.json'));
+  assert.equal(review.review_state.height,1700);assert.equal(review.review_state.fabrication_released,false);
+  const [maquette]=await Promise.all([page.waitForEvent('download'),page.click('#download-maquette')]);
+  await maquette.saveAs(path.join(output,'maquette.zip'));
+  const zip=await fs.readFile(path.join(output,'maquette.zip'));
+  assert.equal(zip.readUInt32LE(0),0x04034b50);assert.equal(zip.readUInt32LE(zip.length-22),0x06054b50);
+  assert.ok(zip.includes(Buffer.from('cut-sheet-1.svg')));assert.ok(zip.includes(Buffer.from('BUILD.md')));
+  // Both source provenance and all primary controls remain reachable on a phone.
+  await page.setViewportSize({width:390,height:844});
+  await page.click('[data-model="F28_REFINED"]');await page.click('#mat-wood');
+  const widths=await page.evaluate(()=>[document.documentElement.scrollWidth,innerWidth]);assert.equal(widths[0],widths[1]);
+  await page.locator('#export').scrollIntoViewIfNeeded();assert.ok(await page.locator('#export').isVisible());
+  await page.evaluate(()=>scrollTo(0,0));await page.waitForTimeout(400);
+  await page.screenshot({path:path.join(output,'mobile.png'),fullPage:true});
+  assert.deepEqual(errors,[]);
+  await fs.writeFile(path.join(output,'results.json'),JSON.stringify({status:'passed',browserErrors:errors,stlTriangles:count,stlHeightMm:maxZ,glbMeshes:json.meshes.length,mobileWidth:widths[0]},null,2));
+  console.log('PHY Studio browser smoke passed: offline WebGL, five models, surface selection/ruler, height/pose/isolation, valid GLB/STL/JSON, embedded maquette ZIP, and 390px mobile layout.');
+} finally {
+  await browser.close();
+}

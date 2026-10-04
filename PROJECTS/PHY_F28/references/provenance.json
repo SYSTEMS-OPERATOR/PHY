@@ -1,0 +1,11 @@
+{
+  "schema_version": "1.0.0",
+  "snapshot_sha256": "efae9a08a90f68e4418251621d0065da849efef7b389835cc8557c3f0287ebbe",
+  "source_catalog": "PROJECTS/T56_CARBON/references/dimensional_sources.json",
+  "selection": "Gender == Female AND Age == 28; no height, span, BMI, race, or attractiveness filter",
+  "statistic": "arithmetic mean of each measurement; marginal means are not a real individual",
+  "cohort_size": 92,
+  "units": "mm",
+  "omitted": "Subject identifiers and demographic fields; no personal data needed for model",
+  "mapping_policy": "External landmarks and dimensions are reference evidence. Mechanical centers, sections, head height, curves and interfaces are explicit project design choices, never osteometric measurements."
+}

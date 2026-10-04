@@ -2,3 +2,5 @@ __pycache__/
 */__pycache__/
 *.pyc
 benchmark_results.json
+node_modules/
+studio/dist/

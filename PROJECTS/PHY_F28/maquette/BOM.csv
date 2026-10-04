@@ -1,0 +1,23 @@
+id,qty,description,width_mm,length_mm,stock,note
+M-UPPER,2,upper-arm link,12,82.3105,3 mm birch plywood,Hole centers 70.310 mm; Ø1.6 mm for 1.5 mm wire pin
+M-FORE,2,forearm link,12,66.8743,3 mm birch plywood,Hole centers 54.874 mm; Ø1.6 mm for 1.5 mm wire pin
+M-HAND,2,hand form link,12,53.0797,3 mm birch plywood,Hole centers 41.080 mm; Ø1.6 mm for 1.5 mm wire pin
+M-THIGH,2,thigh link,12,116.4911,3 mm birch plywood,Hole centers 104.491 mm; Ø1.6 mm for 1.5 mm wire pin
+M-SHANK,2,shank link,12,111.0839,3 mm birch plywood,Hole centers 99.084 mm; Ø1.6 mm for 1.5 mm wire pin
+M-RIB_1,1,thoracic former 1,55.193,37.9565,3 mm birch plywood,Lower face Z=259.685 mm above base top; post axis y=-8 mm
+M-RIB_2,1,thoracic former 2,61.5577,41.6297,3 mm birch plywood,Lower face Z=268.635 mm above base top; post axis y=-8 mm
+M-RIB_3,1,thoracic former 3,65.7386,44.3186,3 mm birch plywood,Lower face Z=277.585 mm above base top; post axis y=-8 mm
+M-RIB_4,1,thoracic former 4,67.0478,45.3029,3 mm birch plywood,Lower face Z=286.535 mm above base top; post axis y=-8 mm
+M-RIB_5,1,thoracic former 5,65.2701,44.3186,3 mm birch plywood,Lower face Z=295.486 mm above base top; post axis y=-8 mm
+M-RIB_6,1,thoracic former 6,60.6979,41.6297,3 mm birch plywood,Lower face Z=304.436 mm above base top; post axis y=-8 mm
+M-RIB_7,1,thoracic former 7,54.0832,37.9565,3 mm birch plywood,Lower face Z=313.386 mm above base top; post axis y=-8 mm
+M-PELVIS-1,1,pelvic former,69.3323,36,3 mm birch plywood,Lower face Z=219.432 mm
+M-PELVIS-2,1,pelvic former,69.3323,36,3 mm birch plywood,Lower face Z=235.682 mm
+M-SHOULDER,1,shoulder bridge,95.5608,16,3 mm birch plywood,Horizontal shoulder pin axis Z=330.886 mm; wire-wrap to rear post
+M-HIP,1,hip bridge,59.146,16,3 mm birch plywood,Hip pin axis Z=220.682 mm; wire-wrap to rear post
+M-BASE,2,support base,100,80,3 mm birch plywood,Laminate two layers. Post passes through both: engagement 6 mm. Add scrap reinforcement if needed.
+M-FOOT-R,1,foot silhouette,23.2011,61.7826,3 mm birch plywood,Glue ankle link to footprint; intended fixed standing maquette
+M-FOOT-L,1,foot silhouette,23.2011,61.7826,3 mm birch plywood,Glue ankle link to footprint; intended fixed standing maquette
+M-HEAD,1,frontal head silhouette,36.9864,55.0,3 mm birch plywood,"Glue to upper post. Proposed head height, not measured chin–crown."
+M-POST,1,rear support post,4,391.6005,4 mm hardwood dowel,Includes 6 mm base engagement. Sand/test Ø4.2 coupon before assembly.
+M-PINS,10,limb pins / bridge lashing,1.5,12,1.5 mm soft copper wire,Bend/capture both ends. No load rating. Adjust wire length to actual stack.

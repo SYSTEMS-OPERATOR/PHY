@@ -43,11 +43,52 @@ stations/anchors and left-qualified topology/provenance.
 | Meshes and reflection | Exact reflected vertices/winding, anchors, topology and provenance; all 151 reference meshes are watertight, nondegenerate and positive-volume |
 | Node syntax/build | Checks and offline bundle rebuild passed |
 | Actual Three.js exports without WebGL | 125 unique bone IDs in GLB, 54 hand identities with layout hash/input pointers/evidence, mirrored thumb parent, hand-ID search, hardware/group exclusions and explored 1700 mm complete-frame STL passed |
-| Full repeat/cross-version package and protected-file checks | Pending validation checkpoint |
+| Full five-model repeat | All 21 package files match byte-for-byte, including HTML/JSON/STL/reports/manifests/ZIP |
+| Cross-version package | All 21 standard-library package files match byte-for-byte on Python 3.11.16 and 3.12.14; all four generated ZIP CRC checks pass |
+| Preserved/generated review files | All 11 checked-in HTML/report/maquette files match regeneration; maquette files and schedule match the base exactly |
+| Protected files | No diff in BODY/MIND/SOUL, BoneSpec/schema/base, SOPHY canon, PROJECTS/T56_CARBON or maquette files |
+| Source measurement audit | All 54 existing hand BoneSpec records retain wholly unknown dimensions; no numeric proxy input is adopted into them |
+| Canon CLI | Canon 1.0.0, H = span = 1676.4 mm; pass true, zero issues |
+| Internal visual inspection | Palm projection of actual right-hand meshes inspected; this is not WebGL, articular-surface or continuous-clearance validation |
 
 An initial frame-test harness expected a forearm `center_mm` field that those
 proxies do not expose; it now checks their actual distal endpoints. All corrected
 frame cases pass. This did not require changing the forearm geometry.
+
+## Convergence status
+
+Hand identity coverage is complete for this bounded checkpoint; all 27 IDs per
+side have individually inspectable meshes and source correspondence. Overall
+adult identity coverage is **125 / 206**, with 74 grouped and seven unrepresented.
+Dimensional fidelity verified, physical evidence complete and fabrication
+released all remain **false**. Hand joints/axes/contact geometry remain open.
+
+## Reproduce
+
+```bash
+npm run check --prefix studio
+npm run build --prefix studio
+python bin/export_phy_studio.py --sync-review
+npm run test:logic --prefix studio
+python -m pytest tests/test_hand_bone_geometry.py tests/test_bone_equivalence.py \
+  tests/test_phy_studio.py tests/test_sophy_geometry_canon.py \
+  tests/test_sophy_project_canon_bindings.py tests/test_reference_dimensions.py \
+  tests/test_shoulder_dimensions.py tests/test_t56_a0_geometry.py \
+  tests/test_t56_a0_scope.py tests/test_t56_a0_validation.py \
+  tests/test_t56_geometry_contracts.py tests/test_bone_count_pytest.py \
+  tests/test_component_3d.py -q
+python bin/export_phy_studio.py --output /tmp/phy-hand-repeat
+diff -qr studio/dist /tmp/phy-hand-repeat
+python bin/export_phy_studio.py --without-a0 --output /tmp/phy-hand-stdlib
+PYTHONPATH=. python bin/export_sophy_canon.py --height-mm 1676.4 \
+  --output /tmp/phy-hand-canon.json \
+  --validation-report /tmp/phy-hand-canon-validation.json
+# Browser launch requires the pinned Chromium executable; an absent browser is not a pass.
+npm run test:browser --prefix studio
+```
+
+Run the standard-library export and bone/hand/Studio/canon/bindings suites with
+both Python 3.11 and 3.12, then compare the two export directories recursively.
 
 ## Unrun / unresolved
 

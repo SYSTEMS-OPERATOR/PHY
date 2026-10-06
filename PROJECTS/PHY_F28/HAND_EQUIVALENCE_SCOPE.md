@@ -52,3 +52,14 @@ maquette checks, independent regional identity checks, positive-volume meshes,
 actual Three.js export checks and repeat-package comparisons. Record any skipped
 browser/physical checks; open a PR without waiting for the long remote smoke
 workflow and do not auto-merge. Next coverage scope is individual feet.
+
+## Checkpoint dispositions
+
+BH-01–03 and BH-05: implemented for bounded identity/placement review and tested
+locally. Both hands have exact independent 27-ID coverage and right-derived
+left geometry; the offline packet and actual GLB metadata expose each identity.
+Remote browser/full-package CI remains required before merge. BH-04 remains
+open for dimensional/morphological/functional fidelity: all 54 hand BoneSpec
+records still have wholly unknown dimensions, and no articular interface or
+working mechanism is adopted. Results and skipped checks are in
+`reports/HAND_EQUIVALENCE_VALIDATION.md`.

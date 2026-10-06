@@ -199,6 +199,20 @@ class BoneEquivalenceTest(unittest.TestCase):
             for p in files:
                 self.assertEqual(p.read_bytes(), (Path(tmp) / p.name).read_bytes(), p.name)
 
+    def test_arm_stations_do_not_depend_on_runtime_float_sum(self):
+        # Emulate pre-3.12 left-to-right accumulation so a reversion to sum()
+        # fails locally on 3.12 too, not only on the 3.11 CI runner.
+        def sequential_sum(values, start=0):
+            result = start
+            for value in values:
+                result += value
+            return result
+
+        with patch.object(sm, "sum", sequential_sum, create=True):
+            legacy_runtime_model = sm.build_armature()
+        self.assertEqual(legacy_runtime_model["design_datums"], self.model["design_datums"])
+        self.assertEqual(legacy_runtime_model["maquette_members"], self.model["maquette_members"])
+
     def test_standard_library_package_is_complete_and_repeatable(self):
         with tempfile.TemporaryDirectory() as tmp:
             one, two = Path(tmp) / "one", Path(tmp) / "two"

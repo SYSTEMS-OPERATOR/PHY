@@ -193,7 +193,9 @@ def build_armature(height_mm=None, refinement=1.0, arm_drop_deg=75.0, span_equal
     knee_z, ankle_z = m["lateralfemoralepicondyleheight"], d["ankle_center_height"]*scale
     target_span = height if span_equals_height else m["span"]
     proxies = [m["acromionradialelength"], m["radialestylionlength"], m["handlength"]]
-    closure = (target_span/2-shoulder_x)/sum(proxies)
+    # Python 3.12 changed float sum(); keep the preserved maquette's stations
+    # identical on the 3.11 package runner and the 3.12 Studio runner.
+    closure = (target_span/2-shoulder_x)/math.fsum(proxies)
     upper, fore, hand = [v*closure for v in proxies]
     parts, landmarks, maquette_formers, maquette_members = [], {}, [], []
 

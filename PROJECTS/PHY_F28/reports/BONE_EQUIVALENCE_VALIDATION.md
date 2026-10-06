@@ -26,7 +26,42 @@ status accompany the meshes/coverage JSON. The offline Studio adds coverage,
 bone-ID search and bone-only view/GLB/STL export. Export selection uses the same
 tested role logic as the viewer, rather than material color as bone classification.
 
-## Executed checks
+## CI follow-up: Python 3.11 / 3.12
+
+The [Python package run](https://github.com/SYSTEMS-OPERATOR/PHY/actions/runs/37394427649)
+on PR #98 head `a67b187` failed only the exact preserved-maquette comparison
+(`test_bone_equivalence.py`); 166 other tests passed and six were skipped. The
+[PHY Studio run](https://github.com/SYSTEMS-OPERATOR/PHY/actions/runs/37394426618)
+on that same head passed, including browser smoke and deterministic export.
+
+The package runner uses Python 3.11.16; Studio uses Python 3.12. Python 3.12
+changed floating-point `sum()`. The three external arm-station proxies sum to
+`736.532609` with 3.11's left-to-right accumulation, versus
+`736.5326090000001` with 3.12's sum and `math.fsum`. This one-ULP denominator
+difference changed raw SVG dimensions in `cut-sheet-1.svg` and
+`assembly-stencil.svg`. It was not a bone inventory or physical geometry defect.
+
+The arm-chain closure now explicitly uses `math.fsum`. The saved maquette and
+its exact byte comparison are unchanged. A new regression emulates pre-3.12
+accumulation and checks that arm datums and maquette member schedules remain
+identical, so reverting to `sum()` is caught on a 3.12 workstation too.
+
+Follow-up checks executed on 2026-10-06 UTC:
+
+| Check | Result / limits |
+| --- | --- |
+| Reproduce before correction, Python 3.11.16 | Same `cut-sheet-1.svg` assertion and last-digit difference as CI |
+| Bone/Studio/canon/bindings suites, Python 3.11.16 | 36 tests and 144 subtests passed; one optional CadQuery viewer test skipped because CadQuery is not installed in this isolated environment |
+| Full focused engineering suite below, Python 3.12.14 | 103 tests and 381 subtests passed; no skips |
+| Cross-version export | All 20 standard-library package files match byte-for-byte between 3.11.16 and 3.12.14, including ZIP; all three generated ZIP CRC checks pass |
+| Regenerated five-model review packet | All ten checked-in HTML/report/maquette files match byte-for-byte; no baseline/artifact regeneration is committed |
+| Canon CLI | Canon 1.0.0, H = span = 1676.4 mm; pass true, zero issues |
+
+The follow-up does not claim a local full-repository or browser pass. New-head
+remote CI must confirm the correction; the successful Studio run above applies
+to the preceding head.
+
+## Executed checks at the initial checkpoint
 
 | Check | Result / limits |
 | --- | --- |
@@ -48,14 +83,15 @@ The initial local archive comparison encountered an incomplete default-output ZI
 a completed regeneration and fresh repeat produced matching, CRC-valid archives.
 The repeatable-package regression now checks archive completeness as well as bytes.
 
-## Not executed / not passed
+## Initial local limitations / outstanding evidence
 
 - `npm run test:browser --prefix studio` could not launch: the local Playwright
   executable is absent. Both the pinned browser and a stable-version download
   failed (non-ZIP responses / gateway failure). **Local visual WebGL, interaction,
   screenshot and mobile-layout checks are unrun**, not passed. The extended CI
-  smoke checks cover bone-ID selection, 71-bone visibility and GLB metadata; they
-  remain required before merge.
+  smoke checks cover bone-ID selection, 71-bone visibility and GLB metadata. The
+  successful remote Studio run is recorded above; latest-head CI remains required
+  before merge.
 - `python -m pytest -q` stopped during collection: unchanged privacy/cognition/
   social/distributed modules require missing `fastapi` and `gymnasium`. Four
   collection errors and three dependency skips; **not a full-repository pass**.
@@ -92,7 +128,7 @@ npm run test:browser --prefix studio
 
 ## Independent-review checklist / next bounded work
 
-1. Run the browser smoke in a browser-capable environment. Inspect front, side,
+1. Confirm latest-head CI passes, including browser smoke. Inspect front, side,
    back and T/A poses, role filters and every region's coverage; do not accept
    mesh counts alone as anatomical equivalence.
 2. Keep each unknown dimension/articular interface visibly unverified. In

@@ -22,7 +22,10 @@ export function exportGroup(root, meshes, boneOnly) {
     const clone=new THREE.Mesh(mesh.geometry,mesh.material);clone.name=mesh.name;
     clone.applyMatrix4(mesh.matrixWorld);
     clone.userData={part_id:mesh.name,role:p.role??'separate_CAD',bone_id:p.bone_id??null,
-      grouped_bone_ids:p.grouped_bone_ids??[],dimensional_fidelity:p.dimensional_fidelity??'unverified',status:'reference/unreleased'};
+      grouped_bone_ids:p.grouped_bone_ids??[],dimensional_fidelity:p.dimensional_fidelity??'unverified',
+      physical_evidence:p.physical_evidence??'unmeasured',geometry_inputs:p.geometry_inputs??[],
+      hand_layout_sha256:p.hand_layout_sha256??null,topology_parent:p.topology_parent??null,
+      topology_child:p.topology_child??null,status:'reference/unreleased'};
     group.add(clone);
   }
   return group;

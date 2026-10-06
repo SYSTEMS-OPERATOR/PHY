@@ -252,6 +252,22 @@ def export(output, include_a0=True):
                       "The retained humerus/femur/tibia/fibula/clavicle proxies are station-based forms, not measured bones.",
                       "No clearances, structural sections, joint interfaces or manufacturing release are asserted."]
     (output / "CORE_PROXY_LAYOUT.md").write_text("\n".join(layout_report)+"\n", encoding="utf-8")
+    hand_report = ["# Individual hand proxy layout / HAND_V1", "",
+                   "27 identities per hand: eight carpals, five metacarpals and 14 phalanges.",
+                   "Static radial/palmar thumb review pose; working opposition and all joint interfaces remain unresolved.",
+                   "Numeric values are project-local provisional display choices, not measured bone lengths or canon.",
+                   "Source: `PROJECTS/PHY_F28/profiles/f28.json#/hand_proxy_layout`", "",
+                   "Layout SHA-256: `"+refined["hand_proxy_layout_sha256"]+"`", "",
+                   "The wrist-relative frame follows the distal arm, radial radius side and anterior palmar direction.",
+                   "Left hand geometry, winding, anchors and topology IDs reflect the authored right side.", "",
+                   "| Input | Governing value |", "| --- | --- |"]
+    hand_report += ["| "+key+" | `"+json.dumps(value, sort_keys=True)+"` |"
+                    for key, value in refined["hand_proxy_layout"].items()]
+    hand_report += ["", "External hand breadth and span-derived hand station size this display layout only.",
+                    "Intentional gaps separate display segments; they are not qualified joint fits or clearances.",
+                    "Carpal row order and selected chain parents describe partial topology, not a complete articulation graph.",
+                    "Dimensional fidelity unverified; physical evidence unmeasured; fabrication release false."]
+    (output / "HAND_PROXY_LAYOUT.md").write_text("\n".join(hand_report)+"\n", encoding="utf-8")
     models = [dict(mean, id="F28_MEAN", name="F28 / arithmetic mean"),
               dict(refined, id="F28_REFINED", name="F28 / gentle refinement"),
               dict(sophy, id="SOPHY_SCALE", name="SOPHY / 1676.4 mm reference overlay")]
@@ -291,7 +307,9 @@ def export(output, include_a0=True):
                "- Knee height uses lateral epicondyle height as a station proxy; ankle datum is 70 mm.",
                f"- The arm-chain station factor is {mean['design_datums']['arm_chain_closure_scale']:.6f}: allocate measured span among upper-arm/forearm/hand external ratios after subtracting shoulder-center spacing. This reconciles incompatible endpoint definitions; it is not measured bone length or an aesthetic adjustment.",
                "- 71 core individual bone proxies: 26 spine, 25 thorax, four shoulder girdle, two adult hips, six arm and eight leg bones.",
-               "- 128 identities remain grouped forms; seven ear/hyoid identities are unrepresented. See BONE_EQUIVALENCE.md for all 206 dispositions.",
+               "- 54 individual hand proxies add eight carpals, five metacarpals and 14 phalanges per side, for 125 individual identities in all.",
+               "- 74 skull/foot identities remain grouped forms; seven ear/hyoid identities are unrepresented. See BONE_EQUIVALENCE.md for all 206 dispositions.",
+               "- The hand layout is a static display pose, not working opposition or measured bone geometry; see HAND_PROXY_LAYOUT.md.",
                "- Bone-proxy layout is project-local provisional placement, not measured osteometry. Missing facial source records stay missing.",
                "- Couplings are hardware envelopes. Joint axes, bearing fits, retention and load paths are not resolved for the whole body.",
                "- Elliptical torso envelope uses marginal girths; interpolation and anatomical appearance are design, not scan data.", "",
@@ -331,6 +349,6 @@ if __name__ == "__main__":
     if args.sync_review:
         review = ROOT / "PROJECTS/PHY_F28/reports"
         review.mkdir(parents=True, exist_ok=True)
-        for name in ("BONE_EQUIVALENCE.json", "BONE_EQUIVALENCE.md", "CORE_PROXY_LAYOUT.md"):
+        for name in ("BONE_EQUIVALENCE.json", "BONE_EQUIVALENCE.md", "CORE_PROXY_LAYOUT.md", "HAND_PROXY_LAYOUT.md"):
             shutil.copyfile(args.output / name, review / name)
         shutil.copyfile(args.output / "PHY-Studio.html", ROOT / "studio/PHY-Studio.html")

@@ -1,8 +1,8 @@
 # PHY adult bone-equivalence coverage
 
-Status: core distribution review only; dimensions/morphology unverified, physical evidence unmeasured, fabrication release false.
+Status: core/hand distribution review only; dimensions/morphology unverified, physical evidence unmeasured, fabrication release false.
 
-206 adult identities: 71 individual project proxies, 128 grouped-form identities, 7 unrepresented.
+206 adult identities: 125 individual project proxies, 74 grouped-form identities, 7 unrepresented.
 193 existing canonical source records are unchanged; 13 facial records remain missing.
 
 One adult fused hip, sacrum and coccyx each. Hardware, cartilage, teeth and support rails never increase bone coverage.
@@ -18,7 +18,7 @@ One adult fused hip, sacrum and coccyx each. Hardware, cartilage, teeth and supp
 | pelvis | 2 | 2 | 0 | 0 |
 | upper_limb | 6 | 6 | 0 | 0 |
 | lower_limb | 8 | 8 | 0 | 0 |
-| hand | 54 | 0 | 54 | 0 |
+| hand | 54 | 54 | 0 | 0 |
 | foot | 52 | 0 | 52 | 0 |
 
 ## Outstanding source records
@@ -52,8 +52,8 @@ All individual proxies use provisional project geometry. Count equivalence is no
 | BONE_C7 | spine | individual_project_proxy | vertebra_C7 | skeleton/bones/bone_c7.py |
 | BONE_CALCANEUS_L | foot | grouped_form_proxy | foot_L | skeleton/bones/bone_calcaneus_l.py |
 | BONE_CALCANEUS_R | foot | grouped_form_proxy | foot_R | skeleton/bones/bone_calcaneus_r.py |
-| BONE_CAPITATE_L | hand | grouped_form_proxy | palm_L | skeleton/bones/bone_capitate_l.py |
-| BONE_CAPITATE_R | hand | grouped_form_proxy | palm_R | skeleton/bones/bone_capitate_r.py |
+| BONE_CAPITATE_L | hand | individual_project_proxy | capitate_L | skeleton/bones/bone_capitate_l.py |
+| BONE_CAPITATE_R | hand | individual_project_proxy | capitate_R | skeleton/bones/bone_capitate_r.py |
 | BONE_CLAVICLE_L | shoulder_girdle | individual_project_proxy | clavicle_L | skeleton/bones/bone_clavicle_l.py |
 | BONE_CLAVICLE_R | shoulder_girdle | individual_project_proxy | clavicle_R | skeleton/bones/bone_clavicle_r.py |
 | BONE_COCCYX | spine | individual_project_proxy | coccyx | skeleton/bones/bone_coccyx.py |
@@ -65,8 +65,8 @@ All individual proxies use provisional project geometry. Count equivalence is no
 | BONE_FIBULA_L | lower_limb | individual_project_proxy | fibular_L | skeleton/bones/bone_fibula_l.py |
 | BONE_FIBULA_R | lower_limb | individual_project_proxy | fibular_R | skeleton/bones/bone_fibula_r.py |
 | BONE_FRONTAL | skull | grouped_form_proxy | head_arch_0 | skeleton/bones/bone_frontal.py |
-| BONE_HAMATE_L | hand | grouped_form_proxy | palm_L | skeleton/bones/bone_hamate_l.py |
-| BONE_HAMATE_R | hand | grouped_form_proxy | palm_R | skeleton/bones/bone_hamate_r.py |
+| BONE_HAMATE_L | hand | individual_project_proxy | hamate_L | skeleton/bones/bone_hamate_l.py |
+| BONE_HAMATE_R | hand | individual_project_proxy | hamate_R | skeleton/bones/bone_hamate_r.py |
 | BONE_HIP_L | pelvis | individual_project_proxy | hip_bone_L | skeleton/bones/bone_hip_l.py |
 | BONE_HIP_R | pelvis | individual_project_proxy | hip_bone_R | skeleton/bones/bone_hip_r.py |
 | BONE_HUMERUS_L | upper_limb | individual_project_proxy | upper_arm_L | skeleton/bones/bone_humerus_l.py |
@@ -87,8 +87,8 @@ All individual proxies use provisional project geometry. Count equivalence is no
 | BONE_LACRIMAL_R | skull | grouped_form_proxy | head_arch_0 | MISSING |
 | BONE_LATERAL_CUNEIFORM_L | foot | grouped_form_proxy | foot_L | skeleton/bones/bone_lateral_cuneiform_l.py |
 | BONE_LATERAL_CUNEIFORM_R | foot | grouped_form_proxy | foot_R | skeleton/bones/bone_lateral_cuneiform_r.py |
-| BONE_LUNATE_L | hand | grouped_form_proxy | palm_L | skeleton/bones/bone_lunate_l.py |
-| BONE_LUNATE_R | hand | grouped_form_proxy | palm_R | skeleton/bones/bone_lunate_r.py |
+| BONE_LUNATE_L | hand | individual_project_proxy | lunate_L | skeleton/bones/bone_lunate_l.py |
+| BONE_LUNATE_R | hand | individual_project_proxy | lunate_R | skeleton/bones/bone_lunate_r.py |
 | BONE_MALLEUS_L | ear | unrepresented | — | skeleton/bones/bone_malleus_l.py |
 | BONE_MALLEUS_R | ear | unrepresented | — | skeleton/bones/bone_malleus_r.py |
 | BONE_MANDIBLE | skull | grouped_form_proxy | head_arch_0 | skeleton/bones/bone_mandible.py |
@@ -96,16 +96,16 @@ All individual proxies use provisional project geometry. Count equivalence is no
 | BONE_MAXILLA_R | skull | grouped_form_proxy | head_arch_0 | MISSING |
 | BONE_MEDIAL_CUNEIFORM_L | foot | grouped_form_proxy | foot_L | skeleton/bones/bone_medial_cuneiform_l.py |
 | BONE_MEDIAL_CUNEIFORM_R | foot | grouped_form_proxy | foot_R | skeleton/bones/bone_medial_cuneiform_r.py |
-| BONE_META1_L | hand | grouped_form_proxy | palm_L | skeleton/bones/bone_meta1_l.py |
-| BONE_META1_R | hand | grouped_form_proxy | palm_R | skeleton/bones/bone_meta1_r.py |
-| BONE_META2_L | hand | grouped_form_proxy | palm_L | skeleton/bones/bone_meta2_l.py |
-| BONE_META2_R | hand | grouped_form_proxy | palm_R | skeleton/bones/bone_meta2_r.py |
-| BONE_META3_L | hand | grouped_form_proxy | palm_L | skeleton/bones/bone_meta3_l.py |
-| BONE_META3_R | hand | grouped_form_proxy | palm_R | skeleton/bones/bone_meta3_r.py |
-| BONE_META4_L | hand | grouped_form_proxy | palm_L | skeleton/bones/bone_meta4_l.py |
-| BONE_META4_R | hand | grouped_form_proxy | palm_R | skeleton/bones/bone_meta4_r.py |
-| BONE_META5_L | hand | grouped_form_proxy | palm_L | skeleton/bones/bone_meta5_l.py |
-| BONE_META5_R | hand | grouped_form_proxy | palm_R | skeleton/bones/bone_meta5_r.py |
+| BONE_META1_L | hand | individual_project_proxy | meta1_L | skeleton/bones/bone_meta1_l.py |
+| BONE_META1_R | hand | individual_project_proxy | meta1_R | skeleton/bones/bone_meta1_r.py |
+| BONE_META2_L | hand | individual_project_proxy | meta2_L | skeleton/bones/bone_meta2_l.py |
+| BONE_META2_R | hand | individual_project_proxy | meta2_R | skeleton/bones/bone_meta2_r.py |
+| BONE_META3_L | hand | individual_project_proxy | meta3_L | skeleton/bones/bone_meta3_l.py |
+| BONE_META3_R | hand | individual_project_proxy | meta3_R | skeleton/bones/bone_meta3_r.py |
+| BONE_META4_L | hand | individual_project_proxy | meta4_L | skeleton/bones/bone_meta4_l.py |
+| BONE_META4_R | hand | individual_project_proxy | meta4_R | skeleton/bones/bone_meta4_r.py |
+| BONE_META5_L | hand | individual_project_proxy | meta5_L | skeleton/bones/bone_meta5_l.py |
+| BONE_META5_R | hand | individual_project_proxy | meta5_R | skeleton/bones/bone_meta5_r.py |
 | BONE_MT1_L | foot | grouped_form_proxy | foot_L | skeleton/bones/bone_mt1_l.py |
 | BONE_MT1_R | foot | grouped_form_proxy | foot_R | skeleton/bones/bone_mt1_r.py |
 | BONE_MT2_L | foot | grouped_form_proxy | foot_L | skeleton/bones/bone_mt2_l.py |
@@ -127,36 +127,36 @@ All individual proxies use provisional project geometry. Count equivalence is no
 | BONE_PAR_R | skull | grouped_form_proxy | head_arch_0 | skeleton/bones/bone_par_r.py |
 | BONE_PATELLA_L | lower_limb | individual_project_proxy | patella_L | skeleton/bones/bone_patella_l.py |
 | BONE_PATELLA_R | lower_limb | individual_project_proxy | patella_R | skeleton/bones/bone_patella_r.py |
-| BONE_PHAL_1_1_L | hand | grouped_form_proxy | finger_L_0 | skeleton/bones/bone_phal_1_1_l.py |
-| BONE_PHAL_1_1_R | hand | grouped_form_proxy | finger_R_0 | skeleton/bones/bone_phal_1_1_r.py |
-| BONE_PHAL_1_2_L | hand | grouped_form_proxy | finger_tip_L_0 | skeleton/bones/bone_phal_1_2_l.py |
-| BONE_PHAL_1_2_R | hand | grouped_form_proxy | finger_tip_R_0 | skeleton/bones/bone_phal_1_2_r.py |
-| BONE_PHAL_2_1_L | hand | grouped_form_proxy | finger_L_1 | skeleton/bones/bone_phal_2_1_l.py |
-| BONE_PHAL_2_1_R | hand | grouped_form_proxy | finger_R_1 | skeleton/bones/bone_phal_2_1_r.py |
-| BONE_PHAL_2_2_L | hand | grouped_form_proxy | finger_L_1 | skeleton/bones/bone_phal_2_2_l.py |
-| BONE_PHAL_2_2_R | hand | grouped_form_proxy | finger_R_1 | skeleton/bones/bone_phal_2_2_r.py |
-| BONE_PHAL_2_3_L | hand | grouped_form_proxy | finger_tip_L_1 | skeleton/bones/bone_phal_2_3_l.py |
-| BONE_PHAL_2_3_R | hand | grouped_form_proxy | finger_tip_R_1 | skeleton/bones/bone_phal_2_3_r.py |
-| BONE_PHAL_3_1_L | hand | grouped_form_proxy | finger_L_2 | skeleton/bones/bone_phal_3_1_l.py |
-| BONE_PHAL_3_1_R | hand | grouped_form_proxy | finger_R_2 | skeleton/bones/bone_phal_3_1_r.py |
-| BONE_PHAL_3_2_L | hand | grouped_form_proxy | finger_L_2 | skeleton/bones/bone_phal_3_2_l.py |
-| BONE_PHAL_3_2_R | hand | grouped_form_proxy | finger_R_2 | skeleton/bones/bone_phal_3_2_r.py |
-| BONE_PHAL_3_3_L | hand | grouped_form_proxy | finger_tip_L_2 | skeleton/bones/bone_phal_3_3_l.py |
-| BONE_PHAL_3_3_R | hand | grouped_form_proxy | finger_tip_R_2 | skeleton/bones/bone_phal_3_3_r.py |
-| BONE_PHAL_4_1_L | hand | grouped_form_proxy | finger_L_3 | skeleton/bones/bone_phal_4_1_l.py |
-| BONE_PHAL_4_1_R | hand | grouped_form_proxy | finger_R_3 | skeleton/bones/bone_phal_4_1_r.py |
-| BONE_PHAL_4_2_L | hand | grouped_form_proxy | finger_L_3 | skeleton/bones/bone_phal_4_2_l.py |
-| BONE_PHAL_4_2_R | hand | grouped_form_proxy | finger_R_3 | skeleton/bones/bone_phal_4_2_r.py |
-| BONE_PHAL_4_3_L | hand | grouped_form_proxy | finger_tip_L_3 | skeleton/bones/bone_phal_4_3_l.py |
-| BONE_PHAL_4_3_R | hand | grouped_form_proxy | finger_tip_R_3 | skeleton/bones/bone_phal_4_3_r.py |
-| BONE_PHAL_5_1_L | hand | grouped_form_proxy | finger_L_4 | skeleton/bones/bone_phal_5_1_l.py |
-| BONE_PHAL_5_1_R | hand | grouped_form_proxy | finger_R_4 | skeleton/bones/bone_phal_5_1_r.py |
-| BONE_PHAL_5_2_L | hand | grouped_form_proxy | finger_L_4 | skeleton/bones/bone_phal_5_2_l.py |
-| BONE_PHAL_5_2_R | hand | grouped_form_proxy | finger_R_4 | skeleton/bones/bone_phal_5_2_r.py |
-| BONE_PHAL_5_3_L | hand | grouped_form_proxy | finger_tip_L_4 | skeleton/bones/bone_phal_5_3_l.py |
-| BONE_PHAL_5_3_R | hand | grouped_form_proxy | finger_tip_R_4 | skeleton/bones/bone_phal_5_3_r.py |
-| BONE_PISIFORM_L | hand | grouped_form_proxy | palm_L | skeleton/bones/bone_pisiform_l.py |
-| BONE_PISIFORM_R | hand | grouped_form_proxy | palm_R | skeleton/bones/bone_pisiform_r.py |
+| BONE_PHAL_1_1_L | hand | individual_project_proxy | phal_1_1_L | skeleton/bones/bone_phal_1_1_l.py |
+| BONE_PHAL_1_1_R | hand | individual_project_proxy | phal_1_1_R | skeleton/bones/bone_phal_1_1_r.py |
+| BONE_PHAL_1_2_L | hand | individual_project_proxy | phal_1_2_L | skeleton/bones/bone_phal_1_2_l.py |
+| BONE_PHAL_1_2_R | hand | individual_project_proxy | phal_1_2_R | skeleton/bones/bone_phal_1_2_r.py |
+| BONE_PHAL_2_1_L | hand | individual_project_proxy | phal_2_1_L | skeleton/bones/bone_phal_2_1_l.py |
+| BONE_PHAL_2_1_R | hand | individual_project_proxy | phal_2_1_R | skeleton/bones/bone_phal_2_1_r.py |
+| BONE_PHAL_2_2_L | hand | individual_project_proxy | phal_2_2_L | skeleton/bones/bone_phal_2_2_l.py |
+| BONE_PHAL_2_2_R | hand | individual_project_proxy | phal_2_2_R | skeleton/bones/bone_phal_2_2_r.py |
+| BONE_PHAL_2_3_L | hand | individual_project_proxy | phal_2_3_L | skeleton/bones/bone_phal_2_3_l.py |
+| BONE_PHAL_2_3_R | hand | individual_project_proxy | phal_2_3_R | skeleton/bones/bone_phal_2_3_r.py |
+| BONE_PHAL_3_1_L | hand | individual_project_proxy | phal_3_1_L | skeleton/bones/bone_phal_3_1_l.py |
+| BONE_PHAL_3_1_R | hand | individual_project_proxy | phal_3_1_R | skeleton/bones/bone_phal_3_1_r.py |
+| BONE_PHAL_3_2_L | hand | individual_project_proxy | phal_3_2_L | skeleton/bones/bone_phal_3_2_l.py |
+| BONE_PHAL_3_2_R | hand | individual_project_proxy | phal_3_2_R | skeleton/bones/bone_phal_3_2_r.py |
+| BONE_PHAL_3_3_L | hand | individual_project_proxy | phal_3_3_L | skeleton/bones/bone_phal_3_3_l.py |
+| BONE_PHAL_3_3_R | hand | individual_project_proxy | phal_3_3_R | skeleton/bones/bone_phal_3_3_r.py |
+| BONE_PHAL_4_1_L | hand | individual_project_proxy | phal_4_1_L | skeleton/bones/bone_phal_4_1_l.py |
+| BONE_PHAL_4_1_R | hand | individual_project_proxy | phal_4_1_R | skeleton/bones/bone_phal_4_1_r.py |
+| BONE_PHAL_4_2_L | hand | individual_project_proxy | phal_4_2_L | skeleton/bones/bone_phal_4_2_l.py |
+| BONE_PHAL_4_2_R | hand | individual_project_proxy | phal_4_2_R | skeleton/bones/bone_phal_4_2_r.py |
+| BONE_PHAL_4_3_L | hand | individual_project_proxy | phal_4_3_L | skeleton/bones/bone_phal_4_3_l.py |
+| BONE_PHAL_4_3_R | hand | individual_project_proxy | phal_4_3_R | skeleton/bones/bone_phal_4_3_r.py |
+| BONE_PHAL_5_1_L | hand | individual_project_proxy | phal_5_1_L | skeleton/bones/bone_phal_5_1_l.py |
+| BONE_PHAL_5_1_R | hand | individual_project_proxy | phal_5_1_R | skeleton/bones/bone_phal_5_1_r.py |
+| BONE_PHAL_5_2_L | hand | individual_project_proxy | phal_5_2_L | skeleton/bones/bone_phal_5_2_l.py |
+| BONE_PHAL_5_2_R | hand | individual_project_proxy | phal_5_2_R | skeleton/bones/bone_phal_5_2_r.py |
+| BONE_PHAL_5_3_L | hand | individual_project_proxy | phal_5_3_L | skeleton/bones/bone_phal_5_3_l.py |
+| BONE_PHAL_5_3_R | hand | individual_project_proxy | phal_5_3_R | skeleton/bones/bone_phal_5_3_r.py |
+| BONE_PISIFORM_L | hand | individual_project_proxy | pisiform_L | skeleton/bones/bone_pisiform_l.py |
+| BONE_PISIFORM_R | hand | individual_project_proxy | pisiform_R | skeleton/bones/bone_pisiform_r.py |
 | BONE_RADIUS_L | upper_limb | individual_project_proxy | radius_L | skeleton/bones/bone_radius_l.py |
 | BONE_RADIUS_R | upper_limb | individual_project_proxy | radius_R | skeleton/bones/bone_radius_r.py |
 | BONE_RIB10_L | thorax | individual_project_proxy | rib_10_L | skeleton/bones/bone_rib10_l.py |
@@ -184,8 +184,8 @@ All individual proxies use provisional project geometry. Count equivalence is no
 | BONE_RIB9_L | thorax | individual_project_proxy | rib_9_L | skeleton/bones/bone_rib9_l.py |
 | BONE_RIB9_R | thorax | individual_project_proxy | rib_9_R | skeleton/bones/bone_rib9_r.py |
 | BONE_SACRUM | spine | individual_project_proxy | sacrum | skeleton/bones/bone_sacrum.py |
-| BONE_SCAPHOID_L | hand | grouped_form_proxy | palm_L | skeleton/bones/bone_scaphoid_l.py |
-| BONE_SCAPHOID_R | hand | grouped_form_proxy | palm_R | skeleton/bones/bone_scaphoid_r.py |
+| BONE_SCAPHOID_L | hand | individual_project_proxy | scaphoid_L | skeleton/bones/bone_scaphoid_l.py |
+| BONE_SCAPHOID_R | hand | individual_project_proxy | scaphoid_R | skeleton/bones/bone_scaphoid_r.py |
 | BONE_SCAPULA_L | shoulder_girdle | individual_project_proxy | scapula_L | skeleton/bones/bone_scapula_l.py |
 | BONE_SCAPULA_R | shoulder_girdle | individual_project_proxy | scapula_R | skeleton/bones/bone_scapula_r.py |
 | BONE_SPHENOID | skull | grouped_form_proxy | head_arch_0 | skeleton/bones/bone_sphenoid.py |
@@ -210,12 +210,12 @@ All individual proxies use provisional project geometry. Count equivalence is no
 | BONE_TEMP_R | skull | grouped_form_proxy | head_arch_0 | skeleton/bones/bone_temp_r.py |
 | BONE_TIBIA_L | lower_limb | individual_project_proxy | tibia_L | skeleton/bones/bone_tibia_l.py |
 | BONE_TIBIA_R | lower_limb | individual_project_proxy | tibia_R | skeleton/bones/bone_tibia_r.py |
-| BONE_TRAPEZIUM_L | hand | grouped_form_proxy | palm_L | skeleton/bones/bone_trapezium_l.py |
-| BONE_TRAPEZIUM_R | hand | grouped_form_proxy | palm_R | skeleton/bones/bone_trapezium_r.py |
-| BONE_TRAPEZOID_L | hand | grouped_form_proxy | palm_L | skeleton/bones/bone_trapezoid_l.py |
-| BONE_TRAPEZOID_R | hand | grouped_form_proxy | palm_R | skeleton/bones/bone_trapezoid_r.py |
-| BONE_TRIQUETRUM_L | hand | grouped_form_proxy | palm_L | skeleton/bones/bone_triquetrum_l.py |
-| BONE_TRIQUETRUM_R | hand | grouped_form_proxy | palm_R | skeleton/bones/bone_triquetrum_r.py |
+| BONE_TRAPEZIUM_L | hand | individual_project_proxy | trapezium_L | skeleton/bones/bone_trapezium_l.py |
+| BONE_TRAPEZIUM_R | hand | individual_project_proxy | trapezium_R | skeleton/bones/bone_trapezium_r.py |
+| BONE_TRAPEZOID_L | hand | individual_project_proxy | trapezoid_L | skeleton/bones/bone_trapezoid_l.py |
+| BONE_TRAPEZOID_R | hand | individual_project_proxy | trapezoid_R | skeleton/bones/bone_trapezoid_r.py |
+| BONE_TRIQUETRUM_L | hand | individual_project_proxy | triquetrum_L | skeleton/bones/bone_triquetrum_l.py |
+| BONE_TRIQUETRUM_R | hand | individual_project_proxy | triquetrum_R | skeleton/bones/bone_triquetrum_r.py |
 | BONE_T_PHAL_1_1_L | foot | grouped_form_proxy | foot_L | skeleton/bones/bone_t_phal_1_1_l.py |
 | BONE_T_PHAL_1_1_R | foot | grouped_form_proxy | foot_R | skeleton/bones/bone_t_phal_1_1_r.py |
 | BONE_T_PHAL_1_2_L | foot | grouped_form_proxy | foot_L | skeleton/bones/bone_t_phal_1_2_l.py |

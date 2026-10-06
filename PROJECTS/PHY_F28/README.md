@@ -39,25 +39,34 @@ unchanged. It is not a replacement for their fabrication validators.
 - External hip/chest form rails and the interpolated envelope remain non-bone
   supports/form guides, not human scan data. Hardware couplings do not count as bones.
 
-## Bone distribution / bounded core revision
+## Bone distribution / bounded core and hand revisions
 
 `reports/BONE_EQUIVALENCE.md` accounts for all 206 adult identities, independently
-of mesh counts. 71 core bones now have individual proxies (26 spine, 25 thorax,
+of mesh counts. 125 bones now have individual proxies: 71 core bones (26 spine, 25 thorax,
 four shoulder-girdle, two adult hip, six upper-limb, eight lower-limb). Ribs are
 24 separate open curves; cervical/thoracic/lumbar levels remain individually
 identified, paired forearms have radius and ulna, and patellae are separate from
 knee coupling envelopes. Adult fused hip/sacrum/coccyx identities count once each.
 
-128 skull/hand/foot identities remain grouped forms, and seven ear/hyoid identities
+Another 54 individual hand proxies provide eight carpals, five metacarpals and
+14 phalanges per side. The radial thumb chain is separate and palmar-offset;
+carpal rows and the palmar pisiform are distinguished. This is a static display
+pose, not working opposition, a complete articulation graph or measured bone shape.
+
+74 skull/foot identities remain grouped forms, and seven ear/hyoid identities
 are unrepresented. 13 facial source records remain absent; the 193 existing
 canonical records are untouched. The `bone_proxy_layout` profile section is the
-authoritative project-local provisional layout, with its hash and parameter pointers
+authoritative project-local provisional core layout; `hand_proxy_layout` governs
+the hands. Both have hashes and parameter pointers
 embedded in the model. It is **not measured bone shape, joint anatomy or canon**.
 Count/distribution equivalence alone cannot establish dimensional or kinematic fidelity.
 
 Studio's Bone coverage panel exposes every disposition and its source record.
 Individual-bone-only viewing/export hides hardware, supports and grouped forms.
 See `BONE_EQUIVALENCE_SCOPE.md` for confirmed deviations and bounded corrections.
+The hand scope and current checks are in `HAND_EQUIVALENCE_SCOPE.md` and
+`reports/HAND_EQUIVALENCE_VALIDATION.md`; `reports/HAND_PROXY_LAYOUT.md` lists
+every governing hand input. Earlier core checkpoint validation remains historical.
 
 The SOPHY-scale comparison chooses H=span=1676.4 mm. It does not adopt new canon
 landmarks. A0's separate 317 mm dummy station is neither scaled nor integrated

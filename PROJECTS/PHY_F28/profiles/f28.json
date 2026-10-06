@@ -22,6 +22,29 @@
     "wrist_to_fingertip": "handlength"
   },
   "design_note": "This is a proposed stylized mechanical armature, not a measured anatomical skeleton. Joint centers and curves are explicit design datums. No claim that the slight refinements objectively maximize attractiveness.",
+  "hand_proxy_layout": {
+    "revision": "HAND_V1",
+    "authority": "project-local provisional display layout; not osteometric data or canon",
+    "units": "centers/stations: distal hand-station fraction, radial hand-breadth fraction, palmar mm; sections/gaps: mm at cohort mean stature",
+    "joint_gap_mm": 2,
+    "carpals": {
+      "SCAPHOID": {"row": "proximal", "center": [0.08, 0.18, 0], "radii_mm": [9, 6, 5]},
+      "LUNATE": {"row": "proximal", "center": [0.08, 0, 0], "radii_mm": [7, 6, 5]},
+      "TRIQUETRUM": {"row": "proximal", "center": [0.08, -0.24, 0], "radii_mm": [7, 6, 5]},
+      "PISIFORM": {"row": "proximal", "center": [0.08, -0.24, 12], "radii_mm": [4.5, 4.5, 4.5]},
+      "TRAPEZIUM": {"row": "distal", "center": [0.2, 0.3, 0], "radii_mm": [7, 6, 5]},
+      "TRAPEZOID": {"row": "distal", "center": [0.2, 0.12, 0], "radii_mm": [6, 5, 5]},
+      "CAPITATE": {"row": "distal", "center": [0.2, -0.07, 0], "radii_mm": [8, 6, 6]},
+      "HAMATE": {"row": "distal", "center": [0.2, -0.26, 0], "radii_mm": [8, 7, 5]}
+    },
+    "digits": {
+      "1": {"root": "TRAPEZIUM", "stations": [[0.26, 0.34, 6], [0.48, 0.6, 12], [0.64, 0.78, 16], [0.76, 0.86, 18]], "radii_mm": [4, 3.3, 2.5]},
+      "2": {"root": "TRAPEZOID", "stations": [[0.26, 0.24, 0], [0.57, 0.26, 0], [0.76, 0.26, 0], [0.88, 0.26, 0], [0.95, 0.26, 0]], "radii_mm": [4.2, 3.4, 2.8, 2.2]},
+      "3": {"root": "CAPITATE", "stations": [[0.26, 0, 0], [0.57, 0, 0], [0.78, 0, 0], [0.91, 0, 0], [1, 0, 0]], "radii_mm": [4.3, 3.6, 2.9, 2.3]},
+      "4": {"root": "HAMATE", "stations": [[0.26, -0.23, 0], [0.55, -0.23, 0], [0.75, -0.23, 0], [0.87, -0.23, 0], [0.94, -0.23, 0]], "radii_mm": [4, 3.4, 2.8, 2.2]},
+      "5": {"root": "HAMATE", "stations": [[0.26, -0.43, 0], [0.5, -0.43, 0], [0.66, -0.43, 0], [0.75, -0.43, 0], [0.82, -0.43, 0]], "radii_mm": [3.5, 3, 2.4, 2]}
+    }
+  },
   "bone_proxy_layout": {
     "revision": "CORE_V1",
     "authority": "project-local provisional topology and placement; not osteometric data or canon",

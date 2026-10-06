@@ -36,8 +36,28 @@ unchanged. It is not a replacement for their fabrication validators.
 - The arm chain is allocated from external segment ratios to close the measured
   span after subtracting proposed shoulder-center spacing. This endpoint mapping
   is explicit and is not called a slight aesthetic change or measured osteometry.
-- Internal thoracic formers, pelvic arches, external hip/chest form rails and the
-  interpolated soft-form envelope are proposed supports, not human scan data.
+- External hip/chest form rails and the interpolated envelope remain non-bone
+  supports/form guides, not human scan data. Hardware couplings do not count as bones.
+
+## Bone distribution / bounded core revision
+
+`reports/BONE_EQUIVALENCE.md` accounts for all 206 adult identities, independently
+of mesh counts. 71 core bones now have individual proxies (26 spine, 25 thorax,
+four shoulder-girdle, two adult hip, six upper-limb, eight lower-limb). Ribs are
+24 separate open curves; cervical/thoracic/lumbar levels remain individually
+identified, paired forearms have radius and ulna, and patellae are separate from
+knee coupling envelopes. Adult fused hip/sacrum/coccyx identities count once each.
+
+128 skull/hand/foot identities remain grouped forms, and seven ear/hyoid identities
+are unrepresented. 13 facial source records remain absent; the 193 existing
+canonical records are untouched. The `bone_proxy_layout` profile section is the
+authoritative project-local provisional layout, with its hash and parameter pointers
+embedded in the model. It is **not measured bone shape, joint anatomy or canon**.
+Count/distribution equivalence alone cannot establish dimensional or kinematic fidelity.
+
+Studio's Bone coverage panel exposes every disposition and its source record.
+Individual-bone-only viewing/export hides hardware, supports and grouped forms.
+See `BONE_EQUIVALENCE_SCOPE.md` for confirmed deviations and bounded corrections.
 
 The SOPHY-scale comparison chooses H=span=1676.4 mm. It does not adopt new canon
 landmarks. A0's separate 317 mm dummy station is neither scaled nor integrated
@@ -56,14 +76,15 @@ and the prior 18-component source library.
 `maquette/` contains actual-size SVG cut paths, an assembly stencil, part/hardware
 BOM and instructions for a **408.10 mm tall passive plywood maquette**. It uses a
 rear support post, solid transverse formers and simple pinned planar limb links.
-It is a separate construction embodiment; it does not miniaturize A0 bearings or
-claim full-scale strength. Physical build and dimensional inspection are unmeasured.
+It is a separate, preserved construction embodiment; it does not miniaturize the
+new core bone proxies or A0 bearings or claim full-scale strength. Physical build
+and dimensional inspection are unmeasured. Its seven torso formers are not ribs.
 
 ## Reproduce and validate
 
 ```bash
 python bin/export_phy_studio.py
-python -m pytest tests/test_phy_studio.py -q
+python -m pytest tests/test_bone_equivalence.py tests/test_phy_studio.py -q
 ```
 
 The exporter writes complete reference meshes, their source report, cut files and

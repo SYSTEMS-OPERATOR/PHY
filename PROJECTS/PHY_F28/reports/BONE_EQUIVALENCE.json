@@ -1,0 +1,3890 @@
+{
+  "inventory_version": "PHY_ADULT_206_V1",
+  "expected_bones": 206,
+  "source_records_present": 193,
+  "missing_source_records": [
+    "BONE_INFERIOR_NASAL_CONCHA_L",
+    "BONE_INFERIOR_NASAL_CONCHA_R",
+    "BONE_LACRIMAL_L",
+    "BONE_LACRIMAL_R",
+    "BONE_MAXILLA_L",
+    "BONE_MAXILLA_R",
+    "BONE_NASAL_L",
+    "BONE_NASAL_R",
+    "BONE_PALATINE_L",
+    "BONE_PALATINE_R",
+    "BONE_VOMER",
+    "BONE_ZYGOMATIC_L",
+    "BONE_ZYGOMATIC_R"
+  ],
+  "individual_bone_proxies": 71,
+  "grouped_bones": 128,
+  "unrepresented_bones": 7,
+  "missing_core_bones": [],
+  "mesh_roles": {
+    "bone_proxy": 71,
+    "envelope": 2,
+    "form": 29,
+    "hardware": 12,
+    "support": 5
+  },
+  "regions": [
+    {
+      "region": "skull",
+      "expected": 22,
+      "individual": 0,
+      "grouped": 22,
+      "unrepresented": 0
+    },
+    {
+      "region": "ear",
+      "expected": 6,
+      "individual": 0,
+      "grouped": 0,
+      "unrepresented": 6
+    },
+    {
+      "region": "hyoid",
+      "expected": 1,
+      "individual": 0,
+      "grouped": 0,
+      "unrepresented": 1
+    },
+    {
+      "region": "spine",
+      "expected": 26,
+      "individual": 26,
+      "grouped": 0,
+      "unrepresented": 0
+    },
+    {
+      "region": "thorax",
+      "expected": 25,
+      "individual": 25,
+      "grouped": 0,
+      "unrepresented": 0
+    },
+    {
+      "region": "shoulder_girdle",
+      "expected": 4,
+      "individual": 4,
+      "grouped": 0,
+      "unrepresented": 0
+    },
+    {
+      "region": "pelvis",
+      "expected": 2,
+      "individual": 2,
+      "grouped": 0,
+      "unrepresented": 0
+    },
+    {
+      "region": "upper_limb",
+      "expected": 6,
+      "individual": 6,
+      "grouped": 0,
+      "unrepresented": 0
+    },
+    {
+      "region": "lower_limb",
+      "expected": 8,
+      "individual": 8,
+      "grouped": 0,
+      "unrepresented": 0
+    },
+    {
+      "region": "hand",
+      "expected": 54,
+      "individual": 0,
+      "grouped": 54,
+      "unrepresented": 0
+    },
+    {
+      "region": "foot",
+      "expected": 52,
+      "individual": 0,
+      "grouped": 52,
+      "unrepresented": 0
+    }
+  ],
+  "bones": [
+    {
+      "bone_id": "BONE_C1",
+      "name": "C1 vertebra",
+      "region": "spine",
+      "side": "midline",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_c1.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "vertebra_C1"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/spine_y_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/vertebra_radii_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/c1_below_vertex_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/t1_below_cervicale_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/t12_above_l1_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/l1_above_tenth_rib_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/l5_above_hip_mm"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_C2",
+      "name": "C2 vertebra",
+      "region": "spine",
+      "side": "midline",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_c2.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "vertebra_C2"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/spine_y_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/vertebra_radii_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/c1_below_vertex_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/t1_below_cervicale_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/t12_above_l1_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/l1_above_tenth_rib_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/l5_above_hip_mm"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_C3",
+      "name": "C3 vertebra",
+      "region": "spine",
+      "side": "midline",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_c3.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "vertebra_C3"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/spine_y_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/vertebra_radii_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/c1_below_vertex_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/t1_below_cervicale_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/t12_above_l1_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/l1_above_tenth_rib_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/l5_above_hip_mm"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_C4",
+      "name": "C4 vertebra",
+      "region": "spine",
+      "side": "midline",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_c4.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "vertebra_C4"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/spine_y_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/vertebra_radii_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/c1_below_vertex_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/t1_below_cervicale_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/t12_above_l1_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/l1_above_tenth_rib_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/l5_above_hip_mm"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_C5",
+      "name": "C5 vertebra",
+      "region": "spine",
+      "side": "midline",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_c5.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "vertebra_C5"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/spine_y_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/vertebra_radii_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/c1_below_vertex_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/t1_below_cervicale_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/t12_above_l1_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/l1_above_tenth_rib_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/l5_above_hip_mm"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_C6",
+      "name": "C6 vertebra",
+      "region": "spine",
+      "side": "midline",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_c6.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "vertebra_C6"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/spine_y_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/vertebra_radii_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/c1_below_vertex_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/t1_below_cervicale_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/t12_above_l1_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/l1_above_tenth_rib_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/l5_above_hip_mm"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_C7",
+      "name": "C7 vertebra",
+      "region": "spine",
+      "side": "midline",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_c7.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "vertebra_C7"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/spine_y_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/vertebra_radii_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/c1_below_vertex_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/t1_below_cervicale_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/t12_above_l1_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/l1_above_tenth_rib_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/l5_above_hip_mm"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_CALCANEUS_L",
+      "name": "Calcaneus",
+      "region": "foot",
+      "side": "left",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_calcaneus_l.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "foot_L"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_CALCANEUS_R",
+      "name": "Calcaneus",
+      "region": "foot",
+      "side": "right",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_calcaneus_r.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "foot_R"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_CAPITATE_L",
+      "name": "Capitate",
+      "region": "hand",
+      "side": "left",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_capitate_l.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "palm_L"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_CAPITATE_R",
+      "name": "Capitate",
+      "region": "hand",
+      "side": "right",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_capitate_r.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "palm_R"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_CLAVICLE_L",
+      "name": "Clavicle",
+      "region": "shoulder_girdle",
+      "side": "left",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_clavicle_l.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "clavicle_L"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/design_choices_mm",
+        "model#/design_datums",
+        "model#/reference/statistics"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_CLAVICLE_R",
+      "name": "Clavicle",
+      "region": "shoulder_girdle",
+      "side": "right",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_clavicle_r.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "clavicle_R"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/design_choices_mm",
+        "model#/design_datums",
+        "model#/reference/statistics"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_COCCYX",
+      "name": "Coccyx",
+      "region": "spine",
+      "side": "midline",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_coccyx.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "coccyx"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/coccyx_below_hip_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/coccyx_radii_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/spine_y_mm"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_CUBOID_L",
+      "name": "Cuboid",
+      "region": "foot",
+      "side": "left",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_cuboid_l.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "foot_L"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_CUBOID_R",
+      "name": "Cuboid",
+      "region": "foot",
+      "side": "right",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_cuboid_r.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "foot_R"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_ETHMOID",
+      "name": "Ethmoid",
+      "region": "skull",
+      "side": "midline",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_ethmoid.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "head_arch_0"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_FEMUR_L",
+      "name": "Femur",
+      "region": "lower_limb",
+      "side": "left",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_femur_l.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "femur_L"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/design_choices_mm",
+        "model#/design_datums",
+        "model#/reference/statistics"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_FEMUR_R",
+      "name": "Femur",
+      "region": "lower_limb",
+      "side": "right",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_femur_r.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "femur_R"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/design_choices_mm",
+        "model#/design_datums",
+        "model#/reference/statistics"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_FIBULA_L",
+      "name": "Fibula",
+      "region": "lower_limb",
+      "side": "left",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_fibula_l.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "fibular_L"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/design_choices_mm",
+        "model#/design_datums",
+        "model#/reference/statistics"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_FIBULA_R",
+      "name": "Fibula",
+      "region": "lower_limb",
+      "side": "right",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_fibula_r.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "fibular_R"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/design_choices_mm",
+        "model#/design_datums",
+        "model#/reference/statistics"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_FRONTAL",
+      "name": "Frontal",
+      "region": "skull",
+      "side": "midline",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_frontal.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "head_arch_0"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_HAMATE_L",
+      "name": "Hamate",
+      "region": "hand",
+      "side": "left",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_hamate_l.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "palm_L"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_HAMATE_R",
+      "name": "Hamate",
+      "region": "hand",
+      "side": "right",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_hamate_r.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "palm_R"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_HIP_L",
+      "name": "Adult hip bone",
+      "region": "pelvis",
+      "side": "left",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_hip_l.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "hip_bone_L"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/hip_outline_offsets_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/hip_outline_breadth_fractions",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/hip_plate_half_thickness_mm"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_HIP_R",
+      "name": "Adult hip bone",
+      "region": "pelvis",
+      "side": "right",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_hip_r.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "hip_bone_R"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/hip_outline_offsets_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/hip_outline_breadth_fractions",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/hip_plate_half_thickness_mm"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_HUMERUS_L",
+      "name": "Humerus",
+      "region": "upper_limb",
+      "side": "left",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_humerus_l.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "upper_arm_L"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/design_choices_mm",
+        "model#/design_datums",
+        "model#/reference/statistics"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_HUMERUS_R",
+      "name": "Humerus",
+      "region": "upper_limb",
+      "side": "right",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_humerus_r.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "upper_arm_R"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/design_choices_mm",
+        "model#/design_datums",
+        "model#/reference/statistics"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_HYOID",
+      "name": "Hyoid",
+      "region": "hyoid",
+      "side": "midline",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_hyoid.py",
+      "source_record_status": "present",
+      "representation": "unrepresented",
+      "mesh_ids": [],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_INCUS_L",
+      "name": "Incus",
+      "region": "ear",
+      "side": "left",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_incus_l.py",
+      "source_record_status": "present",
+      "representation": "unrepresented",
+      "mesh_ids": [],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_INCUS_R",
+      "name": "Incus",
+      "region": "ear",
+      "side": "right",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_incus_r.py",
+      "source_record_status": "present",
+      "representation": "unrepresented",
+      "mesh_ids": [],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_INFERIOR_NASAL_CONCHA_L",
+      "name": "Inferior Nasal Concha",
+      "region": "skull",
+      "side": "left",
+      "core_scope": false,
+      "source_record": null,
+      "source_record_status": "missing",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "head_arch_0"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_INFERIOR_NASAL_CONCHA_R",
+      "name": "Inferior Nasal Concha",
+      "region": "skull",
+      "side": "right",
+      "core_scope": false,
+      "source_record": null,
+      "source_record_status": "missing",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "head_arch_0"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_INTERMEDIATE_CUNEIFORM_L",
+      "name": "Intermediate Cuneiform",
+      "region": "foot",
+      "side": "left",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_intermediate_cuneiform_l.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "foot_L"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_INTERMEDIATE_CUNEIFORM_R",
+      "name": "Intermediate Cuneiform",
+      "region": "foot",
+      "side": "right",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_intermediate_cuneiform_r.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "foot_R"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_L1",
+      "name": "L1 vertebra",
+      "region": "spine",
+      "side": "midline",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_l1.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "vertebra_L1"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/spine_y_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/vertebra_radii_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/c1_below_vertex_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/t1_below_cervicale_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/t12_above_l1_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/l1_above_tenth_rib_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/l5_above_hip_mm"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_L2",
+      "name": "L2 vertebra",
+      "region": "spine",
+      "side": "midline",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_l2.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "vertebra_L2"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/spine_y_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/vertebra_radii_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/c1_below_vertex_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/t1_below_cervicale_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/t12_above_l1_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/l1_above_tenth_rib_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/l5_above_hip_mm"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_L3",
+      "name": "L3 vertebra",
+      "region": "spine",
+      "side": "midline",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_l3.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "vertebra_L3"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/spine_y_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/vertebra_radii_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/c1_below_vertex_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/t1_below_cervicale_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/t12_above_l1_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/l1_above_tenth_rib_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/l5_above_hip_mm"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_L4",
+      "name": "L4 vertebra",
+      "region": "spine",
+      "side": "midline",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_l4.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "vertebra_L4"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/spine_y_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/vertebra_radii_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/c1_below_vertex_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/t1_below_cervicale_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/t12_above_l1_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/l1_above_tenth_rib_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/l5_above_hip_mm"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_L5",
+      "name": "L5 vertebra",
+      "region": "spine",
+      "side": "midline",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_l5.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "vertebra_L5"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/spine_y_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/vertebra_radii_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/c1_below_vertex_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/t1_below_cervicale_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/t12_above_l1_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/l1_above_tenth_rib_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/l5_above_hip_mm"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_LACRIMAL_L",
+      "name": "Lacrimal",
+      "region": "skull",
+      "side": "left",
+      "core_scope": false,
+      "source_record": null,
+      "source_record_status": "missing",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "head_arch_0"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_LACRIMAL_R",
+      "name": "Lacrimal",
+      "region": "skull",
+      "side": "right",
+      "core_scope": false,
+      "source_record": null,
+      "source_record_status": "missing",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "head_arch_0"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_LATERAL_CUNEIFORM_L",
+      "name": "Lateral Cuneiform",
+      "region": "foot",
+      "side": "left",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_lateral_cuneiform_l.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "foot_L"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_LATERAL_CUNEIFORM_R",
+      "name": "Lateral Cuneiform",
+      "region": "foot",
+      "side": "right",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_lateral_cuneiform_r.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "foot_R"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_LUNATE_L",
+      "name": "Lunate",
+      "region": "hand",
+      "side": "left",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_lunate_l.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "palm_L"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_LUNATE_R",
+      "name": "Lunate",
+      "region": "hand",
+      "side": "right",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_lunate_r.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "palm_R"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_MALLEUS_L",
+      "name": "Malleus",
+      "region": "ear",
+      "side": "left",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_malleus_l.py",
+      "source_record_status": "present",
+      "representation": "unrepresented",
+      "mesh_ids": [],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_MALLEUS_R",
+      "name": "Malleus",
+      "region": "ear",
+      "side": "right",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_malleus_r.py",
+      "source_record_status": "present",
+      "representation": "unrepresented",
+      "mesh_ids": [],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_MANDIBLE",
+      "name": "Mandible",
+      "region": "skull",
+      "side": "midline",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_mandible.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "head_arch_0"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_MAXILLA_L",
+      "name": "Maxilla",
+      "region": "skull",
+      "side": "left",
+      "core_scope": false,
+      "source_record": null,
+      "source_record_status": "missing",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "head_arch_0"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_MAXILLA_R",
+      "name": "Maxilla",
+      "region": "skull",
+      "side": "right",
+      "core_scope": false,
+      "source_record": null,
+      "source_record_status": "missing",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "head_arch_0"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_MEDIAL_CUNEIFORM_L",
+      "name": "Medial Cuneiform",
+      "region": "foot",
+      "side": "left",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_medial_cuneiform_l.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "foot_L"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_MEDIAL_CUNEIFORM_R",
+      "name": "Medial Cuneiform",
+      "region": "foot",
+      "side": "right",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_medial_cuneiform_r.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "foot_R"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_META1_L",
+      "name": "Metacarpal 1",
+      "region": "hand",
+      "side": "left",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_meta1_l.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "palm_L"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_META1_R",
+      "name": "Metacarpal 1",
+      "region": "hand",
+      "side": "right",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_meta1_r.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "palm_R"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_META2_L",
+      "name": "Metacarpal 2",
+      "region": "hand",
+      "side": "left",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_meta2_l.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "palm_L"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_META2_R",
+      "name": "Metacarpal 2",
+      "region": "hand",
+      "side": "right",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_meta2_r.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "palm_R"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_META3_L",
+      "name": "Metacarpal 3",
+      "region": "hand",
+      "side": "left",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_meta3_l.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "palm_L"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_META3_R",
+      "name": "Metacarpal 3",
+      "region": "hand",
+      "side": "right",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_meta3_r.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "palm_R"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_META4_L",
+      "name": "Metacarpal 4",
+      "region": "hand",
+      "side": "left",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_meta4_l.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "palm_L"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_META4_R",
+      "name": "Metacarpal 4",
+      "region": "hand",
+      "side": "right",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_meta4_r.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "palm_R"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_META5_L",
+      "name": "Metacarpal 5",
+      "region": "hand",
+      "side": "left",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_meta5_l.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "palm_L"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_META5_R",
+      "name": "Metacarpal 5",
+      "region": "hand",
+      "side": "right",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_meta5_r.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "palm_R"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_MT1_L",
+      "name": "Metatarsal 1",
+      "region": "foot",
+      "side": "left",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_mt1_l.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "foot_L"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_MT1_R",
+      "name": "Metatarsal 1",
+      "region": "foot",
+      "side": "right",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_mt1_r.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "foot_R"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_MT2_L",
+      "name": "Metatarsal 2",
+      "region": "foot",
+      "side": "left",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_mt2_l.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "foot_L"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_MT2_R",
+      "name": "Metatarsal 2",
+      "region": "foot",
+      "side": "right",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_mt2_r.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "foot_R"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_MT3_L",
+      "name": "Metatarsal 3",
+      "region": "foot",
+      "side": "left",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_mt3_l.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "foot_L"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_MT3_R",
+      "name": "Metatarsal 3",
+      "region": "foot",
+      "side": "right",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_mt3_r.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "foot_R"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_MT4_L",
+      "name": "Metatarsal 4",
+      "region": "foot",
+      "side": "left",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_mt4_l.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "foot_L"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_MT4_R",
+      "name": "Metatarsal 4",
+      "region": "foot",
+      "side": "right",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_mt4_r.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "foot_R"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_MT5_L",
+      "name": "Metatarsal 5",
+      "region": "foot",
+      "side": "left",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_mt5_l.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "foot_L"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_MT5_R",
+      "name": "Metatarsal 5",
+      "region": "foot",
+      "side": "right",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_mt5_r.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "foot_R"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_NASAL_L",
+      "name": "Nasal",
+      "region": "skull",
+      "side": "left",
+      "core_scope": false,
+      "source_record": null,
+      "source_record_status": "missing",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "head_arch_0"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_NASAL_R",
+      "name": "Nasal",
+      "region": "skull",
+      "side": "right",
+      "core_scope": false,
+      "source_record": null,
+      "source_record_status": "missing",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "head_arch_0"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_NAVICULAR_L",
+      "name": "Navicular",
+      "region": "foot",
+      "side": "left",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_navicular_l.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "foot_L"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_NAVICULAR_R",
+      "name": "Navicular",
+      "region": "foot",
+      "side": "right",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_navicular_r.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "foot_R"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_OCCIPITAL",
+      "name": "Occipital",
+      "region": "skull",
+      "side": "midline",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_occipital.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "head_arch_0"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_PALATINE_L",
+      "name": "Palatine",
+      "region": "skull",
+      "side": "left",
+      "core_scope": false,
+      "source_record": null,
+      "source_record_status": "missing",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "head_arch_0"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_PALATINE_R",
+      "name": "Palatine",
+      "region": "skull",
+      "side": "right",
+      "core_scope": false,
+      "source_record": null,
+      "source_record_status": "missing",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "head_arch_0"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_PAR_L",
+      "name": "Parietal",
+      "region": "skull",
+      "side": "left",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_par_l.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "head_arch_0"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_PAR_R",
+      "name": "Parietal",
+      "region": "skull",
+      "side": "right",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_par_r.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "head_arch_0"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_PATELLA_L",
+      "name": "Patella",
+      "region": "lower_limb",
+      "side": "left",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_patella_l.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "patella_L"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/patella_offset_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/patella_radii_mm"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_PATELLA_R",
+      "name": "Patella",
+      "region": "lower_limb",
+      "side": "right",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_patella_r.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "patella_R"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/patella_offset_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/patella_radii_mm"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_PHAL_1_1_L",
+      "name": "Hand digit 1 phalanx 1",
+      "region": "hand",
+      "side": "left",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_phal_1_1_l.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "finger_L_0"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_PHAL_1_1_R",
+      "name": "Hand digit 1 phalanx 1",
+      "region": "hand",
+      "side": "right",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_phal_1_1_r.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "finger_R_0"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_PHAL_1_2_L",
+      "name": "Hand digit 1 phalanx 2",
+      "region": "hand",
+      "side": "left",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_phal_1_2_l.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "finger_tip_L_0"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_PHAL_1_2_R",
+      "name": "Hand digit 1 phalanx 2",
+      "region": "hand",
+      "side": "right",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_phal_1_2_r.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "finger_tip_R_0"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_PHAL_2_1_L",
+      "name": "Hand digit 2 phalanx 1",
+      "region": "hand",
+      "side": "left",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_phal_2_1_l.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "finger_L_1"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_PHAL_2_1_R",
+      "name": "Hand digit 2 phalanx 1",
+      "region": "hand",
+      "side": "right",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_phal_2_1_r.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "finger_R_1"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_PHAL_2_2_L",
+      "name": "Hand digit 2 phalanx 2",
+      "region": "hand",
+      "side": "left",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_phal_2_2_l.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "finger_L_1"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_PHAL_2_2_R",
+      "name": "Hand digit 2 phalanx 2",
+      "region": "hand",
+      "side": "right",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_phal_2_2_r.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "finger_R_1"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_PHAL_2_3_L",
+      "name": "Hand digit 2 phalanx 3",
+      "region": "hand",
+      "side": "left",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_phal_2_3_l.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "finger_tip_L_1"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_PHAL_2_3_R",
+      "name": "Hand digit 2 phalanx 3",
+      "region": "hand",
+      "side": "right",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_phal_2_3_r.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "finger_tip_R_1"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_PHAL_3_1_L",
+      "name": "Hand digit 3 phalanx 1",
+      "region": "hand",
+      "side": "left",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_phal_3_1_l.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "finger_L_2"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_PHAL_3_1_R",
+      "name": "Hand digit 3 phalanx 1",
+      "region": "hand",
+      "side": "right",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_phal_3_1_r.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "finger_R_2"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_PHAL_3_2_L",
+      "name": "Hand digit 3 phalanx 2",
+      "region": "hand",
+      "side": "left",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_phal_3_2_l.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "finger_L_2"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_PHAL_3_2_R",
+      "name": "Hand digit 3 phalanx 2",
+      "region": "hand",
+      "side": "right",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_phal_3_2_r.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "finger_R_2"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_PHAL_3_3_L",
+      "name": "Hand digit 3 phalanx 3",
+      "region": "hand",
+      "side": "left",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_phal_3_3_l.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "finger_tip_L_2"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_PHAL_3_3_R",
+      "name": "Hand digit 3 phalanx 3",
+      "region": "hand",
+      "side": "right",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_phal_3_3_r.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "finger_tip_R_2"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_PHAL_4_1_L",
+      "name": "Hand digit 4 phalanx 1",
+      "region": "hand",
+      "side": "left",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_phal_4_1_l.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "finger_L_3"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_PHAL_4_1_R",
+      "name": "Hand digit 4 phalanx 1",
+      "region": "hand",
+      "side": "right",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_phal_4_1_r.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "finger_R_3"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_PHAL_4_2_L",
+      "name": "Hand digit 4 phalanx 2",
+      "region": "hand",
+      "side": "left",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_phal_4_2_l.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "finger_L_3"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_PHAL_4_2_R",
+      "name": "Hand digit 4 phalanx 2",
+      "region": "hand",
+      "side": "right",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_phal_4_2_r.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "finger_R_3"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_PHAL_4_3_L",
+      "name": "Hand digit 4 phalanx 3",
+      "region": "hand",
+      "side": "left",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_phal_4_3_l.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "finger_tip_L_3"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_PHAL_4_3_R",
+      "name": "Hand digit 4 phalanx 3",
+      "region": "hand",
+      "side": "right",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_phal_4_3_r.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "finger_tip_R_3"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_PHAL_5_1_L",
+      "name": "Hand digit 5 phalanx 1",
+      "region": "hand",
+      "side": "left",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_phal_5_1_l.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "finger_L_4"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_PHAL_5_1_R",
+      "name": "Hand digit 5 phalanx 1",
+      "region": "hand",
+      "side": "right",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_phal_5_1_r.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "finger_R_4"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_PHAL_5_2_L",
+      "name": "Hand digit 5 phalanx 2",
+      "region": "hand",
+      "side": "left",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_phal_5_2_l.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "finger_L_4"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_PHAL_5_2_R",
+      "name": "Hand digit 5 phalanx 2",
+      "region": "hand",
+      "side": "right",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_phal_5_2_r.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "finger_R_4"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_PHAL_5_3_L",
+      "name": "Hand digit 5 phalanx 3",
+      "region": "hand",
+      "side": "left",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_phal_5_3_l.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "finger_tip_L_4"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_PHAL_5_3_R",
+      "name": "Hand digit 5 phalanx 3",
+      "region": "hand",
+      "side": "right",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_phal_5_3_r.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "finger_tip_R_4"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_PISIFORM_L",
+      "name": "Pisiform",
+      "region": "hand",
+      "side": "left",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_pisiform_l.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "palm_L"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_PISIFORM_R",
+      "name": "Pisiform",
+      "region": "hand",
+      "side": "right",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_pisiform_r.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "palm_R"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_RADIUS_L",
+      "name": "Radius",
+      "region": "upper_limb",
+      "side": "left",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_radius_l.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "radius_L"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/forearm_separation_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/radius_radii_mm"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_RADIUS_R",
+      "name": "Radius",
+      "region": "upper_limb",
+      "side": "right",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_radius_r.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "radius_R"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/forearm_separation_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/radius_radii_mm"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_RIB10_L",
+      "name": "Rib 10",
+      "region": "thorax",
+      "side": "left",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_rib10_l.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "rib_10_L"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_breadth_fractions",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_depth_fractions",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_drop_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_radius_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_posterior_offset_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_sweep_samples",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_free_end_angle_deg",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/sternum_half_width_mm"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_RIB10_R",
+      "name": "Rib 10",
+      "region": "thorax",
+      "side": "right",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_rib10_r.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "rib_10_R"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_breadth_fractions",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_depth_fractions",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_drop_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_radius_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_posterior_offset_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_sweep_samples",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_free_end_angle_deg",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/sternum_half_width_mm"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_RIB11_L",
+      "name": "Rib 11",
+      "region": "thorax",
+      "side": "left",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_rib11_l.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "rib_11_L"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_breadth_fractions",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_depth_fractions",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_drop_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_radius_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_posterior_offset_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_sweep_samples",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_free_end_angle_deg",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/sternum_half_width_mm"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_RIB11_R",
+      "name": "Rib 11",
+      "region": "thorax",
+      "side": "right",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_rib11_r.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "rib_11_R"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_breadth_fractions",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_depth_fractions",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_drop_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_radius_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_posterior_offset_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_sweep_samples",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_free_end_angle_deg",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/sternum_half_width_mm"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_RIB12_L",
+      "name": "Rib 12",
+      "region": "thorax",
+      "side": "left",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_rib12_l.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "rib_12_L"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_breadth_fractions",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_depth_fractions",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_drop_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_radius_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_posterior_offset_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_sweep_samples",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_free_end_angle_deg",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/sternum_half_width_mm"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_RIB12_R",
+      "name": "Rib 12",
+      "region": "thorax",
+      "side": "right",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_rib12_r.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "rib_12_R"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_breadth_fractions",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_depth_fractions",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_drop_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_radius_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_posterior_offset_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_sweep_samples",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_free_end_angle_deg",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/sternum_half_width_mm"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_RIB1_L",
+      "name": "Rib 1",
+      "region": "thorax",
+      "side": "left",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_rib1_l.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "rib_1_L"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_breadth_fractions",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_depth_fractions",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_drop_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_radius_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_posterior_offset_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_sweep_samples",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_free_end_angle_deg",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/sternum_half_width_mm"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_RIB1_R",
+      "name": "Rib 1",
+      "region": "thorax",
+      "side": "right",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_rib1_r.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "rib_1_R"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_breadth_fractions",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_depth_fractions",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_drop_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_radius_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_posterior_offset_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_sweep_samples",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_free_end_angle_deg",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/sternum_half_width_mm"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_RIB2_L",
+      "name": "Rib 2",
+      "region": "thorax",
+      "side": "left",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_rib2_l.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "rib_2_L"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_breadth_fractions",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_depth_fractions",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_drop_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_radius_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_posterior_offset_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_sweep_samples",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_free_end_angle_deg",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/sternum_half_width_mm"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_RIB2_R",
+      "name": "Rib 2",
+      "region": "thorax",
+      "side": "right",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_rib2_r.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "rib_2_R"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_breadth_fractions",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_depth_fractions",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_drop_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_radius_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_posterior_offset_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_sweep_samples",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_free_end_angle_deg",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/sternum_half_width_mm"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_RIB3_L",
+      "name": "Rib 3",
+      "region": "thorax",
+      "side": "left",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_rib3_l.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "rib_3_L"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_breadth_fractions",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_depth_fractions",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_drop_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_radius_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_posterior_offset_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_sweep_samples",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_free_end_angle_deg",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/sternum_half_width_mm"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_RIB3_R",
+      "name": "Rib 3",
+      "region": "thorax",
+      "side": "right",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_rib3_r.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "rib_3_R"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_breadth_fractions",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_depth_fractions",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_drop_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_radius_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_posterior_offset_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_sweep_samples",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_free_end_angle_deg",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/sternum_half_width_mm"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_RIB4_L",
+      "name": "Rib 4",
+      "region": "thorax",
+      "side": "left",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_rib4_l.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "rib_4_L"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_breadth_fractions",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_depth_fractions",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_drop_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_radius_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_posterior_offset_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_sweep_samples",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_free_end_angle_deg",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/sternum_half_width_mm"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_RIB4_R",
+      "name": "Rib 4",
+      "region": "thorax",
+      "side": "right",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_rib4_r.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "rib_4_R"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_breadth_fractions",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_depth_fractions",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_drop_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_radius_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_posterior_offset_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_sweep_samples",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_free_end_angle_deg",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/sternum_half_width_mm"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_RIB5_L",
+      "name": "Rib 5",
+      "region": "thorax",
+      "side": "left",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_rib5_l.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "rib_5_L"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_breadth_fractions",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_depth_fractions",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_drop_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_radius_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_posterior_offset_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_sweep_samples",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_free_end_angle_deg",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/sternum_half_width_mm"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_RIB5_R",
+      "name": "Rib 5",
+      "region": "thorax",
+      "side": "right",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_rib5_r.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "rib_5_R"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_breadth_fractions",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_depth_fractions",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_drop_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_radius_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_posterior_offset_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_sweep_samples",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_free_end_angle_deg",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/sternum_half_width_mm"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_RIB6_L",
+      "name": "Rib 6",
+      "region": "thorax",
+      "side": "left",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_rib6_l.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "rib_6_L"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_breadth_fractions",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_depth_fractions",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_drop_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_radius_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_posterior_offset_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_sweep_samples",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_free_end_angle_deg",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/sternum_half_width_mm"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_RIB6_R",
+      "name": "Rib 6",
+      "region": "thorax",
+      "side": "right",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_rib6_r.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "rib_6_R"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_breadth_fractions",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_depth_fractions",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_drop_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_radius_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_posterior_offset_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_sweep_samples",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_free_end_angle_deg",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/sternum_half_width_mm"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_RIB7_L",
+      "name": "Rib 7",
+      "region": "thorax",
+      "side": "left",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_rib7_l.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "rib_7_L"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_breadth_fractions",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_depth_fractions",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_drop_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_radius_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_posterior_offset_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_sweep_samples",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_free_end_angle_deg",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/sternum_half_width_mm"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_RIB7_R",
+      "name": "Rib 7",
+      "region": "thorax",
+      "side": "right",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_rib7_r.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "rib_7_R"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_breadth_fractions",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_depth_fractions",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_drop_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_radius_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_posterior_offset_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_sweep_samples",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_free_end_angle_deg",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/sternum_half_width_mm"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_RIB8_L",
+      "name": "Rib 8",
+      "region": "thorax",
+      "side": "left",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_rib8_l.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "rib_8_L"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_breadth_fractions",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_depth_fractions",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_drop_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_radius_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_posterior_offset_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_sweep_samples",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_free_end_angle_deg",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/sternum_half_width_mm"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_RIB8_R",
+      "name": "Rib 8",
+      "region": "thorax",
+      "side": "right",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_rib8_r.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "rib_8_R"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_breadth_fractions",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_depth_fractions",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_drop_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_radius_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_posterior_offset_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_sweep_samples",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_free_end_angle_deg",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/sternum_half_width_mm"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_RIB9_L",
+      "name": "Rib 9",
+      "region": "thorax",
+      "side": "left",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_rib9_l.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "rib_9_L"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_breadth_fractions",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_depth_fractions",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_drop_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_radius_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_posterior_offset_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_sweep_samples",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_free_end_angle_deg",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/sternum_half_width_mm"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_RIB9_R",
+      "name": "Rib 9",
+      "region": "thorax",
+      "side": "right",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_rib9_r.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "rib_9_R"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_breadth_fractions",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_depth_fractions",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_drop_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_radius_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_posterior_offset_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_sweep_samples",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_free_end_angle_deg",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/sternum_half_width_mm"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_SACRUM",
+      "name": "Sacrum",
+      "region": "spine",
+      "side": "midline",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_sacrum.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "sacrum"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/sacrum_offset_from_hip_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/sacrum_radii_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/spine_y_mm"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_SCAPHOID_L",
+      "name": "Scaphoid",
+      "region": "hand",
+      "side": "left",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_scaphoid_l.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "palm_L"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_SCAPHOID_R",
+      "name": "Scaphoid",
+      "region": "hand",
+      "side": "right",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_scaphoid_r.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "palm_R"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_SCAPULA_L",
+      "name": "Scapula",
+      "region": "shoulder_girdle",
+      "side": "left",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_scapula_l.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "scapula_L"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/scapula_vertices_relative_shoulder_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/scapula_thickness_mm"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_SCAPULA_R",
+      "name": "Scapula",
+      "region": "shoulder_girdle",
+      "side": "right",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_scapula_r.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "scapula_R"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/scapula_vertices_relative_shoulder_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/scapula_thickness_mm"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_SPHENOID",
+      "name": "Sphenoid",
+      "region": "skull",
+      "side": "midline",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_sphenoid.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "head_arch_0"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_STAPES_L",
+      "name": "Stapes",
+      "region": "ear",
+      "side": "left",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_stapes_l.py",
+      "source_record_status": "present",
+      "representation": "unrepresented",
+      "mesh_ids": [],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_STAPES_R",
+      "name": "Stapes",
+      "region": "ear",
+      "side": "right",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_stapes_r.py",
+      "source_record_status": "present",
+      "representation": "unrepresented",
+      "mesh_ids": [],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_STERNUM",
+      "name": "Sternum",
+      "region": "thorax",
+      "side": "midline",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_sternum.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "sternum"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/sternum_radius_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_depth_fractions",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/rib_drop_mm"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_T1",
+      "name": "T1 vertebra",
+      "region": "spine",
+      "side": "midline",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_t1.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "vertebra_T1"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/spine_y_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/vertebra_radii_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/c1_below_vertex_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/t1_below_cervicale_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/t12_above_l1_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/l1_above_tenth_rib_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/l5_above_hip_mm"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_T10",
+      "name": "T10 vertebra",
+      "region": "spine",
+      "side": "midline",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_t10.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "vertebra_T10"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/spine_y_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/vertebra_radii_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/c1_below_vertex_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/t1_below_cervicale_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/t12_above_l1_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/l1_above_tenth_rib_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/l5_above_hip_mm"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_T11",
+      "name": "T11 vertebra",
+      "region": "spine",
+      "side": "midline",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_t11.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "vertebra_T11"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/spine_y_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/vertebra_radii_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/c1_below_vertex_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/t1_below_cervicale_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/t12_above_l1_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/l1_above_tenth_rib_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/l5_above_hip_mm"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_T12",
+      "name": "T12 vertebra",
+      "region": "spine",
+      "side": "midline",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_t12.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "vertebra_T12"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/spine_y_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/vertebra_radii_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/c1_below_vertex_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/t1_below_cervicale_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/t12_above_l1_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/l1_above_tenth_rib_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/l5_above_hip_mm"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_T2",
+      "name": "T2 vertebra",
+      "region": "spine",
+      "side": "midline",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_t2.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "vertebra_T2"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/spine_y_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/vertebra_radii_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/c1_below_vertex_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/t1_below_cervicale_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/t12_above_l1_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/l1_above_tenth_rib_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/l5_above_hip_mm"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_T3",
+      "name": "T3 vertebra",
+      "region": "spine",
+      "side": "midline",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_t3.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "vertebra_T3"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/spine_y_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/vertebra_radii_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/c1_below_vertex_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/t1_below_cervicale_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/t12_above_l1_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/l1_above_tenth_rib_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/l5_above_hip_mm"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_T4",
+      "name": "T4 vertebra",
+      "region": "spine",
+      "side": "midline",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_t4.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "vertebra_T4"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/spine_y_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/vertebra_radii_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/c1_below_vertex_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/t1_below_cervicale_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/t12_above_l1_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/l1_above_tenth_rib_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/l5_above_hip_mm"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_T5",
+      "name": "T5 vertebra",
+      "region": "spine",
+      "side": "midline",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_t5.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "vertebra_T5"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/spine_y_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/vertebra_radii_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/c1_below_vertex_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/t1_below_cervicale_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/t12_above_l1_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/l1_above_tenth_rib_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/l5_above_hip_mm"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_T6",
+      "name": "T6 vertebra",
+      "region": "spine",
+      "side": "midline",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_t6.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "vertebra_T6"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/spine_y_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/vertebra_radii_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/c1_below_vertex_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/t1_below_cervicale_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/t12_above_l1_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/l1_above_tenth_rib_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/l5_above_hip_mm"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_T7",
+      "name": "T7 vertebra",
+      "region": "spine",
+      "side": "midline",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_t7.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "vertebra_T7"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/spine_y_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/vertebra_radii_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/c1_below_vertex_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/t1_below_cervicale_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/t12_above_l1_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/l1_above_tenth_rib_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/l5_above_hip_mm"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_T8",
+      "name": "T8 vertebra",
+      "region": "spine",
+      "side": "midline",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_t8.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "vertebra_T8"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/spine_y_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/vertebra_radii_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/c1_below_vertex_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/t1_below_cervicale_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/t12_above_l1_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/l1_above_tenth_rib_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/l5_above_hip_mm"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_T9",
+      "name": "T9 vertebra",
+      "region": "spine",
+      "side": "midline",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_t9.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "vertebra_T9"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/spine_y_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/vertebra_radii_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/c1_below_vertex_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/t1_below_cervicale_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/t12_above_l1_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/l1_above_tenth_rib_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/l5_above_hip_mm"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_TALUS_L",
+      "name": "Talus",
+      "region": "foot",
+      "side": "left",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_talus_l.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "foot_L"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_TALUS_R",
+      "name": "Talus",
+      "region": "foot",
+      "side": "right",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_talus_r.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "foot_R"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_TEMP_L",
+      "name": "Temporal",
+      "region": "skull",
+      "side": "left",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_temp_l.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "head_arch_0"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_TEMP_R",
+      "name": "Temporal",
+      "region": "skull",
+      "side": "right",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_temp_r.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "head_arch_0"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_TIBIA_L",
+      "name": "Tibia",
+      "region": "lower_limb",
+      "side": "left",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_tibia_l.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "tibia_L"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/design_choices_mm",
+        "model#/design_datums",
+        "model#/reference/statistics"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_TIBIA_R",
+      "name": "Tibia",
+      "region": "lower_limb",
+      "side": "right",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_tibia_r.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "tibia_R"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/design_choices_mm",
+        "model#/design_datums",
+        "model#/reference/statistics"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_TRAPEZIUM_L",
+      "name": "Trapezium",
+      "region": "hand",
+      "side": "left",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_trapezium_l.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "palm_L"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_TRAPEZIUM_R",
+      "name": "Trapezium",
+      "region": "hand",
+      "side": "right",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_trapezium_r.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "palm_R"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_TRAPEZOID_L",
+      "name": "Trapezoid",
+      "region": "hand",
+      "side": "left",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_trapezoid_l.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "palm_L"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_TRAPEZOID_R",
+      "name": "Trapezoid",
+      "region": "hand",
+      "side": "right",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_trapezoid_r.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "palm_R"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_TRIQUETRUM_L",
+      "name": "Triquetrum",
+      "region": "hand",
+      "side": "left",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_triquetrum_l.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "palm_L"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_TRIQUETRUM_R",
+      "name": "Triquetrum",
+      "region": "hand",
+      "side": "right",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_triquetrum_r.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "palm_R"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_T_PHAL_1_1_L",
+      "name": "Toe 1 phalanx 1",
+      "region": "foot",
+      "side": "left",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_t_phal_1_1_l.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "foot_L"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_T_PHAL_1_1_R",
+      "name": "Toe 1 phalanx 1",
+      "region": "foot",
+      "side": "right",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_t_phal_1_1_r.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "foot_R"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_T_PHAL_1_2_L",
+      "name": "Toe 1 phalanx 2",
+      "region": "foot",
+      "side": "left",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_t_phal_1_2_l.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "foot_L"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_T_PHAL_1_2_R",
+      "name": "Toe 1 phalanx 2",
+      "region": "foot",
+      "side": "right",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_t_phal_1_2_r.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "foot_R"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_T_PHAL_2_1_L",
+      "name": "Toe 2 phalanx 1",
+      "region": "foot",
+      "side": "left",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_t_phal_2_1_l.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "foot_L"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_T_PHAL_2_1_R",
+      "name": "Toe 2 phalanx 1",
+      "region": "foot",
+      "side": "right",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_t_phal_2_1_r.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "foot_R"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_T_PHAL_2_2_L",
+      "name": "Toe 2 phalanx 2",
+      "region": "foot",
+      "side": "left",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_t_phal_2_2_l.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "foot_L"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_T_PHAL_2_2_R",
+      "name": "Toe 2 phalanx 2",
+      "region": "foot",
+      "side": "right",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_t_phal_2_2_r.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "foot_R"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_T_PHAL_2_3_L",
+      "name": "Toe 2 phalanx 3",
+      "region": "foot",
+      "side": "left",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_t_phal_2_3_l.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "foot_L"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_T_PHAL_2_3_R",
+      "name": "Toe 2 phalanx 3",
+      "region": "foot",
+      "side": "right",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_t_phal_2_3_r.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "foot_R"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_T_PHAL_3_1_L",
+      "name": "Toe 3 phalanx 1",
+      "region": "foot",
+      "side": "left",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_t_phal_3_1_l.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "foot_L"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_T_PHAL_3_1_R",
+      "name": "Toe 3 phalanx 1",
+      "region": "foot",
+      "side": "right",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_t_phal_3_1_r.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "foot_R"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_T_PHAL_3_2_L",
+      "name": "Toe 3 phalanx 2",
+      "region": "foot",
+      "side": "left",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_t_phal_3_2_l.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "foot_L"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_T_PHAL_3_2_R",
+      "name": "Toe 3 phalanx 2",
+      "region": "foot",
+      "side": "right",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_t_phal_3_2_r.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "foot_R"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_T_PHAL_3_3_L",
+      "name": "Toe 3 phalanx 3",
+      "region": "foot",
+      "side": "left",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_t_phal_3_3_l.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "foot_L"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_T_PHAL_3_3_R",
+      "name": "Toe 3 phalanx 3",
+      "region": "foot",
+      "side": "right",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_t_phal_3_3_r.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "foot_R"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_T_PHAL_4_1_L",
+      "name": "Toe 4 phalanx 1",
+      "region": "foot",
+      "side": "left",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_t_phal_4_1_l.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "foot_L"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_T_PHAL_4_1_R",
+      "name": "Toe 4 phalanx 1",
+      "region": "foot",
+      "side": "right",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_t_phal_4_1_r.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "foot_R"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_T_PHAL_4_2_L",
+      "name": "Toe 4 phalanx 2",
+      "region": "foot",
+      "side": "left",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_t_phal_4_2_l.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "foot_L"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_T_PHAL_4_2_R",
+      "name": "Toe 4 phalanx 2",
+      "region": "foot",
+      "side": "right",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_t_phal_4_2_r.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "foot_R"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_T_PHAL_4_3_L",
+      "name": "Toe 4 phalanx 3",
+      "region": "foot",
+      "side": "left",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_t_phal_4_3_l.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "foot_L"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_T_PHAL_4_3_R",
+      "name": "Toe 4 phalanx 3",
+      "region": "foot",
+      "side": "right",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_t_phal_4_3_r.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "foot_R"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_T_PHAL_5_1_L",
+      "name": "Toe 5 phalanx 1",
+      "region": "foot",
+      "side": "left",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_t_phal_5_1_l.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "foot_L"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_T_PHAL_5_1_R",
+      "name": "Toe 5 phalanx 1",
+      "region": "foot",
+      "side": "right",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_t_phal_5_1_r.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "foot_R"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_T_PHAL_5_2_L",
+      "name": "Toe 5 phalanx 2",
+      "region": "foot",
+      "side": "left",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_t_phal_5_2_l.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "foot_L"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_T_PHAL_5_2_R",
+      "name": "Toe 5 phalanx 2",
+      "region": "foot",
+      "side": "right",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_t_phal_5_2_r.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "foot_R"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_T_PHAL_5_3_L",
+      "name": "Toe 5 phalanx 3",
+      "region": "foot",
+      "side": "left",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_t_phal_5_3_l.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "foot_L"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_T_PHAL_5_3_R",
+      "name": "Toe 5 phalanx 3",
+      "region": "foot",
+      "side": "right",
+      "core_scope": false,
+      "source_record": "skeleton/bones/bone_t_phal_5_3_r.py",
+      "source_record_status": "present",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "foot_R"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_ULNA_L",
+      "name": "Ulna",
+      "region": "upper_limb",
+      "side": "left",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_ulna_l.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "ulna_L"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/forearm_separation_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/ulna_radii_mm"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_ULNA_R",
+      "name": "Ulna",
+      "region": "upper_limb",
+      "side": "right",
+      "core_scope": true,
+      "source_record": "skeleton/bones/bone_ulna_r.py",
+      "source_record_status": "present",
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "ulna_R"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/forearm_separation_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout/ulna_radii_mm"
+      ],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_VOMER",
+      "name": "Vomer",
+      "region": "skull",
+      "side": "midline",
+      "core_scope": false,
+      "source_record": null,
+      "source_record_status": "missing",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "head_arch_0"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_ZYGOMATIC_L",
+      "name": "Zygomatic",
+      "region": "skull",
+      "side": "left",
+      "core_scope": false,
+      "source_record": null,
+      "source_record_status": "missing",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "head_arch_0"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    },
+    {
+      "bone_id": "BONE_ZYGOMATIC_R",
+      "name": "Zygomatic",
+      "region": "skull",
+      "side": "right",
+      "core_scope": false,
+      "source_record": null,
+      "source_record_status": "missing",
+      "representation": "grouped_form_proxy",
+      "mesh_ids": [
+        "head_arch_0"
+      ],
+      "geometry_inputs": [],
+      "dimensional_fidelity": "unverified",
+      "physical_evidence": "unmeasured"
+    }
+  ],
+  "bone_distribution_complete": false,
+  "dimensional_fidelity_verified": false,
+  "fabrication_released": false,
+  "physical_evidence_complete": false
+}

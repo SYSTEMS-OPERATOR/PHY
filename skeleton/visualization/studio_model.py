@@ -12,6 +12,8 @@ import math
 from pathlib import Path
 import statistics
 
+from .core_bone_geometry import build_core
+
 ROOT = Path(__file__).resolve().parents[2]
 PROJECT = ROOT / "PROJECTS/PHY_F28"
 
@@ -193,7 +195,7 @@ def build_armature(height_mm=None, refinement=1.0, arm_drop_deg=75.0, span_equal
     proxies = [m["acromionradialelength"], m["radialestylionlength"], m["handlength"]]
     closure = (target_span/2-shoulder_x)/sum(proxies)
     upper, fore, hand = [v*closure for v in proxies]
-    parts, landmarks = [], {}
+    parts, landmarks, maquette_formers, maquette_members = [], {}, [], []
 
     def part(pid, name, region, material, mesh, source="proposed mechanical geometry", **details):
         vertices = [[round(v, 5) for v in p] for p in mesh["vertices"]]
@@ -207,13 +209,6 @@ def build_armature(height_mm=None, refinement=1.0, arm_drop_deg=75.0, span_equal
         part(pid, name, region, material, tube([a, b], radius),
              endpoints_mm=[a, b], center_distance_mm=round(math.dist(a, b), 5))
 
-    # Segmented sagittal support; every point is a project datum.
-    low, high = hip_z+5*scale, m["cervicaleheight"]-30*scale
-    spine = [[0, (-32+12*math.sin(t*math.pi*2))*scale, low+(high-low)*t] for t in [i/8 for i in range(9)]]
-    for i in range(8):
-        rod(f"spine_{i+1}", f"Spine link {i+1:02d}", "spine", spine[i], spine[i+1], 8*scale)
-        part(f"vertebra_{i+1}", f"Spine coupling {i+1:02d}", "spine", "brass", ellipsoid(spine[i], [13*scale, 13*scale, 8*scale]))
-    rod("neck", "Cervical support", "head", spine[-1], [0, -18*scale, height-160*scale], 9*scale)
     head_h = d["head_height"]*scale
     head_center = [0, 0, height-head_h/2]
     rx, ry, rz = m["headbreadth"]/2, m["headlength"]/2, head_h/2
@@ -226,29 +221,19 @@ def build_armature(height_mm=None, refinement=1.0, arm_drop_deg=75.0, span_equal
     part("head_envelope", "Head envelope", "envelope", "ivory", ellipsoid(head_center, [rx, ry, rz]),
          source="ANSUR head breadth/depth; proposed 220 mm chin–crown height")
 
-    # Thoracic formers: compressed chest measurements are not outer bust widths.
+    # Preserve the separate earlier plywood form-study schedule, not skeletal ribs.
     rib_low, rib_high = m["tenthribheight"]-20*scale, shoulder_z-70*scale
     for i in range(7):
         t = i/6
         z = rib_low+(rib_high-rib_low)*t
         breadth = m["chestbreadth"]*(.72+.28*math.sin(math.pi*(.12+.78*t)))
         depth = m["chestdepth"]*(.62+.12*math.sin(math.pi*t))
-        part(f"rib_{i+1}", f"Thoracic former {i+1:02d}", "thorax", "redwood",
-             tube(ellipse([0, 0, z], breadth/2, depth/2), 4.5*scale, True),
-             source="ANSUR chest breadth/depth, proposed internal scaling", former_mm=[z, breadth, depth])
-    rod("sternum", "Anterior sternum rail", "thorax", [0, 78*scale, rib_low], [0, 82*scale, rib_high], 5*scale, "copper")
+        maquette_formers.append({"id": f"rib_{i+1}", "former_mm": [z, breadth, depth]})
     rod("shoulder_bridge", "Thoracic shoulder bridge", "shoulders", [-shoulder_x, -20*scale, shoulder_z], [shoulder_x, -20*scale, shoulder_z], 9*scale)
     for side, s in (("R", 1), ("L", -1)):
         a, b = [s*34*scale, 32*scale, shoulder_z+20*scale], [s*shoulder_x, 0, shoulder_z]
         part(f"clavicle_{side}", f"{side} floating clavicular link", "shoulders", "brass", tube([a, [s*shoulder_x*.65, 24*scale, shoulder_z+14*scale], b], 6*scale))
-        rod(f"scapular_{side}", f"{side} scapular rail", "shoulders", [s*65*scale, -85*scale, rib_high-20*scale], b, 7*scale)
-    for i, z in enumerate((hip_z-5*scale, hip_z+60*scale, m["iliocristaleheight"])):
-        part(f"pelvis_ring_{i}", f"Pelvic former {i+1}", "pelvis", "redwood",
-             tube(ellipse([0, -8*scale, z], pelvis/2*(.78 if i == 0 else 1), 72*scale), 6*scale, True))
     for side, s in (("R", 1), ("L", -1)):
-        curve = [[s*hip_x, 0, hip_z], [s*pelvis*.50, -8*scale, hip_z+45*scale], [s*pelvis*.54, -22*scale, m["iliocristaleheight"]], [s*pelvis*.32, -60*scale, m["iliocristaleheight"]+10*scale]]
-        part(f"iliac_{side}", f"{side} iliac support arch", "pelvis", "brass", tube(curve, 8*scale))
-        rod(f"pelvis_bridge_{side}", f"{side} sacral-to-hip bridge", "pelvis", spine[0], [s*hip_x, 0, hip_z], 10*scale)
         outer_hip = m["hipbreadth"]*(1+.02*refinement)/2
         form_curve = [[s*hip_x, 0, hip_z-35*scale],
                       [s*outer_hip*.92, 0, hip_z+10*scale],
@@ -273,10 +258,15 @@ def build_armature(height_mm=None, refinement=1.0, arm_drop_deg=75.0, span_equal
             landmarks[f"{joint_name}_{side}"] = point
             part(f"{joint_name}_joint_{side}", f"{side} {joint_name} coupling envelope", "shoulders" if joint_name == "shoulder" else ("arms" if joint_name in ("elbow", "wrist") else "legs"), "brass", ellipsoid(point, [radius*scale]*3), source="proposed center; coupling envelope only, no internal mechanism")
         rod(f"upper_arm_{side}", f"{side} upper-arm member", "arms", shoulder_p, elbow, [13*scale, 10*scale])
-        rod(f"forearm_{side}", f"{side} forearm member", "arms", elbow, wrist, [10*scale, 7*scale])
         rod(f"femur_{side}", f"{side} thigh member", "legs", hip, knee, [17*scale, 13*scale])
         rod(f"tibia_{side}", f"{side} shank member", "legs", knee, ankle, [12*scale, 9*scale])
         rod(f"fibular_{side}", f"{side} auxiliary shank rail", "legs", add(knee, [s*22*scale, -8*scale, -16*scale]), add(ankle, [s*14*scale, -8*scale, 14*scale]), 4*scale, "copper")
+        maquette_members.extend({key: p[key] for key in ("id", "region", "endpoints_mm")}
+                                for p in parts if p["id"] in
+                                (f"upper_arm_{side}", f"femur_{side}", f"tibia_{side}", f"fibular_{side}"))
+        # Keep the earlier stencil's order and single forearm carrier exactly.
+        maquette_members.insert(len(maquette_members)-3,
+                                {"id": f"forearm_{side}", "region": "arms", "endpoints_mm": [elbow, wrist]})
         palm_end = add(wrist, mul(direction, hand*.56))
         rod(f"palm_{side}", f"{side} palm carrier", "hands", wrist, palm_end, [14*scale, 18*scale])
         lateral = [s*math.sin(angle), 0, math.cos(angle)]
@@ -311,6 +301,8 @@ def build_armature(height_mm=None, refinement=1.0, arm_drop_deg=75.0, span_equal
     part("torso_envelope", "Interpolated female form envelope", "envelope", "ivory", torso_mesh(stations), source="ANSUR marginal girths; ellipse fit and inter-level interpolation are proposed form design")
     landmarks["vertex"] = [0, 0, height]
     landmarks["floor"] = [0, 0, 0]
+    bone_report, bone_anchors = build_core(parts, part,
+        (scale, height, m, shoulder_x, shoulder_z, hip_x, hip_z, pelvis), profile["bone_proxy_layout"])
     return {"id": "PHY_F28_R1", "name": "Female 28 / reference armature", "units": "mm",
             "frame": "+x subject-right, +y anterior, +z superior", "age_years": 28,
             "height_mm": height, "t_pose_span_mm": target_span, "refinement": refinement,
@@ -318,6 +310,10 @@ def build_armature(height_mm=None, refinement=1.0, arm_drop_deg=75.0, span_equal
             "canon_effect": "none", "canon_identity_comparison_only": span_equals_height,
             "fabrication_released": False, "physical_evidence_complete": False,
             "reference": ref, "parts": parts, "landmarks": landmarks,
+            "bone_equivalence": bone_report, "bone_anchors_mm": bone_anchors,
+            "bone_proxy_layout": profile["bone_proxy_layout"],
+            "bone_proxy_layout_sha256": digest(profile["bone_proxy_layout"]),
+            "maquette_formers": maquette_formers, "maquette_members": maquette_members,
             "design_datums": {"hip_center_spacing_mm": 2*hip_x, "shoulder_center_spacing_mm": 2*shoulder_x,
                               "arm_chain_closure_scale": closure, "upper_arm_station_mm": upper,
                               "forearm_station_mm": fore, "hand_station_mm": hand,
@@ -326,7 +322,9 @@ def build_armature(height_mm=None, refinement=1.0, arm_drop_deg=75.0, span_equal
             "aesthetic_adjustments_percent": {k: v*refinement for k, v in adjustments.items()},
             "limitations": ["External surface measurements do not specify bone lengths or 3D joint centers.",
                             "The arm station mapping preserves measured span using segment ratios; it is not anatomical endpoint adoption.",
-                            "Couplings, curved formers and soft-form interpolation are explicit design proposals.",
+                            "71 core bones have individual provisional proxies; 128 bones remain grouped forms and seven are unrepresented.",
+                            "Count/adjacency is reference-grounded; bone dimensions, morphology and joints are unverified design proposals.",
+                            "Hardware, support rails and interpolated envelopes do not count as bones. Thirteen facial source records remain missing.",
                             "The A0 shoulder article is a separate, unscaled bench assembly; no automatic whole-body integration.",
                             "The quarter-scale passive maquette has separate assembly and material instructions.",
                             "Full-scale load paths, interfaces, actuation, balance and physical qualification remain open."]}

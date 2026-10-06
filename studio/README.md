@@ -30,6 +30,26 @@ Palette changes affect appearance. They never revise a construction BOM. The for
 envelope is interpolated design, not a scan. Couplings are envelopes without
 internally defined mechanisms. A0 does not inherit whole-body scales or poses.
 
+## Bone-equivalence inspection
+
+The reference body has **71 individual core bone proxies**: 26 spine, 25 thorax,
+four shoulder-girdle, two adult hip, six upper-limb and eight lower-limb bones.
+All 206 adult identities have an explicit disposition: another 128 remain grouped
+skull/hand/foot forms; six ear ossicles and the hyoid are unrepresented.
+193 existing canonical source records are preserved; 13 facial records are missing.
+
+Use **Individual bone proxies only** to hide hardware, support rails, grouped forms
+and envelopes. Search by `BONE_` ID or inspect the Bone coverage panel. Coupling
+visibility uses role metadata rather than a brass-material heuristic. The bone-only
+filter also governs STL/GLB export; GLB carries bone IDs and role/provenance extras.
+JSON retains the complete original model/audit plus the active review/filter state.
+Other display-layer and isolate settings do not limit the exported complete frame.
+
+This closes a bounded count/distribution gap, **not dimensional fidelity**. Shapes,
+bone endpoints, joints and morphology are unverified project proposals. None become
+BoneSpec dimensions or fabrication-approved interfaces. Left core proxies derive
+by reflection of authored right meshes, with triangle winding corrected.
+
 Exports include the complete frame (form envelope and guides are separate), current
 pose, scale and separation. STL is in the canonical X/Y/Z frame in millimeters;
 GLB uses glTF's Y-up frame in meters. JSON includes the original model plus the
@@ -41,7 +61,7 @@ review state, preserving the distinction between source and exploration.
 npm ci --prefix studio
 npm run build --prefix studio
 python -m pip install cadquery==2.7.0
-python bin/export_phy_studio.py
+python bin/export_phy_studio.py --sync-review
 ```
 
 Outputs go to `studio/dist/`: offline HTML, three reference JSONs and STLs,
@@ -61,5 +81,7 @@ not. The Three MIT notice is included in the app and `THIRD_PARTY_NOTICES.txt`.
 The Studio is a runnable demonstration, and the reference assembly is complete as
 a visual form study. Full-scale physical readiness is open. The A0 bearing-impact
 screen and supplier/clearance/physical-evidence gates remain visible and unchanged.
-The maquette is a supported, passive plywood form study, not a functional armature.
+The maquette is a supported, passive plywood form study, not a functional armature
+or a miniature of the revised bone distribution. Its earlier 26-cut geometry is
+preserved exactly and has its own former/member schedule.
 See `PROJECTS/PHY_F28/README.md` and the in-app Build path / Readiness panels.

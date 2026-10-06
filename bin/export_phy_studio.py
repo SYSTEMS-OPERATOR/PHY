@@ -13,12 +13,14 @@ import importlib.util
 import json
 import math
 from pathlib import Path
+import shutil
 import sys
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from skeleton.visualization.studio_model import build_armature, reference_statistics, write_stl
+from skeleton.visualization.bone_equivalence import report_markdown
 
 
 def load_module(name, path):
@@ -111,7 +113,7 @@ def maquette(model, output):
     link("M-THIGH", "thigh link", math.dist(model["landmarks"]["hip_R"], model["landmarks"]["knee_R"]))
     link("M-SHANK", "shank link", math.dist(model["landmarks"]["knee_R"], model["landmarks"]["ankle_R"]))
     former_rows = []
-    for part in model["parts"]:
+    for part in model["maquette_formers"]:
         if "former_mm" in part:
             z, w, h = part["former_mm"]
             w, h = w*scale, h*scale
@@ -167,13 +169,13 @@ def maquette(model, output):
     (output / "manifest.json").write_text(json.dumps(manifest, indent=2)+"\n")
     # Front assembly stencil uses datum points; y depths are shown by former schedule.
     lines = []
-    for part in model["parts"]:
+    for part in model["maquette_members"]:
         if "endpoints_mm" in part and part["region"] in ("arms", "legs"):
             a, b = part["endpoints_mm"]
             lines.append(f'<line x1="{125+a[0]*scale}" y1="{440-a[2]*scale}" x2="{125+b[0]*scale}" y2="{440-b[2]*scale}"/>')
     labels = ''.join(f'<text x="175" y="{440-d[key]*scale}" font-size="3.5">{name}: {d[key]*scale:.2f} mm</text>' for key, name in (("shoulder_z_mm", "Shoulder"), ("hip_z_mm", "Hip"), ("knee_z_mm", "Knee"), ("ankle_z_mm", "Ankle")))
     forms = []
-    for p in model["parts"]:
+    for p in model["maquette_formers"]:
         if "former_mm" in p:
             z, w, _ = p["former_mm"]
             forms.append(f'<rect x="{125-w*scale/2}" y="{440-z*scale-3}" width="{w*scale}" height="3"/>')
@@ -234,6 +236,22 @@ def export(output, include_a0=True):
     mean = build_armature(refinement=0)
     refined = build_armature()
     sophy = build_armature(height_mm=1676.4, span_equals_height=True)
+    audit = refined["bone_equivalence"]
+    (output / "BONE_EQUIVALENCE.json").write_text(json.dumps(audit, indent=2)+"\n")
+    (output / "BONE_EQUIVALENCE.md").write_text(report_markdown(audit), encoding="utf-8")
+    layout_report = ["# Core bone proxy layout / CORE_V1", "",
+                     "Project-local provisional placement, not osteometry, joint anatomy or canon adoption.",
+                     "Values are mm at the cohort mean stature unless the key states fraction, degrees or samples.",
+                     "Mean/refined/SOPHY overlays scale these choices uniformly; all dimensional fidelity is unverified.",
+                     "Source: `PROJECTS/PHY_F28/profiles/f28.json#/bone_proxy_layout`", "",
+                     "Layout SHA-256: `"+refined["bone_proxy_layout_sha256"]+"`", "",
+                     "| Input | Governing value |", "| --- | --- |"]
+    layout_report += ["| "+key+" | `"+json.dumps(value, sort_keys=True)+"` |"
+                      for key, value in refined["bone_proxy_layout"].items()]
+    layout_report += ["", "External station inputs remain in the hash-pinned reference projection and `design_choices_mm`.",
+                      "The retained humerus/femur/tibia/fibula/clavicle proxies are station-based forms, not measured bones.",
+                      "No clearances, structural sections, joint interfaces or manufacturing release are asserted."]
+    (output / "CORE_PROXY_LAYOUT.md").write_text("\n".join(layout_report)+"\n", encoding="utf-8")
     models = [dict(mean, id="F28_MEAN", name="F28 / arithmetic mean"),
               dict(refined, id="F28_REFINED", name="F28 / gentle refinement"),
               dict(sophy, id="SOPHY_SCALE", name="SOPHY / 1676.4 mm reference overlay")]
@@ -272,13 +290,16 @@ def export(output, include_a0=True):
                "- Shoulder centers 14 mm medial to each acromion; hip spacing is 0.68 × bicristal breadth and centers 35 mm above trochanterion.",
                "- Knee height uses lateral epicondyle height as a station proxy; ankle datum is 70 mm.",
                f"- The arm-chain station factor is {mean['design_datums']['arm_chain_closure_scale']:.6f}: allocate measured span among upper-arm/forearm/hand external ratios after subtracting shoulder-center spacing. This reconciles incompatible endpoint definitions; it is not measured bone length or an aesthetic adjustment.",
-               "- Couplings are envelopes. Joint axes, bearing fits, retention and load paths are not resolved for the whole body.",
+               "- 71 core individual bone proxies: 26 spine, 25 thorax, four shoulder girdle, two adult hips, six arm and eight leg bones.",
+               "- 128 identities remain grouped forms; seven ear/hyoid identities are unrepresented. See BONE_EQUIVALENCE.md for all 206 dispositions.",
+               "- Bone-proxy layout is project-local provisional placement, not measured osteometry. Missing facial source records stay missing.",
+               "- Couplings are hardware envelopes. Joint axes, bearing fits, retention and load paths are not resolved for the whole body.",
                "- Elliptical torso envelope uses marginal girths; interpolation and anatomical appearance are design, not scan data.", "",
                "Refinement: shoulders −1%, waist −3%, hips +2%. No measured source is overwritten, and no claim of objective attractiveness is made.", "",
                "The SOPHY scale overlay preserves H=span=1676.4 mm for comparison. It neither adopts new canon landmarks nor modifies canon 1.0.0.",
                "A0-R1 is the exact separate 35-instance CAD assembly. Its 317 mm station is never scaled or substituted into the whole-body form study.", "",
                "## First physical demonstration", "", "See maquette/BUILD.md, actual-size cut SVGs, BOM.csv and assembly-stencil.svg.",
-               "The quarter-scale supported plywood maquette has a separate construction design. It demonstrates proportions, not structural capacity.", "",
+               "The quarter-scale supported plywood maquette has a separate, preserved construction design. It does not miniaturize the core bone proxies or demonstrate skeletal distribution/structural capacity.", "",
                "## Reproduce", "", "`python bin/export_phy_studio.py` builds all geometry and the offline app; CadQuery 2.7.0 is required for A0 and the source kit.",
                "`--without-a0` builds the full-body reference and maquette with Python standard library only, using the checked-in app bundle.",
                "Viewer source: `npm ci --prefix studio && npm run build --prefix studio`.", "",
@@ -304,5 +325,12 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", type=Path, default=ROOT / "studio/dist")
     parser.add_argument("--without-a0", action="store_true")
+    parser.add_argument("--sync-review", action="store_true", help="copy generated offline HTML and bone reports to checked-in review locations")
     args = parser.parse_args()
     export(args.output, not args.without_a0)
+    if args.sync_review:
+        review = ROOT / "PROJECTS/PHY_F28/reports"
+        review.mkdir(parents=True, exist_ok=True)
+        for name in ("BONE_EQUIVALENCE.json", "BONE_EQUIVALENCE.md", "CORE_PROXY_LAYOUT.md"):
+            shutil.copyfile(args.output / name, review / name)
+        shutil.copyfile(args.output / "PHY-Studio.html", ROOT / "studio/PHY-Studio.html")

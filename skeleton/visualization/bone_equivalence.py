@@ -83,6 +83,27 @@ def source_record_paths(root=ROOT):
     return paths
 
 
+def report_markdown(audit):
+    lines = ["# PHY adult bone-equivalence coverage", "",
+             "Status: core distribution review only; dimensions/morphology unverified, physical evidence unmeasured, fabrication release false.", "",
+             f"{audit['expected_bones']} adult identities: {audit['individual_bone_proxies']} individual project proxies, "
+             f"{audit['grouped_bones']} grouped-form identities, {audit['unrepresented_bones']} unrepresented.",
+             f"{audit['source_records_present']} existing canonical source records are unchanged; "
+             f"{len(audit['missing_source_records'])} facial records remain missing.", "",
+             "One adult fused hip, sacrum and coccyx each. Hardware, cartilage, teeth and support rails never increase bone coverage.", "",
+             "| Region | Expected | Individual | Grouped | Unrepresented |",
+             "| --- | ---: | ---: | ---: | ---: |"]
+    lines += [f"| {r['region']} | {r['expected']} | {r['individual']} | {r['grouped']} | {r['unrepresented']} |" for r in audit["regions"]]
+    lines += ["", "## Outstanding source records", ""]
+    lines += ["- `"+key+"`" for key in audit["missing_source_records"]]
+    lines += ["", "## Every identity and disposition", "",
+              "All individual proxies use provisional project geometry. Count equivalence is not dimensional fidelity or manufacture approval.", "",
+              "| Bone ID | Region | Representation | Mesh ID(s) | Source record |",
+              "| --- | --- | --- | --- | --- |"]
+    lines += [f"| {r['bone_id']} | {r['region']} | {r['representation']} | {', '.join(r['mesh_ids']) or '—'} | {r['source_record'] or 'MISSING'} |" for r in audit["bones"]]
+    return "\n".join(lines)+"\n"
+
+
 def bone_audit(parts, root=ROOT):
     """Return all 206 dispositions and reject invalid/ambiguous mesh mappings."""
     inventory = expected_bones()
@@ -94,6 +115,9 @@ def bone_audit(parts, root=ROOT):
     if unknown_records:
         raise ValueError("unknown source bone IDs: " + ", ".join(sorted(unknown_records)))
     individual, grouped, part_ids = {}, {}, set()
+    region_names = {"spine": "spine", "thorax": "thorax", "shoulder_girdle": "shoulders",
+                    "pelvis": "pelvis", "upper_limb": "arms", "lower_limb": "legs",
+                    "skull": "head", "ear": "head", "hyoid": "head", "hand": "hands", "foot": "feet"}
     for part in parts:
         if part["id"] in part_ids:
             raise ValueError("duplicate mesh ID: " + part["id"])
@@ -108,6 +132,10 @@ def bone_audit(parts, root=ROOT):
                 raise ValueError("invalid individual bone mapping: " + part["id"])
             if bone_id in individual:
                 raise ValueError("duplicate individual bone coverage: " + bone_id)
+            if part["region"] != region_names[wanted[bone_id]["region"]]:
+                raise ValueError("bone mesh is mapped to the wrong region")
+            if not part.get("geometry_inputs") or part.get("dimensional_fidelity") != "unverified" or part.get("physical_evidence") != "unmeasured":
+                raise ValueError("bone proxy lacks explicit provisional provenance")
             individual[bone_id] = part["id"]
         elif bone_id is not None:
             raise ValueError("non-bone mesh carries an individual bone ID")
@@ -122,11 +150,13 @@ def bone_audit(parts, root=ROOT):
     rows = []
     for row in inventory:
         key = row["bone_id"]
+        mesh = next((p for p in parts if p["id"] == individual.get(key)), None)
         rows.append(dict(row, source_record=records.get(key),
                          source_record_status="present" if key in records else "missing",
                          representation="individual_project_proxy" if key in individual else
                          "grouped_form_proxy" if key in grouped else "unrepresented",
                          mesh_ids=[individual[key]] if key in individual else [grouped[key]] if key in grouped else [],
+                         geometry_inputs=mesh.get("geometry_inputs", []) if mesh else [],
                          dimensional_fidelity="unverified", physical_evidence="unmeasured"))
     regions = []
     for region, expected in EXPECTED_REGIONS.items():

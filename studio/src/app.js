@@ -11,7 +11,7 @@ const round = (v,n=1) => Number(v).toFixed(n);
 const coord = v => new THREE.Vector3(v[0],v[2],-v[1]);
 const sourceMean = data.reference.statistics.stature.mean_mm;
 const state = { model:'F28_REFINED', height:sourceMean, pose:75, palette:'wood', exploded:0,
-  selected:null, isolated:false, ruler:false, points:[], view:'iso' };
+  selected:null, isolated:false, boneOnly:false, ruler:false, points:[], view:'iso' };
 let model, renderer, scene, camera, controls, root, meshes=[], guides, ground, rulerGroup;
 let toastTimer, lastFocus, focusTarget, redraw=true;
 const palette = {
@@ -74,7 +74,8 @@ function material(part) {
 }
 function selectModel(id,render=true) {
   model=data.models.find(x=>x.id===id);if(!model)return;
-  state.model=id;state.height=model.height_mm??0;state.pose=model.arm_drop_deg??0;state.selected=null;state.isolated=false;state.exploded=0;
+  state.model=id;state.height=model.height_mm??0;state.pose=model.arm_drop_deg??0;state.selected=null;state.isolated=false;state.boneOnly=false;state.exploded=0;
+  $('layer-bones-only').checked=false;$('layer-bones-only').disabled=!model.bone_equivalence;
   state.points=[];state.ruler=false;$('measure').classList.remove('active');$('explode').value=0;
   $('part-search').value='';
   document.querySelectorAll('[data-model]').forEach(b=>{b.classList.toggle('active',b.dataset.model===id);b.setAttribute('aria-pressed',b.dataset.model===id);});
@@ -124,9 +125,9 @@ function applyTransforms() {
       mesh.position.copy(pivot).sub(pivot.clone().applyQuaternion(mesh.quaternion));
     }
     if(state.exploded){const c=coord(p.bounds_mm.min).add(coord(p.bounds_mm.max)).multiplyScalar(.5);const direction=c.sub(origin);if(direction.length()>1)mesh.position.add(direction.normalize().multiplyScalar(state.exploded*(model.height_mm?2.5:1.5)));}
-    const joint=p.name.toLowerCase().includes('coupling')||['brass','steel'].includes(p.material);
-    mesh.visible=p.region==='envelope'?$('layer-envelope').checked:joint?$('layer-joints').checked:$('layer-frame').checked;
-    if(state.isolated&&state.selected)mesh.visible=p.id===state.selected;
+    const joint=p.role?p.role==='hardware':p.name.toLowerCase().includes('coupling')||['brass','steel'].includes(p.material);
+    mesh.visible=state.boneOnly?p.role==='bone_proxy':p.region==='envelope'?$('layer-envelope').checked:joint?$('layer-joints').checked:$('layer-frame').checked;
+    if(state.isolated&&state.selected)mesh.visible=mesh.visible&&p.id===state.selected;
     mesh.material.wireframe=false;
     mesh.material.emissive.setHex(p.id===state.selected?0x503a16:0);
     mesh.material.emissiveIntensity=p.id===state.selected?.4:0;
@@ -161,14 +162,14 @@ function cameraView(view='iso',target=null,size=null) {
 }
 function updatePartList() {
   const query=$('part-search').value.toLowerCase();const select=$('part-select');select.replaceChildren(new Option('Select in the viewport',''));
-  for(const p of model.parts)if((p.name+' '+p.id+' '+p.region).toLowerCase().includes(query))select.add(new Option(p.name,p.id));
+  for(const p of model.parts)if((!state.boneOnly||p.role==='bone_proxy')&&(p.name+' '+p.id+' '+p.region+' '+(p.bone_id??'')+' '+(p.grouped_bone_ids??[]).join(' ')).toLowerCase().includes(query))select.add(new Option(p.name+(p.bone_id?' · '+p.bone_id:''),p.id));
   select.value=state.selected??'';
 }
 function inspectPart(id) {
   state.selected=id;const p=model.parts.find(x=>x.id===id);$('part-select').value=id??'';
   if(!p){$('part-details').innerHTML='<p class="quiet">Click the model to inspect a part, its dimensions, and its source.</p>';if(renderer)applyTransforms();return;}
   const dims=p.bounds_mm.max.map((v,i)=>(v-p.bounds_mm.min[i])*(model.height_mm?state.height/model.height_mm:1));
-  $('part-details').innerHTML='<p><strong>'+escape(p.name)+'</strong><br>'+escape(p.id)+'</p><p>'+dims.map(x=>round(x)).join(' × ')+' mm <span class="quiet">/ axis-aligned envelope</span></p><p class="quiet">'+escape(p.authority)+'<br>'+escape(p.source)+'</p>'+(p.center_distance_mm?'<p>Member center distance: '+round(p.center_distance_mm*state.height/model.height_mm)+' mm</p>':'');
+  $('part-details').innerHTML='<p><strong>'+escape(p.name)+'</strong><br>'+escape(p.id)+'</p>'+(p.role?'<p>Role: '+escape(p.role)+(p.bone_id?'<br>'+escape(p.bone_id)+' · dimensional fidelity unverified':p.grouped_bone_ids?'<br>'+p.grouped_bone_ids.length+' grouped identities · not individual bones':'')+'</p>':'')+'<p>'+dims.map(x=>round(x)).join(' × ')+' mm <span class="quiet">/ axis-aligned envelope</span></p><p class="quiet">'+escape(p.authority)+'<br>'+escape(p.source)+'</p>'+(p.center_distance_mm?'<p>Member center distance: '+round(p.center_distance_mm*(model.height_mm?state.height/model.height_mm:1))+' mm</p>':'');
   applyTransforms();
 }
 function pick(event) {
@@ -185,6 +186,9 @@ function wireControls() {
   $('height').oninput=()=>setHeight(Number($('height').value));$('height-number').onchange=()=>setHeight(Number($('height-number').value));
   $('pose').oninput=()=>setPose(Number($('pose').value));$('pose-a').onclick=()=>setPose(75);$('pose-t').onclick=()=>setPose(0);
   for(const id of ['layer-frame','layer-joints','layer-envelope','layer-dimensions'])$(id).onchange=applyTransforms;
+  $('layer-bones-only').onchange=()=>{state.boneOnly=$('layer-bones-only').checked;state.isolated=false;
+    if(state.boneOnly&&model.parts.find(p=>p.id===state.selected)?.role!=='bone_proxy')state.selected=null;
+    state.points=[];disposeGroup(rulerGroup);updatePartList();inspectPart(state.selected);cameraView(state.view);};
   $('explode').oninput=()=>{state.exploded=Number($('explode').value);applyTransforms();};
   $('part-search').oninput=updatePartList;$('part-select').onchange=()=>inspectPart($('part-select').value||null);
   $('isolate').onclick=()=>{if(!state.selected){toast('Select a component first.');return;}state.isolated=true;applyTransforms();cameraView(state.view);};
@@ -200,9 +204,10 @@ function setPose(value) { if(!model.height_mm)return;state.pose=Math.max(0,Math.
 function setPalette(value) { state.palette=value;$('mat-wood').classList.toggle('active',value==='wood');$('mat-carbon').classList.toggle('active',value==='carbon');for(const mesh of meshes){mesh.material.color.setHex(palette[value][mesh.userData.part.material]??0xb0b5b0);}redraw=true; }
 function exportGroup() {
   root.updateMatrixWorld(true);const group=new THREE.Group();
-  for(const mesh of meshes)if(mesh.userData.part.region!=='envelope'){
+  for(const mesh of meshes)if(mesh.userData.part.region!=='envelope'&&(!state.boneOnly||mesh.userData.part.role==='bone_proxy')){
     const clone=new THREE.Mesh(mesh.geometry,mesh.material);clone.name=mesh.name;
-    clone.applyMatrix4(mesh.matrixWorld);clone.userData={part_id:mesh.name,status:'reference/unreleased'};group.add(clone);
+    const p=mesh.userData.part;
+    clone.applyMatrix4(mesh.matrixWorld);clone.userData={part_id:mesh.name,role:p.role??'separate_CAD',bone_id:p.bone_id??null,grouped_bone_ids:p.grouped_bone_ids??[],dimensional_fidelity:p.dimensional_fidelity??'unverified',status:'reference/unreleased'};group.add(clone);
   }
   return group;
 }
@@ -240,6 +245,10 @@ function openModal(tab) {
   if(tab==='reference'){
     $('modal-title').textContent='Proportion reference';
     $('modal-content').innerHTML='<p>Arithmetic means of <b>92 women aged exactly 28</b> from ANSUR II. '+escape(ref.population)+'</p><p>The baseline retains the measured mean stature and span. The refinement uses shoulder −1%, waist −3%, and hip +2%. Marginal means are a design reference, not one real individual or an objective beauty standard.</p><p>Joint centers, head height, curved formers and the interpolated form envelope are proposed mechanical datums. External segment ratios are mapped to the measured span; they are not osteometric bone lengths.</p>'+htmlTable(['MEASUREMENT','MEAN / mm','SAMPLE SD / mm','n'],Object.entries(stats).map(([k,v])=>[k,round(v.mean_mm,3),round(v.sd_mm,3),v.n]))+'<p><a href="'+escape(ref.report_url)+'" target="_blank" rel="noopener">ANSUR II report</a> · <a href="'+escape(ref.data_url)+'" target="_blank" rel="noopener">Public data source</a></p><p class="small-note">Projected snapshot SHA-256: '+escape(ref.snapshot_sha256)+'</p>';
+  } else if(tab==='bones'){
+    const body=model.bone_equivalence?model:data.models.find(m=>m.bone_equivalence),audit=body.bone_equivalence;
+    $('modal-title').textContent='Bone equivalence / distribution';
+    $('modal-content').innerHTML='<p>Reference-body scope only; A0 and the source gallery are separate. '+audit.expected_bones+' adult identities: <b>'+audit.individual_bone_proxies+' individual project proxies</b>, '+audit.grouped_bones+' grouped-form identities, '+audit.unrepresented_bones+' unrepresented. Hardware/supports do not count.</p><p class="warning">Dimensions and morphology are unverified project proposals, not osteometry or canon adoption. Coverage is not fabrication readiness.</p>'+htmlTable(['REGION','EXPECTED','INDIVIDUAL','GROUPED','UNREPRESENTED'],audit.regions.map(r=>[r.region,r.expected,r.individual,r.grouped,r.unrepresented]))+'<p>'+audit.source_records_present+' existing source records; '+audit.missing_source_records.length+' facial records missing. Those missing records are not silently created.</p><details><summary>Missing source records</summary><ul>'+audit.missing_source_records.map(id=>'<li>'+escape(id)+'</li>').join('')+'</ul></details><details><summary>All 206 identities / current disposition</summary>'+htmlTable(['BONE ID','DISPOSITION','MESH','SOURCE'],audit.bones.map(r=>[r.bone_id,r.representation,r.mesh_ids.join(', ')||'—',r.source_record||'MISSING']))+'</details>';
   } else if(tab==='bom'){
     $('modal-title').textContent='Quarter-scale maquette';
     $('modal-content').innerHTML='<p>Supported, passive form study · '+round(data.maquette.height_mm)+' mm tall · '+data.maquette.cut_parts+' cut parts · '+data.maquette.cut_sheets+' A3 sheets. Nominal 3 mm birch plywood. Verify stock, hole coupons and cutter kerf before cutting.</p>'+htmlTable(['ID','QTY','DESCRIPTION','STOCK / SIZE','ASSEMBLY NOTE'],data.maquette.bill_of_materials.map(r=>[r.id,r.qty,r.description,r.stock+' / '+round(r.width_mm)+' × '+round(r.length_mm)+' mm',r.note]))+'<button id="modal-download" class="primary">Download the cut and assembly package ↗</button>';
@@ -256,11 +265,12 @@ function openModal(tab) {
 }
 function closeModal(){$('modal-backdrop').classList.remove('open');lastFocus?.focus();}
 function wireResources(){
-  $('download-maquette').onclick=maquetteDownload;$('open-reference').onclick=()=>openModal('reference');$('open-build').onclick=()=>openModal('build');$('open-readiness').onclick=()=>openModal('readiness');$('close-modal').onclick=closeModal;
+  $('download-maquette').onclick=maquetteDownload;$('open-reference').onclick=()=>openModal('reference');$('open-build').onclick=()=>openModal('build');$('open-readiness').onclick=()=>openModal('readiness');$('open-bones').onclick=()=>openModal('bones');$('close-modal').onclick=closeModal;
   document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>openModal(b.dataset.tab));$('modal-backdrop').onclick=e=>{if(e.target===$('modal-backdrop'))closeModal();};
   document.addEventListener('keydown',e=>{if(!$('modal-backdrop').classList.contains('open'))return;if(e.key==='Escape')closeModal();if(e.key==='Tab'){const focusable=[...document.querySelector('.modal').querySelectorAll('button,a,input,select,[tabindex="0"]')].filter(x=>!x.disabled);const first=focusable[0],last=focusable.at(-1);if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}}});
 }
 window.PHY_STUDIO={getState:()=>({...state,points:state.points.map(p=>p.toArray()),modelParts:model?.parts.length,webgl:!!renderer}),selectModel,setHeight,setPose,setPalette,inspectPart,
+  boneAudit:()=>model?.bone_equivalence??null,visiblePartIds:()=>meshes.filter(m=>m.visible).map(m=>m.name),
   modelBounds:()=>root?new THREE.Box3().setFromObject(root).getSize(new THREE.Vector3()).toArray():null,
   projectPart:id=>{const mesh=meshes.find(x=>x.name===id);if(!mesh)return null;const c=new THREE.Box3().setFromObject(mesh).getCenter(new THREE.Vector3()).project(camera);const r=canvas.getBoundingClientRect();return [r.left+(c.x+1)*r.width/2,r.top+(1-c.y)*r.height/2];}};
 init();

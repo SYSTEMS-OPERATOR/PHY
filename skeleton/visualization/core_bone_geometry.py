@@ -19,9 +19,11 @@ def validate_layout(layout):
         elif isinstance(value, list):
             for item in value:
                 numeric(item)
-        elif not isinstance(value, str) and (type(value) not in (int, float) or not math.isfinite(value)):
+        elif type(value) not in (int, float) or not math.isfinite(value):
             raise ValueError("invalid bone proxy parameter")
-    numeric(layout)
+    for key, value in layout.items():
+        if key not in ("revision", "authority", "units"):
+            numeric(value)
     for key, size in (("spine_y_mm", 8), ("rib_breadth_fractions", 12),
                       ("rib_depth_fractions", 12), ("rib_drop_mm", 12),
                       ("scapula_vertices_relative_shoulder_mm", 3),
@@ -61,6 +63,9 @@ def validate_layout(layout):
 
 def plate_xz(outline, y, half_thickness):
     """Convex plate only; fail on a non-convex/degenerate input instead of guessing."""
+    values = [y, half_thickness] + [v for point in outline for v in point]
+    if len(outline) < 3 or any(len(point) != 2 for point in outline) or not half_thickness > 0 or any(not math.isfinite(v) for v in values):
+        raise ValueError("invalid proxy plate dimensions")
     area = sum(a[0]*b[1]-b[0]*a[1] for a, b in zip(outline, outline[1:]+outline[:1]))
     if area < 0:
         outline = list(reversed(outline))

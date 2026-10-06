@@ -55,3 +55,18 @@ Commit checkpoints: audit/inventory; core geometry/inspection; validation/packag
 Deferred geometry is visible in the Studio coverage panel and exported JSON.
 Continuous motion clearance, structural qualification and physical evidence
 remain open. No new physical test or anatomical measurement is claimed.
+
+## Checkpoint dispositions
+
+BE-01–05 and BE-08–09: bounded core identity/distribution correction implemented;
+71 individual project proxies and typed roles are tested. Bone morphology,
+articular surfaces, axes and physically functional connections are not closed.
+BE-06–07: grouped/deferred, not silently passed. The hand's existing generic digit
+fan is not an opposed, anatomically lateralized thumb mechanism; assigning digit
+IDs to it is bookkeeping only. Hand/foot/head/ear/hyoid individual geometry belongs
+in later bounded PRs. BE-10 remains unresolved: no proxy section or station is
+adopted into a missing BoneSpec measurement.
+
+Validation results and explicit skipped checks are in
+`reports/BONE_EQUIVALENCE_VALIDATION.md`. The preserved maquette is not evidence
+that the new bone proxies assemble or realize joint motions.

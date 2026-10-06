@@ -4,7 +4,8 @@
   "description": "Offline PHY armature and A0-R1 review studio",
   "scripts": {
     "build": "node build.mjs",
-    "check": "node --check src/app.js",
+    "check": "node --check src/app.js && node --check src/part_roles.js && node --check tests/bone-exports.mjs && node --check tests/smoke.mjs",
+    "test:logic": "node tests/bone-exports.mjs",
     "test:browser": "node tests/smoke.mjs"
   },
   "keywords": [],

@@ -62,6 +62,7 @@ npm ci --prefix studio
 npm run build --prefix studio
 python -m pip install cadquery==2.7.0
 python bin/export_phy_studio.py --sync-review
+npm run test:logic --prefix studio
 ```
 
 Outputs go to `studio/dist/`: offline HTML, three reference JSONs and STLs,

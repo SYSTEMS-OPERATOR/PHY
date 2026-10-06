@@ -28,15 +28,20 @@ jobs:
           npm run check --prefix studio
           npm run build --prefix studio
           python bin/export_phy_studio.py
+      - name: Validate bone filtering and actual GLB/STL exports without WebGL
+        run: npm run test:logic --prefix studio
       - name: Validate source, geometry and existing canon
         run: |
-          python -m pytest tests/test_phy_studio.py tests/test_sophy_geometry_canon.py tests/test_sophy_project_canon_bindings.py tests/test_reference_dimensions.py tests/test_t56_a0_geometry.py -q
+          python -m pytest tests/test_bone_equivalence.py tests/test_phy_studio.py tests/test_sophy_geometry_canon.py tests/test_sophy_project_canon_bindings.py tests/test_reference_dimensions.py tests/test_t56_a0_geometry.py -q
       - name: Check deterministic export
         run: |
           python bin/export_phy_studio.py --output /tmp/phy-repeat
           diff -qr studio/dist /tmp/phy-repeat
           cmp studio/PHY-Studio.html studio/dist/PHY-Studio.html
           diff -qr PROJECTS/PHY_F28/maquette studio/dist/maquette
+          cmp PROJECTS/PHY_F28/reports/BONE_EQUIVALENCE.json studio/dist/BONE_EQUIVALENCE.json
+          cmp PROJECTS/PHY_F28/reports/BONE_EQUIVALENCE.md studio/dist/BONE_EQUIVALENCE.md
+          cmp PROJECTS/PHY_F28/reports/CORE_PROXY_LAYOUT.md studio/dist/CORE_PROXY_LAYOUT.md
       - name: Install test browser
         working-directory: studio
         run: npx playwright install --with-deps chromium

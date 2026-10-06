@@ -2,6 +2,7 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { GLTFExporter } from 'three/addons/exporters/GLTFExporter.js';
 import { STLExporter } from 'three/addons/exporters/STLExporter.js';
+import { partVisible, partMatches, exportGroup as makeExportGroup } from './part_roles.js';
 
 const data = window.PHY_DATA;
 const $ = id => document.getElementById(id);
@@ -125,9 +126,7 @@ function applyTransforms() {
       mesh.position.copy(pivot).sub(pivot.clone().applyQuaternion(mesh.quaternion));
     }
     if(state.exploded){const c=coord(p.bounds_mm.min).add(coord(p.bounds_mm.max)).multiplyScalar(.5);const direction=c.sub(origin);if(direction.length()>1)mesh.position.add(direction.normalize().multiplyScalar(state.exploded*(model.height_mm?2.5:1.5)));}
-    const joint=p.role?p.role==='hardware':p.name.toLowerCase().includes('coupling')||['brass','steel'].includes(p.material);
-    mesh.visible=state.boneOnly?p.role==='bone_proxy':p.region==='envelope'?$('layer-envelope').checked:joint?$('layer-joints').checked:$('layer-frame').checked;
-    if(state.isolated&&state.selected)mesh.visible=mesh.visible&&p.id===state.selected;
+    mesh.visible=partVisible(p,state,{envelope:$('layer-envelope').checked,joints:$('layer-joints').checked,frame:$('layer-frame').checked});
     mesh.material.wireframe=false;
     mesh.material.emissive.setHex(p.id===state.selected?0x503a16:0);
     mesh.material.emissiveIntensity=p.id===state.selected?.4:0;
@@ -162,7 +161,7 @@ function cameraView(view='iso',target=null,size=null) {
 }
 function updatePartList() {
   const query=$('part-search').value.toLowerCase();const select=$('part-select');select.replaceChildren(new Option('Select in the viewport',''));
-  for(const p of model.parts)if((!state.boneOnly||p.role==='bone_proxy')&&(p.name+' '+p.id+' '+p.region+' '+(p.bone_id??'')+' '+(p.grouped_bone_ids??[]).join(' ')).toLowerCase().includes(query))select.add(new Option(p.name+(p.bone_id?' · '+p.bone_id:''),p.id));
+  for(const p of model.parts)if(partMatches(p,query,state.boneOnly))select.add(new Option(p.name+(p.bone_id?' · '+p.bone_id:''),p.id));
   select.value=state.selected??'';
 }
 function inspectPart(id) {
@@ -203,13 +202,7 @@ function setHeight(value) { if(!model.height_mm)return;if(!Number.isFinite(value
 function setPose(value) { if(!model.height_mm)return;state.pose=Math.max(0,Math.min(80,value));$('pose').value=state.pose;updatePoseLabel();state.points=[];disposeGroup(rulerGroup);applyTransforms(); }
 function setPalette(value) { state.palette=value;$('mat-wood').classList.toggle('active',value==='wood');$('mat-carbon').classList.toggle('active',value==='carbon');for(const mesh of meshes){mesh.material.color.setHex(palette[value][mesh.userData.part.material]??0xb0b5b0);}redraw=true; }
 function exportGroup() {
-  root.updateMatrixWorld(true);const group=new THREE.Group();
-  for(const mesh of meshes)if(mesh.userData.part.region!=='envelope'&&(!state.boneOnly||mesh.userData.part.role==='bone_proxy')){
-    const clone=new THREE.Mesh(mesh.geometry,mesh.material);clone.name=mesh.name;
-    const p=mesh.userData.part;
-    clone.applyMatrix4(mesh.matrixWorld);clone.userData={part_id:mesh.name,role:p.role??'separate_CAD',bone_id:p.bone_id??null,grouped_bone_ids:p.grouped_bone_ids??[],dimensional_fidelity:p.dimensional_fidelity??'unverified',status:'reference/unreleased'};group.add(clone);
-  }
-  return group;
+  return makeExportGroup(root,meshes,state.boneOnly);
 }
 async function exportModel() {
   if(!renderer){toast('3D exports need WebGL. The maquette package remains available.');return;}

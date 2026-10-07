@@ -57,3 +57,13 @@ Python 3.11/3.12 parity and unchanged canon/maquette. Record skipped checks.
 Open a focused PR without waiting for long remote smoke CI; do not auto-merge.
 Next coverage scope is skull, followed by ear/hyoid identities. Dimensional and
 functional adoption requires separate measured evidence.
+
+## Checkpoint dispositions
+
+BF-01–02 and BF-04: implemented for bounded identity/placement review and tested
+locally. Exact independent 26-ID feet, right-derived left geometry and Studio
+export metadata are present. Remote browser/full-package CI remains required
+before merge. BF-03 remains open for dimensional/morphological/functional
+fidelity: all 52 foot BoneSpec dimension dictionaries are still wholly unknown.
+Results, skipped checks and release limits are in
+`reports/FOOT_EQUIVALENCE_VALIDATION.md`.

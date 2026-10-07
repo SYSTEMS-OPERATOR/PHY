@@ -32,7 +32,7 @@ jobs:
         run: npm run test:logic --prefix studio
       - name: Validate source, geometry and existing canon
         run: |
-          python -m pytest tests/test_fabrication_validation.py tests/test_foot_bone_geometry.py tests/test_hand_bone_geometry.py tests/test_bone_equivalence.py tests/test_phy_studio.py tests/test_sophy_geometry_canon.py tests/test_sophy_project_canon_bindings.py tests/test_reference_dimensions.py tests/test_t56_a0_geometry.py -q
+          python -m pytest tests/test_skull_bone_geometry.py tests/test_fabrication_validation.py tests/test_foot_bone_geometry.py tests/test_hand_bone_geometry.py tests/test_bone_equivalence.py tests/test_phy_studio.py tests/test_sophy_geometry_canon.py tests/test_sophy_project_canon_bindings.py tests/test_reference_dimensions.py tests/test_t56_a0_geometry.py -q
       - name: Check deterministic export
         run: |
           python bin/export_phy_studio.py --output /tmp/phy-repeat
@@ -44,6 +44,7 @@ jobs:
           cmp PROJECTS/PHY_F28/reports/CORE_PROXY_LAYOUT.md studio/dist/CORE_PROXY_LAYOUT.md
           cmp PROJECTS/PHY_F28/reports/HAND_PROXY_LAYOUT.md studio/dist/HAND_PROXY_LAYOUT.md
           cmp PROJECTS/PHY_F28/reports/FOOT_PROXY_LAYOUT.md studio/dist/FOOT_PROXY_LAYOUT.md
+          cmp PROJECTS/PHY_F28/reports/SKULL_PROXY_LAYOUT.md studio/dist/SKULL_PROXY_LAYOUT.md
       - name: Install test browser
         working-directory: studio
         run: npx playwright install --with-deps chromium

@@ -287,6 +287,27 @@ def export(output, include_a0=True):
                     "Gaps are not qualified fits; no continuous clearance, gait, arch function or structural proof is asserted.",
                     "Dimensional fidelity unverified; physical evidence unmeasured; fabrication release false."]
     (output / "FOOT_PROXY_LAYOUT.md").write_text("\n".join(foot_report)+"\n", encoding="utf-8")
+    skull_report = ["# Individual skull proxy layout / SKULL_V1", "",
+                    "22 identities: eight cranial and 14 facial bones, including one adult mandible.",
+                    "Closed shell patches, ellipsoids and open-centerline sweeps are provisional display geometry.",
+                    "The shell patches have capped edges. No sutures, foramina, sinuses, teeth or articular surfaces are reproduced.",
+                    "Source: `PROJECTS/PHY_F28/profiles/f28.json#/skull_proxy_layout`", "",
+                    "Layout SHA-256: `"+refined["skull_proxy_layout_sha256"]+"`", "",
+                    "Fractions use external half head breadth/depth and half of the proposed 220 mm head height.",
+                    "ANSUR head length is anterior/posterior depth, not crown-to-chin height or a bone dimension.",
+                    "Six midline and eight right-side proxies are authored; eight left counterparts reflect vertices, winding and selected adjacency IDs.",
+                    "The separate mandible has bilateral temporal placement stations; no joint axis, fit or motion is implemented.", "",
+                    "| Input | Governing value |", "| --- | --- |"]
+    skull_report += ["| "+key+" | `"+json.dumps(value, sort_keys=True)+"` |"
+                     for key, value in refined["skull_proxy_layout"].items()]
+    skull_report += ["", "Selected adjacency and identity reference (not a measured morphology source):",
+                     "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-2-the-skull", "",
+                     "Selected adjacency is not a complete suture/articulation graph or a mesh contact/clearance proof.",
+                     "Nine skull identities have legacy source records; 13 facial records remain explicitly missing.",
+                     "All 193 canonical source records are unchanged. Their existing dimensions do not qualify these proxies.",
+                     "The five retained head arches/bands are form-study meshes with no bone correspondence.",
+                     "Dimensional fidelity unverified; physical evidence unmeasured; fabrication release false."]
+    (output / "SKULL_PROXY_LAYOUT.md").write_text("\n".join(skull_report)+"\n", encoding="utf-8")
     models = [dict(mean, id="F28_MEAN", name="F28 / arithmetic mean"),
               dict(refined, id="F28_REFINED", name="F28 / gentle refinement"),
               dict(sophy, id="SOPHY_SCALE", name="SOPHY / 1676.4 mm reference overlay")]
@@ -327,10 +348,12 @@ def export(output, include_a0=True):
                f"- The arm-chain station factor is {mean['design_datums']['arm_chain_closure_scale']:.6f}: allocate measured span among upper-arm/forearm/hand external ratios after subtracting shoulder-center spacing. This reconciles incompatible endpoint definitions; it is not measured bone length or an aesthetic adjustment.",
                "- 71 core individual bone proxies: 26 spine, 25 thorax, four shoulder girdle, two adult hips, six arm and eight leg bones.",
                "- 54 individual hand proxies add eight carpals, five metacarpals and 14 phalanges per side.",
-               "- 52 individual foot proxies add seven tarsals, five metatarsals and 14 toe phalanges per side, for 177 individual identities in all.",
-               "- 22 skull identities remain grouped forms; seven ear/hyoid identities are unrepresented. See BONE_EQUIVALENCE.md for all 206 dispositions.",
+               "- 52 individual foot proxies add seven tarsals, five metatarsals and 14 toe phalanges per side.",
+               "- 22 individual skull proxies add eight cranial and 14 facial identities, for 199 individual identities in all.",
+               "- Seven ear/hyoid identities are unrepresented. See BONE_EQUIVALENCE.md for all 206 dispositions.",
                "- The hand layout is a static display pose, not working opposition or measured bone geometry; see HAND_PROXY_LAYOUT.md.",
                "- The grounded foot layout is a static display, not measured bone geometry, functional arches or gait; see FOOT_PROXY_LAYOUT.md.",
+               "- The skull layout is a static identity/distribution display, not measured surfaces, sutures or jaw mechanics; see SKULL_PROXY_LAYOUT.md.",
                "- Bone-proxy layout is project-local provisional placement, not measured osteometry. Missing facial source records stay missing.",
                "- Couplings are hardware envelopes. Joint axes, bearing fits, retention and load paths are not resolved for the whole body.",
                "- Elliptical torso envelope uses marginal girths; interpolation and anatomical appearance are design, not scan data.", "",
@@ -370,6 +393,6 @@ if __name__ == "__main__":
     if args.sync_review:
         review = ROOT / "PROJECTS/PHY_F28/reports"
         review.mkdir(parents=True, exist_ok=True)
-        for name in ("BONE_EQUIVALENCE.json", "BONE_EQUIVALENCE.md", "CORE_PROXY_LAYOUT.md", "HAND_PROXY_LAYOUT.md", "FOOT_PROXY_LAYOUT.md"):
+        for name in ("BONE_EQUIVALENCE.json", "BONE_EQUIVALENCE.md", "CORE_PROXY_LAYOUT.md", "HAND_PROXY_LAYOUT.md", "FOOT_PROXY_LAYOUT.md", "SKULL_PROXY_LAYOUT.md"):
             shutil.copyfile(args.output / name, review / name)
         shutil.copyfile(args.output / "PHY-Studio.html", ROOT / "studio/PHY-Studio.html")

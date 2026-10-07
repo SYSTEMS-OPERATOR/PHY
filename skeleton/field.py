@@ -16,6 +16,14 @@ class SkeletonField:
             self.build_entanglement()
 
     def register(self, bone: BoneSpec) -> None:
+        for key in ("domain_id", "unique_id"):
+            value = getattr(bone, key)
+            if not isinstance(value, str) or not value.strip():
+                raise ValueError(f"bone {key} must be a nonempty string")
+        if bone.domain_id in self.bones:
+            raise ValueError(f"duplicate bone domain_id: {bone.domain_id}")
+        if any(other.unique_id == bone.unique_id for other in self.bones.values()):
+            raise ValueError(f"duplicate bone unique_id: {bone.unique_id}")
         self.bones[bone.domain_id] = bone
 
     def get(self, domain_id: str) -> Optional[BoneSpec]:

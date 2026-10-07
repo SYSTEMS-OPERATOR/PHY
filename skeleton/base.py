@@ -116,6 +116,10 @@ class BoneSpec:
                 f"Mass error: {self.name} is not embodied physically in state '{self.embodiment}'"
             )
             return None
+        return self._mass_from_dimensions()
+
+    def _mass_from_dimensions(self) -> Optional[float]:
+        """Pure dimensional estimate; not a measured or qualified mass."""
         vol = self._volume_m3()
         if vol is None:
             return None
@@ -299,7 +303,11 @@ class BoneSpec:
         """Return canonical fabrication record used by validators/exporters."""
         mm_dimensions = self._dimensions_mm()
         physics = dict(self.physics)
-        physics.setdefault("mass_kg", self.mass_kg())
+        # Fabrication records depend on physical data, not runtime embodiment.
+        # An explicitly unknown/supplied mass is retained without evaluating a
+        # fallback or appending virtual-state faults.
+        if "mass_kg" not in physics:
+            physics["mass_kg"] = self._mass_from_dimensions()
         return {
             "name": self.name,
             "latin_name": self.latin_name or self.name,

@@ -17,14 +17,15 @@
     "BONE_ZYGOMATIC_L",
     "BONE_ZYGOMATIC_R"
   ],
-  "individual_bone_proxies": 177,
-  "grouped_bones": 22,
+  "individual_bone_proxies": 199,
+  "grouped_bones": 0,
   "unrepresented_bones": 7,
   "missing_core_bones": [],
   "missing_hand_bones": [],
   "missing_foot_bones": [],
+  "missing_skull_bones": [],
   "mesh_roles": {
-    "bone_proxy": 177,
+    "bone_proxy": 199,
     "envelope": 2,
     "form": 5,
     "hardware": 12,
@@ -34,8 +35,8 @@
     {
       "region": "skull",
       "expected": 22,
-      "individual": 0,
-      "grouped": 22,
+      "individual": 22,
+      "grouped": 0,
       "unrepresented": 0
     },
     {
@@ -490,11 +491,18 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_ethmoid.py",
       "source_record_status": "present",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "head_arch_0"
+        "ethmoid"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/skull_proxy_layout/ellipsoids/ETHMOID",
+        "model#/reference/statistics/headbreadth",
+        "model#/reference/statistics/headlength",
+        "PROJECTS/PHY_F28/profiles/f28.json#/design_choices_mm/head_height",
+        "model#/height_mm",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -586,11 +594,21 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_frontal.py",
       "source_record_status": "present",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "head_arch_0"
+        "frontal"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/skull_proxy_layout/shells/FRONTAL",
+        "model#/reference/statistics/headbreadth",
+        "model#/reference/statistics/headlength",
+        "PROJECTS/PHY_F28/profiles/f28.json#/design_choices_mm/head_height",
+        "model#/height_mm",
+        "model#/scale_from_mean",
+        "PROJECTS/PHY_F28/profiles/f28.json#/skull_proxy_layout/shell_inset_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/skull_proxy_layout/shell_thickness_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/skull_proxy_layout/shell_samples"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -768,11 +786,18 @@
       "core_scope": false,
       "source_record": null,
       "source_record_status": "missing",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "head_arch_0"
+        "inferior_nasal_concha_L"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/skull_proxy_layout/sweeps/INFERIOR_NASAL_CONCHA_R",
+        "model#/reference/statistics/headbreadth",
+        "model#/reference/statistics/headlength",
+        "PROJECTS/PHY_F28/profiles/f28.json#/design_choices_mm/head_height",
+        "model#/height_mm",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -784,11 +809,18 @@
       "core_scope": false,
       "source_record": null,
       "source_record_status": "missing",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "head_arch_0"
+        "inferior_nasal_concha_R"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/skull_proxy_layout/sweeps/INFERIOR_NASAL_CONCHA_R",
+        "model#/reference/statistics/headbreadth",
+        "model#/reference/statistics/headlength",
+        "PROJECTS/PHY_F28/profiles/f28.json#/design_choices_mm/head_height",
+        "model#/height_mm",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -970,11 +1002,18 @@
       "core_scope": false,
       "source_record": null,
       "source_record_status": "missing",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "head_arch_0"
+        "lacrimal_L"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/skull_proxy_layout/ellipsoids/LACRIMAL_R",
+        "model#/reference/statistics/headbreadth",
+        "model#/reference/statistics/headlength",
+        "PROJECTS/PHY_F28/profiles/f28.json#/design_choices_mm/head_height",
+        "model#/height_mm",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -986,11 +1025,18 @@
       "core_scope": false,
       "source_record": null,
       "source_record_status": "missing",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "head_arch_0"
+        "lacrimal_R"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/skull_proxy_layout/ellipsoids/LACRIMAL_R",
+        "model#/reference/statistics/headbreadth",
+        "model#/reference/statistics/headlength",
+        "PROJECTS/PHY_F28/profiles/f28.json#/design_choices_mm/head_height",
+        "model#/height_mm",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -1124,11 +1170,18 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_mandible.py",
       "source_record_status": "present",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "head_arch_0"
+        "mandible"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/skull_proxy_layout/sweeps/MANDIBLE",
+        "model#/reference/statistics/headbreadth",
+        "model#/reference/statistics/headlength",
+        "PROJECTS/PHY_F28/profiles/f28.json#/design_choices_mm/head_height",
+        "model#/height_mm",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -1140,11 +1193,18 @@
       "core_scope": false,
       "source_record": null,
       "source_record_status": "missing",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "head_arch_0"
+        "maxilla_L"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/skull_proxy_layout/ellipsoids/MAXILLA_R",
+        "model#/reference/statistics/headbreadth",
+        "model#/reference/statistics/headlength",
+        "PROJECTS/PHY_F28/profiles/f28.json#/design_choices_mm/head_height",
+        "model#/height_mm",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -1156,11 +1216,18 @@
       "core_scope": false,
       "source_record": null,
       "source_record_status": "missing",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "head_arch_0"
+        "maxilla_R"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/skull_proxy_layout/ellipsoids/MAXILLA_R",
+        "model#/reference/statistics/headbreadth",
+        "model#/reference/statistics/headlength",
+        "PROJECTS/PHY_F28/profiles/f28.json#/design_choices_mm/head_height",
+        "model#/height_mm",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -1692,11 +1759,18 @@
       "core_scope": false,
       "source_record": null,
       "source_record_status": "missing",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "head_arch_0"
+        "nasal_L"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/skull_proxy_layout/ellipsoids/NASAL_R",
+        "model#/reference/statistics/headbreadth",
+        "model#/reference/statistics/headlength",
+        "PROJECTS/PHY_F28/profiles/f28.json#/design_choices_mm/head_height",
+        "model#/height_mm",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -1708,11 +1782,18 @@
       "core_scope": false,
       "source_record": null,
       "source_record_status": "missing",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "head_arch_0"
+        "nasal_R"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/skull_proxy_layout/ellipsoids/NASAL_R",
+        "model#/reference/statistics/headbreadth",
+        "model#/reference/statistics/headlength",
+        "PROJECTS/PHY_F28/profiles/f28.json#/design_choices_mm/head_height",
+        "model#/height_mm",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -1774,11 +1855,21 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_occipital.py",
       "source_record_status": "present",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "head_arch_0"
+        "occipital"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/skull_proxy_layout/shells/OCCIPITAL",
+        "model#/reference/statistics/headbreadth",
+        "model#/reference/statistics/headlength",
+        "PROJECTS/PHY_F28/profiles/f28.json#/design_choices_mm/head_height",
+        "model#/height_mm",
+        "model#/scale_from_mean",
+        "PROJECTS/PHY_F28/profiles/f28.json#/skull_proxy_layout/shell_inset_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/skull_proxy_layout/shell_thickness_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/skull_proxy_layout/shell_samples"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -1790,11 +1881,18 @@
       "core_scope": false,
       "source_record": null,
       "source_record_status": "missing",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "head_arch_0"
+        "palatine_L"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/skull_proxy_layout/ellipsoids/PALATINE_R",
+        "model#/reference/statistics/headbreadth",
+        "model#/reference/statistics/headlength",
+        "PROJECTS/PHY_F28/profiles/f28.json#/design_choices_mm/head_height",
+        "model#/height_mm",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -1806,11 +1904,18 @@
       "core_scope": false,
       "source_record": null,
       "source_record_status": "missing",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "head_arch_0"
+        "palatine_R"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/skull_proxy_layout/ellipsoids/PALATINE_R",
+        "model#/reference/statistics/headbreadth",
+        "model#/reference/statistics/headlength",
+        "PROJECTS/PHY_F28/profiles/f28.json#/design_choices_mm/head_height",
+        "model#/height_mm",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -1822,11 +1927,21 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_par_l.py",
       "source_record_status": "present",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "head_arch_0"
+        "par_L"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/skull_proxy_layout/shells/PAR_R",
+        "model#/reference/statistics/headbreadth",
+        "model#/reference/statistics/headlength",
+        "PROJECTS/PHY_F28/profiles/f28.json#/design_choices_mm/head_height",
+        "model#/height_mm",
+        "model#/scale_from_mean",
+        "PROJECTS/PHY_F28/profiles/f28.json#/skull_proxy_layout/shell_inset_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/skull_proxy_layout/shell_thickness_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/skull_proxy_layout/shell_samples"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -1838,11 +1953,21 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_par_r.py",
       "source_record_status": "present",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "head_arch_0"
+        "par_R"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/skull_proxy_layout/shells/PAR_R",
+        "model#/reference/statistics/headbreadth",
+        "model#/reference/statistics/headlength",
+        "PROJECTS/PHY_F28/profiles/f28.json#/design_choices_mm/head_height",
+        "model#/height_mm",
+        "model#/scale_from_mean",
+        "PROJECTS/PHY_F28/profiles/f28.json#/skull_proxy_layout/shell_inset_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/skull_proxy_layout/shell_thickness_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/skull_proxy_layout/shell_samples"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -3292,11 +3417,18 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_sphenoid.py",
       "source_record_status": "present",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "head_arch_0"
+        "sphenoid"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/skull_proxy_layout/ellipsoids/SPHENOID",
+        "model#/reference/statistics/headbreadth",
+        "model#/reference/statistics/headlength",
+        "PROJECTS/PHY_F28/profiles/f28.json#/design_choices_mm/head_height",
+        "model#/height_mm",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -3694,11 +3826,21 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_temp_l.py",
       "source_record_status": "present",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "head_arch_0"
+        "temp_L"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/skull_proxy_layout/shells/TEMP_R",
+        "model#/reference/statistics/headbreadth",
+        "model#/reference/statistics/headlength",
+        "PROJECTS/PHY_F28/profiles/f28.json#/design_choices_mm/head_height",
+        "model#/height_mm",
+        "model#/scale_from_mean",
+        "PROJECTS/PHY_F28/profiles/f28.json#/skull_proxy_layout/shell_inset_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/skull_proxy_layout/shell_thickness_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/skull_proxy_layout/shell_samples"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -3710,11 +3852,21 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_temp_r.py",
       "source_record_status": "present",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "head_arch_0"
+        "temp_R"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/skull_proxy_layout/shells/TEMP_R",
+        "model#/reference/statistics/headbreadth",
+        "model#/reference/statistics/headlength",
+        "PROJECTS/PHY_F28/profiles/f28.json#/design_choices_mm/head_height",
+        "model#/height_mm",
+        "model#/scale_from_mean",
+        "PROJECTS/PHY_F28/profiles/f28.json#/skull_proxy_layout/shell_inset_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/skull_proxy_layout/shell_thickness_mm",
+        "PROJECTS/PHY_F28/profiles/f28.json#/skull_proxy_layout/shell_samples"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -4636,11 +4788,18 @@
       "core_scope": false,
       "source_record": null,
       "source_record_status": "missing",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "head_arch_0"
+        "vomer"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/skull_proxy_layout/ellipsoids/VOMER",
+        "model#/reference/statistics/headbreadth",
+        "model#/reference/statistics/headlength",
+        "PROJECTS/PHY_F28/profiles/f28.json#/design_choices_mm/head_height",
+        "model#/height_mm",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -4652,11 +4811,18 @@
       "core_scope": false,
       "source_record": null,
       "source_record_status": "missing",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "head_arch_0"
+        "zygomatic_L"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/skull_proxy_layout/sweeps/ZYGOMATIC_R",
+        "model#/reference/statistics/headbreadth",
+        "model#/reference/statistics/headlength",
+        "PROJECTS/PHY_F28/profiles/f28.json#/design_choices_mm/head_height",
+        "model#/height_mm",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -4668,11 +4834,18 @@
       "core_scope": false,
       "source_record": null,
       "source_record_status": "missing",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "head_arch_0"
+        "zygomatic_R"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/skull_proxy_layout/sweeps/ZYGOMATIC_R",
+        "model#/reference/statistics/headbreadth",
+        "model#/reference/statistics/headlength",
+        "PROJECTS/PHY_F28/profiles/f28.json#/design_choices_mm/head_height",
+        "model#/height_mm",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     }

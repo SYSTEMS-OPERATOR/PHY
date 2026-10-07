@@ -1,15 +1,15 @@
 # PHY adult bone-equivalence coverage
 
-Status: core/hand/foot distribution review only; dimensions/morphology unverified, physical evidence unmeasured, fabrication release false.
+Status: core/hand/foot/skull distribution review only; dimensions/morphology unverified, physical evidence unmeasured, fabrication release false.
 
-206 adult identities: 177 individual project proxies, 22 grouped-form identities, 7 unrepresented.
+206 adult identities: 199 individual project proxies, 0 grouped-form identities, 7 unrepresented.
 193 existing canonical source records are unchanged; 13 facial records remain missing.
 
 One adult fused hip, sacrum and coccyx each. Hardware, cartilage, teeth and support rails never increase bone coverage.
 
 | Region | Expected | Individual | Grouped | Unrepresented |
 | --- | ---: | ---: | ---: | ---: |
-| skull | 22 | 0 | 22 | 0 |
+| skull | 22 | 22 | 0 | 0 |
 | ear | 6 | 0 | 0 | 6 |
 | hyoid | 1 | 0 | 0 | 1 |
 | spine | 26 | 26 | 0 | 0 |
@@ -59,12 +59,12 @@ All individual proxies use provisional project geometry. Count equivalence is no
 | BONE_COCCYX | spine | individual_project_proxy | coccyx | skeleton/bones/bone_coccyx.py |
 | BONE_CUBOID_L | foot | individual_project_proxy | cuboid_L | skeleton/bones/bone_cuboid_l.py |
 | BONE_CUBOID_R | foot | individual_project_proxy | cuboid_R | skeleton/bones/bone_cuboid_r.py |
-| BONE_ETHMOID | skull | grouped_form_proxy | head_arch_0 | skeleton/bones/bone_ethmoid.py |
+| BONE_ETHMOID | skull | individual_project_proxy | ethmoid | skeleton/bones/bone_ethmoid.py |
 | BONE_FEMUR_L | lower_limb | individual_project_proxy | femur_L | skeleton/bones/bone_femur_l.py |
 | BONE_FEMUR_R | lower_limb | individual_project_proxy | femur_R | skeleton/bones/bone_femur_r.py |
 | BONE_FIBULA_L | lower_limb | individual_project_proxy | fibular_L | skeleton/bones/bone_fibula_l.py |
 | BONE_FIBULA_R | lower_limb | individual_project_proxy | fibular_R | skeleton/bones/bone_fibula_r.py |
-| BONE_FRONTAL | skull | grouped_form_proxy | head_arch_0 | skeleton/bones/bone_frontal.py |
+| BONE_FRONTAL | skull | individual_project_proxy | frontal | skeleton/bones/bone_frontal.py |
 | BONE_HAMATE_L | hand | individual_project_proxy | hamate_L | skeleton/bones/bone_hamate_l.py |
 | BONE_HAMATE_R | hand | individual_project_proxy | hamate_R | skeleton/bones/bone_hamate_r.py |
 | BONE_HIP_L | pelvis | individual_project_proxy | hip_bone_L | skeleton/bones/bone_hip_l.py |
@@ -74,8 +74,8 @@ All individual proxies use provisional project geometry. Count equivalence is no
 | BONE_HYOID | hyoid | unrepresented | — | skeleton/bones/bone_hyoid.py |
 | BONE_INCUS_L | ear | unrepresented | — | skeleton/bones/bone_incus_l.py |
 | BONE_INCUS_R | ear | unrepresented | — | skeleton/bones/bone_incus_r.py |
-| BONE_INFERIOR_NASAL_CONCHA_L | skull | grouped_form_proxy | head_arch_0 | MISSING |
-| BONE_INFERIOR_NASAL_CONCHA_R | skull | grouped_form_proxy | head_arch_0 | MISSING |
+| BONE_INFERIOR_NASAL_CONCHA_L | skull | individual_project_proxy | inferior_nasal_concha_L | MISSING |
+| BONE_INFERIOR_NASAL_CONCHA_R | skull | individual_project_proxy | inferior_nasal_concha_R | MISSING |
 | BONE_INTERMEDIATE_CUNEIFORM_L | foot | individual_project_proxy | intermediate_cuneiform_L | skeleton/bones/bone_intermediate_cuneiform_l.py |
 | BONE_INTERMEDIATE_CUNEIFORM_R | foot | individual_project_proxy | intermediate_cuneiform_R | skeleton/bones/bone_intermediate_cuneiform_r.py |
 | BONE_L1 | spine | individual_project_proxy | vertebra_L1 | skeleton/bones/bone_l1.py |
@@ -83,17 +83,17 @@ All individual proxies use provisional project geometry. Count equivalence is no
 | BONE_L3 | spine | individual_project_proxy | vertebra_L3 | skeleton/bones/bone_l3.py |
 | BONE_L4 | spine | individual_project_proxy | vertebra_L4 | skeleton/bones/bone_l4.py |
 | BONE_L5 | spine | individual_project_proxy | vertebra_L5 | skeleton/bones/bone_l5.py |
-| BONE_LACRIMAL_L | skull | grouped_form_proxy | head_arch_0 | MISSING |
-| BONE_LACRIMAL_R | skull | grouped_form_proxy | head_arch_0 | MISSING |
+| BONE_LACRIMAL_L | skull | individual_project_proxy | lacrimal_L | MISSING |
+| BONE_LACRIMAL_R | skull | individual_project_proxy | lacrimal_R | MISSING |
 | BONE_LATERAL_CUNEIFORM_L | foot | individual_project_proxy | lateral_cuneiform_L | skeleton/bones/bone_lateral_cuneiform_l.py |
 | BONE_LATERAL_CUNEIFORM_R | foot | individual_project_proxy | lateral_cuneiform_R | skeleton/bones/bone_lateral_cuneiform_r.py |
 | BONE_LUNATE_L | hand | individual_project_proxy | lunate_L | skeleton/bones/bone_lunate_l.py |
 | BONE_LUNATE_R | hand | individual_project_proxy | lunate_R | skeleton/bones/bone_lunate_r.py |
 | BONE_MALLEUS_L | ear | unrepresented | — | skeleton/bones/bone_malleus_l.py |
 | BONE_MALLEUS_R | ear | unrepresented | — | skeleton/bones/bone_malleus_r.py |
-| BONE_MANDIBLE | skull | grouped_form_proxy | head_arch_0 | skeleton/bones/bone_mandible.py |
-| BONE_MAXILLA_L | skull | grouped_form_proxy | head_arch_0 | MISSING |
-| BONE_MAXILLA_R | skull | grouped_form_proxy | head_arch_0 | MISSING |
+| BONE_MANDIBLE | skull | individual_project_proxy | mandible | skeleton/bones/bone_mandible.py |
+| BONE_MAXILLA_L | skull | individual_project_proxy | maxilla_L | MISSING |
+| BONE_MAXILLA_R | skull | individual_project_proxy | maxilla_R | MISSING |
 | BONE_MEDIAL_CUNEIFORM_L | foot | individual_project_proxy | medial_cuneiform_L | skeleton/bones/bone_medial_cuneiform_l.py |
 | BONE_MEDIAL_CUNEIFORM_R | foot | individual_project_proxy | medial_cuneiform_R | skeleton/bones/bone_medial_cuneiform_r.py |
 | BONE_META1_L | hand | individual_project_proxy | meta1_L | skeleton/bones/bone_meta1_l.py |
@@ -116,15 +116,15 @@ All individual proxies use provisional project geometry. Count equivalence is no
 | BONE_MT4_R | foot | individual_project_proxy | mt4_R | skeleton/bones/bone_mt4_r.py |
 | BONE_MT5_L | foot | individual_project_proxy | mt5_L | skeleton/bones/bone_mt5_l.py |
 | BONE_MT5_R | foot | individual_project_proxy | mt5_R | skeleton/bones/bone_mt5_r.py |
-| BONE_NASAL_L | skull | grouped_form_proxy | head_arch_0 | MISSING |
-| BONE_NASAL_R | skull | grouped_form_proxy | head_arch_0 | MISSING |
+| BONE_NASAL_L | skull | individual_project_proxy | nasal_L | MISSING |
+| BONE_NASAL_R | skull | individual_project_proxy | nasal_R | MISSING |
 | BONE_NAVICULAR_L | foot | individual_project_proxy | navicular_L | skeleton/bones/bone_navicular_l.py |
 | BONE_NAVICULAR_R | foot | individual_project_proxy | navicular_R | skeleton/bones/bone_navicular_r.py |
-| BONE_OCCIPITAL | skull | grouped_form_proxy | head_arch_0 | skeleton/bones/bone_occipital.py |
-| BONE_PALATINE_L | skull | grouped_form_proxy | head_arch_0 | MISSING |
-| BONE_PALATINE_R | skull | grouped_form_proxy | head_arch_0 | MISSING |
-| BONE_PAR_L | skull | grouped_form_proxy | head_arch_0 | skeleton/bones/bone_par_l.py |
-| BONE_PAR_R | skull | grouped_form_proxy | head_arch_0 | skeleton/bones/bone_par_r.py |
+| BONE_OCCIPITAL | skull | individual_project_proxy | occipital | skeleton/bones/bone_occipital.py |
+| BONE_PALATINE_L | skull | individual_project_proxy | palatine_L | MISSING |
+| BONE_PALATINE_R | skull | individual_project_proxy | palatine_R | MISSING |
+| BONE_PAR_L | skull | individual_project_proxy | par_L | skeleton/bones/bone_par_l.py |
+| BONE_PAR_R | skull | individual_project_proxy | par_R | skeleton/bones/bone_par_r.py |
 | BONE_PATELLA_L | lower_limb | individual_project_proxy | patella_L | skeleton/bones/bone_patella_l.py |
 | BONE_PATELLA_R | lower_limb | individual_project_proxy | patella_R | skeleton/bones/bone_patella_r.py |
 | BONE_PHAL_1_1_L | hand | individual_project_proxy | phal_1_1_L | skeleton/bones/bone_phal_1_1_l.py |
@@ -188,7 +188,7 @@ All individual proxies use provisional project geometry. Count equivalence is no
 | BONE_SCAPHOID_R | hand | individual_project_proxy | scaphoid_R | skeleton/bones/bone_scaphoid_r.py |
 | BONE_SCAPULA_L | shoulder_girdle | individual_project_proxy | scapula_L | skeleton/bones/bone_scapula_l.py |
 | BONE_SCAPULA_R | shoulder_girdle | individual_project_proxy | scapula_R | skeleton/bones/bone_scapula_r.py |
-| BONE_SPHENOID | skull | grouped_form_proxy | head_arch_0 | skeleton/bones/bone_sphenoid.py |
+| BONE_SPHENOID | skull | individual_project_proxy | sphenoid | skeleton/bones/bone_sphenoid.py |
 | BONE_STAPES_L | ear | unrepresented | — | skeleton/bones/bone_stapes_l.py |
 | BONE_STAPES_R | ear | unrepresented | — | skeleton/bones/bone_stapes_r.py |
 | BONE_STERNUM | thorax | individual_project_proxy | sternum | skeleton/bones/bone_sternum.py |
@@ -206,8 +206,8 @@ All individual proxies use provisional project geometry. Count equivalence is no
 | BONE_T9 | spine | individual_project_proxy | vertebra_T9 | skeleton/bones/bone_t9.py |
 | BONE_TALUS_L | foot | individual_project_proxy | talus_L | skeleton/bones/bone_talus_l.py |
 | BONE_TALUS_R | foot | individual_project_proxy | talus_R | skeleton/bones/bone_talus_r.py |
-| BONE_TEMP_L | skull | grouped_form_proxy | head_arch_0 | skeleton/bones/bone_temp_l.py |
-| BONE_TEMP_R | skull | grouped_form_proxy | head_arch_0 | skeleton/bones/bone_temp_r.py |
+| BONE_TEMP_L | skull | individual_project_proxy | temp_L | skeleton/bones/bone_temp_l.py |
+| BONE_TEMP_R | skull | individual_project_proxy | temp_R | skeleton/bones/bone_temp_r.py |
 | BONE_TIBIA_L | lower_limb | individual_project_proxy | tibia_L | skeleton/bones/bone_tibia_l.py |
 | BONE_TIBIA_R | lower_limb | individual_project_proxy | tibia_R | skeleton/bones/bone_tibia_r.py |
 | BONE_TRAPEZIUM_L | hand | individual_project_proxy | trapezium_L | skeleton/bones/bone_trapezium_l.py |
@@ -246,6 +246,6 @@ All individual proxies use provisional project geometry. Count equivalence is no
 | BONE_T_PHAL_5_3_R | foot | individual_project_proxy | t_phal_5_3_R | skeleton/bones/bone_t_phal_5_3_r.py |
 | BONE_ULNA_L | upper_limb | individual_project_proxy | ulna_L | skeleton/bones/bone_ulna_l.py |
 | BONE_ULNA_R | upper_limb | individual_project_proxy | ulna_R | skeleton/bones/bone_ulna_r.py |
-| BONE_VOMER | skull | grouped_form_proxy | head_arch_0 | MISSING |
-| BONE_ZYGOMATIC_L | skull | grouped_form_proxy | head_arch_0 | MISSING |
-| BONE_ZYGOMATIC_R | skull | grouped_form_proxy | head_arch_0 | MISSING |
+| BONE_VOMER | skull | individual_project_proxy | vomer | MISSING |
+| BONE_ZYGOMATIC_L | skull | individual_project_proxy | zygomatic_L | MISSING |
+| BONE_ZYGOMATIC_R | skull | individual_project_proxy | zygomatic_R | MISSING |

@@ -45,6 +45,29 @@
       "5": {"root": "HAMATE", "stations": [[0.26, -0.43, 0], [0.5, -0.43, 0], [0.66, -0.43, 0], [0.75, -0.43, 0], [0.82, -0.43, 0]], "radii_mm": [3.5, 3, 2.4, 2]}
     }
   },
+  "foot_proxy_layout": {
+    "revision": "FOOT_V1",
+    "authority": "project-local provisional display layout; not osteometric data or canon",
+    "units": "centers/stations: lateral breadth fraction, anterior heel-to-toe fraction, height above floor mm; tarsal radii: breadth fraction, length fraction, vertical mm; digit radii/gaps: mm at cohort mean stature",
+    "heel_behind_ankle_fraction": 0.22,
+    "joint_gap_mm": 1.5,
+    "tarsals": {
+      "TALUS": {"center": [0, 0.22, 51], "radii": [0.17, 0.09, 12]},
+      "CALCANEUS": {"center": [0.04, 0.13, 18], "radii": [0.17, 0.13, 18]},
+      "NAVICULAR": {"center": [-0.16, 0.35, 40], "radii": [0.18, 0.045, 9]},
+      "CUBOID": {"center": [0.28, 0.39, 24], "radii": [0.17, 0.065, 10]},
+      "MEDIAL_CUNEIFORM": {"center": [-0.31, 0.46, 30], "radii": [0.13, 0.06, 10]},
+      "INTERMEDIATE_CUNEIFORM": {"center": [-0.075, 0.46, 33], "radii": [0.09, 0.045, 9]},
+      "LATERAL_CUNEIFORM": {"center": [0.12, 0.46, 29], "radii": [0.095, 0.048, 9]}
+    },
+    "digits": {
+      "1": {"root": "MEDIAL_CUNEIFORM", "stations": [[-0.32, 0.52, 30], [-0.35, 0.74, 14], [-0.36, 0.89, 11], [-0.36, 0.98, 9]], "radii_mm": [5.5, 4.3, 3.5]},
+      "2": {"root": "INTERMEDIATE_CUNEIFORM", "stations": [[-0.07, 0.49, 36], [-0.11, 0.78, 14], [-0.13, 0.88, 12], [-0.13, 0.95, 10], [-0.13, 1, 9]], "radii_mm": [4.3, 3.1, 2.5, 2]},
+      "3": {"root": "LATERAL_CUNEIFORM", "stations": [[0.13, 0.52, 31], [0.1, 0.77, 14], [0.08, 0.86, 12], [0.08, 0.92, 10], [0.08, 0.96, 9]], "radii_mm": [4.1, 2.9, 2.3, 1.9]},
+      "4": {"root": "CUBOID", "stations": [[0.29, 0.49, 24], [0.3, 0.74, 13], [0.3, 0.82, 11], [0.3, 0.88, 10], [0.3, 0.91, 9]], "radii_mm": [3.8, 2.7, 2.2, 1.8]},
+      "5": {"root": "CUBOID", "stations": [[0.43, 0.44, 20], [0.44, 0.69, 12], [0.44, 0.76, 10], [0.44, 0.815, 9], [0.44, 0.85, 8]], "radii_mm": [3.5, 2.5, 2, 1.6]}
+    }
+  },
   "bone_proxy_layout": {
     "revision": "CORE_V1",
     "authority": "project-local provisional topology and placement; not osteometric data or canon",

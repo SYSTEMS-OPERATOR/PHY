@@ -268,6 +268,25 @@ def export(output, include_a0=True):
                     "Carpal row order and selected chain parents describe partial topology, not a complete articulation graph.",
                     "Dimensional fidelity unverified; physical evidence unmeasured; fabrication release false."]
     (output / "HAND_PROXY_LAYOUT.md").write_text("\n".join(hand_report)+"\n", encoding="utf-8")
+    foot_report = ["# Individual foot proxy layout / FOOT_V1", "",
+                   "26 identities per foot: seven tarsals, five metatarsals and 14 toe phalanges.",
+                   "Static grounded display; measured surfaces, arches, ankle/toe mechanics and load paths remain unresolved.",
+                   "Numeric values are project-local provisional display choices, not osteometry or canon.",
+                   "Source: `PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout`", "",
+                   "Layout SHA-256: `"+refined["foot_proxy_layout_sha256"]+"`", "",
+                   "Right frame: +x lateral, +y anterior, +z above the floor, heel located behind the ankle station.",
+                   "Hallux is medial. Left geometry, winding, anchors and topology IDs reflect authored right geometry.", "",
+                   "| Input | Governing value |", "| --- | --- |"]
+    foot_report += ["| "+key+" | `"+json.dumps(value, sort_keys=True)+"` |"
+                    for key, value in refined["foot_proxy_layout"].items()]
+    foot_report += ["", "External heel-to-toe length and breadth size a display envelope, not individual bone measurements.",
+                    "Sections/elevations/gaps scale uniformly; tarsal horizontal sections use the external breadth/length.",
+                    "Heel and nominal second-toe terminal station span the input length; tube ends are trimmed for display gaps.",
+                    "This nominal station closure is not exact mesh-envelope conformity or anatomical endpoint adoption.",
+                    "Selected chain parents describe partial topology, not a complete joint/contact graph.",
+                    "Gaps are not qualified fits; no continuous clearance, gait, arch function or structural proof is asserted.",
+                    "Dimensional fidelity unverified; physical evidence unmeasured; fabrication release false."]
+    (output / "FOOT_PROXY_LAYOUT.md").write_text("\n".join(foot_report)+"\n", encoding="utf-8")
     models = [dict(mean, id="F28_MEAN", name="F28 / arithmetic mean"),
               dict(refined, id="F28_REFINED", name="F28 / gentle refinement"),
               dict(sophy, id="SOPHY_SCALE", name="SOPHY / 1676.4 mm reference overlay")]
@@ -307,9 +326,11 @@ def export(output, include_a0=True):
                "- Knee height uses lateral epicondyle height as a station proxy; ankle datum is 70 mm.",
                f"- The arm-chain station factor is {mean['design_datums']['arm_chain_closure_scale']:.6f}: allocate measured span among upper-arm/forearm/hand external ratios after subtracting shoulder-center spacing. This reconciles incompatible endpoint definitions; it is not measured bone length or an aesthetic adjustment.",
                "- 71 core individual bone proxies: 26 spine, 25 thorax, four shoulder girdle, two adult hips, six arm and eight leg bones.",
-               "- 54 individual hand proxies add eight carpals, five metacarpals and 14 phalanges per side, for 125 individual identities in all.",
-               "- 74 skull/foot identities remain grouped forms; seven ear/hyoid identities are unrepresented. See BONE_EQUIVALENCE.md for all 206 dispositions.",
+               "- 54 individual hand proxies add eight carpals, five metacarpals and 14 phalanges per side.",
+               "- 52 individual foot proxies add seven tarsals, five metatarsals and 14 toe phalanges per side, for 177 individual identities in all.",
+               "- 22 skull identities remain grouped forms; seven ear/hyoid identities are unrepresented. See BONE_EQUIVALENCE.md for all 206 dispositions.",
                "- The hand layout is a static display pose, not working opposition or measured bone geometry; see HAND_PROXY_LAYOUT.md.",
+               "- The grounded foot layout is a static display, not measured bone geometry, functional arches or gait; see FOOT_PROXY_LAYOUT.md.",
                "- Bone-proxy layout is project-local provisional placement, not measured osteometry. Missing facial source records stay missing.",
                "- Couplings are hardware envelopes. Joint axes, bearing fits, retention and load paths are not resolved for the whole body.",
                "- Elliptical torso envelope uses marginal girths; interpolation and anatomical appearance are design, not scan data.", "",
@@ -349,6 +370,6 @@ if __name__ == "__main__":
     if args.sync_review:
         review = ROOT / "PROJECTS/PHY_F28/reports"
         review.mkdir(parents=True, exist_ok=True)
-        for name in ("BONE_EQUIVALENCE.json", "BONE_EQUIVALENCE.md", "CORE_PROXY_LAYOUT.md", "HAND_PROXY_LAYOUT.md"):
+        for name in ("BONE_EQUIVALENCE.json", "BONE_EQUIVALENCE.md", "CORE_PROXY_LAYOUT.md", "HAND_PROXY_LAYOUT.md", "FOOT_PROXY_LAYOUT.md"):
             shutil.copyfile(args.output / name, review / name)
         shutil.copyfile(args.output / "PHY-Studio.html", ROOT / "studio/PHY-Studio.html")

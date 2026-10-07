@@ -85,7 +85,7 @@ def source_record_paths(root=ROOT):
 
 def report_markdown(audit):
     lines = ["# PHY adult bone-equivalence coverage", "",
-             "Status: core/hand distribution review only; dimensions/morphology unverified, physical evidence unmeasured, fabrication release false.", "",
+             "Status: core/hand/foot distribution review only; dimensions/morphology unverified, physical evidence unmeasured, fabrication release false.", "",
              f"{audit['expected_bones']} adult identities: {audit['individual_bone_proxies']} individual project proxies, "
              f"{audit['grouped_bones']} grouped-form identities, {audit['unrepresented_bones']} unrepresented.",
              f"{audit['source_records_present']} existing canonical source records are unchanged; "
@@ -172,6 +172,7 @@ def bone_audit(parts, root=ROOT):
             "unrepresented_bones": 206 - len(individual) - len(grouped),
             "missing_core_bones": [r["bone_id"] for r in rows if r["core_scope"] and r["representation"] != "individual_project_proxy"],
             "missing_hand_bones": [r["bone_id"] for r in rows if r["region"] == "hand" and r["representation"] != "individual_project_proxy"],
+            "missing_foot_bones": [r["bone_id"] for r in rows if r["region"] == "foot" and r["representation"] != "individual_project_proxy"],
             "mesh_roles": dict(sorted(Counter(p["role"] for p in parts).items())),
             "regions": regions, "bones": rows,
             "bone_distribution_complete": len(individual) == 206,

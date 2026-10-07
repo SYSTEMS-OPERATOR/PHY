@@ -17,15 +17,16 @@
     "BONE_ZYGOMATIC_L",
     "BONE_ZYGOMATIC_R"
   ],
-  "individual_bone_proxies": 125,
-  "grouped_bones": 74,
+  "individual_bone_proxies": 177,
+  "grouped_bones": 22,
   "unrepresented_bones": 7,
   "missing_core_bones": [],
   "missing_hand_bones": [],
+  "missing_foot_bones": [],
   "mesh_roles": {
-    "bone_proxy": 125,
+    "bone_proxy": 177,
     "envelope": 2,
-    "form": 7,
+    "form": 5,
     "hardware": 12,
     "support": 5
   },
@@ -103,8 +104,8 @@
     {
       "region": "foot",
       "expected": 52,
-      "individual": 0,
-      "grouped": 52,
+      "individual": 52,
+      "grouped": 0,
       "unrepresented": 0
     }
   ],
@@ -285,11 +286,20 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_calcaneus_l.py",
       "source_record_status": "present",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "foot_L"
+        "calcaneus_L"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/tarsals/CALCANEUS",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/heel_behind_ankle_fraction",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/joint_gap_mm",
+        "model#/reference/statistics/footlength",
+        "model#/reference/statistics/footbreadthhorizontal",
+        "model#/landmarks/ankle_L",
+        "model#/landmarks/floor",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -301,11 +311,20 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_calcaneus_r.py",
       "source_record_status": "present",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "foot_R"
+        "calcaneus_R"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/tarsals/CALCANEUS",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/heel_behind_ankle_fraction",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/joint_gap_mm",
+        "model#/reference/statistics/footlength",
+        "model#/reference/statistics/footbreadthhorizontal",
+        "model#/landmarks/ankle_R",
+        "model#/landmarks/floor",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -421,11 +440,20 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_cuboid_l.py",
       "source_record_status": "present",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "foot_L"
+        "cuboid_L"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/tarsals/CUBOID",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/heel_behind_ankle_fraction",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/joint_gap_mm",
+        "model#/reference/statistics/footlength",
+        "model#/reference/statistics/footbreadthhorizontal",
+        "model#/landmarks/ankle_L",
+        "model#/landmarks/floor",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -437,11 +465,20 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_cuboid_r.py",
       "source_record_status": "present",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "foot_R"
+        "cuboid_R"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/tarsals/CUBOID",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/heel_behind_ankle_fraction",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/joint_gap_mm",
+        "model#/reference/statistics/footlength",
+        "model#/reference/statistics/footbreadthhorizontal",
+        "model#/landmarks/ankle_R",
+        "model#/landmarks/floor",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -763,11 +800,20 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_intermediate_cuneiform_l.py",
       "source_record_status": "present",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "foot_L"
+        "intermediate_cuneiform_L"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/tarsals/INTERMEDIATE_CUNEIFORM",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/heel_behind_ankle_fraction",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/joint_gap_mm",
+        "model#/reference/statistics/footlength",
+        "model#/reference/statistics/footbreadthhorizontal",
+        "model#/landmarks/ankle_L",
+        "model#/landmarks/floor",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -779,11 +825,20 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_intermediate_cuneiform_r.py",
       "source_record_status": "present",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "foot_R"
+        "intermediate_cuneiform_R"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/tarsals/INTERMEDIATE_CUNEIFORM",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/heel_behind_ankle_fraction",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/joint_gap_mm",
+        "model#/reference/statistics/footlength",
+        "model#/reference/statistics/footbreadthhorizontal",
+        "model#/landmarks/ankle_R",
+        "model#/landmarks/floor",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -947,11 +1002,20 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_lateral_cuneiform_l.py",
       "source_record_status": "present",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "foot_L"
+        "lateral_cuneiform_L"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/tarsals/LATERAL_CUNEIFORM",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/heel_behind_ankle_fraction",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/joint_gap_mm",
+        "model#/reference/statistics/footlength",
+        "model#/reference/statistics/footbreadthhorizontal",
+        "model#/landmarks/ankle_L",
+        "model#/landmarks/floor",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -963,11 +1027,20 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_lateral_cuneiform_r.py",
       "source_record_status": "present",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "foot_R"
+        "lateral_cuneiform_R"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/tarsals/LATERAL_CUNEIFORM",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/heel_behind_ankle_fraction",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/joint_gap_mm",
+        "model#/reference/statistics/footlength",
+        "model#/reference/statistics/footbreadthhorizontal",
+        "model#/landmarks/ankle_R",
+        "model#/landmarks/floor",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -1099,11 +1172,20 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_medial_cuneiform_l.py",
       "source_record_status": "present",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "foot_L"
+        "medial_cuneiform_L"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/tarsals/MEDIAL_CUNEIFORM",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/heel_behind_ankle_fraction",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/joint_gap_mm",
+        "model#/reference/statistics/footlength",
+        "model#/reference/statistics/footbreadthhorizontal",
+        "model#/landmarks/ankle_L",
+        "model#/landmarks/floor",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -1115,11 +1197,20 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_medial_cuneiform_r.py",
       "source_record_status": "present",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "foot_R"
+        "medial_cuneiform_R"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/tarsals/MEDIAL_CUNEIFORM",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/heel_behind_ankle_fraction",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/joint_gap_mm",
+        "model#/reference/statistics/footlength",
+        "model#/reference/statistics/footbreadthhorizontal",
+        "model#/landmarks/ankle_R",
+        "model#/landmarks/floor",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -1351,11 +1442,20 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_mt1_l.py",
       "source_record_status": "present",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "foot_L"
+        "mt1_L"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/digits/1",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/heel_behind_ankle_fraction",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/joint_gap_mm",
+        "model#/reference/statistics/footlength",
+        "model#/reference/statistics/footbreadthhorizontal",
+        "model#/landmarks/ankle_L",
+        "model#/landmarks/floor",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -1367,11 +1467,20 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_mt1_r.py",
       "source_record_status": "present",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "foot_R"
+        "mt1_R"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/digits/1",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/heel_behind_ankle_fraction",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/joint_gap_mm",
+        "model#/reference/statistics/footlength",
+        "model#/reference/statistics/footbreadthhorizontal",
+        "model#/landmarks/ankle_R",
+        "model#/landmarks/floor",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -1383,11 +1492,20 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_mt2_l.py",
       "source_record_status": "present",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "foot_L"
+        "mt2_L"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/digits/2",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/heel_behind_ankle_fraction",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/joint_gap_mm",
+        "model#/reference/statistics/footlength",
+        "model#/reference/statistics/footbreadthhorizontal",
+        "model#/landmarks/ankle_L",
+        "model#/landmarks/floor",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -1399,11 +1517,20 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_mt2_r.py",
       "source_record_status": "present",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "foot_R"
+        "mt2_R"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/digits/2",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/heel_behind_ankle_fraction",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/joint_gap_mm",
+        "model#/reference/statistics/footlength",
+        "model#/reference/statistics/footbreadthhorizontal",
+        "model#/landmarks/ankle_R",
+        "model#/landmarks/floor",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -1415,11 +1542,20 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_mt3_l.py",
       "source_record_status": "present",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "foot_L"
+        "mt3_L"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/digits/3",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/heel_behind_ankle_fraction",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/joint_gap_mm",
+        "model#/reference/statistics/footlength",
+        "model#/reference/statistics/footbreadthhorizontal",
+        "model#/landmarks/ankle_L",
+        "model#/landmarks/floor",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -1431,11 +1567,20 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_mt3_r.py",
       "source_record_status": "present",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "foot_R"
+        "mt3_R"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/digits/3",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/heel_behind_ankle_fraction",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/joint_gap_mm",
+        "model#/reference/statistics/footlength",
+        "model#/reference/statistics/footbreadthhorizontal",
+        "model#/landmarks/ankle_R",
+        "model#/landmarks/floor",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -1447,11 +1592,20 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_mt4_l.py",
       "source_record_status": "present",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "foot_L"
+        "mt4_L"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/digits/4",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/heel_behind_ankle_fraction",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/joint_gap_mm",
+        "model#/reference/statistics/footlength",
+        "model#/reference/statistics/footbreadthhorizontal",
+        "model#/landmarks/ankle_L",
+        "model#/landmarks/floor",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -1463,11 +1617,20 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_mt4_r.py",
       "source_record_status": "present",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "foot_R"
+        "mt4_R"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/digits/4",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/heel_behind_ankle_fraction",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/joint_gap_mm",
+        "model#/reference/statistics/footlength",
+        "model#/reference/statistics/footbreadthhorizontal",
+        "model#/landmarks/ankle_R",
+        "model#/landmarks/floor",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -1479,11 +1642,20 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_mt5_l.py",
       "source_record_status": "present",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "foot_L"
+        "mt5_L"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/digits/5",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/heel_behind_ankle_fraction",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/joint_gap_mm",
+        "model#/reference/statistics/footlength",
+        "model#/reference/statistics/footbreadthhorizontal",
+        "model#/landmarks/ankle_L",
+        "model#/landmarks/floor",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -1495,11 +1667,20 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_mt5_r.py",
       "source_record_status": "present",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "foot_R"
+        "mt5_R"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/digits/5",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/heel_behind_ankle_fraction",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/joint_gap_mm",
+        "model#/reference/statistics/footlength",
+        "model#/reference/statistics/footbreadthhorizontal",
+        "model#/landmarks/ankle_R",
+        "model#/landmarks/floor",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -1543,11 +1724,20 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_navicular_l.py",
       "source_record_status": "present",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "foot_L"
+        "navicular_L"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/tarsals/NAVICULAR",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/heel_behind_ankle_fraction",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/joint_gap_mm",
+        "model#/reference/statistics/footlength",
+        "model#/reference/statistics/footbreadthhorizontal",
+        "model#/landmarks/ankle_L",
+        "model#/landmarks/floor",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -1559,11 +1749,20 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_navicular_r.py",
       "source_record_status": "present",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "foot_R"
+        "navicular_R"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/tarsals/NAVICULAR",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/heel_behind_ankle_fraction",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/joint_gap_mm",
+        "model#/reference/statistics/footlength",
+        "model#/reference/statistics/footbreadthhorizontal",
+        "model#/landmarks/ankle_R",
+        "model#/landmarks/floor",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -3445,11 +3644,20 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_talus_l.py",
       "source_record_status": "present",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "foot_L"
+        "talus_L"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/tarsals/TALUS",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/heel_behind_ankle_fraction",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/joint_gap_mm",
+        "model#/reference/statistics/footlength",
+        "model#/reference/statistics/footbreadthhorizontal",
+        "model#/landmarks/ankle_L",
+        "model#/landmarks/floor",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -3461,11 +3669,20 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_talus_r.py",
       "source_record_status": "present",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "foot_R"
+        "talus_R"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/tarsals/TALUS",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/heel_behind_ankle_fraction",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/joint_gap_mm",
+        "model#/reference/statistics/footlength",
+        "model#/reference/statistics/footbreadthhorizontal",
+        "model#/landmarks/ankle_R",
+        "model#/landmarks/floor",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -3681,11 +3898,20 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_t_phal_1_1_l.py",
       "source_record_status": "present",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "foot_L"
+        "t_phal_1_1_L"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/digits/1",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/heel_behind_ankle_fraction",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/joint_gap_mm",
+        "model#/reference/statistics/footlength",
+        "model#/reference/statistics/footbreadthhorizontal",
+        "model#/landmarks/ankle_L",
+        "model#/landmarks/floor",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -3697,11 +3923,20 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_t_phal_1_1_r.py",
       "source_record_status": "present",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "foot_R"
+        "t_phal_1_1_R"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/digits/1",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/heel_behind_ankle_fraction",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/joint_gap_mm",
+        "model#/reference/statistics/footlength",
+        "model#/reference/statistics/footbreadthhorizontal",
+        "model#/landmarks/ankle_R",
+        "model#/landmarks/floor",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -3713,11 +3948,20 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_t_phal_1_2_l.py",
       "source_record_status": "present",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "foot_L"
+        "t_phal_1_2_L"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/digits/1",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/heel_behind_ankle_fraction",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/joint_gap_mm",
+        "model#/reference/statistics/footlength",
+        "model#/reference/statistics/footbreadthhorizontal",
+        "model#/landmarks/ankle_L",
+        "model#/landmarks/floor",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -3729,11 +3973,20 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_t_phal_1_2_r.py",
       "source_record_status": "present",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "foot_R"
+        "t_phal_1_2_R"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/digits/1",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/heel_behind_ankle_fraction",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/joint_gap_mm",
+        "model#/reference/statistics/footlength",
+        "model#/reference/statistics/footbreadthhorizontal",
+        "model#/landmarks/ankle_R",
+        "model#/landmarks/floor",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -3745,11 +3998,20 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_t_phal_2_1_l.py",
       "source_record_status": "present",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "foot_L"
+        "t_phal_2_1_L"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/digits/2",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/heel_behind_ankle_fraction",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/joint_gap_mm",
+        "model#/reference/statistics/footlength",
+        "model#/reference/statistics/footbreadthhorizontal",
+        "model#/landmarks/ankle_L",
+        "model#/landmarks/floor",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -3761,11 +4023,20 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_t_phal_2_1_r.py",
       "source_record_status": "present",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "foot_R"
+        "t_phal_2_1_R"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/digits/2",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/heel_behind_ankle_fraction",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/joint_gap_mm",
+        "model#/reference/statistics/footlength",
+        "model#/reference/statistics/footbreadthhorizontal",
+        "model#/landmarks/ankle_R",
+        "model#/landmarks/floor",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -3777,11 +4048,20 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_t_phal_2_2_l.py",
       "source_record_status": "present",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "foot_L"
+        "t_phal_2_2_L"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/digits/2",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/heel_behind_ankle_fraction",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/joint_gap_mm",
+        "model#/reference/statistics/footlength",
+        "model#/reference/statistics/footbreadthhorizontal",
+        "model#/landmarks/ankle_L",
+        "model#/landmarks/floor",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -3793,11 +4073,20 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_t_phal_2_2_r.py",
       "source_record_status": "present",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "foot_R"
+        "t_phal_2_2_R"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/digits/2",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/heel_behind_ankle_fraction",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/joint_gap_mm",
+        "model#/reference/statistics/footlength",
+        "model#/reference/statistics/footbreadthhorizontal",
+        "model#/landmarks/ankle_R",
+        "model#/landmarks/floor",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -3809,11 +4098,20 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_t_phal_2_3_l.py",
       "source_record_status": "present",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "foot_L"
+        "t_phal_2_3_L"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/digits/2",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/heel_behind_ankle_fraction",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/joint_gap_mm",
+        "model#/reference/statistics/footlength",
+        "model#/reference/statistics/footbreadthhorizontal",
+        "model#/landmarks/ankle_L",
+        "model#/landmarks/floor",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -3825,11 +4123,20 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_t_phal_2_3_r.py",
       "source_record_status": "present",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "foot_R"
+        "t_phal_2_3_R"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/digits/2",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/heel_behind_ankle_fraction",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/joint_gap_mm",
+        "model#/reference/statistics/footlength",
+        "model#/reference/statistics/footbreadthhorizontal",
+        "model#/landmarks/ankle_R",
+        "model#/landmarks/floor",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -3841,11 +4148,20 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_t_phal_3_1_l.py",
       "source_record_status": "present",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "foot_L"
+        "t_phal_3_1_L"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/digits/3",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/heel_behind_ankle_fraction",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/joint_gap_mm",
+        "model#/reference/statistics/footlength",
+        "model#/reference/statistics/footbreadthhorizontal",
+        "model#/landmarks/ankle_L",
+        "model#/landmarks/floor",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -3857,11 +4173,20 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_t_phal_3_1_r.py",
       "source_record_status": "present",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "foot_R"
+        "t_phal_3_1_R"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/digits/3",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/heel_behind_ankle_fraction",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/joint_gap_mm",
+        "model#/reference/statistics/footlength",
+        "model#/reference/statistics/footbreadthhorizontal",
+        "model#/landmarks/ankle_R",
+        "model#/landmarks/floor",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -3873,11 +4198,20 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_t_phal_3_2_l.py",
       "source_record_status": "present",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "foot_L"
+        "t_phal_3_2_L"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/digits/3",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/heel_behind_ankle_fraction",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/joint_gap_mm",
+        "model#/reference/statistics/footlength",
+        "model#/reference/statistics/footbreadthhorizontal",
+        "model#/landmarks/ankle_L",
+        "model#/landmarks/floor",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -3889,11 +4223,20 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_t_phal_3_2_r.py",
       "source_record_status": "present",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "foot_R"
+        "t_phal_3_2_R"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/digits/3",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/heel_behind_ankle_fraction",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/joint_gap_mm",
+        "model#/reference/statistics/footlength",
+        "model#/reference/statistics/footbreadthhorizontal",
+        "model#/landmarks/ankle_R",
+        "model#/landmarks/floor",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -3905,11 +4248,20 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_t_phal_3_3_l.py",
       "source_record_status": "present",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "foot_L"
+        "t_phal_3_3_L"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/digits/3",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/heel_behind_ankle_fraction",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/joint_gap_mm",
+        "model#/reference/statistics/footlength",
+        "model#/reference/statistics/footbreadthhorizontal",
+        "model#/landmarks/ankle_L",
+        "model#/landmarks/floor",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -3921,11 +4273,20 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_t_phal_3_3_r.py",
       "source_record_status": "present",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "foot_R"
+        "t_phal_3_3_R"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/digits/3",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/heel_behind_ankle_fraction",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/joint_gap_mm",
+        "model#/reference/statistics/footlength",
+        "model#/reference/statistics/footbreadthhorizontal",
+        "model#/landmarks/ankle_R",
+        "model#/landmarks/floor",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -3937,11 +4298,20 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_t_phal_4_1_l.py",
       "source_record_status": "present",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "foot_L"
+        "t_phal_4_1_L"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/digits/4",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/heel_behind_ankle_fraction",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/joint_gap_mm",
+        "model#/reference/statistics/footlength",
+        "model#/reference/statistics/footbreadthhorizontal",
+        "model#/landmarks/ankle_L",
+        "model#/landmarks/floor",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -3953,11 +4323,20 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_t_phal_4_1_r.py",
       "source_record_status": "present",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "foot_R"
+        "t_phal_4_1_R"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/digits/4",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/heel_behind_ankle_fraction",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/joint_gap_mm",
+        "model#/reference/statistics/footlength",
+        "model#/reference/statistics/footbreadthhorizontal",
+        "model#/landmarks/ankle_R",
+        "model#/landmarks/floor",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -3969,11 +4348,20 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_t_phal_4_2_l.py",
       "source_record_status": "present",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "foot_L"
+        "t_phal_4_2_L"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/digits/4",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/heel_behind_ankle_fraction",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/joint_gap_mm",
+        "model#/reference/statistics/footlength",
+        "model#/reference/statistics/footbreadthhorizontal",
+        "model#/landmarks/ankle_L",
+        "model#/landmarks/floor",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -3985,11 +4373,20 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_t_phal_4_2_r.py",
       "source_record_status": "present",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "foot_R"
+        "t_phal_4_2_R"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/digits/4",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/heel_behind_ankle_fraction",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/joint_gap_mm",
+        "model#/reference/statistics/footlength",
+        "model#/reference/statistics/footbreadthhorizontal",
+        "model#/landmarks/ankle_R",
+        "model#/landmarks/floor",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -4001,11 +4398,20 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_t_phal_4_3_l.py",
       "source_record_status": "present",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "foot_L"
+        "t_phal_4_3_L"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/digits/4",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/heel_behind_ankle_fraction",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/joint_gap_mm",
+        "model#/reference/statistics/footlength",
+        "model#/reference/statistics/footbreadthhorizontal",
+        "model#/landmarks/ankle_L",
+        "model#/landmarks/floor",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -4017,11 +4423,20 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_t_phal_4_3_r.py",
       "source_record_status": "present",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "foot_R"
+        "t_phal_4_3_R"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/digits/4",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/heel_behind_ankle_fraction",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/joint_gap_mm",
+        "model#/reference/statistics/footlength",
+        "model#/reference/statistics/footbreadthhorizontal",
+        "model#/landmarks/ankle_R",
+        "model#/landmarks/floor",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -4033,11 +4448,20 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_t_phal_5_1_l.py",
       "source_record_status": "present",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "foot_L"
+        "t_phal_5_1_L"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/digits/5",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/heel_behind_ankle_fraction",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/joint_gap_mm",
+        "model#/reference/statistics/footlength",
+        "model#/reference/statistics/footbreadthhorizontal",
+        "model#/landmarks/ankle_L",
+        "model#/landmarks/floor",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -4049,11 +4473,20 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_t_phal_5_1_r.py",
       "source_record_status": "present",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "foot_R"
+        "t_phal_5_1_R"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/digits/5",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/heel_behind_ankle_fraction",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/joint_gap_mm",
+        "model#/reference/statistics/footlength",
+        "model#/reference/statistics/footbreadthhorizontal",
+        "model#/landmarks/ankle_R",
+        "model#/landmarks/floor",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -4065,11 +4498,20 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_t_phal_5_2_l.py",
       "source_record_status": "present",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "foot_L"
+        "t_phal_5_2_L"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/digits/5",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/heel_behind_ankle_fraction",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/joint_gap_mm",
+        "model#/reference/statistics/footlength",
+        "model#/reference/statistics/footbreadthhorizontal",
+        "model#/landmarks/ankle_L",
+        "model#/landmarks/floor",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -4081,11 +4523,20 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_t_phal_5_2_r.py",
       "source_record_status": "present",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "foot_R"
+        "t_phal_5_2_R"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/digits/5",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/heel_behind_ankle_fraction",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/joint_gap_mm",
+        "model#/reference/statistics/footlength",
+        "model#/reference/statistics/footbreadthhorizontal",
+        "model#/landmarks/ankle_R",
+        "model#/landmarks/floor",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -4097,11 +4548,20 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_t_phal_5_3_l.py",
       "source_record_status": "present",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "foot_L"
+        "t_phal_5_3_L"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/digits/5",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/heel_behind_ankle_fraction",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/joint_gap_mm",
+        "model#/reference/statistics/footlength",
+        "model#/reference/statistics/footbreadthhorizontal",
+        "model#/landmarks/ankle_L",
+        "model#/landmarks/floor",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -4113,11 +4573,20 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_t_phal_5_3_r.py",
       "source_record_status": "present",
-      "representation": "grouped_form_proxy",
+      "representation": "individual_project_proxy",
       "mesh_ids": [
-        "foot_R"
+        "t_phal_5_3_R"
       ],
-      "geometry_inputs": [],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/digits/5",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/heel_behind_ankle_fraction",
+        "PROJECTS/PHY_F28/profiles/f28.json#/foot_proxy_layout/joint_gap_mm",
+        "model#/reference/statistics/footlength",
+        "model#/reference/statistics/footbreadthhorizontal",
+        "model#/landmarks/ankle_R",
+        "model#/landmarks/floor",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },

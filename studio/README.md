@@ -32,10 +32,12 @@ internally defined mechanisms. A0 does not inherit whole-body scales or poses.
 
 ## Bone-equivalence inspection
 
-The reference body has **71 individual core bone proxies**: 26 spine, 25 thorax,
-four shoulder-girdle, two adult hip, six upper-limb and eight lower-limb bones.
-All 206 adult identities have an explicit disposition: another 128 remain grouped
-skull/hand/foot forms; six ear ossicles and the hyoid are unrepresented.
+The reference body has **125 individual bone proxies**: the 71 core bones (26 spine, 25 thorax,
+four shoulder-girdle, two adult hip, six upper-limb and eight lower-limb) plus
+54 hand bones. Each hand has eight carpals, five metacarpals and 14 phalanges,
+with two carpal rows and a radial, palmar-offset static thumb chain.
+All 206 adult identities have an explicit disposition: another 74 remain grouped
+skull/foot forms; six ear ossicles and the hyoid are unrepresented.
 193 existing canonical source records are preserved; 13 facial records are missing.
 
 Use **Individual bone proxies only** to hide hardware, support rails, grouped forms
@@ -47,7 +49,8 @@ Other display-layer and isolate settings do not limit the exported complete fram
 
 This closes a bounded count/distribution gap, **not dimensional fidelity**. Shapes,
 bone endpoints, joints and morphology are unverified project proposals. None become
-BoneSpec dimensions or fabrication-approved interfaces. Left core proxies derive
+BoneSpec dimensions or fabrication-approved interfaces. The static thumb layout
+does not establish working opposition. Left core/hand proxies derive
 by reflection of authored right meshes, with triangle winding corrected.
 
 Exports include the complete frame (form envelope and guides are separate), current

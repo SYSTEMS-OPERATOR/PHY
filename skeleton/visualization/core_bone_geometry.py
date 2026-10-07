@@ -9,6 +9,7 @@ import copy
 import math
 
 from .bone_equivalence import bone_audit, expected_bones
+from .hand_bone_geometry import build_hand
 
 
 def validate_layout(layout):
@@ -84,7 +85,7 @@ def plate_xz(outline, y, half_thickness):
     return {"vertices": vertices, "faces": faces}
 
 
-def build_core(parts, part, model_inputs, layout):
+def build_core(parts, part, model_inputs, layout, hand_layout, landmarks, hand_station):
     """Add replacements to the existing part sink, then classify and mirror it."""
     from . import studio_model as sm
     validate_layout(layout)
@@ -170,7 +171,7 @@ def build_core(parts, part, model_inputs, layout):
          attachment_status="one adult fused hip proxy; acetabulum and SI interfaces unresolved")
 
     by_id = {v["id"]: v for v in parts}
-    elbow, wrist = by_id["upper_arm_R"]["endpoints_mm"][1], by_id["palm_R"]["endpoints_mm"][0]
+    elbow, wrist = landmarks["elbow_R"], landmarks["wrist_R"]
     direction = sm.unit(sm.sub(wrist, elbow))
     lateral = [ -direction[2], 0, direction[0] ]  # +x in neutral A/T poses = thumb/radial side.
     for code, sign, radii in (("RADIUS", 1, p["radius_radii_mm"]), ("ULNA", -1, p["ulna_radii_mm"])):
@@ -183,6 +184,7 @@ def build_core(parts, part, model_inputs, layout):
     center = sm.add(knee, sm.mul(p["patella_offset_mm"], s))
     emit("patella_R", "PATELLA_R", "legs", sm.ellipsoid(center, sm.mul(p["patella_radii_mm"], s)),
          ["patella_offset_mm", "patella_radii_mm"], center_mm=center)
+    anchors.update(build_hand(part, wrist, direction, lateral, hand_station, m["handbreadth"], s, hand_layout))
 
     # Retained long-bone/clavicle shapes remain external-station proxies.
     mapping = {"clavicle": "CLAVICLE", "upper_arm": "HUMERUS", "femur": "FEMUR", "tibia": "TIBIA", "fibular": "FIBULA"}
@@ -209,14 +211,6 @@ def build_core(parts, part, model_inputs, layout):
                 item["grouped_bone_ids"] = [r["bone_id"] for r in inventory if r["region"] == "skull"]
             elif pid.startswith("foot_"):
                 item["grouped_bone_ids"] = [r["bone_id"] for r in inventory if r["region"] == "foot" and r["side"] == ("right" if side == "R" else "left")]
-            elif pid.startswith("palm_"):
-                item["grouped_bone_ids"] = [r["bone_id"] for r in inventory if r["region"] == "hand" and not r["bone_id"].startswith("BONE_PHAL_") and r["side"] == ("right" if side == "R" else "left")]
-            elif pid.startswith("finger_"):
-                digit = int(pid.rsplit("_", 1)[1])+1
-                hand_side = pid.split("_")[-2]
-                distal = pid.startswith("finger_tip_")
-                segments = [2 if digit == 1 else 3] if distal else [1] if digit == 1 else [1, 2]
-                item["grouped_bone_ids"] = [f"BONE_PHAL_{digit}_{j}_{hand_side}" for j in segments]
 
     # Author right-side bones once; reflect vertices AND winding/attachment data.
     right = [v for v in parts if v.get("bone_id", "").endswith("_R")]
@@ -230,11 +224,17 @@ def build_core(parts, part, model_inputs, layout):
         other["faces"] = [[a, c, b] for a, b, c in item["faces"]]
         other["bounds_mm"] = {"min": [-item["bounds_mm"]["max"][0], *item["bounds_mm"]["min"][1:]],
                               "max": [-item["bounds_mm"]["min"][0], *item["bounds_mm"]["max"][1:]]}
-        for key in ("endpoints_mm", "centerline_mm"):
+        for key in ("endpoints_mm", "centerline_mm", "joint_stations_mm"):
             if key in item:
                 other[key] = [[-v[0], v[1], v[2]] for v in item[key]]
         if "center_mm" in item:
             v = item["center_mm"]; other["center_mm"] = [-v[0], v[1], v[2]]
+        for key in ("topology_parent", "topology_child"):
+            if item.get(key, "") and item[key].endswith("_R"):
+                other[key] = item[key][:-1]+"L"
+        if "hand_frame_side" in item:
+            other["hand_frame_side"] = "L"
+            other["geometry_inputs"] = [v.replace("wrist_R", "wrist_L") for v in item["geometry_inputs"]]
         other["mirror_of"] = item["id"]
         if other["id"] in left_ids:
             index = next(i for i, v in enumerate(parts) if v["id"] == other["id"])
@@ -242,6 +242,9 @@ def build_core(parts, part, model_inputs, layout):
         else:
             parts.append(other)
     audit = bone_audit(parts)
-    if audit["missing_core_bones"]:
-        raise ValueError("core bone coverage is incomplete")
+    if audit["missing_core_bones"] or audit["missing_hand_bones"]:
+        raise ValueError("core/hand bone coverage is incomplete")
+    for key in list(anchors):
+        if key.endswith("_R"):
+            v = anchors[key]; anchors[key[:-1]+"L"] = [-v[0], v[1], v[2]]
     return audit, anchors

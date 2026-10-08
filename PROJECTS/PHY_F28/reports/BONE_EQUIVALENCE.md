@@ -1,8 +1,8 @@
 # PHY adult bone-equivalence coverage
 
-Status: core/hand/foot/skull distribution review only; dimensions/morphology unverified, physical evidence unmeasured, fabrication release false.
+Status: adult 206 identity/distribution review only; dimensions/morphology unverified, physical evidence unmeasured, fabrication release false.
 
-206 adult identities: 199 individual project proxies, 0 grouped-form identities, 7 unrepresented.
+206 adult identities: 206 individual project proxies, 0 grouped-form identities, 0 unrepresented.
 193 existing canonical source records are unchanged; 13 facial records remain missing.
 
 One adult fused hip, sacrum and coccyx each. Hardware, cartilage, teeth and support rails never increase bone coverage.
@@ -10,8 +10,8 @@ One adult fused hip, sacrum and coccyx each. Hardware, cartilage, teeth and supp
 | Region | Expected | Individual | Grouped | Unrepresented |
 | --- | ---: | ---: | ---: | ---: |
 | skull | 22 | 22 | 0 | 0 |
-| ear | 6 | 0 | 0 | 6 |
-| hyoid | 1 | 0 | 0 | 1 |
+| ear | 6 | 6 | 0 | 0 |
+| hyoid | 1 | 1 | 0 | 0 |
 | spine | 26 | 26 | 0 | 0 |
 | thorax | 25 | 25 | 0 | 0 |
 | shoulder_girdle | 4 | 4 | 0 | 0 |
@@ -71,9 +71,9 @@ All individual proxies use provisional project geometry. Count equivalence is no
 | BONE_HIP_R | pelvis | individual_project_proxy | hip_bone_R | skeleton/bones/bone_hip_r.py |
 | BONE_HUMERUS_L | upper_limb | individual_project_proxy | upper_arm_L | skeleton/bones/bone_humerus_l.py |
 | BONE_HUMERUS_R | upper_limb | individual_project_proxy | upper_arm_R | skeleton/bones/bone_humerus_r.py |
-| BONE_HYOID | hyoid | unrepresented | — | skeleton/bones/bone_hyoid.py |
-| BONE_INCUS_L | ear | unrepresented | — | skeleton/bones/bone_incus_l.py |
-| BONE_INCUS_R | ear | unrepresented | — | skeleton/bones/bone_incus_r.py |
+| BONE_HYOID | hyoid | individual_project_proxy | hyoid | skeleton/bones/bone_hyoid.py |
+| BONE_INCUS_L | ear | individual_project_proxy | incus_L | skeleton/bones/bone_incus_l.py |
+| BONE_INCUS_R | ear | individual_project_proxy | incus_R | skeleton/bones/bone_incus_r.py |
 | BONE_INFERIOR_NASAL_CONCHA_L | skull | individual_project_proxy | inferior_nasal_concha_L | MISSING |
 | BONE_INFERIOR_NASAL_CONCHA_R | skull | individual_project_proxy | inferior_nasal_concha_R | MISSING |
 | BONE_INTERMEDIATE_CUNEIFORM_L | foot | individual_project_proxy | intermediate_cuneiform_L | skeleton/bones/bone_intermediate_cuneiform_l.py |
@@ -89,8 +89,8 @@ All individual proxies use provisional project geometry. Count equivalence is no
 | BONE_LATERAL_CUNEIFORM_R | foot | individual_project_proxy | lateral_cuneiform_R | skeleton/bones/bone_lateral_cuneiform_r.py |
 | BONE_LUNATE_L | hand | individual_project_proxy | lunate_L | skeleton/bones/bone_lunate_l.py |
 | BONE_LUNATE_R | hand | individual_project_proxy | lunate_R | skeleton/bones/bone_lunate_r.py |
-| BONE_MALLEUS_L | ear | unrepresented | — | skeleton/bones/bone_malleus_l.py |
-| BONE_MALLEUS_R | ear | unrepresented | — | skeleton/bones/bone_malleus_r.py |
+| BONE_MALLEUS_L | ear | individual_project_proxy | malleus_L | skeleton/bones/bone_malleus_l.py |
+| BONE_MALLEUS_R | ear | individual_project_proxy | malleus_R | skeleton/bones/bone_malleus_r.py |
 | BONE_MANDIBLE | skull | individual_project_proxy | mandible | skeleton/bones/bone_mandible.py |
 | BONE_MAXILLA_L | skull | individual_project_proxy | maxilla_L | MISSING |
 | BONE_MAXILLA_R | skull | individual_project_proxy | maxilla_R | MISSING |
@@ -189,8 +189,8 @@ All individual proxies use provisional project geometry. Count equivalence is no
 | BONE_SCAPULA_L | shoulder_girdle | individual_project_proxy | scapula_L | skeleton/bones/bone_scapula_l.py |
 | BONE_SCAPULA_R | shoulder_girdle | individual_project_proxy | scapula_R | skeleton/bones/bone_scapula_r.py |
 | BONE_SPHENOID | skull | individual_project_proxy | sphenoid | skeleton/bones/bone_sphenoid.py |
-| BONE_STAPES_L | ear | unrepresented | — | skeleton/bones/bone_stapes_l.py |
-| BONE_STAPES_R | ear | unrepresented | — | skeleton/bones/bone_stapes_r.py |
+| BONE_STAPES_L | ear | individual_project_proxy | stapes_L | skeleton/bones/bone_stapes_l.py |
+| BONE_STAPES_R | ear | individual_project_proxy | stapes_R | skeleton/bones/bone_stapes_r.py |
 | BONE_STERNUM | thorax | individual_project_proxy | sternum | skeleton/bones/bone_sternum.py |
 | BONE_T1 | spine | individual_project_proxy | vertebra_T1 | skeleton/bones/bone_t1.py |
 | BONE_T10 | spine | individual_project_proxy | vertebra_T10 | skeleton/bones/bone_t10.py |

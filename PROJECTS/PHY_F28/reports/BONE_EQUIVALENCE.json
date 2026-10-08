@@ -17,15 +17,17 @@
     "BONE_ZYGOMATIC_L",
     "BONE_ZYGOMATIC_R"
   ],
-  "individual_bone_proxies": 199,
+  "individual_bone_proxies": 206,
   "grouped_bones": 0,
-  "unrepresented_bones": 7,
+  "unrepresented_bones": 0,
   "missing_core_bones": [],
   "missing_hand_bones": [],
   "missing_foot_bones": [],
   "missing_skull_bones": [],
+  "missing_ear_bones": [],
+  "missing_hyoid_bones": [],
   "mesh_roles": {
-    "bone_proxy": 199,
+    "bone_proxy": 206,
     "envelope": 2,
     "form": 5,
     "hardware": 12,
@@ -42,16 +44,16 @@
     {
       "region": "ear",
       "expected": 6,
-      "individual": 0,
+      "individual": 6,
       "grouped": 0,
-      "unrepresented": 6
+      "unrepresented": 0
     },
     {
       "region": "hyoid",
       "expected": 1,
-      "individual": 0,
+      "individual": 1,
       "grouped": 0,
-      "unrepresented": 1
+      "unrepresented": 0
     },
     {
       "region": "spine",
@@ -744,9 +746,19 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_hyoid.py",
       "source_record_status": "present",
-      "representation": "unrepresented",
-      "mesh_ids": [],
-      "geometry_inputs": [],
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "hyoid"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/ear_hyoid_proxy_layout/hyoid",
+        "PROJECTS/PHY_F28/profiles/f28.json#/ear_hyoid_proxy_layout/hyoid_origin_head_fraction",
+        "model#/reference/statistics/headbreadth",
+        "model#/reference/statistics/headlength",
+        "PROJECTS/PHY_F28/profiles/f28.json#/design_choices_mm/head_height",
+        "model#/height_mm",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -758,9 +770,19 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_incus_l.py",
       "source_record_status": "present",
-      "representation": "unrepresented",
-      "mesh_ids": [],
-      "geometry_inputs": [],
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "incus_L"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/ear_hyoid_proxy_layout/ossicles/INCUS",
+        "PROJECTS/PHY_F28/profiles/f28.json#/ear_hyoid_proxy_layout/ear_origin_head_fraction",
+        "model#/reference/statistics/headbreadth",
+        "model#/reference/statistics/headlength",
+        "PROJECTS/PHY_F28/profiles/f28.json#/design_choices_mm/head_height",
+        "model#/height_mm",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -772,9 +794,19 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_incus_r.py",
       "source_record_status": "present",
-      "representation": "unrepresented",
-      "mesh_ids": [],
-      "geometry_inputs": [],
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "incus_R"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/ear_hyoid_proxy_layout/ossicles/INCUS",
+        "PROJECTS/PHY_F28/profiles/f28.json#/ear_hyoid_proxy_layout/ear_origin_head_fraction",
+        "model#/reference/statistics/headbreadth",
+        "model#/reference/statistics/headlength",
+        "PROJECTS/PHY_F28/profiles/f28.json#/design_choices_mm/head_height",
+        "model#/height_mm",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -1142,9 +1174,19 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_malleus_l.py",
       "source_record_status": "present",
-      "representation": "unrepresented",
-      "mesh_ids": [],
-      "geometry_inputs": [],
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "malleus_L"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/ear_hyoid_proxy_layout/ossicles/MALLEUS",
+        "PROJECTS/PHY_F28/profiles/f28.json#/ear_hyoid_proxy_layout/ear_origin_head_fraction",
+        "model#/reference/statistics/headbreadth",
+        "model#/reference/statistics/headlength",
+        "PROJECTS/PHY_F28/profiles/f28.json#/design_choices_mm/head_height",
+        "model#/height_mm",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -1156,9 +1198,19 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_malleus_r.py",
       "source_record_status": "present",
-      "representation": "unrepresented",
-      "mesh_ids": [],
-      "geometry_inputs": [],
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "malleus_R"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/ear_hyoid_proxy_layout/ossicles/MALLEUS",
+        "PROJECTS/PHY_F28/profiles/f28.json#/ear_hyoid_proxy_layout/ear_origin_head_fraction",
+        "model#/reference/statistics/headbreadth",
+        "model#/reference/statistics/headlength",
+        "PROJECTS/PHY_F28/profiles/f28.json#/design_choices_mm/head_height",
+        "model#/height_mm",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -3440,9 +3492,19 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_stapes_l.py",
       "source_record_status": "present",
-      "representation": "unrepresented",
-      "mesh_ids": [],
-      "geometry_inputs": [],
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "stapes_L"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/ear_hyoid_proxy_layout/ossicles/STAPES",
+        "PROJECTS/PHY_F28/profiles/f28.json#/ear_hyoid_proxy_layout/ear_origin_head_fraction",
+        "model#/reference/statistics/headbreadth",
+        "model#/reference/statistics/headlength",
+        "PROJECTS/PHY_F28/profiles/f28.json#/design_choices_mm/head_height",
+        "model#/height_mm",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -3454,9 +3516,19 @@
       "core_scope": false,
       "source_record": "skeleton/bones/bone_stapes_r.py",
       "source_record_status": "present",
-      "representation": "unrepresented",
-      "mesh_ids": [],
-      "geometry_inputs": [],
+      "representation": "individual_project_proxy",
+      "mesh_ids": [
+        "stapes_R"
+      ],
+      "geometry_inputs": [
+        "PROJECTS/PHY_F28/profiles/f28.json#/ear_hyoid_proxy_layout/ossicles/STAPES",
+        "PROJECTS/PHY_F28/profiles/f28.json#/ear_hyoid_proxy_layout/ear_origin_head_fraction",
+        "model#/reference/statistics/headbreadth",
+        "model#/reference/statistics/headlength",
+        "PROJECTS/PHY_F28/profiles/f28.json#/design_choices_mm/head_height",
+        "model#/height_mm",
+        "model#/scale_from_mean"
+      ],
       "dimensional_fidelity": "unverified",
       "physical_evidence": "unmeasured"
     },
@@ -4850,7 +4922,7 @@
       "physical_evidence": "unmeasured"
     }
   ],
-  "bone_distribution_complete": false,
+  "bone_distribution_complete": true,
   "dimensional_fidelity_verified": false,
   "fabrication_released": false,
   "physical_evidence_complete": false

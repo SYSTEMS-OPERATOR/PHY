@@ -32,21 +32,26 @@ internally defined mechanisms. A0 does not inherit whole-body scales or poses.
 
 ## Bone-equivalence inspection
 
-The reference body has **177 individual bone proxies**: the 71 core bones (26 spine, 25 thorax,
+The reference body has **199 individual bone proxies**: the 71 core bones (26 spine, 25 thorax,
 four shoulder-girdle, two adult hip, six upper-limb and eight lower-limb) plus
-54 hand bones and 52 foot bones. Each hand has eight carpals, five metacarpals and 14 phalanges,
+54 hand bones, 52 foot bones and 22 skull bones. Each hand has eight carpals, five metacarpals and 14 phalanges,
 with two carpal rows and a radial, palmar-offset static thumb chain.
 Each foot has seven tarsals, five metatarsals and 14 toe phalanges, including two
 in the medial hallux. Heel/talus and cuneiform/cuboid relationships are inspectable
 in a static grounded pose; arches, articular surfaces and gait remain unresolved.
-All 206 adult identities have an explicit disposition: another 22 remain grouped
-skull forms; six ear ossicles and the hyoid are unrepresented.
+The skull has eight cranial and 14 facial identities, including a separate adult
+mandible and mirrored facial pairs. Sutures, foramina, sinuses, teeth and jaw
+mechanics are unresolved. Head form guides carry no bone correspondence.
+All 206 adult identities have an explicit disposition: six ear ossicles and the
+hyoid are unrepresented; no grouped identities remain.
 193 existing canonical source records are preserved; 13 facial records are missing.
 
-Use **Individual bone proxies only** to hide hardware, support rails, grouped forms
+Use **Individual bone proxies only** to hide hardware, support rails, head form guides
 and envelopes. Search by `BONE_` ID or inspect the Bone coverage panel. Coupling
 visibility uses role metadata rather than a brass-material heuristic. The bone-only
 filter also governs STL/GLB export; GLB carries bone IDs and role/provenance extras.
+Skull GLB extras include the layout hash, selected adjacency and explicit canonical
+source-record status; the inspector also shows missing skull source records.
 JSON retains the complete original model/audit plus the active review/filter state.
 Other display-layer and isolate settings do not limit the exported complete frame.
 
@@ -54,7 +59,8 @@ This closes a bounded count/distribution gap, **not dimensional fidelity**. Shap
 bone endpoints, joints and morphology are unverified project proposals. None become
 BoneSpec dimensions or fabrication-approved interfaces. The static thumb layout
 does not establish working opposition; foot placement does not establish gait or
-anatomical contact. Left core/hand/foot proxies derive
+anatomical contact. Skull display geometry does not establish jaw motion.
+Left core/hand/foot/skull proxies derive
 by reflection of authored right meshes, with triangle winding corrected.
 
 Exports include the complete frame (form envelope and guides are separate), current

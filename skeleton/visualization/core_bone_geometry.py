@@ -11,6 +11,7 @@ import math
 from .bone_equivalence import bone_audit, expected_bones
 from .hand_bone_geometry import build_hand
 from .foot_bone_geometry import build_foot
+from .skull_bone_geometry import build_skull
 
 
 def validate_layout(layout):
@@ -86,7 +87,7 @@ def plate_xz(outline, y, half_thickness):
     return {"vertices": vertices, "faces": faces}
 
 
-def build_core(parts, part, model_inputs, layout, hand_layout, foot_layout, landmarks, hand_station):
+def build_core(parts, part, model_inputs, layout, hand_layout, foot_layout, skull_layout, head_frame, landmarks, hand_station):
     """Add replacements to the existing part sink, then classify and mirror it."""
     from . import studio_model as sm
     validate_layout(layout)
@@ -188,10 +189,10 @@ def build_core(parts, part, model_inputs, layout, hand_layout, foot_layout, land
     anchors.update(build_hand(part, wrist, direction, lateral, hand_station, m["handbreadth"], s, hand_layout))
     anchors.update(build_foot(part, landmarks["ankle_R"], landmarks["floor"],
                               m["footlength"], m["footbreadthhorizontal"], s, foot_layout))
+    anchors.update(build_skull(part, *head_frame, s, skull_layout))
 
     # Retained long-bone/clavicle shapes remain external-station proxies.
     mapping = {"clavicle": "CLAVICLE", "upper_arm": "HUMERUS", "femur": "FEMUR", "tibia": "TIBIA", "fibular": "FIBULA"}
-    inventory = expected_bones()
     for item in parts:
         pid = item["id"]
         if item.get("role") == "bone_proxy":
@@ -210,8 +211,6 @@ def build_core(parts, part, model_inputs, layout, hand_layout, foot_layout, land
             item["role"] = "support"
         else:
             item["role"] = "form"
-            if pid == "head_arch_0":
-                item["grouped_bone_ids"] = [r["bone_id"] for r in inventory if r["region"] == "skull"]
 
     # Author right-side bones once; reflect vertices AND winding/attachment data.
     right = [v for v in parts if v.get("bone_id", "").endswith("_R")]
@@ -233,6 +232,12 @@ def build_core(parts, part, model_inputs, layout, hand_layout, foot_layout, land
         for key in ("topology_parent", "topology_child"):
             if item.get(key, "") and item[key].endswith("_R"):
                 other[key] = item[key][:-1]+"L"
+        for key in ("topology_neighbors", "articulates_with"):
+            if key in item:
+                other[key] = [v[:-1]+("L" if v.endswith("_R") else "R")
+                              if v.endswith(("_R", "_L")) else v for v in item[key]]
+        if "skull_frame_side" in item:
+            other["skull_frame_side"] = "L"
         if "hand_frame_side" in item:
             other["hand_frame_side"] = "L"
             other["geometry_inputs"] = [v.replace("wrist_R", "wrist_L") for v in item["geometry_inputs"]]
@@ -246,8 +251,13 @@ def build_core(parts, part, model_inputs, layout, hand_layout, foot_layout, land
         else:
             parts.append(other)
     audit = bone_audit(parts)
-    if audit["missing_core_bones"] or audit["missing_hand_bones"] or audit["missing_foot_bones"]:
-        raise ValueError("core/hand/foot bone coverage is incomplete")
+    if any(audit[k] for k in ("missing_core_bones", "missing_hand_bones", "missing_foot_bones", "missing_skull_bones")):
+        raise ValueError("core/hand/foot/skull bone coverage is incomplete")
+    skull_parts = {p["bone_id"]: p for p in parts if p.get("skull_layout_sha256")}
+    for row in audit["bones"]:
+        if row["bone_id"] in skull_parts:
+            skull_parts[row["bone_id"]].update(source_record=row["source_record"],
+                                              source_record_status=row["source_record_status"])
     for key in list(anchors):
         if key.endswith("_R"):
             v = anchors[key]; anchors[key[:-1]+"L"] = [-v[0], v[1], v[2]]

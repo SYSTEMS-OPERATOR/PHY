@@ -18,8 +18,8 @@ try {
   await page.goto(pathToFileURL(path.join(root,'studio/dist/PHY-Studio.html')).href);
   await page.waitForFunction(()=>window.PHY_STUDIO?.getState().webgl);
   assert.equal(await page.evaluate(()=>PHY_STUDIO.getState().model),'F28_REFINED');
-  assert.equal(await page.evaluate(()=>PHY_STUDIO.getState().modelParts),201);
-  assert.deepEqual(await page.evaluate(()=>{const a=PHY_STUDIO.boneAudit();return [a.expected_bones,a.individual_bone_proxies,a.grouped_bones,a.unrepresented_bones];}),[206,177,22,7]);
+  assert.equal(await page.evaluate(()=>PHY_STUDIO.getState().modelParts),223);
+  assert.deepEqual(await page.evaluate(()=>{const a=PHY_STUDIO.boneAudit();return [a.expected_bones,a.individual_bone_proxies,a.grouped_bones,a.unrepresented_bones];}),[206,199,0,7]);
   await page.click('#open-bones');
   assert.match(await page.locator('#modal-content').innerText(),/dimensions and morphology are unverified/i);
   assert.match(await page.locator('#modal-content').innerText(),/13 facial records missing/);
@@ -33,16 +33,24 @@ try {
   await page.fill('#part-search','BONE_T_PHAL_1_2_R');
   await page.selectOption('#part-select','t_phal_1_2_R');
   assert.match(await page.locator('#part-details').innerText(),/BONE_T_PHAL_1_2_R/);
+  await page.fill('#part-search','BONE_MAXILLA_R');
+  await page.selectOption('#part-select','maxilla_R');
+  assert.match(await page.locator('#part-details').innerText(),/canonical source record missing/i);
+  await page.fill('#part-search','BONE_MANDIBLE');
+  await page.selectOption('#part-select','mandible');
+  assert.match(await page.locator('#part-details').innerText(),/BONE_MANDIBLE/);
   await page.fill('#part-search','');
   await page.check('#layer-bones-only');
   const boneIds=await page.evaluate(()=>PHY_STUDIO.visiblePartIds());
-  assert.equal(boneIds.length,177);
+  assert.equal(boneIds.length,199);
   assert.ok(boneIds.includes('patella_R')&&boneIds.includes('radius_L')&&boneIds.includes('rib_12_R'));
   assert.ok(boneIds.includes('pisiform_R')&&boneIds.includes('meta1_L')&&boneIds.includes('phal_5_3_L'));
+  assert.ok(boneIds.includes('mandible')&&boneIds.includes('maxilla_R')&&boneIds.includes('par_L'));
+  assert.ok(!boneIds.includes('head_arch_0'));
   assert.ok(boneIds.includes('calcaneus_R')&&boneIds.includes('mt1_L')&&boneIds.includes('t_phal_5_3_L'));
   assert.ok(!boneIds.includes('knee_joint_R')&&!boneIds.includes('foot_R')&&!boneIds.includes('shoulder_bridge'));
   await page.click('#show-all');
-  assert.equal(await page.evaluate(()=>PHY_STUDIO.visiblePartIds().length),177,'show-all must not override bone-only filtering');
+  assert.equal(await page.evaluate(()=>PHY_STUDIO.visiblePartIds().length),199,'show-all must not override bone-only filtering');
   await page.screenshot({path:path.join(output,'core-bones.png')});
   await page.uncheck('#layer-bones-only');
   await page.screenshot({path:path.join(output,'desktop.png'),fullPage:true});
@@ -89,14 +97,14 @@ try {
   const json=JSON.parse(glb.subarray(20,20+glb.readUInt32LE(12)).toString());assert.ok(json.meshes.length>80);
   const review=JSON.parse(await getDownload('json','review.json'));
   assert.equal(review.review_state.height,1700);assert.equal(review.review_state.fabrication_released,false);
-  assert.equal(review.model.bone_equivalence.individual_bone_proxies,177);
+  assert.equal(review.model.bone_equivalence.individual_bone_proxies,199);
   assert.equal(review.model.bone_equivalence.dimensional_fidelity_verified,false);
   await page.check('#layer-bones-only');
   const boneGlb=await getDownload('glb','core-bones.glb');
   const boneJson=JSON.parse(boneGlb.subarray(20,20+boneGlb.readUInt32LE(12)).toString());
-  assert.equal(boneJson.meshes.length,177);
+  assert.equal(boneJson.meshes.length,199);
   const extras=boneJson.nodes.filter(n=>n.mesh!==undefined).map(n=>n.extras);
-  assert.equal(new Set(extras.map(x=>x.bone_id)).size,177);
+  assert.equal(new Set(extras.map(x=>x.bone_id)).size,199);
   assert.ok(extras.every(x=>x.role==='bone_proxy'&&x.dimensional_fidelity==='unverified'));
   const handExtras=extras.filter(x=>/^(scaphoid|lunate|triquetrum|pisiform|trapezium|trapezoid|capitate|hamate|meta[1-5]|phal_)/.test(x.part_id));
   assert.equal(handExtras.length,54);
@@ -105,6 +113,12 @@ try {
   const footExtras=extras.filter(x=>footIds.has(x.bone_id));
   assert.equal(footExtras.length,52);
   assert.ok(footExtras.every(x=>x.physical_evidence==='unmeasured'&&x.foot_layout_sha256===review.model.foot_proxy_layout_sha256));
+  const skullExtras=extras.filter(x=>x.skull_layout_sha256);
+  assert.equal(skullExtras.length,22);
+  assert.ok(skullExtras.every(x=>x.skull_layout_sha256===review.model.skull_proxy_layout_sha256));
+  assert.equal(skullExtras.filter(x=>x.source_record_status==='missing'&&x.source_record===null).length,13);
+  assert.deepEqual(skullExtras.find(x=>x.bone_id==='BONE_MANDIBLE').articulates_with,['BONE_TEMP_R','BONE_TEMP_L']);
+  assert.equal(skullExtras.find(x=>x.bone_id==='BONE_MANDIBLE').motion_implemented,false);
   assert.equal(footExtras.find(x=>x.bone_id==='BONE_MT1_L').topology_parent,'BONE_MEDIAL_CUNEIFORM_L');
   const boneReview=JSON.parse(await getDownload('json','core-review.json'));
   assert.equal(boneReview.review_state.boneOnly,true);
@@ -124,7 +138,7 @@ try {
   await page.screenshot({path:path.join(output,'mobile.png'),fullPage:true});
   assert.deepEqual(errors,[]);
   await fs.writeFile(path.join(output,'results.json'),JSON.stringify({status:'passed',browserErrors:errors,stlTriangles:count,stlHeightMm:maxZ,glbMeshes:json.meshes.length,boneOnlyMeshes:boneJson.meshes.length,mobileWidth:widths[0]},null,2));
-  console.log('PHY Studio browser smoke passed: offline WebGL, five models, 177-bone filtering/identity/GLB audit including 52 foot identities, surface selection/ruler, height/pose/isolation, valid GLB/STL/JSON, embedded maquette ZIP, and 390px mobile layout.');
+  console.log('PHY Studio browser smoke passed: offline WebGL, five models, 199-bone filtering/identity/GLB audit including 22 skull and 52 foot identities, surface selection/ruler, height/pose/isolation, valid GLB/STL/JSON, embedded maquette ZIP, and 390px mobile layout.');
 } finally {
   await browser.close();
 }

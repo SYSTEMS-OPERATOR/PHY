@@ -39,10 +39,10 @@ unchanged. It is not a replacement for their fabrication validators.
 - External hip/chest form rails and the interpolated envelope remain non-bone
   supports/form guides, not human scan data. Hardware couplings do not count as bones.
 
-## Bone distribution / bounded core, hand and foot revisions
+## Bone distribution / bounded core, hand, foot and skull revisions
 
 `reports/BONE_EQUIVALENCE.md` accounts for all 206 adult identities, independently
-of mesh counts. 177 bones now have individual proxies: 71 core bones (26 spine, 25 thorax,
+of mesh counts. 199 bones now have individual proxies: 71 core bones (26 spine, 25 thorax,
 four shoulder-girdle, two adult hip, six upper-limb, eight lower-limb). Ribs are
 24 separate open curves; cervical/thoracic/lumbar levels remain individually
 identified, paired forearms have radius and ulna, and patellae are separate from
@@ -58,23 +58,33 @@ phalanges per side. The heel/talus and medial hallux are distinct; cuneiforms
 and cuboid are named chain parents. These are static grounded display proxies,
 not measured tarsal shapes, functional arches or working ankle/toe mechanics.
 
-22 skull identities remain grouped forms, and seven ear/hyoid identities
-are unrepresented. 13 facial source records remain absent; the 193 existing
+Another 22 skull proxies provide eight cranial and 14 facial identities, including
+one separate adult mandible. Vault patches, facial ellipsoids and sweeps are
+provisional distribution geometry. Sutures, foramina, sinuses, teeth and jaw
+mechanics remain unresolved; temporal stations do not implement a joint.
+
+Seven ear/hyoid identities are unrepresented; no grouped identities remain.
+13 facial source records remain absent; the 193 existing
 canonical records are untouched. The `bone_proxy_layout` profile section is the
 authoritative project-local provisional core layout; `hand_proxy_layout` governs
-the hands and `foot_proxy_layout` the feet. All three have hashes and parameter pointers
+the hands, `foot_proxy_layout` the feet and `skull_proxy_layout` the skull.
+All four have hashes and parameter pointers
 embedded in the model. It is **not measured bone shape, joint anatomy or canon**.
 Count/distribution equivalence alone cannot establish dimensional or kinematic fidelity.
 
 Studio's Bone coverage panel exposes every disposition and its source record.
-Individual-bone-only viewing/export hides hardware, supports and grouped forms.
+Individual-bone-only viewing/export hides hardware, supports and head form guides.
 See `BONE_EQUIVALENCE_SCOPE.md` for confirmed deviations and bounded corrections.
 The hand scope and historical checks are in `HAND_EQUIVALENCE_SCOPE.md` and
 `reports/HAND_EQUIVALENCE_VALIDATION.md`; `reports/HAND_PROXY_LAYOUT.md` lists
-every governing hand input. Current foot scope/checks are in
+every governing hand input. Foot scope/checks are in
 `FOOT_EQUIVALENCE_SCOPE.md` and `reports/FOOT_EQUIVALENCE_VALIDATION.md`;
 `reports/FOOT_PROXY_LAYOUT.md` lists governing foot inputs. Earlier checkpoints
 remain historical. All 52 foot source dimension dictionaries remain unknown.
+Current skull scope/checks are in `SKULL_EQUIVALENCE_SCOPE.md` and
+`reports/SKULL_EQUIVALENCE_VALIDATION.md`; `reports/SKULL_PROXY_LAYOUT.md` lists
+every governing skull input. Studio's skull inspector and GLB extras explicitly
+mark canonical source records as present or missing.
 
 The SOPHY-scale comparison chooses H=span=1676.4 mm. It does not adopt new canon
 landmarks. A0's separate 317 mm dummy station is neither scaled nor integrated

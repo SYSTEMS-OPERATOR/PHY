@@ -293,7 +293,8 @@ def build_armature(height_mm=None, refinement=1.0, arm_drop_deg=75.0, span_equal
     landmarks["floor"] = [0, 0, 0]
     bone_report, bone_anchors = build_core(parts, part,
         (scale, height, m, shoulder_x, shoulder_z, hip_x, hip_z, pelvis),
-        profile["bone_proxy_layout"], profile["hand_proxy_layout"], profile["foot_proxy_layout"], landmarks, hand)
+        profile["bone_proxy_layout"], profile["hand_proxy_layout"], profile["foot_proxy_layout"],
+        profile["skull_proxy_layout"], (head_center, [rx, ry, rz]), landmarks, hand)
     return {"id": "PHY_F28_R1", "name": "Female 28 / reference armature", "units": "mm",
             "frame": "+x subject-right, +y anterior, +z superior", "age_years": 28,
             "height_mm": height, "t_pose_span_mm": target_span, "refinement": refinement,
@@ -308,6 +309,8 @@ def build_armature(height_mm=None, refinement=1.0, arm_drop_deg=75.0, span_equal
             "hand_proxy_layout_sha256": digest(profile["hand_proxy_layout"]),
             "foot_proxy_layout": profile["foot_proxy_layout"],
             "foot_proxy_layout_sha256": digest(profile["foot_proxy_layout"]),
+            "skull_proxy_layout": profile["skull_proxy_layout"],
+            "skull_proxy_layout_sha256": digest(profile["skull_proxy_layout"]),
             "maquette_formers": maquette_formers, "maquette_members": maquette_members,
             "design_datums": {"hip_center_spacing_mm": 2*hip_x, "shoulder_center_spacing_mm": 2*shoulder_x,
                               "arm_chain_closure_scale": closure, "upper_arm_station_mm": upper,
@@ -317,9 +320,10 @@ def build_armature(height_mm=None, refinement=1.0, arm_drop_deg=75.0, span_equal
             "aesthetic_adjustments_percent": {k: v*refinement for k, v in adjustments.items()},
             "limitations": ["External surface measurements do not specify bone lengths or 3D joint centers.",
                             "The arm station mapping preserves measured span using segment ratios; it is not anatomical endpoint adoption.",
-                            "177 core/hand/foot bones have individual provisional proxies; 22 skull bones remain grouped and seven ear/hyoid bones are unrepresented.",
+                            "199 core/hand/foot/skull bones have individual provisional proxies; seven ear/hyoid bones are unrepresented.",
                             "Hand carpals/segments and static thumb placement are provisional; working opposition and articular interfaces are unresolved.",
                             "Foot tarsals/toe segments use a provisional static grounded frame; arches, articular interfaces and gait are unresolved.",
+                            "Skull shell patches and facial sweeps/ellipsoids are display proxies; sutures, foramina, sinuses, teeth and jaw mechanics are unresolved.",
                             "Count/adjacency is reference-grounded; bone dimensions, morphology and joints are unverified design proposals.",
                             "Hardware, support rails and interpolated envelopes do not count as bones. Thirteen facial source records remain missing.",
                             "The A0 shoulder article is a separate, unscaled bench assembly; no automatic whole-body integration.",

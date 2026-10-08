@@ -75,23 +75,27 @@ class BoneEquivalenceTest(unittest.TestCase):
         required |= {"BONE_"+c for c in ("FRONTAL", "OCCIPITAL", "SPHENOID", "ETHMOID", "MANDIBLE", "VOMER")}
         required |= {f"BONE_{c}_{s}" for c in ("PAR", "TEMP", "MAXILLA", "ZYGOMATIC", "NASAL", "LACRIMAL",
                                               "PALATINE", "INFERIOR_NASAL_CONCHA") for s in ("R", "L")}
+        required |= {f"BONE_{c}_{s}" for c in ("MALLEUS", "INCUS", "STAPES") for s in ("R", "L")}
+        required.add("BONE_HYOID")
         self.assertEqual(set(self.bones), required)
         audit = self.model["bone_equivalence"]
-        self.assertEqual((audit["individual_bone_proxies"], audit["grouped_bones"], audit["unrepresented_bones"]), (199, 0, 7))
-        self.assertEqual(audit["mesh_roles"], {"bone_proxy": 199, "envelope": 2, "form": 5, "hardware": 12, "support": 5})
+        self.assertEqual((audit["individual_bone_proxies"], audit["grouped_bones"], audit["unrepresented_bones"]), (206, 0, 0))
+        self.assertEqual(audit["mesh_roles"], {"bone_proxy": 206, "envelope": 2, "form": 5, "hardware": 12, "support": 5})
         self.assertEqual(audit["missing_core_bones"], [])
         self.assertEqual(audit["missing_hand_bones"], [])
         self.assertEqual(audit["missing_foot_bones"], [])
         self.assertEqual(audit["missing_skull_bones"], [])
+        self.assertEqual(audit["missing_ear_bones"], [])
+        self.assertEqual(audit["missing_hyoid_bones"], [])
         self.assertEqual(self.parts["knee_joint_R"]["role"], "hardware")
         self.assertEqual(self.parts["shoulder_bridge"]["role"], "support")
-        self.assertFalse(audit["bone_distribution_complete"])
+        self.assertTrue(audit["bone_distribution_complete"])
 
     def test_skull_hands_feet_are_individual_and_head_forms_do_not_count(self):
         rows = self.model["bone_equivalence"]["bones"]
         grouped = [r for r in rows if r["representation"] == "grouped_form_proxy"]
         self.assertEqual(grouped, [])
-        self.assertEqual(Counter(r["region"] for r in rows if r["representation"] == "unrepresented"), {"ear": 6, "hyoid": 1})
+        self.assertEqual(Counter(r["region"] for r in rows if r["representation"] == "unrepresented"), {})
         self.assertFalse(any(r["region"] in ("hand", "foot") for r in grouped))
         self.assertFalse(any(key.startswith(("palm_", "finger_", "foot_")) for key in self.parts))
         self.assertEqual(self.parts["head_arch_0"]["role"], "form")
@@ -251,6 +255,7 @@ class BoneEquivalenceTest(unittest.TestCase):
                 self.assertIn("HAND_PROXY_LAYOUT.md", archive.namelist())
                 self.assertIn("FOOT_PROXY_LAYOUT.md", archive.namelist())
                 self.assertIn("SKULL_PROXY_LAYOUT.md", archive.namelist())
+                self.assertIn("EAR_HYOID_PROXY_LAYOUT.md", archive.namelist())
                 self.assertEqual(len(json.loads(archive.read("BONE_EQUIVALENCE.json"))["bones"]), 206)
 
 

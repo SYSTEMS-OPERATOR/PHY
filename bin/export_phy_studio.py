@@ -308,6 +308,32 @@ def export(output, include_a0=True):
                      "The five retained head arches/bands are form-study meshes with no bone correspondence.",
                      "Dimensional fidelity unverified; physical evidence unmeasured; fabrication release false."]
     (output / "SKULL_PROXY_LAYOUT.md").write_text("\n".join(skull_report)+"\n", encoding="utf-8")
+    ear_hyoid_report = ["# Individual ear and hyoid proxy layout / EAR_HYOID_V1", "",
+                        "Seven identities: malleus, incus and stapes on each side, plus one midline hyoid.",
+                        "Together with the preserved 199 proxies, all 206 inventory identities are represented individually.",
+                        "Count/distribution coverage does not establish measured morphology, working mechanics or fabrication readiness.",
+                        "Source: `PROJECTS/PHY_F28/profiles/f28.json#/ear_hyoid_proxy_layout`", "",
+                        "Layout SHA-256: `"+refined["ear_hyoid_proxy_layout_sha256"]+"`", "",
+                        "Origins use the external half head breadth/depth and half the proposed 220 mm head height.",
+                        "Local centerlines, offsets and sections are provisional millimeter display choices, scaled from the F28 mean height.",
+                        "Three authored right ossicles reflect vertices, triangle winding, anchors and same-side chain IDs to the left.",
+                        "Malleus and incus use tapered sweeps; stapes uses a closed stirrup loop with an open center.",
+                        "The malleus–incus–stapes chain runs lateral to medial within the head display frame.",
+                        "Temporal housing is a placement label, not an articulation, cavity, fit or clearance proof.",
+                        "The tympanic membrane and oval window are endpoint labels; their geometry and mechanisms are unresolved.",
+                        "The hyoid is one open U below the jaw, with posterior ends and no direct bone articulation.",
+                        "Its muscle/ligament suspension, soft-tissue interfaces, hearing and swallowing mechanics remain unmodeled.", "",
+                        "| Input | Governing value |", "| --- | --- |"]
+    ear_hyoid_report += ["| "+key+" | `"+json.dumps(value, sort_keys=True)+"` |"
+                         for key, value in refined["ear_hyoid_proxy_layout"].items()]
+    ear_hyoid_report += ["", "Identity and selected topology references (not numerical geometry sources):",
+                         "https://openstax.org/books/anatomy-and-physiology-2e/pages/14-1-sensory-perception",
+                         "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-2-the-skull", "",
+                         "All seven identities have existing canonical source modules; their legacy dimension dictionaries remain unchanged.",
+                         "Those records do not qualify these display meshes. All 193 source records are preserved; 13 facial records remain missing.",
+                         "CORE_V1, HAND_V1, FOOT_V1 and SKULL_V1 geometry and inputs are preserved.",
+                         "Dimensional fidelity unverified; physical evidence unmeasured; fabrication release false."]
+    (output / "EAR_HYOID_PROXY_LAYOUT.md").write_text("\n".join(ear_hyoid_report)+"\n", encoding="utf-8")
     models = [dict(mean, id="F28_MEAN", name="F28 / arithmetic mean"),
               dict(refined, id="F28_REFINED", name="F28 / gentle refinement"),
               dict(sophy, id="SOPHY_SCALE", name="SOPHY / 1676.4 mm reference overlay")]
@@ -349,11 +375,12 @@ def export(output, include_a0=True):
                "- 71 core individual bone proxies: 26 spine, 25 thorax, four shoulder girdle, two adult hips, six arm and eight leg bones.",
                "- 54 individual hand proxies add eight carpals, five metacarpals and 14 phalanges per side.",
                "- 52 individual foot proxies add seven tarsals, five metatarsals and 14 toe phalanges per side.",
-               "- 22 individual skull proxies add eight cranial and 14 facial identities, for 199 individual identities in all.",
-               "- Seven ear/hyoid identities are unrepresented. See BONE_EQUIVALENCE.md for all 206 dispositions.",
+               "- 22 individual skull proxies add eight cranial and 14 facial identities.",
+               "- Six individual ear ossicles and one hyoid complete all 206 inventory identities; no grouped or unrepresented identities remain. See BONE_EQUIVALENCE.md.",
                "- The hand layout is a static display pose, not working opposition or measured bone geometry; see HAND_PROXY_LAYOUT.md.",
                "- The grounded foot layout is a static display, not measured bone geometry, functional arches or gait; see FOOT_PROXY_LAYOUT.md.",
                "- The skull layout is a static identity/distribution display, not measured surfaces, sutures or jaw mechanics; see SKULL_PROXY_LAYOUT.md.",
+               "- Ear chains and the suspended hyoid are static display proxies; hearing, swallowing and soft-tissue mechanisms are unmodeled. See EAR_HYOID_PROXY_LAYOUT.md.",
                "- Bone-proxy layout is project-local provisional placement, not measured osteometry. Missing facial source records stay missing.",
                "- Couplings are hardware envelopes. Joint axes, bearing fits, retention and load paths are not resolved for the whole body.",
                "- Elliptical torso envelope uses marginal girths; interpolation and anatomical appearance are design, not scan data.", "",
@@ -393,6 +420,6 @@ if __name__ == "__main__":
     if args.sync_review:
         review = ROOT / "PROJECTS/PHY_F28/reports"
         review.mkdir(parents=True, exist_ok=True)
-        for name in ("BONE_EQUIVALENCE.json", "BONE_EQUIVALENCE.md", "CORE_PROXY_LAYOUT.md", "HAND_PROXY_LAYOUT.md", "FOOT_PROXY_LAYOUT.md", "SKULL_PROXY_LAYOUT.md"):
+        for name in ("BONE_EQUIVALENCE.json", "BONE_EQUIVALENCE.md", "CORE_PROXY_LAYOUT.md", "HAND_PROXY_LAYOUT.md", "FOOT_PROXY_LAYOUT.md", "SKULL_PROXY_LAYOUT.md", "EAR_HYOID_PROXY_LAYOUT.md"):
             shutil.copyfile(args.output / name, review / name)
         shutil.copyfile(args.output / "PHY-Studio.html", ROOT / "studio/PHY-Studio.html")

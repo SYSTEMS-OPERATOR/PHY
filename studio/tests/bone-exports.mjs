@@ -12,7 +12,7 @@ globalThis.FileReader=class {
 };
 const model=JSON.parse(await fs.readFile(new URL('../dist/f28_refined.json',import.meta.url),'utf8'));
 const bones=model.parts.filter(p=>p.role==='bone_proxy');
-assert.equal(bones.length,199);
+assert.equal(bones.length,206);
 assert.deepEqual(model.parts.filter(p=>partVisible(p,{boneOnly:true},{frame:false,joints:false,envelope:true})),bones);
 assert.equal(partVisible(model.parts.find(p=>p.id==='head_arch_0'),{boneOnly:true,isolated:true,selected:'head_arch_0'},{frame:true,joints:true,envelope:true}),false);
 assert.equal(partVisible(model.parts.find(p=>p.id==='clavicle_R'),{boneOnly:false},{frame:true,joints:false,envelope:false}),true,'a brass bone is not hardware');
@@ -25,6 +25,13 @@ assert.deepEqual(model.parts.filter(p=>partMatches(p,'BONE_MAXILLA_R',false)).ma
 assert.deepEqual(model.parts.filter(p=>partMatches(p,'BONE_MAXILLA_R',true)).map(p=>p.id),['maxilla_R']);
 assert.deepEqual(model.parts.filter(p=>partMatches(p,'BONE_MANDIBLE',true)).map(p=>p.id),['mandible']);
 assert.deepEqual(model.parts.filter(p=>partMatches(p,'BONE_PAR_L',true)).map(p=>p.id),['par_L']);
+for(const [boneId,partId] of [['BONE_MALLEUS_R','malleus_R'],['BONE_INCUS_L','incus_L'],
+  ['BONE_STAPES_L','stapes_L'],['BONE_HYOID','hyoid']]){
+  assert.deepEqual(model.parts.filter(p=>partMatches(p,boneId,true)).map(p=>p.id),[partId]);
+}
+assert.equal(model.bone_equivalence.bone_distribution_complete,true);
+assert.equal(model.bone_equivalence.dimensional_fidelity_verified,false);
+assert.equal(model.fabrication_released,false);
 
 const root=new THREE.Group(),meshes=[];
 for(const p of model.parts){
@@ -36,13 +43,13 @@ for(const p of model.parts){
 }
 root.scale.setScalar(1700/model.height_mm);
 const all=exportGroup(root,meshes,false),core=exportGroup(root,meshes,true);
-assert.equal(all.children.length,221);assert.equal(core.children.length,199);
-assert.equal(new Set(core.children.map(p=>p.userData.bone_id)).size,199);
+assert.equal(all.children.length,228);assert.equal(core.children.length,206);
+assert.equal(new Set(core.children.map(p=>p.userData.bone_id)).size,206);
 assert.ok(core.children.every(p=>p.userData.role==='bone_proxy'&&p.userData.dimensional_fidelity==='unverified'));
 assert.ok(!core.children.some(p=>['knee_joint_R','head_arch_0','foot_R','shoulder_bridge'].includes(p.name)));
 // Even hidden display objects belong to a complete-frame export unless bone-only.
 meshes.forEach(mesh=>mesh.visible=false);
-assert.equal(exportGroup(root,meshes,false).children.length,221);
+assert.equal(exportGroup(root,meshes,false).children.length,228);
 
 all.rotateX(Math.PI/2);all.updateMatrixWorld(true);
 const stl=new STLExporter().parse(all,{binary:true}),count=stl.getUint32(80,true);
@@ -54,9 +61,9 @@ core.scale.setScalar(.001);core.updateMatrixWorld(true);
 const glb=Buffer.from(await new GLTFExporter().parseAsync(core,{binary:true}));
 assert.equal(glb.readUInt32LE(0),0x46546c67);assert.equal(glb.readUInt32LE(8),glb.length);
 const contents=JSON.parse(glb.subarray(20,20+glb.readUInt32LE(12)).toString());
-assert.equal(contents.meshes.length,199);
+assert.equal(contents.meshes.length,206);
 const extras=contents.nodes.filter(n=>n.mesh!==undefined).map(n=>n.extras);
-assert.equal(new Set(extras.map(n=>n.bone_id)).size,199);
+assert.equal(new Set(extras.map(n=>n.bone_id)).size,206);
 assert.ok(extras.every(n=>n.role==='bone_proxy'&&n.status==='reference/unreleased'));
 const handIds=new Set(model.parts.filter(p=>p.region==='hands').map(p=>p.bone_id));
 const hands=extras.filter(n=>handIds.has(n.bone_id));
@@ -81,4 +88,25 @@ assert.equal(skull.filter(n=>n.source_record_status==='present'&&n.source_record
 assert.ok(skull.every(n=>n.topology_neighbors.length>0&&n.topology_neighbors.every(id=>skullIds.has(id))));
 assert.deepEqual(skull.find(n=>n.bone_id==='BONE_MANDIBLE').articulates_with,['BONE_TEMP_R','BONE_TEMP_L']);
 assert.equal(skull.find(n=>n.bone_id==='BONE_MANDIBLE').motion_implemented,false);
-console.log('Bone export logic passed: 199 IDs, 22 skull and 52 foot identities/provenance, role filtering, search, GLB extras, and 1700 mm STL. Visual browser interaction is not tested here.');
+const headSeven=extras.filter(n=>n.ear_hyoid_layout_sha256);
+assert.equal(headSeven.length,7);
+assert.ok(headSeven.every(n=>n.ear_hyoid_layout_sha256===model.ear_hyoid_proxy_layout_sha256&&n.physical_evidence==='unmeasured'));
+assert.ok(headSeven.every(n=>n.geometry_inputs.some(p=>p.includes('#/ear_hyoid_proxy_layout/'))));
+assert.ok(headSeven.every(n=>n.source_record_status==='present'&&n.source_record&&n.motion_implemented===false));
+for(const side of ['R','L']){
+  const malleus=headSeven.find(n=>n.bone_id==='BONE_MALLEUS_'+side);
+  const incus=headSeven.find(n=>n.bone_id==='BONE_INCUS_'+side);
+  const stapes=headSeven.find(n=>n.bone_id==='BONE_STAPES_'+side);
+  assert.deepEqual(malleus.articulates_with,['BONE_INCUS_'+side]);
+  assert.deepEqual(incus.articulates_with,['BONE_MALLEUS_'+side,'BONE_STAPES_'+side]);
+  assert.equal(stapes.topology_parent,'BONE_INCUS_'+side);
+  assert.equal(stapes.housing_bone_id,'BONE_TEMP_'+side);
+  assert.equal(stapes.proxy_shape,'stirrup_loop');
+  assert.equal(malleus.non_bone_connection,'tympanic_membrane');
+  assert.equal(stapes.non_bone_connection,'oval_window');
+}
+const hyoid=headSeven.find(n=>n.bone_id==='BONE_HYOID');
+assert.deepEqual(hyoid.articulates_with,[]);
+assert.equal(hyoid.topology_parent,null);assert.equal(hyoid.housing_bone_id,null);
+assert.equal(hyoid.non_bone_support,'muscle_and_ligament_suspension_unmodeled');
+console.log('Bone export logic passed: 206 IDs including six ear ossicles and one hyoid, role filtering, search, provenance/topology GLB extras, and 1700 mm STL. Visual browser interaction is not tested here.');

@@ -329,6 +329,198 @@
       }
     }
   },
+  "ear_hyoid_proxy_layout": {
+    "revision": "EAR_HYOID_V1",
+    "authority": "project-local provisional identity and placement; not measured osteometry, hearing/swallowing mechanics or canon",
+    "units": "origins: fractions of external head half-breadth, half-depth and proposed half-height; local offsets, centerlines and sections: mm at cohort mean stature",
+    "ear_origin_head_fraction": [
+      0.67,
+      -0.08,
+      -0.25
+    ],
+    "hyoid_origin_head_fraction": [
+      0,
+      0.3,
+      -1.05
+    ],
+    "ossicles": {
+      "MALLEUS": {
+        "center_offset_mm": [
+          5,
+          0,
+          0
+        ],
+        "centerline_mm": [
+          [
+            0,
+            0,
+            3
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0.1,
+            -1.5
+          ],
+          [
+            -0.8,
+            0.4,
+            -4
+          ]
+        ],
+        "radii_mm": [
+          1.0,
+          1.3,
+          0.6,
+          0.45
+        ],
+        "closed_centerline": false
+      },
+      "INCUS": {
+        "center_offset_mm": [
+          0,
+          0,
+          0
+        ],
+        "centerline_mm": [
+          [
+            0,
+            -2,
+            1
+          ],
+          [
+            0.5,
+            -0.5,
+            1.3
+          ],
+          [
+            0.3,
+            1,
+            1.2
+          ],
+          [
+            -1,
+            1.3,
+            0
+          ],
+          [
+            -2,
+            1.5,
+            -2.5
+          ]
+        ],
+        "radii_mm": [
+          0.55,
+          1.1,
+          1.0,
+          0.65,
+          0.4
+        ],
+        "closed_centerline": false
+      },
+      "STAPES": {
+        "center_offset_mm": [
+          -5,
+          0,
+          0
+        ],
+        "centerline_mm": [
+          [
+            0,
+            0,
+            1.8
+          ],
+          [
+            0,
+            0.8,
+            1.4
+          ],
+          [
+            0,
+            1.25,
+            0.4
+          ],
+          [
+            0,
+            1.3,
+            -0.8
+          ],
+          [
+            0,
+            0.6,
+            -1.4
+          ],
+          [
+            0,
+            -0.6,
+            -1.4
+          ],
+          [
+            0,
+            -1.3,
+            -0.8
+          ],
+          [
+            0,
+            -1.25,
+            0.4
+          ],
+          [
+            0,
+            -0.8,
+            1.4
+          ]
+        ],
+        "radii_mm": 0.3,
+        "closed_centerline": true
+      }
+    },
+    "hyoid": {
+      "centerline_mm": [
+        [
+          18,
+          -10,
+          0
+        ],
+        [
+          18,
+          0,
+          -1
+        ],
+        [
+          12,
+          7,
+          -2
+        ],
+        [
+          0,
+          10,
+          -2
+        ],
+        [
+          -12,
+          7,
+          -2
+        ],
+        [
+          -18,
+          0,
+          -1
+        ],
+        [
+          -18,
+          -10,
+          0
+        ]
+      ],
+      "radii_mm": 2.2,
+      "closed_centerline": false
+    }
+  },
   "bone_proxy_layout": {
     "revision": "CORE_V1",
     "authority": "project-local provisional topology and placement; not osteometric data or canon",

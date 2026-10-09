@@ -29,7 +29,7 @@ class SkullBoneGeometryTest(unittest.TestCase):
         self.assertEqual(set(audit["missing_source_records"]), missing)
         self.assertEqual(audit["source_records_present"], 193)
         self.assertEqual(audit["missing_skull_bones"], [])
-        self.assertEqual((audit["individual_bone_proxies"], audit["grouped_bones"], audit["unrepresented_bones"]), (199, 0, 7))
+        self.assertEqual((audit["individual_bone_proxies"], audit["grouped_bones"], audit["unrepresented_bones"]), (206, 0, 0))
         for key, p in self.bones.items():
             with self.subTest(bone=key):
                 self.assertEqual(p["role"], "bone_proxy")
@@ -138,7 +138,8 @@ class SkullBoneGeometryTest(unittest.TestCase):
                 for v, w in zip(a, b):
                     self.assertAlmostEqual(v, w*scale, delta=2e-5)
         self.assertFalse(model["fabrication_released"])
-        self.assertFalse(model["bone_equivalence"]["bone_distribution_complete"])
+        self.assertTrue(model["bone_equivalence"]["bone_distribution_complete"])
+        self.assertFalse(model["bone_equivalence"]["dimensional_fidelity_verified"])
         self.assertEqual(model["canon_effect"], "none")
 
     def test_lost_identity_is_detected_with_unchanged_total_mesh_count(self):

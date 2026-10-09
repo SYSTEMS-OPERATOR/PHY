@@ -79,7 +79,7 @@ Project display proxies remain a separate geometry pipeline.
 
 Exported records own their nested containers; changing a returned record cannot
 alter a bone, a source definition or a later export. The direct regression suite
-checks all seven canonical export files for byte-identical output from a fresh
+checks all ten canonical package files for byte-identical output from a fresh
 load after another field's material, geometry, signals, links and faults change.
 
 ## Registration and mass behavior
@@ -108,12 +108,15 @@ Passing record checks does not establish anatomical dimensional completeness,
 measured osteometry, valid articular surfaces, complete joint/contact topology,
 positive-definite inertia, swept clearance, strength or physical qualification.
 Fabrication release still requires the relevant reviewed article evidence.
-Review exports remain available separately from this gate.
+Review exports remain available separately from this gate. Validated export
+also checks unique machine identities, reference resolution and cycles in the
+declared anatomical parent graph. See [fabrication exports](fabrication_exports.md)
+for the package gate and its physical limits.
 
 SOPHY canon 1.0.0, source bone modules, schema, whole-body proxies, A0-R1 and the
 passive maquette are unchanged.
 
-## Validation checkpoint
+## R1 validation checkpoint
 
 Base: main `de1d2c8e099d0ca7d05f02808315e0e0572a1cb3`.
 
@@ -126,7 +129,8 @@ Base: main `de1d2c8e099d0ca7d05f02808315e0e0572a1cb3`.
   with PYTHONPATH. Validation exits 1 as expected: 193 records, eight blocker
   categories, 157 bones with unknown dimensions and readiness false. Exports have
   no geometry keys ending in `_cm` or `_m`; the femur's dimensions and primitive
-  sizes agree. Export/assembly orchestration remains a separate roadmap scope.
+  sizes agree. This checkpoint predates the shared review/validated export
+  orchestration described in [fabrication exports](fabrication_exports.md).
 - Full local pytest passes with optional PyBullet modules and Docker checks
   skipped where those dependencies are unavailable. The existing Python and
   Studio CI workflows both include the direct canonical regressions.

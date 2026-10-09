@@ -32,7 +32,7 @@ jobs:
         run: npm run test:logic --prefix studio
       - name: Validate source, geometry and existing canon
         run: |
-          python -m pytest tests/test_ear_hyoid_geometry.py tests/test_skull_bone_geometry.py tests/test_fabrication_validation.py tests/test_foot_bone_geometry.py tests/test_hand_bone_geometry.py tests/test_bone_equivalence.py tests/test_phy_studio.py tests/test_sophy_geometry_canon.py tests/test_sophy_project_canon_bindings.py tests/test_reference_dimensions.py tests/test_t56_a0_geometry.py -q
+          python -m pytest tests/test_ear_hyoid_geometry.py tests/test_skull_bone_geometry.py tests/test_fabrication_validation.py tests/test_fabrication_exports.py tests/test_foot_bone_geometry.py tests/test_hand_bone_geometry.py tests/test_bone_equivalence.py tests/test_phy_studio.py tests/test_sophy_geometry_canon.py tests/test_sophy_project_canon_bindings.py tests/test_reference_dimensions.py tests/test_t56_a0_geometry.py -q
       - name: Check deterministic export
         run: |
           python bin/export_phy_studio.py --output /tmp/phy-repeat

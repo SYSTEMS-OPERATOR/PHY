@@ -360,7 +360,7 @@ class CanonicalLoadingTest(unittest.TestCase):
             dirty.meta_breath("runtime-marker")
             dirty.collapse()
             after = export(self.load(field=True), root / "after")
-            self.assertEqual(len(before), 7)
+            self.assertEqual(len(before), 10)
             self.assertEqual(after, before)
 
 

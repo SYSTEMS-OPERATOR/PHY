@@ -5,7 +5,7 @@ PHY is a repository for a fabrication-oriented digital human skeleton model with
 SOPHY whole-body identity geometry is now a separate versioned kernel: `SOPHY_CANON(H, canon_version)`. Population or project measurements do not define it.
 
 ## What is fabrication-ready vs prototype vs symbolic
-- **Fabrication-ready core:** canonical bone model (`skeleton/base.py`), schema (`skeleton/schema/bone.schema.json`), validation (`skeleton/validation/validator_agent.py`), deterministic exporters (`skeleton/exporters/exporter_agent.py`).
+- **Fabrication-oriented core:** canonical bone model (`skeleton/base.py`), schema (`skeleton/schema/bone.schema.json`), validation (`skeleton/validation/validator_agent.py`), deterministic exporters (`skeleton/exporters/exporter_agent.py`). Record validation and physical release are separate gates.
 - **Prototype/legacy areas:** broader multi-agent subsystems outside `skeleton/`.
 - **Symbolic layer:** `SOUL.md` and optional `skeleton/extensions/soul/` overlays.
 
@@ -38,6 +38,15 @@ source provenance, rebuild commands and the remaining physical release gates.
 PYTHONPATH=. python3 assemble_skeleton.py
 ```
 
+Assembly and export default to `--mode validated`. The current canonical model
+has unresolved measurements and interfaces, so this exits 1 with
+`reports/export_failure.json` and preserves any previous package. To publish an
+explicit review package while retaining those gaps:
+
+```bash
+PYTHONPATH=. python3 assemble_skeleton.py --mode review
+```
+
 ### Validate only
 ```bash
 PYTHONPATH=. bin/validate_fabrication.py
@@ -49,15 +58,28 @@ Outputs:
 ### Export only
 ```bash
 PYTHONPATH=. bin/export_fabrication.py
+# Explicit review of incomplete records:
+PYTHONPATH=. bin/export_fabrication.py --mode review
 ```
-Outputs:
+Successful package outputs:
 - `dist/skeleton_canonical.json`
 - `dist/ros_tf_tree.json`
 - `dist/skeleton_urdf_like.json`
+- `dist/export_manifest.json`
 - `exports/fabrication_bom.json`
 - `exports/material_table.json`
 - `exports/joint_table.json`
 - `reports/reference_audit.json`
+- `reports/validation_report.json`
+- `reports/export_report.json`
+
+Both entrypoints accept `--dataset NAME` and `--output-root PATH`. The manifest
+records the chosen mode, readiness, input fingerprints and artifact hashes.
+Machine references use stable bone IDs; display names may repeat. TF-like and
+URDF-like files are review inventories with unresolved mechanical transforms.
+Every package declares `fabrication_released: false`. See
+[`docs/fabrication_exports.md`](docs/fabrication_exports.md) for the contract,
+compatibility changes and publication limits.
 
 ### Instantiate SOPHY canonical geometry
 
@@ -78,7 +100,7 @@ All workflows are local/off-grid friendly:
 - compare materials via `exports/material_table.json`
 - generate BOM via `exports/fabrication_bom.json`
 - report missing dimensions/references via validation reports
-- export URDF-like and TF artifacts for robotics integration
+- inspect bone identities and declared anatomical connections in URDF-like and TF-like inventories
 - build review packet from `reports/`, `exports/`, and `dist/`
 
 ## Notes

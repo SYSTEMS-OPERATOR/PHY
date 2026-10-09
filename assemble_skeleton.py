@@ -1,18 +1,7 @@
 from __future__ import annotations
 
-from skeleton.bones import load_field
-from skeleton.validation.validator_agent import ValidatorAgent
-from skeleton.exporters.exporter_agent import ExporterAgent
+from skeleton.exporters.cli import main
 
 
 if __name__ == "__main__":
-    field = load_field("female_21_baseline")
-
-    validator = ValidatorAgent(field)
-    report = validator.run()
-    ValidatorAgent.write_reports(report)
-
-    paths = ExporterAgent(field).export_all()
-    print(f"integrity_pass={report['summary']['pass']}")
-    for name, path in paths.items():
-        print(f"{name}: {path}")
+    raise SystemExit(main())

@@ -164,10 +164,14 @@ class ValidatorAgent:
             except (TypeError, ValueError, OverflowError, AttributeError) as exc:
                 report["record_conversion_errors"].append({"bone": uid, "error": type(exc).__name__, "issue": str(exc)})
                 continue
+            if rec["geometry"].get("status") == "unresolved" and bone.geometry:
+                report["missing_required_fields"].append({"bone": uid, "field": "geometry", "issue": rec["geometry"]["reason"]})
+            for path, value in nonfinite_paths(rec["geometry"], "geometry"):
+                report["impossible_geometry_values"].append({"bone": uid, "field": path, "value": describe(value)})
             # cm conversion or volume multiplication can overflow even when
             # each original number is finite.
             for key, value in rec["dimensions"].items():
-                if value is not None and not finite_number(value) and finite_number(dims.get(key, dims.get(key.replace("_mm", "_cm")))):
+                if value is not None and not finite_number(value):
                     report["impossible_geometry_values"].append({"bone": uid, "dimension": key, "issue": "nonfinite normalized dimension"})
             mass = rec["physics"].get("mass_kg")
             if not finite_number(mass) or not 0 < mass <= 100:

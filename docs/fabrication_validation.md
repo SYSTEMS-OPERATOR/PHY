@@ -32,6 +32,56 @@ A valid single-part packet is allowed; this generic gate does not require a
 validator does not fill them. Invalid conversions do not prevent other bones
 from being inspected.
 
+## Loading, datasets and canonical geometry
+
+`load_bones()` discovers definitions in filename order and executes each in a
+fresh module namespace. It does not reuse or reload the mutable `bone` singleton
+used by legacy module wrappers. Loaded bones, their nested data and their dataset
+tables are independent across loads and between bones. An already-mutated legacy
+singleton cannot become a new field's source template.
+
+`BoneSpec` retains private copies of its construction-time dimensions, material,
+geometry and metric bindings. `apply_dataset()` replaces an overlay: it restores
+those source values, copies the selected dataset, clears the previous binding,
+then applies available metrics. An absent metric falls back to the source value;
+an explicit `None` overrides it with an unknown. A missing bone binding does not
+retain measurements, mass metadata or density from an earlier dataset. A supplied
+dataset dimension replaces source aliases for that dimension. Dataset application
+also invalidates cached runtime geometry; simulation callers must recompute it.
+
+Length keys ending in `_mm`, `_cm` or `_m` normalize to `_mm`, including unknown
+values. Conflicting aliases raise a conversion error that the validator reports
+as a structured blocker. Known/unknown aliases conflict; two unknowns agree.
+Numerically equivalent aliases use a tolerance of `1e-12` relative or `1e-9` mm
+absolute and prefer mm, then cm, then m, independent of dictionary order.
+Numeric strings and booleans are not coerced into lengths.
+
+Canonical geometry uses the construction-time source shape and current selected
+dimensions. The supported shapes are `box` and `plate`, with `length_mm`,
+`width_mm` and `thickness_mm`; stored source sizes do not override selected
+dimensions. A complete primitive has `status: dimensional_estimate` and
+`dimension_source: dimensions`. This status identifies an approximation, not
+reviewed anatomical morphology. The default femur therefore exports 420 x 40 x
+40 mm in both dimensions and geometry; its original 48 x 2.8 x 2.8 cm source
+definition remains intact.
+
+Unknown values remain unknown; missing or invalid dimensions produce unresolved geometry.
+Missing source geometry, conflicting shape/type labels, meshes and other shapes
+(including the runtime cylinder approximation) produce `status: unresolved` with
+a reason, and block the canonical gate. These representations are not converted
+into fabrication primitives by guessing. Declared source origins normalize from
+explicit mm/cm/m coordinates to `origin_mm`; conflicting origin aliases fail.
+Other source geometry attributes and runtime COM, vertex, face and inertia caches
+are not copied into the canonical primitive. The mutable `bone.geometry` field
+remains available to legacy runtime callers, but does not change the source shape
+selected at construction. Construct a new definition to adopt a different shape.
+Project display proxies remain a separate geometry pipeline.
+
+Exported records own their nested containers; changing a returned record cannot
+alter a bone, a source definition or a later export. The direct regression suite
+checks all seven canonical export files for byte-identical output from a fresh
+load after another field's material, geometry, signals, links and faults change.
+
 ## Registration and mass behavior
 
 `SkeletonField.register()` rejects invalid/duplicate `domain_id` and `unique_id`
@@ -44,42 +94,42 @@ an explicit unknown `None`. When mass is omitted, it uses the existing box-volum
 times density estimate through a pure helper. This is a dimensional estimate,
 not measured mass. Record serialization and validation no longer depend on
 virtual/physical runtime embodiment or append virtual-state faults.
+`physics.mass_provenance` labels a fallback as `estimated` with method
+`box_volume_times_density`, or `unknown` if dimensions are unknown. Explicit
+`physics.mass_kg` values are labelled `supplied` or `unknown`; caller-provided
+provenance for an explicit mass is preserved. Dataset `material.mass_g` remains
+legacy metadata and is not silently substituted for the canonical estimate.
 The public runtime `mass_kg()` method retains its existing embodiment gate and
 fault behavior.
 
 ## Boundaries
 
-Passing record checks does not establish shape-specific dimensional completeness,
+Passing record checks does not establish anatomical dimensional completeness,
 measured osteometry, valid articular surfaces, complete joint/contact topology,
 positive-definite inertia, swept clearance, strength or physical qualification.
 Fabrication release still requires the relevant reviewed article evidence.
 Review exports remain available separately from this gate.
 
 SOPHY canon 1.0.0, source bone modules, schema, whole-body proxies, A0-R1 and the
-passive maquette are unchanged. Individual bone coverage remains 177/206; the
-next geometry scope is 22 individual skull identities, then ear/hyoid coverage.
+passive maquette are unchanged.
 
 ## Validation checkpoint
 
-Base: main `3e47309d52e3e25c3c4e37be6e1a78f448a8e73d`.
+Base: main `de1d2c8e099d0ca7d05f02808315e0e0572a1cb3`.
 
-- 21 direct unittest tests pass, including invalid-input mutations, a valid
-  positive control, registration preservation, strict JSON, repeated reports and
-  embodiment-independent record conversion.
-- 147 focused unittest tests pass with no skips across record/bone behavior,
-  canon, Studio, hands/feet, reference/dimensional tooling, A0 and source components.
-- A separate pytest compatibility selection passes 41 tests, including the new
-  direct gate tests, both legacy validators, material/mass and bone/field checks.
-  These selections overlap and their counts must not be added together.
-- The real fabrication CLI, executed outside the repository root with PYTHONPATH,
-  exits 1 as expected. Both report files repeat byte-identically and parse as strict
-  JSON. The 193-record model reports 157 bones with unknown dimensions, 172 missing
-  dataset bindings, and 193 missing joint and mount definitions; readiness is false.
-- Full local pytest collection finds 175 tests but cannot import four modules:
-  `test_dsar_delete.py` requires `fastapi`; `test_round7_cognition.py`,
-  `test_round8_language_social.py` and `test_round9_meta_dist.py` require
-  `gymnasium`. No local full-repository or browser pass is claimed. Remote CI
-  supplies these dependencies and remains required.
+- 39 direct unittest tests pass, including the real femur, legacy-singleton
+  contamination, nested isolation, dataset replacement, equivalent/conflicting
+  aliases, unknown values, explicit origin units and pure record conversion.
+- All seven export files repeat byte-identically from a fresh field after another
+  field's runtime and material state changes.
+- The real validation, export and assembly CLIs run outside the repository root
+  with PYTHONPATH. Validation exits 1 as expected: 193 records, eight blocker
+  categories, 157 bones with unknown dimensions and readiness false. Exports have
+  no geometry keys ending in `_cm` or `_m`; the femur's dimensions and primitive
+  sizes agree. Export/assembly orchestration remains a separate roadmap scope.
+- Full local pytest passes with optional PyBullet modules and Docker checks
+  skipped where those dependencies are unavailable. The existing Python and
+  Studio CI workflows both include the direct canonical regressions.
 
 To run the direct gate regressions using only the standard library:
 

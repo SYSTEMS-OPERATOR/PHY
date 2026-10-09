@@ -7,8 +7,10 @@ with existing per-bone modules under ``skeleton/bones``.
 
 from __future__ import annotations
 
+from copy import deepcopy
 from dataclasses import dataclass, field
 from typing import Dict, List, Optional, Tuple, Any
+import math
 import warnings
 
 
@@ -18,6 +20,28 @@ CANONICAL_UNITS = {
     "density": "kg/m^3",
     "inertia": "kg*m^2",
 }
+
+
+def _length_key(key: str) -> Tuple[str, float, int]:
+    """Canonical key, mm scale, and preference for equivalent unit aliases."""
+    for suffix, scale, priority in (("_mm", 1.0, 0), ("_cm", 10.0, 1), ("_m", 1000.0, 2)):
+        if key.endswith(suffix):
+            return key[:-len(suffix)] + "_mm", scale, priority
+    return key, 1.0, 0
+
+
+def _length_value(value: Optional[float], scale: float) -> Optional[float]:
+    if value is None:
+        return None
+    if type(value) not in (int, float):
+        raise TypeError("Length values must be numbers or None")
+    return float(value) * scale
+
+
+def _equivalent_lengths(a: Optional[float], b: Optional[float]) -> bool:
+    if a is None or b is None:
+        return a is b
+    return math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
 
 
 @dataclass
@@ -42,7 +66,7 @@ class BoneSpec:
     units: Dict[str, str] = field(default_factory=lambda: dict(CANONICAL_UNITS))
     geometry: Dict[str, Any] = field(default_factory=dict)
     material: Dict[str, float] = field(default_factory=lambda: {"name": "bone", "density": 1800.0})
-    physics: Dict[str, float] = field(default_factory=dict)
+    physics: Dict[str, Any] = field(default_factory=dict)
     connections: Dict[str, Any] = field(default_factory=dict)
     joint_interfaces: List[Dict[str, Any]] = field(default_factory=list)
     mount_points: List[Dict[str, Any]] = field(default_factory=list)
@@ -70,7 +94,18 @@ class BoneSpec:
     dataset_key: Optional[str] = None
     metric_sources: Dict[str, str] = field(default_factory=dict)
 
+    # Construction-time source data is separate from dataset overlays and the
+    # legacy mutable geometry cache. Never return these dictionaries directly.
+    _source_dimensions: Dict[str, Optional[float]] = field(init=False, repr=False, compare=False)
+    _source_material: Dict[str, Any] = field(init=False, repr=False, compare=False)
+    _source_geometry: Dict[str, Any] = field(init=False, repr=False, compare=False)
+    _source_metric_sources: Dict[str, str] = field(init=False, repr=False, compare=False)
+
     def __post_init__(self) -> None:
+        self._source_dimensions = deepcopy(self.dimensions)
+        self._source_material = deepcopy(self.material)
+        self._source_geometry = deepcopy(self.geometry)
+        self._source_metric_sources = deepcopy(self.metric_sources)
         if not self.domain_id:
             self.domain_id = self.unique_id
         if not self.region:
@@ -86,19 +121,68 @@ class BoneSpec:
             self.apply_dataset(self.dataset)
 
     def _dimensions_mm(self) -> Dict[str, Optional[float]]:
-        """Normalize cm-based dimensions to canonical mm."""
+        """Normalize lengths, rejecting conflicting aliases (including None).
+
+        Equivalent aliases prefer mm, then cm, then m, independent of input
+        order. Unknown values keep their unknown value under a canonical key.
+        """
         mapped: Dict[str, Optional[float]] = {}
-        for key, val in self.dimensions.items():
-            if val is None:
-                mapped[key] = None
-                continue
-            if key.endswith("_cm"):
-                mapped[key.replace("_cm", "_mm")] = float(val) * 10.0
-            elif key.endswith("_mm"):
-                mapped[key] = float(val)
+        aliases: Dict[str, str] = {}
+        for key in sorted(self.dimensions, key=lambda k: (_length_key(k)[0], _length_key(k)[2], k)):
+            canonical, scale, _ = _length_key(key)
+            value = _length_value(self.dimensions[key], scale)
+            if canonical in mapped:
+                if not _equivalent_lengths(mapped[canonical], value):
+                    raise ValueError(f"Conflicting dimension aliases: {aliases[canonical]} and {key}")
             else:
-                mapped[key] = float(val)
+                mapped[canonical] = value
+                aliases[canonical] = key
         return mapped
+
+    def _fabrication_geometry(self, dimensions: Dict[str, Optional[float]]) -> Dict[str, Any]:
+        """Export a primitive estimate, never a stale source/runtime mesh.
+
+        The declared source shape selects the primitive; selected dimensions
+        select its size. Missing/unsupported source geometry stays unresolved.
+        """
+        source = self._source_geometry
+        shape = source.get("shape", source.get("type"))
+        if not source:
+            return {"status": "unresolved", "reason": "no source geometry"}
+        if (shape not in ("box", "plate")
+                or source.get("shape", shape) != source.get("type", shape)
+                or source.get("verts") or source.get("faces")):
+            return {"status": "unresolved", "reason": "unsupported source geometry"}
+
+        required = ("length_mm", "width_mm", "thickness_mm")
+        sizes = {key: dimensions.get(key) for key in required}
+        complete = all(value is not None and math.isfinite(value) and value > 0 for value in sizes.values())
+        geometry: Dict[str, Any] = {
+            "shape": shape, "status": "dimensional_estimate" if complete else "unresolved",
+            "dimension_source": "dimensions",
+        }
+        geometry.update(sizes)
+        if not complete:
+            geometry["reason"] = "missing or invalid primitive dimensions"
+
+        # Source origins have explicit units; runtime COM/verts/inertia are not
+        # fabrication geometry. Convert only this supported transform field.
+        origins = []
+        for key, scale in (("origin_mm", 1.0), ("origin_cm", 10.0), ("origin_m", 1000.0)):
+            if key in source:
+                value = source[key]
+                if not isinstance(value, (list, tuple)) or len(value) != 3:
+                    raise ValueError(f"{key} must contain three length coordinates")
+                origins.append((key, [_length_value(component, scale) for component in value]))
+        if origins:
+            key, origin = origins[0]
+            for other_key, other in origins[1:]:
+                if not all(_equivalent_lengths(a, b) for a, b in zip(origin, other)):
+                    raise ValueError(f"Conflicting geometry aliases: {key} and {other_key}")
+            geometry["origin_mm"] = origin
+            if any(value is None for value in origin):
+                geometry.update(status="unresolved", reason="unknown source origin")
+        return geometry
 
     def _volume_m3(self) -> Optional[float]:
         dmm = self._dimensions_mm()
@@ -254,15 +338,26 @@ class BoneSpec:
         return self.current_state()
 
     def apply_dataset(self, dataset: Dict[str, dict]) -> None:
-        self.dataset = dataset
+        """Replace a dataset overlay, restoring source data before application.
+
+        Missing metrics fall back to the source definition, never an earlier
+        dataset. Each bone owns its dataset, nested values and metric bindings.
+        Runtime geometry is invalidated; simulation callers can recompute it.
+        """
+        self.dataset = deepcopy(dataset)
+        self.dimensions = deepcopy(self._source_dimensions)
+        self.material = deepcopy(self._source_material)
+        self.geometry = deepcopy(self._source_geometry)
+        self.metric_sources = deepcopy(self._source_metric_sources)
+        self.dataset_key = None
         key = self.name
-        metrics = dataset.get(key)
+        metrics = self.dataset.get(key)
         if metrics is None:
             key = self.name.replace(" ", "")
-            metrics = dataset.get(key)
+            metrics = self.dataset.get(key)
         if metrics is None:
             key = self.unique_id
-            metrics = dataset.get(key)
+            metrics = self.dataset.get(key)
 
         if metrics is None:
             warnings.warn(f"Metrics for {self.name} not found in dataset")
@@ -274,6 +369,10 @@ class BoneSpec:
             if field_name in metrics:
                 target_dict = self.dimensions if field_name.endswith("_cm") else self.material
                 if field_name.endswith("_cm"):
+                    canonical = _length_key(field_name)[0]
+                    for alias in list(target_dict):
+                        if _length_key(alias)[0] == canonical:
+                            del target_dict[alias]
                     target_dict[field_name] = metrics[field_name]
                 elif field_name == "mass_g":
                     target_dict[field_name] = metrics[field_name]
@@ -302,20 +401,31 @@ class BoneSpec:
     def to_fabrication_record(self) -> Dict[str, Any]:
         """Return canonical fabrication record used by validators/exporters."""
         mm_dimensions = self._dimensions_mm()
-        physics = dict(self.physics)
+        geometry = self._fabrication_geometry(mm_dimensions)
+        physics = deepcopy(self.physics)
         # Fabrication records depend on physical data, not runtime embodiment.
         # An explicitly unknown/supplied mass is retained without evaluating a
         # fallback or appending virtual-state faults.
         if "mass_kg" not in physics:
             physics["mass_kg"] = self._mass_from_dimensions()
-        return {
+            physics["mass_provenance"] = {
+                "status": "unknown" if physics["mass_kg"] is None else "estimated",
+                "method": "box_volume_times_density",
+                "dimensions": "dimensions", "density": "material.density",
+            }
+        else:
+            physics.setdefault("mass_provenance", {
+                "status": "unknown" if physics["mass_kg"] is None else "supplied",
+                "source": "physics.mass_kg",
+            })
+        return deepcopy({
             "name": self.name,
             "latin_name": self.latin_name or self.name,
             "bone_type": self.bone_type,
             "region": self.region,
             "dimensions": mm_dimensions,
             "units": dict(self.units),
-            "geometry": dict(self.geometry),
+            "geometry": geometry,
             "material": dict(self.material),
             "physics": physics,
             "connections": dict(self.connections),
@@ -327,7 +437,7 @@ class BoneSpec:
             "revision": self.revision,
             "source_ids": list(self.source_ids),
             "unique_id": self.unique_id,
-        }
+        })
 
     def export(self) -> Dict[str, object]:
         data = self.current_state()

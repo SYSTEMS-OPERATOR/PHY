@@ -54,7 +54,13 @@ def test_material_switch(skeleton_field, dataset):
     assert reverted == original
 
 
-def test_validator_overall_pass(skeleton_field, dataset):
-    va = ValidatorAgent(skeleton_field, dataset)
+def test_validator_blocks_unqualified_source_materials(dataset):
+    # Use a fresh source snapshot: preceding legacy checks mutate runtime
+    # material selections, which must not conceal unknown source densities.
+    field = SkeletonField(load_bones("female_21_baseline"))
+    unknown = {bone.unique_id for bone in field.bones.values() if bone.material.get("density") is None}
+    assert len(unknown) == 13
+    va = ValidatorAgent(field, dataset)
     va.run_all_checks()
-    assert va.results["summary"]["pass"]
+    assert not va.results["summary"]["pass"]
+    assert unknown <= set(va.results["material_fail"])

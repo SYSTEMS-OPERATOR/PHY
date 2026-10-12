@@ -1,22 +1,8 @@
 {
   "inventory_version": "PHY_ADULT_206_V1",
   "expected_bones": 206,
-  "source_records_present": 193,
-  "missing_source_records": [
-    "BONE_INFERIOR_NASAL_CONCHA_L",
-    "BONE_INFERIOR_NASAL_CONCHA_R",
-    "BONE_LACRIMAL_L",
-    "BONE_LACRIMAL_R",
-    "BONE_MAXILLA_L",
-    "BONE_MAXILLA_R",
-    "BONE_NASAL_L",
-    "BONE_NASAL_R",
-    "BONE_PALATINE_L",
-    "BONE_PALATINE_R",
-    "BONE_VOMER",
-    "BONE_ZYGOMATIC_L",
-    "BONE_ZYGOMATIC_R"
-  ],
+  "source_records_present": 206,
+  "missing_source_records": [],
   "individual_bone_proxies": 206,
   "grouped_bones": 0,
   "unrepresented_bones": 0,
@@ -816,8 +802,8 @@
       "region": "skull",
       "side": "left",
       "core_scope": false,
-      "source_record": null,
-      "source_record_status": "missing",
+      "source_record": "skeleton/bones/bone_inferior_nasal_concha_l.py",
+      "source_record_status": "present",
       "representation": "individual_project_proxy",
       "mesh_ids": [
         "inferior_nasal_concha_L"
@@ -839,8 +825,8 @@
       "region": "skull",
       "side": "right",
       "core_scope": false,
-      "source_record": null,
-      "source_record_status": "missing",
+      "source_record": "skeleton/bones/bone_inferior_nasal_concha_r.py",
+      "source_record_status": "present",
       "representation": "individual_project_proxy",
       "mesh_ids": [
         "inferior_nasal_concha_R"
@@ -1032,8 +1018,8 @@
       "region": "skull",
       "side": "left",
       "core_scope": false,
-      "source_record": null,
-      "source_record_status": "missing",
+      "source_record": "skeleton/bones/bone_lacrimal_l.py",
+      "source_record_status": "present",
       "representation": "individual_project_proxy",
       "mesh_ids": [
         "lacrimal_L"
@@ -1055,8 +1041,8 @@
       "region": "skull",
       "side": "right",
       "core_scope": false,
-      "source_record": null,
-      "source_record_status": "missing",
+      "source_record": "skeleton/bones/bone_lacrimal_r.py",
+      "source_record_status": "present",
       "representation": "individual_project_proxy",
       "mesh_ids": [
         "lacrimal_R"
@@ -1243,8 +1229,8 @@
       "region": "skull",
       "side": "left",
       "core_scope": false,
-      "source_record": null,
-      "source_record_status": "missing",
+      "source_record": "skeleton/bones/bone_maxilla_l.py",
+      "source_record_status": "present",
       "representation": "individual_project_proxy",
       "mesh_ids": [
         "maxilla_L"
@@ -1266,8 +1252,8 @@
       "region": "skull",
       "side": "right",
       "core_scope": false,
-      "source_record": null,
-      "source_record_status": "missing",
+      "source_record": "skeleton/bones/bone_maxilla_r.py",
+      "source_record_status": "present",
       "representation": "individual_project_proxy",
       "mesh_ids": [
         "maxilla_R"
@@ -1809,8 +1795,8 @@
       "region": "skull",
       "side": "left",
       "core_scope": false,
-      "source_record": null,
-      "source_record_status": "missing",
+      "source_record": "skeleton/bones/bone_nasal_l.py",
+      "source_record_status": "present",
       "representation": "individual_project_proxy",
       "mesh_ids": [
         "nasal_L"
@@ -1832,8 +1818,8 @@
       "region": "skull",
       "side": "right",
       "core_scope": false,
-      "source_record": null,
-      "source_record_status": "missing",
+      "source_record": "skeleton/bones/bone_nasal_r.py",
+      "source_record_status": "present",
       "representation": "individual_project_proxy",
       "mesh_ids": [
         "nasal_R"
@@ -1931,8 +1917,8 @@
       "region": "skull",
       "side": "left",
       "core_scope": false,
-      "source_record": null,
-      "source_record_status": "missing",
+      "source_record": "skeleton/bones/bone_palatine_l.py",
+      "source_record_status": "present",
       "representation": "individual_project_proxy",
       "mesh_ids": [
         "palatine_L"
@@ -1954,8 +1940,8 @@
       "region": "skull",
       "side": "right",
       "core_scope": false,
-      "source_record": null,
-      "source_record_status": "missing",
+      "source_record": "skeleton/bones/bone_palatine_r.py",
+      "source_record_status": "present",
       "representation": "individual_project_proxy",
       "mesh_ids": [
         "palatine_R"
@@ -4858,8 +4844,8 @@
       "region": "skull",
       "side": "midline",
       "core_scope": false,
-      "source_record": null,
-      "source_record_status": "missing",
+      "source_record": "skeleton/bones/bone_vomer.py",
+      "source_record_status": "present",
       "representation": "individual_project_proxy",
       "mesh_ids": [
         "vomer"
@@ -4881,8 +4867,8 @@
       "region": "skull",
       "side": "left",
       "core_scope": false,
-      "source_record": null,
-      "source_record_status": "missing",
+      "source_record": "skeleton/bones/bone_zygomatic_l.py",
+      "source_record_status": "present",
       "representation": "individual_project_proxy",
       "mesh_ids": [
         "zygomatic_L"
@@ -4904,8 +4890,8 @@
       "region": "skull",
       "side": "right",
       "core_scope": false,
-      "source_record": null,
-      "source_record_status": "missing",
+      "source_record": "skeleton/bones/bone_zygomatic_r.py",
+      "source_record_status": "present",
       "representation": "individual_project_proxy",
       "mesh_ids": [
         "zygomatic_R"

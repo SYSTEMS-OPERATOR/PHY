@@ -1,1507 +1,3617 @@
 {
-  "robot": "phy_skeleton",
+  "joints": [],
   "links": [
     {
-      "name": "C1",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "C2",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "C3",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "C4",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "C5",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "C6",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "C7",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Calcaneus",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Calcaneus",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Capitate",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Capitate",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Clavicle",
-      "inertial": {
-        "mass_kg": null
-      },
+      "display_name": "C1",
       "geometry": {
-        "shape": "box",
-        "length_cm": 14.0,
-        "width_cm": 1.0,
-        "thickness_cm": 1.0
-      }
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_C1"
     },
     {
-      "name": "Clavicle",
-      "inertial": {
-        "mass_kg": null
-      },
+      "display_name": "C2",
       "geometry": {
-        "shape": "box",
-        "length_cm": 14.0,
-        "width_cm": 1.0,
-        "thickness_cm": 1.0
-      }
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_C2"
     },
     {
-      "name": "Coccyx",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Cuboid",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Cuboid",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Ethmoid",
-      "inertial": {
-        "mass_kg": null
-      },
+      "display_name": "C3",
       "geometry": {
-        "shape": "box",
-        "length_cm": 5.0,
-        "width_cm": 5.0,
-        "thickness_cm": 0.4
-      }
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_C3"
     },
     {
-      "name": "Femur",
-      "inertial": {
-        "mass_kg": null
-      },
+      "display_name": "C4",
       "geometry": {
-        "shape": "box",
-        "length_cm": 48.0,
-        "width_cm": 2.8,
-        "thickness_cm": 2.8
-      }
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_C4"
     },
     {
-      "name": "Femur",
-      "inertial": {
-        "mass_kg": null
-      },
+      "display_name": "C5",
       "geometry": {
-        "shape": "box",
-        "length_cm": 48.0,
-        "width_cm": 2.8,
-        "thickness_cm": 2.8
-      }
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_C5"
     },
     {
-      "name": "Fibula",
-      "inertial": {
-        "mass_kg": null
-      },
+      "display_name": "C6",
       "geometry": {
-        "shape": "box",
-        "length_cm": 40.0,
-        "width_cm": 1.5,
-        "thickness_cm": 1.5
-      }
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_C6"
     },
     {
-      "name": "Fibula",
-      "inertial": {
-        "mass_kg": null
-      },
+      "display_name": "C7",
       "geometry": {
-        "shape": "box",
-        "length_cm": 40.0,
-        "width_cm": 1.5,
-        "thickness_cm": 1.5
-      }
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_C7"
     },
     {
-      "name": "Frontal",
-      "inertial": {
-        "mass_kg": null
-      },
+      "display_name": "Calcaneus",
       "geometry": {
-        "shape": "box",
-        "length_cm": 13.5,
-        "width_cm": 14.5,
-        "thickness_cm": 0.6
-      }
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_CALCANEUS_L"
     },
     {
-      "name": "Hamate",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Hamate",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "HipBone",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "HipBone",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Humerus",
-      "inertial": {
-        "mass_kg": null
-      },
+      "display_name": "Calcaneus",
       "geometry": {
-        "shape": "box",
-        "length_cm": 35.0,
-        "width_cm": 2.5,
-        "thickness_cm": 2.5
-      }
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_CALCANEUS_R"
     },
     {
-      "name": "Humerus",
-      "inertial": {
-        "mass_kg": null
-      },
+      "display_name": "Capitate",
       "geometry": {
-        "shape": "box",
-        "length_cm": 35.0,
-        "width_cm": 2.5,
-        "thickness_cm": 2.5
-      }
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_CAPITATE_L"
     },
     {
-      "name": "Hyoid",
-      "inertial": {
-        "mass_kg": null
-      },
+      "display_name": "Capitate",
       "geometry": {
-        "shape": "box",
-        "length_cm": 2.5,
-        "width_cm": 3.5,
-        "thickness_cm": 1.0
-      }
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_CAPITATE_R"
     },
     {
-      "name": "Incus",
-      "inertial": {
-        "mass_kg": null
-      },
+      "display_name": "Clavicle",
       "geometry": {
+        "dimension_source": "dimensions",
+        "length_mm": 140.0,
         "shape": "box",
-        "length_cm": 0.8,
-        "width_cm": 0.4,
-        "thickness_cm": 0.3
-      }
+        "status": "dimensional_estimate",
+        "thickness_mm": 12.0,
+        "width_mm": 12.0
+      },
+      "inertial": {
+        "mass_kg": 0.037296,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "estimated"
+        }
+      },
+      "name": "BONE_CLAVICLE_L"
     },
     {
-      "name": "Incus",
-      "inertial": {
-        "mass_kg": null
-      },
+      "display_name": "Clavicle",
       "geometry": {
+        "dimension_source": "dimensions",
+        "length_mm": 140.0,
         "shape": "box",
-        "length_cm": 0.8,
-        "width_cm": 0.4,
-        "thickness_cm": 0.3
-      }
+        "status": "dimensional_estimate",
+        "thickness_mm": 12.0,
+        "width_mm": 12.0
+      },
+      "inertial": {
+        "mass_kg": 0.037296,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "estimated"
+        }
+      },
+      "name": "BONE_CLAVICLE_R"
     },
     {
-      "name": "Intermediate Cuneiform",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Intermediate Cuneiform",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "L1",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "L2",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "L3",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "L4",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "L5",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Lateral Cuneiform",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Lateral Cuneiform",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Lunate",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Lunate",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Malleus",
-      "inertial": {
-        "mass_kg": null
-      },
+      "display_name": "Coccyx",
       "geometry": {
-        "shape": "box",
-        "length_cm": 0.8,
-        "width_cm": 0.4,
-        "thickness_cm": 0.3
-      }
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_COCCYX"
     },
     {
-      "name": "Malleus",
-      "inertial": {
-        "mass_kg": null
-      },
+      "display_name": "Cuboid",
       "geometry": {
-        "shape": "box",
-        "length_cm": 0.8,
-        "width_cm": 0.4,
-        "thickness_cm": 0.3
-      }
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_CUBOID_L"
     },
     {
-      "name": "Mandible",
-      "inertial": {
-        "mass_kg": null
-      },
+      "display_name": "Cuboid",
       "geometry": {
-        "shape": "box",
-        "length_cm": 17.0,
-        "width_cm": 12.0,
-        "thickness_cm": 1.0
-      }
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_CUBOID_R"
     },
     {
-      "name": "Medial Cuneiform",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Medial Cuneiform",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Metacarpal 1",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Metacarpal 1",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Metacarpal 2",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Metacarpal 2",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Metacarpal 3",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Metacarpal 3",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Metacarpal 4",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Metacarpal 4",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Metacarpal 5",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Metacarpal 5",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Metatarsal 1",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Metatarsal 1",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Metatarsal 2",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Metatarsal 2",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Metatarsal 3",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Metatarsal 3",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Metatarsal 4",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Metatarsal 4",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Metatarsal 5",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Metatarsal 5",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Navicular",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Navicular",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Occipital",
-      "inertial": {
-        "mass_kg": null
-      },
+      "display_name": "Ethmoid",
       "geometry": {
+        "dimension_source": "dimensions",
+        "length_mm": 50.0,
         "shape": "box",
-        "length_cm": 12.0,
-        "width_cm": 11.0,
-        "thickness_cm": 0.6
-      }
+        "status": "dimensional_estimate",
+        "thickness_mm": 4.0,
+        "width_mm": 50.0
+      },
+      "inertial": {
+        "mass_kg": 0.018000000000000002,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "estimated"
+        }
+      },
+      "name": "BONE_ETHMOID"
     },
     {
-      "name": "Parietal",
-      "inertial": {
-        "mass_kg": null
-      },
+      "display_name": "Femur",
       "geometry": {
+        "dimension_source": "dimensions",
+        "length_mm": 420.0,
         "shape": "box",
-        "length_cm": 14.0,
-        "width_cm": 10.0,
-        "thickness_cm": 0.5
-      }
+        "status": "dimensional_estimate",
+        "thickness_mm": 40.0,
+        "width_mm": 40.0
+      },
+      "inertial": {
+        "mass_kg": 1.2768,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "estimated"
+        }
+      },
+      "name": "BONE_FEMUR_L"
     },
     {
-      "name": "Parietal",
-      "inertial": {
-        "mass_kg": null
-      },
+      "display_name": "Femur",
       "geometry": {
+        "dimension_source": "dimensions",
+        "length_mm": 420.0,
         "shape": "box",
-        "length_cm": 14.0,
-        "width_cm": 10.0,
-        "thickness_cm": 0.5
-      }
+        "status": "dimensional_estimate",
+        "thickness_mm": 40.0,
+        "width_mm": 40.0
+      },
+      "inertial": {
+        "mass_kg": 1.2768,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "estimated"
+        }
+      },
+      "name": "BONE_FEMUR_R"
     },
     {
-      "name": "Patella",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Patella",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Proximal Phalanx 1",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Proximal Phalanx 1",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Distal Phalanx 1",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Distal Phalanx 1",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Proximal Phalanx 2",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Proximal Phalanx 2",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Middle Phalanx 2",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Middle Phalanx 2",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Distal Phalanx 2",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Distal Phalanx 2",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Proximal Phalanx 3",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Proximal Phalanx 3",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Middle Phalanx 3",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Middle Phalanx 3",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Distal Phalanx 3",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Distal Phalanx 3",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Proximal Phalanx 4",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Proximal Phalanx 4",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Middle Phalanx 4",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Middle Phalanx 4",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Distal Phalanx 4",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Distal Phalanx 4",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Proximal Phalanx 5",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Proximal Phalanx 5",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Middle Phalanx 5",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Middle Phalanx 5",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Distal Phalanx 5",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Distal Phalanx 5",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Pisiform",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Pisiform",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Radius",
-      "inertial": {
-        "mass_kg": null
-      },
+      "display_name": "Fibula",
       "geometry": {
+        "dimension_source": "dimensions",
+        "length_mm": 355.0,
         "shape": "box",
-        "length_cm": 24.0,
-        "width_cm": 1.5,
-        "thickness_cm": 1.5
-      }
+        "status": "dimensional_estimate",
+        "thickness_mm": 15.0,
+        "width_mm": 15.0
+      },
+      "inertial": {
+        "mass_kg": 0.1517625,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "estimated"
+        }
+      },
+      "name": "BONE_FIBULA_L"
     },
     {
-      "name": "Radius",
-      "inertial": {
-        "mass_kg": null
-      },
+      "display_name": "Fibula",
       "geometry": {
+        "dimension_source": "dimensions",
+        "length_mm": 355.0,
         "shape": "box",
-        "length_cm": 24.0,
-        "width_cm": 1.5,
-        "thickness_cm": 1.5
-      }
+        "status": "dimensional_estimate",
+        "thickness_mm": 15.0,
+        "width_mm": 15.0
+      },
+      "inertial": {
+        "mass_kg": 0.1517625,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "estimated"
+        }
+      },
+      "name": "BONE_FIBULA_R"
     },
     {
-      "name": "Rib 10",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Rib 10",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Rib 11",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Rib 11",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Rib 12",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Rib 12",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Rib 1",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Rib 1",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Rib 2",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Rib 2",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Rib 3",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Rib 3",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Rib 4",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Rib 4",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Rib 5",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Rib 5",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Rib 6",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Rib 6",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Rib 7",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Rib 7",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Rib 8",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Rib 8",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Rib 9",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Rib 9",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Sacrum",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Scaphoid",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Scaphoid",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Scapula",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Scapula",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Sphenoid",
-      "inertial": {
-        "mass_kg": null
-      },
+      "display_name": "Frontal",
       "geometry": {
+        "dimension_source": "dimensions",
+        "length_mm": 135.0,
         "shape": "box",
-        "length_cm": 6.0,
-        "width_cm": 8.0,
-        "thickness_cm": 0.5
-      }
+        "status": "dimensional_estimate",
+        "thickness_mm": 6.0,
+        "width_mm": 145.0
+      },
+      "inertial": {
+        "mass_kg": 0.21141,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "estimated"
+        }
+      },
+      "name": "BONE_FRONTAL"
     },
     {
-      "name": "Stapes",
-      "inertial": {
-        "mass_kg": null
-      },
+      "display_name": "Hamate",
       "geometry": {
-        "shape": "box",
-        "length_cm": 0.8,
-        "width_cm": 0.4,
-        "thickness_cm": 0.3
-      }
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_HAMATE_L"
     },
     {
-      "name": "Stapes",
-      "inertial": {
-        "mass_kg": null
-      },
+      "display_name": "Hamate",
       "geometry": {
-        "shape": "box",
-        "length_cm": 0.8,
-        "width_cm": 0.4,
-        "thickness_cm": 0.3
-      }
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_HAMATE_R"
     },
     {
-      "name": "Sternum",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "T1",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "T10",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "T11",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "T12",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "T2",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "T3",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "T4",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "T5",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "T6",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "T7",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "T8",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "T9",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Talus",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Talus",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Temporal",
-      "inertial": {
-        "mass_kg": null
-      },
+      "display_name": "HipBone",
       "geometry": {
-        "shape": "box",
-        "length_cm": 7.0,
-        "width_cm": 7.0,
-        "thickness_cm": 0.5
-      }
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": 2.898,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "estimated"
+        }
+      },
+      "name": "BONE_HIP_L"
     },
     {
-      "name": "Temporal",
-      "inertial": {
-        "mass_kg": null
-      },
+      "display_name": "HipBone",
       "geometry": {
-        "shape": "box",
-        "length_cm": 7.0,
-        "width_cm": 7.0,
-        "thickness_cm": 0.5
-      }
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": 2.898,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "estimated"
+        }
+      },
+      "name": "BONE_HIP_R"
     },
     {
-      "name": "Tibia",
-      "inertial": {
-        "mass_kg": null
-      },
+      "display_name": "Humerus",
       "geometry": {
+        "dimension_source": "dimensions",
+        "length_mm": 310.0,
         "shape": "box",
-        "length_cm": 40.0,
-        "width_cm": 2.5,
-        "thickness_cm": 2.5
-      }
+        "status": "dimensional_estimate",
+        "thickness_mm": 30.0,
+        "width_mm": 30.0
+      },
+      "inertial": {
+        "mass_kg": 0.5301,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "estimated"
+        }
+      },
+      "name": "BONE_HUMERUS_L"
     },
     {
-      "name": "Tibia",
-      "inertial": {
-        "mass_kg": null
-      },
+      "display_name": "Humerus",
       "geometry": {
+        "dimension_source": "dimensions",
+        "length_mm": 310.0,
         "shape": "box",
-        "length_cm": 40.0,
-        "width_cm": 2.5,
-        "thickness_cm": 2.5
-      }
+        "status": "dimensional_estimate",
+        "thickness_mm": 30.0,
+        "width_mm": 30.0
+      },
+      "inertial": {
+        "mass_kg": 0.5301,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "estimated"
+        }
+      },
+      "name": "BONE_HUMERUS_R"
     },
     {
-      "name": "Trapezium",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Trapezium",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Trapezoid",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Trapezoid",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Triquetrum",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Triquetrum",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Proximal Toe Phalanx 1",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Proximal Toe Phalanx 1",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Distal Toe Phalanx 1",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Distal Toe Phalanx 1",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Proximal Toe Phalanx 2",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Proximal Toe Phalanx 2",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Middle Toe Phalanx 2",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Middle Toe Phalanx 2",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Distal Toe Phalanx 2",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Distal Toe Phalanx 2",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Proximal Toe Phalanx 3",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Proximal Toe Phalanx 3",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Middle Toe Phalanx 3",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Middle Toe Phalanx 3",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Distal Toe Phalanx 3",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Distal Toe Phalanx 3",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Proximal Toe Phalanx 4",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Proximal Toe Phalanx 4",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Middle Toe Phalanx 4",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Middle Toe Phalanx 4",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Distal Toe Phalanx 4",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Distal Toe Phalanx 4",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Proximal Toe Phalanx 5",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Proximal Toe Phalanx 5",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Middle Toe Phalanx 5",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Middle Toe Phalanx 5",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Distal Toe Phalanx 5",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Distal Toe Phalanx 5",
-      "inertial": {
-        "mass_kg": null
-      },
-      "geometry": {}
-    },
-    {
-      "name": "Ulna",
-      "inertial": {
-        "mass_kg": null
-      },
+      "display_name": "Hyoid",
       "geometry": {
+        "dimension_source": "dimensions",
+        "length_mm": 25.0,
         "shape": "box",
-        "length_cm": 25.0,
-        "width_cm": 1.5,
-        "thickness_cm": 1.5
-      }
+        "status": "dimensional_estimate",
+        "thickness_mm": 10.0,
+        "width_mm": 35.0
+      },
+      "inertial": {
+        "mass_kg": 0.01575,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "estimated"
+        }
+      },
+      "name": "BONE_HYOID"
     },
     {
-      "name": "Ulna",
-      "inertial": {
-        "mass_kg": null
-      },
+      "display_name": "Incus",
       "geometry": {
+        "dimension_source": "dimensions",
+        "length_mm": 8.0,
         "shape": "box",
-        "length_cm": 25.0,
-        "width_cm": 1.5,
-        "thickness_cm": 1.5
-      }
+        "status": "dimensional_estimate",
+        "thickness_mm": 3.0,
+        "width_mm": 4.0
+      },
+      "inertial": {
+        "mass_kg": 0.0001728,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "estimated"
+        }
+      },
+      "name": "BONE_INCUS_L"
+    },
+    {
+      "display_name": "Incus",
+      "geometry": {
+        "dimension_source": "dimensions",
+        "length_mm": 8.0,
+        "shape": "box",
+        "status": "dimensional_estimate",
+        "thickness_mm": 3.0,
+        "width_mm": 4.0
+      },
+      "inertial": {
+        "mass_kg": 0.0001728,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "estimated"
+        }
+      },
+      "name": "BONE_INCUS_R"
+    },
+    {
+      "display_name": "Inferior Nasal Concha",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "inertia_kg_m2": null,
+        "mass_kg": null,
+        "mass_provenance": {
+          "source": "physics.mass_kg",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_INFERIOR_NASAL_CONCHA_L"
+    },
+    {
+      "display_name": "Inferior Nasal Concha",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "inertia_kg_m2": null,
+        "mass_kg": null,
+        "mass_provenance": {
+          "source": "physics.mass_kg",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_INFERIOR_NASAL_CONCHA_R"
+    },
+    {
+      "display_name": "Intermediate Cuneiform",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_INTERMEDIATE_CUNEIFORM_L"
+    },
+    {
+      "display_name": "Intermediate Cuneiform",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_INTERMEDIATE_CUNEIFORM_R"
+    },
+    {
+      "display_name": "L1",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_L1"
+    },
+    {
+      "display_name": "L2",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_L2"
+    },
+    {
+      "display_name": "L3",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_L3"
+    },
+    {
+      "display_name": "L4",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_L4"
+    },
+    {
+      "display_name": "L5",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_L5"
+    },
+    {
+      "display_name": "Lacrimal",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "inertia_kg_m2": null,
+        "mass_kg": null,
+        "mass_provenance": {
+          "source": "physics.mass_kg",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_LACRIMAL_L"
+    },
+    {
+      "display_name": "Lacrimal",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "inertia_kg_m2": null,
+        "mass_kg": null,
+        "mass_provenance": {
+          "source": "physics.mass_kg",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_LACRIMAL_R"
+    },
+    {
+      "display_name": "Lateral Cuneiform",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_LATERAL_CUNEIFORM_L"
+    },
+    {
+      "display_name": "Lateral Cuneiform",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_LATERAL_CUNEIFORM_R"
+    },
+    {
+      "display_name": "Lunate",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_LUNATE_L"
+    },
+    {
+      "display_name": "Lunate",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_LUNATE_R"
+    },
+    {
+      "display_name": "Malleus",
+      "geometry": {
+        "dimension_source": "dimensions",
+        "length_mm": 8.0,
+        "shape": "box",
+        "status": "dimensional_estimate",
+        "thickness_mm": 3.0,
+        "width_mm": 4.0
+      },
+      "inertial": {
+        "mass_kg": 0.0001728,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "estimated"
+        }
+      },
+      "name": "BONE_MALLEUS_L"
+    },
+    {
+      "display_name": "Malleus",
+      "geometry": {
+        "dimension_source": "dimensions",
+        "length_mm": 8.0,
+        "shape": "box",
+        "status": "dimensional_estimate",
+        "thickness_mm": 3.0,
+        "width_mm": 4.0
+      },
+      "inertial": {
+        "mass_kg": 0.0001728,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "estimated"
+        }
+      },
+      "name": "BONE_MALLEUS_R"
+    },
+    {
+      "display_name": "Mandible",
+      "geometry": {
+        "dimension_source": "dimensions",
+        "length_mm": 130.0,
+        "shape": "box",
+        "status": "dimensional_estimate",
+        "thickness_mm": 13.0,
+        "width_mm": 120.0
+      },
+      "inertial": {
+        "mass_kg": 0.36504,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "estimated"
+        }
+      },
+      "name": "BONE_MANDIBLE"
+    },
+    {
+      "display_name": "Maxilla",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "inertia_kg_m2": null,
+        "mass_kg": null,
+        "mass_provenance": {
+          "source": "physics.mass_kg",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_MAXILLA_L"
+    },
+    {
+      "display_name": "Maxilla",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "inertia_kg_m2": null,
+        "mass_kg": null,
+        "mass_provenance": {
+          "source": "physics.mass_kg",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_MAXILLA_R"
+    },
+    {
+      "display_name": "Medial Cuneiform",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_MEDIAL_CUNEIFORM_L"
+    },
+    {
+      "display_name": "Medial Cuneiform",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_MEDIAL_CUNEIFORM_R"
+    },
+    {
+      "display_name": "Metacarpal 1",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_META1_L"
+    },
+    {
+      "display_name": "Metacarpal 1",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_META1_R"
+    },
+    {
+      "display_name": "Metacarpal 2",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_META2_L"
+    },
+    {
+      "display_name": "Metacarpal 2",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_META2_R"
+    },
+    {
+      "display_name": "Metacarpal 3",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_META3_L"
+    },
+    {
+      "display_name": "Metacarpal 3",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_META3_R"
+    },
+    {
+      "display_name": "Metacarpal 4",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_META4_L"
+    },
+    {
+      "display_name": "Metacarpal 4",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_META4_R"
+    },
+    {
+      "display_name": "Metacarpal 5",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_META5_L"
+    },
+    {
+      "display_name": "Metacarpal 5",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_META5_R"
+    },
+    {
+      "display_name": "Metatarsal 1",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_MT1_L"
+    },
+    {
+      "display_name": "Metatarsal 1",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_MT1_R"
+    },
+    {
+      "display_name": "Metatarsal 2",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_MT2_L"
+    },
+    {
+      "display_name": "Metatarsal 2",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_MT2_R"
+    },
+    {
+      "display_name": "Metatarsal 3",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_MT3_L"
+    },
+    {
+      "display_name": "Metatarsal 3",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_MT3_R"
+    },
+    {
+      "display_name": "Metatarsal 4",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_MT4_L"
+    },
+    {
+      "display_name": "Metatarsal 4",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_MT4_R"
+    },
+    {
+      "display_name": "Metatarsal 5",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_MT5_L"
+    },
+    {
+      "display_name": "Metatarsal 5",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_MT5_R"
+    },
+    {
+      "display_name": "Nasal",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "inertia_kg_m2": null,
+        "mass_kg": null,
+        "mass_provenance": {
+          "source": "physics.mass_kg",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_NASAL_L"
+    },
+    {
+      "display_name": "Nasal",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "inertia_kg_m2": null,
+        "mass_kg": null,
+        "mass_provenance": {
+          "source": "physics.mass_kg",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_NASAL_R"
+    },
+    {
+      "display_name": "Navicular",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_NAVICULAR_L"
+    },
+    {
+      "display_name": "Navicular",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_NAVICULAR_R"
+    },
+    {
+      "display_name": "Occipital",
+      "geometry": {
+        "dimension_source": "dimensions",
+        "length_mm": 120.0,
+        "shape": "box",
+        "status": "dimensional_estimate",
+        "thickness_mm": 6.0,
+        "width_mm": 110.0
+      },
+      "inertial": {
+        "mass_kg": 0.14256,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "estimated"
+        }
+      },
+      "name": "BONE_OCCIPITAL"
+    },
+    {
+      "display_name": "Palatine",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "inertia_kg_m2": null,
+        "mass_kg": null,
+        "mass_provenance": {
+          "source": "physics.mass_kg",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_PALATINE_L"
+    },
+    {
+      "display_name": "Palatine",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "inertia_kg_m2": null,
+        "mass_kg": null,
+        "mass_provenance": {
+          "source": "physics.mass_kg",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_PALATINE_R"
+    },
+    {
+      "display_name": "Parietal",
+      "geometry": {
+        "dimension_source": "dimensions",
+        "length_mm": 140.0,
+        "shape": "box",
+        "status": "dimensional_estimate",
+        "thickness_mm": 5.0,
+        "width_mm": 100.0
+      },
+      "inertial": {
+        "mass_kg": 0.126,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "estimated"
+        }
+      },
+      "name": "BONE_PAR_L"
+    },
+    {
+      "display_name": "Parietal",
+      "geometry": {
+        "dimension_source": "dimensions",
+        "length_mm": 140.0,
+        "shape": "box",
+        "status": "dimensional_estimate",
+        "thickness_mm": 5.0,
+        "width_mm": 100.0
+      },
+      "inertial": {
+        "mass_kg": 0.126,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "estimated"
+        }
+      },
+      "name": "BONE_PAR_R"
+    },
+    {
+      "display_name": "Patella",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_PATELLA_L"
+    },
+    {
+      "display_name": "Patella",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_PATELLA_R"
+    },
+    {
+      "display_name": "Proximal Phalanx 1",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_PHAL_1_1_L"
+    },
+    {
+      "display_name": "Proximal Phalanx 1",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_PHAL_1_1_R"
+    },
+    {
+      "display_name": "Distal Phalanx 1",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_PHAL_1_2_L"
+    },
+    {
+      "display_name": "Distal Phalanx 1",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_PHAL_1_2_R"
+    },
+    {
+      "display_name": "Proximal Phalanx 2",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_PHAL_2_1_L"
+    },
+    {
+      "display_name": "Proximal Phalanx 2",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_PHAL_2_1_R"
+    },
+    {
+      "display_name": "Middle Phalanx 2",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_PHAL_2_2_L"
+    },
+    {
+      "display_name": "Middle Phalanx 2",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_PHAL_2_2_R"
+    },
+    {
+      "display_name": "Distal Phalanx 2",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_PHAL_2_3_L"
+    },
+    {
+      "display_name": "Distal Phalanx 2",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_PHAL_2_3_R"
+    },
+    {
+      "display_name": "Proximal Phalanx 3",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_PHAL_3_1_L"
+    },
+    {
+      "display_name": "Proximal Phalanx 3",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_PHAL_3_1_R"
+    },
+    {
+      "display_name": "Middle Phalanx 3",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_PHAL_3_2_L"
+    },
+    {
+      "display_name": "Middle Phalanx 3",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_PHAL_3_2_R"
+    },
+    {
+      "display_name": "Distal Phalanx 3",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_PHAL_3_3_L"
+    },
+    {
+      "display_name": "Distal Phalanx 3",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_PHAL_3_3_R"
+    },
+    {
+      "display_name": "Proximal Phalanx 4",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_PHAL_4_1_L"
+    },
+    {
+      "display_name": "Proximal Phalanx 4",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_PHAL_4_1_R"
+    },
+    {
+      "display_name": "Middle Phalanx 4",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_PHAL_4_2_L"
+    },
+    {
+      "display_name": "Middle Phalanx 4",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_PHAL_4_2_R"
+    },
+    {
+      "display_name": "Distal Phalanx 4",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_PHAL_4_3_L"
+    },
+    {
+      "display_name": "Distal Phalanx 4",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_PHAL_4_3_R"
+    },
+    {
+      "display_name": "Proximal Phalanx 5",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_PHAL_5_1_L"
+    },
+    {
+      "display_name": "Proximal Phalanx 5",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_PHAL_5_1_R"
+    },
+    {
+      "display_name": "Middle Phalanx 5",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_PHAL_5_2_L"
+    },
+    {
+      "display_name": "Middle Phalanx 5",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_PHAL_5_2_R"
+    },
+    {
+      "display_name": "Distal Phalanx 5",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_PHAL_5_3_L"
+    },
+    {
+      "display_name": "Distal Phalanx 5",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_PHAL_5_3_R"
+    },
+    {
+      "display_name": "Pisiform",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_PISIFORM_L"
+    },
+    {
+      "display_name": "Pisiform",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_PISIFORM_R"
+    },
+    {
+      "display_name": "Radius",
+      "geometry": {
+        "dimension_source": "dimensions",
+        "length_mm": 240.0,
+        "shape": "box",
+        "status": "dimensional_estimate",
+        "thickness_mm": 15.0,
+        "width_mm": 15.0
+      },
+      "inertial": {
+        "mass_kg": 0.1026,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "estimated"
+        }
+      },
+      "name": "BONE_RADIUS_L"
+    },
+    {
+      "display_name": "Radius",
+      "geometry": {
+        "dimension_source": "dimensions",
+        "length_mm": 240.0,
+        "shape": "box",
+        "status": "dimensional_estimate",
+        "thickness_mm": 15.0,
+        "width_mm": 15.0
+      },
+      "inertial": {
+        "mass_kg": 0.1026,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "estimated"
+        }
+      },
+      "name": "BONE_RADIUS_R"
+    },
+    {
+      "display_name": "Rib 10",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_RIB10_L"
+    },
+    {
+      "display_name": "Rib 10",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_RIB10_R"
+    },
+    {
+      "display_name": "Rib 11",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_RIB11_L"
+    },
+    {
+      "display_name": "Rib 11",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_RIB11_R"
+    },
+    {
+      "display_name": "Rib 12",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_RIB12_L"
+    },
+    {
+      "display_name": "Rib 12",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_RIB12_R"
+    },
+    {
+      "display_name": "Rib 1",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_RIB1_L"
+    },
+    {
+      "display_name": "Rib 1",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_RIB1_R"
+    },
+    {
+      "display_name": "Rib 2",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_RIB2_L"
+    },
+    {
+      "display_name": "Rib 2",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_RIB2_R"
+    },
+    {
+      "display_name": "Rib 3",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_RIB3_L"
+    },
+    {
+      "display_name": "Rib 3",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_RIB3_R"
+    },
+    {
+      "display_name": "Rib 4",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_RIB4_L"
+    },
+    {
+      "display_name": "Rib 4",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_RIB4_R"
+    },
+    {
+      "display_name": "Rib 5",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_RIB5_L"
+    },
+    {
+      "display_name": "Rib 5",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_RIB5_R"
+    },
+    {
+      "display_name": "Rib 6",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_RIB6_L"
+    },
+    {
+      "display_name": "Rib 6",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_RIB6_R"
+    },
+    {
+      "display_name": "Rib 7",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_RIB7_L"
+    },
+    {
+      "display_name": "Rib 7",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_RIB7_R"
+    },
+    {
+      "display_name": "Rib 8",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_RIB8_L"
+    },
+    {
+      "display_name": "Rib 8",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_RIB8_R"
+    },
+    {
+      "display_name": "Rib 9",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_RIB9_L"
+    },
+    {
+      "display_name": "Rib 9",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_RIB9_R"
+    },
+    {
+      "display_name": "Sacrum",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": 0.165,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "estimated"
+        }
+      },
+      "name": "BONE_SACRUM"
+    },
+    {
+      "display_name": "Scaphoid",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_SCAPHOID_L"
+    },
+    {
+      "display_name": "Scaphoid",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_SCAPHOID_R"
+    },
+    {
+      "display_name": "Scapula",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": 0.082215,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "estimated"
+        }
+      },
+      "name": "BONE_SCAPULA_L"
+    },
+    {
+      "display_name": "Scapula",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": 0.082215,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "estimated"
+        }
+      },
+      "name": "BONE_SCAPULA_R"
+    },
+    {
+      "display_name": "Sphenoid",
+      "geometry": {
+        "dimension_source": "dimensions",
+        "length_mm": 60.0,
+        "shape": "box",
+        "status": "dimensional_estimate",
+        "thickness_mm": 5.0,
+        "width_mm": 80.0
+      },
+      "inertial": {
+        "mass_kg": 0.0432,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "estimated"
+        }
+      },
+      "name": "BONE_SPHENOID"
+    },
+    {
+      "display_name": "Stapes",
+      "geometry": {
+        "dimension_source": "dimensions",
+        "length_mm": 8.0,
+        "shape": "box",
+        "status": "dimensional_estimate",
+        "thickness_mm": 3.0,
+        "width_mm": 4.0
+      },
+      "inertial": {
+        "mass_kg": 0.0001728,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "estimated"
+        }
+      },
+      "name": "BONE_STAPES_L"
+    },
+    {
+      "display_name": "Stapes",
+      "geometry": {
+        "dimension_source": "dimensions",
+        "length_mm": 8.0,
+        "shape": "box",
+        "status": "dimensional_estimate",
+        "thickness_mm": 3.0,
+        "width_mm": 4.0
+      },
+      "inertial": {
+        "mass_kg": 0.0001728,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "estimated"
+        }
+      },
+      "name": "BONE_STAPES_R"
+    },
+    {
+      "display_name": "Sternum",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": 0.15300000000000002,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "estimated"
+        }
+      },
+      "name": "BONE_STERNUM"
+    },
+    {
+      "display_name": "T1",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_T1"
+    },
+    {
+      "display_name": "T10",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_T10"
+    },
+    {
+      "display_name": "T11",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_T11"
+    },
+    {
+      "display_name": "T12",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_T12"
+    },
+    {
+      "display_name": "T2",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_T2"
+    },
+    {
+      "display_name": "T3",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_T3"
+    },
+    {
+      "display_name": "T4",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_T4"
+    },
+    {
+      "display_name": "T5",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_T5"
+    },
+    {
+      "display_name": "T6",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_T6"
+    },
+    {
+      "display_name": "T7",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_T7"
+    },
+    {
+      "display_name": "T8",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_T8"
+    },
+    {
+      "display_name": "T9",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_T9"
+    },
+    {
+      "display_name": "Talus",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_TALUS_L"
+    },
+    {
+      "display_name": "Talus",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_TALUS_R"
+    },
+    {
+      "display_name": "Temporal",
+      "geometry": {
+        "dimension_source": "dimensions",
+        "length_mm": 70.0,
+        "shape": "box",
+        "status": "dimensional_estimate",
+        "thickness_mm": 5.0,
+        "width_mm": 70.0
+      },
+      "inertial": {
+        "mass_kg": 0.0441,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "estimated"
+        }
+      },
+      "name": "BONE_TEMP_L"
+    },
+    {
+      "display_name": "Temporal",
+      "geometry": {
+        "dimension_source": "dimensions",
+        "length_mm": 70.0,
+        "shape": "box",
+        "status": "dimensional_estimate",
+        "thickness_mm": 5.0,
+        "width_mm": 70.0
+      },
+      "inertial": {
+        "mass_kg": 0.0441,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "estimated"
+        }
+      },
+      "name": "BONE_TEMP_R"
+    },
+    {
+      "display_name": "Tibia",
+      "geometry": {
+        "dimension_source": "dimensions",
+        "length_mm": 375.0,
+        "shape": "box",
+        "status": "dimensional_estimate",
+        "thickness_mm": 35.0,
+        "width_mm": 35.0
+      },
+      "inertial": {
+        "mass_kg": 0.8728125,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "estimated"
+        }
+      },
+      "name": "BONE_TIBIA_L"
+    },
+    {
+      "display_name": "Tibia",
+      "geometry": {
+        "dimension_source": "dimensions",
+        "length_mm": 375.0,
+        "shape": "box",
+        "status": "dimensional_estimate",
+        "thickness_mm": 35.0,
+        "width_mm": 35.0
+      },
+      "inertial": {
+        "mass_kg": 0.8728125,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "estimated"
+        }
+      },
+      "name": "BONE_TIBIA_R"
+    },
+    {
+      "display_name": "Trapezium",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_TRAPEZIUM_L"
+    },
+    {
+      "display_name": "Trapezium",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_TRAPEZIUM_R"
+    },
+    {
+      "display_name": "Trapezoid",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_TRAPEZOID_L"
+    },
+    {
+      "display_name": "Trapezoid",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_TRAPEZOID_R"
+    },
+    {
+      "display_name": "Triquetrum",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_TRIQUETRUM_L"
+    },
+    {
+      "display_name": "Triquetrum",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_TRIQUETRUM_R"
+    },
+    {
+      "display_name": "Proximal Toe Phalanx 1",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_T_PHAL_1_1_L"
+    },
+    {
+      "display_name": "Proximal Toe Phalanx 1",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_T_PHAL_1_1_R"
+    },
+    {
+      "display_name": "Distal Toe Phalanx 1",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_T_PHAL_1_2_L"
+    },
+    {
+      "display_name": "Distal Toe Phalanx 1",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_T_PHAL_1_2_R"
+    },
+    {
+      "display_name": "Proximal Toe Phalanx 2",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_T_PHAL_2_1_L"
+    },
+    {
+      "display_name": "Proximal Toe Phalanx 2",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_T_PHAL_2_1_R"
+    },
+    {
+      "display_name": "Middle Toe Phalanx 2",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_T_PHAL_2_2_L"
+    },
+    {
+      "display_name": "Middle Toe Phalanx 2",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_T_PHAL_2_2_R"
+    },
+    {
+      "display_name": "Distal Toe Phalanx 2",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_T_PHAL_2_3_L"
+    },
+    {
+      "display_name": "Distal Toe Phalanx 2",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_T_PHAL_2_3_R"
+    },
+    {
+      "display_name": "Proximal Toe Phalanx 3",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_T_PHAL_3_1_L"
+    },
+    {
+      "display_name": "Proximal Toe Phalanx 3",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_T_PHAL_3_1_R"
+    },
+    {
+      "display_name": "Middle Toe Phalanx 3",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_T_PHAL_3_2_L"
+    },
+    {
+      "display_name": "Middle Toe Phalanx 3",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_T_PHAL_3_2_R"
+    },
+    {
+      "display_name": "Distal Toe Phalanx 3",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_T_PHAL_3_3_L"
+    },
+    {
+      "display_name": "Distal Toe Phalanx 3",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_T_PHAL_3_3_R"
+    },
+    {
+      "display_name": "Proximal Toe Phalanx 4",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_T_PHAL_4_1_L"
+    },
+    {
+      "display_name": "Proximal Toe Phalanx 4",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_T_PHAL_4_1_R"
+    },
+    {
+      "display_name": "Middle Toe Phalanx 4",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_T_PHAL_4_2_L"
+    },
+    {
+      "display_name": "Middle Toe Phalanx 4",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_T_PHAL_4_2_R"
+    },
+    {
+      "display_name": "Distal Toe Phalanx 4",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_T_PHAL_4_3_L"
+    },
+    {
+      "display_name": "Distal Toe Phalanx 4",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_T_PHAL_4_3_R"
+    },
+    {
+      "display_name": "Proximal Toe Phalanx 5",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_T_PHAL_5_1_L"
+    },
+    {
+      "display_name": "Proximal Toe Phalanx 5",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_T_PHAL_5_1_R"
+    },
+    {
+      "display_name": "Middle Toe Phalanx 5",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_T_PHAL_5_2_L"
+    },
+    {
+      "display_name": "Middle Toe Phalanx 5",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_T_PHAL_5_2_R"
+    },
+    {
+      "display_name": "Distal Toe Phalanx 5",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_T_PHAL_5_3_L"
+    },
+    {
+      "display_name": "Distal Toe Phalanx 5",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_T_PHAL_5_3_R"
+    },
+    {
+      "display_name": "Ulna",
+      "geometry": {
+        "dimension_source": "dimensions",
+        "length_mm": 250.0,
+        "shape": "box",
+        "status": "dimensional_estimate",
+        "thickness_mm": 15.0,
+        "width_mm": 15.0
+      },
+      "inertial": {
+        "mass_kg": 0.106875,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "estimated"
+        }
+      },
+      "name": "BONE_ULNA_L"
+    },
+    {
+      "display_name": "Ulna",
+      "geometry": {
+        "dimension_source": "dimensions",
+        "length_mm": 250.0,
+        "shape": "box",
+        "status": "dimensional_estimate",
+        "thickness_mm": 15.0,
+        "width_mm": 15.0
+      },
+      "inertial": {
+        "mass_kg": 0.106875,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "estimated"
+        }
+      },
+      "name": "BONE_ULNA_R"
+    },
+    {
+      "display_name": "Vomer",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "inertia_kg_m2": null,
+        "mass_kg": null,
+        "mass_provenance": {
+          "source": "physics.mass_kg",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_VOMER"
+    },
+    {
+      "display_name": "Zygomatic",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "inertia_kg_m2": null,
+        "mass_kg": null,
+        "mass_provenance": {
+          "source": "physics.mass_kg",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_ZYGOMATIC_L"
+    },
+    {
+      "display_name": "Zygomatic",
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "inertial": {
+        "inertia_kg_m2": null,
+        "mass_kg": null,
+        "mass_provenance": {
+          "source": "physics.mass_kg",
+          "status": "unknown"
+        }
+      },
+      "name": "BONE_ZYGOMATIC_R"
     }
   ],
-  "joints": []
+  "mechanical_transforms_validated": false,
+  "robot": "phy_skeleton",
+  "role": "review_inventory"
 }

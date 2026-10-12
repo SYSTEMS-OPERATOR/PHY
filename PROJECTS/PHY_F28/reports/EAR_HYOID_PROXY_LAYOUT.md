@@ -32,6 +32,6 @@ https://openstax.org/books/anatomy-and-physiology-2e/pages/14-1-sensory-percepti
 https://openstax.org/books/anatomy-and-physiology-2e/pages/7-2-the-skull
 
 All seven identities have existing canonical source modules; their legacy dimension dictionaries remain unchanged.
-Those records do not qualify these display meshes. All 193 source records are preserved; 13 facial records remain missing.
+Those records do not qualify these display meshes. All 206 canonical identities are present; the previous 193 records are preserved.
 CORE_V1, HAND_V1, FOOT_V1 and SKULL_V1 geometry and inputs are preserved.
 Dimensional fidelity unverified; physical evidence unmeasured; fabrication release false.

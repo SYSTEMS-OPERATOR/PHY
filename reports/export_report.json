@@ -1,0 +1,1232 @@
+{
+  "fabrication_released": false,
+  "identity_validation": {
+    "duplicate_ids": [],
+    "invalid_ids": [],
+    "mechanical_transforms_validated": false,
+    "parent_cycles": [],
+    "ready": false,
+    "scope": "identity_and_declared_anatomical_parent_references",
+    "unresolved_references": [
+      {
+        "bone_id": "BONE_C1",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "skull",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_CALCANEUS_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "tibia/fibula",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_CALCANEUS_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "tibia/fibula",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_CAPITATE_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "radius/ulna",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_CAPITATE_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "radius/ulna",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_CLAVICLE_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "sternum",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_CLAVICLE_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "sternum",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_COCCYX",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "sacrum",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_CUBOID_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "tibia/fibula",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_CUBOID_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "tibia/fibula",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_ETHMOID",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "frontal",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_ETHMOID",
+        "candidates": [],
+        "field": "connections.children[0]",
+        "reference": "vomer",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_FEMUR_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "hip",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_FEMUR_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "hip",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_FIBULA_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "tibia",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_FIBULA_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "tibia",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_FRONTAL",
+        "candidates": [],
+        "field": "connections.children[0]",
+        "reference": "parietal",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_HAMATE_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "radius/ulna",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_HAMATE_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "radius/ulna",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_HIP_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "sacrum",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_HIP_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "sacrum",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_HUMERUS_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "scapula",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_HUMERUS_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "scapula",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_INTERMEDIATE_CUNEIFORM_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "tibia/fibula",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_INTERMEDIATE_CUNEIFORM_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "tibia/fibula",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_LATERAL_CUNEIFORM_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "tibia/fibula",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_LATERAL_CUNEIFORM_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "tibia/fibula",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_LUNATE_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "radius/ulna",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_LUNATE_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "radius/ulna",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_MANDIBLE",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "temporal",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_MANDIBLE",
+        "candidates": [],
+        "field": "connections.children[0]",
+        "reference": "temporal",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_MEDIAL_CUNEIFORM_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "tibia/fibula",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_MEDIAL_CUNEIFORM_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "tibia/fibula",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_META1_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "carpals",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_META1_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "carpals",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_META2_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "carpals",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_META2_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "carpals",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_META3_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "carpals",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_META3_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "carpals",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_META4_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "carpals",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_META4_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "carpals",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_META5_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "carpals",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_META5_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "carpals",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_MT1_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "tarsals",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_MT1_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "tarsals",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_MT2_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "tarsals",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_MT2_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "tarsals",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_MT3_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "tarsals",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_MT3_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "tarsals",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_MT4_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "tarsals",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_MT4_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "tarsals",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_MT5_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "tarsals",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_MT5_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "tarsals",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_NAVICULAR_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "tibia/fibula",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_NAVICULAR_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "tibia/fibula",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_OCCIPITAL",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "parietal",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_OCCIPITAL",
+        "candidates": [],
+        "field": "connections.children[0]",
+        "reference": "atlas",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_PAR_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "frontal",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_PAR_L",
+        "candidates": [],
+        "field": "connections.children[0]",
+        "reference": "frontal",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_PAR_L",
+        "candidates": [],
+        "field": "connections.children[1]",
+        "reference": "occipital",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_PAR_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "frontal",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_PAR_R",
+        "candidates": [],
+        "field": "connections.children[0]",
+        "reference": "frontal",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_PAR_R",
+        "candidates": [],
+        "field": "connections.children[1]",
+        "reference": "occipital",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_PATELLA_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "femur",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_PATELLA_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "femur",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_PHAL_1_1_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "metacarpal",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_PHAL_1_1_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "metacarpal",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_PHAL_1_2_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "Proximal phalanx",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_PHAL_1_2_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "Proximal phalanx",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_PHAL_2_1_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "metacarpal",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_PHAL_2_1_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "metacarpal",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_PHAL_2_2_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "Proximal phalanx",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_PHAL_2_2_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "Proximal phalanx",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_PHAL_2_3_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "Middle phalanx",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_PHAL_2_3_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "Middle phalanx",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_PHAL_3_1_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "metacarpal",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_PHAL_3_1_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "metacarpal",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_PHAL_3_2_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "Proximal phalanx",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_PHAL_3_2_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "Proximal phalanx",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_PHAL_3_3_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "Middle phalanx",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_PHAL_3_3_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "Middle phalanx",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_PHAL_4_1_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "metacarpal",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_PHAL_4_1_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "metacarpal",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_PHAL_4_2_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "Proximal phalanx",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_PHAL_4_2_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "Proximal phalanx",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_PHAL_4_3_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "Middle phalanx",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_PHAL_4_3_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "Middle phalanx",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_PHAL_5_1_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "metacarpal",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_PHAL_5_1_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "metacarpal",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_PHAL_5_2_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "Proximal phalanx",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_PHAL_5_2_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "Proximal phalanx",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_PHAL_5_3_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "Middle phalanx",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_PHAL_5_3_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "Middle phalanx",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_PISIFORM_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "radius/ulna",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_PISIFORM_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "radius/ulna",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_RADIUS_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "humerus",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_RADIUS_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "humerus",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_RIB10_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "thoracic vertebrae",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_RIB10_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "thoracic vertebrae",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_RIB11_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "thoracic vertebrae",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_RIB11_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "thoracic vertebrae",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_RIB12_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "thoracic vertebrae",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_RIB12_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "thoracic vertebrae",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_RIB1_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "thoracic vertebrae",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_RIB1_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "thoracic vertebrae",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_RIB2_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "thoracic vertebrae",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_RIB2_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "thoracic vertebrae",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_RIB3_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "thoracic vertebrae",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_RIB3_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "thoracic vertebrae",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_RIB4_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "thoracic vertebrae",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_RIB4_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "thoracic vertebrae",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_RIB5_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "thoracic vertebrae",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_RIB5_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "thoracic vertebrae",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_RIB6_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "thoracic vertebrae",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_RIB6_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "thoracic vertebrae",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_RIB7_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "thoracic vertebrae",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_RIB7_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "thoracic vertebrae",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_RIB8_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "thoracic vertebrae",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_RIB8_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "thoracic vertebrae",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_RIB9_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "thoracic vertebrae",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_RIB9_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "thoracic vertebrae",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_SCAPHOID_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "radius/ulna",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_SCAPHOID_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "radius/ulna",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_SCAPULA_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "clavicle",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_SCAPULA_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "clavicle",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_SPHENOID",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "frontal",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_SPHENOID",
+        "candidates": [],
+        "field": "connections.children[0]",
+        "reference": "frontal",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_STERNUM",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "clavicle",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_TALUS_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "tibia/fibula",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_TALUS_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "tibia/fibula",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_TEMP_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "parietal",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_TEMP_L",
+        "candidates": [],
+        "field": "connections.children[0]",
+        "reference": "mandible",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_TEMP_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "parietal",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_TEMP_R",
+        "candidates": [],
+        "field": "connections.children[0]",
+        "reference": "mandible",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_TIBIA_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "femur",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_TIBIA_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "femur",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_TRAPEZIUM_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "radius/ulna",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_TRAPEZIUM_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "radius/ulna",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_TRAPEZOID_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "radius/ulna",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_TRAPEZOID_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "radius/ulna",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_TRIQUETRUM_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "radius/ulna",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_TRIQUETRUM_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "radius/ulna",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_T_PHAL_1_1_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "metatarsal",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_T_PHAL_1_1_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "metatarsal",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_T_PHAL_1_2_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "Proximal phalanx",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_T_PHAL_1_2_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "Proximal phalanx",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_T_PHAL_2_1_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "metatarsal",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_T_PHAL_2_1_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "metatarsal",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_T_PHAL_2_2_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "Proximal phalanx",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_T_PHAL_2_2_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "Proximal phalanx",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_T_PHAL_2_3_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "Middle phalanx",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_T_PHAL_2_3_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "Middle phalanx",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_T_PHAL_3_1_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "metatarsal",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_T_PHAL_3_1_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "metatarsal",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_T_PHAL_3_2_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "Proximal phalanx",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_T_PHAL_3_2_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "Proximal phalanx",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_T_PHAL_3_3_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "Middle phalanx",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_T_PHAL_3_3_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "Middle phalanx",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_T_PHAL_4_1_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "metatarsal",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_T_PHAL_4_1_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "metatarsal",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_T_PHAL_4_2_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "Proximal phalanx",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_T_PHAL_4_2_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "Proximal phalanx",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_T_PHAL_4_3_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "Middle phalanx",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_T_PHAL_4_3_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "Middle phalanx",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_T_PHAL_5_1_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "metatarsal",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_T_PHAL_5_1_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "metatarsal",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_T_PHAL_5_2_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "Proximal phalanx",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_T_PHAL_5_2_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "Proximal phalanx",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_T_PHAL_5_3_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "Middle phalanx",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_T_PHAL_5_3_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "Middle phalanx",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_ULNA_L",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "humerus",
+        "status": "missing"
+      },
+      {
+        "bone_id": "BONE_ULNA_R",
+        "candidates": [],
+        "field": "connections.parent",
+        "reference": "humerus",
+        "status": "missing"
+      }
+    ]
+  },
+  "mode": "review",
+  "record_issues": [
+    "missing_required_fields",
+    "missing_dimension_values",
+    "invalid_parent_child_references",
+    "material_incompleteness",
+    "missing_mount_points",
+    "missing_joint_interfaces",
+    "missing_references",
+    "mass_inertia_plausibility",
+    "dataset_schema_mismatch"
+  ],
+  "record_validation_pass": false,
+  "validated_ready": false,
+  "validation_scope": "canonical_records_and_export_identity"
+}

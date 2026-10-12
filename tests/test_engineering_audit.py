@@ -55,18 +55,18 @@ class EngineeringAuditTest(unittest.TestCase):
         expected = json.loads((ROOT / "PROJECTS/PHY_F28/reports/BONE_EQUIVALENCE.json").read_text())
         self.assertEqual(self.model["bone_equivalence"], expected)
         self.assertEqual(len(expected_bones()), 206)
-        self.assertEqual(len(source_record_paths()), 193)
+        self.assertEqual(len(source_record_paths()), 206)
 
     def test_real_checkpoint_reports_independent_counts_and_exact_canonical_fingerprint(self):
         observed = {key: metric["count"] for key, metric in self.report["metrics"].items()}
         self.assertEqual(observed, {
-            "individual_display_identity": 206, "source_module_present": 193,
-            "canonical_record_present": 193, "declared_dimensions_complete": 36,
-            "dataset_binding_present": 21, "reference_declaration_present": 0,
+            "individual_display_identity": 206, "source_module_present": 206,
+            "canonical_record_present": 206, "declared_dimensions_complete": 36,
+            "dataset_binding_present": 21, "reference_declaration_present": 13,
             "dimensional_primitive_available": 30, "declared_anatomical_references_resolved": 24,
             "record_validation_pass": 0,
         })
-        self.assertEqual(len(self.report["missing_canonical_records"]), 13)
+        self.assertEqual(self.report["missing_canonical_records"], [])
         self.assertEqual(self.report["missing_canonical_records"], self.report["missing_source_records"])
         for key, metric in self.report["metrics"].items():
             self.assertEqual(metric["total"], 206)
@@ -82,10 +82,12 @@ class EngineeringAuditTest(unittest.TestCase):
         self.assertFalse(self.report["record_validation"]["summary"]["pass"])
 
     def test_missing_and_unknown_measurements_are_not_filled_by_proxies(self):
-        missing = by_id(self.report, "BONE_MAXILLA_R")
+        selected = SkeletonField([bone for bone in self.field.bones.values() if bone.unique_id != "BONE_MAXILLA_R"])
+        partial = engineering_audit(selected, self.model["parts"])
+        missing = by_id(partial, "BONE_MAXILLA_R")
         self.assertEqual(missing["display"]["representation"], "individual_project_proxy")
         self.assertEqual(missing["canonical_record"]["status"], "missing")
-        self.assertIsNone(missing["source"]["path"])
+        self.assertIsNotNone(missing["source"]["path"])
         self.assertIsNone(missing["dimensions"]["values_mm"])
         self.assertIsNone(missing["canonical_geometry"])
         unknown = by_id(self.report, "BONE_C1")

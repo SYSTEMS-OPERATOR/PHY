@@ -20,14 +20,16 @@ def report_markdown(audit):
              "Status: adult 206 identity/distribution review only; dimensions/morphology unverified, physical evidence unmeasured, fabrication release false.", "",
              f"{audit['expected_bones']} adult identities: {audit['individual_bone_proxies']} individual project proxies, "
              f"{audit['grouped_bones']} grouped-form identities, {audit['unrepresented_bones']} unrepresented.",
-             f"{audit['source_records_present']} existing canonical source records are unchanged; "
-             f"{len(audit['missing_source_records'])} facial records remain missing.", "",
+             f"{audit['source_records_present']} canonical source identity records are present; "
+             f"{len(audit['missing_source_records'])} records remain absent. Source presence does not qualify dimensions or mechanics.", "",
              "One adult fused hip, sacrum and coccyx each. Hardware, cartilage, teeth and support rails never increase bone coverage.", "",
              "| Region | Expected | Individual | Grouped | Unrepresented |",
              "| --- | ---: | ---: | ---: | ---: |"]
     lines += [f"| {r['region']} | {r['expected']} | {r['individual']} | {r['grouped']} | {r['unrepresented']} |" for r in audit["regions"]]
     lines += ["", "## Outstanding source records", ""]
     lines += ["- `"+key+"`" for key in audit["missing_source_records"]]
+    if not audit["missing_source_records"]:
+        lines.append("None. Canonical identity coverage is complete; physical qualification remains open.")
     lines += ["", "## Every identity and disposition", "",
               "All individual proxies use provisional project geometry. Count equivalence is not dimensional fidelity or manufacture approval.", "",
               "| Bone ID | Region | Representation | Mesh ID(s) | Source record |",

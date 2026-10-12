@@ -196,7 +196,7 @@ class FabricationValidationTest(unittest.TestCase):
         before = {uid: copy.deepcopy(b.dimensions) for uid, b in field.bones.items()}
         report = ValidatorAgent(field).run()
         self.assert_blocked(report, "missing_dimension_values")
-        self.assertEqual(report["summary"]["total_bones"], 193)
+        self.assertEqual(report["summary"]["total_bones"], 206)
         self.assertEqual({row["bone"] for row in report["missing_dimension_values"]},
                          {b.unique_id for b in field.bones.values()
                           if not b.dimensions or any(v is None for v in b.dimensions.values())})
@@ -295,7 +295,7 @@ class CanonicalLoadingTest(unittest.TestCase):
         with patch("skeleton.bones.Path.glob", return_value=iter(reversed(files))):
             actual = [b.unique_id for b in self.load()]
         self.assertEqual(actual, expected)
-        self.assertEqual(len(actual), 193)
+        self.assertEqual(len(actual), 206)
 
     def test_another_dataset_load_has_no_prior_overrides(self):
         one = {"Femur": {"length_cm": 11, "width_cm": 3, "mass_g": 9, "density_kg_m3": 1100}}

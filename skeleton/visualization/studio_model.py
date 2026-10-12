@@ -329,7 +329,7 @@ def build_armature(height_mm=None, refinement=1.0, arm_drop_deg=75.0, span_equal
                             "Skull shell patches and facial sweeps/ellipsoids are display proxies; sutures, foramina, sinuses, teeth and jaw mechanics are unresolved.",
                             "Ear ossicles and the suspended hyoid are display sweeps only; hearing, footplate/joint interfaces and muscle/ligament mechanisms are unresolved.",
                             "Count/adjacency is reference-grounded; bone dimensions, morphology and joints are unverified design proposals.",
-                            "Hardware, support rails and interpolated envelopes do not count as bones. Thirteen facial source records remain missing.",
+                            "Hardware, support rails and interpolated envelopes do not count as bones. All 206 canonical identities are present; the 13 facial additions have unresolved physical data.",
                             "The A0 shoulder article is a separate, unscaled bench assembly; no automatic whole-body integration.",
                             "The quarter-scale passive maquette has separate assembly and material instructions.",
                             "Full-scale load paths, interfaces, actuation, balance and physical qualification remain open."]}

@@ -16,7 +16,7 @@ class SkullBoneGeometryTest(unittest.TestCase):
         cls.model = sm.build_armature()
         cls.bones = {p["bone_id"]: p for p in cls.model["parts"] if p.get("skull_layout_sha256")}
 
-    def test_exact_eight_cranial_fourteen_facial_identities_and_thirteen_missing_records(self):
+    def test_exact_eight_cranial_fourteen_facial_identities_and_complete_source_inventory(self):
         cranial = {"BONE_"+c for c in ("FRONTAL", "OCCIPITAL", "SPHENOID", "ETHMOID")}
         cranial |= {f"BONE_{c}_{s}" for c in ("PAR", "TEMP") for s in ("R", "L")}
         facial = {"BONE_MANDIBLE", "BONE_VOMER"}
@@ -24,20 +24,16 @@ class SkullBoneGeometryTest(unittest.TestCase):
                                             "PALATINE", "INFERIOR_NASAL_CONCHA") for s in ("R", "L")}
         self.assertEqual((len(cranial), len(facial)), (8, 14))
         self.assertEqual(set(self.bones), cranial | facial)
-        missing = facial - {"BONE_MANDIBLE"}
         audit = self.model["bone_equivalence"]
-        self.assertEqual(set(audit["missing_source_records"]), missing)
-        self.assertEqual(audit["source_records_present"], 193)
+        self.assertEqual(audit["missing_source_records"], [])
+        self.assertEqual(audit["source_records_present"], 206)
         self.assertEqual(audit["missing_skull_bones"], [])
         self.assertEqual((audit["individual_bone_proxies"], audit["grouped_bones"], audit["unrepresented_bones"]), (206, 0, 0))
         for key, p in self.bones.items():
             with self.subTest(bone=key):
                 self.assertEqual(p["role"], "bone_proxy")
-                self.assertEqual(p["source_record_status"], "missing" if key in missing else "present")
-                if key in missing:
-                    self.assertIsNone(p["source_record"])
-                else:
-                    self.assertTrue((sm.ROOT / p["source_record"]).is_file())
+                self.assertEqual(p["source_record_status"], "present")
+                self.assertTrue((sm.ROOT / p["source_record"]).is_file())
         self.assertFalse(any(p.get("grouped_bone_ids") for p in self.model["parts"]))
 
     def test_previous_177_individual_proxies_are_unchanged(self):

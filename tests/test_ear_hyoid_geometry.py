@@ -26,8 +26,8 @@ class EarHyoidGeometryTest(unittest.TestCase):
         self.assertTrue(audit["bone_distribution_complete"])
         self.assertEqual(audit["missing_ear_bones"], [])
         self.assertEqual(audit["missing_hyoid_bones"], [])
-        self.assertEqual(audit["source_records_present"], 193)
-        self.assertEqual(len(audit["missing_source_records"]), 13)
+        self.assertEqual(audit["source_records_present"], 206)
+        self.assertEqual(len(audit["missing_source_records"]), 0)
         self.assertFalse(audit["dimensional_fidelity_verified"])
         self.assertFalse(audit["fabrication_released"])
         self.assertFalse(audit["physical_evidence_complete"])
@@ -41,9 +41,18 @@ class EarHyoidGeometryTest(unittest.TestCase):
             self.assertEqual(dimensions, [{"length_cm": 2.5, "width_cm": 3.5, "thickness_cm": 1.0}]
                              if p["bone_id"] == "BONE_HYOID" else [{"length_cm": 0.8, "width_cm": 0.4, "thickness_cm": 0.3}])
 
-    def test_previous_199_proxies_are_byte_identical(self):
-        bones = [p for p in self.model["parts"] if p["role"] == "bone_proxy" and not p.get("ear_hyoid_layout_sha256")]
+    def test_previous_199_proxies_preserved_except_facial_source_presence(self):
+        bones = copy.deepcopy([p for p in self.model["parts"] if p["role"] == "bone_proxy" and not p.get("ear_hyoid_layout_sha256")])
         self.assertEqual(len(bones), 199)
+        additions = {f"BONE_{code}_{side}" for code in ("MAXILLA", "ZYGOMATIC", "NASAL", "LACRIMAL", "PALATINE", "INFERIOR_NASAL_CONCHA")
+                     for side in ("L", "R")} | {"BONE_VOMER"}
+        # Only these two source-presence fields change. Restore their previous
+        # disposition before checking the original, complete 199-part snapshot.
+        for part in bones:
+            if part["bone_id"] in additions:
+                self.assertEqual(part["source_record_status"], "present")
+                self.assertTrue((sm.ROOT / part["source_record"]).is_file())
+                part.update(source_record=None, source_record_status="missing")
         self.assertEqual(sm.digest(bones), "5d8610aaee83e5d487739c66818af8c73cc22ee1eca2b49810141766f9f8f6cc")
 
     def test_ear_chain_lateral_medial_order_and_non_bone_boundaries(self):

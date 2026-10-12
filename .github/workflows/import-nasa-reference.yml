@@ -1,0 +1,96 @@
+name: Import NASA Reference PDF
+
+on:
+  workflow_dispatch:
+    inputs:
+      source_url:
+        description: "Official NASA HTTPS URL to a PDF (nasa.gov or ntrs.nasa.gov)"
+        required: true
+        type: string
+      filename:
+        description: "Destination filename, e.g. ochmo-hb-004.pdf"
+        required: true
+        type: string
+      expected_sha256:
+        description: "Optional SHA-256 from the independently downloaded original"
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: nasa-reference-import
+  cancel-in-progress: false
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Download and verify NASA PDF
+        env:
+          SOURCE_URL: ${{ inputs.source_url }}
+          FILENAME: ${{ inputs.filename }}
+          EXPECTED_SHA256: ${{ inputs.expected_sha256 }}
+        run: |
+          python - <<'PY'
+          import hashlib, os, pathlib, re, urllib.parse, urllib.request
+          url = os.environ["SOURCE_URL"].strip()
+          name = os.environ["FILENAME"].strip()
+          expected = os.environ["EXPECTED_SHA256"].strip().lower()
+          parsed = urllib.parse.urlparse(url)
+          if parsed.scheme != "https" or parsed.hostname not in {"nasa.gov", "www.nasa.gov", "ntrs.nasa.gov", "ntrs3.nasa.gov", "standards.nasa.gov"}:
+              raise SystemExit("Only official NASA HTTPS sources are allowed")
+          if not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9._-]*\.pdf", name):
+              raise SystemExit("Invalid PDF filename")
+          if expected and not re.fullmatch(r"[0-9a-f]{64}", expected):
+              raise SystemExit("Expected SHA-256 must be 64 hexadecimal characters")
+          dest = pathlib.Path("references/NASA") / name
+          dest.parent.mkdir(parents=True, exist_ok=True)
+          if dest.exists():
+              raise SystemExit(f"Refusing to overwrite {dest}")
+          request = urllib.request.Request(url, headers={"User-Agent": "PHY-NASA-Reference-Archiver/1.0"})
+          class RestrictedRedirect(urllib.request.HTTPRedirectHandler):
+              def redirect_request(self, req, fp, code, msg, headers, newurl):
+                  p = urllib.parse.urlparse(newurl)
+                  if p.scheme != "https" or p.hostname not in {"nasa.gov", "www.nasa.gov", "ntrs.nasa.gov", "ntrs3.nasa.gov", "standards.nasa.gov"}:
+                      raise ValueError("Redirect outside NASA domain")
+                  return super().redirect_request(req, fp, code, msg, headers, newurl)
+          opener = urllib.request.build_opener(RestrictedRedirect())
+          h = hashlib.sha256()
+          size = 0
+          with opener.open(request, timeout=40) as response, dest.open("wb") as out:
+              while chunk := response.read(1024 * 1024):
+                  size += len(chunk)
+                  if size > 45 * 1024 * 1024:
+                      raise ValueError("PDF exceeds 45 MiB safety limit")
+                  h.update(chunk)
+                  out.write(chunk)
+          if not dest.read_bytes()[:5] == b"%PDF-":
+              dest.unlink(missing_ok=True)
+              raise ValueError("Download is not a PDF")
+          digest = h.hexdigest()
+          if expected and digest != expected:
+              dest.unlink(missing_ok=True)
+              raise ValueError(f"SHA-256 mismatch: actual {digest}")
+          record = dest.with_suffix(".source.txt")
+          record.write_text(f"Source: {url}\nSHA-256: {digest}\nBytes: {size}\n", encoding="utf-8")
+          print(f"Verified {dest}: {size} bytes SHA-256 {digest}")
+          PY
+      - name: Commit source PDF and provenance
+        env:
+          FILENAME: ${{ inputs.filename }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- "references/NASA/$FILENAME" "references/NASA/${FILENAME%.pdf}.source.txt"
+          if git diff --cached --quiet; then
+            echo "Nothing to commit"
+          else
+            git commit -m "references: archive NASA PDF $FILENAME"
+            git push origin HEAD:main
+          fi

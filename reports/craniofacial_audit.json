@@ -1,0 +1,2417 @@
+{
+  "articulations": [
+    {
+      "anatomical_type": "synovial",
+      "articulation_id": "tmj_l",
+      "bone_ids": [
+        "BONE_MANDIBLE",
+        "BONE_TEMP_L"
+      ],
+      "engineering_definition": null,
+      "evidence_needed": [
+        "Articular surfaces and disc or substitute geometry",
+        "Coupled jaw trajectory, ranges and axes",
+        "Loads, clearances and acceptance tests"
+      ],
+      "locator": "Temporomandibular Joint; Figure 9.15",
+      "missing_canonical_records": [],
+      "missing_display_proxies": [],
+      "motion_components": [
+        "rotation",
+        "translation"
+      ],
+      "name": "Left temporomandibular articulation",
+      "non_bone_components": [
+        "articular_disc"
+      ],
+      "side": "left",
+      "source_id": "OPENSTAX_AP2E_9_6_TMJ"
+    },
+    {
+      "anatomical_type": "synovial",
+      "articulation_id": "tmj_r",
+      "bone_ids": [
+        "BONE_MANDIBLE",
+        "BONE_TEMP_R"
+      ],
+      "engineering_definition": null,
+      "evidence_needed": [
+        "Articular surfaces and disc or substitute geometry",
+        "Coupled jaw trajectory, ranges and axes",
+        "Loads, clearances and acceptance tests"
+      ],
+      "locator": "Temporomandibular Joint; Figure 9.15",
+      "missing_canonical_records": [],
+      "missing_display_proxies": [],
+      "motion_components": [
+        "rotation",
+        "translation"
+      ],
+      "name": "Right temporomandibular articulation",
+      "non_bone_components": [
+        "articular_disc"
+      ],
+      "side": "right",
+      "source_id": "OPENSTAX_AP2E_9_6_TMJ"
+    }
+  ],
+  "audit_version": "1.0.0",
+  "bones": [
+    {
+      "anatomical_references": {
+        "children": [
+          {
+            "bone_id": null,
+            "candidates": [],
+            "reference": "vomer",
+            "status": "missing"
+          }
+        ],
+        "issues": [
+          {
+            "bone_id": "BONE_ETHMOID",
+            "candidates": [],
+            "field": "connections.parent",
+            "reference": "frontal",
+            "status": "missing"
+          },
+          {
+            "bone_id": "BONE_ETHMOID",
+            "candidates": [],
+            "field": "connections.children[0]",
+            "reference": "vomer",
+            "status": "missing"
+          }
+        ],
+        "parent": {
+          "bone_id": null,
+          "candidates": [],
+          "reference": "frontal",
+          "status": "missing"
+        },
+        "parent_cycle": false,
+        "status": "unresolved"
+      },
+      "bone_id": "BONE_ETHMOID",
+      "canonical_geometry": {
+        "dimension_source": "dimensions",
+        "length_mm": 50.0,
+        "shape": "box",
+        "status": "dimensional_estimate",
+        "thickness_mm": 4.0,
+        "width_mm": 50.0
+      },
+      "canonical_record": {
+        "revision": "1.0.0",
+        "status": "present"
+      },
+      "core_scope": false,
+      "dataset": {
+        "key": null,
+        "sha256": "c838292fdeda8e7ddbc026f80aaf9bff87a36d7ccd69dda4b2e5614e33496742",
+        "status": "unbound"
+      },
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "metric_source_declarations": {},
+        "status": "complete",
+        "unknown_keys": [],
+        "values_mm": {
+          "length_mm": 50.0,
+          "thickness_mm": 4.0,
+          "width_mm": 50.0
+        }
+      },
+      "display": {
+        "dimensional_fidelity": "unverified",
+        "geometry_inputs": [
+          "PROJECTS/PHY_F28/profiles/f28.json#/skull_proxy_layout/ellipsoids/ETHMOID",
+          "model#/reference/statistics/headbreadth",
+          "model#/reference/statistics/headlength",
+          "PROJECTS/PHY_F28/profiles/f28.json#/design_choices_mm/head_height",
+          "model#/height_mm",
+          "model#/scale_from_mean"
+        ],
+        "mesh_ids": [
+          "ethmoid"
+        ],
+        "physical_evidence": "unmeasured",
+        "representation": "individual_project_proxy"
+      },
+      "evidence_needed": [
+        "explicit_dataset_binding_or_documented_source_basis",
+        "traceable_reference_declarations",
+        "review_anatomical_relationship_declarations",
+        "dimensional_evidence_review",
+        "qualified_anatomical_geometry",
+        "qualified_articulation_and_transforms",
+        "physical_fabrication_evidence"
+      ],
+      "name": "Ethmoid",
+      "record_validation": {
+        "blocker_categories": [
+          "dataset_schema_mismatch",
+          "invalid_parent_child_references",
+          "missing_joint_interfaces",
+          "missing_mount_points",
+          "missing_references",
+          "missing_required_fields"
+        ],
+        "status": "blocked"
+      },
+      "references": {
+        "declarations": [],
+        "status": "missing"
+      },
+      "region": "skull",
+      "side": "midline",
+      "source": {
+        "path": "skeleton/bones/bone_ethmoid.py",
+        "sha256": "cd1ac8cb9ba7d0522c44f4d7314783f7239b8b397e03b3218afec11979211428",
+        "status": "present"
+      }
+    },
+    {
+      "anatomical_references": {
+        "children": [
+          {
+            "bone_id": null,
+            "candidates": [],
+            "reference": "parietal",
+            "status": "missing"
+          }
+        ],
+        "issues": [
+          {
+            "bone_id": "BONE_FRONTAL",
+            "candidates": [],
+            "field": "connections.children[0]",
+            "reference": "parietal",
+            "status": "missing"
+          }
+        ],
+        "parent": {
+          "bone_id": null,
+          "reference": "",
+          "status": "unspecified"
+        },
+        "parent_cycle": false,
+        "status": "unresolved"
+      },
+      "bone_id": "BONE_FRONTAL",
+      "canonical_geometry": {
+        "dimension_source": "dimensions",
+        "length_mm": 135.0,
+        "shape": "box",
+        "status": "dimensional_estimate",
+        "thickness_mm": 6.0,
+        "width_mm": 145.0
+      },
+      "canonical_record": {
+        "revision": "1.0.0",
+        "status": "present"
+      },
+      "core_scope": false,
+      "dataset": {
+        "key": null,
+        "sha256": "c838292fdeda8e7ddbc026f80aaf9bff87a36d7ccd69dda4b2e5614e33496742",
+        "status": "unbound"
+      },
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "metric_source_declarations": {},
+        "status": "complete",
+        "unknown_keys": [],
+        "values_mm": {
+          "length_mm": 135.0,
+          "thickness_mm": 6.0,
+          "width_mm": 145.0
+        }
+      },
+      "display": {
+        "dimensional_fidelity": "unverified",
+        "geometry_inputs": [
+          "PROJECTS/PHY_F28/profiles/f28.json#/skull_proxy_layout/shells/FRONTAL",
+          "model#/reference/statistics/headbreadth",
+          "model#/reference/statistics/headlength",
+          "PROJECTS/PHY_F28/profiles/f28.json#/design_choices_mm/head_height",
+          "model#/height_mm",
+          "model#/scale_from_mean",
+          "PROJECTS/PHY_F28/profiles/f28.json#/skull_proxy_layout/shell_inset_mm",
+          "PROJECTS/PHY_F28/profiles/f28.json#/skull_proxy_layout/shell_thickness_mm",
+          "PROJECTS/PHY_F28/profiles/f28.json#/skull_proxy_layout/shell_samples"
+        ],
+        "mesh_ids": [
+          "frontal"
+        ],
+        "physical_evidence": "unmeasured",
+        "representation": "individual_project_proxy"
+      },
+      "evidence_needed": [
+        "explicit_dataset_binding_or_documented_source_basis",
+        "traceable_reference_declarations",
+        "review_anatomical_relationship_declarations",
+        "dimensional_evidence_review",
+        "qualified_anatomical_geometry",
+        "qualified_articulation_and_transforms",
+        "physical_fabrication_evidence"
+      ],
+      "name": "Frontal",
+      "record_validation": {
+        "blocker_categories": [
+          "dataset_schema_mismatch",
+          "invalid_parent_child_references",
+          "missing_joint_interfaces",
+          "missing_mount_points",
+          "missing_references",
+          "missing_required_fields"
+        ],
+        "status": "blocked"
+      },
+      "references": {
+        "declarations": [],
+        "status": "missing"
+      },
+      "region": "skull",
+      "side": "midline",
+      "source": {
+        "path": "skeleton/bones/bone_frontal.py",
+        "sha256": "255eecc3a0f54a9c153eefb53623363b9f5fc7bb45d0a96c5037ec470f32b449",
+        "status": "present"
+      }
+    },
+    {
+      "anatomical_references": {
+        "children": [],
+        "issues": [],
+        "parent": {
+          "bone_id": null,
+          "reference": null,
+          "status": "unspecified"
+        },
+        "parent_cycle": false,
+        "status": "undeclared"
+      },
+      "bone_id": "BONE_LACRIMAL_L",
+      "canonical_geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "canonical_record": {
+        "revision": "1.0.0",
+        "status": "present"
+      },
+      "core_scope": false,
+      "dataset": {
+        "key": null,
+        "sha256": "c838292fdeda8e7ddbc026f80aaf9bff87a36d7ccd69dda4b2e5614e33496742",
+        "status": "unbound"
+      },
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "display": {
+        "dimensional_fidelity": "unverified",
+        "geometry_inputs": [
+          "PROJECTS/PHY_F28/profiles/f28.json#/skull_proxy_layout/ellipsoids/LACRIMAL_R",
+          "model#/reference/statistics/headbreadth",
+          "model#/reference/statistics/headlength",
+          "PROJECTS/PHY_F28/profiles/f28.json#/design_choices_mm/head_height",
+          "model#/height_mm",
+          "model#/scale_from_mean"
+        ],
+        "mesh_ids": [
+          "lacrimal_L"
+        ],
+        "physical_evidence": "unmeasured",
+        "representation": "individual_project_proxy"
+      },
+      "evidence_needed": [
+        "supported_positive_dimensions",
+        "explicit_dataset_binding_or_documented_source_basis",
+        "review_anatomical_relationship_declarations",
+        "dimensional_evidence_review",
+        "qualified_anatomical_geometry",
+        "qualified_articulation_and_transforms",
+        "physical_fabrication_evidence"
+      ],
+      "name": "Lacrimal",
+      "record_validation": {
+        "blocker_categories": [
+          "dataset_schema_mismatch",
+          "mass_inertia_plausibility",
+          "material_incompleteness",
+          "missing_dimension_values",
+          "missing_joint_interfaces",
+          "missing_mount_points",
+          "missing_required_fields"
+        ],
+        "status": "blocked"
+      },
+      "references": {
+        "declarations": [
+          "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-2-the-skull"
+        ],
+        "status": "declared"
+      },
+      "region": "skull",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_lacrimal_l.py",
+        "sha256": "57dde2a7324071abd235458bd9eda96497365637bad83c17a28dfbb3de8c87e1",
+        "status": "present"
+      }
+    },
+    {
+      "anatomical_references": {
+        "children": [],
+        "issues": [],
+        "parent": {
+          "bone_id": null,
+          "reference": null,
+          "status": "unspecified"
+        },
+        "parent_cycle": false,
+        "status": "undeclared"
+      },
+      "bone_id": "BONE_LACRIMAL_R",
+      "canonical_geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "canonical_record": {
+        "revision": "1.0.0",
+        "status": "present"
+      },
+      "core_scope": false,
+      "dataset": {
+        "key": null,
+        "sha256": "c838292fdeda8e7ddbc026f80aaf9bff87a36d7ccd69dda4b2e5614e33496742",
+        "status": "unbound"
+      },
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "display": {
+        "dimensional_fidelity": "unverified",
+        "geometry_inputs": [
+          "PROJECTS/PHY_F28/profiles/f28.json#/skull_proxy_layout/ellipsoids/LACRIMAL_R",
+          "model#/reference/statistics/headbreadth",
+          "model#/reference/statistics/headlength",
+          "PROJECTS/PHY_F28/profiles/f28.json#/design_choices_mm/head_height",
+          "model#/height_mm",
+          "model#/scale_from_mean"
+        ],
+        "mesh_ids": [
+          "lacrimal_R"
+        ],
+        "physical_evidence": "unmeasured",
+        "representation": "individual_project_proxy"
+      },
+      "evidence_needed": [
+        "supported_positive_dimensions",
+        "explicit_dataset_binding_or_documented_source_basis",
+        "review_anatomical_relationship_declarations",
+        "dimensional_evidence_review",
+        "qualified_anatomical_geometry",
+        "qualified_articulation_and_transforms",
+        "physical_fabrication_evidence"
+      ],
+      "name": "Lacrimal",
+      "record_validation": {
+        "blocker_categories": [
+          "dataset_schema_mismatch",
+          "mass_inertia_plausibility",
+          "material_incompleteness",
+          "missing_dimension_values",
+          "missing_joint_interfaces",
+          "missing_mount_points",
+          "missing_required_fields"
+        ],
+        "status": "blocked"
+      },
+      "references": {
+        "declarations": [
+          "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-2-the-skull"
+        ],
+        "status": "declared"
+      },
+      "region": "skull",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_lacrimal_r.py",
+        "sha256": "82f4325764c77c6e781e14aaf189f8696b22a8a0d052a06a707491f12208a902",
+        "status": "present"
+      }
+    },
+    {
+      "anatomical_references": {
+        "children": [
+          {
+            "bone_id": null,
+            "candidates": [],
+            "reference": "temporal",
+            "status": "missing"
+          }
+        ],
+        "issues": [
+          {
+            "bone_id": "BONE_MANDIBLE",
+            "candidates": [],
+            "field": "connections.parent",
+            "reference": "temporal",
+            "status": "missing"
+          },
+          {
+            "bone_id": "BONE_MANDIBLE",
+            "candidates": [],
+            "field": "connections.children[0]",
+            "reference": "temporal",
+            "status": "missing"
+          }
+        ],
+        "parent": {
+          "bone_id": null,
+          "candidates": [],
+          "reference": "temporal",
+          "status": "missing"
+        },
+        "parent_cycle": false,
+        "status": "unresolved"
+      },
+      "bone_id": "BONE_MANDIBLE",
+      "canonical_geometry": {
+        "dimension_source": "dimensions",
+        "length_mm": 130.0,
+        "shape": "box",
+        "status": "dimensional_estimate",
+        "thickness_mm": 13.0,
+        "width_mm": 120.0
+      },
+      "canonical_record": {
+        "revision": "1.0.0",
+        "status": "present"
+      },
+      "core_scope": false,
+      "dataset": {
+        "key": "Mandible",
+        "sha256": "c838292fdeda8e7ddbc026f80aaf9bff87a36d7ccd69dda4b2e5614e33496742",
+        "status": "bound"
+      },
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [
+          "height_mm",
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "metric_source_declarations": {
+          "density_kg_m3": "Mandible",
+          "height_cm": "Mandible",
+          "length_cm": "Mandible",
+          "mass_g": "Mandible",
+          "thickness_cm": "Mandible"
+        },
+        "status": "complete",
+        "unknown_keys": [],
+        "values_mm": {
+          "height_mm": 70.0,
+          "length_mm": 130.0,
+          "thickness_mm": 13.0,
+          "width_mm": 120.0
+        }
+      },
+      "display": {
+        "dimensional_fidelity": "unverified",
+        "geometry_inputs": [
+          "PROJECTS/PHY_F28/profiles/f28.json#/skull_proxy_layout/sweeps/MANDIBLE",
+          "model#/reference/statistics/headbreadth",
+          "model#/reference/statistics/headlength",
+          "PROJECTS/PHY_F28/profiles/f28.json#/design_choices_mm/head_height",
+          "model#/height_mm",
+          "model#/scale_from_mean"
+        ],
+        "mesh_ids": [
+          "mandible"
+        ],
+        "physical_evidence": "unmeasured",
+        "representation": "individual_project_proxy"
+      },
+      "evidence_needed": [
+        "traceable_reference_declarations",
+        "review_anatomical_relationship_declarations",
+        "dimensional_evidence_review",
+        "qualified_anatomical_geometry",
+        "qualified_articulation_and_transforms",
+        "physical_fabrication_evidence"
+      ],
+      "name": "Mandible",
+      "record_validation": {
+        "blocker_categories": [
+          "invalid_parent_child_references",
+          "missing_joint_interfaces",
+          "missing_mount_points",
+          "missing_references",
+          "missing_required_fields"
+        ],
+        "status": "blocked"
+      },
+      "references": {
+        "declarations": [],
+        "status": "missing"
+      },
+      "region": "skull",
+      "side": "midline",
+      "source": {
+        "path": "skeleton/bones/bone_mandible.py",
+        "sha256": "1d5034630710b3a614baeee2fdecba04880b54568ee87c04382f5f5b1544841d",
+        "status": "present"
+      }
+    },
+    {
+      "anatomical_references": {
+        "children": [],
+        "issues": [],
+        "parent": {
+          "bone_id": null,
+          "reference": null,
+          "status": "unspecified"
+        },
+        "parent_cycle": false,
+        "status": "undeclared"
+      },
+      "bone_id": "BONE_MAXILLA_L",
+      "canonical_geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "canonical_record": {
+        "revision": "1.0.0",
+        "status": "present"
+      },
+      "core_scope": false,
+      "dataset": {
+        "key": null,
+        "sha256": "c838292fdeda8e7ddbc026f80aaf9bff87a36d7ccd69dda4b2e5614e33496742",
+        "status": "unbound"
+      },
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "display": {
+        "dimensional_fidelity": "unverified",
+        "geometry_inputs": [
+          "PROJECTS/PHY_F28/profiles/f28.json#/skull_proxy_layout/ellipsoids/MAXILLA_R",
+          "model#/reference/statistics/headbreadth",
+          "model#/reference/statistics/headlength",
+          "PROJECTS/PHY_F28/profiles/f28.json#/design_choices_mm/head_height",
+          "model#/height_mm",
+          "model#/scale_from_mean"
+        ],
+        "mesh_ids": [
+          "maxilla_L"
+        ],
+        "physical_evidence": "unmeasured",
+        "representation": "individual_project_proxy"
+      },
+      "evidence_needed": [
+        "supported_positive_dimensions",
+        "explicit_dataset_binding_or_documented_source_basis",
+        "review_anatomical_relationship_declarations",
+        "dimensional_evidence_review",
+        "qualified_anatomical_geometry",
+        "qualified_articulation_and_transforms",
+        "physical_fabrication_evidence"
+      ],
+      "name": "Maxilla",
+      "record_validation": {
+        "blocker_categories": [
+          "dataset_schema_mismatch",
+          "mass_inertia_plausibility",
+          "material_incompleteness",
+          "missing_dimension_values",
+          "missing_joint_interfaces",
+          "missing_mount_points",
+          "missing_required_fields"
+        ],
+        "status": "blocked"
+      },
+      "references": {
+        "declarations": [
+          "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-2-the-skull"
+        ],
+        "status": "declared"
+      },
+      "region": "skull",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_maxilla_l.py",
+        "sha256": "bdb92e91913651e8873f9a760ed3e5283e9c3ebfcbe64d395fe79290dbc99411",
+        "status": "present"
+      }
+    },
+    {
+      "anatomical_references": {
+        "children": [],
+        "issues": [],
+        "parent": {
+          "bone_id": null,
+          "reference": null,
+          "status": "unspecified"
+        },
+        "parent_cycle": false,
+        "status": "undeclared"
+      },
+      "bone_id": "BONE_MAXILLA_R",
+      "canonical_geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "canonical_record": {
+        "revision": "1.0.0",
+        "status": "present"
+      },
+      "core_scope": false,
+      "dataset": {
+        "key": null,
+        "sha256": "c838292fdeda8e7ddbc026f80aaf9bff87a36d7ccd69dda4b2e5614e33496742",
+        "status": "unbound"
+      },
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "display": {
+        "dimensional_fidelity": "unverified",
+        "geometry_inputs": [
+          "PROJECTS/PHY_F28/profiles/f28.json#/skull_proxy_layout/ellipsoids/MAXILLA_R",
+          "model#/reference/statistics/headbreadth",
+          "model#/reference/statistics/headlength",
+          "PROJECTS/PHY_F28/profiles/f28.json#/design_choices_mm/head_height",
+          "model#/height_mm",
+          "model#/scale_from_mean"
+        ],
+        "mesh_ids": [
+          "maxilla_R"
+        ],
+        "physical_evidence": "unmeasured",
+        "representation": "individual_project_proxy"
+      },
+      "evidence_needed": [
+        "supported_positive_dimensions",
+        "explicit_dataset_binding_or_documented_source_basis",
+        "review_anatomical_relationship_declarations",
+        "dimensional_evidence_review",
+        "qualified_anatomical_geometry",
+        "qualified_articulation_and_transforms",
+        "physical_fabrication_evidence"
+      ],
+      "name": "Maxilla",
+      "record_validation": {
+        "blocker_categories": [
+          "dataset_schema_mismatch",
+          "mass_inertia_plausibility",
+          "material_incompleteness",
+          "missing_dimension_values",
+          "missing_joint_interfaces",
+          "missing_mount_points",
+          "missing_required_fields"
+        ],
+        "status": "blocked"
+      },
+      "references": {
+        "declarations": [
+          "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-2-the-skull"
+        ],
+        "status": "declared"
+      },
+      "region": "skull",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_maxilla_r.py",
+        "sha256": "196a1603b4972c80d0e6ad5b3f878dfb7e371524918ea5115f508e93b0de86d9",
+        "status": "present"
+      }
+    },
+    {
+      "anatomical_references": {
+        "children": [],
+        "issues": [],
+        "parent": {
+          "bone_id": null,
+          "reference": null,
+          "status": "unspecified"
+        },
+        "parent_cycle": false,
+        "status": "undeclared"
+      },
+      "bone_id": "BONE_NASAL_L",
+      "canonical_geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "canonical_record": {
+        "revision": "1.0.0",
+        "status": "present"
+      },
+      "core_scope": false,
+      "dataset": {
+        "key": null,
+        "sha256": "c838292fdeda8e7ddbc026f80aaf9bff87a36d7ccd69dda4b2e5614e33496742",
+        "status": "unbound"
+      },
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "display": {
+        "dimensional_fidelity": "unverified",
+        "geometry_inputs": [
+          "PROJECTS/PHY_F28/profiles/f28.json#/skull_proxy_layout/ellipsoids/NASAL_R",
+          "model#/reference/statistics/headbreadth",
+          "model#/reference/statistics/headlength",
+          "PROJECTS/PHY_F28/profiles/f28.json#/design_choices_mm/head_height",
+          "model#/height_mm",
+          "model#/scale_from_mean"
+        ],
+        "mesh_ids": [
+          "nasal_L"
+        ],
+        "physical_evidence": "unmeasured",
+        "representation": "individual_project_proxy"
+      },
+      "evidence_needed": [
+        "supported_positive_dimensions",
+        "explicit_dataset_binding_or_documented_source_basis",
+        "review_anatomical_relationship_declarations",
+        "dimensional_evidence_review",
+        "qualified_anatomical_geometry",
+        "qualified_articulation_and_transforms",
+        "physical_fabrication_evidence"
+      ],
+      "name": "Nasal",
+      "record_validation": {
+        "blocker_categories": [
+          "dataset_schema_mismatch",
+          "mass_inertia_plausibility",
+          "material_incompleteness",
+          "missing_dimension_values",
+          "missing_joint_interfaces",
+          "missing_mount_points",
+          "missing_required_fields"
+        ],
+        "status": "blocked"
+      },
+      "references": {
+        "declarations": [
+          "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-2-the-skull"
+        ],
+        "status": "declared"
+      },
+      "region": "skull",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_nasal_l.py",
+        "sha256": "3683c2420b33666da0d70ae1bf8ea9651c0cb067ecbc47b1008fe6c7b231042f",
+        "status": "present"
+      }
+    },
+    {
+      "anatomical_references": {
+        "children": [],
+        "issues": [],
+        "parent": {
+          "bone_id": null,
+          "reference": null,
+          "status": "unspecified"
+        },
+        "parent_cycle": false,
+        "status": "undeclared"
+      },
+      "bone_id": "BONE_NASAL_R",
+      "canonical_geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "canonical_record": {
+        "revision": "1.0.0",
+        "status": "present"
+      },
+      "core_scope": false,
+      "dataset": {
+        "key": null,
+        "sha256": "c838292fdeda8e7ddbc026f80aaf9bff87a36d7ccd69dda4b2e5614e33496742",
+        "status": "unbound"
+      },
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "display": {
+        "dimensional_fidelity": "unverified",
+        "geometry_inputs": [
+          "PROJECTS/PHY_F28/profiles/f28.json#/skull_proxy_layout/ellipsoids/NASAL_R",
+          "model#/reference/statistics/headbreadth",
+          "model#/reference/statistics/headlength",
+          "PROJECTS/PHY_F28/profiles/f28.json#/design_choices_mm/head_height",
+          "model#/height_mm",
+          "model#/scale_from_mean"
+        ],
+        "mesh_ids": [
+          "nasal_R"
+        ],
+        "physical_evidence": "unmeasured",
+        "representation": "individual_project_proxy"
+      },
+      "evidence_needed": [
+        "supported_positive_dimensions",
+        "explicit_dataset_binding_or_documented_source_basis",
+        "review_anatomical_relationship_declarations",
+        "dimensional_evidence_review",
+        "qualified_anatomical_geometry",
+        "qualified_articulation_and_transforms",
+        "physical_fabrication_evidence"
+      ],
+      "name": "Nasal",
+      "record_validation": {
+        "blocker_categories": [
+          "dataset_schema_mismatch",
+          "mass_inertia_plausibility",
+          "material_incompleteness",
+          "missing_dimension_values",
+          "missing_joint_interfaces",
+          "missing_mount_points",
+          "missing_required_fields"
+        ],
+        "status": "blocked"
+      },
+      "references": {
+        "declarations": [
+          "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-2-the-skull"
+        ],
+        "status": "declared"
+      },
+      "region": "skull",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_nasal_r.py",
+        "sha256": "73b658e9da8821f0fc070a38068283cf8169ab9cfda4dfcd3fe597716ffe9ac6",
+        "status": "present"
+      }
+    },
+    {
+      "anatomical_references": {
+        "children": [],
+        "issues": [],
+        "parent": {
+          "bone_id": null,
+          "reference": null,
+          "status": "unspecified"
+        },
+        "parent_cycle": false,
+        "status": "undeclared"
+      },
+      "bone_id": "BONE_PALATINE_L",
+      "canonical_geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "canonical_record": {
+        "revision": "1.0.0",
+        "status": "present"
+      },
+      "core_scope": false,
+      "dataset": {
+        "key": null,
+        "sha256": "c838292fdeda8e7ddbc026f80aaf9bff87a36d7ccd69dda4b2e5614e33496742",
+        "status": "unbound"
+      },
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "display": {
+        "dimensional_fidelity": "unverified",
+        "geometry_inputs": [
+          "PROJECTS/PHY_F28/profiles/f28.json#/skull_proxy_layout/ellipsoids/PALATINE_R",
+          "model#/reference/statistics/headbreadth",
+          "model#/reference/statistics/headlength",
+          "PROJECTS/PHY_F28/profiles/f28.json#/design_choices_mm/head_height",
+          "model#/height_mm",
+          "model#/scale_from_mean"
+        ],
+        "mesh_ids": [
+          "palatine_L"
+        ],
+        "physical_evidence": "unmeasured",
+        "representation": "individual_project_proxy"
+      },
+      "evidence_needed": [
+        "supported_positive_dimensions",
+        "explicit_dataset_binding_or_documented_source_basis",
+        "review_anatomical_relationship_declarations",
+        "dimensional_evidence_review",
+        "qualified_anatomical_geometry",
+        "qualified_articulation_and_transforms",
+        "physical_fabrication_evidence"
+      ],
+      "name": "Palatine",
+      "record_validation": {
+        "blocker_categories": [
+          "dataset_schema_mismatch",
+          "mass_inertia_plausibility",
+          "material_incompleteness",
+          "missing_dimension_values",
+          "missing_joint_interfaces",
+          "missing_mount_points",
+          "missing_required_fields"
+        ],
+        "status": "blocked"
+      },
+      "references": {
+        "declarations": [
+          "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-2-the-skull"
+        ],
+        "status": "declared"
+      },
+      "region": "skull",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_palatine_l.py",
+        "sha256": "771b5d9b2a403c4a8f8fc3568ed8d7c341cfa986f906f36aa942671dface3db4",
+        "status": "present"
+      }
+    },
+    {
+      "anatomical_references": {
+        "children": [],
+        "issues": [],
+        "parent": {
+          "bone_id": null,
+          "reference": null,
+          "status": "unspecified"
+        },
+        "parent_cycle": false,
+        "status": "undeclared"
+      },
+      "bone_id": "BONE_PALATINE_R",
+      "canonical_geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "canonical_record": {
+        "revision": "1.0.0",
+        "status": "present"
+      },
+      "core_scope": false,
+      "dataset": {
+        "key": null,
+        "sha256": "c838292fdeda8e7ddbc026f80aaf9bff87a36d7ccd69dda4b2e5614e33496742",
+        "status": "unbound"
+      },
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "display": {
+        "dimensional_fidelity": "unverified",
+        "geometry_inputs": [
+          "PROJECTS/PHY_F28/profiles/f28.json#/skull_proxy_layout/ellipsoids/PALATINE_R",
+          "model#/reference/statistics/headbreadth",
+          "model#/reference/statistics/headlength",
+          "PROJECTS/PHY_F28/profiles/f28.json#/design_choices_mm/head_height",
+          "model#/height_mm",
+          "model#/scale_from_mean"
+        ],
+        "mesh_ids": [
+          "palatine_R"
+        ],
+        "physical_evidence": "unmeasured",
+        "representation": "individual_project_proxy"
+      },
+      "evidence_needed": [
+        "supported_positive_dimensions",
+        "explicit_dataset_binding_or_documented_source_basis",
+        "review_anatomical_relationship_declarations",
+        "dimensional_evidence_review",
+        "qualified_anatomical_geometry",
+        "qualified_articulation_and_transforms",
+        "physical_fabrication_evidence"
+      ],
+      "name": "Palatine",
+      "record_validation": {
+        "blocker_categories": [
+          "dataset_schema_mismatch",
+          "mass_inertia_plausibility",
+          "material_incompleteness",
+          "missing_dimension_values",
+          "missing_joint_interfaces",
+          "missing_mount_points",
+          "missing_required_fields"
+        ],
+        "status": "blocked"
+      },
+      "references": {
+        "declarations": [
+          "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-2-the-skull"
+        ],
+        "status": "declared"
+      },
+      "region": "skull",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_palatine_r.py",
+        "sha256": "327de47feb76cbb89ac9b989e0706df41b3d2cb887ba862ec7c3a2b07397c4bd",
+        "status": "present"
+      }
+    },
+    {
+      "anatomical_references": {
+        "children": [
+          {
+            "bone_id": null,
+            "candidates": [],
+            "reference": "frontal",
+            "status": "missing"
+          }
+        ],
+        "issues": [
+          {
+            "bone_id": "BONE_SPHENOID",
+            "candidates": [],
+            "field": "connections.parent",
+            "reference": "frontal",
+            "status": "missing"
+          },
+          {
+            "bone_id": "BONE_SPHENOID",
+            "candidates": [],
+            "field": "connections.children[0]",
+            "reference": "frontal",
+            "status": "missing"
+          }
+        ],
+        "parent": {
+          "bone_id": null,
+          "candidates": [],
+          "reference": "frontal",
+          "status": "missing"
+        },
+        "parent_cycle": false,
+        "status": "unresolved"
+      },
+      "bone_id": "BONE_SPHENOID",
+      "canonical_geometry": {
+        "dimension_source": "dimensions",
+        "length_mm": 60.0,
+        "shape": "box",
+        "status": "dimensional_estimate",
+        "thickness_mm": 5.0,
+        "width_mm": 80.0
+      },
+      "canonical_record": {
+        "revision": "1.0.0",
+        "status": "present"
+      },
+      "core_scope": false,
+      "dataset": {
+        "key": null,
+        "sha256": "c838292fdeda8e7ddbc026f80aaf9bff87a36d7ccd69dda4b2e5614e33496742",
+        "status": "unbound"
+      },
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "metric_source_declarations": {},
+        "status": "complete",
+        "unknown_keys": [],
+        "values_mm": {
+          "length_mm": 60.0,
+          "thickness_mm": 5.0,
+          "width_mm": 80.0
+        }
+      },
+      "display": {
+        "dimensional_fidelity": "unverified",
+        "geometry_inputs": [
+          "PROJECTS/PHY_F28/profiles/f28.json#/skull_proxy_layout/ellipsoids/SPHENOID",
+          "model#/reference/statistics/headbreadth",
+          "model#/reference/statistics/headlength",
+          "PROJECTS/PHY_F28/profiles/f28.json#/design_choices_mm/head_height",
+          "model#/height_mm",
+          "model#/scale_from_mean"
+        ],
+        "mesh_ids": [
+          "sphenoid"
+        ],
+        "physical_evidence": "unmeasured",
+        "representation": "individual_project_proxy"
+      },
+      "evidence_needed": [
+        "explicit_dataset_binding_or_documented_source_basis",
+        "traceable_reference_declarations",
+        "review_anatomical_relationship_declarations",
+        "dimensional_evidence_review",
+        "qualified_anatomical_geometry",
+        "qualified_articulation_and_transforms",
+        "physical_fabrication_evidence"
+      ],
+      "name": "Sphenoid",
+      "record_validation": {
+        "blocker_categories": [
+          "dataset_schema_mismatch",
+          "invalid_parent_child_references",
+          "missing_joint_interfaces",
+          "missing_mount_points",
+          "missing_references",
+          "missing_required_fields"
+        ],
+        "status": "blocked"
+      },
+      "references": {
+        "declarations": [],
+        "status": "missing"
+      },
+      "region": "skull",
+      "side": "midline",
+      "source": {
+        "path": "skeleton/bones/bone_sphenoid.py",
+        "sha256": "ddedc46a2b38ba9e18eaf586610cb6e10eeb76ab94785346f1851dc62e047166",
+        "status": "present"
+      }
+    },
+    {
+      "anatomical_references": {
+        "children": [
+          {
+            "bone_id": null,
+            "candidates": [],
+            "reference": "mandible",
+            "status": "missing"
+          }
+        ],
+        "issues": [
+          {
+            "bone_id": "BONE_TEMP_L",
+            "candidates": [],
+            "field": "connections.parent",
+            "reference": "parietal",
+            "status": "missing"
+          },
+          {
+            "bone_id": "BONE_TEMP_L",
+            "candidates": [],
+            "field": "connections.children[0]",
+            "reference": "mandible",
+            "status": "missing"
+          }
+        ],
+        "parent": {
+          "bone_id": null,
+          "candidates": [],
+          "reference": "parietal",
+          "status": "missing"
+        },
+        "parent_cycle": false,
+        "status": "unresolved"
+      },
+      "bone_id": "BONE_TEMP_L",
+      "canonical_geometry": {
+        "dimension_source": "dimensions",
+        "length_mm": 70.0,
+        "shape": "box",
+        "status": "dimensional_estimate",
+        "thickness_mm": 5.0,
+        "width_mm": 70.0
+      },
+      "canonical_record": {
+        "revision": "1.0.0",
+        "status": "present"
+      },
+      "core_scope": false,
+      "dataset": {
+        "key": null,
+        "sha256": "c838292fdeda8e7ddbc026f80aaf9bff87a36d7ccd69dda4b2e5614e33496742",
+        "status": "unbound"
+      },
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "metric_source_declarations": {},
+        "status": "complete",
+        "unknown_keys": [],
+        "values_mm": {
+          "length_mm": 70.0,
+          "thickness_mm": 5.0,
+          "width_mm": 70.0
+        }
+      },
+      "display": {
+        "dimensional_fidelity": "unverified",
+        "geometry_inputs": [
+          "PROJECTS/PHY_F28/profiles/f28.json#/skull_proxy_layout/shells/TEMP_R",
+          "model#/reference/statistics/headbreadth",
+          "model#/reference/statistics/headlength",
+          "PROJECTS/PHY_F28/profiles/f28.json#/design_choices_mm/head_height",
+          "model#/height_mm",
+          "model#/scale_from_mean",
+          "PROJECTS/PHY_F28/profiles/f28.json#/skull_proxy_layout/shell_inset_mm",
+          "PROJECTS/PHY_F28/profiles/f28.json#/skull_proxy_layout/shell_thickness_mm",
+          "PROJECTS/PHY_F28/profiles/f28.json#/skull_proxy_layout/shell_samples"
+        ],
+        "mesh_ids": [
+          "temp_L"
+        ],
+        "physical_evidence": "unmeasured",
+        "representation": "individual_project_proxy"
+      },
+      "evidence_needed": [
+        "explicit_dataset_binding_or_documented_source_basis",
+        "traceable_reference_declarations",
+        "review_anatomical_relationship_declarations",
+        "dimensional_evidence_review",
+        "qualified_anatomical_geometry",
+        "qualified_articulation_and_transforms",
+        "physical_fabrication_evidence"
+      ],
+      "name": "Temporal",
+      "record_validation": {
+        "blocker_categories": [
+          "dataset_schema_mismatch",
+          "invalid_parent_child_references",
+          "missing_joint_interfaces",
+          "missing_mount_points",
+          "missing_references",
+          "missing_required_fields"
+        ],
+        "status": "blocked"
+      },
+      "references": {
+        "declarations": [],
+        "status": "missing"
+      },
+      "region": "skull",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_temp_l.py",
+        "sha256": "1857748a1bd15e5536303d8e5be8be3434009a1376bbbc1425952613518d497a",
+        "status": "present"
+      }
+    },
+    {
+      "anatomical_references": {
+        "children": [
+          {
+            "bone_id": null,
+            "candidates": [],
+            "reference": "mandible",
+            "status": "missing"
+          }
+        ],
+        "issues": [
+          {
+            "bone_id": "BONE_TEMP_R",
+            "candidates": [],
+            "field": "connections.parent",
+            "reference": "parietal",
+            "status": "missing"
+          },
+          {
+            "bone_id": "BONE_TEMP_R",
+            "candidates": [],
+            "field": "connections.children[0]",
+            "reference": "mandible",
+            "status": "missing"
+          }
+        ],
+        "parent": {
+          "bone_id": null,
+          "candidates": [],
+          "reference": "parietal",
+          "status": "missing"
+        },
+        "parent_cycle": false,
+        "status": "unresolved"
+      },
+      "bone_id": "BONE_TEMP_R",
+      "canonical_geometry": {
+        "dimension_source": "dimensions",
+        "length_mm": 70.0,
+        "shape": "box",
+        "status": "dimensional_estimate",
+        "thickness_mm": 5.0,
+        "width_mm": 70.0
+      },
+      "canonical_record": {
+        "revision": "1.0.0",
+        "status": "present"
+      },
+      "core_scope": false,
+      "dataset": {
+        "key": null,
+        "sha256": "c838292fdeda8e7ddbc026f80aaf9bff87a36d7ccd69dda4b2e5614e33496742",
+        "status": "unbound"
+      },
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "metric_source_declarations": {},
+        "status": "complete",
+        "unknown_keys": [],
+        "values_mm": {
+          "length_mm": 70.0,
+          "thickness_mm": 5.0,
+          "width_mm": 70.0
+        }
+      },
+      "display": {
+        "dimensional_fidelity": "unverified",
+        "geometry_inputs": [
+          "PROJECTS/PHY_F28/profiles/f28.json#/skull_proxy_layout/shells/TEMP_R",
+          "model#/reference/statistics/headbreadth",
+          "model#/reference/statistics/headlength",
+          "PROJECTS/PHY_F28/profiles/f28.json#/design_choices_mm/head_height",
+          "model#/height_mm",
+          "model#/scale_from_mean",
+          "PROJECTS/PHY_F28/profiles/f28.json#/skull_proxy_layout/shell_inset_mm",
+          "PROJECTS/PHY_F28/profiles/f28.json#/skull_proxy_layout/shell_thickness_mm",
+          "PROJECTS/PHY_F28/profiles/f28.json#/skull_proxy_layout/shell_samples"
+        ],
+        "mesh_ids": [
+          "temp_R"
+        ],
+        "physical_evidence": "unmeasured",
+        "representation": "individual_project_proxy"
+      },
+      "evidence_needed": [
+        "explicit_dataset_binding_or_documented_source_basis",
+        "traceable_reference_declarations",
+        "review_anatomical_relationship_declarations",
+        "dimensional_evidence_review",
+        "qualified_anatomical_geometry",
+        "qualified_articulation_and_transforms",
+        "physical_fabrication_evidence"
+      ],
+      "name": "Temporal",
+      "record_validation": {
+        "blocker_categories": [
+          "dataset_schema_mismatch",
+          "invalid_parent_child_references",
+          "missing_joint_interfaces",
+          "missing_mount_points",
+          "missing_references",
+          "missing_required_fields"
+        ],
+        "status": "blocked"
+      },
+      "references": {
+        "declarations": [],
+        "status": "missing"
+      },
+      "region": "skull",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_temp_r.py",
+        "sha256": "03f177ff2e6d282327391dfb72d4746e6e2365aec0d0efb4cdb73ea90f69ddc4",
+        "status": "present"
+      }
+    },
+    {
+      "anatomical_references": {
+        "children": [],
+        "issues": [],
+        "parent": {
+          "bone_id": null,
+          "reference": null,
+          "status": "unspecified"
+        },
+        "parent_cycle": false,
+        "status": "undeclared"
+      },
+      "bone_id": "BONE_VOMER",
+      "canonical_geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "canonical_record": {
+        "revision": "1.0.0",
+        "status": "present"
+      },
+      "core_scope": false,
+      "dataset": {
+        "key": null,
+        "sha256": "c838292fdeda8e7ddbc026f80aaf9bff87a36d7ccd69dda4b2e5614e33496742",
+        "status": "unbound"
+      },
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "display": {
+        "dimensional_fidelity": "unverified",
+        "geometry_inputs": [
+          "PROJECTS/PHY_F28/profiles/f28.json#/skull_proxy_layout/ellipsoids/VOMER",
+          "model#/reference/statistics/headbreadth",
+          "model#/reference/statistics/headlength",
+          "PROJECTS/PHY_F28/profiles/f28.json#/design_choices_mm/head_height",
+          "model#/height_mm",
+          "model#/scale_from_mean"
+        ],
+        "mesh_ids": [
+          "vomer"
+        ],
+        "physical_evidence": "unmeasured",
+        "representation": "individual_project_proxy"
+      },
+      "evidence_needed": [
+        "supported_positive_dimensions",
+        "explicit_dataset_binding_or_documented_source_basis",
+        "review_anatomical_relationship_declarations",
+        "dimensional_evidence_review",
+        "qualified_anatomical_geometry",
+        "qualified_articulation_and_transforms",
+        "physical_fabrication_evidence"
+      ],
+      "name": "Vomer",
+      "record_validation": {
+        "blocker_categories": [
+          "dataset_schema_mismatch",
+          "mass_inertia_plausibility",
+          "material_incompleteness",
+          "missing_dimension_values",
+          "missing_joint_interfaces",
+          "missing_mount_points",
+          "missing_required_fields"
+        ],
+        "status": "blocked"
+      },
+      "references": {
+        "declarations": [
+          "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-2-the-skull"
+        ],
+        "status": "declared"
+      },
+      "region": "skull",
+      "side": "midline",
+      "source": {
+        "path": "skeleton/bones/bone_vomer.py",
+        "sha256": "f2dcd3945373dfc75a3b29e9d9ea51912c009905f2aee0c63b26e1182bdac974",
+        "status": "present"
+      }
+    },
+    {
+      "anatomical_references": {
+        "children": [],
+        "issues": [],
+        "parent": {
+          "bone_id": null,
+          "reference": null,
+          "status": "unspecified"
+        },
+        "parent_cycle": false,
+        "status": "undeclared"
+      },
+      "bone_id": "BONE_ZYGOMATIC_L",
+      "canonical_geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "canonical_record": {
+        "revision": "1.0.0",
+        "status": "present"
+      },
+      "core_scope": false,
+      "dataset": {
+        "key": null,
+        "sha256": "c838292fdeda8e7ddbc026f80aaf9bff87a36d7ccd69dda4b2e5614e33496742",
+        "status": "unbound"
+      },
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "display": {
+        "dimensional_fidelity": "unverified",
+        "geometry_inputs": [
+          "PROJECTS/PHY_F28/profiles/f28.json#/skull_proxy_layout/sweeps/ZYGOMATIC_R",
+          "model#/reference/statistics/headbreadth",
+          "model#/reference/statistics/headlength",
+          "PROJECTS/PHY_F28/profiles/f28.json#/design_choices_mm/head_height",
+          "model#/height_mm",
+          "model#/scale_from_mean"
+        ],
+        "mesh_ids": [
+          "zygomatic_L"
+        ],
+        "physical_evidence": "unmeasured",
+        "representation": "individual_project_proxy"
+      },
+      "evidence_needed": [
+        "supported_positive_dimensions",
+        "explicit_dataset_binding_or_documented_source_basis",
+        "review_anatomical_relationship_declarations",
+        "dimensional_evidence_review",
+        "qualified_anatomical_geometry",
+        "qualified_articulation_and_transforms",
+        "physical_fabrication_evidence"
+      ],
+      "name": "Zygomatic",
+      "record_validation": {
+        "blocker_categories": [
+          "dataset_schema_mismatch",
+          "mass_inertia_plausibility",
+          "material_incompleteness",
+          "missing_dimension_values",
+          "missing_joint_interfaces",
+          "missing_mount_points",
+          "missing_required_fields"
+        ],
+        "status": "blocked"
+      },
+      "references": {
+        "declarations": [
+          "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-2-the-skull"
+        ],
+        "status": "declared"
+      },
+      "region": "skull",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_zygomatic_l.py",
+        "sha256": "ffe2775ce313164aff52de4c6b82a15410ce559ed5baf658e3af78ed99b72a23",
+        "status": "present"
+      }
+    },
+    {
+      "anatomical_references": {
+        "children": [],
+        "issues": [],
+        "parent": {
+          "bone_id": null,
+          "reference": null,
+          "status": "unspecified"
+        },
+        "parent_cycle": false,
+        "status": "undeclared"
+      },
+      "bone_id": "BONE_ZYGOMATIC_R",
+      "canonical_geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "canonical_record": {
+        "revision": "1.0.0",
+        "status": "present"
+      },
+      "core_scope": false,
+      "dataset": {
+        "key": null,
+        "sha256": "c838292fdeda8e7ddbc026f80aaf9bff87a36d7ccd69dda4b2e5614e33496742",
+        "status": "unbound"
+      },
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "display": {
+        "dimensional_fidelity": "unverified",
+        "geometry_inputs": [
+          "PROJECTS/PHY_F28/profiles/f28.json#/skull_proxy_layout/sweeps/ZYGOMATIC_R",
+          "model#/reference/statistics/headbreadth",
+          "model#/reference/statistics/headlength",
+          "PROJECTS/PHY_F28/profiles/f28.json#/design_choices_mm/head_height",
+          "model#/height_mm",
+          "model#/scale_from_mean"
+        ],
+        "mesh_ids": [
+          "zygomatic_R"
+        ],
+        "physical_evidence": "unmeasured",
+        "representation": "individual_project_proxy"
+      },
+      "evidence_needed": [
+        "supported_positive_dimensions",
+        "explicit_dataset_binding_or_documented_source_basis",
+        "review_anatomical_relationship_declarations",
+        "dimensional_evidence_review",
+        "qualified_anatomical_geometry",
+        "qualified_articulation_and_transforms",
+        "physical_fabrication_evidence"
+      ],
+      "name": "Zygomatic",
+      "record_validation": {
+        "blocker_categories": [
+          "dataset_schema_mismatch",
+          "mass_inertia_plausibility",
+          "material_incompleteness",
+          "missing_dimension_values",
+          "missing_joint_interfaces",
+          "missing_mount_points",
+          "missing_required_fields"
+        ],
+        "status": "blocked"
+      },
+      "references": {
+        "declarations": [
+          "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-2-the-skull"
+        ],
+        "status": "declared"
+      },
+      "region": "skull",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_zygomatic_r.py",
+        "sha256": "3510fb8f1c80a9128b0d3f14bf7db06157d1caf7a2a3c472b32d47c15fc73bd2",
+        "status": "present"
+      }
+    }
+  ],
+  "catalog_version": "1.0.0",
+  "counts": {
+    "canonical_records_present": 17,
+    "individual_display_proxies": 17,
+    "mechanically_defined_articulations": 0,
+    "participating_bone_identities": 17,
+    "qualitative_articulations": 2,
+    "spatially_defined_regions": 0,
+    "structural_regions": 7
+  },
+  "head_guide_context": {
+    "age_years": 28,
+    "axes": [
+      {
+        "axis": "x",
+        "basis": "external_cohort_marginal_mean",
+        "field": "headbreadth",
+        "guide_value_mm": 151.933203,
+        "statistics": {
+          "mean_mm": 147.945652,
+          "n": 92,
+          "sd_mm": 4.940001
+        }
+      },
+      {
+        "axis": "y",
+        "basis": "external_cohort_marginal_mean",
+        "field": "headlength",
+        "guide_value_mm": 195.221497,
+        "statistics": {
+          "mean_mm": 190.097826,
+          "n": 92,
+          "sd_mm": 8.017919
+        }
+      },
+      {
+        "axis": "z",
+        "base_value_mm": 220,
+        "basis": "project_design_choice",
+        "field": "head_height",
+        "guide_value_mm": 225.929618,
+        "source": "PROJECTS/PHY_F28/profiles/f28.json#/design_choices_mm/head_height"
+      }
+    ],
+    "canon_effect": "none",
+    "cohort_n": 92,
+    "height_mm": 1676.4,
+    "model_id": "PHY_F28_R1",
+    "population": "Measured female US Army personnel, 2010\u20132012. Not a representative civilian or worldwide sample.",
+    "scale_from_mean": 1.026952810220896,
+    "snapshot_sha256": "efae9a08a90f68e4418251621d0065da849efef7b389835cc8557c3f0287ebbe",
+    "source_id": "ANSUR_II_FEMALE_2012",
+    "status": "external_envelope_inputs_not_bone_or_facial_landmark_measurements"
+  },
+  "inputs": {
+    "canonical_records_sha256": "890b4c7307aa43e23b53818c08a2b23e793d104b087376d6b90f6e93216c1c15",
+    "catalog_sha256": "5d92a2ae9003700d8480d9c027f56d1876388dec58f83fcd4ce881aaf8ef6b40",
+    "datasets": [
+      {
+        "bone_ids": [
+          "BONE_C1",
+          "BONE_C2",
+          "BONE_C3",
+          "BONE_C4",
+          "BONE_C5",
+          "BONE_C6",
+          "BONE_C7",
+          "BONE_CALCANEUS_L",
+          "BONE_CALCANEUS_R",
+          "BONE_CAPITATE_L",
+          "BONE_CAPITATE_R",
+          "BONE_CLAVICLE_L",
+          "BONE_CLAVICLE_R",
+          "BONE_COCCYX",
+          "BONE_CUBOID_L",
+          "BONE_CUBOID_R",
+          "BONE_ETHMOID",
+          "BONE_FEMUR_L",
+          "BONE_FEMUR_R",
+          "BONE_FIBULA_L",
+          "BONE_FIBULA_R",
+          "BONE_FRONTAL",
+          "BONE_HAMATE_L",
+          "BONE_HAMATE_R",
+          "BONE_HIP_L",
+          "BONE_HIP_R",
+          "BONE_HUMERUS_L",
+          "BONE_HUMERUS_R",
+          "BONE_HYOID",
+          "BONE_INCUS_L",
+          "BONE_INCUS_R",
+          "BONE_INFERIOR_NASAL_CONCHA_L",
+          "BONE_INFERIOR_NASAL_CONCHA_R",
+          "BONE_INTERMEDIATE_CUNEIFORM_L",
+          "BONE_INTERMEDIATE_CUNEIFORM_R",
+          "BONE_L1",
+          "BONE_L2",
+          "BONE_L3",
+          "BONE_L4",
+          "BONE_L5",
+          "BONE_LACRIMAL_L",
+          "BONE_LACRIMAL_R",
+          "BONE_LATERAL_CUNEIFORM_L",
+          "BONE_LATERAL_CUNEIFORM_R",
+          "BONE_LUNATE_L",
+          "BONE_LUNATE_R",
+          "BONE_MALLEUS_L",
+          "BONE_MALLEUS_R",
+          "BONE_MANDIBLE",
+          "BONE_MAXILLA_L",
+          "BONE_MAXILLA_R",
+          "BONE_MEDIAL_CUNEIFORM_L",
+          "BONE_MEDIAL_CUNEIFORM_R",
+          "BONE_META1_L",
+          "BONE_META1_R",
+          "BONE_META2_L",
+          "BONE_META2_R",
+          "BONE_META3_L",
+          "BONE_META3_R",
+          "BONE_META4_L",
+          "BONE_META4_R",
+          "BONE_META5_L",
+          "BONE_META5_R",
+          "BONE_MT1_L",
+          "BONE_MT1_R",
+          "BONE_MT2_L",
+          "BONE_MT2_R",
+          "BONE_MT3_L",
+          "BONE_MT3_R",
+          "BONE_MT4_L",
+          "BONE_MT4_R",
+          "BONE_MT5_L",
+          "BONE_MT5_R",
+          "BONE_NASAL_L",
+          "BONE_NASAL_R",
+          "BONE_NAVICULAR_L",
+          "BONE_NAVICULAR_R",
+          "BONE_OCCIPITAL",
+          "BONE_PALATINE_L",
+          "BONE_PALATINE_R",
+          "BONE_PAR_L",
+          "BONE_PAR_R",
+          "BONE_PATELLA_L",
+          "BONE_PATELLA_R",
+          "BONE_PHAL_1_1_L",
+          "BONE_PHAL_1_1_R",
+          "BONE_PHAL_1_2_L",
+          "BONE_PHAL_1_2_R",
+          "BONE_PHAL_2_1_L",
+          "BONE_PHAL_2_1_R",
+          "BONE_PHAL_2_2_L",
+          "BONE_PHAL_2_2_R",
+          "BONE_PHAL_2_3_L",
+          "BONE_PHAL_2_3_R",
+          "BONE_PHAL_3_1_L",
+          "BONE_PHAL_3_1_R",
+          "BONE_PHAL_3_2_L",
+          "BONE_PHAL_3_2_R",
+          "BONE_PHAL_3_3_L",
+          "BONE_PHAL_3_3_R",
+          "BONE_PHAL_4_1_L",
+          "BONE_PHAL_4_1_R",
+          "BONE_PHAL_4_2_L",
+          "BONE_PHAL_4_2_R",
+          "BONE_PHAL_4_3_L",
+          "BONE_PHAL_4_3_R",
+          "BONE_PHAL_5_1_L",
+          "BONE_PHAL_5_1_R",
+          "BONE_PHAL_5_2_L",
+          "BONE_PHAL_5_2_R",
+          "BONE_PHAL_5_3_L",
+          "BONE_PHAL_5_3_R",
+          "BONE_PISIFORM_L",
+          "BONE_PISIFORM_R",
+          "BONE_RADIUS_L",
+          "BONE_RADIUS_R",
+          "BONE_RIB10_L",
+          "BONE_RIB10_R",
+          "BONE_RIB11_L",
+          "BONE_RIB11_R",
+          "BONE_RIB12_L",
+          "BONE_RIB12_R",
+          "BONE_RIB1_L",
+          "BONE_RIB1_R",
+          "BONE_RIB2_L",
+          "BONE_RIB2_R",
+          "BONE_RIB3_L",
+          "BONE_RIB3_R",
+          "BONE_RIB4_L",
+          "BONE_RIB4_R",
+          "BONE_RIB5_L",
+          "BONE_RIB5_R",
+          "BONE_RIB6_L",
+          "BONE_RIB6_R",
+          "BONE_RIB7_L",
+          "BONE_RIB7_R",
+          "BONE_RIB8_L",
+          "BONE_RIB8_R",
+          "BONE_RIB9_L",
+          "BONE_RIB9_R",
+          "BONE_SACRUM",
+          "BONE_SCAPHOID_L",
+          "BONE_SCAPHOID_R",
+          "BONE_SCAPULA_L",
+          "BONE_SCAPULA_R",
+          "BONE_SPHENOID",
+          "BONE_STAPES_L",
+          "BONE_STAPES_R",
+          "BONE_STERNUM",
+          "BONE_T1",
+          "BONE_T10",
+          "BONE_T11",
+          "BONE_T12",
+          "BONE_T2",
+          "BONE_T3",
+          "BONE_T4",
+          "BONE_T5",
+          "BONE_T6",
+          "BONE_T7",
+          "BONE_T8",
+          "BONE_T9",
+          "BONE_TALUS_L",
+          "BONE_TALUS_R",
+          "BONE_TEMP_L",
+          "BONE_TEMP_R",
+          "BONE_TIBIA_L",
+          "BONE_TIBIA_R",
+          "BONE_TRAPEZIUM_L",
+          "BONE_TRAPEZIUM_R",
+          "BONE_TRAPEZOID_L",
+          "BONE_TRAPEZOID_R",
+          "BONE_TRIQUETRUM_L",
+          "BONE_TRIQUETRUM_R",
+          "BONE_T_PHAL_1_1_L",
+          "BONE_T_PHAL_1_1_R",
+          "BONE_T_PHAL_1_2_L",
+          "BONE_T_PHAL_1_2_R",
+          "BONE_T_PHAL_2_1_L",
+          "BONE_T_PHAL_2_1_R",
+          "BONE_T_PHAL_2_2_L",
+          "BONE_T_PHAL_2_2_R",
+          "BONE_T_PHAL_2_3_L",
+          "BONE_T_PHAL_2_3_R",
+          "BONE_T_PHAL_3_1_L",
+          "BONE_T_PHAL_3_1_R",
+          "BONE_T_PHAL_3_2_L",
+          "BONE_T_PHAL_3_2_R",
+          "BONE_T_PHAL_3_3_L",
+          "BONE_T_PHAL_3_3_R",
+          "BONE_T_PHAL_4_1_L",
+          "BONE_T_PHAL_4_1_R",
+          "BONE_T_PHAL_4_2_L",
+          "BONE_T_PHAL_4_2_R",
+          "BONE_T_PHAL_4_3_L",
+          "BONE_T_PHAL_4_3_R",
+          "BONE_T_PHAL_5_1_L",
+          "BONE_T_PHAL_5_1_R",
+          "BONE_T_PHAL_5_2_L",
+          "BONE_T_PHAL_5_2_R",
+          "BONE_T_PHAL_5_3_L",
+          "BONE_T_PHAL_5_3_R",
+          "BONE_ULNA_L",
+          "BONE_ULNA_R",
+          "BONE_VOMER",
+          "BONE_ZYGOMATIC_L",
+          "BONE_ZYGOMATIC_R"
+        ],
+        "sha256": "c838292fdeda8e7ddbc026f80aaf9bff87a36d7ccd69dda4b2e5614e33496742"
+      }
+    ],
+    "display_parts_sha256": "9ccb683c7b1ed068113d13ef607618ddfa01e0a1824959fa71c6697158373986",
+    "head_profile_sha256": "8943e0a1d3f07ecf2113d8cd149ababd62b226f7b9b423b82ef29b5e81a2922a",
+    "inventory_sha256": "960f6fe918c3018d1be33374f6f9c4a6cf026b30af2a5c5f5c1d5c7e8588b0e9"
+  },
+  "inventory_version": "PHY_ADULT_206_V1",
+  "limitations": [
+    "Selected structures only; not a complete skull contact or suture graph.",
+    "Region participation does not imply pairwise contact, a rigid parent or a mount.",
+    "Anatomical TMJ declarations do not resolve legacy temporal references or qualify mechanisms.",
+    "External head means and a project head-height choice do not locate orbital centers or define bone-to-skin offsets.",
+    "Perception research is adjacent design context; it does not qualify skeletal dimensions.",
+    "Source scopes are curated declarations; this offline audit does not verify publisher text."
+  ],
+  "mandibular_system": {
+    "articulation_ids": [
+      "tmj_l",
+      "tmj_r"
+    ],
+    "engineering_definition": null,
+    "shared_moving_bone_id": "BONE_MANDIBLE"
+  },
+  "qualification": {
+    "anatomical_geometry": "unqualified",
+    "articulation": "unqualified",
+    "basis": "No independent reference-body qualification contract or physical acceptance evidence is evaluated by this audit.",
+    "canonical_face_landmarks": "unbound",
+    "dimensional_fidelity": "unverified",
+    "external_feature_fit": "unresolved",
+    "fabrication_released": false,
+    "facial_ratios_adopted": false,
+    "mechanical_transforms": "unresolved",
+    "physical_evidence": "unmeasured"
+  },
+  "regions": [
+    {
+      "contributions": [
+        {
+          "bone_id": "BONE_MAXILLA_L",
+          "role": "anterior palate; upper jaw and tooth support"
+        },
+        {
+          "bone_id": "BONE_MAXILLA_R",
+          "role": "anterior palate; upper jaw and tooth support"
+        },
+        {
+          "bone_id": "BONE_PALATINE_L",
+          "role": "posterior palate"
+        },
+        {
+          "bone_id": "BONE_PALATINE_R",
+          "role": "posterior palate"
+        }
+      ],
+      "evidence_needed": [
+        "Palatal and maxillary surfaces",
+        "Oral and nasal envelopes",
+        "Dentition or mechanical substitute and occlusal datum"
+      ],
+      "external_overlap": [
+        "Oral and nasal cavity separation; upper dentition and mouth envelope"
+      ],
+      "locator": "Maxillary Bone; Palatine Bone; Figure 7.8",
+      "missing_canonical_records": [],
+      "missing_display_proxies": [],
+      "name": "Hard palate and upper oral boundary",
+      "region_id": "hard_palate",
+      "side": "midline",
+      "source_id": "OPENSTAX_AP2E_7_2_CRANIOFACIAL",
+      "spatial_definition": null
+    },
+    {
+      "contributions": [
+        {
+          "bone_id": "BONE_MANDIBLE",
+          "role": "lower jaw, lower tooth support and bony chin"
+        }
+      ],
+      "evidence_needed": [
+        "Mandibular surfaces and landmarks",
+        "Coupled bilateral TMJ trajectory",
+        "Occlusal geometry, chin offsets and lip swept clearance"
+      ],
+      "external_overlap": [
+        "Moving lower mouth envelope and chin support; lip and chin surfaces remain separate"
+      ],
+      "locator": "Mandible; Figure 7.15",
+      "missing_canonical_records": [],
+      "missing_display_proxies": [],
+      "name": "Single adult mandibular unit",
+      "region_id": "mandibular_unit",
+      "side": "midline",
+      "source_id": "OPENSTAX_AP2E_7_2_CRANIOFACIAL",
+      "spatial_definition": null
+    },
+    {
+      "contributions": [
+        {
+          "bone_id": "BONE_NASAL_L",
+          "role": "paired bridge and cartilage support"
+        },
+        {
+          "bone_id": "BONE_NASAL_R",
+          "role": "paired bridge and cartilage support"
+        }
+      ],
+      "evidence_needed": [
+        "Nasal bone surfaces and landmarks",
+        "Cartilage or shell layout",
+        "Bone to external surface offsets"
+      ],
+      "external_overlap": [
+        "Nasal shell support; external tip and alar shape require separate definition"
+      ],
+      "locator": "Nasal Bone",
+      "missing_canonical_records": [],
+      "missing_display_proxies": [],
+      "name": "Bony nasal bridge",
+      "region_id": "nasal_bridge",
+      "side": "midline",
+      "source_id": "OPENSTAX_AP2E_7_2_CRANIOFACIAL",
+      "spatial_definition": null
+    },
+    {
+      "contributions": [
+        {
+          "bone_id": "BONE_ETHMOID",
+          "role": "upper bony septum"
+        },
+        {
+          "bone_id": "BONE_VOMER",
+          "role": "posterior and inferior bony septum"
+        }
+      ],
+      "evidence_needed": [
+        "Septal surfaces",
+        "Nasal chamber clearance requirements",
+        "Anterior cartilage or substitute geometry"
+      ],
+      "external_overlap": [
+        "Nasal chamber separation; anterior septal cartilage remains outside this bone map"
+      ],
+      "locator": "The Nasal Septum and Nasal Conchae; Figure 7.17",
+      "missing_canonical_records": [],
+      "missing_display_proxies": [],
+      "name": "Bony nasal septum",
+      "region_id": "nasal_septum",
+      "side": "midline",
+      "source_id": "OPENSTAX_AP2E_7_2_CRANIOFACIAL",
+      "spatial_definition": null
+    },
+    {
+      "contributions": [
+        {
+          "bone_id": "BONE_ETHMOID",
+          "role": "medial wall"
+        },
+        {
+          "bone_id": "BONE_FRONTAL",
+          "role": "roof"
+        },
+        {
+          "bone_id": "BONE_LACRIMAL_L",
+          "role": "medial wall"
+        },
+        {
+          "bone_id": "BONE_MAXILLA_L",
+          "role": "medial floor"
+        },
+        {
+          "bone_id": "BONE_PALATINE_L",
+          "role": "small floor contribution"
+        },
+        {
+          "bone_id": "BONE_SPHENOID",
+          "role": "posterior orbit"
+        },
+        {
+          "bone_id": "BONE_ZYGOMATIC_L",
+          "role": "lateral wall and lateral floor"
+        }
+      ],
+      "evidence_needed": [
+        "Orbital surfaces and landmarks",
+        "Eye module envelope and mounting requirements",
+        "Soft tissue offsets and eyelid swept clearance"
+      ],
+      "external_overlap": [
+        "Left eye module housing and eyelid clearance"
+      ],
+      "locator": "The Orbit; Figure 7.16",
+      "missing_canonical_records": [],
+      "missing_display_proxies": [],
+      "name": "Left bony orbit",
+      "region_id": "orbit_l",
+      "side": "left",
+      "source_id": "OPENSTAX_AP2E_7_2_CRANIOFACIAL",
+      "spatial_definition": null
+    },
+    {
+      "contributions": [
+        {
+          "bone_id": "BONE_ETHMOID",
+          "role": "medial wall"
+        },
+        {
+          "bone_id": "BONE_FRONTAL",
+          "role": "roof"
+        },
+        {
+          "bone_id": "BONE_LACRIMAL_R",
+          "role": "medial wall"
+        },
+        {
+          "bone_id": "BONE_MAXILLA_R",
+          "role": "medial floor"
+        },
+        {
+          "bone_id": "BONE_PALATINE_R",
+          "role": "small floor contribution"
+        },
+        {
+          "bone_id": "BONE_SPHENOID",
+          "role": "posterior orbit"
+        },
+        {
+          "bone_id": "BONE_ZYGOMATIC_R",
+          "role": "lateral wall and lateral floor"
+        }
+      ],
+      "evidence_needed": [
+        "Orbital surfaces and landmarks",
+        "Eye module envelope and mounting requirements",
+        "Soft tissue offsets and eyelid swept clearance"
+      ],
+      "external_overlap": [
+        "Right eye module housing and eyelid clearance"
+      ],
+      "locator": "The Orbit; Figure 7.16",
+      "missing_canonical_records": [],
+      "missing_display_proxies": [],
+      "name": "Right bony orbit",
+      "region_id": "orbit_r",
+      "side": "right",
+      "source_id": "OPENSTAX_AP2E_7_2_CRANIOFACIAL",
+      "spatial_definition": null
+    },
+    {
+      "contributions": [
+        {
+          "bone_id": "BONE_TEMP_L",
+          "role": "posterior left arch"
+        },
+        {
+          "bone_id": "BONE_TEMP_R",
+          "role": "posterior right arch"
+        },
+        {
+          "bone_id": "BONE_ZYGOMATIC_L",
+          "role": "anterior left arch"
+        },
+        {
+          "bone_id": "BONE_ZYGOMATIC_R",
+          "role": "anterior right arch"
+        }
+      ],
+      "evidence_needed": [
+        "Arch surfaces and landmarks",
+        "External cheek offsets",
+        "Jaw mechanism and cable swept clearances"
+      ],
+      "external_overlap": [
+        "Lateral cheek envelope and jaw mechanism packaging"
+      ],
+      "locator": "Temporal Bone; Zygomatic Bone; Figure 7.5",
+      "missing_canonical_records": [],
+      "missing_display_proxies": [],
+      "name": "Paired zygomatic arches",
+      "region_id": "zygomatic_arches",
+      "side": "bilateral",
+      "source_id": "OPENSTAX_AP2E_7_2_CRANIOFACIAL",
+      "spatial_definition": null
+    }
+  ],
+  "scope": "selected_craniofacial_regions_and_bilateral_tmjs",
+  "sources": [
+    {
+      "kind": "anatomical_reference",
+      "review_scope": "The Orbit; Nasal Bone; The Nasal Septum and Nasal Conchae; Maxillary Bone; Palatine Bone; Mandible; Temporal Bone; Zygomatic Bone. Qualitative structures only.",
+      "reviewed_on": "2026-10-12",
+      "source_id": "OPENSTAX_AP2E_7_2_CRANIOFACIAL",
+      "supports": [
+        "structural_participation"
+      ],
+      "title": "Anatomy and Physiology 2e: 7.2 The Skull",
+      "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-2-the-skull"
+    },
+    {
+      "kind": "anatomical_reference",
+      "review_scope": "Temporomandibular Joint. Articular participants, disc, and combined hinge/gliding motion; no adopted axes, ranges or interface geometry.",
+      "reviewed_on": "2026-10-12",
+      "source_id": "OPENSTAX_AP2E_9_6_TMJ",
+      "supports": [
+        "articulation_identity",
+        "qualitative_motion"
+      ],
+      "title": "Anatomy and Physiology 2e: 9.6 Anatomy of Selected Synovial Joints",
+      "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/9-6-anatomy-of-selected-synovial-joints"
+    },
+    {
+      "kind": "perception_context",
+      "review_scope": "Indexed abstract only: paired attractiveness comparisons with altered eye-mouth and interocular spacing. No ratios or population means adopted; not recovered proof of the 2025 study citations.",
+      "reviewed_on": "2026-10-12",
+      "source_id": "PALLETT_LINK_LEE_2010_PERCEPTION",
+      "supports": [
+        "perception_context"
+      ],
+      "title": "Pallett, Link and Lee (2010), New golden ratios for facial beauty, Vision Research 50(2):149-154",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19896961/"
+    }
+  ]
+}

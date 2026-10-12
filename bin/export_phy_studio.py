@@ -303,8 +303,8 @@ def export(output, include_a0=True):
     skull_report += ["", "Selected adjacency and identity reference (not a measured morphology source):",
                      "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-2-the-skull", "",
                      "Selected adjacency is not a complete suture/articulation graph or a mesh contact/clearance proof.",
-                     "Nine skull identities have legacy source records; 13 facial records remain explicitly missing.",
-                     "All 193 canonical source records are unchanged. Their existing dimensions do not qualify these proxies.",
+                     "All 22 skull identities have source records. The 13 facial additions declare identity references with unresolved physical data.",
+                     "The previous 193 canonical records are preserved. Source presence does not qualify these display proxies.",
                      "The five retained head arches/bands are form-study meshes with no bone correspondence.",
                      "Dimensional fidelity unverified; physical evidence unmeasured; fabrication release false."]
     (output / "SKULL_PROXY_LAYOUT.md").write_text("\n".join(skull_report)+"\n", encoding="utf-8")
@@ -330,7 +330,7 @@ def export(output, include_a0=True):
                          "https://openstax.org/books/anatomy-and-physiology-2e/pages/14-1-sensory-perception",
                          "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-2-the-skull", "",
                          "All seven identities have existing canonical source modules; their legacy dimension dictionaries remain unchanged.",
-                         "Those records do not qualify these display meshes. All 193 source records are preserved; 13 facial records remain missing.",
+                         "Those records do not qualify these display meshes. All 206 canonical identities are present; the previous 193 records are preserved.",
                          "CORE_V1, HAND_V1, FOOT_V1 and SKULL_V1 geometry and inputs are preserved.",
                          "Dimensional fidelity unverified; physical evidence unmeasured; fabrication release false."]
     (output / "EAR_HYOID_PROXY_LAYOUT.md").write_text("\n".join(ear_hyoid_report)+"\n", encoding="utf-8")
@@ -381,7 +381,7 @@ def export(output, include_a0=True):
                "- The grounded foot layout is a static display, not measured bone geometry, functional arches or gait; see FOOT_PROXY_LAYOUT.md.",
                "- The skull layout is a static identity/distribution display, not measured surfaces, sutures or jaw mechanics; see SKULL_PROXY_LAYOUT.md.",
                "- Ear chains and the suspended hyoid are static display proxies; hearing, swallowing and soft-tissue mechanisms are unmodeled. See EAR_HYOID_PROXY_LAYOUT.md.",
-               "- Bone-proxy layout is project-local provisional placement, not measured osteometry. Missing facial source records stay missing.",
+               "- Bone-proxy layout is project-local provisional placement, not measured osteometry. Source identity completeness does not qualify dimensions or geometry.",
                "- Couplings are hardware envelopes. Joint axes, bearing fits, retention and load paths are not resolved for the whole body.",
                "- Elliptical torso envelope uses marginal girths; interpolation and anatomical appearance are design, not scan data.", "",
                "Refinement: shoulders −1%, waist −3%, hips +2%. No measured source is overwritten, and no claim of objective attractiveness is made.", "",

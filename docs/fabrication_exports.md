@@ -26,7 +26,7 @@ PYTHONPATH=. python bin/export_fabrication.py --dataset female_21_baseline --mod
 | `review` | Published with blockers | Published with diagnostics | Publication blocked |
 | `validated` (CLI default) | Publication blocked | Publication blocked | Publication blocked |
 
-The current 193-record model remains blocked in validated mode. This export
+The current 206-record model remains blocked in validated mode. This export
 change supplies no missing osteometry, mount definitions or joint evidence.
 Review mode writes the same record and identity reports as validated mode.
 `validated_ready` records whether both gates pass, regardless of the chosen mode.

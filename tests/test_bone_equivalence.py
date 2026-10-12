@@ -40,17 +40,19 @@ class BoneEquivalenceTest(unittest.TestCase):
                 self.assertNotIn(f"BONE_{prefix}_1_3_{side}", ids)
         self.assertFalse(any("TOOTH" in key for key in ids))
 
-    def test_missing_source_records_remain_explicit(self):
+    def test_all_source_identities_present_without_physical_adoption(self):
         source = source_record_paths()
-        expected_missing = {f"BONE_{code}_{side}" for code in
+        identity_only = {f"BONE_{code}_{side}" for code in
                             ("MAXILLA", "ZYGOMATIC", "NASAL", "LACRIMAL", "PALATINE", "INFERIOR_NASAL_CONCHA")
                             for side in ("R", "L")} | {"BONE_VOMER"}
-        self.assertEqual(len(source), 193)
-        self.assertEqual(set(self.model["bone_equivalence"]["missing_source_records"]), expected_missing)
+        self.assertEqual(len(source), 206)
+        self.assertEqual(self.model["bone_equivalence"]["missing_source_records"], [])
         for row in self.model["bone_equivalence"]["bones"]:
-            if row["bone_id"] in expected_missing:
-                self.assertIsNone(row["source_record"])
-                self.assertEqual(row["source_record_status"], "missing")
+            self.assertTrue((ROOT / row["source_record"]).is_file())
+            self.assertEqual(row["source_record_status"], "present")
+            if row["bone_id"] in identity_only:
+                self.assertEqual(row["dimensional_fidelity"], "unverified")
+                self.assertEqual(row["physical_evidence"], "unmeasured")
 
     def test_core_exact_coverage_and_non_bone_separation(self):
         required = {f"BONE_{p}{i}" for p, n in (("C", 7), ("T", 12), ("L", 5)) for i in range(1, n+1)}

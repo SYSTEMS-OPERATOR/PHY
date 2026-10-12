@@ -1,0 +1,105 @@
+{
+  "does_not_qualify": [
+    "latin_nomenclature",
+    "shape_classification",
+    "dimensions",
+    "surfaces",
+    "material_density",
+    "mass_inertia",
+    "mechanical_relationships",
+    "interfaces",
+    "fabrication"
+  ],
+  "evidence_scope": [
+    "adult_facial_identity_names",
+    "paired_or_unpaired_identity_accounting"
+  ],
+  "evidence_status": "curated_identity_reference_declaration; numerical/physical qualification unresolved",
+  "publisher": "OpenStax",
+  "records": [
+    {
+      "bone_id": "BONE_INFERIOR_NASAL_CONCHA_L",
+      "name": "Inferior Nasal Concha",
+      "side": "left",
+      "source_record": "skeleton/bones/bone_inferior_nasal_concha_l.py"
+    },
+    {
+      "bone_id": "BONE_INFERIOR_NASAL_CONCHA_R",
+      "name": "Inferior Nasal Concha",
+      "side": "right",
+      "source_record": "skeleton/bones/bone_inferior_nasal_concha_r.py"
+    },
+    {
+      "bone_id": "BONE_LACRIMAL_L",
+      "name": "Lacrimal",
+      "side": "left",
+      "source_record": "skeleton/bones/bone_lacrimal_l.py"
+    },
+    {
+      "bone_id": "BONE_LACRIMAL_R",
+      "name": "Lacrimal",
+      "side": "right",
+      "source_record": "skeleton/bones/bone_lacrimal_r.py"
+    },
+    {
+      "bone_id": "BONE_MAXILLA_L",
+      "name": "Maxilla",
+      "side": "left",
+      "source_record": "skeleton/bones/bone_maxilla_l.py"
+    },
+    {
+      "bone_id": "BONE_MAXILLA_R",
+      "name": "Maxilla",
+      "side": "right",
+      "source_record": "skeleton/bones/bone_maxilla_r.py"
+    },
+    {
+      "bone_id": "BONE_NASAL_L",
+      "name": "Nasal",
+      "side": "left",
+      "source_record": "skeleton/bones/bone_nasal_l.py"
+    },
+    {
+      "bone_id": "BONE_NASAL_R",
+      "name": "Nasal",
+      "side": "right",
+      "source_record": "skeleton/bones/bone_nasal_r.py"
+    },
+    {
+      "bone_id": "BONE_PALATINE_L",
+      "name": "Palatine",
+      "side": "left",
+      "source_record": "skeleton/bones/bone_palatine_l.py"
+    },
+    {
+      "bone_id": "BONE_PALATINE_R",
+      "name": "Palatine",
+      "side": "right",
+      "source_record": "skeleton/bones/bone_palatine_r.py"
+    },
+    {
+      "bone_id": "BONE_VOMER",
+      "name": "Vomer",
+      "side": "midline",
+      "source_record": "skeleton/bones/bone_vomer.py"
+    },
+    {
+      "bone_id": "BONE_ZYGOMATIC_L",
+      "name": "Zygomatic",
+      "side": "left",
+      "source_record": "skeleton/bones/bone_zygomatic_l.py"
+    },
+    {
+      "bone_id": "BONE_ZYGOMATIC_R",
+      "name": "Zygomatic",
+      "side": "right",
+      "source_record": "skeleton/bones/bone_zygomatic_r.py"
+    }
+  ],
+  "reviewed_date": "2026-10-12",
+  "section": "7.2 The Skull \u2014 Facial Bones of the Skull",
+  "source_id": "OPENSTAX_AP2E_7_2_FACIAL_IDENTITY",
+  "source_url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-2-the-skull",
+  "summary": "The adult facial inventory contains six paired types and two unpaired bones. PHY already has the mandible record; this catalog supports the remaining six pairs and the single vomer identity.",
+  "work": "Anatomy and Physiology 2e"
+}

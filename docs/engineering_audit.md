@@ -136,12 +136,18 @@ There are 172 unresolved reference declarations in the identity resolver and
 interfaces and mount points. Eight record-blocker categories remain. Source
 presence and complete declared dimensions do not resolve those blockers.
 
+## Current source-identity checkpoint
+
+The facial source continuation from PR #106 adds the 13 missing identities with
+identity-scoped references and explicit unknown physical data. Current canonical
+coverage is 206/206 and reference declarations 13/206; complete declared dimension
+maps remain 36, dataset bindings 21 and primitive estimates 30. The previous
+checkpoint above remains historical. Unknown density adds a ninth record-blocker
+category; fabrication remains unreleased. See `facial_source_records.md`.
+
 ## Next bounded engineering work
 
-Introduce the 13 missing facial canonical identities with explicit unknown
-geometry/dimensions and supported identity references, using this audit to prove
-that source coverage improves while dimensional/mechanical qualification stays
-open. Then review explicit anatomical relationship semantics in a small region
+Review explicit anatomical relationship semantics in a small region
 before replacing legacy name references: sutures, bone articulations, cartilage
 and soft-tissue suspension need different declarations. Stable IDs alone do not
 make a correct kinematic hierarchy. New qualification claims need explicit,

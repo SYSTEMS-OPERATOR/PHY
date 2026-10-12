@@ -28,7 +28,7 @@ Selected adjacency and identity reference (not a measured morphology source):
 https://openstax.org/books/anatomy-and-physiology-2e/pages/7-2-the-skull
 
 Selected adjacency is not a complete suture/articulation graph or a mesh contact/clearance proof.
-Nine skull identities have legacy source records; 13 facial records remain explicitly missing.
-All 193 canonical source records are unchanged. Their existing dimensions do not qualify these proxies.
+All 22 skull identities have source records. The 13 facial additions declare identity references with unresolved physical data.
+The previous 193 canonical records are preserved. Source presence does not qualify these display proxies.
 The five retained head arches/bands are form-study meshes with no bone correspondence.
 Dimensional fidelity unverified; physical evidence unmeasured; fabrication release false.

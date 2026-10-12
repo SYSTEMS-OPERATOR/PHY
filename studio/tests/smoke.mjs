@@ -22,7 +22,7 @@ try {
   assert.deepEqual(await page.evaluate(()=>{const a=PHY_STUDIO.boneAudit();return [a.expected_bones,a.individual_bone_proxies,a.grouped_bones,a.unrepresented_bones];}),[206,206,0,0]);
   await page.click('#open-bones');
   assert.match(await page.locator('#modal-content').innerText(),/dimensions and morphology are unverified/i);
-  assert.match(await page.locator('#modal-content').innerText(),/13 facial records missing/);
+  assert.match(await page.locator('#modal-content').innerText(),/206 canonical source records; 0 records absent/);
   await page.keyboard.press('Escape');
   await page.fill('#part-search','BONE_RADIUS_R');
   await page.selectOption('#part-select','radius_R');
@@ -35,7 +35,7 @@ try {
   assert.match(await page.locator('#part-details').innerText(),/BONE_T_PHAL_1_2_R/);
   await page.fill('#part-search','BONE_MAXILLA_R');
   await page.selectOption('#part-select','maxilla_R');
-  assert.match(await page.locator('#part-details').innerText(),/canonical source record missing/i);
+  assert.match(await page.locator('#part-details').innerText(),/canonical source record present/i);
   await page.fill('#part-search','BONE_MANDIBLE');
   await page.selectOption('#part-select','mandible');
   assert.match(await page.locator('#part-details').innerText(),/BONE_MANDIBLE/);
@@ -123,7 +123,7 @@ try {
   const skullExtras=extras.filter(x=>x.skull_layout_sha256);
   assert.equal(skullExtras.length,22);
   assert.ok(skullExtras.every(x=>x.skull_layout_sha256===review.model.skull_proxy_layout_sha256));
-  assert.equal(skullExtras.filter(x=>x.source_record_status==='missing'&&x.source_record===null).length,13);
+  assert.equal(skullExtras.filter(x=>x.source_record_status==='missing'&&x.source_record===null).length,0);
   assert.deepEqual(skullExtras.find(x=>x.bone_id==='BONE_MANDIBLE').articulates_with,['BONE_TEMP_R','BONE_TEMP_L']);
   assert.equal(skullExtras.find(x=>x.bone_id==='BONE_MANDIBLE').motion_implemented,false);
   const headSeven=extras.filter(x=>x.ear_hyoid_layout_sha256);

@@ -1,1952 +1,3301 @@
 [
   {
-    "frame_id": "C1",
-    "parent": "skull",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "C2",
-    "parent": "C1",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "C3",
-    "parent": "C2",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "C4",
-    "parent": "C3",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "C5",
-    "parent": "C4",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "C6",
-    "parent": "C5",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "C7",
-    "parent": "C6",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Calcaneus",
-    "parent": "tibia/fibula",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Calcaneus",
-    "parent": "tibia/fibula",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Capitate",
-    "parent": "radius/ulna",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Capitate",
-    "parent": "radius/ulna",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Clavicle",
-    "parent": "sternum",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Clavicle",
-    "parent": "sternum",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Coccyx",
-    "parent": "sacrum",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Cuboid",
-    "parent": "tibia/fibula",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Cuboid",
-    "parent": "tibia/fibula",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Ethmoid",
-    "parent": "frontal",
     "children": [
-      "vomer"
+      "BONE_C2"
     ],
-    "origin": [
-      0,
-      0,
-      0
-    ]
+    "display_name": "C1",
+    "frame_id": "BONE_C1",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "skull",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
   },
   {
-    "frame_id": "Femur",
-    "parent": "hip",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Femur",
-    "parent": "hip",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Fibula",
-    "parent": "tibia",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Fibula",
-    "parent": "tibia",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Frontal",
-    "parent": "",
     "children": [
-      "parietal"
+      "BONE_C3"
     ],
-    "origin": [
-      0,
-      0,
-      0
-    ]
+    "display_name": "C2",
+    "frame_id": "BONE_C2",
+    "origin_mm": null,
+    "parent": "BONE_C1",
+    "parent_reference": {
+      "bone_id": "BONE_C1",
+      "reference": "C1",
+      "status": "unique_display_name"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
   },
   {
-    "frame_id": "Hamate",
-    "parent": "radius/ulna",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Hamate",
-    "parent": "radius/ulna",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "HipBone",
-    "parent": "sacrum",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "HipBone",
-    "parent": "sacrum",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Humerus",
-    "parent": "scapula",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Humerus",
-    "parent": "scapula",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Hyoid",
-    "parent": "",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Incus",
-    "parent": "",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Incus",
-    "parent": "",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Intermediate Cuneiform",
-    "parent": "tibia/fibula",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Intermediate Cuneiform",
-    "parent": "tibia/fibula",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "L1",
-    "parent": "T12",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "L2",
-    "parent": "L1",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "L3",
-    "parent": "L2",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "L4",
-    "parent": "L3",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "L5",
-    "parent": "L4",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Lateral Cuneiform",
-    "parent": "tibia/fibula",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Lateral Cuneiform",
-    "parent": "tibia/fibula",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Lunate",
-    "parent": "radius/ulna",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Lunate",
-    "parent": "radius/ulna",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Malleus",
-    "parent": "",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Malleus",
-    "parent": "",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Mandible",
-    "parent": "temporal",
     "children": [
-      "temporal"
+      "BONE_C4"
     ],
-    "origin": [
-      0,
-      0,
-      0
-    ]
+    "display_name": "C3",
+    "frame_id": "BONE_C3",
+    "origin_mm": null,
+    "parent": "BONE_C2",
+    "parent_reference": {
+      "bone_id": "BONE_C2",
+      "reference": "C2",
+      "status": "unique_display_name"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
   },
   {
-    "frame_id": "Medial Cuneiform",
-    "parent": "tibia/fibula",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Medial Cuneiform",
-    "parent": "tibia/fibula",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Metacarpal 1",
-    "parent": "carpals",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Metacarpal 1",
-    "parent": "carpals",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Metacarpal 2",
-    "parent": "carpals",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Metacarpal 2",
-    "parent": "carpals",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Metacarpal 3",
-    "parent": "carpals",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Metacarpal 3",
-    "parent": "carpals",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Metacarpal 4",
-    "parent": "carpals",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Metacarpal 4",
-    "parent": "carpals",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Metacarpal 5",
-    "parent": "carpals",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Metacarpal 5",
-    "parent": "carpals",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Metatarsal 1",
-    "parent": "tarsals",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Metatarsal 1",
-    "parent": "tarsals",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Metatarsal 2",
-    "parent": "tarsals",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Metatarsal 2",
-    "parent": "tarsals",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Metatarsal 3",
-    "parent": "tarsals",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Metatarsal 3",
-    "parent": "tarsals",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Metatarsal 4",
-    "parent": "tarsals",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Metatarsal 4",
-    "parent": "tarsals",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Metatarsal 5",
-    "parent": "tarsals",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Metatarsal 5",
-    "parent": "tarsals",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Navicular",
-    "parent": "tibia/fibula",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Navicular",
-    "parent": "tibia/fibula",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Occipital",
-    "parent": "parietal",
     "children": [
-      "atlas"
+      "BONE_C5"
     ],
-    "origin": [
-      0,
-      0,
-      0
-    ]
+    "display_name": "C4",
+    "frame_id": "BONE_C4",
+    "origin_mm": null,
+    "parent": "BONE_C3",
+    "parent_reference": {
+      "bone_id": "BONE_C3",
+      "reference": "C3",
+      "status": "unique_display_name"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
   },
   {
-    "frame_id": "Parietal",
-    "parent": "frontal",
     "children": [
-      "frontal",
-      "occipital"
+      "BONE_C6"
     ],
-    "origin": [
-      0,
-      0,
-      0
-    ]
+    "display_name": "C5",
+    "frame_id": "BONE_C5",
+    "origin_mm": null,
+    "parent": "BONE_C4",
+    "parent_reference": {
+      "bone_id": "BONE_C4",
+      "reference": "C4",
+      "status": "unique_display_name"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
   },
   {
-    "frame_id": "Parietal",
-    "parent": "frontal",
     "children": [
-      "frontal",
-      "occipital"
+      "BONE_C7"
     ],
-    "origin": [
-      0,
-      0,
-      0
-    ]
+    "display_name": "C6",
+    "frame_id": "BONE_C6",
+    "origin_mm": null,
+    "parent": "BONE_C5",
+    "parent_reference": {
+      "bone_id": "BONE_C5",
+      "reference": "C5",
+      "status": "unique_display_name"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
   },
   {
-    "frame_id": "Patella",
-    "parent": "femur",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Patella",
-    "parent": "femur",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Proximal Phalanx 1",
-    "parent": "metacarpal",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Proximal Phalanx 1",
-    "parent": "metacarpal",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Distal Phalanx 1",
-    "parent": "Proximal phalanx",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Distal Phalanx 1",
-    "parent": "Proximal phalanx",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Proximal Phalanx 2",
-    "parent": "metacarpal",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Proximal Phalanx 2",
-    "parent": "metacarpal",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Middle Phalanx 2",
-    "parent": "Proximal phalanx",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Middle Phalanx 2",
-    "parent": "Proximal phalanx",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Distal Phalanx 2",
-    "parent": "Middle phalanx",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Distal Phalanx 2",
-    "parent": "Middle phalanx",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Proximal Phalanx 3",
-    "parent": "metacarpal",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Proximal Phalanx 3",
-    "parent": "metacarpal",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Middle Phalanx 3",
-    "parent": "Proximal phalanx",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Middle Phalanx 3",
-    "parent": "Proximal phalanx",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Distal Phalanx 3",
-    "parent": "Middle phalanx",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Distal Phalanx 3",
-    "parent": "Middle phalanx",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Proximal Phalanx 4",
-    "parent": "metacarpal",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Proximal Phalanx 4",
-    "parent": "metacarpal",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Middle Phalanx 4",
-    "parent": "Proximal phalanx",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Middle Phalanx 4",
-    "parent": "Proximal phalanx",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Distal Phalanx 4",
-    "parent": "Middle phalanx",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Distal Phalanx 4",
-    "parent": "Middle phalanx",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Proximal Phalanx 5",
-    "parent": "metacarpal",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Proximal Phalanx 5",
-    "parent": "metacarpal",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Middle Phalanx 5",
-    "parent": "Proximal phalanx",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Middle Phalanx 5",
-    "parent": "Proximal phalanx",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Distal Phalanx 5",
-    "parent": "Middle phalanx",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Distal Phalanx 5",
-    "parent": "Middle phalanx",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Pisiform",
-    "parent": "radius/ulna",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Pisiform",
-    "parent": "radius/ulna",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Radius",
-    "parent": "humerus",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Radius",
-    "parent": "humerus",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Rib 10",
-    "parent": "thoracic vertebrae",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Rib 10",
-    "parent": "thoracic vertebrae",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Rib 11",
-    "parent": "thoracic vertebrae",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Rib 11",
-    "parent": "thoracic vertebrae",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Rib 12",
-    "parent": "thoracic vertebrae",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Rib 12",
-    "parent": "thoracic vertebrae",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Rib 1",
-    "parent": "thoracic vertebrae",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Rib 1",
-    "parent": "thoracic vertebrae",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Rib 2",
-    "parent": "thoracic vertebrae",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Rib 2",
-    "parent": "thoracic vertebrae",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Rib 3",
-    "parent": "thoracic vertebrae",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Rib 3",
-    "parent": "thoracic vertebrae",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Rib 4",
-    "parent": "thoracic vertebrae",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Rib 4",
-    "parent": "thoracic vertebrae",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Rib 5",
-    "parent": "thoracic vertebrae",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Rib 5",
-    "parent": "thoracic vertebrae",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Rib 6",
-    "parent": "thoracic vertebrae",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Rib 6",
-    "parent": "thoracic vertebrae",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Rib 7",
-    "parent": "thoracic vertebrae",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Rib 7",
-    "parent": "thoracic vertebrae",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Rib 8",
-    "parent": "thoracic vertebrae",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Rib 8",
-    "parent": "thoracic vertebrae",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Rib 9",
-    "parent": "thoracic vertebrae",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Rib 9",
-    "parent": "thoracic vertebrae",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Sacrum",
-    "parent": "L5",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Scaphoid",
-    "parent": "radius/ulna",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Scaphoid",
-    "parent": "radius/ulna",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Scapula",
-    "parent": "clavicle",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Scapula",
-    "parent": "clavicle",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "frame_id": "Sphenoid",
-    "parent": "frontal",
     "children": [
-      "frontal"
+      "BONE_T1"
     ],
-    "origin": [
-      0,
-      0,
-      0
-    ]
+    "display_name": "C7",
+    "frame_id": "BONE_C7",
+    "origin_mm": null,
+    "parent": "BONE_C6",
+    "parent_reference": {
+      "bone_id": "BONE_C6",
+      "reference": "C6",
+      "status": "unique_display_name"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
   },
   {
-    "frame_id": "Stapes",
-    "parent": "",
     "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
+    "display_name": "Calcaneus",
+    "frame_id": "BONE_CALCANEUS_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "tibia/fibula",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
   },
   {
-    "frame_id": "Stapes",
-    "parent": "",
     "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
+    "display_name": "Calcaneus",
+    "frame_id": "BONE_CALCANEUS_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "tibia/fibula",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
   },
   {
-    "frame_id": "Sternum",
-    "parent": "clavicle",
     "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
+    "display_name": "Capitate",
+    "frame_id": "BONE_CAPITATE_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "radius/ulna",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
   },
   {
-    "frame_id": "T1",
-    "parent": "C7",
     "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
+    "display_name": "Capitate",
+    "frame_id": "BONE_CAPITATE_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "radius/ulna",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
   },
   {
-    "frame_id": "T10",
-    "parent": "T9",
     "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
+    "display_name": "Clavicle",
+    "frame_id": "BONE_CLAVICLE_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "sternum",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
   },
   {
-    "frame_id": "T11",
-    "parent": "T10",
     "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
+    "display_name": "Clavicle",
+    "frame_id": "BONE_CLAVICLE_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "sternum",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
   },
   {
-    "frame_id": "T12",
-    "parent": "T11",
     "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
+    "display_name": "Coccyx",
+    "frame_id": "BONE_COCCYX",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "sacrum",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
   },
   {
-    "frame_id": "T2",
-    "parent": "T1",
     "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
+    "display_name": "Cuboid",
+    "frame_id": "BONE_CUBOID_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "tibia/fibula",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
   },
   {
-    "frame_id": "T3",
-    "parent": "T2",
     "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
+    "display_name": "Cuboid",
+    "frame_id": "BONE_CUBOID_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "tibia/fibula",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
   },
   {
-    "frame_id": "T4",
-    "parent": "T3",
     "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
+    "display_name": "Ethmoid",
+    "frame_id": "BONE_ETHMOID",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "frontal",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
   },
   {
-    "frame_id": "T5",
-    "parent": "T4",
     "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
+    "display_name": "Femur",
+    "frame_id": "BONE_FEMUR_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "hip",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
   },
   {
-    "frame_id": "T6",
-    "parent": "T5",
     "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
+    "display_name": "Femur",
+    "frame_id": "BONE_FEMUR_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "hip",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
   },
   {
-    "frame_id": "T7",
-    "parent": "T6",
     "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
+    "display_name": "Fibula",
+    "frame_id": "BONE_FIBULA_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "tibia",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
   },
   {
-    "frame_id": "T8",
-    "parent": "T7",
     "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
+    "display_name": "Fibula",
+    "frame_id": "BONE_FIBULA_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "tibia",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
   },
   {
-    "frame_id": "T9",
-    "parent": "T8",
     "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
+    "display_name": "Frontal",
+    "frame_id": "BONE_FRONTAL",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "reference": "",
+      "status": "unspecified"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
   },
   {
-    "frame_id": "Talus",
-    "parent": "tibia/fibula",
     "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
+    "display_name": "Hamate",
+    "frame_id": "BONE_HAMATE_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "radius/ulna",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
   },
   {
-    "frame_id": "Talus",
-    "parent": "tibia/fibula",
     "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
+    "display_name": "Hamate",
+    "frame_id": "BONE_HAMATE_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "radius/ulna",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
   },
   {
-    "frame_id": "Temporal",
-    "parent": "parietal",
+    "children": [],
+    "display_name": "HipBone",
+    "frame_id": "BONE_HIP_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "sacrum",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "HipBone",
+    "frame_id": "BONE_HIP_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "sacrum",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Humerus",
+    "frame_id": "BONE_HUMERUS_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "scapula",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Humerus",
+    "frame_id": "BONE_HUMERUS_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "scapula",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Hyoid",
+    "frame_id": "BONE_HYOID",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "reference": "",
+      "status": "unspecified"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Incus",
+    "frame_id": "BONE_INCUS_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "reference": "",
+      "status": "unspecified"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Incus",
+    "frame_id": "BONE_INCUS_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "reference": "",
+      "status": "unspecified"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Inferior Nasal Concha",
+    "frame_id": "BONE_INFERIOR_NASAL_CONCHA_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "reference": null,
+      "status": "unspecified"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Inferior Nasal Concha",
+    "frame_id": "BONE_INFERIOR_NASAL_CONCHA_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "reference": null,
+      "status": "unspecified"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Intermediate Cuneiform",
+    "frame_id": "BONE_INTERMEDIATE_CUNEIFORM_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "tibia/fibula",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Intermediate Cuneiform",
+    "frame_id": "BONE_INTERMEDIATE_CUNEIFORM_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "tibia/fibula",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
     "children": [
-      "mandible"
+      "BONE_L2"
     ],
-    "origin": [
-      0,
-      0,
-      0
-    ]
+    "display_name": "L1",
+    "frame_id": "BONE_L1",
+    "origin_mm": null,
+    "parent": "BONE_T12",
+    "parent_reference": {
+      "bone_id": "BONE_T12",
+      "reference": "T12",
+      "status": "unique_display_name"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
   },
   {
-    "frame_id": "Temporal",
-    "parent": "parietal",
     "children": [
-      "mandible"
+      "BONE_L3"
     ],
-    "origin": [
-      0,
-      0,
-      0
-    ]
+    "display_name": "L2",
+    "frame_id": "BONE_L2",
+    "origin_mm": null,
+    "parent": "BONE_L1",
+    "parent_reference": {
+      "bone_id": "BONE_L1",
+      "reference": "L1",
+      "status": "unique_display_name"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
   },
   {
-    "frame_id": "Tibia",
-    "parent": "femur",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
+    "children": [
+      "BONE_L4"
+    ],
+    "display_name": "L3",
+    "frame_id": "BONE_L3",
+    "origin_mm": null,
+    "parent": "BONE_L2",
+    "parent_reference": {
+      "bone_id": "BONE_L2",
+      "reference": "L2",
+      "status": "unique_display_name"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
   },
   {
-    "frame_id": "Tibia",
-    "parent": "femur",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
+    "children": [
+      "BONE_L5"
+    ],
+    "display_name": "L4",
+    "frame_id": "BONE_L4",
+    "origin_mm": null,
+    "parent": "BONE_L3",
+    "parent_reference": {
+      "bone_id": "BONE_L3",
+      "reference": "L3",
+      "status": "unique_display_name"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
   },
   {
-    "frame_id": "Trapezium",
-    "parent": "radius/ulna",
-    "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
+    "children": [
+      "BONE_SACRUM"
+    ],
+    "display_name": "L5",
+    "frame_id": "BONE_L5",
+    "origin_mm": null,
+    "parent": "BONE_L4",
+    "parent_reference": {
+      "bone_id": "BONE_L4",
+      "reference": "L4",
+      "status": "unique_display_name"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
   },
   {
-    "frame_id": "Trapezium",
-    "parent": "radius/ulna",
     "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
+    "display_name": "Lacrimal",
+    "frame_id": "BONE_LACRIMAL_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "reference": null,
+      "status": "unspecified"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
   },
   {
-    "frame_id": "Trapezoid",
-    "parent": "radius/ulna",
     "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
+    "display_name": "Lacrimal",
+    "frame_id": "BONE_LACRIMAL_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "reference": null,
+      "status": "unspecified"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
   },
   {
-    "frame_id": "Trapezoid",
-    "parent": "radius/ulna",
     "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
+    "display_name": "Lateral Cuneiform",
+    "frame_id": "BONE_LATERAL_CUNEIFORM_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "tibia/fibula",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
   },
   {
-    "frame_id": "Triquetrum",
-    "parent": "radius/ulna",
     "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
+    "display_name": "Lateral Cuneiform",
+    "frame_id": "BONE_LATERAL_CUNEIFORM_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "tibia/fibula",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
   },
   {
-    "frame_id": "Triquetrum",
-    "parent": "radius/ulna",
     "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
+    "display_name": "Lunate",
+    "frame_id": "BONE_LUNATE_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "radius/ulna",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
   },
   {
-    "frame_id": "Proximal Toe Phalanx 1",
-    "parent": "metatarsal",
     "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
+    "display_name": "Lunate",
+    "frame_id": "BONE_LUNATE_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "radius/ulna",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
   },
   {
-    "frame_id": "Proximal Toe Phalanx 1",
-    "parent": "metatarsal",
     "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
+    "display_name": "Malleus",
+    "frame_id": "BONE_MALLEUS_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "reference": "",
+      "status": "unspecified"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
   },
   {
-    "frame_id": "Distal Toe Phalanx 1",
-    "parent": "Proximal phalanx",
     "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
+    "display_name": "Malleus",
+    "frame_id": "BONE_MALLEUS_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "reference": "",
+      "status": "unspecified"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
   },
   {
-    "frame_id": "Distal Toe Phalanx 1",
-    "parent": "Proximal phalanx",
     "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
+    "display_name": "Mandible",
+    "frame_id": "BONE_MANDIBLE",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "temporal",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
   },
   {
-    "frame_id": "Proximal Toe Phalanx 2",
-    "parent": "metatarsal",
     "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
+    "display_name": "Maxilla",
+    "frame_id": "BONE_MAXILLA_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "reference": null,
+      "status": "unspecified"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
   },
   {
-    "frame_id": "Proximal Toe Phalanx 2",
-    "parent": "metatarsal",
     "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
+    "display_name": "Maxilla",
+    "frame_id": "BONE_MAXILLA_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "reference": null,
+      "status": "unspecified"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
   },
   {
-    "frame_id": "Middle Toe Phalanx 2",
-    "parent": "Proximal phalanx",
     "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
+    "display_name": "Medial Cuneiform",
+    "frame_id": "BONE_MEDIAL_CUNEIFORM_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "tibia/fibula",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
   },
   {
-    "frame_id": "Middle Toe Phalanx 2",
-    "parent": "Proximal phalanx",
     "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
+    "display_name": "Medial Cuneiform",
+    "frame_id": "BONE_MEDIAL_CUNEIFORM_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "tibia/fibula",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
   },
   {
-    "frame_id": "Distal Toe Phalanx 2",
-    "parent": "Middle phalanx",
     "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
+    "display_name": "Metacarpal 1",
+    "frame_id": "BONE_META1_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "carpals",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
   },
   {
-    "frame_id": "Distal Toe Phalanx 2",
-    "parent": "Middle phalanx",
     "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
+    "display_name": "Metacarpal 1",
+    "frame_id": "BONE_META1_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "carpals",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
   },
   {
-    "frame_id": "Proximal Toe Phalanx 3",
-    "parent": "metatarsal",
     "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
+    "display_name": "Metacarpal 2",
+    "frame_id": "BONE_META2_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "carpals",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
   },
   {
-    "frame_id": "Proximal Toe Phalanx 3",
-    "parent": "metatarsal",
     "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
+    "display_name": "Metacarpal 2",
+    "frame_id": "BONE_META2_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "carpals",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
   },
   {
-    "frame_id": "Middle Toe Phalanx 3",
-    "parent": "Proximal phalanx",
     "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
+    "display_name": "Metacarpal 3",
+    "frame_id": "BONE_META3_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "carpals",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
   },
   {
-    "frame_id": "Middle Toe Phalanx 3",
-    "parent": "Proximal phalanx",
     "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
+    "display_name": "Metacarpal 3",
+    "frame_id": "BONE_META3_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "carpals",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
   },
   {
-    "frame_id": "Distal Toe Phalanx 3",
-    "parent": "Middle phalanx",
     "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
+    "display_name": "Metacarpal 4",
+    "frame_id": "BONE_META4_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "carpals",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
   },
   {
-    "frame_id": "Distal Toe Phalanx 3",
-    "parent": "Middle phalanx",
     "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
+    "display_name": "Metacarpal 4",
+    "frame_id": "BONE_META4_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "carpals",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
   },
   {
-    "frame_id": "Proximal Toe Phalanx 4",
-    "parent": "metatarsal",
     "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
+    "display_name": "Metacarpal 5",
+    "frame_id": "BONE_META5_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "carpals",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
   },
   {
-    "frame_id": "Proximal Toe Phalanx 4",
-    "parent": "metatarsal",
     "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
+    "display_name": "Metacarpal 5",
+    "frame_id": "BONE_META5_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "carpals",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
   },
   {
-    "frame_id": "Middle Toe Phalanx 4",
-    "parent": "Proximal phalanx",
     "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
+    "display_name": "Metatarsal 1",
+    "frame_id": "BONE_MT1_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "tarsals",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
   },
   {
-    "frame_id": "Middle Toe Phalanx 4",
-    "parent": "Proximal phalanx",
     "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
+    "display_name": "Metatarsal 1",
+    "frame_id": "BONE_MT1_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "tarsals",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
   },
   {
-    "frame_id": "Distal Toe Phalanx 4",
-    "parent": "Middle phalanx",
     "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
+    "display_name": "Metatarsal 2",
+    "frame_id": "BONE_MT2_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "tarsals",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
   },
   {
-    "frame_id": "Distal Toe Phalanx 4",
-    "parent": "Middle phalanx",
     "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
+    "display_name": "Metatarsal 2",
+    "frame_id": "BONE_MT2_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "tarsals",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
   },
   {
-    "frame_id": "Proximal Toe Phalanx 5",
-    "parent": "metatarsal",
     "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
+    "display_name": "Metatarsal 3",
+    "frame_id": "BONE_MT3_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "tarsals",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
   },
   {
-    "frame_id": "Proximal Toe Phalanx 5",
-    "parent": "metatarsal",
     "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
+    "display_name": "Metatarsal 3",
+    "frame_id": "BONE_MT3_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "tarsals",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
   },
   {
-    "frame_id": "Middle Toe Phalanx 5",
-    "parent": "Proximal phalanx",
     "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
+    "display_name": "Metatarsal 4",
+    "frame_id": "BONE_MT4_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "tarsals",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
   },
   {
-    "frame_id": "Middle Toe Phalanx 5",
-    "parent": "Proximal phalanx",
     "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
+    "display_name": "Metatarsal 4",
+    "frame_id": "BONE_MT4_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "tarsals",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
   },
   {
-    "frame_id": "Distal Toe Phalanx 5",
-    "parent": "Middle phalanx",
     "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
+    "display_name": "Metatarsal 5",
+    "frame_id": "BONE_MT5_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "tarsals",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
   },
   {
-    "frame_id": "Distal Toe Phalanx 5",
-    "parent": "Middle phalanx",
     "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
+    "display_name": "Metatarsal 5",
+    "frame_id": "BONE_MT5_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "tarsals",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
   },
   {
-    "frame_id": "Ulna",
-    "parent": "humerus",
     "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
+    "display_name": "Nasal",
+    "frame_id": "BONE_NASAL_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "reference": null,
+      "status": "unspecified"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
   },
   {
-    "frame_id": "Ulna",
-    "parent": "humerus",
     "children": [],
-    "origin": [
-      0,
-      0,
-      0
-    ]
+    "display_name": "Nasal",
+    "frame_id": "BONE_NASAL_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "reference": null,
+      "status": "unspecified"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Navicular",
+    "frame_id": "BONE_NAVICULAR_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "tibia/fibula",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Navicular",
+    "frame_id": "BONE_NAVICULAR_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "tibia/fibula",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Occipital",
+    "frame_id": "BONE_OCCIPITAL",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "parietal",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Palatine",
+    "frame_id": "BONE_PALATINE_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "reference": null,
+      "status": "unspecified"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Palatine",
+    "frame_id": "BONE_PALATINE_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "reference": null,
+      "status": "unspecified"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Parietal",
+    "frame_id": "BONE_PAR_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "frontal",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Parietal",
+    "frame_id": "BONE_PAR_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "frontal",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Patella",
+    "frame_id": "BONE_PATELLA_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "femur",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Patella",
+    "frame_id": "BONE_PATELLA_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "femur",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Proximal Phalanx 1",
+    "frame_id": "BONE_PHAL_1_1_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "metacarpal",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Proximal Phalanx 1",
+    "frame_id": "BONE_PHAL_1_1_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "metacarpal",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Distal Phalanx 1",
+    "frame_id": "BONE_PHAL_1_2_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "Proximal phalanx",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Distal Phalanx 1",
+    "frame_id": "BONE_PHAL_1_2_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "Proximal phalanx",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Proximal Phalanx 2",
+    "frame_id": "BONE_PHAL_2_1_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "metacarpal",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Proximal Phalanx 2",
+    "frame_id": "BONE_PHAL_2_1_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "metacarpal",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Middle Phalanx 2",
+    "frame_id": "BONE_PHAL_2_2_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "Proximal phalanx",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Middle Phalanx 2",
+    "frame_id": "BONE_PHAL_2_2_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "Proximal phalanx",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Distal Phalanx 2",
+    "frame_id": "BONE_PHAL_2_3_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "Middle phalanx",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Distal Phalanx 2",
+    "frame_id": "BONE_PHAL_2_3_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "Middle phalanx",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Proximal Phalanx 3",
+    "frame_id": "BONE_PHAL_3_1_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "metacarpal",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Proximal Phalanx 3",
+    "frame_id": "BONE_PHAL_3_1_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "metacarpal",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Middle Phalanx 3",
+    "frame_id": "BONE_PHAL_3_2_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "Proximal phalanx",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Middle Phalanx 3",
+    "frame_id": "BONE_PHAL_3_2_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "Proximal phalanx",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Distal Phalanx 3",
+    "frame_id": "BONE_PHAL_3_3_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "Middle phalanx",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Distal Phalanx 3",
+    "frame_id": "BONE_PHAL_3_3_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "Middle phalanx",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Proximal Phalanx 4",
+    "frame_id": "BONE_PHAL_4_1_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "metacarpal",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Proximal Phalanx 4",
+    "frame_id": "BONE_PHAL_4_1_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "metacarpal",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Middle Phalanx 4",
+    "frame_id": "BONE_PHAL_4_2_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "Proximal phalanx",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Middle Phalanx 4",
+    "frame_id": "BONE_PHAL_4_2_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "Proximal phalanx",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Distal Phalanx 4",
+    "frame_id": "BONE_PHAL_4_3_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "Middle phalanx",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Distal Phalanx 4",
+    "frame_id": "BONE_PHAL_4_3_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "Middle phalanx",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Proximal Phalanx 5",
+    "frame_id": "BONE_PHAL_5_1_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "metacarpal",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Proximal Phalanx 5",
+    "frame_id": "BONE_PHAL_5_1_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "metacarpal",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Middle Phalanx 5",
+    "frame_id": "BONE_PHAL_5_2_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "Proximal phalanx",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Middle Phalanx 5",
+    "frame_id": "BONE_PHAL_5_2_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "Proximal phalanx",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Distal Phalanx 5",
+    "frame_id": "BONE_PHAL_5_3_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "Middle phalanx",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Distal Phalanx 5",
+    "frame_id": "BONE_PHAL_5_3_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "Middle phalanx",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Pisiform",
+    "frame_id": "BONE_PISIFORM_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "radius/ulna",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Pisiform",
+    "frame_id": "BONE_PISIFORM_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "radius/ulna",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Radius",
+    "frame_id": "BONE_RADIUS_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "humerus",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Radius",
+    "frame_id": "BONE_RADIUS_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "humerus",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Rib 10",
+    "frame_id": "BONE_RIB10_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "thoracic vertebrae",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Rib 10",
+    "frame_id": "BONE_RIB10_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "thoracic vertebrae",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Rib 11",
+    "frame_id": "BONE_RIB11_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "thoracic vertebrae",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Rib 11",
+    "frame_id": "BONE_RIB11_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "thoracic vertebrae",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Rib 12",
+    "frame_id": "BONE_RIB12_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "thoracic vertebrae",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Rib 12",
+    "frame_id": "BONE_RIB12_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "thoracic vertebrae",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Rib 1",
+    "frame_id": "BONE_RIB1_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "thoracic vertebrae",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Rib 1",
+    "frame_id": "BONE_RIB1_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "thoracic vertebrae",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Rib 2",
+    "frame_id": "BONE_RIB2_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "thoracic vertebrae",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Rib 2",
+    "frame_id": "BONE_RIB2_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "thoracic vertebrae",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Rib 3",
+    "frame_id": "BONE_RIB3_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "thoracic vertebrae",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Rib 3",
+    "frame_id": "BONE_RIB3_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "thoracic vertebrae",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Rib 4",
+    "frame_id": "BONE_RIB4_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "thoracic vertebrae",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Rib 4",
+    "frame_id": "BONE_RIB4_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "thoracic vertebrae",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Rib 5",
+    "frame_id": "BONE_RIB5_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "thoracic vertebrae",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Rib 5",
+    "frame_id": "BONE_RIB5_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "thoracic vertebrae",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Rib 6",
+    "frame_id": "BONE_RIB6_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "thoracic vertebrae",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Rib 6",
+    "frame_id": "BONE_RIB6_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "thoracic vertebrae",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Rib 7",
+    "frame_id": "BONE_RIB7_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "thoracic vertebrae",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Rib 7",
+    "frame_id": "BONE_RIB7_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "thoracic vertebrae",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Rib 8",
+    "frame_id": "BONE_RIB8_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "thoracic vertebrae",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Rib 8",
+    "frame_id": "BONE_RIB8_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "thoracic vertebrae",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Rib 9",
+    "frame_id": "BONE_RIB9_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "thoracic vertebrae",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Rib 9",
+    "frame_id": "BONE_RIB9_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "thoracic vertebrae",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Sacrum",
+    "frame_id": "BONE_SACRUM",
+    "origin_mm": null,
+    "parent": "BONE_L5",
+    "parent_reference": {
+      "bone_id": "BONE_L5",
+      "reference": "L5",
+      "status": "unique_display_name"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Scaphoid",
+    "frame_id": "BONE_SCAPHOID_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "radius/ulna",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Scaphoid",
+    "frame_id": "BONE_SCAPHOID_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "radius/ulna",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Scapula",
+    "frame_id": "BONE_SCAPULA_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "clavicle",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Scapula",
+    "frame_id": "BONE_SCAPULA_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "clavicle",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Sphenoid",
+    "frame_id": "BONE_SPHENOID",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "frontal",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Stapes",
+    "frame_id": "BONE_STAPES_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "reference": "",
+      "status": "unspecified"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Stapes",
+    "frame_id": "BONE_STAPES_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "reference": "",
+      "status": "unspecified"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Sternum",
+    "frame_id": "BONE_STERNUM",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "clavicle",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [
+      "BONE_T2"
+    ],
+    "display_name": "T1",
+    "frame_id": "BONE_T1",
+    "origin_mm": null,
+    "parent": "BONE_C7",
+    "parent_reference": {
+      "bone_id": "BONE_C7",
+      "reference": "C7",
+      "status": "unique_display_name"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [
+      "BONE_T11"
+    ],
+    "display_name": "T10",
+    "frame_id": "BONE_T10",
+    "origin_mm": null,
+    "parent": "BONE_T9",
+    "parent_reference": {
+      "bone_id": "BONE_T9",
+      "reference": "T9",
+      "status": "unique_display_name"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [
+      "BONE_T12"
+    ],
+    "display_name": "T11",
+    "frame_id": "BONE_T11",
+    "origin_mm": null,
+    "parent": "BONE_T10",
+    "parent_reference": {
+      "bone_id": "BONE_T10",
+      "reference": "T10",
+      "status": "unique_display_name"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [
+      "BONE_L1"
+    ],
+    "display_name": "T12",
+    "frame_id": "BONE_T12",
+    "origin_mm": null,
+    "parent": "BONE_T11",
+    "parent_reference": {
+      "bone_id": "BONE_T11",
+      "reference": "T11",
+      "status": "unique_display_name"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [
+      "BONE_T3"
+    ],
+    "display_name": "T2",
+    "frame_id": "BONE_T2",
+    "origin_mm": null,
+    "parent": "BONE_T1",
+    "parent_reference": {
+      "bone_id": "BONE_T1",
+      "reference": "T1",
+      "status": "unique_display_name"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [
+      "BONE_T4"
+    ],
+    "display_name": "T3",
+    "frame_id": "BONE_T3",
+    "origin_mm": null,
+    "parent": "BONE_T2",
+    "parent_reference": {
+      "bone_id": "BONE_T2",
+      "reference": "T2",
+      "status": "unique_display_name"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [
+      "BONE_T5"
+    ],
+    "display_name": "T4",
+    "frame_id": "BONE_T4",
+    "origin_mm": null,
+    "parent": "BONE_T3",
+    "parent_reference": {
+      "bone_id": "BONE_T3",
+      "reference": "T3",
+      "status": "unique_display_name"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [
+      "BONE_T6"
+    ],
+    "display_name": "T5",
+    "frame_id": "BONE_T5",
+    "origin_mm": null,
+    "parent": "BONE_T4",
+    "parent_reference": {
+      "bone_id": "BONE_T4",
+      "reference": "T4",
+      "status": "unique_display_name"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [
+      "BONE_T7"
+    ],
+    "display_name": "T6",
+    "frame_id": "BONE_T6",
+    "origin_mm": null,
+    "parent": "BONE_T5",
+    "parent_reference": {
+      "bone_id": "BONE_T5",
+      "reference": "T5",
+      "status": "unique_display_name"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [
+      "BONE_T8"
+    ],
+    "display_name": "T7",
+    "frame_id": "BONE_T7",
+    "origin_mm": null,
+    "parent": "BONE_T6",
+    "parent_reference": {
+      "bone_id": "BONE_T6",
+      "reference": "T6",
+      "status": "unique_display_name"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [
+      "BONE_T9"
+    ],
+    "display_name": "T8",
+    "frame_id": "BONE_T8",
+    "origin_mm": null,
+    "parent": "BONE_T7",
+    "parent_reference": {
+      "bone_id": "BONE_T7",
+      "reference": "T7",
+      "status": "unique_display_name"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [
+      "BONE_T10"
+    ],
+    "display_name": "T9",
+    "frame_id": "BONE_T9",
+    "origin_mm": null,
+    "parent": "BONE_T8",
+    "parent_reference": {
+      "bone_id": "BONE_T8",
+      "reference": "T8",
+      "status": "unique_display_name"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Talus",
+    "frame_id": "BONE_TALUS_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "tibia/fibula",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Talus",
+    "frame_id": "BONE_TALUS_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "tibia/fibula",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Temporal",
+    "frame_id": "BONE_TEMP_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "parietal",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Temporal",
+    "frame_id": "BONE_TEMP_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "parietal",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Tibia",
+    "frame_id": "BONE_TIBIA_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "femur",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Tibia",
+    "frame_id": "BONE_TIBIA_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "femur",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Trapezium",
+    "frame_id": "BONE_TRAPEZIUM_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "radius/ulna",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Trapezium",
+    "frame_id": "BONE_TRAPEZIUM_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "radius/ulna",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Trapezoid",
+    "frame_id": "BONE_TRAPEZOID_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "radius/ulna",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Trapezoid",
+    "frame_id": "BONE_TRAPEZOID_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "radius/ulna",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Triquetrum",
+    "frame_id": "BONE_TRIQUETRUM_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "radius/ulna",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Triquetrum",
+    "frame_id": "BONE_TRIQUETRUM_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "radius/ulna",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Proximal Toe Phalanx 1",
+    "frame_id": "BONE_T_PHAL_1_1_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "metatarsal",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Proximal Toe Phalanx 1",
+    "frame_id": "BONE_T_PHAL_1_1_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "metatarsal",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Distal Toe Phalanx 1",
+    "frame_id": "BONE_T_PHAL_1_2_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "Proximal phalanx",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Distal Toe Phalanx 1",
+    "frame_id": "BONE_T_PHAL_1_2_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "Proximal phalanx",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Proximal Toe Phalanx 2",
+    "frame_id": "BONE_T_PHAL_2_1_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "metatarsal",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Proximal Toe Phalanx 2",
+    "frame_id": "BONE_T_PHAL_2_1_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "metatarsal",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Middle Toe Phalanx 2",
+    "frame_id": "BONE_T_PHAL_2_2_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "Proximal phalanx",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Middle Toe Phalanx 2",
+    "frame_id": "BONE_T_PHAL_2_2_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "Proximal phalanx",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Distal Toe Phalanx 2",
+    "frame_id": "BONE_T_PHAL_2_3_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "Middle phalanx",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Distal Toe Phalanx 2",
+    "frame_id": "BONE_T_PHAL_2_3_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "Middle phalanx",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Proximal Toe Phalanx 3",
+    "frame_id": "BONE_T_PHAL_3_1_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "metatarsal",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Proximal Toe Phalanx 3",
+    "frame_id": "BONE_T_PHAL_3_1_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "metatarsal",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Middle Toe Phalanx 3",
+    "frame_id": "BONE_T_PHAL_3_2_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "Proximal phalanx",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Middle Toe Phalanx 3",
+    "frame_id": "BONE_T_PHAL_3_2_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "Proximal phalanx",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Distal Toe Phalanx 3",
+    "frame_id": "BONE_T_PHAL_3_3_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "Middle phalanx",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Distal Toe Phalanx 3",
+    "frame_id": "BONE_T_PHAL_3_3_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "Middle phalanx",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Proximal Toe Phalanx 4",
+    "frame_id": "BONE_T_PHAL_4_1_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "metatarsal",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Proximal Toe Phalanx 4",
+    "frame_id": "BONE_T_PHAL_4_1_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "metatarsal",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Middle Toe Phalanx 4",
+    "frame_id": "BONE_T_PHAL_4_2_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "Proximal phalanx",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Middle Toe Phalanx 4",
+    "frame_id": "BONE_T_PHAL_4_2_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "Proximal phalanx",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Distal Toe Phalanx 4",
+    "frame_id": "BONE_T_PHAL_4_3_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "Middle phalanx",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Distal Toe Phalanx 4",
+    "frame_id": "BONE_T_PHAL_4_3_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "Middle phalanx",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Proximal Toe Phalanx 5",
+    "frame_id": "BONE_T_PHAL_5_1_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "metatarsal",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Proximal Toe Phalanx 5",
+    "frame_id": "BONE_T_PHAL_5_1_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "metatarsal",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Middle Toe Phalanx 5",
+    "frame_id": "BONE_T_PHAL_5_2_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "Proximal phalanx",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Middle Toe Phalanx 5",
+    "frame_id": "BONE_T_PHAL_5_2_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "Proximal phalanx",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Distal Toe Phalanx 5",
+    "frame_id": "BONE_T_PHAL_5_3_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "Middle phalanx",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Distal Toe Phalanx 5",
+    "frame_id": "BONE_T_PHAL_5_3_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "Middle phalanx",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Ulna",
+    "frame_id": "BONE_ULNA_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "humerus",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Ulna",
+    "frame_id": "BONE_ULNA_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "candidates": [],
+      "reference": "humerus",
+      "status": "missing"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Vomer",
+    "frame_id": "BONE_VOMER",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "reference": null,
+      "status": "unspecified"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Zygomatic",
+    "frame_id": "BONE_ZYGOMATIC_L",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "reference": null,
+      "status": "unspecified"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
+  },
+  {
+    "children": [],
+    "display_name": "Zygomatic",
+    "frame_id": "BONE_ZYGOMATIC_R",
+    "origin_mm": null,
+    "parent": null,
+    "parent_reference": {
+      "bone_id": null,
+      "reference": null,
+      "status": "unspecified"
+    },
+    "relationship_role": "anatomical_parent_reference",
+    "rotation_rpy_rad": null,
+    "transform_status": "unresolved"
   }
 ]

@@ -69,8 +69,11 @@ hyoid has posterior ends and no direct bone articulation. Temporal housing and
 tympanic-membrane/oval-window endpoint labels do not establish cavities, fits,
 hearing or motion. Hyoid suspension and swallowing mechanics remain unmodeled.
 No grouped or unrepresented inventory identities remain.
-13 facial source records remain absent; the 193 existing
-canonical records are untouched. The `bone_proxy_layout` profile section is the
+All 206 canonical source identities are present. The 13 facial additions have
+identity-scoped OpenStax references and unresolved dimensions, density, geometry
+and interfaces; the previous 193 records are preserved. See
+`../../docs/facial_source_records.md` and
+`../../references/facial_identity_provenance.json` for the scope. The `bone_proxy_layout` profile section is the
 authoritative project-local provisional core layout; `hand_proxy_layout` governs
 the hands, `foot_proxy_layout` the feet, `skull_proxy_layout` the skull and
 `ear_hyoid_proxy_layout` the final seven proxies. All five have hashes and parameter pointers

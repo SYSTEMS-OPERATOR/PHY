@@ -339,7 +339,7 @@ class CliContractTest(unittest.TestCase):
                     self.assertNotIn("paths", result)
                     report = read_json(result["diagnostic_report"])
                     self.assertEqual(report["code"], "validation_failed")
-                    self.assertEqual(report["record_validation"]["summary"]["total_bones"], 193)
+                    self.assertEqual(report["record_validation"]["summary"]["total_bones"], 206)
                     self.assertFalse((root / "dist" / "export_manifest.json").exists())
                     review = subprocess.run(command + ["--mode", "review"], cwd=outside, env=env,
                                             text=True, capture_output=True, check=False)

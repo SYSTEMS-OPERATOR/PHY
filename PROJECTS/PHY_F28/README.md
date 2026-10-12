@@ -134,6 +134,13 @@ Tests cover source hash/field/cohort agreement, mirrored geometry, height/span
 closure, nondegenerate watertight positive-volume meshes, input/refinement bounds,
 maquette file and BOM integrity, and unchanged A0 located B-rep bounds.
 
+The separate craniofacial review links the existing skull mesh IDs to sourced
+structural regions and qualitative jaw articulations. It identifies the surface,
+module-envelope and swept-clearance evidence needed at the armature/feature
+boundary. Run `python bin/audit_craniofacial.py`; scope and interpretation are in
+[`docs/craniofacial_armature.md`](../../docs/craniofacial_armature.md). This review
+does not change the F28 profile, proxy geometry or canonical face ratios.
+
 ## Next functional release
 
 The visual reference is demonstrable. A full-size functional armature still needs

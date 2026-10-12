@@ -1,0 +1,176 @@
+{
+  "catalog_version": "1.0.0",
+  "inventory_version": "PHY_ADULT_206_V1",
+  "scope": "selected_craniofacial_regions_and_bilateral_tmjs",
+  "authority": "curated_qualitative_reference_not_canon_or_mechanical_design",
+  "sources": [
+    {
+      "source_id": "OPENSTAX_AP2E_7_2_CRANIOFACIAL",
+      "kind": "anatomical_reference",
+      "title": "Anatomy and Physiology 2e: 7.2 The Skull",
+      "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-2-the-skull",
+      "reviewed_on": "2026-10-12",
+      "supports": ["structural_participation"],
+      "review_scope": "The Orbit; Nasal Bone; The Nasal Septum and Nasal Conchae; Maxillary Bone; Palatine Bone; Mandible; Temporal Bone; Zygomatic Bone. Qualitative structures only."
+    },
+    {
+      "source_id": "OPENSTAX_AP2E_9_6_TMJ",
+      "kind": "anatomical_reference",
+      "title": "Anatomy and Physiology 2e: 9.6 Anatomy of Selected Synovial Joints",
+      "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/9-6-anatomy-of-selected-synovial-joints",
+      "reviewed_on": "2026-10-12",
+      "supports": ["articulation_identity", "qualitative_motion"],
+      "review_scope": "Temporomandibular Joint. Articular participants, disc, and combined hinge/gliding motion; no adopted axes, ranges or interface geometry."
+    },
+    {
+      "source_id": "PALLETT_LINK_LEE_2010_PERCEPTION",
+      "kind": "perception_context",
+      "title": "Pallett, Link and Lee (2010), New golden ratios for facial beauty, Vision Research 50(2):149-154",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19896961/",
+      "reviewed_on": "2026-10-12",
+      "supports": ["perception_context"],
+      "review_scope": "Indexed abstract only: paired attractiveness comparisons with altered eye-mouth and interocular spacing. No ratios or population means adopted; not recovered proof of the 2025 study citations."
+    }
+  ],
+  "regions": [
+    {
+      "region_id": "orbit_r",
+      "name": "Right bony orbit",
+      "side": "right",
+      "source_id": "OPENSTAX_AP2E_7_2_CRANIOFACIAL",
+      "locator": "The Orbit; Figure 7.16",
+      "contributions": [
+        {"bone_id": "BONE_FRONTAL", "role": "roof"},
+        {"bone_id": "BONE_ZYGOMATIC_R", "role": "lateral wall and lateral floor"},
+        {"bone_id": "BONE_MAXILLA_R", "role": "medial floor"},
+        {"bone_id": "BONE_PALATINE_R", "role": "small floor contribution"},
+        {"bone_id": "BONE_ETHMOID", "role": "medial wall"},
+        {"bone_id": "BONE_LACRIMAL_R", "role": "medial wall"},
+        {"bone_id": "BONE_SPHENOID", "role": "posterior orbit"}
+      ],
+      "external_overlap": ["Right eye module housing and eyelid clearance"],
+      "evidence_needed": ["Orbital surfaces and landmarks", "Eye module envelope and mounting requirements", "Soft tissue offsets and eyelid swept clearance"],
+      "spatial_definition": null
+    },
+    {
+      "region_id": "orbit_l",
+      "name": "Left bony orbit",
+      "side": "left",
+      "source_id": "OPENSTAX_AP2E_7_2_CRANIOFACIAL",
+      "locator": "The Orbit; Figure 7.16",
+      "contributions": [
+        {"bone_id": "BONE_FRONTAL", "role": "roof"},
+        {"bone_id": "BONE_ZYGOMATIC_L", "role": "lateral wall and lateral floor"},
+        {"bone_id": "BONE_MAXILLA_L", "role": "medial floor"},
+        {"bone_id": "BONE_PALATINE_L", "role": "small floor contribution"},
+        {"bone_id": "BONE_ETHMOID", "role": "medial wall"},
+        {"bone_id": "BONE_LACRIMAL_L", "role": "medial wall"},
+        {"bone_id": "BONE_SPHENOID", "role": "posterior orbit"}
+      ],
+      "external_overlap": ["Left eye module housing and eyelid clearance"],
+      "evidence_needed": ["Orbital surfaces and landmarks", "Eye module envelope and mounting requirements", "Soft tissue offsets and eyelid swept clearance"],
+      "spatial_definition": null
+    },
+    {
+      "region_id": "nasal_bridge",
+      "name": "Bony nasal bridge",
+      "side": "midline",
+      "source_id": "OPENSTAX_AP2E_7_2_CRANIOFACIAL",
+      "locator": "Nasal Bone",
+      "contributions": [
+        {"bone_id": "BONE_NASAL_R", "role": "paired bridge and cartilage support"},
+        {"bone_id": "BONE_NASAL_L", "role": "paired bridge and cartilage support"}
+      ],
+      "external_overlap": ["Nasal shell support; external tip and alar shape require separate definition"],
+      "evidence_needed": ["Nasal bone surfaces and landmarks", "Cartilage or shell layout", "Bone to external surface offsets"],
+      "spatial_definition": null
+    },
+    {
+      "region_id": "nasal_septum",
+      "name": "Bony nasal septum",
+      "side": "midline",
+      "source_id": "OPENSTAX_AP2E_7_2_CRANIOFACIAL",
+      "locator": "The Nasal Septum and Nasal Conchae; Figure 7.17",
+      "contributions": [
+        {"bone_id": "BONE_ETHMOID", "role": "upper bony septum"},
+        {"bone_id": "BONE_VOMER", "role": "posterior and inferior bony septum"}
+      ],
+      "external_overlap": ["Nasal chamber separation; anterior septal cartilage remains outside this bone map"],
+      "evidence_needed": ["Septal surfaces", "Nasal chamber clearance requirements", "Anterior cartilage or substitute geometry"],
+      "spatial_definition": null
+    },
+    {
+      "region_id": "hard_palate",
+      "name": "Hard palate and upper oral boundary",
+      "side": "midline",
+      "source_id": "OPENSTAX_AP2E_7_2_CRANIOFACIAL",
+      "locator": "Maxillary Bone; Palatine Bone; Figure 7.8",
+      "contributions": [
+        {"bone_id": "BONE_MAXILLA_R", "role": "anterior palate; upper jaw and tooth support"},
+        {"bone_id": "BONE_MAXILLA_L", "role": "anterior palate; upper jaw and tooth support"},
+        {"bone_id": "BONE_PALATINE_R", "role": "posterior palate"},
+        {"bone_id": "BONE_PALATINE_L", "role": "posterior palate"}
+      ],
+      "external_overlap": ["Oral and nasal cavity separation; upper dentition and mouth envelope"],
+      "evidence_needed": ["Palatal and maxillary surfaces", "Oral and nasal envelopes", "Dentition or mechanical substitute and occlusal datum"],
+      "spatial_definition": null
+    },
+    {
+      "region_id": "mandibular_unit",
+      "name": "Single adult mandibular unit",
+      "side": "midline",
+      "source_id": "OPENSTAX_AP2E_7_2_CRANIOFACIAL",
+      "locator": "Mandible; Figure 7.15",
+      "contributions": [
+        {"bone_id": "BONE_MANDIBLE", "role": "lower jaw, lower tooth support and bony chin"}
+      ],
+      "external_overlap": ["Moving lower mouth envelope and chin support; lip and chin surfaces remain separate"],
+      "evidence_needed": ["Mandibular surfaces and landmarks", "Coupled bilateral TMJ trajectory", "Occlusal geometry, chin offsets and lip swept clearance"],
+      "spatial_definition": null
+    },
+    {
+      "region_id": "zygomatic_arches",
+      "name": "Paired zygomatic arches",
+      "side": "bilateral",
+      "source_id": "OPENSTAX_AP2E_7_2_CRANIOFACIAL",
+      "locator": "Temporal Bone; Zygomatic Bone; Figure 7.5",
+      "contributions": [
+        {"bone_id": "BONE_ZYGOMATIC_R", "role": "anterior right arch"},
+        {"bone_id": "BONE_TEMP_R", "role": "posterior right arch"},
+        {"bone_id": "BONE_ZYGOMATIC_L", "role": "anterior left arch"},
+        {"bone_id": "BONE_TEMP_L", "role": "posterior left arch"}
+      ],
+      "external_overlap": ["Lateral cheek envelope and jaw mechanism packaging"],
+      "evidence_needed": ["Arch surfaces and landmarks", "External cheek offsets", "Jaw mechanism and cable swept clearances"],
+      "spatial_definition": null
+    }
+  ],
+  "articulations": [
+    {
+      "articulation_id": "tmj_r",
+      "name": "Right temporomandibular articulation",
+      "side": "right",
+      "source_id": "OPENSTAX_AP2E_9_6_TMJ",
+      "locator": "Temporomandibular Joint; Figure 9.15",
+      "bone_ids": ["BONE_MANDIBLE", "BONE_TEMP_R"],
+      "anatomical_type": "synovial",
+      "motion_components": ["rotation", "translation"],
+      "non_bone_components": ["articular_disc"],
+      "evidence_needed": ["Articular surfaces and disc or substitute geometry", "Coupled jaw trajectory, ranges and axes", "Loads, clearances and acceptance tests"],
+      "engineering_definition": null
+    },
+    {
+      "articulation_id": "tmj_l",
+      "name": "Left temporomandibular articulation",
+      "side": "left",
+      "source_id": "OPENSTAX_AP2E_9_6_TMJ",
+      "locator": "Temporomandibular Joint; Figure 9.15",
+      "bone_ids": ["BONE_MANDIBLE", "BONE_TEMP_L"],
+      "anatomical_type": "synovial",
+      "motion_components": ["rotation", "translation"],
+      "non_bone_components": ["articular_disc"],
+      "evidence_needed": ["Articular surfaces and disc or substitute geometry", "Coupled jaw trajectory, ranges and axes", "Loads, clearances and acceptance tests"],
+      "engineering_definition": null
+    }
+  ]
+}

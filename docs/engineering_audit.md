@@ -145,6 +145,16 @@ maps remain 36, dataset bindings 21 and primitive estimates 30. The previous
 checkpoint above remains historical. Unknown density adds a ninth record-blocker
 category; fabrication remains unreleased. See `facial_source_records.md`.
 
+## Craniofacial regional review
+
+`python bin/audit_craniofacial.py --output-root /tmp/phy-head-review` joins a
+separate qualitative catalog to this audit's bone evidence. It covers seven
+structural regions and two TMJ sites sharing one adult mandible, involving 17
+skull identities. Regional participation does not assign a parent, a suture,
+an articular surface or a mechanical interface. Spatial definitions and feature
+fit remain unresolved. Existing external head means, project height choice and
+perception context stay distinct. See `craniofacial_armature.md`.
+
 ## Next bounded engineering work
 
 Review explicit anatomical relationship semantics in a small region

@@ -33,6 +33,18 @@ CAD. Orbit, inspect parts, compare poses, measure and export 3D models. The port
 See `studio/README.md` and `PROJECTS/PHY_F28/README.md` for construction scope,
 source provenance, rebuild commands and the remaining physical release gates.
 
+### Inspect engineering evidence
+
+```bash
+python bin/audit_engineering.py --output-root /tmp/phy-audit
+```
+
+Produces deterministic JSON/Markdown reports joining all 206 adult identities
+to canonical sources, declared dimensions, dataset bindings, provisional
+proxies, reference resolution and existing validation blockers. Each observation
+has its own count; report completion does not qualify anatomy, mechanics or
+fabrication. See [`docs/engineering_audit.md`](docs/engineering_audit.md).
+
 ### Assemble + validate + export
 ```bash
 PYTHONPATH=. python3 assemble_skeleton.py

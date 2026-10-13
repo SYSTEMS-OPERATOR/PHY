@@ -17,6 +17,8 @@
     },
     "dimensions": {
       "length_mm": null,
+      "spinal_canal_ap_mm": 29.79,
+      "spinal_canal_width_mm": 27.38,
       "thickness_mm": null,
       "width_mm": null
     },
@@ -26,7 +28,11 @@
     },
     "joint_interfaces": [],
     "latin_name": "C1",
-    "manufacturing_notes": [],
+    "manufacturing_notes": [
+      "Source-backed reference spans only; no registration to SOPHY, qualified surface, material, joint or mounting interface. See dimension evidence catalog.",
+      "Canal dimensions are clearances, not dimensions of solid bone or a defined mechanical cartridge.",
+      "Atlas has no centrum; no C1 body height invented."
+    ],
     "material": {
       "density": 1800.0,
       "name": "bone"
@@ -36,13 +42,14 @@
     "physics": {
       "mass_kg": null,
       "mass_provenance": {
-        "density": "material.density",
-        "dimensions": "dimensions",
-        "method": "box_volume_times_density",
+        "source": "physics.mass_kg",
         "status": "unknown"
       }
     },
-    "references": [],
+    "references": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC8354927/",
+      "references/dim072/catalog.json#/candidates/23"
+    ],
     "region": "cervical vertebrae",
     "revision": "1.0.0",
     "source_connections": {
@@ -80,6 +87,8 @@
     },
     "dimensions": {
       "length_mm": null,
+      "spinal_canal_ap_mm": 15.53,
+      "spinal_canal_width_mm": 22.77,
       "thickness_mm": null,
       "width_mm": null
     },
@@ -89,7 +98,11 @@
     },
     "joint_interfaces": [],
     "latin_name": "C2",
-    "manufacturing_notes": [],
+    "manufacturing_notes": [
+      "Source-backed reference spans only; no registration to SOPHY, qualified surface, material, joint or mounting interface. See dimension evidence catalog.",
+      "Canal dimensions are clearances, not dimensions of solid bone or a defined mechanical cartridge.",
+      "C2 HT retained in native evidence but not admitted until odontoid/span semantics are clarified."
+    ],
     "material": {
       "density": 1800.0,
       "name": "bone"
@@ -99,13 +112,14 @@
     "physics": {
       "mass_kg": null,
       "mass_provenance": {
-        "density": "material.density",
-        "dimensions": "dimensions",
-        "method": "box_volume_times_density",
+        "source": "physics.mass_kg",
         "status": "unknown"
       }
     },
-    "references": [],
+    "references": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC8354927/",
+      "references/dim072/catalog.json#/candidates/22"
+    ],
     "region": "cervical vertebrae",
     "revision": "1.0.0",
     "source_connections": {
@@ -142,7 +156,10 @@
       "role": "anatomical_references"
     },
     "dimensions": {
+      "body_height_mm": 11.96,
       "length_mm": null,
+      "spinal_canal_ap_mm": 13.85,
+      "spinal_canal_width_mm": 22.26,
       "thickness_mm": null,
       "width_mm": null
     },
@@ -152,7 +169,10 @@
     },
     "joint_interfaces": [],
     "latin_name": "C3",
-    "manufacturing_notes": [],
+    "manufacturing_notes": [
+      "Source-backed reference spans only; no registration to SOPHY, qualified surface, material, joint or mounting interface. See dimension evidence catalog.",
+      "Canal dimensions are clearances, not dimensions of solid bone or a defined mechanical cartridge."
+    ],
     "material": {
       "density": 1800.0,
       "name": "bone"
@@ -162,13 +182,14 @@
     "physics": {
       "mass_kg": null,
       "mass_provenance": {
-        "density": "material.density",
-        "dimensions": "dimensions",
-        "method": "box_volume_times_density",
+        "source": "physics.mass_kg",
         "status": "unknown"
       }
     },
-    "references": [],
+    "references": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC8354927/",
+      "references/dim072/catalog.json#/candidates/21"
+    ],
     "region": "cervical vertebrae",
     "revision": "1.0.0",
     "source_connections": {
@@ -205,7 +226,10 @@
       "role": "anatomical_references"
     },
     "dimensions": {
+      "body_height_mm": 11.59,
       "length_mm": null,
+      "spinal_canal_ap_mm": 13.36,
+      "spinal_canal_width_mm": 22.8,
       "thickness_mm": null,
       "width_mm": null
     },
@@ -215,7 +239,10 @@
     },
     "joint_interfaces": [],
     "latin_name": "C4",
-    "manufacturing_notes": [],
+    "manufacturing_notes": [
+      "Source-backed reference spans only; no registration to SOPHY, qualified surface, material, joint or mounting interface. See dimension evidence catalog.",
+      "Canal dimensions are clearances, not dimensions of solid bone or a defined mechanical cartridge."
+    ],
     "material": {
       "density": 1800.0,
       "name": "bone"
@@ -225,13 +252,14 @@
     "physics": {
       "mass_kg": null,
       "mass_provenance": {
-        "density": "material.density",
-        "dimensions": "dimensions",
-        "method": "box_volume_times_density",
+        "source": "physics.mass_kg",
         "status": "unknown"
       }
     },
-    "references": [],
+    "references": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC8354927/",
+      "references/dim072/catalog.json#/candidates/20"
+    ],
     "region": "cervical vertebrae",
     "revision": "1.0.0",
     "source_connections": {
@@ -268,7 +296,10 @@
       "role": "anatomical_references"
     },
     "dimensions": {
+      "body_height_mm": 11.4,
       "length_mm": null,
+      "spinal_canal_ap_mm": 13.22,
+      "spinal_canal_width_mm": 23.39,
       "thickness_mm": null,
       "width_mm": null
     },
@@ -278,7 +309,10 @@
     },
     "joint_interfaces": [],
     "latin_name": "C5",
-    "manufacturing_notes": [],
+    "manufacturing_notes": [
+      "Source-backed reference spans only; no registration to SOPHY, qualified surface, material, joint or mounting interface. See dimension evidence catalog.",
+      "Canal dimensions are clearances, not dimensions of solid bone or a defined mechanical cartridge."
+    ],
     "material": {
       "density": 1800.0,
       "name": "bone"
@@ -288,13 +322,14 @@
     "physics": {
       "mass_kg": null,
       "mass_provenance": {
-        "density": "material.density",
-        "dimensions": "dimensions",
-        "method": "box_volume_times_density",
+        "source": "physics.mass_kg",
         "status": "unknown"
       }
     },
-    "references": [],
+    "references": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC8354927/",
+      "references/dim072/catalog.json#/candidates/19"
+    ],
     "region": "cervical vertebrae",
     "revision": "1.0.0",
     "source_connections": {
@@ -331,7 +366,10 @@
       "role": "anatomical_references"
     },
     "dimensions": {
+      "body_height_mm": 11.36,
       "length_mm": null,
+      "spinal_canal_ap_mm": 12.96,
+      "spinal_canal_width_mm": 23.58,
       "thickness_mm": null,
       "width_mm": null
     },
@@ -341,7 +379,10 @@
     },
     "joint_interfaces": [],
     "latin_name": "C6",
-    "manufacturing_notes": [],
+    "manufacturing_notes": [
+      "Source-backed reference spans only; no registration to SOPHY, qualified surface, material, joint or mounting interface. See dimension evidence catalog.",
+      "Canal dimensions are clearances, not dimensions of solid bone or a defined mechanical cartridge."
+    ],
     "material": {
       "density": 1800.0,
       "name": "bone"
@@ -351,13 +392,14 @@
     "physics": {
       "mass_kg": null,
       "mass_provenance": {
-        "density": "material.density",
-        "dimensions": "dimensions",
-        "method": "box_volume_times_density",
+        "source": "physics.mass_kg",
         "status": "unknown"
       }
     },
-    "references": [],
+    "references": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC8354927/",
+      "references/dim072/catalog.json#/candidates/18"
+    ],
     "region": "cervical vertebrae",
     "revision": "1.0.0",
     "source_connections": {
@@ -394,7 +436,10 @@
       "role": "anatomical_references"
     },
     "dimensions": {
+      "body_height_mm": 12.61,
       "length_mm": null,
+      "spinal_canal_ap_mm": 13.25,
+      "spinal_canal_width_mm": 23.34,
       "thickness_mm": null,
       "width_mm": null
     },
@@ -404,7 +449,10 @@
     },
     "joint_interfaces": [],
     "latin_name": "C7",
-    "manufacturing_notes": [],
+    "manufacturing_notes": [
+      "Source-backed reference spans only; no registration to SOPHY, qualified surface, material, joint or mounting interface. See dimension evidence catalog.",
+      "Canal dimensions are clearances, not dimensions of solid bone or a defined mechanical cartridge."
+    ],
     "material": {
       "density": 1800.0,
       "name": "bone"
@@ -414,13 +462,14 @@
     "physics": {
       "mass_kg": null,
       "mass_provenance": {
-        "density": "material.density",
-        "dimensions": "dimensions",
-        "method": "box_volume_times_density",
+        "source": "physics.mass_kg",
         "status": "unknown"
       }
     },
-    "references": [],
+    "references": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC8354927/",
+      "references/dim072/catalog.json#/candidates/17"
+    ],
     "region": "cervical vertebrae",
     "revision": "1.0.0",
     "source_connections": {
@@ -458,7 +507,9 @@
       "role": "anatomical_references"
     },
     "dimensions": {
-      "length_mm": null,
+      "calcaneal_body_width_mm": 33.0,
+      "calcaneal_lateral_wall_height_mm": 33.3,
+      "length_mm": 66.2,
       "thickness_mm": null,
       "width_mm": null
     },
@@ -468,7 +519,10 @@
     },
     "joint_interfaces": [],
     "latin_name": "Calcaneus",
-    "manufacturing_notes": [],
+    "manufacturing_notes": [
+      "Source-backed reference spans only; no registration to SOPHY, qualified surface, material, joint or mounting interface. See dimension evidence catalog.",
+      "Whole-bone width and thickness remain unknown; localized body/wall measurements do not replace them."
+    ],
     "material": {
       "density": 1800.0,
       "name": "bone"
@@ -478,13 +532,14 @@
     "physics": {
       "mass_kg": null,
       "mass_provenance": {
-        "density": "material.density",
-        "dimensions": "dimensions",
-        "method": "box_volume_times_density",
+        "source": "physics.mass_kg",
         "status": "unknown"
       }
     },
-    "references": [],
+    "references": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC11116927/",
+      "references/dim072/catalog.json#/candidates/26"
+    ],
     "region": "tarsal",
     "revision": "1.0.0",
     "source_connections": {
@@ -522,7 +577,9 @@
       "role": "anatomical_references"
     },
     "dimensions": {
-      "length_mm": null,
+      "calcaneal_body_width_mm": 33.0,
+      "calcaneal_lateral_wall_height_mm": 33.3,
+      "length_mm": 66.2,
       "thickness_mm": null,
       "width_mm": null
     },
@@ -532,7 +589,10 @@
     },
     "joint_interfaces": [],
     "latin_name": "Calcaneus",
-    "manufacturing_notes": [],
+    "manufacturing_notes": [
+      "Source-backed reference spans only; no registration to SOPHY, qualified surface, material, joint or mounting interface. See dimension evidence catalog.",
+      "Whole-bone width and thickness remain unknown; localized body/wall measurements do not replace them."
+    ],
     "material": {
       "density": 1800.0,
       "name": "bone"
@@ -542,13 +602,14 @@
     "physics": {
       "mass_kg": null,
       "mass_provenance": {
-        "density": "material.density",
-        "dimensions": "dimensions",
-        "method": "box_volume_times_density",
+        "source": "physics.mass_kg",
         "status": "unknown"
       }
     },
-    "references": [],
+    "references": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC11116927/",
+      "references/dim072/catalog.json#/candidates/27"
+    ],
     "region": "tarsal",
     "revision": "1.0.0",
     "source_connections": {
@@ -2333,6 +2394,11 @@
       "role": "anatomical_references"
     },
     "dimensions": {
+      "body_height_mm": 24.53,
+      "body_lower_ap_mm": 32.11,
+      "body_lower_width_mm": 46.07,
+      "body_upper_ap_mm": 31.51,
+      "body_upper_width_mm": 42.73,
       "length_mm": null,
       "thickness_mm": null,
       "width_mm": null
@@ -2343,7 +2409,10 @@
     },
     "joint_interfaces": [],
     "latin_name": "L1",
-    "manufacturing_notes": [],
+    "manufacturing_notes": [
+      "Source-backed reference spans only; no registration to SOPHY, qualified surface, material, joint or mounting interface. See dimension evidence catalog.",
+      "Body spans do not resolve the whole vertebra length/width/thickness; posterior elements remain unmeasured."
+    ],
     "material": {
       "density": 1800.0,
       "name": "bone"
@@ -2353,13 +2422,14 @@
     "physics": {
       "mass_kg": null,
       "mass_provenance": {
-        "density": "material.density",
-        "dimensions": "dimensions",
-        "method": "box_volume_times_density",
+        "source": "physics.mass_kg",
         "status": "unknown"
       }
     },
-    "references": [],
+    "references": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC8917002/",
+      "references/dim072/catalog.json#/candidates/4"
+    ],
     "region": "lumbar vertebrae",
     "revision": "1.0.0",
     "source_connections": {
@@ -2396,6 +2466,11 @@
       "role": "anatomical_references"
     },
     "dimensions": {
+      "body_height_mm": 25.39,
+      "body_lower_ap_mm": 33.69,
+      "body_lower_width_mm": 48.18,
+      "body_upper_ap_mm": 33.12,
+      "body_upper_width_mm": 45.8,
       "length_mm": null,
       "thickness_mm": null,
       "width_mm": null
@@ -2406,7 +2481,10 @@
     },
     "joint_interfaces": [],
     "latin_name": "L2",
-    "manufacturing_notes": [],
+    "manufacturing_notes": [
+      "Source-backed reference spans only; no registration to SOPHY, qualified surface, material, joint or mounting interface. See dimension evidence catalog.",
+      "Body spans do not resolve the whole vertebra length/width/thickness; posterior elements remain unmeasured."
+    ],
     "material": {
       "density": 1800.0,
       "name": "bone"
@@ -2416,13 +2494,14 @@
     "physics": {
       "mass_kg": null,
       "mass_provenance": {
-        "density": "material.density",
-        "dimensions": "dimensions",
-        "method": "box_volume_times_density",
+        "source": "physics.mass_kg",
         "status": "unknown"
       }
     },
-    "references": [],
+    "references": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC8917002/",
+      "references/dim072/catalog.json#/candidates/3"
+    ],
     "region": "lumbar vertebrae",
     "revision": "1.0.0",
     "source_connections": {
@@ -2459,6 +2538,11 @@
       "role": "anatomical_references"
     },
     "dimensions": {
+      "body_height_mm": 25.32,
+      "body_lower_ap_mm": 34.25,
+      "body_lower_width_mm": 50.97,
+      "body_upper_ap_mm": 34.48,
+      "body_upper_width_mm": 48.22,
       "length_mm": null,
       "thickness_mm": null,
       "width_mm": null
@@ -2469,7 +2553,10 @@
     },
     "joint_interfaces": [],
     "latin_name": "L3",
-    "manufacturing_notes": [],
+    "manufacturing_notes": [
+      "Source-backed reference spans only; no registration to SOPHY, qualified surface, material, joint or mounting interface. See dimension evidence catalog.",
+      "Body spans do not resolve the whole vertebra length/width/thickness; posterior elements remain unmeasured."
+    ],
     "material": {
       "density": 1800.0,
       "name": "bone"
@@ -2479,13 +2566,14 @@
     "physics": {
       "mass_kg": null,
       "mass_provenance": {
-        "density": "material.density",
-        "dimensions": "dimensions",
-        "method": "box_volume_times_density",
+        "source": "physics.mass_kg",
         "status": "unknown"
       }
     },
-    "references": [],
+    "references": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC8917002/",
+      "references/dim072/catalog.json#/candidates/2"
+    ],
     "region": "lumbar vertebrae",
     "revision": "1.0.0",
     "source_connections": {
@@ -2522,6 +2610,11 @@
       "role": "anatomical_references"
     },
     "dimensions": {
+      "body_height_mm": 25.37,
+      "body_lower_ap_mm": 35.0,
+      "body_lower_width_mm": 52.82,
+      "body_upper_ap_mm": 34.96,
+      "body_upper_width_mm": 50.87,
       "length_mm": null,
       "thickness_mm": null,
       "width_mm": null
@@ -2532,7 +2625,10 @@
     },
     "joint_interfaces": [],
     "latin_name": "L4",
-    "manufacturing_notes": [],
+    "manufacturing_notes": [
+      "Source-backed reference spans only; no registration to SOPHY, qualified surface, material, joint or mounting interface. See dimension evidence catalog.",
+      "Body spans do not resolve the whole vertebra length/width/thickness; posterior elements remain unmeasured."
+    ],
     "material": {
       "density": 1800.0,
       "name": "bone"
@@ -2542,13 +2638,14 @@
     "physics": {
       "mass_kg": null,
       "mass_provenance": {
-        "density": "material.density",
-        "dimensions": "dimensions",
-        "method": "box_volume_times_density",
+        "source": "physics.mass_kg",
         "status": "unknown"
       }
     },
-    "references": [],
+    "references": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC8917002/",
+      "references/dim072/catalog.json#/candidates/1"
+    ],
     "region": "lumbar vertebrae",
     "revision": "1.0.0",
     "source_connections": {
@@ -2585,6 +2682,11 @@
       "role": "anatomical_references"
     },
     "dimensions": {
+      "body_height_mm": 24.48,
+      "body_lower_ap_mm": 34.32,
+      "body_lower_width_mm": 53.22,
+      "body_upper_ap_mm": 35.12,
+      "body_upper_width_mm": 54.1,
       "length_mm": null,
       "thickness_mm": null,
       "width_mm": null
@@ -2595,7 +2697,10 @@
     },
     "joint_interfaces": [],
     "latin_name": "L5",
-    "manufacturing_notes": [],
+    "manufacturing_notes": [
+      "Source-backed reference spans only; no registration to SOPHY, qualified surface, material, joint or mounting interface. See dimension evidence catalog.",
+      "Body spans do not resolve the whole vertebra length/width/thickness; posterior elements remain unmeasured."
+    ],
     "material": {
       "density": 1800.0,
       "name": "bone"
@@ -2605,13 +2710,14 @@
     "physics": {
       "mass_kg": null,
       "mass_provenance": {
-        "density": "material.density",
-        "dimensions": "dimensions",
-        "method": "box_volume_times_density",
+        "source": "physics.mass_kg",
         "status": "unknown"
       }
     },
-    "references": [],
+    "references": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC8917002/",
+      "references/dim072/catalog.json#/candidates/0"
+    ],
     "region": "lumbar vertebrae",
     "revision": "1.0.0",
     "source_connections": {
@@ -5443,9 +5549,9 @@
       "role": "anatomical_references"
     },
     "dimensions": {
-      "length_mm": null,
-      "thickness_mm": null,
-      "width_mm": null
+      "length_mm": 41.05,
+      "thickness_mm": 22.89,
+      "width_mm": 42.71
     },
     "geometry": {
       "reason": "no source geometry",
@@ -5453,7 +5559,9 @@
     },
     "joint_interfaces": [],
     "latin_name": "Patella",
-    "manufacturing_notes": [],
+    "manufacturing_notes": [
+      "Source-backed reference spans only; no registration to SOPHY, qualified surface, material, joint or mounting interface. See dimension evidence catalog."
+    ],
     "material": {
       "density": 1800.0,
       "name": "bone"
@@ -5463,13 +5571,14 @@
     "physics": {
       "mass_kg": null,
       "mass_provenance": {
-        "density": "material.density",
-        "dimensions": "dimensions",
-        "method": "box_volume_times_density",
+        "source": "physics.mass_kg",
         "status": "unknown"
       }
     },
-    "references": [],
+    "references": [
+      "https://sajs.co.za/article/download/4002/5775",
+      "references/dim072/catalog.json#/candidates/30"
+    ],
     "region": "knee",
     "revision": "1.0.0",
     "source_connections": {
@@ -5507,9 +5616,9 @@
       "role": "anatomical_references"
     },
     "dimensions": {
-      "length_mm": null,
-      "thickness_mm": null,
-      "width_mm": null
+      "length_mm": 41.05,
+      "thickness_mm": 22.56,
+      "width_mm": 42.71
     },
     "geometry": {
       "reason": "no source geometry",
@@ -5517,7 +5626,9 @@
     },
     "joint_interfaces": [],
     "latin_name": "Patella",
-    "manufacturing_notes": [],
+    "manufacturing_notes": [
+      "Source-backed reference spans only; no registration to SOPHY, qualified surface, material, joint or mounting interface. See dimension evidence catalog."
+    ],
     "material": {
       "density": 1800.0,
       "name": "bone"
@@ -5527,13 +5638,14 @@
     "physics": {
       "mass_kg": null,
       "mass_provenance": {
-        "density": "material.density",
-        "dimensions": "dimensions",
-        "method": "box_volume_times_density",
+        "source": "physics.mass_kg",
         "status": "unknown"
       }
     },
-    "references": [],
+    "references": [
+      "https://sajs.co.za/article/download/4002/5775",
+      "references/dim072/catalog.json#/candidates/31"
+    ],
     "region": "knee",
     "revision": "1.0.0",
     "source_connections": {
@@ -8014,7 +8126,11 @@
     },
     "dimensions": {
       "length_mm": null,
+      "midshaft_thickness_mm": 3.2,
+      "midshaft_width_mm": 17.0,
       "thickness_mm": null,
+      "tubercle_ventral_arc_mm": 98.6,
+      "tubercle_ventral_chord_mm": 79.6,
       "width_mm": null
     },
     "geometry": {
@@ -8023,7 +8139,10 @@
     },
     "joint_interfaces": [],
     "latin_name": "Rib 1",
-    "manufacturing_notes": [],
+    "manufacturing_notes": [
+      "Source-backed reference spans only; no registration to SOPHY, qualified surface, material, joint or mounting interface. See dimension evidence catalog.",
+      "Curved partial arc and local shaft spans are not a whole-rib bounding box or full rib length."
+    ],
     "material": {
       "density": 1800.0,
       "name": "bone"
@@ -8033,13 +8152,14 @@
     "physics": {
       "mass_kg": null,
       "mass_provenance": {
-        "density": "material.density",
-        "dimensions": "dimensions",
-        "method": "box_volume_times_density",
+        "source": "physics.mass_kg",
         "status": "unknown"
       }
     },
-    "references": [],
+    "references": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC9005670/",
+      "references/dim072/catalog.json#/candidates/32"
+    ],
     "region": "thorax",
     "revision": "1.0.0",
     "source_connections": {
@@ -8078,7 +8198,11 @@
     },
     "dimensions": {
       "length_mm": null,
+      "midshaft_thickness_mm": 3.3,
+      "midshaft_width_mm": 16.8,
       "thickness_mm": null,
+      "tubercle_ventral_arc_mm": 97.8,
+      "tubercle_ventral_chord_mm": 79.9,
       "width_mm": null
     },
     "geometry": {
@@ -8087,7 +8211,10 @@
     },
     "joint_interfaces": [],
     "latin_name": "Rib 1",
-    "manufacturing_notes": [],
+    "manufacturing_notes": [
+      "Source-backed reference spans only; no registration to SOPHY, qualified surface, material, joint or mounting interface. See dimension evidence catalog.",
+      "Curved partial arc and local shaft spans are not a whole-rib bounding box or full rib length."
+    ],
     "material": {
       "density": 1800.0,
       "name": "bone"
@@ -8097,13 +8224,14 @@
     "physics": {
       "mass_kg": null,
       "mass_provenance": {
-        "density": "material.density",
-        "dimensions": "dimensions",
-        "method": "box_volume_times_density",
+        "source": "physics.mass_kg",
         "status": "unknown"
       }
     },
-    "references": [],
+    "references": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC9005670/",
+      "references/dim072/catalog.json#/candidates/33"
+    ],
     "region": "thorax",
     "revision": "1.0.0",
     "source_connections": {
@@ -9762,6 +9890,8 @@
       "role": "anatomical_references"
     },
     "dimensions": {
+      "body_anterior_height_mm": 14.12,
+      "body_posterior_height_mm": 14.63,
       "length_mm": null,
       "thickness_mm": null,
       "width_mm": null
@@ -9772,7 +9902,10 @@
     },
     "joint_interfaces": [],
     "latin_name": "T1",
-    "manufacturing_notes": [],
+    "manufacturing_notes": [
+      "Source-backed reference spans only; no registration to SOPHY, qualified surface, material, joint or mounting interface. See dimension evidence catalog.",
+      "Endplate heights do not qualify whole vertebral dimensions, surface shape or articulation."
+    ],
     "material": {
       "density": 1800.0,
       "name": "bone"
@@ -9782,13 +9915,14 @@
     "physics": {
       "mass_kg": null,
       "mass_provenance": {
-        "density": "material.density",
-        "dimensions": "dimensions",
-        "method": "box_volume_times_density",
+        "source": "physics.mass_kg",
         "status": "unknown"
       }
     },
-    "references": [],
+    "references": [
+      "https://www.asianspinejournal.org/upload/pdf/asj-5-20.pdf",
+      "references/dim072/catalog.json#/candidates/16"
+    ],
     "region": "thoracic vertebrae",
     "revision": "1.0.0",
     "source_connections": {
@@ -9825,6 +9959,8 @@
       "role": "anatomical_references"
     },
     "dimensions": {
+      "body_anterior_height_mm": 19.78,
+      "body_posterior_height_mm": 20.19,
       "length_mm": null,
       "thickness_mm": null,
       "width_mm": null
@@ -9835,7 +9971,10 @@
     },
     "joint_interfaces": [],
     "latin_name": "T10",
-    "manufacturing_notes": [],
+    "manufacturing_notes": [
+      "Source-backed reference spans only; no registration to SOPHY, qualified surface, material, joint or mounting interface. See dimension evidence catalog.",
+      "Endplate heights do not qualify whole vertebral dimensions, surface shape or articulation."
+    ],
     "material": {
       "density": 1800.0,
       "name": "bone"
@@ -9845,13 +9984,14 @@
     "physics": {
       "mass_kg": null,
       "mass_provenance": {
-        "density": "material.density",
-        "dimensions": "dimensions",
-        "method": "box_volume_times_density",
+        "source": "physics.mass_kg",
         "status": "unknown"
       }
     },
-    "references": [],
+    "references": [
+      "https://www.asianspinejournal.org/upload/pdf/asj-5-20.pdf",
+      "references/dim072/catalog.json#/candidates/7"
+    ],
     "region": "thoracic vertebrae",
     "revision": "1.0.0",
     "source_connections": {
@@ -9888,6 +10028,7 @@
       "role": "anatomical_references"
     },
     "dimensions": {
+      "body_anterior_height_mm": 20.96,
       "length_mm": null,
       "thickness_mm": null,
       "width_mm": null
@@ -9898,7 +10039,11 @@
     },
     "joint_interfaces": [],
     "latin_name": "T11",
-    "manufacturing_notes": [],
+    "manufacturing_notes": [
+      "Source-backed reference spans only; no registration to SOPHY, qualified surface, material, joint or mounting interface. See dimension evidence catalog.",
+      "Published T11 posterior height quarantined; no corrected value is inferred.",
+      "Endplate heights do not qualify whole vertebral dimensions, surface shape or articulation."
+    ],
     "material": {
       "density": 1800.0,
       "name": "bone"
@@ -9908,13 +10053,14 @@
     "physics": {
       "mass_kg": null,
       "mass_provenance": {
-        "density": "material.density",
-        "dimensions": "dimensions",
-        "method": "box_volume_times_density",
+        "source": "physics.mass_kg",
         "status": "unknown"
       }
     },
-    "references": [],
+    "references": [
+      "https://www.asianspinejournal.org/upload/pdf/asj-5-20.pdf",
+      "references/dim072/catalog.json#/candidates/6"
+    ],
     "region": "thoracic vertebrae",
     "revision": "1.0.0",
     "source_connections": {
@@ -9951,6 +10097,8 @@
       "role": "anatomical_references"
     },
     "dimensions": {
+      "body_anterior_height_mm": 21.83,
+      "body_posterior_height_mm": 29.35,
       "length_mm": null,
       "thickness_mm": null,
       "width_mm": null
@@ -9961,7 +10109,10 @@
     },
     "joint_interfaces": [],
     "latin_name": "T12",
-    "manufacturing_notes": [],
+    "manufacturing_notes": [
+      "Source-backed reference spans only; no registration to SOPHY, qualified surface, material, joint or mounting interface. See dimension evidence catalog.",
+      "Endplate heights do not qualify whole vertebral dimensions, surface shape or articulation."
+    ],
     "material": {
       "density": 1800.0,
       "name": "bone"
@@ -9971,13 +10122,14 @@
     "physics": {
       "mass_kg": null,
       "mass_provenance": {
-        "density": "material.density",
-        "dimensions": "dimensions",
-        "method": "box_volume_times_density",
+        "source": "physics.mass_kg",
         "status": "unknown"
       }
     },
-    "references": [],
+    "references": [
+      "https://www.asianspinejournal.org/upload/pdf/asj-5-20.pdf",
+      "references/dim072/catalog.json#/candidates/5"
+    ],
     "region": "thoracic vertebrae",
     "revision": "1.0.0",
     "source_connections": {
@@ -10014,6 +10166,8 @@
       "role": "anatomical_references"
     },
     "dimensions": {
+      "body_anterior_height_mm": 15.25,
+      "body_posterior_height_mm": 15.47,
       "length_mm": null,
       "thickness_mm": null,
       "width_mm": null
@@ -10024,7 +10178,10 @@
     },
     "joint_interfaces": [],
     "latin_name": "T2",
-    "manufacturing_notes": [],
+    "manufacturing_notes": [
+      "Source-backed reference spans only; no registration to SOPHY, qualified surface, material, joint or mounting interface. See dimension evidence catalog.",
+      "Endplate heights do not qualify whole vertebral dimensions, surface shape or articulation."
+    ],
     "material": {
       "density": 1800.0,
       "name": "bone"
@@ -10034,13 +10191,14 @@
     "physics": {
       "mass_kg": null,
       "mass_provenance": {
-        "density": "material.density",
-        "dimensions": "dimensions",
-        "method": "box_volume_times_density",
+        "source": "physics.mass_kg",
         "status": "unknown"
       }
     },
-    "references": [],
+    "references": [
+      "https://www.asianspinejournal.org/upload/pdf/asj-5-20.pdf",
+      "references/dim072/catalog.json#/candidates/15"
+    ],
     "region": "thoracic vertebrae",
     "revision": "1.0.0",
     "source_connections": {
@@ -10077,6 +10235,8 @@
       "role": "anatomical_references"
     },
     "dimensions": {
+      "body_anterior_height_mm": 15.98,
+      "body_posterior_height_mm": 16.26,
       "length_mm": null,
       "thickness_mm": null,
       "width_mm": null
@@ -10087,7 +10247,10 @@
     },
     "joint_interfaces": [],
     "latin_name": "T3",
-    "manufacturing_notes": [],
+    "manufacturing_notes": [
+      "Source-backed reference spans only; no registration to SOPHY, qualified surface, material, joint or mounting interface. See dimension evidence catalog.",
+      "Endplate heights do not qualify whole vertebral dimensions, surface shape or articulation."
+    ],
     "material": {
       "density": 1800.0,
       "name": "bone"
@@ -10097,13 +10260,14 @@
     "physics": {
       "mass_kg": null,
       "mass_provenance": {
-        "density": "material.density",
-        "dimensions": "dimensions",
-        "method": "box_volume_times_density",
+        "source": "physics.mass_kg",
         "status": "unknown"
       }
     },
-    "references": [],
+    "references": [
+      "https://www.asianspinejournal.org/upload/pdf/asj-5-20.pdf",
+      "references/dim072/catalog.json#/candidates/14"
+    ],
     "region": "thoracic vertebrae",
     "revision": "1.0.0",
     "source_connections": {
@@ -10140,6 +10304,8 @@
       "role": "anatomical_references"
     },
     "dimensions": {
+      "body_anterior_height_mm": 16.49,
+      "body_posterior_height_mm": 16.58,
       "length_mm": null,
       "thickness_mm": null,
       "width_mm": null
@@ -10150,7 +10316,10 @@
     },
     "joint_interfaces": [],
     "latin_name": "T4",
-    "manufacturing_notes": [],
+    "manufacturing_notes": [
+      "Source-backed reference spans only; no registration to SOPHY, qualified surface, material, joint or mounting interface. See dimension evidence catalog.",
+      "Endplate heights do not qualify whole vertebral dimensions, surface shape or articulation."
+    ],
     "material": {
       "density": 1800.0,
       "name": "bone"
@@ -10160,13 +10329,14 @@
     "physics": {
       "mass_kg": null,
       "mass_provenance": {
-        "density": "material.density",
-        "dimensions": "dimensions",
-        "method": "box_volume_times_density",
+        "source": "physics.mass_kg",
         "status": "unknown"
       }
     },
-    "references": [],
+    "references": [
+      "https://www.asianspinejournal.org/upload/pdf/asj-5-20.pdf",
+      "references/dim072/catalog.json#/candidates/13"
+    ],
     "region": "thoracic vertebrae",
     "revision": "1.0.0",
     "source_connections": {
@@ -10203,6 +10373,8 @@
       "role": "anatomical_references"
     },
     "dimensions": {
+      "body_anterior_height_mm": 16.41,
+      "body_posterior_height_mm": 17.64,
       "length_mm": null,
       "thickness_mm": null,
       "width_mm": null
@@ -10213,7 +10385,10 @@
     },
     "joint_interfaces": [],
     "latin_name": "T5",
-    "manufacturing_notes": [],
+    "manufacturing_notes": [
+      "Source-backed reference spans only; no registration to SOPHY, qualified surface, material, joint or mounting interface. See dimension evidence catalog.",
+      "Endplate heights do not qualify whole vertebral dimensions, surface shape or articulation."
+    ],
     "material": {
       "density": 1800.0,
       "name": "bone"
@@ -10223,13 +10398,14 @@
     "physics": {
       "mass_kg": null,
       "mass_provenance": {
-        "density": "material.density",
-        "dimensions": "dimensions",
-        "method": "box_volume_times_density",
+        "source": "physics.mass_kg",
         "status": "unknown"
       }
     },
-    "references": [],
+    "references": [
+      "https://www.asianspinejournal.org/upload/pdf/asj-5-20.pdf",
+      "references/dim072/catalog.json#/candidates/12"
+    ],
     "region": "thoracic vertebrae",
     "revision": "1.0.0",
     "source_connections": {
@@ -10266,6 +10442,8 @@
       "role": "anatomical_references"
     },
     "dimensions": {
+      "body_anterior_height_mm": 16.95,
+      "body_posterior_height_mm": 18.16,
       "length_mm": null,
       "thickness_mm": null,
       "width_mm": null
@@ -10276,7 +10454,10 @@
     },
     "joint_interfaces": [],
     "latin_name": "T6",
-    "manufacturing_notes": [],
+    "manufacturing_notes": [
+      "Source-backed reference spans only; no registration to SOPHY, qualified surface, material, joint or mounting interface. See dimension evidence catalog.",
+      "Endplate heights do not qualify whole vertebral dimensions, surface shape or articulation."
+    ],
     "material": {
       "density": 1800.0,
       "name": "bone"
@@ -10286,13 +10467,14 @@
     "physics": {
       "mass_kg": null,
       "mass_provenance": {
-        "density": "material.density",
-        "dimensions": "dimensions",
-        "method": "box_volume_times_density",
+        "source": "physics.mass_kg",
         "status": "unknown"
       }
     },
-    "references": [],
+    "references": [
+      "https://www.asianspinejournal.org/upload/pdf/asj-5-20.pdf",
+      "references/dim072/catalog.json#/candidates/11"
+    ],
     "region": "thoracic vertebrae",
     "revision": "1.0.0",
     "source_connections": {
@@ -10329,6 +10511,8 @@
       "role": "anatomical_references"
     },
     "dimensions": {
+      "body_anterior_height_mm": 16.82,
+      "body_posterior_height_mm": 18.38,
       "length_mm": null,
       "thickness_mm": null,
       "width_mm": null
@@ -10339,7 +10523,10 @@
     },
     "joint_interfaces": [],
     "latin_name": "T7",
-    "manufacturing_notes": [],
+    "manufacturing_notes": [
+      "Source-backed reference spans only; no registration to SOPHY, qualified surface, material, joint or mounting interface. See dimension evidence catalog.",
+      "Endplate heights do not qualify whole vertebral dimensions, surface shape or articulation."
+    ],
     "material": {
       "density": 1800.0,
       "name": "bone"
@@ -10349,13 +10536,14 @@
     "physics": {
       "mass_kg": null,
       "mass_provenance": {
-        "density": "material.density",
-        "dimensions": "dimensions",
-        "method": "box_volume_times_density",
+        "source": "physics.mass_kg",
         "status": "unknown"
       }
     },
-    "references": [],
+    "references": [
+      "https://www.asianspinejournal.org/upload/pdf/asj-5-20.pdf",
+      "references/dim072/catalog.json#/candidates/10"
+    ],
     "region": "thoracic vertebrae",
     "revision": "1.0.0",
     "source_connections": {
@@ -10392,6 +10580,8 @@
       "role": "anatomical_references"
     },
     "dimensions": {
+      "body_anterior_height_mm": 18.46,
+      "body_posterior_height_mm": 18.8,
       "length_mm": null,
       "thickness_mm": null,
       "width_mm": null
@@ -10402,7 +10592,10 @@
     },
     "joint_interfaces": [],
     "latin_name": "T8",
-    "manufacturing_notes": [],
+    "manufacturing_notes": [
+      "Source-backed reference spans only; no registration to SOPHY, qualified surface, material, joint or mounting interface. See dimension evidence catalog.",
+      "Endplate heights do not qualify whole vertebral dimensions, surface shape or articulation."
+    ],
     "material": {
       "density": 1800.0,
       "name": "bone"
@@ -10412,13 +10605,14 @@
     "physics": {
       "mass_kg": null,
       "mass_provenance": {
-        "density": "material.density",
-        "dimensions": "dimensions",
-        "method": "box_volume_times_density",
+        "source": "physics.mass_kg",
         "status": "unknown"
       }
     },
-    "references": [],
+    "references": [
+      "https://www.asianspinejournal.org/upload/pdf/asj-5-20.pdf",
+      "references/dim072/catalog.json#/candidates/9"
+    ],
     "region": "thoracic vertebrae",
     "revision": "1.0.0",
     "source_connections": {
@@ -10455,6 +10649,8 @@
       "role": "anatomical_references"
     },
     "dimensions": {
+      "body_anterior_height_mm": 19.35,
+      "body_posterior_height_mm": 19.49,
       "length_mm": null,
       "thickness_mm": null,
       "width_mm": null
@@ -10465,7 +10661,10 @@
     },
     "joint_interfaces": [],
     "latin_name": "T9",
-    "manufacturing_notes": [],
+    "manufacturing_notes": [
+      "Source-backed reference spans only; no registration to SOPHY, qualified surface, material, joint or mounting interface. See dimension evidence catalog.",
+      "Endplate heights do not qualify whole vertebral dimensions, surface shape or articulation."
+    ],
     "material": {
       "density": 1800.0,
       "name": "bone"
@@ -10475,13 +10674,14 @@
     "physics": {
       "mass_kg": null,
       "mass_provenance": {
-        "density": "material.density",
-        "dimensions": "dimensions",
-        "method": "box_volume_times_density",
+        "source": "physics.mass_kg",
         "status": "unknown"
       }
     },
-    "references": [],
+    "references": [
+      "https://www.asianspinejournal.org/upload/pdf/asj-5-20.pdf",
+      "references/dim072/catalog.json#/candidates/8"
+    ],
     "region": "thoracic vertebrae",
     "revision": "1.0.0",
     "source_connections": {
@@ -10519,9 +10719,9 @@
       "role": "anatomical_references"
     },
     "dimensions": {
-      "length_mm": null,
-      "thickness_mm": null,
-      "width_mm": null
+      "length_mm": 49.15,
+      "thickness_mm": 24.41,
+      "width_mm": 36.79
     },
     "geometry": {
       "reason": "no source geometry",
@@ -10529,7 +10729,9 @@
     },
     "joint_interfaces": [],
     "latin_name": "Talus",
-    "manufacturing_notes": [],
+    "manufacturing_notes": [
+      "Source-backed reference spans only; no registration to SOPHY, qualified surface, material, joint or mounting interface. See dimension evidence catalog."
+    ],
     "material": {
       "density": 1800.0,
       "name": "bone"
@@ -10539,13 +10741,14 @@
     "physics": {
       "mass_kg": null,
       "mass_provenance": {
-        "density": "material.density",
-        "dimensions": "dimensions",
-        "method": "box_volume_times_density",
+        "source": "physics.mass_kg",
         "status": "unknown"
       }
     },
-    "references": [],
+    "references": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC6584390/",
+      "references/dim072/catalog.json#/candidates/24"
+    ],
     "region": "tarsal",
     "revision": "1.0.0",
     "source_connections": {
@@ -10583,9 +10786,9 @@
       "role": "anatomical_references"
     },
     "dimensions": {
-      "length_mm": null,
-      "thickness_mm": null,
-      "width_mm": null
+      "length_mm": 48.57,
+      "thickness_mm": 24.23,
+      "width_mm": 36.15
     },
     "geometry": {
       "reason": "no source geometry",
@@ -10593,7 +10796,9 @@
     },
     "joint_interfaces": [],
     "latin_name": "Talus",
-    "manufacturing_notes": [],
+    "manufacturing_notes": [
+      "Source-backed reference spans only; no registration to SOPHY, qualified surface, material, joint or mounting interface. See dimension evidence catalog."
+    ],
     "material": {
       "density": 1800.0,
       "name": "bone"
@@ -10603,13 +10808,14 @@
     "physics": {
       "mass_kg": null,
       "mass_provenance": {
-        "density": "material.density",
-        "dimensions": "dimensions",
-        "method": "box_volume_times_density",
+        "source": "physics.mass_kg",
         "status": "unknown"
       }
     },
-    "references": [],
+    "references": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC6584390/",
+      "references/dim072/catalog.json#/candidates/25"
+    ],
     "region": "tarsal",
     "revision": "1.0.0",
     "source_connections": {

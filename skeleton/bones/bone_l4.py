@@ -6,7 +6,17 @@ bone = BoneSpec(
     bone_type = 'irregular',
     location = {'region': 'lumbar vertebrae', 'proximal_connection': 'L3', 'distal_connection': 'L5'},
     articulations = [],
-    dimensions = {'length_cm': None, 'width_cm': None, 'thickness_cm': None},
+    # PHY-DIM-072: unscaled study statistics; whole-bone unknowns remain null.
+    dimensions = {
+        'body_height_mm': 25.37,
+        'body_lower_ap_mm': 35.0,
+        'body_lower_width_mm': 52.82,
+        'body_upper_ap_mm': 34.96,
+        'body_upper_width_mm': 50.87,
+        'length_mm': None,
+        'thickness_mm': None,
+        'width_mm': None,
+    },
     function = ['weight bearing'],
     notable_features = [],
     developmental_notes = 'large body for support',
@@ -15,6 +25,16 @@ bone = BoneSpec(
     visual_reference = None,
     embodiment = "virtual",
     geometry = {},
+    physics = {"mass_kg": None},
+    references = ['https://pmc.ncbi.nlm.nih.gov/articles/PMC8917002/', 'references/dim072/catalog.json#/candidates/1'],
+    metric_sources = {
+        'body_height_mm': 'references/dim072/catalog.json#/candidates/1/fields/body_height_mm',
+        'body_lower_ap_mm': 'references/dim072/catalog.json#/candidates/1/fields/body_lower_ap_mm',
+        'body_lower_width_mm': 'references/dim072/catalog.json#/candidates/1/fields/body_lower_width_mm',
+        'body_upper_ap_mm': 'references/dim072/catalog.json#/candidates/1/fields/body_upper_ap_mm',
+        'body_upper_width_mm': 'references/dim072/catalog.json#/candidates/1/fields/body_upper_width_mm',
+    },
+    manufacturing_notes = ['Source-backed reference spans only; no registration to SOPHY, qualified surface, material, joint or mounting interface. See dimension evidence catalog.', 'Body spans do not resolve the whole vertebra length/width/thickness; posterior elements remain unmeasured.'],
 )
 
 

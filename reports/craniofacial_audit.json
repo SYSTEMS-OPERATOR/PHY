@@ -1879,7 +1879,7 @@
     "status": "external_envelope_inputs_not_bone_or_facial_landmark_measurements"
   },
   "inputs": {
-    "canonical_records_sha256": "890b4c7307aa43e23b53818c08a2b23e793d104b087376d6b90f6e93216c1c15",
+    "canonical_records_sha256": "69549551af984a06100b8398f50df47bf07a2e3e435b0594cd11bd4a8596b574",
     "catalog_sha256": "5d92a2ae9003700d8480d9c027f56d1876388dec58f83fcd4ce881aaf8ef6b40",
     "datasets": [
       {

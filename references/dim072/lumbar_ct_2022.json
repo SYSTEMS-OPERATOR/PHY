@@ -1,0 +1,256 @@
+{
+  "rows": [
+    {
+      "admissible": true,
+      "admitted_field": "body_height_mm",
+      "bone_id": "BONE_L1",
+      "mean": 24.53,
+      "native_units": "mm",
+      "parameter": "L1_height",
+      "sd": 3.08,
+      "side": "midline"
+    },
+    {
+      "admissible": true,
+      "admitted_field": "body_upper_ap_mm",
+      "bone_id": "BONE_L1",
+      "mean": 31.51,
+      "native_units": "mm",
+      "parameter": "L1_upper_ap",
+      "sd": 3.01,
+      "side": "midline"
+    },
+    {
+      "admissible": true,
+      "admitted_field": "body_upper_width_mm",
+      "bone_id": "BONE_L1",
+      "mean": 42.73,
+      "native_units": "mm",
+      "parameter": "L1_upper_width",
+      "sd": 3.93,
+      "side": "midline"
+    },
+    {
+      "admissible": true,
+      "admitted_field": "body_lower_ap_mm",
+      "bone_id": "BONE_L1",
+      "mean": 32.11,
+      "native_units": "mm",
+      "parameter": "L1_lower_ap",
+      "sd": 3.63,
+      "side": "midline"
+    },
+    {
+      "admissible": true,
+      "admitted_field": "body_lower_width_mm",
+      "bone_id": "BONE_L1",
+      "mean": 46.07,
+      "native_units": "mm",
+      "parameter": "L1_lower_width",
+      "sd": 3.9,
+      "side": "midline"
+    },
+    {
+      "admissible": true,
+      "admitted_field": "body_height_mm",
+      "bone_id": "BONE_L2",
+      "mean": 25.39,
+      "native_units": "mm",
+      "parameter": "L2_height",
+      "sd": 2.49,
+      "side": "midline"
+    },
+    {
+      "admissible": true,
+      "admitted_field": "body_upper_ap_mm",
+      "bone_id": "BONE_L2",
+      "mean": 33.12,
+      "native_units": "mm",
+      "parameter": "L2_upper_ap",
+      "sd": 3.49,
+      "side": "midline"
+    },
+    {
+      "admissible": true,
+      "admitted_field": "body_upper_width_mm",
+      "bone_id": "BONE_L2",
+      "mean": 45.8,
+      "native_units": "mm",
+      "parameter": "L2_upper_width",
+      "sd": 4.16,
+      "side": "midline"
+    },
+    {
+      "admissible": true,
+      "admitted_field": "body_lower_ap_mm",
+      "bone_id": "BONE_L2",
+      "mean": 33.69,
+      "native_units": "mm",
+      "parameter": "L2_lower_ap",
+      "sd": 3.57,
+      "side": "midline"
+    },
+    {
+      "admissible": true,
+      "admitted_field": "body_lower_width_mm",
+      "bone_id": "BONE_L2",
+      "mean": 48.18,
+      "native_units": "mm",
+      "parameter": "L2_lower_width",
+      "sd": 4.03,
+      "side": "midline"
+    },
+    {
+      "admissible": true,
+      "admitted_field": "body_height_mm",
+      "bone_id": "BONE_L3",
+      "mean": 25.32,
+      "native_units": "mm",
+      "parameter": "L3_height",
+      "sd": 2.63,
+      "side": "midline"
+    },
+    {
+      "admissible": true,
+      "admitted_field": "body_upper_ap_mm",
+      "bone_id": "BONE_L3",
+      "mean": 34.48,
+      "native_units": "mm",
+      "parameter": "L3_upper_ap",
+      "sd": 3.73,
+      "side": "midline"
+    },
+    {
+      "admissible": true,
+      "admitted_field": "body_upper_width_mm",
+      "bone_id": "BONE_L3",
+      "mean": 48.22,
+      "native_units": "mm",
+      "parameter": "L3_upper_width",
+      "sd": 4.42,
+      "side": "midline"
+    },
+    {
+      "admissible": true,
+      "admitted_field": "body_lower_ap_mm",
+      "bone_id": "BONE_L3",
+      "mean": 34.25,
+      "native_units": "mm",
+      "parameter": "L3_lower_ap",
+      "sd": 3.48,
+      "side": "midline"
+    },
+    {
+      "admissible": true,
+      "admitted_field": "body_lower_width_mm",
+      "bone_id": "BONE_L3",
+      "mean": 50.97,
+      "native_units": "mm",
+      "parameter": "L3_lower_width",
+      "sd": 4.55,
+      "side": "midline"
+    },
+    {
+      "admissible": true,
+      "admitted_field": "body_height_mm",
+      "bone_id": "BONE_L4",
+      "mean": 25.37,
+      "native_units": "mm",
+      "parameter": "L4_height",
+      "sd": 2.14,
+      "side": "midline"
+    },
+    {
+      "admissible": true,
+      "admitted_field": "body_upper_ap_mm",
+      "bone_id": "BONE_L4",
+      "mean": 34.96,
+      "native_units": "mm",
+      "parameter": "L4_upper_ap",
+      "sd": 3.07,
+      "side": "midline"
+    },
+    {
+      "admissible": true,
+      "admitted_field": "body_upper_width_mm",
+      "bone_id": "BONE_L4",
+      "mean": 50.87,
+      "native_units": "mm",
+      "parameter": "L4_upper_width",
+      "sd": 5.37,
+      "side": "midline"
+    },
+    {
+      "admissible": true,
+      "admitted_field": "body_lower_ap_mm",
+      "bone_id": "BONE_L4",
+      "mean": 35.0,
+      "native_units": "mm",
+      "parameter": "L4_lower_ap",
+      "sd": 3.38,
+      "side": "midline"
+    },
+    {
+      "admissible": true,
+      "admitted_field": "body_lower_width_mm",
+      "bone_id": "BONE_L4",
+      "mean": 52.82,
+      "native_units": "mm",
+      "parameter": "L4_lower_width",
+      "sd": 5.69,
+      "side": "midline"
+    },
+    {
+      "admissible": true,
+      "admitted_field": "body_height_mm",
+      "bone_id": "BONE_L5",
+      "mean": 24.48,
+      "native_units": "mm",
+      "parameter": "L5_height",
+      "sd": 2.12,
+      "side": "midline"
+    },
+    {
+      "admissible": true,
+      "admitted_field": "body_upper_ap_mm",
+      "bone_id": "BONE_L5",
+      "mean": 35.12,
+      "native_units": "mm",
+      "parameter": "L5_upper_ap",
+      "sd": 3.35,
+      "side": "midline"
+    },
+    {
+      "admissible": true,
+      "admitted_field": "body_upper_width_mm",
+      "bone_id": "BONE_L5",
+      "mean": 54.1,
+      "native_units": "mm",
+      "parameter": "L5_upper_width",
+      "sd": 5.38,
+      "side": "midline"
+    },
+    {
+      "admissible": true,
+      "admitted_field": "body_lower_ap_mm",
+      "bone_id": "BONE_L5",
+      "mean": 34.32,
+      "native_units": "mm",
+      "parameter": "L5_lower_ap",
+      "sd": 3.38,
+      "side": "midline"
+    },
+    {
+      "admissible": true,
+      "admitted_field": "body_lower_width_mm",
+      "bone_id": "BONE_L5",
+      "mean": 53.22,
+      "native_units": "mm",
+      "parameter": "L5_lower_width",
+      "sd": 6.95,
+      "side": "midline"
+    }
+  ],
+  "source_id": "lumbar_ct_2022",
+  "table": "Table 1, female group; L1-L5 U and L rows"
+}

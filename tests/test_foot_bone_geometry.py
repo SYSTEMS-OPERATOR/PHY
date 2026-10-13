@@ -8,6 +8,7 @@ from unittest.mock import patch
 
 from skeleton.visualization import studio_model as sm
 from skeleton.visualization.bone_equivalence import bone_audit
+from skeleton.validation.dimension_evidence import load_evidence
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -18,7 +19,9 @@ class FootBoneGeometryTest(unittest.TestCase):
         cls.model = sm.build_armature()
         cls.bones = {p["bone_id"]: p for p in cls.model["parts"] if p["region"] == "feet"}
 
-    def test_exact_independent_foot_inventory_and_unknown_source_dimensions(self):
+    def test_exact_independent_foot_inventory_and_evidence_or_unknown_source_dimensions(self):
+        _, baseline, admitted = load_evidence()
+        before = {r["bone_id"]: r["dimensions"]["values_mm"] for r in baseline["bones"]}
         tarsals = ("TALUS", "CALCANEUS", "NAVICULAR", "CUBOID", "MEDIAL_CUNEIFORM",
                    "INTERMEDIATE_CUNEIFORM", "LATERAL_CUNEIFORM")
         for side in ("R", "L"):
@@ -38,7 +41,11 @@ class FootBoneGeometryTest(unittest.TestCase):
                                   and isinstance(n.func, ast.Name) and n.func.id == "BoneSpec"
                                   for k in n.keywords if k.arg == "dimensions"]
                     self.assertEqual(len(dimensions), 1)
-                    self.assertTrue(dimensions[0] and all(v is None for v in dimensions[0].values()))
+                    evidence = admitted.get(row["bone_id"], {})
+                    if evidence:
+                        self.assertEqual(dimensions[0], {**before[row["bone_id"]], **evidence})
+                    else:
+                        self.assertTrue(dimensions[0] and all(v is None for v in dimensions[0].values()))
         self.assertTrue(all(p["role"] == "bone_proxy" for p in self.bones.values()))
         self.assertFalse(any(p.get("grouped_bone_ids") for p in self.bones.values()))
 

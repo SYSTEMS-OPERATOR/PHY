@@ -1,0 +1,1703 @@
+{
+  "assignment": "PHY-DIM-072",
+  "baseline_snapshot": {
+    "path": "references/dim072/baseline.json",
+    "sha256": "391b699b73a46e694cc705745ab13adeae39bdb59c3dc01f14e3dc591ca5071d"
+  },
+  "candidates": [
+    {
+      "baseline_missing_fields": [
+        "length_mm",
+        "thickness_mm",
+        "width_mm"
+      ],
+      "bone_id": "BONE_L5",
+      "embodiment_fit": "Unscaled reference statistics; no registration to SOPHY 1676.4 mm or assertion of whole-body fit.",
+      "fabrication_qualified": false,
+      "fields": {
+        "body_height_mm": {
+          "canonical_registration": null,
+          "meaning": "Study CT vertebral body superior-inferior span.",
+          "method": "published_mean_identity",
+          "parameter": "L5_height",
+          "source_id": "lumbar_ct_2022",
+          "unit_scale": 1.0
+        },
+        "body_lower_ap_mm": {
+          "canonical_registration": null,
+          "meaning": "Lower body margin anterior-posterior span.",
+          "method": "published_mean_identity",
+          "parameter": "L5_lower_ap",
+          "source_id": "lumbar_ct_2022",
+          "unit_scale": 1.0
+        },
+        "body_lower_width_mm": {
+          "canonical_registration": null,
+          "meaning": "Lower body margin mediolateral span.",
+          "method": "published_mean_identity",
+          "parameter": "L5_lower_width",
+          "source_id": "lumbar_ct_2022",
+          "unit_scale": 1.0
+        },
+        "body_upper_ap_mm": {
+          "canonical_registration": null,
+          "meaning": "Upper body margin anterior-posterior span.",
+          "method": "published_mean_identity",
+          "parameter": "L5_upper_ap",
+          "source_id": "lumbar_ct_2022",
+          "unit_scale": 1.0
+        },
+        "body_upper_width_mm": {
+          "canonical_registration": null,
+          "meaning": "Upper body margin mediolateral span.",
+          "method": "published_mean_identity",
+          "parameter": "L5_upper_width",
+          "source_id": "lumbar_ct_2022",
+          "unit_scale": 1.0
+        }
+      },
+      "geometry_qualified": false,
+      "notes": [
+        "Body spans do not resolve the whole vertebra length/width/thickness; posterior elements remain unmeasured."
+      ],
+      "rank": 1,
+      "region": "spine",
+      "side": "midline",
+      "value_maturity": "source_backed"
+    },
+    {
+      "baseline_missing_fields": [
+        "length_mm",
+        "thickness_mm",
+        "width_mm"
+      ],
+      "bone_id": "BONE_L4",
+      "embodiment_fit": "Unscaled reference statistics; no registration to SOPHY 1676.4 mm or assertion of whole-body fit.",
+      "fabrication_qualified": false,
+      "fields": {
+        "body_height_mm": {
+          "canonical_registration": null,
+          "meaning": "Study CT vertebral body superior-inferior span.",
+          "method": "published_mean_identity",
+          "parameter": "L4_height",
+          "source_id": "lumbar_ct_2022",
+          "unit_scale": 1.0
+        },
+        "body_lower_ap_mm": {
+          "canonical_registration": null,
+          "meaning": "Lower body margin anterior-posterior span.",
+          "method": "published_mean_identity",
+          "parameter": "L4_lower_ap",
+          "source_id": "lumbar_ct_2022",
+          "unit_scale": 1.0
+        },
+        "body_lower_width_mm": {
+          "canonical_registration": null,
+          "meaning": "Lower body margin mediolateral span.",
+          "method": "published_mean_identity",
+          "parameter": "L4_lower_width",
+          "source_id": "lumbar_ct_2022",
+          "unit_scale": 1.0
+        },
+        "body_upper_ap_mm": {
+          "canonical_registration": null,
+          "meaning": "Upper body margin anterior-posterior span.",
+          "method": "published_mean_identity",
+          "parameter": "L4_upper_ap",
+          "source_id": "lumbar_ct_2022",
+          "unit_scale": 1.0
+        },
+        "body_upper_width_mm": {
+          "canonical_registration": null,
+          "meaning": "Upper body margin mediolateral span.",
+          "method": "published_mean_identity",
+          "parameter": "L4_upper_width",
+          "source_id": "lumbar_ct_2022",
+          "unit_scale": 1.0
+        }
+      },
+      "geometry_qualified": false,
+      "notes": [
+        "Body spans do not resolve the whole vertebra length/width/thickness; posterior elements remain unmeasured."
+      ],
+      "rank": 2,
+      "region": "spine",
+      "side": "midline",
+      "value_maturity": "source_backed"
+    },
+    {
+      "baseline_missing_fields": [
+        "length_mm",
+        "thickness_mm",
+        "width_mm"
+      ],
+      "bone_id": "BONE_L3",
+      "embodiment_fit": "Unscaled reference statistics; no registration to SOPHY 1676.4 mm or assertion of whole-body fit.",
+      "fabrication_qualified": false,
+      "fields": {
+        "body_height_mm": {
+          "canonical_registration": null,
+          "meaning": "Study CT vertebral body superior-inferior span.",
+          "method": "published_mean_identity",
+          "parameter": "L3_height",
+          "source_id": "lumbar_ct_2022",
+          "unit_scale": 1.0
+        },
+        "body_lower_ap_mm": {
+          "canonical_registration": null,
+          "meaning": "Lower body margin anterior-posterior span.",
+          "method": "published_mean_identity",
+          "parameter": "L3_lower_ap",
+          "source_id": "lumbar_ct_2022",
+          "unit_scale": 1.0
+        },
+        "body_lower_width_mm": {
+          "canonical_registration": null,
+          "meaning": "Lower body margin mediolateral span.",
+          "method": "published_mean_identity",
+          "parameter": "L3_lower_width",
+          "source_id": "lumbar_ct_2022",
+          "unit_scale": 1.0
+        },
+        "body_upper_ap_mm": {
+          "canonical_registration": null,
+          "meaning": "Upper body margin anterior-posterior span.",
+          "method": "published_mean_identity",
+          "parameter": "L3_upper_ap",
+          "source_id": "lumbar_ct_2022",
+          "unit_scale": 1.0
+        },
+        "body_upper_width_mm": {
+          "canonical_registration": null,
+          "meaning": "Upper body margin mediolateral span.",
+          "method": "published_mean_identity",
+          "parameter": "L3_upper_width",
+          "source_id": "lumbar_ct_2022",
+          "unit_scale": 1.0
+        }
+      },
+      "geometry_qualified": false,
+      "notes": [
+        "Body spans do not resolve the whole vertebra length/width/thickness; posterior elements remain unmeasured."
+      ],
+      "rank": 3,
+      "region": "spine",
+      "side": "midline",
+      "value_maturity": "source_backed"
+    },
+    {
+      "baseline_missing_fields": [
+        "length_mm",
+        "thickness_mm",
+        "width_mm"
+      ],
+      "bone_id": "BONE_L2",
+      "embodiment_fit": "Unscaled reference statistics; no registration to SOPHY 1676.4 mm or assertion of whole-body fit.",
+      "fabrication_qualified": false,
+      "fields": {
+        "body_height_mm": {
+          "canonical_registration": null,
+          "meaning": "Study CT vertebral body superior-inferior span.",
+          "method": "published_mean_identity",
+          "parameter": "L2_height",
+          "source_id": "lumbar_ct_2022",
+          "unit_scale": 1.0
+        },
+        "body_lower_ap_mm": {
+          "canonical_registration": null,
+          "meaning": "Lower body margin anterior-posterior span.",
+          "method": "published_mean_identity",
+          "parameter": "L2_lower_ap",
+          "source_id": "lumbar_ct_2022",
+          "unit_scale": 1.0
+        },
+        "body_lower_width_mm": {
+          "canonical_registration": null,
+          "meaning": "Lower body margin mediolateral span.",
+          "method": "published_mean_identity",
+          "parameter": "L2_lower_width",
+          "source_id": "lumbar_ct_2022",
+          "unit_scale": 1.0
+        },
+        "body_upper_ap_mm": {
+          "canonical_registration": null,
+          "meaning": "Upper body margin anterior-posterior span.",
+          "method": "published_mean_identity",
+          "parameter": "L2_upper_ap",
+          "source_id": "lumbar_ct_2022",
+          "unit_scale": 1.0
+        },
+        "body_upper_width_mm": {
+          "canonical_registration": null,
+          "meaning": "Upper body margin mediolateral span.",
+          "method": "published_mean_identity",
+          "parameter": "L2_upper_width",
+          "source_id": "lumbar_ct_2022",
+          "unit_scale": 1.0
+        }
+      },
+      "geometry_qualified": false,
+      "notes": [
+        "Body spans do not resolve the whole vertebra length/width/thickness; posterior elements remain unmeasured."
+      ],
+      "rank": 4,
+      "region": "spine",
+      "side": "midline",
+      "value_maturity": "source_backed"
+    },
+    {
+      "baseline_missing_fields": [
+        "length_mm",
+        "thickness_mm",
+        "width_mm"
+      ],
+      "bone_id": "BONE_L1",
+      "embodiment_fit": "Unscaled reference statistics; no registration to SOPHY 1676.4 mm or assertion of whole-body fit.",
+      "fabrication_qualified": false,
+      "fields": {
+        "body_height_mm": {
+          "canonical_registration": null,
+          "meaning": "Study CT vertebral body superior-inferior span.",
+          "method": "published_mean_identity",
+          "parameter": "L1_height",
+          "source_id": "lumbar_ct_2022",
+          "unit_scale": 1.0
+        },
+        "body_lower_ap_mm": {
+          "canonical_registration": null,
+          "meaning": "Lower body margin anterior-posterior span.",
+          "method": "published_mean_identity",
+          "parameter": "L1_lower_ap",
+          "source_id": "lumbar_ct_2022",
+          "unit_scale": 1.0
+        },
+        "body_lower_width_mm": {
+          "canonical_registration": null,
+          "meaning": "Lower body margin mediolateral span.",
+          "method": "published_mean_identity",
+          "parameter": "L1_lower_width",
+          "source_id": "lumbar_ct_2022",
+          "unit_scale": 1.0
+        },
+        "body_upper_ap_mm": {
+          "canonical_registration": null,
+          "meaning": "Upper body margin anterior-posterior span.",
+          "method": "published_mean_identity",
+          "parameter": "L1_upper_ap",
+          "source_id": "lumbar_ct_2022",
+          "unit_scale": 1.0
+        },
+        "body_upper_width_mm": {
+          "canonical_registration": null,
+          "meaning": "Upper body margin mediolateral span.",
+          "method": "published_mean_identity",
+          "parameter": "L1_upper_width",
+          "source_id": "lumbar_ct_2022",
+          "unit_scale": 1.0
+        }
+      },
+      "geometry_qualified": false,
+      "notes": [
+        "Body spans do not resolve the whole vertebra length/width/thickness; posterior elements remain unmeasured."
+      ],
+      "rank": 5,
+      "region": "spine",
+      "side": "midline",
+      "value_maturity": "source_backed"
+    },
+    {
+      "baseline_missing_fields": [
+        "length_mm",
+        "thickness_mm",
+        "width_mm"
+      ],
+      "bone_id": "BONE_T12",
+      "embodiment_fit": "Unscaled reference statistics; no registration to SOPHY 1676.4 mm or assertion of whole-body fit.",
+      "fabrication_qualified": false,
+      "fields": {
+        "body_anterior_height_mm": {
+          "canonical_registration": null,
+          "meaning": "Anterior superior-to-inferior vertebral endplate span.",
+          "method": "published_mean_identity",
+          "parameter": "T12_VBHa",
+          "source_id": "thoracic_caliper_2011",
+          "unit_scale": 1.0
+        },
+        "body_posterior_height_mm": {
+          "canonical_registration": null,
+          "meaning": "Posterior superior-to-inferior vertebral endplate span.",
+          "method": "published_mean_identity",
+          "parameter": "T12_VBHp",
+          "source_id": "thoracic_caliper_2011",
+          "unit_scale": 1.0
+        }
+      },
+      "geometry_qualified": false,
+      "notes": [
+        "Endplate heights do not qualify whole vertebral dimensions, surface shape or articulation."
+      ],
+      "rank": 6,
+      "region": "spine",
+      "side": "midline",
+      "value_maturity": "source_backed"
+    },
+    {
+      "baseline_missing_fields": [
+        "length_mm",
+        "thickness_mm",
+        "width_mm"
+      ],
+      "bone_id": "BONE_T11",
+      "embodiment_fit": "Unscaled reference statistics; no registration to SOPHY 1676.4 mm or assertion of whole-body fit.",
+      "fabrication_qualified": false,
+      "fields": {
+        "body_anterior_height_mm": {
+          "canonical_registration": null,
+          "meaning": "Anterior superior-to-inferior vertebral endplate span.",
+          "method": "published_mean_identity",
+          "parameter": "T11_VBHa",
+          "source_id": "thoracic_caliper_2011",
+          "unit_scale": 1.0
+        }
+      },
+      "geometry_qualified": false,
+      "notes": [
+        "Published T11 posterior height quarantined; no corrected value is inferred.",
+        "Endplate heights do not qualify whole vertebral dimensions, surface shape or articulation."
+      ],
+      "rank": 7,
+      "region": "spine",
+      "side": "midline",
+      "value_maturity": "source_backed"
+    },
+    {
+      "baseline_missing_fields": [
+        "length_mm",
+        "thickness_mm",
+        "width_mm"
+      ],
+      "bone_id": "BONE_T10",
+      "embodiment_fit": "Unscaled reference statistics; no registration to SOPHY 1676.4 mm or assertion of whole-body fit.",
+      "fabrication_qualified": false,
+      "fields": {
+        "body_anterior_height_mm": {
+          "canonical_registration": null,
+          "meaning": "Anterior superior-to-inferior vertebral endplate span.",
+          "method": "published_mean_identity",
+          "parameter": "T10_VBHa",
+          "source_id": "thoracic_caliper_2011",
+          "unit_scale": 1.0
+        },
+        "body_posterior_height_mm": {
+          "canonical_registration": null,
+          "meaning": "Posterior superior-to-inferior vertebral endplate span.",
+          "method": "published_mean_identity",
+          "parameter": "T10_VBHp",
+          "source_id": "thoracic_caliper_2011",
+          "unit_scale": 1.0
+        }
+      },
+      "geometry_qualified": false,
+      "notes": [
+        "Endplate heights do not qualify whole vertebral dimensions, surface shape or articulation."
+      ],
+      "rank": 8,
+      "region": "spine",
+      "side": "midline",
+      "value_maturity": "source_backed"
+    },
+    {
+      "baseline_missing_fields": [
+        "length_mm",
+        "thickness_mm",
+        "width_mm"
+      ],
+      "bone_id": "BONE_T9",
+      "embodiment_fit": "Unscaled reference statistics; no registration to SOPHY 1676.4 mm or assertion of whole-body fit.",
+      "fabrication_qualified": false,
+      "fields": {
+        "body_anterior_height_mm": {
+          "canonical_registration": null,
+          "meaning": "Anterior superior-to-inferior vertebral endplate span.",
+          "method": "published_mean_identity",
+          "parameter": "T9_VBHa",
+          "source_id": "thoracic_caliper_2011",
+          "unit_scale": 1.0
+        },
+        "body_posterior_height_mm": {
+          "canonical_registration": null,
+          "meaning": "Posterior superior-to-inferior vertebral endplate span.",
+          "method": "published_mean_identity",
+          "parameter": "T9_VBHp",
+          "source_id": "thoracic_caliper_2011",
+          "unit_scale": 1.0
+        }
+      },
+      "geometry_qualified": false,
+      "notes": [
+        "Endplate heights do not qualify whole vertebral dimensions, surface shape or articulation."
+      ],
+      "rank": 9,
+      "region": "spine",
+      "side": "midline",
+      "value_maturity": "source_backed"
+    },
+    {
+      "baseline_missing_fields": [
+        "length_mm",
+        "thickness_mm",
+        "width_mm"
+      ],
+      "bone_id": "BONE_T8",
+      "embodiment_fit": "Unscaled reference statistics; no registration to SOPHY 1676.4 mm or assertion of whole-body fit.",
+      "fabrication_qualified": false,
+      "fields": {
+        "body_anterior_height_mm": {
+          "canonical_registration": null,
+          "meaning": "Anterior superior-to-inferior vertebral endplate span.",
+          "method": "published_mean_identity",
+          "parameter": "T8_VBHa",
+          "source_id": "thoracic_caliper_2011",
+          "unit_scale": 1.0
+        },
+        "body_posterior_height_mm": {
+          "canonical_registration": null,
+          "meaning": "Posterior superior-to-inferior vertebral endplate span.",
+          "method": "published_mean_identity",
+          "parameter": "T8_VBHp",
+          "source_id": "thoracic_caliper_2011",
+          "unit_scale": 1.0
+        }
+      },
+      "geometry_qualified": false,
+      "notes": [
+        "Endplate heights do not qualify whole vertebral dimensions, surface shape or articulation."
+      ],
+      "rank": 10,
+      "region": "spine",
+      "side": "midline",
+      "value_maturity": "source_backed"
+    },
+    {
+      "baseline_missing_fields": [
+        "length_mm",
+        "thickness_mm",
+        "width_mm"
+      ],
+      "bone_id": "BONE_T7",
+      "embodiment_fit": "Unscaled reference statistics; no registration to SOPHY 1676.4 mm or assertion of whole-body fit.",
+      "fabrication_qualified": false,
+      "fields": {
+        "body_anterior_height_mm": {
+          "canonical_registration": null,
+          "meaning": "Anterior superior-to-inferior vertebral endplate span.",
+          "method": "published_mean_identity",
+          "parameter": "T7_VBHa",
+          "source_id": "thoracic_caliper_2011",
+          "unit_scale": 1.0
+        },
+        "body_posterior_height_mm": {
+          "canonical_registration": null,
+          "meaning": "Posterior superior-to-inferior vertebral endplate span.",
+          "method": "published_mean_identity",
+          "parameter": "T7_VBHp",
+          "source_id": "thoracic_caliper_2011",
+          "unit_scale": 1.0
+        }
+      },
+      "geometry_qualified": false,
+      "notes": [
+        "Endplate heights do not qualify whole vertebral dimensions, surface shape or articulation."
+      ],
+      "rank": 11,
+      "region": "spine",
+      "side": "midline",
+      "value_maturity": "source_backed"
+    },
+    {
+      "baseline_missing_fields": [
+        "length_mm",
+        "thickness_mm",
+        "width_mm"
+      ],
+      "bone_id": "BONE_T6",
+      "embodiment_fit": "Unscaled reference statistics; no registration to SOPHY 1676.4 mm or assertion of whole-body fit.",
+      "fabrication_qualified": false,
+      "fields": {
+        "body_anterior_height_mm": {
+          "canonical_registration": null,
+          "meaning": "Anterior superior-to-inferior vertebral endplate span.",
+          "method": "published_mean_identity",
+          "parameter": "T6_VBHa",
+          "source_id": "thoracic_caliper_2011",
+          "unit_scale": 1.0
+        },
+        "body_posterior_height_mm": {
+          "canonical_registration": null,
+          "meaning": "Posterior superior-to-inferior vertebral endplate span.",
+          "method": "published_mean_identity",
+          "parameter": "T6_VBHp",
+          "source_id": "thoracic_caliper_2011",
+          "unit_scale": 1.0
+        }
+      },
+      "geometry_qualified": false,
+      "notes": [
+        "Endplate heights do not qualify whole vertebral dimensions, surface shape or articulation."
+      ],
+      "rank": 12,
+      "region": "spine",
+      "side": "midline",
+      "value_maturity": "source_backed"
+    },
+    {
+      "baseline_missing_fields": [
+        "length_mm",
+        "thickness_mm",
+        "width_mm"
+      ],
+      "bone_id": "BONE_T5",
+      "embodiment_fit": "Unscaled reference statistics; no registration to SOPHY 1676.4 mm or assertion of whole-body fit.",
+      "fabrication_qualified": false,
+      "fields": {
+        "body_anterior_height_mm": {
+          "canonical_registration": null,
+          "meaning": "Anterior superior-to-inferior vertebral endplate span.",
+          "method": "published_mean_identity",
+          "parameter": "T5_VBHa",
+          "source_id": "thoracic_caliper_2011",
+          "unit_scale": 1.0
+        },
+        "body_posterior_height_mm": {
+          "canonical_registration": null,
+          "meaning": "Posterior superior-to-inferior vertebral endplate span.",
+          "method": "published_mean_identity",
+          "parameter": "T5_VBHp",
+          "source_id": "thoracic_caliper_2011",
+          "unit_scale": 1.0
+        }
+      },
+      "geometry_qualified": false,
+      "notes": [
+        "Endplate heights do not qualify whole vertebral dimensions, surface shape or articulation."
+      ],
+      "rank": 13,
+      "region": "spine",
+      "side": "midline",
+      "value_maturity": "source_backed"
+    },
+    {
+      "baseline_missing_fields": [
+        "length_mm",
+        "thickness_mm",
+        "width_mm"
+      ],
+      "bone_id": "BONE_T4",
+      "embodiment_fit": "Unscaled reference statistics; no registration to SOPHY 1676.4 mm or assertion of whole-body fit.",
+      "fabrication_qualified": false,
+      "fields": {
+        "body_anterior_height_mm": {
+          "canonical_registration": null,
+          "meaning": "Anterior superior-to-inferior vertebral endplate span.",
+          "method": "published_mean_identity",
+          "parameter": "T4_VBHa",
+          "source_id": "thoracic_caliper_2011",
+          "unit_scale": 1.0
+        },
+        "body_posterior_height_mm": {
+          "canonical_registration": null,
+          "meaning": "Posterior superior-to-inferior vertebral endplate span.",
+          "method": "published_mean_identity",
+          "parameter": "T4_VBHp",
+          "source_id": "thoracic_caliper_2011",
+          "unit_scale": 1.0
+        }
+      },
+      "geometry_qualified": false,
+      "notes": [
+        "Endplate heights do not qualify whole vertebral dimensions, surface shape or articulation."
+      ],
+      "rank": 14,
+      "region": "spine",
+      "side": "midline",
+      "value_maturity": "source_backed"
+    },
+    {
+      "baseline_missing_fields": [
+        "length_mm",
+        "thickness_mm",
+        "width_mm"
+      ],
+      "bone_id": "BONE_T3",
+      "embodiment_fit": "Unscaled reference statistics; no registration to SOPHY 1676.4 mm or assertion of whole-body fit.",
+      "fabrication_qualified": false,
+      "fields": {
+        "body_anterior_height_mm": {
+          "canonical_registration": null,
+          "meaning": "Anterior superior-to-inferior vertebral endplate span.",
+          "method": "published_mean_identity",
+          "parameter": "T3_VBHa",
+          "source_id": "thoracic_caliper_2011",
+          "unit_scale": 1.0
+        },
+        "body_posterior_height_mm": {
+          "canonical_registration": null,
+          "meaning": "Posterior superior-to-inferior vertebral endplate span.",
+          "method": "published_mean_identity",
+          "parameter": "T3_VBHp",
+          "source_id": "thoracic_caliper_2011",
+          "unit_scale": 1.0
+        }
+      },
+      "geometry_qualified": false,
+      "notes": [
+        "Endplate heights do not qualify whole vertebral dimensions, surface shape or articulation."
+      ],
+      "rank": 15,
+      "region": "spine",
+      "side": "midline",
+      "value_maturity": "source_backed"
+    },
+    {
+      "baseline_missing_fields": [
+        "length_mm",
+        "thickness_mm",
+        "width_mm"
+      ],
+      "bone_id": "BONE_T2",
+      "embodiment_fit": "Unscaled reference statistics; no registration to SOPHY 1676.4 mm or assertion of whole-body fit.",
+      "fabrication_qualified": false,
+      "fields": {
+        "body_anterior_height_mm": {
+          "canonical_registration": null,
+          "meaning": "Anterior superior-to-inferior vertebral endplate span.",
+          "method": "published_mean_identity",
+          "parameter": "T2_VBHa",
+          "source_id": "thoracic_caliper_2011",
+          "unit_scale": 1.0
+        },
+        "body_posterior_height_mm": {
+          "canonical_registration": null,
+          "meaning": "Posterior superior-to-inferior vertebral endplate span.",
+          "method": "published_mean_identity",
+          "parameter": "T2_VBHp",
+          "source_id": "thoracic_caliper_2011",
+          "unit_scale": 1.0
+        }
+      },
+      "geometry_qualified": false,
+      "notes": [
+        "Endplate heights do not qualify whole vertebral dimensions, surface shape or articulation."
+      ],
+      "rank": 16,
+      "region": "spine",
+      "side": "midline",
+      "value_maturity": "source_backed"
+    },
+    {
+      "baseline_missing_fields": [
+        "length_mm",
+        "thickness_mm",
+        "width_mm"
+      ],
+      "bone_id": "BONE_T1",
+      "embodiment_fit": "Unscaled reference statistics; no registration to SOPHY 1676.4 mm or assertion of whole-body fit.",
+      "fabrication_qualified": false,
+      "fields": {
+        "body_anterior_height_mm": {
+          "canonical_registration": null,
+          "meaning": "Anterior superior-to-inferior vertebral endplate span.",
+          "method": "published_mean_identity",
+          "parameter": "T1_VBHa",
+          "source_id": "thoracic_caliper_2011",
+          "unit_scale": 1.0
+        },
+        "body_posterior_height_mm": {
+          "canonical_registration": null,
+          "meaning": "Posterior superior-to-inferior vertebral endplate span.",
+          "method": "published_mean_identity",
+          "parameter": "T1_VBHp",
+          "source_id": "thoracic_caliper_2011",
+          "unit_scale": 1.0
+        }
+      },
+      "geometry_qualified": false,
+      "notes": [
+        "Endplate heights do not qualify whole vertebral dimensions, surface shape or articulation."
+      ],
+      "rank": 17,
+      "region": "spine",
+      "side": "midline",
+      "value_maturity": "source_backed"
+    },
+    {
+      "baseline_missing_fields": [
+        "length_mm",
+        "thickness_mm",
+        "width_mm"
+      ],
+      "bone_id": "BONE_C7",
+      "embodiment_fit": "Unscaled reference statistics; no registration to SOPHY 1676.4 mm or assertion of whole-body fit.",
+      "fabrication_qualified": false,
+      "fields": {
+        "body_height_mm": {
+          "canonical_registration": null,
+          "meaning": "Study superior-to-inferior body height in coronal reformats.",
+          "method": "published_mean_identity",
+          "parameter": "C7HT",
+          "source_id": "cervical_ct_2021",
+          "unit_scale": 1.0
+        },
+        "spinal_canal_ap_mm": {
+          "canonical_registration": null,
+          "meaning": "Spinal canal anterior-posterior void span; never bone thickness.",
+          "method": "published_mean_identity",
+          "parameter": "C7AP",
+          "source_id": "cervical_ct_2021",
+          "unit_scale": 1.0
+        },
+        "spinal_canal_width_mm": {
+          "canonical_registration": null,
+          "meaning": "Spinal canal mediolateral void span; never bone width.",
+          "method": "published_mean_identity",
+          "parameter": "C7TR",
+          "source_id": "cervical_ct_2021",
+          "unit_scale": 1.0
+        }
+      },
+      "geometry_qualified": false,
+      "notes": [
+        "Canal dimensions are clearances, not dimensions of solid bone or a defined mechanical cartridge."
+      ],
+      "rank": 18,
+      "region": "spine",
+      "side": "midline",
+      "value_maturity": "source_backed"
+    },
+    {
+      "baseline_missing_fields": [
+        "length_mm",
+        "thickness_mm",
+        "width_mm"
+      ],
+      "bone_id": "BONE_C6",
+      "embodiment_fit": "Unscaled reference statistics; no registration to SOPHY 1676.4 mm or assertion of whole-body fit.",
+      "fabrication_qualified": false,
+      "fields": {
+        "body_height_mm": {
+          "canonical_registration": null,
+          "meaning": "Study superior-to-inferior body height in coronal reformats.",
+          "method": "published_mean_identity",
+          "parameter": "C6HT",
+          "source_id": "cervical_ct_2021",
+          "unit_scale": 1.0
+        },
+        "spinal_canal_ap_mm": {
+          "canonical_registration": null,
+          "meaning": "Spinal canal anterior-posterior void span; never bone thickness.",
+          "method": "published_mean_identity",
+          "parameter": "C6AP",
+          "source_id": "cervical_ct_2021",
+          "unit_scale": 1.0
+        },
+        "spinal_canal_width_mm": {
+          "canonical_registration": null,
+          "meaning": "Spinal canal mediolateral void span; never bone width.",
+          "method": "published_mean_identity",
+          "parameter": "C6TR",
+          "source_id": "cervical_ct_2021",
+          "unit_scale": 1.0
+        }
+      },
+      "geometry_qualified": false,
+      "notes": [
+        "Canal dimensions are clearances, not dimensions of solid bone or a defined mechanical cartridge."
+      ],
+      "rank": 19,
+      "region": "spine",
+      "side": "midline",
+      "value_maturity": "source_backed"
+    },
+    {
+      "baseline_missing_fields": [
+        "length_mm",
+        "thickness_mm",
+        "width_mm"
+      ],
+      "bone_id": "BONE_C5",
+      "embodiment_fit": "Unscaled reference statistics; no registration to SOPHY 1676.4 mm or assertion of whole-body fit.",
+      "fabrication_qualified": false,
+      "fields": {
+        "body_height_mm": {
+          "canonical_registration": null,
+          "meaning": "Study superior-to-inferior body height in coronal reformats.",
+          "method": "published_mean_identity",
+          "parameter": "C5HT",
+          "source_id": "cervical_ct_2021",
+          "unit_scale": 1.0
+        },
+        "spinal_canal_ap_mm": {
+          "canonical_registration": null,
+          "meaning": "Spinal canal anterior-posterior void span; never bone thickness.",
+          "method": "published_mean_identity",
+          "parameter": "C5AP",
+          "source_id": "cervical_ct_2021",
+          "unit_scale": 1.0
+        },
+        "spinal_canal_width_mm": {
+          "canonical_registration": null,
+          "meaning": "Spinal canal mediolateral void span; never bone width.",
+          "method": "published_mean_identity",
+          "parameter": "C5TR",
+          "source_id": "cervical_ct_2021",
+          "unit_scale": 1.0
+        }
+      },
+      "geometry_qualified": false,
+      "notes": [
+        "Canal dimensions are clearances, not dimensions of solid bone or a defined mechanical cartridge."
+      ],
+      "rank": 20,
+      "region": "spine",
+      "side": "midline",
+      "value_maturity": "source_backed"
+    },
+    {
+      "baseline_missing_fields": [
+        "length_mm",
+        "thickness_mm",
+        "width_mm"
+      ],
+      "bone_id": "BONE_C4",
+      "embodiment_fit": "Unscaled reference statistics; no registration to SOPHY 1676.4 mm or assertion of whole-body fit.",
+      "fabrication_qualified": false,
+      "fields": {
+        "body_height_mm": {
+          "canonical_registration": null,
+          "meaning": "Study superior-to-inferior body height in coronal reformats.",
+          "method": "published_mean_identity",
+          "parameter": "C4HT",
+          "source_id": "cervical_ct_2021",
+          "unit_scale": 1.0
+        },
+        "spinal_canal_ap_mm": {
+          "canonical_registration": null,
+          "meaning": "Spinal canal anterior-posterior void span; never bone thickness.",
+          "method": "published_mean_identity",
+          "parameter": "C4AP",
+          "source_id": "cervical_ct_2021",
+          "unit_scale": 1.0
+        },
+        "spinal_canal_width_mm": {
+          "canonical_registration": null,
+          "meaning": "Spinal canal mediolateral void span; never bone width.",
+          "method": "published_mean_identity",
+          "parameter": "C4TR",
+          "source_id": "cervical_ct_2021",
+          "unit_scale": 1.0
+        }
+      },
+      "geometry_qualified": false,
+      "notes": [
+        "Canal dimensions are clearances, not dimensions of solid bone or a defined mechanical cartridge."
+      ],
+      "rank": 21,
+      "region": "spine",
+      "side": "midline",
+      "value_maturity": "source_backed"
+    },
+    {
+      "baseline_missing_fields": [
+        "length_mm",
+        "thickness_mm",
+        "width_mm"
+      ],
+      "bone_id": "BONE_C3",
+      "embodiment_fit": "Unscaled reference statistics; no registration to SOPHY 1676.4 mm or assertion of whole-body fit.",
+      "fabrication_qualified": false,
+      "fields": {
+        "body_height_mm": {
+          "canonical_registration": null,
+          "meaning": "Study superior-to-inferior body height in coronal reformats.",
+          "method": "published_mean_identity",
+          "parameter": "C3HT",
+          "source_id": "cervical_ct_2021",
+          "unit_scale": 1.0
+        },
+        "spinal_canal_ap_mm": {
+          "canonical_registration": null,
+          "meaning": "Spinal canal anterior-posterior void span; never bone thickness.",
+          "method": "published_mean_identity",
+          "parameter": "C3AP",
+          "source_id": "cervical_ct_2021",
+          "unit_scale": 1.0
+        },
+        "spinal_canal_width_mm": {
+          "canonical_registration": null,
+          "meaning": "Spinal canal mediolateral void span; never bone width.",
+          "method": "published_mean_identity",
+          "parameter": "C3TR",
+          "source_id": "cervical_ct_2021",
+          "unit_scale": 1.0
+        }
+      },
+      "geometry_qualified": false,
+      "notes": [
+        "Canal dimensions are clearances, not dimensions of solid bone or a defined mechanical cartridge."
+      ],
+      "rank": 22,
+      "region": "spine",
+      "side": "midline",
+      "value_maturity": "source_backed"
+    },
+    {
+      "baseline_missing_fields": [
+        "length_mm",
+        "thickness_mm",
+        "width_mm"
+      ],
+      "bone_id": "BONE_C2",
+      "embodiment_fit": "Unscaled reference statistics; no registration to SOPHY 1676.4 mm or assertion of whole-body fit.",
+      "fabrication_qualified": false,
+      "fields": {
+        "spinal_canal_ap_mm": {
+          "canonical_registration": null,
+          "meaning": "Spinal canal anterior-posterior void span; never bone thickness.",
+          "method": "published_mean_identity",
+          "parameter": "C2AP",
+          "source_id": "cervical_ct_2021",
+          "unit_scale": 1.0
+        },
+        "spinal_canal_width_mm": {
+          "canonical_registration": null,
+          "meaning": "Spinal canal mediolateral void span; never bone width.",
+          "method": "published_mean_identity",
+          "parameter": "C2TR",
+          "source_id": "cervical_ct_2021",
+          "unit_scale": 1.0
+        }
+      },
+      "geometry_qualified": false,
+      "notes": [
+        "Canal dimensions are clearances, not dimensions of solid bone or a defined mechanical cartridge.",
+        "C2 HT retained in native evidence but not admitted until odontoid/span semantics are clarified."
+      ],
+      "rank": 23,
+      "region": "spine",
+      "side": "midline",
+      "value_maturity": "source_backed"
+    },
+    {
+      "baseline_missing_fields": [
+        "length_mm",
+        "thickness_mm",
+        "width_mm"
+      ],
+      "bone_id": "BONE_C1",
+      "embodiment_fit": "Unscaled reference statistics; no registration to SOPHY 1676.4 mm or assertion of whole-body fit.",
+      "fabrication_qualified": false,
+      "fields": {
+        "spinal_canal_ap_mm": {
+          "canonical_registration": null,
+          "meaning": "Spinal canal anterior-posterior void span; never bone thickness.",
+          "method": "published_mean_identity",
+          "parameter": "C1AP",
+          "source_id": "cervical_ct_2021",
+          "unit_scale": 1.0
+        },
+        "spinal_canal_width_mm": {
+          "canonical_registration": null,
+          "meaning": "Spinal canal mediolateral void span; never bone width.",
+          "method": "published_mean_identity",
+          "parameter": "C1TR",
+          "source_id": "cervical_ct_2021",
+          "unit_scale": 1.0
+        }
+      },
+      "geometry_qualified": false,
+      "notes": [
+        "Canal dimensions are clearances, not dimensions of solid bone or a defined mechanical cartridge.",
+        "Atlas has no centrum; no C1 body height invented."
+      ],
+      "rank": 24,
+      "region": "spine",
+      "side": "midline",
+      "value_maturity": "source_backed"
+    },
+    {
+      "baseline_missing_fields": [
+        "length_mm",
+        "thickness_mm",
+        "width_mm"
+      ],
+      "bone_id": "BONE_TALUS_L",
+      "embodiment_fit": "Unscaled reference statistics; no registration to SOPHY 1676.4 mm or assertion of whole-body fit.",
+      "fabrication_qualified": false,
+      "fields": {
+        "length_mm": {
+          "canonical_registration": null,
+          "meaning": "Anterior-posterior apex span.",
+          "method": "published_mean_identity",
+          "parameter": "Length_L",
+          "source_id": "talus_ct_2016",
+          "unit_scale": 1.0
+        },
+        "thickness_mm": {
+          "canonical_registration": null,
+          "meaning": "Superior-inferior apex span; height explicitly mapped to thickness key.",
+          "method": "published_mean_identity",
+          "parameter": "Height_L",
+          "source_id": "talus_ct_2016",
+          "unit_scale": 1.0
+        },
+        "width_mm": {
+          "canonical_registration": null,
+          "meaning": "Medial-lateral apex span.",
+          "method": "published_mean_identity",
+          "parameter": "Width_L",
+          "source_id": "talus_ct_2016",
+          "unit_scale": 1.0
+        }
+      },
+      "geometry_qualified": false,
+      "notes": [],
+      "rank": 25,
+      "region": "foot",
+      "side": "left",
+      "value_maturity": "source_backed"
+    },
+    {
+      "baseline_missing_fields": [
+        "length_mm",
+        "thickness_mm",
+        "width_mm"
+      ],
+      "bone_id": "BONE_TALUS_R",
+      "embodiment_fit": "Unscaled reference statistics; no registration to SOPHY 1676.4 mm or assertion of whole-body fit.",
+      "fabrication_qualified": false,
+      "fields": {
+        "length_mm": {
+          "canonical_registration": null,
+          "meaning": "Anterior-posterior apex span.",
+          "method": "published_mean_identity",
+          "parameter": "Length_R",
+          "source_id": "talus_ct_2016",
+          "unit_scale": 1.0
+        },
+        "thickness_mm": {
+          "canonical_registration": null,
+          "meaning": "Superior-inferior apex span; height explicitly mapped to thickness key.",
+          "method": "published_mean_identity",
+          "parameter": "Height_R",
+          "source_id": "talus_ct_2016",
+          "unit_scale": 1.0
+        },
+        "width_mm": {
+          "canonical_registration": null,
+          "meaning": "Medial-lateral apex span.",
+          "method": "published_mean_identity",
+          "parameter": "Width_R",
+          "source_id": "talus_ct_2016",
+          "unit_scale": 1.0
+        }
+      },
+      "geometry_qualified": false,
+      "notes": [],
+      "rank": 26,
+      "region": "foot",
+      "side": "right",
+      "value_maturity": "source_backed"
+    },
+    {
+      "baseline_missing_fields": [
+        "length_mm",
+        "thickness_mm",
+        "width_mm"
+      ],
+      "bone_id": "BONE_CALCANEUS_L",
+      "embodiment_fit": "Unscaled reference statistics; no registration to SOPHY 1676.4 mm or assertion of whole-body fit.",
+      "fabrication_qualified": false,
+      "fields": {
+        "calcaneal_body_width_mm": {
+          "canonical_registration": null,
+          "meaning": "Local medial-to-lateral calcaneal body span.",
+          "method": "published_mean_identity",
+          "parameter": "body_width",
+          "side_application": "pooled_mean_default",
+          "side_assumption": "Unseparated female statistic reused as bilateral comparison default; native side variation unknown.",
+          "source_id": "calcaneus_ct_2024",
+          "unit_scale": 1.0
+        },
+        "calcaneal_lateral_wall_height_mm": {
+          "canonical_registration": null,
+          "meaning": "Study lateral-wall inferior-to-superior span.",
+          "method": "published_mean_identity",
+          "parameter": "lateral_wall_height",
+          "side_application": "pooled_mean_default",
+          "side_assumption": "Unseparated female statistic reused as bilateral comparison default; native side variation unknown.",
+          "source_id": "calcaneus_ct_2024",
+          "unit_scale": 1.0
+        },
+        "length_mm": {
+          "canonical_registration": null,
+          "meaning": "Maximum axial posterior tuberosity to anterior talar point span.",
+          "method": "published_mean_identity",
+          "parameter": "maximum_axial_length",
+          "side_application": "pooled_mean_default",
+          "side_assumption": "Unseparated female statistic reused as bilateral comparison default; native side variation unknown.",
+          "source_id": "calcaneus_ct_2024",
+          "unit_scale": 1.0
+        }
+      },
+      "geometry_qualified": false,
+      "notes": [
+        "Whole-bone width and thickness remain unknown; localized body/wall measurements do not replace them."
+      ],
+      "rank": 27,
+      "region": "foot",
+      "side": "left",
+      "value_maturity": "source_backed"
+    },
+    {
+      "baseline_missing_fields": [
+        "length_mm",
+        "thickness_mm",
+        "width_mm"
+      ],
+      "bone_id": "BONE_CALCANEUS_R",
+      "embodiment_fit": "Unscaled reference statistics; no registration to SOPHY 1676.4 mm or assertion of whole-body fit.",
+      "fabrication_qualified": false,
+      "fields": {
+        "calcaneal_body_width_mm": {
+          "canonical_registration": null,
+          "meaning": "Local medial-to-lateral calcaneal body span.",
+          "method": "published_mean_identity",
+          "parameter": "body_width",
+          "side_application": "pooled_mean_default",
+          "side_assumption": "Unseparated female statistic reused as bilateral comparison default; native side variation unknown.",
+          "source_id": "calcaneus_ct_2024",
+          "unit_scale": 1.0
+        },
+        "calcaneal_lateral_wall_height_mm": {
+          "canonical_registration": null,
+          "meaning": "Study lateral-wall inferior-to-superior span.",
+          "method": "published_mean_identity",
+          "parameter": "lateral_wall_height",
+          "side_application": "pooled_mean_default",
+          "side_assumption": "Unseparated female statistic reused as bilateral comparison default; native side variation unknown.",
+          "source_id": "calcaneus_ct_2024",
+          "unit_scale": 1.0
+        },
+        "length_mm": {
+          "canonical_registration": null,
+          "meaning": "Maximum axial posterior tuberosity to anterior talar point span.",
+          "method": "published_mean_identity",
+          "parameter": "maximum_axial_length",
+          "side_application": "pooled_mean_default",
+          "side_assumption": "Unseparated female statistic reused as bilateral comparison default; native side variation unknown.",
+          "source_id": "calcaneus_ct_2024",
+          "unit_scale": 1.0
+        }
+      },
+      "geometry_qualified": false,
+      "notes": [
+        "Whole-bone width and thickness remain unknown; localized body/wall measurements do not replace them."
+      ],
+      "rank": 28,
+      "region": "foot",
+      "side": "right",
+      "value_maturity": "source_backed"
+    },
+    {
+      "baseline_missing_fields": [
+        "length_mm",
+        "thickness_mm",
+        "width_mm"
+      ],
+      "bone_id": "BONE_NAVICULAR_L",
+      "embodiment_fit": "Unscaled reference statistics; no registration to SOPHY 1676.4 mm or assertion of whole-body fit.",
+      "fabrication_qualified": false,
+      "fields": {},
+      "geometry_qualified": false,
+      "notes": [
+        "No admitted three-span evidence; NASA external measures and unqualified mesh labels are insufficient."
+      ],
+      "rank": 29,
+      "region": "foot",
+      "side": "left",
+      "value_maturity": "unknown"
+    },
+    {
+      "baseline_missing_fields": [
+        "length_mm",
+        "thickness_mm",
+        "width_mm"
+      ],
+      "bone_id": "BONE_NAVICULAR_R",
+      "embodiment_fit": "Unscaled reference statistics; no registration to SOPHY 1676.4 mm or assertion of whole-body fit.",
+      "fabrication_qualified": false,
+      "fields": {},
+      "geometry_qualified": false,
+      "notes": [
+        "No admitted three-span evidence; NASA external measures and unqualified mesh labels are insufficient."
+      ],
+      "rank": 30,
+      "region": "foot",
+      "side": "right",
+      "value_maturity": "unknown"
+    },
+    {
+      "baseline_missing_fields": [
+        "length_mm",
+        "thickness_mm",
+        "width_mm"
+      ],
+      "bone_id": "BONE_PATELLA_L",
+      "embodiment_fit": "Unscaled reference statistics; no registration to SOPHY 1676.4 mm or assertion of whole-body fit.",
+      "fabrication_qualified": false,
+      "fields": {
+        "length_mm": {
+          "canonical_registration": null,
+          "meaning": "Superior border to inferior apex; patellar height mapped to length.",
+          "method": "published_mean_identity",
+          "parameter": "PH_pooled",
+          "side_application": "pooled_mean_default",
+          "side_assumption": "Pooled side statistic reused for proposed left/right defaults; no native symmetry claim.",
+          "source_id": "patella_caliper_2013",
+          "unit_scale": 1.0
+        },
+        "thickness_mm": {
+          "canonical_registration": null,
+          "meaning": "Anterior surface to posterior median ridge; side-specific thickness.",
+          "method": "published_mean_identity",
+          "parameter": "PT_left",
+          "source_id": "patella_caliper_2013",
+          "unit_scale": 1.0
+        },
+        "width_mm": {
+          "canonical_registration": null,
+          "meaning": "Medial-to-lateral border span; published weight typo resolved as width.",
+          "method": "published_mean_identity",
+          "parameter": "PW_pooled",
+          "side_application": "pooled_mean_default",
+          "side_assumption": "Pooled side statistic reused for proposed left/right defaults; no native symmetry claim.",
+          "source_id": "patella_caliper_2013",
+          "unit_scale": 1.0
+        }
+      },
+      "geometry_qualified": false,
+      "notes": [],
+      "rank": 31,
+      "region": "lower_limb",
+      "side": "left",
+      "value_maturity": "source_backed"
+    },
+    {
+      "baseline_missing_fields": [
+        "length_mm",
+        "thickness_mm",
+        "width_mm"
+      ],
+      "bone_id": "BONE_PATELLA_R",
+      "embodiment_fit": "Unscaled reference statistics; no registration to SOPHY 1676.4 mm or assertion of whole-body fit.",
+      "fabrication_qualified": false,
+      "fields": {
+        "length_mm": {
+          "canonical_registration": null,
+          "meaning": "Superior border to inferior apex; patellar height mapped to length.",
+          "method": "published_mean_identity",
+          "parameter": "PH_pooled",
+          "side_application": "pooled_mean_default",
+          "side_assumption": "Pooled side statistic reused for proposed left/right defaults; no native symmetry claim.",
+          "source_id": "patella_caliper_2013",
+          "unit_scale": 1.0
+        },
+        "thickness_mm": {
+          "canonical_registration": null,
+          "meaning": "Anterior surface to posterior median ridge; side-specific thickness.",
+          "method": "published_mean_identity",
+          "parameter": "PT_right",
+          "source_id": "patella_caliper_2013",
+          "unit_scale": 1.0
+        },
+        "width_mm": {
+          "canonical_registration": null,
+          "meaning": "Medial-to-lateral border span; published weight typo resolved as width.",
+          "method": "published_mean_identity",
+          "parameter": "PW_pooled",
+          "side_application": "pooled_mean_default",
+          "side_assumption": "Pooled side statistic reused for proposed left/right defaults; no native symmetry claim.",
+          "source_id": "patella_caliper_2013",
+          "unit_scale": 1.0
+        }
+      },
+      "geometry_qualified": false,
+      "notes": [],
+      "rank": 32,
+      "region": "lower_limb",
+      "side": "right",
+      "value_maturity": "source_backed"
+    },
+    {
+      "baseline_missing_fields": [
+        "length_mm",
+        "thickness_mm",
+        "width_mm"
+      ],
+      "bone_id": "BONE_RIB1_L",
+      "embodiment_fit": "Unscaled reference statistics; no registration to SOPHY 1676.4 mm or assertion of whole-body fit.",
+      "fabrication_qualified": false,
+      "fields": {
+        "midshaft_thickness_mm": {
+          "canonical_registration": null,
+          "meaning": "Craniocaudal shaft span at subclavian groove.",
+          "method": "published_mean_identity",
+          "parameter": "MMnD_L",
+          "source_id": "rib1_caliper_2022",
+          "unit_scale": 1.0
+        },
+        "midshaft_width_mm": {
+          "canonical_registration": null,
+          "meaning": "Internal-external shaft span at subclavian groove.",
+          "method": "published_mean_identity",
+          "parameter": "MMxD_L",
+          "source_id": "rib1_caliper_2022",
+          "unit_scale": 1.0
+        },
+        "tubercle_ventral_arc_mm": {
+          "canonical_registration": null,
+          "meaning": "Greater-curvature tubercle-to-sternal arc, excluding neck/head.",
+          "method": "published_mean_identity",
+          "parameter": "TVA_L",
+          "source_id": "rib1_caliper_2022",
+          "unit_scale": 1.0
+        },
+        "tubercle_ventral_chord_mm": {
+          "canonical_registration": null,
+          "meaning": "Tubercle-to-sternal straight chord, excluding neck/head.",
+          "method": "published_mean_identity",
+          "parameter": "TVC_L",
+          "source_id": "rib1_caliper_2022",
+          "unit_scale": 1.0
+        }
+      },
+      "geometry_qualified": false,
+      "notes": [
+        "Curved partial arc and local shaft spans are not a whole-rib bounding box or full rib length."
+      ],
+      "rank": 33,
+      "region": "thorax",
+      "side": "left",
+      "value_maturity": "source_backed"
+    },
+    {
+      "baseline_missing_fields": [
+        "length_mm",
+        "thickness_mm",
+        "width_mm"
+      ],
+      "bone_id": "BONE_RIB1_R",
+      "embodiment_fit": "Unscaled reference statistics; no registration to SOPHY 1676.4 mm or assertion of whole-body fit.",
+      "fabrication_qualified": false,
+      "fields": {
+        "midshaft_thickness_mm": {
+          "canonical_registration": null,
+          "meaning": "Craniocaudal shaft span at subclavian groove.",
+          "method": "published_mean_identity",
+          "parameter": "MMnD_R",
+          "source_id": "rib1_caliper_2022",
+          "unit_scale": 1.0
+        },
+        "midshaft_width_mm": {
+          "canonical_registration": null,
+          "meaning": "Internal-external shaft span at subclavian groove.",
+          "method": "published_mean_identity",
+          "parameter": "MMxD_R",
+          "source_id": "rib1_caliper_2022",
+          "unit_scale": 1.0
+        },
+        "tubercle_ventral_arc_mm": {
+          "canonical_registration": null,
+          "meaning": "Greater-curvature tubercle-to-sternal arc, excluding neck/head.",
+          "method": "published_mean_identity",
+          "parameter": "TVA_R",
+          "source_id": "rib1_caliper_2022",
+          "unit_scale": 1.0
+        },
+        "tubercle_ventral_chord_mm": {
+          "canonical_registration": null,
+          "meaning": "Tubercle-to-sternal straight chord, excluding neck/head.",
+          "method": "published_mean_identity",
+          "parameter": "TVC_R",
+          "source_id": "rib1_caliper_2022",
+          "unit_scale": 1.0
+        }
+      },
+      "geometry_qualified": false,
+      "notes": [
+        "Curved partial arc and local shaft spans are not a whole-rib bounding box or full rib length."
+      ],
+      "rank": 34,
+      "region": "thorax",
+      "side": "right",
+      "value_maturity": "source_backed"
+    },
+    {
+      "baseline_missing_fields": [
+        "length_mm",
+        "thickness_mm",
+        "width_mm"
+      ],
+      "bone_id": "BONE_RIB2_L",
+      "embodiment_fit": "Unscaled reference statistics; no registration to SOPHY 1676.4 mm or assertion of whole-body fit.",
+      "fabrication_qualified": false,
+      "fields": {},
+      "geometry_qualified": false,
+      "notes": [
+        "No admitted three-span evidence; NASA external measures and unqualified mesh labels are insufficient."
+      ],
+      "rank": 35,
+      "region": "thorax",
+      "side": "left",
+      "value_maturity": "unknown"
+    },
+    {
+      "baseline_missing_fields": [
+        "length_mm",
+        "thickness_mm",
+        "width_mm"
+      ],
+      "bone_id": "BONE_RIB2_R",
+      "embodiment_fit": "Unscaled reference statistics; no registration to SOPHY 1676.4 mm or assertion of whole-body fit.",
+      "fabrication_qualified": false,
+      "fields": {},
+      "geometry_qualified": false,
+      "notes": [
+        "No admitted three-span evidence; NASA external measures and unqualified mesh labels are insufficient."
+      ],
+      "rank": 36,
+      "region": "thorax",
+      "side": "right",
+      "value_maturity": "unknown"
+    }
+  ],
+  "canonical_reference": {
+    "height_mm": 1676.4,
+    "registered": false,
+    "span_mm": 1676.4,
+    "version": "1.0.0"
+  },
+  "phy_commit": "2064af478d6554f66900f655afdd64c8869a16b5",
+  "phy_ref_commit": "5d4cd1e841ec275580e6634fee760e9615f02c30",
+  "schema_version": "PHY_DIM072_TABULAR_V1",
+  "sources": {
+    "calcaneus_ct_2024": {
+      "cohort": "34 female patients of 100 at Changi General Hospital, Singapore; skeletally immature patients and measured calcaneus fracture/surgery excluded.",
+      "coordinate_frame": "Study-defined anatomical measurement axes; no spatial placement in the SOPHY frame.",
+      "doi": "10.7759/cureus.58899",
+      "evidence_review": "Methods and selected numerical rows inspected; admitted for unscaled comparison dimensions only.",
+      "extraction": "Table 2 female means/SD; Table 1 measurement sites.",
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "kind": "primary_bone_morphometry",
+      "limitations": [
+        "Side not separated; female marginal means used only as explicitly pooled engineering references.",
+        "Body width and lateral-wall height are localized spans, not full-bone width/thickness."
+      ],
+      "locator": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11116927/",
+      "native_snapshot": {
+        "path": "references/dim072/calcaneus_ct_2024.json",
+        "sha256": "fd826293dab2818708d245d187cc6a1666d17286700ece6d3423766b52d7612f"
+      },
+      "native_units": "mm",
+      "publisher_license": "CC-BY 4.0.",
+      "retrieved_on": "2026-10-13",
+      "retrieved_response_scope": "article",
+      "retrieved_response_sha256": "921787f776266910214af13dcf464d57faad0e461159e8a3d499b97ef8ef126f",
+      "revision": "PMC11116927; Cureus (2024), published article at cited DOI",
+      "rights_review": "Factual numerical extract and original paraphrase only; source article/images/meshes are not redistributed.",
+      "title": "Koh et al., Morphometric Analysis of the Calcaneus in a Southeast Asian Population",
+      "tool_version": "Study: CT and SPSS 28.0; PHY: dim072-tabular-v1",
+      "uncertainty_policy": "Published SD describes cohort variability, not a manufacturing tolerance or measurement-error bound."
+    },
+    "cervical_ct_2021": {
+      "cohort": "Female training subset of 210 training subjects from 294 total (148 female); female mean age 44.76 +/- 12.94 for total cohort; Turkish trauma CT, cervical pathology excluded. Female training n not separately confirmed.",
+      "coordinate_frame": "Study-defined anatomical measurement axes; no spatial placement in the SOPHY frame.",
+      "doi": "10.1007/s00414-021-02510-5",
+      "evidence_review": "Methods and selected numerical rows inspected; admitted for unscaled comparison dimensions only.",
+      "extraction": "Table 2 female training means/SD; validation columns not mixed; canal AP/TR kept distinct from bone widths.",
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "kind": "primary_bone_morphometry",
+      "limitations": [
+        "C1 has no centrum; study supplies no C1 HT.",
+        "C2 HT is retained but not adopted pending confirmation of odontoid/height semantics.",
+        "Canal void dimensions are not solid bone dimensions; no full envelope or joint center provided."
+      ],
+      "locator": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8354927/",
+      "native_snapshot": {
+        "path": "references/dim072/cervical_ct_2021.json",
+        "sha256": "d7b02de31e4c96f0f7195f39525ce85b7c76ae5ce6e537f129a180fe29c2a6f4"
+      },
+      "native_units": "mm",
+      "publisher_license": "CC-BY 4.0.",
+      "retrieved_on": "2026-10-13",
+      "retrieved_response_scope": "article",
+      "retrieved_response_sha256": "9c39a7237983876c22acebe1136c31730bd2ad92e608879ef06f4b530d1d4a42",
+      "revision": "PMC8354927.1; Int J Legal Med (2021), published article at cited DOI",
+      "rights_review": "Factual numerical extract and original paraphrase only; source article/images/meshes are not redistributed.",
+      "title": "Ekizoglu et al., Virtual morphometric method using seven cervical vertebrae for sex estimation on the Turkish population",
+      "tool_version": "Study: 1 mm multidetector CT; two observers; PHY: dim072-tabular-v1",
+      "uncertainty_policy": "Published SD describes cohort variability, not a manufacturing tolerance or measurement-error bound."
+    },
+    "lumbar_ct_2022": {
+      "cohort": "253 female patients of 557 abdominal CT examinations; overall cohort mean age 55.81 +/- 17.77; Krakow, Poland; 2016 acquisition.",
+      "coordinate_frame": "Study-defined anatomical measurement axes; no spatial placement in the SOPHY frame.",
+      "doi": "10.1007/s00276-021-02865-9",
+      "evidence_review": "Methods and selected numerical rows inspected; admitted for unscaled comparison dimensions only.",
+      "extraction": "Table 1 Female group, L1-L5 upper/lower margins; disc and vascular rows excluded.",
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "kind": "primary_bone_morphometry",
+      "limitations": [
+        "Body and margin spans only; posterior elements and complete vertebral extents remain unknown.",
+        "Do not combine marginal means into a measured donor or SOPHY registration."
+      ],
+      "locator": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8917002/",
+      "native_snapshot": {
+        "path": "references/dim072/lumbar_ct_2022.json",
+        "sha256": "1d4658332c81ec2c8242dbf9526b220f26d06c3915154a205c91233dffa3dbe3"
+      },
+      "native_units": "mm",
+      "publisher_license": "CC-BY 4.0 in inspected article.",
+      "retrieved_on": "2026-10-13",
+      "retrieved_response_scope": "article",
+      "retrieved_response_sha256": "449142557a9f465bc32610888fae9e0ff4ed4baa0bf2cc42fe3455bf8a7b680d",
+      "revision": "PMC8917002; Surg Radiol Anat (2022), published article at cited DOI",
+      "rights_review": "Factual numerical extract and original paraphrase only; source article/images/meshes are not redistributed.",
+      "title": "Kot et al., Morphometric analysis of the lumbar vertebrae and intervertebral discs in relation to abdominal aorta: CT-based study",
+      "tool_version": "Study: RadiAnt DICOM Viewer 3.4.2; PHY: dim072-tabular-v1",
+      "uncertainty_policy": "Published SD describes cohort variability, not a manufacturing tolerance or measurement-error bound."
+    },
+    "patella_caliper_2013": {
+      "cohort": "25 female teaching cadavers; mean age 77.3 years (47-98); South African, European ancestry; bilateral dissection.",
+      "coordinate_frame": "Study-defined anatomical measurement axes; no spatial placement in the SOPHY frame.",
+      "doi": "10.1590/sajs.2013/20130069",
+      "evidence_review": "Methods and selected numerical rows inspected; admitted for unscaled comparison dimensions only.",
+      "extraction": "Table 4 female means/SD; measurement definitions in Table 1; pooled height/width and separate thickness by side.",
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "kind": "primary_bone_morphometry",
+      "limitations": [
+        "Older preserved-cadaver cohort; not evidence of a 28-year-old target.",
+        "Height/width are pooled over sides; only thickness is side-specific.",
+        "Table 4 prints 'Patella weight' in a millimeter row. Interpreted as PW (width) using Table 1, methods and Table 6 width cross-check; correction is explicit."
+      ],
+      "locator": "https://sajs.co.za/article/download/4002/5775",
+      "native_snapshot": {
+        "path": "references/dim072/patella_caliper_2013.json",
+        "sha256": "f50fa5058f483aa31c6c4db5dacb4e644a4eee9512c60f2834307e3c970252b7"
+      },
+      "native_units": "mm",
+      "publisher_license": "Creative Commons Attribution, stated on PDF page 1; version not stated in the inspected PDF.",
+      "retrieved_on": "2026-10-13",
+      "retrieved_response_scope": "article",
+      "retrieved_response_sha256": "2f8ca934651b3c7282344b40231b5f82add0d6b27b89205e522a554a60652fc6",
+      "revision": "S Afr J Sci 109(9/10), article 2013-0069 (2013)",
+      "rights_review": "Factual numerical extract and original paraphrase only; source article/images/meshes are not redistributed.",
+      "title": "Olateju, Philander and Bidmos, Morphometric analysis of the patella and patellar ligament of South Africans of European ancestry",
+      "tool_version": "Study: Vernier caliper; PHY: dim072-tabular-v1",
+      "uncertainty_policy": "Published SD describes cohort variability, not a manufacturing tolerance or measurement-error bound."
+    },
+    "rib1_caliper_2022": {
+      "cohort": "Adult Euro-American skeletal sample; per-measure female side n in Table 3 (31-33 for selected rows); geometric-morphometry subset is distinct.",
+      "coordinate_frame": "Study-defined anatomical measurement axes; no spatial placement in the SOPHY frame.",
+      "doi": "10.1111/joa.13594",
+      "evidence_review": "Methods and selected numerical rows inspected; admitted for unscaled comparison dimensions only.",
+      "extraction": "Table 3 female R/L columns; Table 1 measurement definitions; chord/arc and shaft sites kept explicit.",
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "kind": "primary_bone_morphometry",
+      "limitations": [
+        "TVC/TVA begin at tubercle and exclude neck/head; not total rib length.",
+        "Midshaft diameters at subclavian groove are not whole-rib extents; cartilage excluded."
+      ],
+      "locator": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9005670/",
+      "native_snapshot": {
+        "path": "references/dim072/rib1_caliper_2022.json",
+        "sha256": "8e5a299f7999b0e2b8921f035d607e0bba4317e795680d5e2283623e924e1a27"
+      },
+      "native_units": "mm",
+      "publisher_license": "Article permission statement retained by source; facts only, no article or image redistribution.",
+      "retrieved_on": "2026-10-13",
+      "retrieved_response_scope": "article",
+      "retrieved_response_sha256": "3fb3a2ab263528b3aaeb9a7528cf925111ef00e6cb4fea628b5d083166744c00",
+      "revision": "PMC9005670; J Anat (2022), published article at cited DOI",
+      "rights_review": "Factual numerical extract and original paraphrase only; source article/images/meshes are not redistributed.",
+      "title": "Arlegi et al., Sexual dimorphism in the first rib of Homo sapiens",
+      "tool_version": "Study: traditional morphometry; PHY: dim072-tabular-v1",
+      "uncertainty_policy": "Published SD describes cohort variability, not a manufacturing tolerance or measurement-error bound."
+    },
+    "talus_ct_2016": {
+      "cohort": "32 female volunteers; mean age 41.2 years (21-58); mean height 163.4 cm (156-173); bilateral CT, Tianjin, China.",
+      "coordinate_frame": "Study-defined anatomical measurement axes; no spatial placement in the SOPHY frame.",
+      "doi": "10.1111/os.12258",
+      "evidence_review": "Methods and selected numerical rows inspected; admitted for unscaled comparison dimensions only.",
+      "extraction": "Female Left/Right columns of Table 1; methods section on sagittal/coronal apex spans inspected separately.",
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "kind": "primary_bone_morphometry",
+      "limitations": [
+        "Single-center cohort; means are not one donor, F28 or female_21_baseline.",
+        "Original images/meshes unavailable for independent landmark or surface review.",
+        "Do not adopt the dimensionally suspicious published volume entries."
+      ],
+      "locator": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6584390/",
+      "native_snapshot": {
+        "path": "references/dim072/talus_ct_2016.json",
+        "sha256": "f8c59055f10512a0b0f9d48788821364ca5289bf8bcbb27b5fe8032db29e7658"
+      },
+      "native_units": "mm",
+      "publisher_license": "Copyright 2016 Chinese Orthopaedic Association / Wiley; no open license established.",
+      "retrieved_on": "2026-10-13",
+      "retrieved_response_scope": "metadata_and_abstract_only",
+      "retrieved_response_sha256": "a86d2dde22b00782e54bbcb4615d143db9e69a63aa9bd44cbd478fe372396cca",
+      "revision": "PMC6584390.1; Orthop Surg 8(3), 383-392 (2016)",
+      "rights_review": "Factual numerical extract and original paraphrase only; source article/images/meshes are not redistributed.",
+      "title": "He et al., Three-dimensional Computer-assisted Modeling of Talus Morphology in Chinese Patients",
+      "tool_version": "Study: SuperImage Orthopedics 1.1, SPSS 13.0; PHY: dim072-tabular-v1",
+      "uncertainty_policy": "Published SD describes cohort variability, not a manufacturing tolerance or measurement-error bound."
+    },
+    "thoracic_caliper_2011": {
+      "cohort": "19 female cadaveric vertebral columns of 100; overall mean age 52.8 (22-70); Indian institution; preserved bone sets.",
+      "coordinate_frame": "Study-defined anatomical measurement axes; no spatial placement in the SOPHY frame.",
+      "doi": "10.4184/asj.2011.5.1.20",
+      "evidence_review": "Methods and selected numerical rows inspected; admitted for unscaled comparison dimensions only.",
+      "extraction": "PDF page 7 / printed page 26, Table 3, female anterior/posterior height columns; T11 posterior height quarantined.",
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "kind": "primary_bone_morphometry",
+      "limitations": [
+        "Small female cohort, preserved specimens; no full vertebral shape.",
+        "T11 posterior height conflicts with narrative and resembles Table 2 chord length. Retained as rejected native evidence; no corrected measurement inferred."
+      ],
+      "locator": "https://www.asianspinejournal.org/upload/pdf/asj-5-20.pdf",
+      "native_snapshot": {
+        "path": "references/dim072/thoracic_caliper_2011.json",
+        "sha256": "cd902d282d15ea9abf6bfa9d54f4503d6b3f8ea9748d1f8a3cf30286ae3ba587"
+      },
+      "native_units": "mm",
+      "publisher_license": "CC-BY-NC 3.0; full article and images not redistributed.",
+      "retrieved_on": "2026-10-13",
+      "retrieved_response_scope": "article",
+      "retrieved_response_sha256": "a0acf52435e429df5ca92d250463f38c97c3708406e854296dd8620c5280cc5e",
+      "revision": "PMC3047895.1; Asian Spine J 5(1), 20-34 (2011)",
+      "rights_review": "Factual numerical extract and original paraphrase only; source article/images/meshes are not redistributed.",
+      "title": "Singh et al., Morphometric Measurements of Cadaveric Thoracic Spine in Indian Population and Its Clinical Applications",
+      "tool_version": "Study: caliper resolution 0.1 mm, triplicate mean; PHY: dim072-tabular-v1",
+      "uncertainty_policy": "Published SD describes cohort variability, not a manufacturing tolerance or measurement-error bound."
+    }
+  },
+  "target": 72,
+  "tool_version": "dim072-tabular-v1"
+}

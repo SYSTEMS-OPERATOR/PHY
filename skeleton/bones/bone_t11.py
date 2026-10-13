@@ -6,7 +6,13 @@ bone = BoneSpec(
     bone_type = 'irregular',
     location = {'region': 'thoracic vertebrae', 'proximal_connection': 'T10', 'distal_connection': 'T12'},
     articulations = [],
-    dimensions = {'length_cm': None, 'width_cm': None, 'thickness_cm': None},
+    # PHY-DIM-072: unscaled study statistics; whole-bone unknowns remain null.
+    dimensions = {
+        'body_anterior_height_mm': 20.96,
+        'length_mm': None,
+        'thickness_mm': None,
+        'width_mm': None,
+    },
     function = ['rib articulation'],
     notable_features = [],
     developmental_notes = 'vertebral arch fusion in adolescence',
@@ -15,6 +21,12 @@ bone = BoneSpec(
     visual_reference = None,
     embodiment = "virtual",
     geometry = {},
+    physics = {"mass_kg": None},
+    references = ['https://www.asianspinejournal.org/upload/pdf/asj-5-20.pdf', 'references/dim072/catalog.json#/candidates/6'],
+    metric_sources = {
+        'body_anterior_height_mm': 'references/dim072/catalog.json#/candidates/6/fields/body_anterior_height_mm',
+    },
+    manufacturing_notes = ['Source-backed reference spans only; no registration to SOPHY, qualified surface, material, joint or mounting interface. See dimension evidence catalog.', 'Published T11 posterior height quarantined; no corrected value is inferred.', 'Endplate heights do not qualify whole vertebral dimensions, surface shape or articulation.'],
 )
 
 

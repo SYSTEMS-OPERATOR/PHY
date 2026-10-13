@@ -61,8 +61,8 @@ class EngineeringAuditTest(unittest.TestCase):
         observed = {key: metric["count"] for key, metric in self.report["metrics"].items()}
         self.assertEqual(observed, {
             "individual_display_identity": 206, "source_module_present": 206,
-            "canonical_record_present": 206, "declared_dimensions_complete": 36,
-            "dataset_binding_present": 21, "reference_declaration_present": 13,
+            "canonical_record_present": 206, "declared_dimensions_complete": 40,
+            "dataset_binding_present": 21, "reference_declaration_present": 45,
             "dimensional_primitive_available": 30, "declared_anatomical_references_resolved": 24,
             "record_validation_pass": 0,
         })
@@ -91,9 +91,11 @@ class EngineeringAuditTest(unittest.TestCase):
         self.assertIsNone(missing["dimensions"]["values_mm"])
         self.assertIsNone(missing["canonical_geometry"])
         unknown = by_id(self.report, "BONE_C1")
-        self.assertEqual(unknown["dimensions"]["status"], "unknown")
-        self.assertTrue(unknown["dimensions"]["unknown_keys"])
-        self.assertTrue(all(value is None for value in unknown["dimensions"]["values_mm"].values()))
+        self.assertEqual(unknown["dimensions"]["status"], "partial")
+        self.assertEqual(unknown["dimensions"]["unknown_keys"], ["length_mm", "thickness_mm", "width_mm"])
+        self.assertTrue(all(unknown["dimensions"]["values_mm"][key] is None
+                            for key in unknown["dimensions"]["unknown_keys"]))
+        self.assertEqual(unknown["dimensions"]["known_keys"], ["spinal_canal_ap_mm", "spinal_canal_width_mm"])
         parts = deepcopy(self.model["parts"])
         next(part for part in parts if part.get("bone_id") == "BONE_C1")["vertices"][0][0] += 100
         altered = engineering_audit(self.field, parts)

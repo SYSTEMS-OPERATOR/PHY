@@ -1,0 +1,46 @@
+{
+  "rows": [
+    {
+      "admissible": true,
+      "admitted_field": "length_mm",
+      "bone_id": "BONE_PATELLA",
+      "mean": 41.05,
+      "native_units": "mm",
+      "parameter": "PH_pooled",
+      "sd": 2.18,
+      "side": "pooled"
+    },
+    {
+      "admissible": true,
+      "admitted_field": "width_mm",
+      "bone_id": "BONE_PATELLA",
+      "mean": 42.71,
+      "native_units": "mm",
+      "parameter": "PW_pooled",
+      "sd": 2.52,
+      "side": "pooled"
+    },
+    {
+      "admissible": true,
+      "admitted_field": "thickness_mm",
+      "bone_id": "BONE_PATELLA_L",
+      "mean": 22.89,
+      "native_units": "mm",
+      "parameter": "PT_left",
+      "sd": 1.5,
+      "side": "left"
+    },
+    {
+      "admissible": true,
+      "admitted_field": "thickness_mm",
+      "bone_id": "BONE_PATELLA_R",
+      "mean": 22.56,
+      "native_units": "mm",
+      "parameter": "PT_right",
+      "sd": 1.51,
+      "side": "right"
+    }
+  ],
+  "source_id": "patella_caliper_2013",
+  "table": "PDF pages 2-3, Tables 1 and 4; Table 6 cross-check"
+}

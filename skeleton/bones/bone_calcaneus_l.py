@@ -6,7 +6,14 @@ bone = BoneSpec(
     bone_type = 'short',
     location = {'region': 'tarsal', 'proximal_connection': 'tibia/fibula', 'distal_connection': 'metatarsals'},
     articulations = [],
-    dimensions = {'length_cm': None, 'width_cm': None, 'thickness_cm': None},
+    # PHY-DIM-072: unscaled study statistics; whole-bone unknowns remain null.
+    dimensions = {
+        'calcaneal_body_width_mm': 33.0,
+        'calcaneal_lateral_wall_height_mm': 33.3,
+        'length_mm': 66.2,
+        'thickness_mm': None,
+        'width_mm': None,
+    },
     function = ['ankle motion'],
     notable_features = [],
     developmental_notes = 'ossification varies',
@@ -15,6 +22,14 @@ bone = BoneSpec(
     visual_reference = None,
     embodiment = "virtual",
     geometry = {},
+    physics = {"mass_kg": None},
+    references = ['https://pmc.ncbi.nlm.nih.gov/articles/PMC11116927/', 'references/dim072/catalog.json#/candidates/26'],
+    metric_sources = {
+        'calcaneal_body_width_mm': 'references/dim072/catalog.json#/candidates/26/fields/calcaneal_body_width_mm',
+        'calcaneal_lateral_wall_height_mm': 'references/dim072/catalog.json#/candidates/26/fields/calcaneal_lateral_wall_height_mm',
+        'length_mm': 'references/dim072/catalog.json#/candidates/26/fields/length_mm',
+    },
+    manufacturing_notes = ['Source-backed reference spans only; no registration to SOPHY, qualified surface, material, joint or mounting interface. See dimension evidence catalog.', 'Whole-bone width and thickness remain unknown; localized body/wall measurements do not replace them.'],
 )
 
 

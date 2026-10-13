@@ -1,0 +1,66 @@
+{
+  "rows": [
+    {
+      "admissible": true,
+      "admitted_field": "length_mm",
+      "bone_id": "BONE_TALUS_L",
+      "mean": 49.15,
+      "native_units": "mm",
+      "parameter": "Length_L",
+      "sd": 3.1,
+      "side": "left"
+    },
+    {
+      "admissible": true,
+      "admitted_field": "width_mm",
+      "bone_id": "BONE_TALUS_L",
+      "mean": 36.79,
+      "native_units": "mm",
+      "parameter": "Width_L",
+      "sd": 1.97,
+      "side": "left"
+    },
+    {
+      "admissible": true,
+      "admitted_field": "thickness_mm",
+      "bone_id": "BONE_TALUS_L",
+      "mean": 24.41,
+      "native_units": "mm",
+      "parameter": "Height_L",
+      "sd": 1.75,
+      "side": "left"
+    },
+    {
+      "admissible": true,
+      "admitted_field": "length_mm",
+      "bone_id": "BONE_TALUS_R",
+      "mean": 48.57,
+      "native_units": "mm",
+      "parameter": "Length_R",
+      "sd": 2.15,
+      "side": "right"
+    },
+    {
+      "admissible": true,
+      "admitted_field": "width_mm",
+      "bone_id": "BONE_TALUS_R",
+      "mean": 36.15,
+      "native_units": "mm",
+      "parameter": "Width_R",
+      "sd": 2.07,
+      "side": "right"
+    },
+    {
+      "admissible": true,
+      "admitted_field": "thickness_mm",
+      "bone_id": "BONE_TALUS_R",
+      "mean": 24.23,
+      "native_units": "mm",
+      "parameter": "Height_R",
+      "sd": 1.47,
+      "side": "right"
+    }
+  ],
+  "source_id": "talus_ct_2016",
+  "table": "Table 1, female side-specific columns"
+}

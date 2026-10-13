@@ -6,7 +6,15 @@ bone = BoneSpec(
     bone_type = 'irregular',
     location = {'region': 'cervical vertebrae', 'proximal_connection': 'C5', 'distal_connection': 'C7'},
     articulations = [],
-    dimensions = {'length_cm': None, 'width_cm': None, 'thickness_cm': None},
+    # PHY-DIM-072: unscaled study statistics; whole-bone unknowns remain null.
+    dimensions = {
+        'body_height_mm': 11.36,
+        'length_mm': None,
+        'spinal_canal_ap_mm': 12.96,
+        'spinal_canal_width_mm': 23.58,
+        'thickness_mm': None,
+        'width_mm': None,
+    },
     function = ['support neck'],
     notable_features = [],
     developmental_notes = 'centers fuse during adolescence',
@@ -15,6 +23,14 @@ bone = BoneSpec(
     visual_reference = None,
     embodiment = "virtual",
     geometry = {},
+    physics = {"mass_kg": None},
+    references = ['https://pmc.ncbi.nlm.nih.gov/articles/PMC8354927/', 'references/dim072/catalog.json#/candidates/18'],
+    metric_sources = {
+        'body_height_mm': 'references/dim072/catalog.json#/candidates/18/fields/body_height_mm',
+        'spinal_canal_ap_mm': 'references/dim072/catalog.json#/candidates/18/fields/spinal_canal_ap_mm',
+        'spinal_canal_width_mm': 'references/dim072/catalog.json#/candidates/18/fields/spinal_canal_width_mm',
+    },
+    manufacturing_notes = ['Source-backed reference spans only; no registration to SOPHY, qualified surface, material, joint or mounting interface. See dimension evidence catalog.', 'Canal dimensions are clearances, not dimensions of solid bone or a defined mechanical cartridge.'],
 )
 
 

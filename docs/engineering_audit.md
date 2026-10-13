@@ -157,6 +157,14 @@ perception context stay distinct. See `craniofacial_armature.md`.
 
 ## Next bounded engineering work
 
+PHY-DIM-072 subsequently adds four source-backed complete maps and 28 partial
+maps with explicitly named anatomical spans. Current counts are 40 complete
+declared maps, 45 reference declarations and zero record-validation passes.
+The 72-map target has a 32-map shortfall. Legacy complete maps are unchanged;
+body and canal measurements do not replace unknown whole-bone dimensions.
+See `PHY-DIM-072.md` and `../reports/dimension_expansion.md` for the evidence
+matrix, rejected measurements and maturity boundaries.
+
 Review explicit anatomical relationship semantics in a small region
 before replacing legacy name references: sutures, bone articulations, cartilage
 and soft-tissue suspension need different declarations. Stable IDs alone do not

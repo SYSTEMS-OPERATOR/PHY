@@ -2203,137 +2203,127 @@
   "missing_dimension_values": [
     {
       "bone": "BONE_C1",
-      "dimension": "length_cm",
+      "dimension": "length_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_C1",
-      "dimension": "width_cm",
+      "dimension": "thickness_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_C1",
-      "dimension": "thickness_cm",
+      "dimension": "width_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_C2",
-      "dimension": "length_cm",
+      "dimension": "length_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_C2",
-      "dimension": "width_cm",
+      "dimension": "thickness_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_C2",
-      "dimension": "thickness_cm",
+      "dimension": "width_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_C3",
-      "dimension": "length_cm",
+      "dimension": "length_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_C3",
-      "dimension": "width_cm",
+      "dimension": "thickness_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_C3",
-      "dimension": "thickness_cm",
+      "dimension": "width_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_C4",
-      "dimension": "length_cm",
+      "dimension": "length_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_C4",
-      "dimension": "width_cm",
+      "dimension": "thickness_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_C4",
-      "dimension": "thickness_cm",
+      "dimension": "width_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_C5",
-      "dimension": "length_cm",
+      "dimension": "length_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_C5",
-      "dimension": "width_cm",
+      "dimension": "thickness_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_C5",
-      "dimension": "thickness_cm",
+      "dimension": "width_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_C6",
-      "dimension": "length_cm",
+      "dimension": "length_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_C6",
-      "dimension": "width_cm",
+      "dimension": "thickness_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_C6",
-      "dimension": "thickness_cm",
+      "dimension": "width_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_C7",
-      "dimension": "length_cm",
+      "dimension": "length_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_C7",
-      "dimension": "width_cm",
+      "dimension": "thickness_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_C7",
-      "dimension": "thickness_cm",
+      "dimension": "width_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_CALCANEUS_L",
-      "dimension": "length_cm",
+      "dimension": "thickness_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_CALCANEUS_L",
-      "dimension": "width_cm",
-      "issue": "unknown measurement"
-    },
-    {
-      "bone": "BONE_CALCANEUS_L",
-      "dimension": "thickness_cm",
+      "dimension": "width_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_CALCANEUS_R",
-      "dimension": "length_cm",
+      "dimension": "thickness_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_CALCANEUS_R",
-      "dimension": "width_cm",
-      "issue": "unknown measurement"
-    },
-    {
-      "bone": "BONE_CALCANEUS_R",
-      "dimension": "thickness_cm",
+      "dimension": "width_mm",
       "issue": "unknown measurement"
     },
     {
@@ -2503,77 +2493,77 @@
     },
     {
       "bone": "BONE_L1",
-      "dimension": "length_cm",
+      "dimension": "length_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_L1",
-      "dimension": "width_cm",
+      "dimension": "thickness_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_L1",
-      "dimension": "thickness_cm",
+      "dimension": "width_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_L2",
-      "dimension": "length_cm",
+      "dimension": "length_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_L2",
-      "dimension": "width_cm",
+      "dimension": "thickness_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_L2",
-      "dimension": "thickness_cm",
+      "dimension": "width_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_L3",
-      "dimension": "length_cm",
+      "dimension": "length_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_L3",
-      "dimension": "width_cm",
+      "dimension": "thickness_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_L3",
-      "dimension": "thickness_cm",
+      "dimension": "width_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_L4",
-      "dimension": "length_cm",
+      "dimension": "length_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_L4",
-      "dimension": "width_cm",
+      "dimension": "thickness_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_L4",
-      "dimension": "thickness_cm",
+      "dimension": "width_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_L5",
-      "dimension": "length_cm",
+      "dimension": "length_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_L5",
-      "dimension": "width_cm",
+      "dimension": "thickness_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_L5",
-      "dimension": "thickness_cm",
+      "dimension": "width_mm",
       "issue": "unknown measurement"
     },
     {
@@ -3114,36 +3104,6 @@
     {
       "bone": "BONE_PALATINE_R",
       "dimension": "thickness_mm",
-      "issue": "unknown measurement"
-    },
-    {
-      "bone": "BONE_PATELLA_L",
-      "dimension": "length_cm",
-      "issue": "unknown measurement"
-    },
-    {
-      "bone": "BONE_PATELLA_L",
-      "dimension": "width_cm",
-      "issue": "unknown measurement"
-    },
-    {
-      "bone": "BONE_PATELLA_L",
-      "dimension": "thickness_cm",
-      "issue": "unknown measurement"
-    },
-    {
-      "bone": "BONE_PATELLA_R",
-      "dimension": "length_cm",
-      "issue": "unknown measurement"
-    },
-    {
-      "bone": "BONE_PATELLA_R",
-      "dimension": "width_cm",
-      "issue": "unknown measurement"
-    },
-    {
-      "bone": "BONE_PATELLA_R",
-      "dimension": "thickness_cm",
       "issue": "unknown measurement"
     },
     {
@@ -3688,32 +3648,32 @@
     },
     {
       "bone": "BONE_RIB1_L",
-      "dimension": "length_cm",
+      "dimension": "length_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_RIB1_L",
-      "dimension": "width_cm",
+      "dimension": "thickness_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_RIB1_L",
-      "dimension": "thickness_cm",
+      "dimension": "width_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_RIB1_R",
-      "dimension": "length_cm",
+      "dimension": "length_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_RIB1_R",
-      "dimension": "width_cm",
+      "dimension": "thickness_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_RIB1_R",
-      "dimension": "thickness_cm",
+      "dimension": "width_mm",
       "issue": "unknown measurement"
     },
     {
@@ -3988,212 +3948,182 @@
     },
     {
       "bone": "BONE_T1",
-      "dimension": "length_cm",
+      "dimension": "length_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_T1",
-      "dimension": "width_cm",
+      "dimension": "thickness_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_T1",
-      "dimension": "thickness_cm",
+      "dimension": "width_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_T10",
-      "dimension": "length_cm",
+      "dimension": "length_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_T10",
-      "dimension": "width_cm",
+      "dimension": "thickness_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_T10",
-      "dimension": "thickness_cm",
+      "dimension": "width_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_T11",
-      "dimension": "length_cm",
+      "dimension": "length_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_T11",
-      "dimension": "width_cm",
+      "dimension": "thickness_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_T11",
-      "dimension": "thickness_cm",
+      "dimension": "width_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_T12",
-      "dimension": "length_cm",
+      "dimension": "length_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_T12",
-      "dimension": "width_cm",
+      "dimension": "thickness_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_T12",
-      "dimension": "thickness_cm",
+      "dimension": "width_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_T2",
-      "dimension": "length_cm",
+      "dimension": "length_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_T2",
-      "dimension": "width_cm",
+      "dimension": "thickness_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_T2",
-      "dimension": "thickness_cm",
+      "dimension": "width_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_T3",
-      "dimension": "length_cm",
+      "dimension": "length_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_T3",
-      "dimension": "width_cm",
+      "dimension": "thickness_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_T3",
-      "dimension": "thickness_cm",
+      "dimension": "width_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_T4",
-      "dimension": "length_cm",
+      "dimension": "length_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_T4",
-      "dimension": "width_cm",
+      "dimension": "thickness_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_T4",
-      "dimension": "thickness_cm",
+      "dimension": "width_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_T5",
-      "dimension": "length_cm",
+      "dimension": "length_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_T5",
-      "dimension": "width_cm",
+      "dimension": "thickness_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_T5",
-      "dimension": "thickness_cm",
+      "dimension": "width_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_T6",
-      "dimension": "length_cm",
+      "dimension": "length_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_T6",
-      "dimension": "width_cm",
+      "dimension": "thickness_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_T6",
-      "dimension": "thickness_cm",
+      "dimension": "width_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_T7",
-      "dimension": "length_cm",
+      "dimension": "length_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_T7",
-      "dimension": "width_cm",
+      "dimension": "thickness_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_T7",
-      "dimension": "thickness_cm",
+      "dimension": "width_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_T8",
-      "dimension": "length_cm",
+      "dimension": "length_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_T8",
-      "dimension": "width_cm",
+      "dimension": "thickness_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_T8",
-      "dimension": "thickness_cm",
+      "dimension": "width_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_T9",
-      "dimension": "length_cm",
+      "dimension": "length_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_T9",
-      "dimension": "width_cm",
+      "dimension": "thickness_mm",
       "issue": "unknown measurement"
     },
     {
       "bone": "BONE_T9",
-      "dimension": "thickness_cm",
-      "issue": "unknown measurement"
-    },
-    {
-      "bone": "BONE_TALUS_L",
-      "dimension": "length_cm",
-      "issue": "unknown measurement"
-    },
-    {
-      "bone": "BONE_TALUS_L",
-      "dimension": "width_cm",
-      "issue": "unknown measurement"
-    },
-    {
-      "bone": "BONE_TALUS_L",
-      "dimension": "thickness_cm",
-      "issue": "unknown measurement"
-    },
-    {
-      "bone": "BONE_TALUS_R",
-      "dimension": "length_cm",
-      "issue": "unknown measurement"
-    },
-    {
-      "bone": "BONE_TALUS_R",
-      "dimension": "width_cm",
-      "issue": "unknown measurement"
-    },
-    {
-      "bone": "BONE_TALUS_R",
-      "dimension": "thickness_cm",
+      "dimension": "width_mm",
       "issue": "unknown measurement"
     },
     {
@@ -5169,15 +5099,6 @@
     "BONE_ZYGOMATIC_R"
   ],
   "missing_references": [
-    "BONE_C1",
-    "BONE_C2",
-    "BONE_C3",
-    "BONE_C4",
-    "BONE_C5",
-    "BONE_C6",
-    "BONE_C7",
-    "BONE_CALCANEUS_L",
-    "BONE_CALCANEUS_R",
     "BONE_CAPITATE_L",
     "BONE_CAPITATE_R",
     "BONE_CLAVICLE_L",
@@ -5202,11 +5123,6 @@
     "BONE_INCUS_R",
     "BONE_INTERMEDIATE_CUNEIFORM_L",
     "BONE_INTERMEDIATE_CUNEIFORM_R",
-    "BONE_L1",
-    "BONE_L2",
-    "BONE_L3",
-    "BONE_L4",
-    "BONE_L5",
     "BONE_LATERAL_CUNEIFORM_L",
     "BONE_LATERAL_CUNEIFORM_R",
     "BONE_LUNATE_L",
@@ -5241,8 +5157,6 @@
     "BONE_OCCIPITAL",
     "BONE_PAR_L",
     "BONE_PAR_R",
-    "BONE_PATELLA_L",
-    "BONE_PATELLA_R",
     "BONE_PHAL_1_1_L",
     "BONE_PHAL_1_1_R",
     "BONE_PHAL_1_2_L",
@@ -5281,8 +5195,6 @@
     "BONE_RIB11_R",
     "BONE_RIB12_L",
     "BONE_RIB12_R",
-    "BONE_RIB1_L",
-    "BONE_RIB1_R",
     "BONE_RIB2_L",
     "BONE_RIB2_R",
     "BONE_RIB3_L",
@@ -5308,20 +5220,6 @@
     "BONE_STAPES_L",
     "BONE_STAPES_R",
     "BONE_STERNUM",
-    "BONE_T1",
-    "BONE_T10",
-    "BONE_T11",
-    "BONE_T12",
-    "BONE_T2",
-    "BONE_T3",
-    "BONE_T4",
-    "BONE_T5",
-    "BONE_T6",
-    "BONE_T7",
-    "BONE_T8",
-    "BONE_T9",
-    "BONE_TALUS_L",
-    "BONE_TALUS_R",
     "BONE_TEMP_L",
     "BONE_TEMP_R",
     "BONE_TIBIA_L",
@@ -5370,14 +5268,6 @@
     },
     {
       "bone": "BONE_C1",
-      "field": "manufacturing_notes"
-    },
-    {
-      "bone": "BONE_C1",
-      "field": "references"
-    },
-    {
-      "bone": "BONE_C1",
       "field": "mount_points"
     },
     {
@@ -5390,14 +5280,6 @@
     },
     {
       "bone": "BONE_C2",
-      "field": "manufacturing_notes"
-    },
-    {
-      "bone": "BONE_C2",
-      "field": "references"
-    },
-    {
-      "bone": "BONE_C2",
       "field": "mount_points"
     },
     {
@@ -5410,14 +5292,6 @@
     },
     {
       "bone": "BONE_C3",
-      "field": "manufacturing_notes"
-    },
-    {
-      "bone": "BONE_C3",
-      "field": "references"
-    },
-    {
-      "bone": "BONE_C3",
       "field": "mount_points"
     },
     {
@@ -5430,14 +5304,6 @@
     },
     {
       "bone": "BONE_C4",
-      "field": "manufacturing_notes"
-    },
-    {
-      "bone": "BONE_C4",
-      "field": "references"
-    },
-    {
-      "bone": "BONE_C4",
       "field": "mount_points"
     },
     {
@@ -5450,14 +5316,6 @@
     },
     {
       "bone": "BONE_C5",
-      "field": "manufacturing_notes"
-    },
-    {
-      "bone": "BONE_C5",
-      "field": "references"
-    },
-    {
-      "bone": "BONE_C5",
       "field": "mount_points"
     },
     {
@@ -5470,14 +5328,6 @@
     },
     {
       "bone": "BONE_C6",
-      "field": "manufacturing_notes"
-    },
-    {
-      "bone": "BONE_C6",
-      "field": "references"
-    },
-    {
-      "bone": "BONE_C6",
       "field": "mount_points"
     },
     {
@@ -5487,14 +5337,6 @@
     {
       "bone": "BONE_C7",
       "field": "geometry"
-    },
-    {
-      "bone": "BONE_C7",
-      "field": "manufacturing_notes"
-    },
-    {
-      "bone": "BONE_C7",
-      "field": "references"
     },
     {
       "bone": "BONE_C7",
@@ -5510,14 +5352,6 @@
     },
     {
       "bone": "BONE_CALCANEUS_L",
-      "field": "manufacturing_notes"
-    },
-    {
-      "bone": "BONE_CALCANEUS_L",
-      "field": "references"
-    },
-    {
-      "bone": "BONE_CALCANEUS_L",
       "field": "mount_points"
     },
     {
@@ -5527,14 +5361,6 @@
     {
       "bone": "BONE_CALCANEUS_R",
       "field": "geometry"
-    },
-    {
-      "bone": "BONE_CALCANEUS_R",
-      "field": "manufacturing_notes"
-    },
-    {
-      "bone": "BONE_CALCANEUS_R",
-      "field": "references"
     },
     {
       "bone": "BONE_CALCANEUS_R",
@@ -6002,14 +5828,6 @@
     },
     {
       "bone": "BONE_L1",
-      "field": "manufacturing_notes"
-    },
-    {
-      "bone": "BONE_L1",
-      "field": "references"
-    },
-    {
-      "bone": "BONE_L1",
       "field": "mount_points"
     },
     {
@@ -6022,14 +5840,6 @@
     },
     {
       "bone": "BONE_L2",
-      "field": "manufacturing_notes"
-    },
-    {
-      "bone": "BONE_L2",
-      "field": "references"
-    },
-    {
-      "bone": "BONE_L2",
       "field": "mount_points"
     },
     {
@@ -6039,14 +5849,6 @@
     {
       "bone": "BONE_L3",
       "field": "geometry"
-    },
-    {
-      "bone": "BONE_L3",
-      "field": "manufacturing_notes"
-    },
-    {
-      "bone": "BONE_L3",
-      "field": "references"
     },
     {
       "bone": "BONE_L3",
@@ -6062,14 +5864,6 @@
     },
     {
       "bone": "BONE_L4",
-      "field": "manufacturing_notes"
-    },
-    {
-      "bone": "BONE_L4",
-      "field": "references"
-    },
-    {
-      "bone": "BONE_L4",
       "field": "mount_points"
     },
     {
@@ -6079,14 +5873,6 @@
     {
       "bone": "BONE_L5",
       "field": "geometry"
-    },
-    {
-      "bone": "BONE_L5",
-      "field": "manufacturing_notes"
-    },
-    {
-      "bone": "BONE_L5",
-      "field": "references"
     },
     {
       "bone": "BONE_L5",
@@ -6854,14 +6640,6 @@
     },
     {
       "bone": "BONE_PATELLA_L",
-      "field": "manufacturing_notes"
-    },
-    {
-      "bone": "BONE_PATELLA_L",
-      "field": "references"
-    },
-    {
-      "bone": "BONE_PATELLA_L",
       "field": "mount_points"
     },
     {
@@ -6874,14 +6652,6 @@
     },
     {
       "bone": "BONE_PATELLA_R",
-      "field": "manufacturing_notes"
-    },
-    {
-      "bone": "BONE_PATELLA_R",
-      "field": "references"
-    },
-    {
-      "bone": "BONE_PATELLA_R",
       "field": "mount_points"
     },
     {
@@ -7646,14 +7416,6 @@
     },
     {
       "bone": "BONE_RIB1_L",
-      "field": "manufacturing_notes"
-    },
-    {
-      "bone": "BONE_RIB1_L",
-      "field": "references"
-    },
-    {
-      "bone": "BONE_RIB1_L",
       "field": "mount_points"
     },
     {
@@ -7666,14 +7428,6 @@
     },
     {
       "bone": "BONE_RIB1_R",
-      "field": "manufacturing_notes"
-    },
-    {
-      "bone": "BONE_RIB1_R",
-      "field": "references"
-    },
-    {
-      "bone": "BONE_RIB1_R",
       "field": "mount_points"
     },
     {
@@ -8174,14 +7928,6 @@
     },
     {
       "bone": "BONE_T1",
-      "field": "manufacturing_notes"
-    },
-    {
-      "bone": "BONE_T1",
-      "field": "references"
-    },
-    {
-      "bone": "BONE_T1",
       "field": "mount_points"
     },
     {
@@ -8194,14 +7940,6 @@
     },
     {
       "bone": "BONE_T10",
-      "field": "manufacturing_notes"
-    },
-    {
-      "bone": "BONE_T10",
-      "field": "references"
-    },
-    {
-      "bone": "BONE_T10",
       "field": "mount_points"
     },
     {
@@ -8214,14 +7952,6 @@
     },
     {
       "bone": "BONE_T11",
-      "field": "manufacturing_notes"
-    },
-    {
-      "bone": "BONE_T11",
-      "field": "references"
-    },
-    {
-      "bone": "BONE_T11",
       "field": "mount_points"
     },
     {
@@ -8234,14 +7964,6 @@
     },
     {
       "bone": "BONE_T12",
-      "field": "manufacturing_notes"
-    },
-    {
-      "bone": "BONE_T12",
-      "field": "references"
-    },
-    {
-      "bone": "BONE_T12",
       "field": "mount_points"
     },
     {
@@ -8254,14 +7976,6 @@
     },
     {
       "bone": "BONE_T2",
-      "field": "manufacturing_notes"
-    },
-    {
-      "bone": "BONE_T2",
-      "field": "references"
-    },
-    {
-      "bone": "BONE_T2",
       "field": "mount_points"
     },
     {
@@ -8274,14 +7988,6 @@
     },
     {
       "bone": "BONE_T3",
-      "field": "manufacturing_notes"
-    },
-    {
-      "bone": "BONE_T3",
-      "field": "references"
-    },
-    {
-      "bone": "BONE_T3",
       "field": "mount_points"
     },
     {
@@ -8294,14 +8000,6 @@
     },
     {
       "bone": "BONE_T4",
-      "field": "manufacturing_notes"
-    },
-    {
-      "bone": "BONE_T4",
-      "field": "references"
-    },
-    {
-      "bone": "BONE_T4",
       "field": "mount_points"
     },
     {
@@ -8314,14 +8012,6 @@
     },
     {
       "bone": "BONE_T5",
-      "field": "manufacturing_notes"
-    },
-    {
-      "bone": "BONE_T5",
-      "field": "references"
-    },
-    {
-      "bone": "BONE_T5",
       "field": "mount_points"
     },
     {
@@ -8334,14 +8024,6 @@
     },
     {
       "bone": "BONE_T6",
-      "field": "manufacturing_notes"
-    },
-    {
-      "bone": "BONE_T6",
-      "field": "references"
-    },
-    {
-      "bone": "BONE_T6",
       "field": "mount_points"
     },
     {
@@ -8354,14 +8036,6 @@
     },
     {
       "bone": "BONE_T7",
-      "field": "manufacturing_notes"
-    },
-    {
-      "bone": "BONE_T7",
-      "field": "references"
-    },
-    {
-      "bone": "BONE_T7",
       "field": "mount_points"
     },
     {
@@ -8374,14 +8048,6 @@
     },
     {
       "bone": "BONE_T8",
-      "field": "manufacturing_notes"
-    },
-    {
-      "bone": "BONE_T8",
-      "field": "references"
-    },
-    {
-      "bone": "BONE_T8",
       "field": "mount_points"
     },
     {
@@ -8391,14 +8057,6 @@
     {
       "bone": "BONE_T9",
       "field": "geometry"
-    },
-    {
-      "bone": "BONE_T9",
-      "field": "manufacturing_notes"
-    },
-    {
-      "bone": "BONE_T9",
-      "field": "references"
     },
     {
       "bone": "BONE_T9",
@@ -8414,14 +8072,6 @@
     },
     {
       "bone": "BONE_TALUS_L",
-      "field": "manufacturing_notes"
-    },
-    {
-      "bone": "BONE_TALUS_L",
-      "field": "references"
-    },
-    {
-      "bone": "BONE_TALUS_L",
       "field": "mount_points"
     },
     {
@@ -8431,14 +8081,6 @@
     {
       "bone": "BONE_TALUS_R",
       "field": "geometry"
-    },
-    {
-      "bone": "BONE_TALUS_R",
-      "field": "manufacturing_notes"
-    },
-    {
-      "bone": "BONE_TALUS_R",
-      "field": "references"
     },
     {
       "bone": "BONE_TALUS_R",

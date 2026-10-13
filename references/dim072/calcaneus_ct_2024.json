@@ -1,0 +1,36 @@
+{
+  "rows": [
+    {
+      "admissible": true,
+      "admitted_field": "length_mm",
+      "bone_id": "BONE_CALCANEUS",
+      "mean": 66.2,
+      "native_units": "mm",
+      "parameter": "maximum_axial_length",
+      "sd": 4.3,
+      "side": "pooled"
+    },
+    {
+      "admissible": true,
+      "admitted_field": "calcaneal_body_width_mm",
+      "bone_id": "BONE_CALCANEUS",
+      "mean": 33.0,
+      "native_units": "mm",
+      "parameter": "body_width",
+      "sd": 3.5,
+      "side": "pooled"
+    },
+    {
+      "admissible": true,
+      "admitted_field": "calcaneal_lateral_wall_height_mm",
+      "bone_id": "BONE_CALCANEUS",
+      "mean": 33.3,
+      "native_units": "mm",
+      "parameter": "lateral_wall_height",
+      "sd": 2.6,
+      "side": "pooled"
+    }
+  ],
+  "source_id": "calcaneus_ct_2024",
+  "table": "Tables 1-2, female values"
+}

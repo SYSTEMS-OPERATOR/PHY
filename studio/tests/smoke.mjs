@@ -4,6 +4,7 @@ import os from 'node:os';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { chromium } from 'playwright';
+import { createHash } from 'node:crypto';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
 const output=process.env.PHY_TEST_OUTPUT||path.join(os.tmpdir(),'phy-studio-qa');
@@ -182,6 +183,61 @@ try {
   const zip=await fs.readFile(path.join(output,'maquette.zip'));
   assert.equal(zip.readUInt32LE(0),0x04034b50);assert.equal(zip.readUInt32LE(zip.length-22),0x06054b50);
   assert.ok(zip.includes(Buffer.from('cut-sheet-1.svg')));assert.ok(zip.includes(Buffer.from('BUILD.md')));
+  const hasNative=await page.evaluate(()=>!!PHY_DATA.native_references);
+  if(hasNative){
+    for(const [id,parts] of [['NIH_PELVIS',14],['NIH_SKIN',1]]){
+      await page.evaluate(id=>PHY_STUDIO.selectModel(id),id);
+      assert.equal(await page.evaluate(()=>PHY_STUDIO.getState().modelParts),parts);
+      assert.equal(await page.evaluate(()=>PHY_STUDIO.visiblePartIds().length),parts);
+      assert.match(await page.locator('#axis-note').innerText(),/Y UP/);
+      for(const selector of ['#height-number','#pose','#explode','#mat-carbon','#layer-bones-only'])assert.ok(await page.locator(selector).isDisabled());
+      assert.ok(await page.locator('#export-format option[value="stl"]').isDisabled());
+      const expected=await page.evaluate(()=>PHY_DATA.models.find(m=>m.id===PHY_STUDIO.getState().model).bounds_m);
+      const actual=await page.evaluate(()=>PHY_STUDIO.modelBounds());
+      assert.ok(actual.every((v,i)=>Math.abs(v-(expected.max[i]-expected.min[i])*1000)<1e-4),'native axes and units remain unchanged');
+      await page.evaluate(()=>{PHY_STUDIO.setHeight(1800);PHY_STUDIO.setPose(0);PHY_STUDIO.setPalette('carbon');});
+      assert.deepEqual(await page.evaluate(()=>PHY_STUDIO.modelBounds()),actual);
+      const raw=await getDownload('glb',id+'.glb');
+      const digest=createHash('sha256').update(raw).digest('hex');
+      assert.equal(digest,await page.evaluate(()=>PHY_DATA.models.find(m=>m.id===PHY_STUDIO.getState().model).derivative.preview_sha256));
+      await page.screenshot({path:path.join(output,id.toLowerCase()+'.png'),fullPage:true});
+    }
+    // Finish on a normal model even if earlier asynchronous parses complete late.
+    await page.evaluate(()=>Promise.all([PHY_STUDIO.selectModel('NIH_SKIN'),PHY_STUDIO.selectModel('NIH_PELVIS'),PHY_STUDIO.selectModel('SOPHY_SCALE')]));
+    assert.equal(await page.evaluate(()=>PHY_STUDIO.getState().model),'SOPHY_SCALE');
+    assert.equal(await page.evaluate(()=>PHY_STUDIO.visiblePartIds().length),230);
+    assert.equal(await page.evaluate(()=>PHY_STUDIO.getState().height),1676.4);
+    await page.click('#compare-reference');
+    await page.waitForFunction(()=>PHY_STUDIO.getState().model==='NIH_PELVIS'&&!PHY_STUDIO.getState().loading);
+    await page.selectOption('#landmark-candidate','L_ASIS');await page.click('#isolate');
+    const nativeBefore=await page.evaluate(()=>PHY_STUDIO.modelBounds());
+    await page.click('#capture-landmark');
+    const p=await page.evaluate(()=>PHY_STUDIO.projectPart('VH_F_ilium_compact_bone_L'));
+    // This tests a draft point on the requested mesh, not anatomical ASIS location.
+    for(const [dx,dy] of [[0,0],...[8,-8,20,-20,35,-35].flatMap(x=>[0,8,-8,20,-20].map(y=>[x,y]))]){
+      if(await page.evaluate(()=>PHY_STUDIO.referenceDraft().annotations.length))break;
+      await page.mouse.click(p[0]+dx,p[1]+dy);
+    }
+    assert.equal(await page.evaluate(()=>PHY_STUDIO.referenceDraft().annotations.length),1);
+    const [draftDownload]=await Promise.all([page.waitForEvent('download'),page.click('#download-draft')]);
+    await draftDownload.saveAs(path.join(output,'pelvis-preview-draft.json'));
+    const draft=JSON.parse(await fs.readFile(path.join(output,'pelvis-preview-draft.json'),'utf8'));
+    assert.equal(draft.accepted_landmarks,null);assert.equal(draft.canonical_transform,null);
+    assert.equal(draft.annotations[0].original_face_index,null);assert.equal(draft.annotations[0].anatomically_accepted,false);
+    assert.equal(draft.annotations[0].source_node,13);assert.equal(draft.annotations[0].mesh_name,'VH_F_ilium_compact_bone_L');
+    assert.equal(draft.annotations[0].barycentric.length,3);assert.equal(draft.annotations[0].native_point_m.length,3);
+    assert.deepEqual(await page.evaluate(()=>PHY_STUDIO.modelBounds()),nativeBefore);
+    const nativeReview=JSON.parse(await getDownload('json','pelvis-native-review.json'));
+    assert.equal(nativeReview.review_state.units,'m');assert.equal(nativeReview.landmark_draft.annotations.length,1);
+    await page.click('#show-all');await page.click('#compare-reference');
+    assert.equal(await page.evaluate(()=>PHY_STUDIO.getState().model),'SOPHY_SCALE');
+    await page.click('#compare-reference');await page.waitForFunction(()=>!PHY_STUDIO.getState().loading);
+    assert.equal(await page.evaluate(()=>PHY_STUDIO.referenceDraft().annotations.length),1,'draft persists across frame switching');
+    await page.click('#open-engineering');await page.click('[data-tab="nih"]');
+    assert.match(await page.locator('#modal-content').innerText(),/0cafc8e7f387d009a666b3b3b44bfae29904c53c/);
+    assert.match(await page.locator('#modal-content').innerText(),/CC BY 4.0/);
+    await page.keyboard.press('Escape');
+  }
   // Both source provenance and all primary controls remain reachable on a phone.
   await page.setViewportSize({width:390,height:844});
   await page.click('[data-model="F28_REFINED"]');await page.click('#mat-wood');
@@ -197,11 +253,17 @@ try {
   await page.screenshot({path:path.join(output,'mobile-engineering.png'),fullPage:false});
   await page.click('[data-tab="nasa"]');
   assert.ok(await page.locator('#nasa-condition').isVisible());
+  if(hasNative){
+    await page.click('[data-tab="nih"]');
+    const nativeWidths=await page.locator('.modal').evaluate(e=>[e.scrollWidth,e.clientWidth]);
+    assert.equal(nativeWidths[0],nativeWidths[1],'native provenance fits the phone dialog');
+    await page.screenshot({path:path.join(output,'mobile-nih-evidence.png')});
+  }
   await page.keyboard.press('Escape');
   await page.evaluate(()=>scrollTo(0,0));await page.waitForTimeout(400);
   await page.screenshot({path:path.join(output,'mobile.png'),fullPage:true});
   assert.deepEqual(errors,[]);
-  assert.deepEqual(networkRequests,[],'evidence and NASA panels stay offline');
+  assert.deepEqual(networkRequests,[],'evidence, NASA and native NIH views stay offline');
   await fs.writeFile(path.join(output,'results.json'),JSON.stringify({status:'passed',browserErrors:errors,stlTriangles:count,stlHeightMm:maxZ,glbMeshes:json.meshes.length,boneOnlyMeshes:boneJson.meshes.length,mobileWidth:widths[0]},null,2));
   console.log('PHY Studio browser smoke passed: offline WebGL, five models, 206-bone filtering/identity/GLB audit including six ear ossicles and one hyoid, surface selection/ruler, height/pose/isolation, valid GLB/STL/JSON, embedded maquette ZIP, and 390px mobile layout.');
 } finally {

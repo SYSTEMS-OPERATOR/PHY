@@ -11,6 +11,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Check out pinned small reference previews without LFS
+        uses: actions/checkout@v4
+        with:
+          repository: SYSTEMS-OPERATOR/PHY-REF
+          ref: 0cafc8e7f387d009a666b3b3b44bfae29904c53c
+          path: .phy-reference
+          lfs: false
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -27,15 +34,19 @@ jobs:
         run: |
           npm run check --prefix studio
           npm run build --prefix studio
-          python bin/export_phy_studio.py
+          python bin/export_phy_studio.py --reference-root .phy-reference
       - name: Validate bone filtering and actual GLB/STL exports without WebGL
         run: npm run test:logic --prefix studio
+      - name: Validate pinned native previews
+        env:
+          PHY_REF_ROOT: .phy-reference
+        run: python -m pytest tests/test_studio_references.py -q
       - name: Validate source, geometry and existing canon
         run: |
           python -m pytest tests/test_studio_evidence.py tests/test_reference_registration.py tests/test_dimension_evidence.py tests/test_craniofacial_audit.py tests/test_facial_source_records.py tests/test_engineering_audit.py tests/test_ear_hyoid_geometry.py tests/test_skull_bone_geometry.py tests/test_fabrication_validation.py tests/test_fabrication_exports.py tests/test_foot_bone_geometry.py tests/test_hand_bone_geometry.py tests/test_bone_equivalence.py tests/test_phy_studio.py tests/test_sophy_geometry_canon.py tests/test_sophy_project_canon_bindings.py tests/test_reference_dimensions.py tests/test_t56_a0_geometry.py -q
       - name: Check deterministic export
         run: |
-          python bin/export_phy_studio.py --output /tmp/phy-repeat
+          python bin/export_phy_studio.py --reference-root .phy-reference --output /tmp/phy-repeat
           diff -qr studio/dist /tmp/phy-repeat
           cmp studio/PHY-Studio.html studio/dist/PHY-Studio.html
           diff -qr PROJECTS/PHY_F28/maquette studio/dist/maquette

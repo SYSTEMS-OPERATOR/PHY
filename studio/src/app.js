@@ -1,9 +1,11 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { GLTFExporter } from 'three/addons/exporters/GLTFExporter.js';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { STLExporter } from 'three/addons/exporters/STLExporter.js';
 import { partVisible, partMatches, exportGroup as makeExportGroup } from './part_roles.js';
 import { escape, htmlTable, boneEvidenceHtml, engineeringHtml, nasaHtml, nasaMotionHtml, conditionLabels } from './evidence.js';
+import { isNative, previewBytes, emptyDraft, annotationFromHit, nativeReferenceHtml } from './native_reference.js';
 
 const data = window.PHY_DATA;
 const $ = id => document.getElementById(id);
@@ -12,8 +14,10 @@ const round = (v,n=1) => Number(v).toFixed(n);
 const coord = v => new THREE.Vector3(v[0],v[2],-v[1]);
 const sourceMean = data.reference.statistics.stature.mean_mm;
 const state = { model:'F28_REFINED', height:sourceMean, pose:75, palette:'wood', exploded:0,
-  selected:null, isolated:false, boneOnly:false, ruler:false, points:[], view:'iso' };
-let model, renderer, scene, camera, controls, root, meshes=[], guides, ground, rulerGroup;
+  selected:null, isolated:false, boneOnly:false, ruler:false, points:[], view:'iso', loading:false, referenceCapture:false };
+let model, renderer, scene, camera, controls, root, meshes=[], guides, ground, rulerGroup, annotationGroup, environment;
+let selectionSequence=0, comparisonModel='NIH_PELVIS';
+let referenceDraft=data.native_references?emptyDraft(data.native_references):null;
 let toastTimer, lastFocus, focusTarget, redraw=true;
 const palette = {
   wood: {redwood:0xb27850, brass:0xb99b5e, copper:0xb57055, ivory:0xaabbab, steel:0x6b767b, aluminum:0xb2b9b5, acetal:0x383f3d},
@@ -47,10 +51,11 @@ function init() {
   key.shadow.mapSize.set(2048,2048);Object.assign(key.shadow.camera,{left:-1700,right:1700,top:2200,bottom:-1000,near:1,far:7000});key.shadow.bias=-.0003;scene.add(key);
   const fill=new THREE.DirectionalLight(0xffd2a3,2.2);fill.position.set(1500,650,1100);scene.add(fill);
   const rim=new THREE.DirectionalLight(0xc8e5dd,3);rim.position.set(1000,2000,1400);scene.add(rim);
-  root=new THREE.Group();scene.add(root);guides=new THREE.Group();scene.add(guides);rulerGroup=new THREE.Group();scene.add(rulerGroup);
-  ground=new THREE.Mesh(new THREE.PlaneGeometry(10000,10000),new THREE.ShadowMaterial({opacity:.12}));ground.rotation.x=-Math.PI/2;ground.position.y=-3;ground.receiveShadow=true;scene.add(ground);
-  const grid=new THREE.GridHelper(6000,60,0xc7ccbf,0xdfe1d7);grid.position.y=-2;grid.material.transparent=true;grid.material.opacity=.3;scene.add(grid);
-  const circle=new THREE.LineLoop(new THREE.BufferGeometry().setFromPoints(Array.from({length:120},(_,i)=>new THREE.Vector3(Math.cos(i*Math.PI/60)*430,0,Math.sin(i*Math.PI/60)*430))),new THREE.LineBasicMaterial({color:0xc6cfc0,transparent:true,opacity:.7}));circle.position.y=-1;scene.add(circle);
+  root=new THREE.Group();scene.add(root);guides=new THREE.Group();scene.add(guides);rulerGroup=new THREE.Group();scene.add(rulerGroup);annotationGroup=new THREE.Group();scene.add(annotationGroup);
+  environment=new THREE.Group();scene.add(environment);
+  ground=new THREE.Mesh(new THREE.PlaneGeometry(10000,10000),new THREE.ShadowMaterial({opacity:.12}));ground.rotation.x=-Math.PI/2;ground.position.y=-3;ground.receiveShadow=true;environment.add(ground);
+  const grid=new THREE.GridHelper(6000,60,0xc7ccbf,0xdfe1d7);grid.position.y=-2;grid.material.transparent=true;grid.material.opacity=.3;environment.add(grid);
+  const circle=new THREE.LineLoop(new THREE.BufferGeometry().setFromPoints(Array.from({length:120},(_,i)=>new THREE.Vector3(Math.cos(i*Math.PI/60)*430,0,Math.sin(i*Math.PI/60)*430))),new THREE.LineBasicMaterial({color:0xc6cfc0,transparent:true,opacity:.7}));circle.position.y=-1;environment.add(circle);
   populateModels(); wireControls(); wireResources(); selectModel('F28_REFINED');
   new ResizeObserver(resize).observe(stage); resize();
   let pointerStart=null;
@@ -61,7 +66,7 @@ function init() {
 }
 function resize() { if(!renderer)return;const r=stage.getBoundingClientRect();renderer.setSize(r.width,r.height,false);camera.aspect=r.width/r.height;camera.updateProjectionMatrix();redraw=true; }
 function populateModels() {
-  const labels={F28_MEAN:['01','Female 28','Arithmetic mean'],F28_REFINED:['02','Female 28 · refined','Slight form adjustments'],SOPHY_SCALE:['03','SOPHY scale','1676.4 mm · canon reference'],A0_R1:['04','Shoulder · A0-R1','Located CAD / shop review'],REFERENCE_KIT:['05','Source library','Legacy component envelopes']};
+  const labels={F28_MEAN:['01','Female 28','Arithmetic mean'],F28_REFINED:['02','Female 28 · refined','Slight form adjustments'],SOPHY_SCALE:['03','SOPHY scale','1676.4 mm · canon reference'],A0_R1:['04','Shoulder · A0-R1','Located CAD / shop review'],REFERENCE_KIT:['05','Source library','Legacy component envelopes'],NIH_PELVIS:['06','NIH · female pelvis','Native frame / reduced preview'],NIH_SKIN:['07','NIH · female skin','Exterior / reduced preview']};
   $('models').replaceChildren();
   for(const m of data.models){const [glyph,label,note]=labels[m.id];const b=document.createElement('button');b.className='model-button';b.dataset.model=m.id;b.innerHTML='<span class="model-glyph">'+glyph+'</span><span><span class="model-label">'+label+'</span><div class="model-note">'+note+'</div></span>';b.onclick=()=>selectModel(m.id);$('models').append(b);}
 }
@@ -72,8 +77,11 @@ function material(part) {
     roughness:isWood?.58:.34,metalness:isWood?.04:.62,transparent:shell,opacity:shell?.105:1,
     depthWrite:!shell,side:shell?THREE.DoubleSide:THREE.FrontSide});
 }
-function selectModel(id,render=true) {
+async function selectModel(id,render=true) {
   model=data.models.find(x=>x.id===id);if(!model)return;
+  const chosen=model,sequence=++selectionSequence,native=isNative(model);
+  state.loading=false;state.referenceCapture=false;$('capture-landmark').classList.remove('active');
+  if(native)comparisonModel=id;
   state.model=id;state.height=model.height_mm??0;state.pose=model.arm_drop_deg??0;state.selected=null;state.isolated=false;state.boneOnly=false;state.exploded=0;
   $('layer-bones-only').checked=false;$('layer-bones-only').disabled=!model.bone_equivalence;
   state.points=[];state.ruler=false;$('measure').classList.remove('active');$('explode').value=0;
@@ -87,13 +95,47 @@ function selectModel(id,render=true) {
   $('profile-note').textContent=body?(id==='F28_MEAN'?'Measured reference dimensions; mechanical station mapping is a design proposal.':id==='SOPHY_SCALE'?'H = span = 1676.4 mm. This form overlay does not adopt new canon landmarks.':'92 women aged exactly 28. Shoulder −1%, waist −3%, hip +2%.'):isA0?'A0-R1 stays in its original bench datum and dimensions.':'Gallery positions are display transforms, not anatomical placement.';
   $('source-note').textContent=body?'ANSUR II, female US Army cohort (2010–2012), age exactly 28; not a civilian/worldwide mean. 92 samples. External dimensions differ from mechanical centers. Arm station closure factor '+round(model.design_datums.arm_chain_closure_scale,4)+'. See Reference for every mean and limitation.':model.limitations.join(' ');
   $('pose-note').textContent=body?'Visual arm motion around proposed centers.':isA0?'Neutral A0 assembly. Its physical motion screen remains discrete.':'Unassembled component gallery.';
+  if(native){
+    $('model-title').textContent=id==='NIH_PELVIS'?'The female pelvis':'The female exterior';
+    $('model-eyebrow').textContent='NIH / HRA / NATIVE REFERENCE';
+    $('model-subtitle').textContent='Source geometry in a separate native frame.';
+    $('model-badge').textContent='DECIMATED PREVIEW / ANATOMICAL QUALIFICATION OPEN';
+    $('profile-note').textContent='Source world coordinates preserved. 1000 mm/m display conversion only; no stature normalization.';
+    $('pose-note').textContent='Native static source pose. No PHY joint axes or anatomical registration.';
+  }
+  if(environment)environment.visible=!native;
+  $('axis-note').textContent=native?'SOURCE X · Y UP · Z / m → mm ×1000':'mm / X RIGHT · Y FRONT · Z UP';
+  $('canvas-note').textContent=native?'SEPARATE NATIVE VIEW · CAMERA ORBIT ONLY · NO REGISTRATION':'DRAG TO ORBIT · SCROLL / PINCH TO ZOOM · CLICK A PART';
+  $('reference-review').hidden=id!=='NIH_PELVIS';
+  $('compare-reference').hidden=!data.native_references || (!native&&id!=='SOPHY_SCALE');
+  $('compare-reference').textContent=native?'View SOPHY separately ↗':'Return to NIH native view ↗';
+  for(const control of ['explode','mat-wood','mat-carbon','layer-frame','layer-joints','layer-dimensions'])$(control).disabled=native;
+  for(const option of $('export-format').options)option.disabled=native&&option.value==='stl';
+  if(native&&$('export-format').value==='stl')$('export-format').value='glb';
+  $('export-note').textContent=native?'GLB downloads the identical pinned preview in meters. JSON retains draft/provenance. No transformed STL or fabrication mesh export.':'Current scale and pose. Reference geometry; full-scale structural release is open.';
+  $('export').disabled=!renderer&&!native;
+  updateDraft();
   for(const input of ['height','height-number','pose','pose-a','pose-t'])$(input).disabled=!body;
   $('layer-envelope').disabled=!body;
   $('height').value=state.height;$('height-number').value=body?round(state.height):'';$('pose').value=state.pose;
   $('part-count').textContent=model.parts.length+' parts';
   updatePartList();inspectPart(null);updateStats();updatePoseLabel();
   if(!renderer||!render)return;
-  disposeGroup(root);disposeGroup(guides);disposeGroup(rulerGroup);meshes=[];
+  disposeGroup(root);disposeGroup(guides);disposeGroup(rulerGroup);disposeGroup(annotationGroup);meshes=[];
+  root.position.set(0,0,0);root.quaternion.identity();root.scale.setScalar(1);
+  if(native){
+    state.loading=true;$('render-status').textContent='Checking pinned native preview…';
+    try{
+      const raw=await previewBytes(chosen),gltf=await new GLTFLoader().parseAsync(raw.buffer,'');
+      if(sequence!==selectionSequence){disposeGroup(gltf.scene);return;}
+      gltf.scene.traverse(mesh=>{if(!mesh.isMesh)return;const part=chosen.parts.find(p=>p.id===mesh.name);if(!part)throw new Error('Native mesh label mismatch');mesh.userData.part=part;mesh.castShadow=true;mesh.receiveShadow=true;meshes.push(mesh);});
+      if(meshes.length!==chosen.parts.length)throw new Error('Native mesh count mismatch');
+      root.add(gltf.scene);root.scale.setScalar(1000);
+      root.userData={profile:id,units:'m',display_units:'mm',display_scale:1000,canonical_transform:null};
+      state.loading=false;$('render-status').textContent='Pinned native preview · stored locally · anatomy/metric fidelity unqualified';
+      applyTransforms();cameraView('iso');updateDraft();return;
+    }catch(e){if(sequence===selectionSequence){state.loading=false;meshes=[];disposeGroup(root);$('render-status').textContent='Reference load blocked: '+e.message;toast('Reference load blocked: '+e.message);}return;}
+  }
   for(const p of model.parts){
     const geometry=new THREE.BufferGeometry();const positions=[];
     for(const v of p.vertices)positions.push(v[0],v[2],-v[1]);
@@ -101,10 +143,15 @@ function selectModel(id,render=true) {
     const mesh=new THREE.Mesh(geometry,material(p));mesh.name=p.id;mesh.userData={part:p};mesh.castShadow=p.region!=='envelope';mesh.receiveShadow=true;root.add(mesh);meshes.push(mesh);
   }
   root.userData={profile:id,geometry_status:'reference / unreleased',units:'mm'};
+  $('render-status').textContent='3D ready · models stored locally';
   applyTransforms();cameraView('iso');redraw=true;
 }
 function updateStats() {
   const body=!!model.height_mm;
+  if(isNative(model)){
+    const vals=[model.parts.length+' <span>source meshes</span>',model.derivative.preview_triangles.toLocaleString()+' <span>triangles</span>','m <span>native / Y up</span>'];
+    vals.forEach((v,i)=>{$('stat'+(i+1)).innerHTML=v;$('stat'+(i+1)+'-label').textContent=['Segmentation','Reduced preview','Source frame'][i];});return;
+  }
   const vals=body?[round(state.height)+' <span>mm</span>',round(model.t_pose_span_mm*state.height/model.height_mm)+' <span>mm</span>','92 <span>women / age 28</span>']:model.id==='A0_R1'?['19 <span>CAD parts</span>','35 <span>located instances</span>','317 <span>mm / S–E station</span>']:['18 <span>source solids</span>','mm <span>canonical units</span>','0 <span>anatomical transforms</span>'];
   const labels=body?['Standing height','T-pose span','Source cohort']:model.id==='A0_R1'?['Unique geometry','Assembly','Dummy member']:['Library','Dimensions','Placement'];
   vals.forEach((v,i)=>{$('stat'+(i+1)).innerHTML=v;$('stat'+(i+1)+'-label').textContent=labels[i];});
@@ -112,6 +159,10 @@ function updateStats() {
 function updatePoseLabel() { $('pose-label').textContent=model.height_mm?(state.pose===0?'T / 0°':'A / '+state.pose+'°'):'Neutral';$('pose-a').classList.toggle('active',state.pose!==0);$('pose-t').classList.toggle('active',state.pose===0); }
 function applyTransforms() {
   if(!root)return;
+  if(isNative(model)){
+    for(const mesh of meshes){mesh.visible=!state.isolated||mesh.name===state.selected;for(const mat of Array.isArray(mesh.material)?mesh.material:[mesh.material]){mat.emissive?.setHex(mesh.name===state.selected?0x503a16:0);mat.emissiveIntensity=mesh.name===state.selected?.4:0;}}
+    disposeGroup(guides);guides.visible=false;redraw=true;return;
+  }
   const scale=model.height_mm?state.height/model.height_mm:1;root.scale.setScalar(scale);
   const origin=model.height_mm?new THREE.Vector3(0,model.height_mm*.56,0):coord([ -240,0,40]);
   for(const mesh of meshes){
@@ -156,7 +207,7 @@ function cameraView(view='iso',target=null,size=null) {
   const d=size??Math.max(extent.y,extent.x,extent.z,180)*(innerWidth<760?2.5:2.18);
   controls.target.copy(center);const directions={iso:new THREE.Vector3(-.42,.14,-1),front:new THREE.Vector3(0,.035,-1),side:new THREE.Vector3(-1,.035,0),back:new THREE.Vector3(0,.035,1)};
   camera.position.copy(center).add(directions[view].clone().normalize().multiplyScalar(d));camera.near=Math.max(.1,d/1000);camera.far=Math.max(25000,d*10);camera.updateProjectionMatrix();controls.update();
-  document.querySelectorAll('[data-view]').forEach(b=>b.classList.toggle('active',b.dataset.view===view));redraw=true;
+  document.querySelectorAll('[data-view]').forEach(b=>{b.classList.toggle('active',b.dataset.view===view);if(b.dataset.view!=='iso')b.textContent=isNative(model)?{front:'−Z view',side:'−X view',back:'+Z view'}[b.dataset.view]:{front:'Front',side:'Side',back:'Back'}[b.dataset.view];});redraw=true;
 }
 function updatePartList() {
   const query=$('part-search').value.toLowerCase();const select=$('part-select');select.replaceChildren(new Option('Select in the viewport',''));
@@ -169,17 +220,33 @@ function inspectPart(id) {
   const dims=p.bounds_mm.max.map((v,i)=>(v-p.bounds_mm.min[i])*(model.height_mm?state.height/model.height_mm:1));
   $('part-details').innerHTML='<p><strong>'+escape(p.name)+'</strong><br>'+escape(p.id)+'</p>'+(p.role?'<p>Role: '+escape(p.role)+(p.bone_id?'<br>'+escape(p.bone_id)+' · dimensional fidelity unverified':p.grouped_bone_ids?'<br>'+p.grouped_bone_ids.length+' grouped identities · not individual bones':'')+'</p>':'')+(p.source_record_status?'<p class="quiet">Canonical source record '+escape(p.source_record_status)+'</p>':'')+'<p>'+dims.map(x=>round(x)).join(' × ')+' mm <span class="quiet">/ axis-aligned envelope</span></p><p class="quiet">'+escape(p.authority)+'<br>'+escape(p.source)+'</p>'+(p.center_distance_mm?'<p>Member center distance: '+round(p.center_distance_mm*(model.height_mm?state.height/model.height_mm:1))+' mm</p>':'');
   if(p.bone_id)$('part-details').innerHTML+=boneEvidenceHtml(data.engineering,p.bone_id);
+  if(isNative(model))$('part-details').innerHTML+='<p class="quiet">Native X/Y/Z display envelope only; not a bone measurement.<br>Original source node '+p.source_node+' · preview node '+p.preview_node+' · '+p.triangle_count+' triangles<br>Source '+escape(model.source.sha256)+'<br>Preview '+escape(model.derivative.preview_sha256)+'</p>';
   applyTransforms();
 }
 function pick(event) {
+  if(state.loading)return;
   const rect=canvas.getBoundingClientRect(),point=new THREE.Vector2((event.clientX-rect.left)/rect.width*2-1,-(event.clientY-rect.top)/rect.height*2+1),ray=new THREE.Raycaster();ray.setFromCamera(point,camera);
   const hit=ray.intersectObjects(meshes.filter(m=>m.visible&&m.userData.part.region!=='envelope'),false)[0];if(!hit)return;
+  if(state.referenceCapture&&model.id==='NIH_PELVIS'){
+    try{const feature=data.native_references.landmark_packet.landmarks.find(p=>p.id===$('landmark-candidate').value),annotation=annotationFromHit(hit,feature,model);
+      referenceDraft.annotations=referenceDraft.annotations.filter(p=>p.landmark_id!==annotation.landmark_id);referenceDraft.annotations.push(annotation);
+      state.referenceCapture=false;$('capture-landmark').classList.remove('active');updateDraft();toast('Saved an unaccepted preview candidate. Original-surface review remains required.');
+    }catch(e){toast(e.message);}return;
+  }
   if(state.ruler){
     if(state.points.length===2){state.points=[];disposeGroup(rulerGroup);}
     state.points.push(hit.point.clone());const ball=new THREE.Mesh(new THREE.SphereGeometry(Math.max(state.height*.004,3),12,8),new THREE.MeshBasicMaterial({color:0xb66a48,depthTest:false}));ball.position.copy(hit.point);rulerGroup.add(ball);
-    if(state.points.length===2){const [a,b]=state.points;line(a,b,0xb66a48,rulerGroup);const distance=a.distanceTo(b);label(round(distance)+' mm',a.clone().add(b).multiplyScalar(.5),Math.max(state.height*.028,12),rulerGroup);toast('Surface-to-surface distance: '+round(distance)+' mm');}
+    if(state.points.length===2){const [a,b]=state.points;line(a,b,0xb66a48,rulerGroup);const distance=a.distanceTo(b);label(round(distance)+' mm',a.clone().add(b).multiplyScalar(.5),Math.max(state.height*.028,12),rulerGroup);toast((isNative(model)?'Unqualified preview distance: ':'Surface-to-surface distance: ')+round(distance)+' mm');}
     else toast('Choose the second surface point.');redraw=true;
   } else inspectPart(hit.object.name);
+}
+function updateDraft(){
+  if(!referenceDraft)return;
+  $('draft-count').textContent=referenceDraft.annotations.length+'/5 preview candidates';
+  $('draft-points').textContent=referenceDraft.annotations.map(p=>p.landmark_id+': ['+p.native_point_m.map(v=>round(v,6)).join(', ')+'] m · preview face '+p.face_index).join('\n');
+  if(!annotationGroup)return;disposeGroup(annotationGroup);
+  if(model?.id==='NIH_PELVIS'&&!state.loading)for(const p of referenceDraft.annotations){const ball=new THREE.Mesh(new THREE.SphereGeometry(1.5,12,8),new THREE.MeshBasicMaterial({color:0xb66a48,depthTest:false}));ball.position.fromArray(p.native_point_m).multiplyScalar(1000);annotationGroup.add(ball);}
+  redraw=true;
 }
 function wireControls() {
   $('height').oninput=()=>setHeight(Number($('height').value));$('height-number').onchange=()=>setHeight(Number($('height-number').value));
@@ -195,16 +262,32 @@ function wireControls() {
   $('focus-part').onclick=()=>{const m=meshes.find(x=>x.name===state.selected);if(!m){toast('Select a component first.');return;}const b=new THREE.Box3().setFromObject(m);cameraView(state.view,b.getCenter(new THREE.Vector3()),Math.max(...b.getSize(new THREE.Vector3()).toArray(),45)*2.5);};
   $('mat-wood').onclick=()=>setPalette('wood');$('mat-carbon').onclick=()=>setPalette('carbon');
   document.querySelectorAll('[data-view]').forEach(b=>b.onclick=()=>cameraView(b.dataset.view));
-  $('measure').onclick=()=>{state.ruler=!state.ruler;$('measure').classList.toggle('active',state.ruler);state.points=[];disposeGroup(rulerGroup);if(state.ruler)toast('Click two points on the frame to measure.');redraw=true;};
+  $('measure').onclick=()=>{state.referenceCapture=false;$('capture-landmark').classList.remove('active');state.ruler=!state.ruler;$('measure').classList.toggle('active',state.ruler);state.points=[];disposeGroup(rulerGroup);if(state.ruler)toast(isNative(model)?'Click two preview points. Distances are not qualified osteometry.':'Click two points on the frame to measure.');redraw=true;};
+  $('compare-reference').onclick=()=>selectModel(isNative(model)?'SOPHY_SCALE':comparisonModel);
+  $('capture-landmark').onclick=()=>{if(state.loading||!renderer)return;state.ruler=false;$('measure').classList.remove('active');state.points=[];disposeGroup(rulerGroup);state.referenceCapture=!state.referenceCapture;$('capture-landmark').classList.toggle('active',state.referenceCapture);if(state.referenceCapture)toast('Click the specified cortical surface for a draft point.');};
+  $('landmark-candidate').onchange=()=>{const p=data.native_references.landmark_packet.landmarks.find(p=>p.id===$('landmark-candidate').value);$('landmark-definition').textContent=p.definition+' '+p.review_rule;inspectPart(p.preview_mesh_names[0]);};
+  $('download-draft').onclick=()=>download(JSON.stringify(referenceDraft,null,2),'PHY-pelvis-preview-draft.json','application/json');
+  $('clear-draft').onclick=()=>{referenceDraft=emptyDraft(data.native_references);updateDraft();};
   $('export').onclick=exportModel;
 }
 function setHeight(value) { if(!model.height_mm)return;if(!Number.isFinite(value)||value<1400||value>1900){toast('Use a height from 1400 to 1900 mm.');$('height-number').value=round(state.height);return;}state.height=value;$('height').value=value;$('height-number').value=round(value);state.points=[];disposeGroup(rulerGroup);updateStats();applyTransforms();if(state.selected)inspectPart(state.selected); }
 function setPose(value) { if(!model.height_mm)return;state.pose=Math.max(0,Math.min(80,value));$('pose').value=state.pose;updatePoseLabel();state.points=[];disposeGroup(rulerGroup);applyTransforms(); }
-function setPalette(value) { state.palette=value;$('mat-wood').classList.toggle('active',value==='wood');$('mat-carbon').classList.toggle('active',value==='carbon');for(const mesh of meshes){mesh.material.color.setHex(palette[value][mesh.userData.part.material]??0xb0b5b0);}redraw=true; }
+function setPalette(value) { if(isNative(model))return;state.palette=value;$('mat-wood').classList.toggle('active',value==='wood');$('mat-carbon').classList.toggle('active',value==='carbon');for(const mesh of meshes){mesh.material.color.setHex(palette[value][mesh.userData.part.material]??0xb0b5b0);}redraw=true; }
 function exportGroup() {
   return makeExportGroup(root,meshes,state.boneOnly);
 }
 async function exportModel() {
+  if(isNative(model)){
+    const selectedModel=model,format=$('export-format').value;
+    try{
+      if(format==='stl'){toast('Native preview STL export is unavailable. Use the pinned GLB or draft JSON.');return;}
+      if(format==='glb')download(await previewBytes(selectedModel),selectedModel.derivative.preview_filename,'model/gltf-binary');
+      else download(JSON.stringify({reference_model:{...selectedModel,glb_base64:undefined},
+        review_state:{units:'m',frame:selectedModel.frame,display_conversion_mm_per_m:1000,canonical_transform:null,fabrication_released:false,build:data.build},
+        landmark_draft:selectedModel.id==='NIH_PELVIS'?referenceDraft:null,native_reference_evidence:data.native_references},null,2),'PHY-'+selectedModel.id+'-native-review.json','application/json');
+      toast('Exported pinned native reference / unaccepted review data.');
+    }catch(e){toast('Reference export blocked: '+e.message);}return;
+  }
   if(!renderer){toast('3D exports need WebGL. The maquette package remains available.');return;}
   const format=$('export-format').value,name='PHY-'+state.model+'-'+round(state.height??0,0)+'mm';
   const review={...state,points:[],units:'mm',fabrication_released:false,source_snapshot_sha256:data.reference.snapshot_sha256,build:data.build,notes:model.limitations};
@@ -238,6 +321,9 @@ function openModal(tab) {
   if(tab==='reference'){
     $('modal-title').textContent='Proportion reference';
     $('modal-content').innerHTML='<p>Arithmetic means of <b>92 women aged exactly 28</b> from ANSUR II. '+escape(ref.population)+'</p><p>The baseline retains the measured mean stature and span. The refinement uses shoulder −1%, waist −3%, and hip +2%. Marginal means are a design reference, not one real individual or an objective beauty standard.</p><p>Joint centers, head height, curved formers and the interpolated form envelope are proposed mechanical datums. External segment ratios are mapped to the measured span; they are not osteometric bone lengths.</p>'+htmlTable(['MEASUREMENT','MEAN / mm','SAMPLE SD / mm','n'],Object.entries(stats).map(([k,v])=>[k,round(v.mean_mm,3),round(v.sd_mm,3),v.n]))+'<p><a href="'+escape(ref.report_url)+'" target="_blank" rel="noopener">ANSUR II report</a> · <a href="'+escape(ref.data_url)+'" target="_blank" rel="noopener">Public data source</a></p><p class="small-note">Projected snapshot SHA-256: '+escape(ref.snapshot_sha256)+'</p>';
+  } else if(tab==='nih'){
+    $('modal-title').textContent='NIH native references and landmark review';
+    $('modal-content').innerHTML=nativeReferenceHtml(data);
   } else if(tab==='engineering'){
     $('modal-title').textContent='Engineering evidence';
     $('modal-content').innerHTML=engineeringHtml(data.engineering,data.build);
@@ -277,6 +363,10 @@ function openModal(tab) {
 }
 function closeModal(){$('modal-backdrop').classList.remove('open');lastFocus?.focus();}
 function wireResources(){
+  if(data.native_references){
+    for(const p of data.native_references.landmark_packet.landmarks)$('landmark-candidate').add(new Option(p.label,p.id));
+    const p=data.native_references.landmark_packet.landmarks[0];$('landmark-definition').textContent=p.definition+' '+p.review_rule;
+  }
   $('download-maquette').onclick=maquetteDownload;$('open-reference').onclick=()=>openModal('reference');$('open-build').onclick=()=>openModal('build');$('open-readiness').onclick=()=>openModal('readiness');$('open-bones').onclick=()=>openModal('bones');$('close-modal').onclick=closeModal;
   $('open-engineering').onclick=()=>openModal('engineering');
   $('build-stamp').textContent='Engineering baseline '+data.build.engineering_revision.slice(0,8)+' · package '+data.build.package_input_sha256.slice(0,12);
@@ -284,6 +374,7 @@ function wireResources(){
   document.addEventListener('keydown',e=>{if(!$('modal-backdrop').classList.contains('open'))return;if(e.key==='Escape')closeModal();if(e.key==='Tab'){const focusable=[...document.querySelector('.modal').querySelectorAll('button,a,input,select,[tabindex="0"]')].filter(x=>!x.disabled);const first=focusable[0],last=focusable.at(-1);if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}}});
 }
 window.PHY_STUDIO={getState:()=>({...state,points:state.points.map(p=>p.toArray()),modelParts:model?.parts.length,webgl:!!renderer}),selectModel,setHeight,setPose,setPalette,inspectPart,
+  referenceDraft:()=>referenceDraft?structuredClone(referenceDraft):null,
   boneAudit:()=>model?.bone_equivalence??null,visiblePartIds:()=>meshes.filter(m=>m.visible).map(m=>m.name),
   modelBounds:()=>root?new THREE.Box3().setFromObject(root).getSize(new THREE.Vector3()).toArray():null,
   projectPart:id=>{const mesh=meshes.find(x=>x.name===id);if(!mesh)return null;const c=new THREE.Box3().setFromObject(mesh).getCenter(new THREE.Vector3()).project(camera);const r=canvas.getBoundingClientRect();return [r.left+(c.x+1)*r.width/2,r.top+(1-c.y)*r.height/2];}};

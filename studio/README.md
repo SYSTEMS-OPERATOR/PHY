@@ -48,15 +48,15 @@ stapes loops. The midline hyoid is an open U below the jaw, without direct bone
 articulations. Their locations and shapes are provisional; soft-tissue suspension,
 hearing and swallowing mechanics remain unmodeled. All 206 adult inventory
 identities have individual proxies; no grouped or unrepresented identities remain.
-193 existing canonical source records are preserved; 13 facial records are missing.
+All 206 canonical source records are present. The earlier 193 records are preserved;
+the 13 facial identity additions retain unknown physical dimensions and interfaces.
 
 Use **Individual bone proxies only** to hide hardware, support rails, head form guides
 and envelopes. Search by `BONE_` ID or inspect the Bone coverage panel. Coupling
 visibility uses role metadata rather than a brass-material heuristic. The bone-only
 filter also governs STL/GLB export; GLB carries bone IDs and role/provenance extras.
 Skull and ear/hyoid GLB extras include their layout hashes, selected adjacency and
-explicit canonical source-record status; the inspector also shows missing skull
-source records. Ear extras distinguish temporal housing and non-bone endpoints;
+explicit canonical source-record status; the inspector shows explicit canonical source-record status. Ear extras distinguish temporal housing and non-bone endpoints;
 the hyoid identifies its unmodeled muscle/ligament support.
 JSON retains the complete original model/audit plus the active review/filter state.
 Other display-layer and isolate settings do not limit the exported complete frame.
@@ -73,6 +73,48 @@ Exports include the complete frame (form envelope and guides are separate), curr
 pose, scale and separation. STL is in the canonical X/Y/Z frame in millimeters;
 GLB uses glTF's Y-up frame in meters. JSON includes the original model plus the
 review state, preserving the distinction between source and exploration.
+
+## Engineering evidence and NASA references
+
+**Engineering** opens an offline audit of all 206 canonical identities. The current
+review baseline has 40 complete declared dimension maps, 28 improved partial maps
+and 128 traced additions from PHY-DIM-072. A complete declaration does not qualify
+anatomical geometry, working joints or fabrication. Record validation remains
+0/206; physical evidence is unmeasured and release is false.
+
+The component inspector separates the current display envelope from canonical
+millimeter declarations. Expand a traced field for its native mean and published
+SD, source revision, cohort/side, landmark definition, derivation, snapshot hashes,
+rights and limitations. Cohort SD is not a measurement-error bound or a machining
+tolerance. Older declarations without these field protocols remain explicitly
+identified; missing measurements stay unknown. Changing display height or pose
+never changes the evidence values.
+
+The **NASA** tab retains 52 printed motion pairs: 20 unsuited, 16 suited
+unpressurized and 16 suited pressurized, plus 11 external anthropometric
+comparisons. It retains all 17 source issues and original signs. Condition changes
+only select reference rows; they do not change Studio poses or mechanical limits.
+HIDH, OCHMO-HB-004 and Appendix E remain comparison/background sources. Human
+microgravity stature changes do not rescale the armature. Anatomical landmark
+axes and principal inertial axes require separate frames.
+
+`studio/evidence_baseline.json` pins the reviewed engineering revision, canonical
+records/source files, proxy snapshot and NASA/dimension catalogs. The exporter
+recomputes the existing engineering and dimension audits from fresh source records
+before writing evidence; it refuses a stale baseline or failed evidence custody.
+After an engineering change, explicitly review and repin the baseline instead of
+hand-editing a generated count. Cached audit reports are not inputs to Studio.
+
+The portable app and review JSON carry the evidence; the package also includes
+`ENGINEERING_EVIDENCE.json`, `NASA_POSITIONING_RANGES.json` and their manifest hashes.
+The footer shows the engineering baseline and package input fingerprint. The
+baseline revision names reviewed engineering data; source/bundle hashes identify
+this viewer build without timestamps or a self-referential Git HEAD. Source links
+open only when selected; evidence inspection needs no network or PDF acquisition.
+
+NIH originals and reduced previews remain in PHY-REF. Loading/registration of those
+meshes, canonical geometry changes and the sacrum–hemipelvis datum review are
+separate subsequent slices.
 
 ## Rebuild
 

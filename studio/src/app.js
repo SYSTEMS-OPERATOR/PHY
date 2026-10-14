@@ -3,11 +3,11 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { GLTFExporter } from 'three/addons/exporters/GLTFExporter.js';
 import { STLExporter } from 'three/addons/exporters/STLExporter.js';
 import { partVisible, partMatches, exportGroup as makeExportGroup } from './part_roles.js';
+import { escape, htmlTable, boneEvidenceHtml, engineeringHtml, nasaHtml, nasaMotionHtml, conditionLabels } from './evidence.js';
 
 const data = window.PHY_DATA;
 const $ = id => document.getElementById(id);
 const canvas = $('viewport'), stage = $('stage');
-const escape = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const round = (v,n=1) => Number(v).toFixed(n);
 const coord = v => new THREE.Vector3(v[0],v[2],-v[1]);
 const sourceMean = data.reference.statistics.stature.mean_mm;
@@ -25,7 +25,6 @@ function download(content,name,type='application/octet-stream') {
   const blob=content instanceof Blob ? content : new Blob([content],{type});
   const url=URL.createObjectURL(blob), a=document.createElement('a'); a.href=url;a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),5000);
 }
-function htmlTable(headers,rows) { return '<table><thead><tr>'+headers.map(x=>'<th>'+escape(x)+'</th>').join('')+'</tr></thead><tbody>'+rows.map(row=>'<tr>'+row.map(x=>'<td>'+escape(x)+'</td>').join('')+'</tr>').join('')+'</tbody></table>'; }
 function init() {
   try {
     renderer=new THREE.WebGLRenderer({canvas,antialias:true,alpha:true,preserveDrawingBuffer:true});
@@ -169,6 +168,7 @@ function inspectPart(id) {
   if(!p){$('part-details').innerHTML='<p class="quiet">Click the model to inspect a part, its dimensions, and its source.</p>';if(renderer)applyTransforms();return;}
   const dims=p.bounds_mm.max.map((v,i)=>(v-p.bounds_mm.min[i])*(model.height_mm?state.height/model.height_mm:1));
   $('part-details').innerHTML='<p><strong>'+escape(p.name)+'</strong><br>'+escape(p.id)+'</p>'+(p.role?'<p>Role: '+escape(p.role)+(p.bone_id?'<br>'+escape(p.bone_id)+' · dimensional fidelity unverified':p.grouped_bone_ids?'<br>'+p.grouped_bone_ids.length+' grouped identities · not individual bones':'')+'</p>':'')+(p.source_record_status?'<p class="quiet">Canonical source record '+escape(p.source_record_status)+'</p>':'')+'<p>'+dims.map(x=>round(x)).join(' × ')+' mm <span class="quiet">/ axis-aligned envelope</span></p><p class="quiet">'+escape(p.authority)+'<br>'+escape(p.source)+'</p>'+(p.center_distance_mm?'<p>Member center distance: '+round(p.center_distance_mm*(model.height_mm?state.height/model.height_mm:1))+' mm</p>':'');
+  if(p.bone_id)$('part-details').innerHTML+=boneEvidenceHtml(data.engineering,p.bone_id);
   applyTransforms();
 }
 function pick(event) {
@@ -207,9 +207,9 @@ function exportGroup() {
 async function exportModel() {
   if(!renderer){toast('3D exports need WebGL. The maquette package remains available.');return;}
   const format=$('export-format').value,name='PHY-'+state.model+'-'+round(state.height??0,0)+'mm';
-  const review={...state,points:[],units:'mm',fabrication_released:false,source_snapshot_sha256:data.reference.snapshot_sha256,notes:model.limitations};
+  const review={...state,points:[],units:'mm',fabrication_released:false,source_snapshot_sha256:data.reference.snapshot_sha256,build:data.build,notes:model.limitations};
   try{
-    if(format==='json'){download(JSON.stringify({model,review_state:review},null,2),name+'.json','application/json');}
+    if(format==='json'){download(JSON.stringify({model,review_state:review,engineering_evidence:data.engineering},null,2),name+'.json','application/json');}
     else{
       const group=exportGroup();group.userData=review;
       if(format==='stl'){group.rotateX(Math.PI/2);group.updateMatrixWorld(true);download(new STLExporter().parse(group,{binary:true}),name+'.stl','model/stl');}
@@ -238,6 +238,24 @@ function openModal(tab) {
   if(tab==='reference'){
     $('modal-title').textContent='Proportion reference';
     $('modal-content').innerHTML='<p>Arithmetic means of <b>92 women aged exactly 28</b> from ANSUR II. '+escape(ref.population)+'</p><p>The baseline retains the measured mean stature and span. The refinement uses shoulder −1%, waist −3%, and hip +2%. Marginal means are a design reference, not one real individual or an objective beauty standard.</p><p>Joint centers, head height, curved formers and the interpolated form envelope are proposed mechanical datums. External segment ratios are mapped to the measured span; they are not osteometric bone lengths.</p>'+htmlTable(['MEASUREMENT','MEAN / mm','SAMPLE SD / mm','n'],Object.entries(stats).map(([k,v])=>[k,round(v.mean_mm,3),round(v.sd_mm,3),v.n]))+'<p><a href="'+escape(ref.report_url)+'" target="_blank" rel="noopener">ANSUR II report</a> · <a href="'+escape(ref.data_url)+'" target="_blank" rel="noopener">Public data source</a></p><p class="small-note">Projected snapshot SHA-256: '+escape(ref.snapshot_sha256)+'</p>';
+  } else if(tab==='engineering'){
+    $('modal-title').textContent='Engineering evidence';
+    $('modal-content').innerHTML=engineeringHtml(data.engineering,data.build);
+    const selector=$('evidence-bone');
+    const selected=model.parts.find(p=>p.id===state.selected)?.bone_id;
+    if(selected)selector.value=selected;
+    selector.onchange=()=>$('evidence-details').innerHTML=boneEvidenceHtml(data.engineering,selector.value);
+    selector.onchange();
+  } else if(tab==='nasa'){
+    $('modal-title').textContent='NASA positioning and ranges';
+    $('modal-content').innerHTML=nasaHtml(data.engineering);
+    const selector=$('nasa-condition');
+    selector.onchange=()=>{
+      const condition=selector.value,count=data.engineering.nasa_counts.conditions[condition];
+      $('nasa-condition-count').textContent=conditionLabels[condition]+' · '+count+' motion pairs';
+      $('nasa-motion').innerHTML=nasaMotionHtml(data.engineering.nasa,condition);
+    };
+    selector.onchange();
   } else if(tab==='bones'){
     const body=model.bone_equivalence?model:data.models.find(m=>m.bone_equivalence),audit=body.bone_equivalence;
     $('modal-title').textContent='Bone equivalence / distribution';
@@ -254,11 +272,14 @@ function openModal(tab) {
     $('modal-title').textContent='Fabrication readiness';
     const a0=data.models.find(m=>m.id==='A0_R1');
     $('modal-content').innerHTML='<p>The Studio and whole-body form-study model are demonstrable. The maquette has reproducible cut geometry and assembly instructions. The full-scale armature has <b>no structural fabrication release or physical qualification</b>.</p>'+htmlTable(['DELIVERABLE','CURRENT STATE'],[['Female-28 reference assembly','Complete visual reference / explicit design proposals'],['Quarter-scale supported maquette','Cut/assembly package; physical build unmeasured'],['SOPHY canon 1.0.0','Kernel unchanged; scale comparison overlay only'],['A0-R1 shoulder','Shop-review candidate; release and bench evidence open'],['Whole-body functional armature','Mechanism integration and load qualification open']])+(a0?'<h3>A0-R1 release blockers</h3><p class="warning">The impact screen reaches 3.25 kN per-bearing reaction against the unverified 3.0 kN threshold. The current configuration is blocked for release.</p><ul>'+a0.limitations.slice(2).map(n=>'<li>'+escape(n)+'</li>').join('')+'</ul><p>Six load cases and five evidence packages remain unapproved. The 35-pose centerline screen is not a continuous swept-solid clearance proof.</p>':'<p>A0 geometry was omitted in this standard-library build.</p>')+'<h3>Current model assumptions</h3><ul>'+model.limitations.map(n=>'<li>'+escape(n)+'</li>').join('')+'</ul>';
+    $('modal-content').innerHTML+='<p>Canonical evidence: '+data.engineering.dimension_expansion.current_complete+'/206 complete declared maps; '+data.engineering.metrics.record_validation_pass.count+'/206 records pass the current validator. See Engineering for sources and unresolved fields.</p>';
   }
 }
 function closeModal(){$('modal-backdrop').classList.remove('open');lastFocus?.focus();}
 function wireResources(){
   $('download-maquette').onclick=maquetteDownload;$('open-reference').onclick=()=>openModal('reference');$('open-build').onclick=()=>openModal('build');$('open-readiness').onclick=()=>openModal('readiness');$('open-bones').onclick=()=>openModal('bones');$('close-modal').onclick=closeModal;
+  $('open-engineering').onclick=()=>openModal('engineering');
+  $('build-stamp').textContent='Engineering baseline '+data.build.engineering_revision.slice(0,8)+' · package '+data.build.package_input_sha256.slice(0,12);
   document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>openModal(b.dataset.tab));$('modal-backdrop').onclick=e=>{if(e.target===$('modal-backdrop'))closeModal();};
   document.addEventListener('keydown',e=>{if(!$('modal-backdrop').classList.contains('open'))return;if(e.key==='Escape')closeModal();if(e.key==='Tab'){const focusable=[...document.querySelector('.modal').querySelectorAll('button,a,input,select,[tabindex="0"]')].filter(x=>!x.disabled);const first=focusable[0],last=focusable.at(-1);if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}}});
 }

@@ -12,15 +12,34 @@ import hashlib
 import importlib.util
 import json
 import math
+import os
 from pathlib import Path
 import shutil
 import sys
+import tempfile
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from skeleton.visualization.studio_model import build_armature, reference_statistics, write_stl
 from skeleton.visualization.bone_equivalence import report_markdown
+from skeleton.visualization.studio_evidence import build_studio_evidence, studio_build_stamp
+
+
+def write_package_zip(output):
+    """Publish a closed, CRC-checked archive before replacing the prior package."""
+    with tempfile.TemporaryDirectory(prefix="phy-studio-package-", dir=output.parent) as folder:
+        staged = Path(folder) / "PHY-Studio-package.zip"
+        with zipfile.ZipFile(staged, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as archive:
+            for path in sorted(output.rglob("*")):
+                if path.is_file() and path.suffix != ".zip":
+                    info = zipfile.ZipInfo(str(path.relative_to(output)), date_time=(1980, 1, 1, 0, 0, 0))
+                    info.compress_type = zipfile.ZIP_DEFLATED
+                    archive.writestr(info, path.read_bytes())
+        with zipfile.ZipFile(staged) as archive:
+            if archive.testzip() is not None:
+                raise ValueError("Studio package CRC validation failed")
+        os.replace(staged, output / "PHY-Studio-package.zip")
 
 
 def load_module(name, path):
@@ -236,6 +255,10 @@ def export(output, include_a0=True):
     mean = build_armature(refinement=0)
     refined = build_armature()
     sophy = build_armature(height_mm=1676.4, span_equals_height=True)
+    evidence = build_studio_evidence(refined["parts"])
+    build = studio_build_stamp(evidence)
+    (output / "ENGINEERING_EVIDENCE.json").write_text(json.dumps(evidence, indent=2, sort_keys=True, allow_nan=False)+"\n")
+    (output / "NASA_POSITIONING_RANGES.json").write_text(json.dumps(evidence["nasa"], indent=2, sort_keys=True, allow_nan=False)+"\n")
     audit = refined["bone_equivalence"]
     (output / "BONE_EQUIVALENCE.json").write_text(json.dumps(audit, indent=2)+"\n")
     (output / "BONE_EQUIVALENCE.md").write_text(report_markdown(audit), encoding="utf-8")
@@ -348,6 +371,7 @@ def export(output, include_a0=True):
         assets.extend([path, stl])
     maquette_manifest = maquette(refined, output / "maquette")
     data = {"version": "1.0.0", "models": models, "reference": reference,
+            "engineering": evidence, "build": build,
             "maquette": maquette_manifest,
             "maquette_files": {str(p.relative_to(output / "maquette")): p.read_text(encoding="utf-8")
                                for p in sorted((output / "maquette").rglob("*")) if p.is_file()},
@@ -396,16 +420,13 @@ def export(output, include_a0=True):
                "Pinned source CSV SHA-256: `"+reference["provenance"]["source_catalog"]+"` (catalog); projected subset hash in references/provenance.json."]
     (output / "REFERENCE.md").write_text("\n".join(report)+"\n")
     manifest = {"version": "1.0.0", "reference_sha256": reference["snapshot_sha256"],
+                "build": build,
                 "models": [{"id": m["id"], "parts": len(m["parts"]), "triangles": sum(len(p["faces"]) for p in m["parts"]), "fabrication_released": m["fabrication_released"]} for m in models],
                 "maquette_cut_parts": maquette_manifest["cut_parts"],
                 "full_scale_structural_release": False,
                 "files": {str(p.relative_to(output)): hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(output.rglob("*")) if p.is_file() and p.name not in ("manifest.json", "PHY-Studio-package.zip")}}
     (output / "manifest.json").write_text(json.dumps(manifest, indent=2)+"\n")
-    with zipfile.ZipFile(output / "PHY-Studio-package.zip", "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as archive:
-        for path in sorted(output.rglob("*")):
-            if path.is_file() and path.suffix != ".zip":
-                info = zipfile.ZipInfo(str(path.relative_to(output)), date_time=(1980, 1, 1, 0, 0, 0)); info.compress_type = zipfile.ZIP_DEFLATED
-                archive.writestr(info, path.read_bytes())
+    write_package_zip(output)
     print(f"PHY Studio: {len(models)} models, {sum(len(m['parts']) for m in models)} viewable parts; {maquette_manifest['cut_parts']} maquette cuts.")
     return manifest
 

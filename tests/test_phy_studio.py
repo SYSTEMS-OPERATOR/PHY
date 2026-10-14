@@ -8,6 +8,7 @@ import tempfile
 import unittest
 from unittest.mock import patch
 import xml.etree.ElementTree as ET
+import zipfile
 
 from skeleton.visualization import studio_model as sm
 
@@ -98,6 +99,24 @@ class PHYStudioTest(unittest.TestCase):
                 self.assertIsNotNone(root.find("{http://www.w3.org/2000/svg}g[@id='CUT']"))
             self.assertEqual(len({r["id"] for r in result["bill_of_materials"]}), len(result["bill_of_materials"]))
             self.assertIn("not a load-bearing", (path / "BUILD.md").read_text())
+
+    def test_package_archive_replaces_only_after_crc_validation(self):
+        with tempfile.TemporaryDirectory() as folder:
+            output = Path(folder) / "package"
+            output.mkdir()
+            (output / "evidence.json").write_text('{"unknown":null}')
+            exporter.write_package_zip(output)
+            package = output / "PHY-Studio-package.zip"
+            good = package.read_bytes()
+            with zipfile.ZipFile(package) as archive:
+                self.assertIsNone(archive.testzip())
+                self.assertEqual(archive.read("evidence.json"), (output / "evidence.json").read_bytes())
+            (output / "evidence.json").write_text('{"changed":true}')
+            with patch.object(zipfile.ZipFile, "testzip", return_value="evidence.json"):
+                with self.assertRaisesRegex(ValueError, "CRC validation failed"):
+                    exporter.write_package_zip(output)
+            self.assertEqual(package.read_bytes(), good)
+            self.assertEqual(list(Path(folder).glob("phy-studio-package-*")), [])
 
     @unittest.skipUnless(importlib.util.find_spec("cadquery"), "optional CadQuery unavailable")
     def test_a0_viewer_uses_existing_exact_located_geometry(self):

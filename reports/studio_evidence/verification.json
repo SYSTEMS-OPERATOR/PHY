@@ -1,0 +1,70 @@
+{
+  "baseline_revision": "c3e260cddf022f9acec1dfa457efeeb50f4750fc",
+  "full_local_tests": {
+    "passed": 305,
+    "skipped": 5,
+    "subtests_passed": 1147,
+    "warnings": 328
+  },
+  "browser": {
+    "status": "passed",
+    "browserErrors": [],
+    "stlTriangles": 53672,
+    "stlHeightMm": 1700,
+    "glbMeshes": 228,
+    "boneOnlyMeshes": 206,
+    "mobileWidth": 390
+  },
+  "preserved_payloads": [
+    "f28_mean.json",
+    "EAR_HYOID_PROXY_LAYOUT.md",
+    "CORE_PROXY_LAYOUT.md",
+    "BONE_EQUIVALENCE.md",
+    "sophy_scale.json",
+    "SKULL_PROXY_LAYOUT.md",
+    "f28_refined.stl",
+    "f28_mean.stl",
+    "REFERENCE.md",
+    "BONE_EQUIVALENCE.json",
+    "FOOT_PROXY_LAYOUT.md",
+    "THIRD_PARTY_NOTICES.txt",
+    "sophy_scale.stl",
+    "HAND_PROXY_LAYOUT.md",
+    "f28_refined.json",
+    "maquette/assembly-stencil.svg",
+    "maquette/cut-sheet-1.svg",
+    "maquette/BOM.csv",
+    "maquette/manifest.json",
+    "maquette/BUILD.md",
+    "maquette/cut-sheet-2.svg"
+  ],
+  "build": {
+    "engineering_revision": "c3e260cddf022f9acec1dfa457efeeb50f4750fc",
+    "evidence_input_sha256": "62779495f35a5af02db4ee917005b4f8fb0e69925bb842f3374d74247041b6a3",
+    "package_input_sha256": "f6ab61fa1ddeebe7037d49c15cdd9c4bafb15549c5f153309e3938bc0275a4b9",
+    "inputs": {
+      "bin/export_phy_studio.py": "b5d16c5a709cf403dd056d4c955561ed999d5fb1284be65058b259ab0bfb2f29",
+      "skeleton/visualization/studio_evidence.py": "2dc046d1f28083260f8bf3b308dc6aa9df78ff99828d9a33b4f34f1bb18da880",
+      "studio/src/app.js": "f366e27c09e16602689be12e9157c25b6dc63a4d10668a7f43b274f5f8b2c364",
+      "studio/src/evidence.js": "317a699775d810eaeb76c9a7ea934c1bbc7671cbf31a1d3fc8df038e9b7c9a7c",
+      "studio/src/index.html": "e19e66000c170d37017870de47020e0547f89537d36f37ff21c107cce11366f5",
+      "studio/src/part_roles.js": "0aa9c272e6a49935b88b6329fbd7509931d2b8638cb3ffec84c1188add8fd3d6",
+      "studio/app.bundle.js": "b14a0a8993850162cff1a975e50ed1b14929f87efaa818bbe508cf2777769529",
+      "studio/build.mjs": "d0233d5de46dd99eaa6b5bafa1c5423a7cf7317efabbe3b20a7544a53a8b7f0d",
+      "studio/package-lock.json": "243e7753d556e0550f1b2421b34555b64fd2cf84cff84152bd44171e9b041b09",
+      "engineering_evidence": "32e9e26755b6e967329b968983f9b928aee3a2af2ecc83feccd210cbaf5035ff"
+    }
+  },
+  "zip": {
+    "entries": 25,
+    "size_bytes": 6062765,
+    "sha256": "bcbcf0e81f125dc1038a9ce6cfb6f2caca00a99f875948b50923f20273088319",
+    "crc_check": "passed"
+  },
+  "preview_sha256": {
+    "mobile-engineering.png": "5e3fbebac7ade6ad038c18424fa4cbd37b12f30809882bcec9403e19ce1a13e3",
+    "engineering.png": "738eb65d11a1e86f955309562946270b97535584862eb3fea0b43f1fd8512da7",
+    "nasa.png": "8a4888cc3519bdf05f00bef6f5c7806738d65a1cea2193a6e8faff6a4a597b72"
+  },
+  "fabrication_released": false
+}

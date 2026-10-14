@@ -1,0 +1,837 @@
+{
+  "fabrication_released": false,
+  "limitations": [
+    "Checks source table transcription, units and selected cohort columns.",
+    "Does not validate study sampling, donor registration, biological truth, shape or fabrication.",
+    "Rejected native rows remain rejected despite matching the printed publication."
+  ],
+  "reviewed_on": "2026-10-14",
+  "sources": [
+    {
+      "comparisons": [
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "maximum_axial_length"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "body_width"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "lateral_wall_height"
+        }
+      ],
+      "locator": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11116927/",
+      "method": "Independent female column extraction; compare native mean and SD exactly.",
+      "native_fact_sha256": "fd826293dab2818708d245d187cc6a1666d17286700ece6d3423766b52d7612f",
+      "numeric_reverification_pass": true,
+      "retrieved_response_sha256": "49475c71b81986a27e52cc41ea1440f90bd20401ab31a4768e7e9a3ce7ef24e0",
+      "source_id": "calcaneus_ct_2024"
+    },
+    {
+      "comparisons": [
+        {
+          "admissible": false,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "C2HT"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "C3HT"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "C4HT"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "C5HT"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "C6HT"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "C7HT"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "C1AP"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "C2AP"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "C3AP"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "C4AP"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "C5AP"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "C6AP"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "C7AP"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "C1TR"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "C2TR"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "C3TR"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "C4TR"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "C5TR"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "C6TR"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "C7TR"
+        }
+      ],
+      "locator": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8354927/",
+      "method": "Independent female column extraction; compare native mean and SD exactly.",
+      "native_fact_sha256": "d7b02de31e4c96f0f7195f39525ce85b7c76ae5ce6e537f129a180fe29c2a6f4",
+      "numeric_reverification_pass": true,
+      "retrieved_response_sha256": "8fa9e4e24b382bd4727c794859a322dabcb7cd28e74cee0267041be6304a0e69",
+      "source_id": "cervical_ct_2021"
+    },
+    {
+      "comparisons": [
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "L1_height"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "L1_upper_ap"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "L1_upper_width"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "L1_lower_ap"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "L1_lower_width"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "L2_height"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "L2_upper_ap"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "L2_upper_width"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "L2_lower_ap"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "L2_lower_width"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "L3_height"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "L3_upper_ap"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "L3_upper_width"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "L3_lower_ap"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "L3_lower_width"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "L4_height"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "L4_upper_ap"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "L4_upper_width"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "L4_lower_ap"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "L4_lower_width"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "L5_height"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "L5_upper_ap"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "L5_upper_width"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "L5_lower_ap"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "L5_lower_width"
+        }
+      ],
+      "locator": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8917002/",
+      "method": "Independent female column extraction; compare native mean and SD exactly.",
+      "native_fact_sha256": "1d4658332c81ec2c8242dbf9526b220f26d06c3915154a205c91233dffa3dbe3",
+      "numeric_reverification_pass": true,
+      "retrieved_response_sha256": "d2cab89a91cda90d3d63d2b1a5bdf3c9db36a39cf9feb4c0ffa7c0727979d920",
+      "source_id": "lumbar_ct_2022"
+    },
+    {
+      "comparisons": [
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "PH_pooled"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "PW_pooled"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "PT_left"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "PT_right"
+        }
+      ],
+      "locator": "https://sajs.co.za/article/download/4002/5775",
+      "method": "Independent female column extraction; compare native mean and SD exactly.",
+      "native_fact_sha256": "f50fa5058f483aa31c6c4db5dacb4e644a4eee9512c60f2834307e3c970252b7",
+      "numeric_reverification_pass": true,
+      "retrieved_response_sha256": "2f8ca934651b3c7282344b40231b5f82add0d6b27b89205e522a554a60652fc6",
+      "source_id": "patella_caliper_2013"
+    },
+    {
+      "comparisons": [
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "TVC_L"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "TVA_L"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "MMxD_L"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "MMnD_L"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "TVC_R"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "TVA_R"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "MMxD_R"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "MMnD_R"
+        }
+      ],
+      "locator": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9005670/",
+      "method": "Independent female column extraction; compare native mean and SD exactly.",
+      "native_fact_sha256": "8e5a299f7999b0e2b8921f035d607e0bba4317e795680d5e2283623e924e1a27",
+      "numeric_reverification_pass": true,
+      "retrieved_response_sha256": "42164751f2efb5c97911472a1e22cdb6ddf2ef5a19de69d5826852930aca48c6",
+      "source_id": "rib1_caliper_2022"
+    },
+    {
+      "comparisons": [
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "Length_L"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "Width_L"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "Height_L"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "Length_R"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "Width_R"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "Height_R"
+        }
+      ],
+      "locator": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6584390/",
+      "method": "Independent female column extraction; compare native mean and SD exactly.",
+      "native_fact_sha256": "f8c59055f10512a0b0f9d48788821364ca5289bf8bcbb27b5fe8032db29e7658",
+      "numeric_reverification_pass": true,
+      "retrieved_response_sha256": "d6e05545cc571d41a1d4a7ee0a3f23e81f71f2303993b5cb01fe0d83ae7e6d6b",
+      "source_id": "talus_ct_2016"
+    },
+    {
+      "comparisons": [
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "T1_VBHa"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "T1_VBHp"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "T2_VBHa"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "T2_VBHp"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "T3_VBHa"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "T3_VBHp"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "T4_VBHa"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "T4_VBHp"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "T5_VBHa"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "T5_VBHp"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "T6_VBHa"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "T6_VBHp"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "T7_VBHa"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "T7_VBHp"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "T8_VBHa"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "T8_VBHp"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "T9_VBHa"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "T9_VBHp"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "T10_VBHa"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "T10_VBHp"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "T11_VBHa"
+        },
+        {
+          "admissible": false,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "T11_VBHp"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "T12_VBHa"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "T12_VBHp"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "T1_VBWs"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "T1_VBWm"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "T1_VBWi"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "T2_VBWs"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "T2_VBWm"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "T2_VBWi"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "T3_VBWs"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "T3_VBWm"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "T3_VBWi"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "T4_VBWs"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "T4_VBWm"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "T4_VBWi"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "T5_VBWs"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "T5_VBWm"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "T5_VBWi"
+        },
+        {
+          "admissible": false,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "T6_VBWs"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "T6_VBWm"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "T6_VBWi"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "T7_VBWs"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "T7_VBWm"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "T7_VBWi"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "T8_VBWs"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "T8_VBWm"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "T8_VBWi"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "T9_VBWs"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "T9_VBWm"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "T9_VBWi"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "T10_VBWs"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "T10_VBWm"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "T10_VBWi"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "T11_VBWs"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "T11_VBWm"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "T11_VBWi"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "T12_VBWs"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "T12_VBWm"
+        },
+        {
+          "admissible": true,
+          "mean_sd_match": true,
+          "native_units": "mm",
+          "parameter": "T12_VBWi"
+        }
+      ],
+      "locator": "https://www.asianspinejournal.org/upload/pdf/asj-5-20.pdf",
+      "method": "Independent female column extraction; compare native mean and SD exactly.",
+      "native_fact_sha256": "21ea5530a035524ea2fd8b41a274f954fcf751ec0b88e5b44d4c72d672fd8d89",
+      "numeric_reverification_pass": true,
+      "retrieved_response_sha256": "a0acf52435e429df5ca92d250463f38c97c3708406e854296dd8620c5280cc5e",
+      "source_id": "thoracic_caliper_2011"
+    }
+  ]
+}

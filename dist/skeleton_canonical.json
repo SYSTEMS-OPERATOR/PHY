@@ -9891,7 +9891,10 @@
     },
     "dimensions": {
       "body_anterior_height_mm": 14.12,
+      "body_lower_width_mm": 26.92,
+      "body_mid_width_mm": 23.04,
       "body_posterior_height_mm": 14.63,
+      "body_upper_width_mm": 23.75,
       "length_mm": null,
       "thickness_mm": null,
       "width_mm": null
@@ -9960,7 +9963,10 @@
     },
     "dimensions": {
       "body_anterior_height_mm": 19.78,
+      "body_lower_width_mm": 31.63,
+      "body_mid_width_mm": 27.07,
       "body_posterior_height_mm": 20.19,
+      "body_upper_width_mm": 27.97,
       "length_mm": null,
       "thickness_mm": null,
       "width_mm": null
@@ -10029,6 +10035,9 @@
     },
     "dimensions": {
       "body_anterior_height_mm": 20.96,
+      "body_lower_width_mm": 34.37,
+      "body_mid_width_mm": 29.76,
+      "body_upper_width_mm": 31.0,
       "length_mm": null,
       "thickness_mm": null,
       "width_mm": null
@@ -10098,7 +10107,10 @@
     },
     "dimensions": {
       "body_anterior_height_mm": 21.83,
+      "body_lower_width_mm": 37.67,
+      "body_mid_width_mm": 32.91,
       "body_posterior_height_mm": 29.35,
+      "body_upper_width_mm": 33.99,
       "length_mm": null,
       "thickness_mm": null,
       "width_mm": null
@@ -10167,7 +10179,10 @@
     },
     "dimensions": {
       "body_anterior_height_mm": 15.25,
+      "body_lower_width_mm": 26.83,
+      "body_mid_width_mm": 23.16,
       "body_posterior_height_mm": 15.47,
+      "body_upper_width_mm": 23.6,
       "length_mm": null,
       "thickness_mm": null,
       "width_mm": null
@@ -10236,7 +10251,10 @@
     },
     "dimensions": {
       "body_anterior_height_mm": 15.98,
+      "body_lower_width_mm": 25.35,
+      "body_mid_width_mm": 22.9,
       "body_posterior_height_mm": 16.26,
+      "body_upper_width_mm": 23.4,
       "length_mm": null,
       "thickness_mm": null,
       "width_mm": null
@@ -10305,7 +10323,10 @@
     },
     "dimensions": {
       "body_anterior_height_mm": 16.49,
+      "body_lower_width_mm": 25.25,
+      "body_mid_width_mm": 22.57,
       "body_posterior_height_mm": 16.58,
+      "body_upper_width_mm": 23.03,
       "length_mm": null,
       "thickness_mm": null,
       "width_mm": null
@@ -10374,7 +10395,10 @@
     },
     "dimensions": {
       "body_anterior_height_mm": 16.41,
+      "body_lower_width_mm": 24.6,
+      "body_mid_width_mm": 22.22,
       "body_posterior_height_mm": 17.64,
+      "body_upper_width_mm": 23.21,
       "length_mm": null,
       "thickness_mm": null,
       "width_mm": null
@@ -10443,6 +10467,8 @@
     },
     "dimensions": {
       "body_anterior_height_mm": 16.95,
+      "body_lower_width_mm": 25.33,
+      "body_mid_width_mm": 22.58,
       "body_posterior_height_mm": 18.16,
       "length_mm": null,
       "thickness_mm": null,
@@ -10512,7 +10538,10 @@
     },
     "dimensions": {
       "body_anterior_height_mm": 16.82,
+      "body_lower_width_mm": 26.84,
+      "body_mid_width_mm": 24.04,
       "body_posterior_height_mm": 18.38,
+      "body_upper_width_mm": 25.07,
       "length_mm": null,
       "thickness_mm": null,
       "width_mm": null
@@ -10581,7 +10610,10 @@
     },
     "dimensions": {
       "body_anterior_height_mm": 18.46,
+      "body_lower_width_mm": 27.42,
+      "body_mid_width_mm": 24.88,
       "body_posterior_height_mm": 18.8,
+      "body_upper_width_mm": 25.97,
       "length_mm": null,
       "thickness_mm": null,
       "width_mm": null
@@ -10650,7 +10682,10 @@
     },
     "dimensions": {
       "body_anterior_height_mm": 19.35,
+      "body_lower_width_mm": 29.1,
+      "body_mid_width_mm": 25.31,
       "body_posterior_height_mm": 19.49,
+      "body_upper_width_mm": 26.81,
       "length_mm": null,
       "thickness_mm": null,
       "width_mm": null

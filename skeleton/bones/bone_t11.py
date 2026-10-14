@@ -8,6 +8,9 @@ bone = BoneSpec(
     articulations = [],
     # PHY-DIM-072: unscaled study statistics; whole-bone unknowns remain null.
     dimensions = {
+        'body_upper_width_mm': 31.0,
+        'body_mid_width_mm': 29.76,
+        'body_lower_width_mm': 34.37,
         'body_anterior_height_mm': 20.96,
         'length_mm': None,
         'thickness_mm': None,
@@ -24,6 +27,9 @@ bone = BoneSpec(
     physics = {"mass_kg": None},
     references = ['https://www.asianspinejournal.org/upload/pdf/asj-5-20.pdf', 'references/dim072/catalog.json#/candidates/6'],
     metric_sources = {
+        'body_upper_width_mm': 'references/dim072/catalog.json#/candidates/6/fields/body_upper_width_mm',
+        'body_mid_width_mm': 'references/dim072/catalog.json#/candidates/6/fields/body_mid_width_mm',
+        'body_lower_width_mm': 'references/dim072/catalog.json#/candidates/6/fields/body_lower_width_mm',
         'body_anterior_height_mm': 'references/dim072/catalog.json#/candidates/6/fields/body_anterior_height_mm',
     },
     manufacturing_notes = ['Source-backed reference spans only; no registration to SOPHY, qualified surface, material, joint or mounting interface. See dimension evidence catalog.', 'Published T11 posterior height quarantined; no corrected value is inferred.', 'Endplate heights do not qualify whole vertebral dimensions, surface shape or articulation.'],

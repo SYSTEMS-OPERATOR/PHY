@@ -2,7 +2,7 @@
 
 **Result: 40/206 complete declared maps; target 72 is not met.**
 
-The pinned baseline has 36 complete maps. Added 4 complete maps and improved 28 partial maps with 93 traceable fields. Remaining shortfall: 32 maps.
+The pinned baseline has 36 complete maps. Added 4 complete maps and improved 28 partial maps with 128 traceable fields. Remaining shortfall: 32 maps.
 
 Coverage counts finite declarations. Source-backed fields retain study scope, cohort and limitations. No numerical data is supplied by Studio proxies, external anthropometric subtraction, uniform stature scaling or rejected references.
 
@@ -17,18 +17,18 @@ Current full record validation passes: 0/206. No geometry/fabrication qualificat
 | 3 | BONE_L3 | spine | 5 | no | length_mm, thickness_mm, width_mm | lumbar_ct_2022 |
 | 4 | BONE_L2 | spine | 5 | no | length_mm, thickness_mm, width_mm | lumbar_ct_2022 |
 | 5 | BONE_L1 | spine | 5 | no | length_mm, thickness_mm, width_mm | lumbar_ct_2022 |
-| 6 | BONE_T12 | spine | 2 | no | length_mm, thickness_mm, width_mm | thoracic_caliper_2011 |
-| 7 | BONE_T11 | spine | 1 | no | length_mm, thickness_mm, width_mm | thoracic_caliper_2011 |
-| 8 | BONE_T10 | spine | 2 | no | length_mm, thickness_mm, width_mm | thoracic_caliper_2011 |
-| 9 | BONE_T9 | spine | 2 | no | length_mm, thickness_mm, width_mm | thoracic_caliper_2011 |
-| 10 | BONE_T8 | spine | 2 | no | length_mm, thickness_mm, width_mm | thoracic_caliper_2011 |
-| 11 | BONE_T7 | spine | 2 | no | length_mm, thickness_mm, width_mm | thoracic_caliper_2011 |
-| 12 | BONE_T6 | spine | 2 | no | length_mm, thickness_mm, width_mm | thoracic_caliper_2011 |
-| 13 | BONE_T5 | spine | 2 | no | length_mm, thickness_mm, width_mm | thoracic_caliper_2011 |
-| 14 | BONE_T4 | spine | 2 | no | length_mm, thickness_mm, width_mm | thoracic_caliper_2011 |
-| 15 | BONE_T3 | spine | 2 | no | length_mm, thickness_mm, width_mm | thoracic_caliper_2011 |
-| 16 | BONE_T2 | spine | 2 | no | length_mm, thickness_mm, width_mm | thoracic_caliper_2011 |
-| 17 | BONE_T1 | spine | 2 | no | length_mm, thickness_mm, width_mm | thoracic_caliper_2011 |
+| 6 | BONE_T12 | spine | 5 | no | length_mm, thickness_mm, width_mm | thoracic_caliper_2011 |
+| 7 | BONE_T11 | spine | 4 | no | length_mm, thickness_mm, width_mm | thoracic_caliper_2011 |
+| 8 | BONE_T10 | spine | 5 | no | length_mm, thickness_mm, width_mm | thoracic_caliper_2011 |
+| 9 | BONE_T9 | spine | 5 | no | length_mm, thickness_mm, width_mm | thoracic_caliper_2011 |
+| 10 | BONE_T8 | spine | 5 | no | length_mm, thickness_mm, width_mm | thoracic_caliper_2011 |
+| 11 | BONE_T7 | spine | 5 | no | length_mm, thickness_mm, width_mm | thoracic_caliper_2011 |
+| 12 | BONE_T6 | spine | 4 | no | length_mm, thickness_mm, width_mm | thoracic_caliper_2011 |
+| 13 | BONE_T5 | spine | 5 | no | length_mm, thickness_mm, width_mm | thoracic_caliper_2011 |
+| 14 | BONE_T4 | spine | 5 | no | length_mm, thickness_mm, width_mm | thoracic_caliper_2011 |
+| 15 | BONE_T3 | spine | 5 | no | length_mm, thickness_mm, width_mm | thoracic_caliper_2011 |
+| 16 | BONE_T2 | spine | 5 | no | length_mm, thickness_mm, width_mm | thoracic_caliper_2011 |
+| 17 | BONE_T1 | spine | 5 | no | length_mm, thickness_mm, width_mm | thoracic_caliper_2011 |
 | 18 | BONE_C7 | spine | 3 | no | length_mm, thickness_mm, width_mm | cervical_ct_2021 |
 | 19 | BONE_C6 | spine | 3 | no | length_mm, thickness_mm, width_mm | cervical_ct_2021 |
 | 20 | BONE_C5 | spine | 3 | no | length_mm, thickness_mm, width_mm | cervical_ct_2021 |
@@ -81,28 +81,63 @@ Native factual extracts remain under references/dim072. Every applied value uses
 | BONE_L1 | body_upper_ap_mm | None | 31.51 | lumbar_ct_2022 / L1_upper_ap |
 | BONE_L1 | body_upper_width_mm | None | 42.73 | lumbar_ct_2022 / L1_upper_width |
 | BONE_T12 | body_anterior_height_mm | None | 21.83 | thoracic_caliper_2011 / T12_VBHa |
+| BONE_T12 | body_lower_width_mm | None | 37.67 | thoracic_caliper_2011 / T12_VBWi |
+| BONE_T12 | body_mid_width_mm | None | 32.91 | thoracic_caliper_2011 / T12_VBWm |
 | BONE_T12 | body_posterior_height_mm | None | 29.35 | thoracic_caliper_2011 / T12_VBHp |
+| BONE_T12 | body_upper_width_mm | None | 33.99 | thoracic_caliper_2011 / T12_VBWs |
 | BONE_T11 | body_anterior_height_mm | None | 20.96 | thoracic_caliper_2011 / T11_VBHa |
+| BONE_T11 | body_lower_width_mm | None | 34.37 | thoracic_caliper_2011 / T11_VBWi |
+| BONE_T11 | body_mid_width_mm | None | 29.76 | thoracic_caliper_2011 / T11_VBWm |
+| BONE_T11 | body_upper_width_mm | None | 31 | thoracic_caliper_2011 / T11_VBWs |
 | BONE_T10 | body_anterior_height_mm | None | 19.78 | thoracic_caliper_2011 / T10_VBHa |
+| BONE_T10 | body_lower_width_mm | None | 31.63 | thoracic_caliper_2011 / T10_VBWi |
+| BONE_T10 | body_mid_width_mm | None | 27.07 | thoracic_caliper_2011 / T10_VBWm |
 | BONE_T10 | body_posterior_height_mm | None | 20.19 | thoracic_caliper_2011 / T10_VBHp |
+| BONE_T10 | body_upper_width_mm | None | 27.97 | thoracic_caliper_2011 / T10_VBWs |
 | BONE_T9 | body_anterior_height_mm | None | 19.35 | thoracic_caliper_2011 / T9_VBHa |
+| BONE_T9 | body_lower_width_mm | None | 29.1 | thoracic_caliper_2011 / T9_VBWi |
+| BONE_T9 | body_mid_width_mm | None | 25.31 | thoracic_caliper_2011 / T9_VBWm |
 | BONE_T9 | body_posterior_height_mm | None | 19.49 | thoracic_caliper_2011 / T9_VBHp |
+| BONE_T9 | body_upper_width_mm | None | 26.81 | thoracic_caliper_2011 / T9_VBWs |
 | BONE_T8 | body_anterior_height_mm | None | 18.46 | thoracic_caliper_2011 / T8_VBHa |
+| BONE_T8 | body_lower_width_mm | None | 27.42 | thoracic_caliper_2011 / T8_VBWi |
+| BONE_T8 | body_mid_width_mm | None | 24.88 | thoracic_caliper_2011 / T8_VBWm |
 | BONE_T8 | body_posterior_height_mm | None | 18.8 | thoracic_caliper_2011 / T8_VBHp |
+| BONE_T8 | body_upper_width_mm | None | 25.97 | thoracic_caliper_2011 / T8_VBWs |
 | BONE_T7 | body_anterior_height_mm | None | 16.82 | thoracic_caliper_2011 / T7_VBHa |
+| BONE_T7 | body_lower_width_mm | None | 26.84 | thoracic_caliper_2011 / T7_VBWi |
+| BONE_T7 | body_mid_width_mm | None | 24.04 | thoracic_caliper_2011 / T7_VBWm |
 | BONE_T7 | body_posterior_height_mm | None | 18.38 | thoracic_caliper_2011 / T7_VBHp |
+| BONE_T7 | body_upper_width_mm | None | 25.07 | thoracic_caliper_2011 / T7_VBWs |
 | BONE_T6 | body_anterior_height_mm | None | 16.95 | thoracic_caliper_2011 / T6_VBHa |
+| BONE_T6 | body_lower_width_mm | None | 25.33 | thoracic_caliper_2011 / T6_VBWi |
+| BONE_T6 | body_mid_width_mm | None | 22.58 | thoracic_caliper_2011 / T6_VBWm |
 | BONE_T6 | body_posterior_height_mm | None | 18.16 | thoracic_caliper_2011 / T6_VBHp |
 | BONE_T5 | body_anterior_height_mm | None | 16.41 | thoracic_caliper_2011 / T5_VBHa |
+| BONE_T5 | body_lower_width_mm | None | 24.6 | thoracic_caliper_2011 / T5_VBWi |
+| BONE_T5 | body_mid_width_mm | None | 22.22 | thoracic_caliper_2011 / T5_VBWm |
 | BONE_T5 | body_posterior_height_mm | None | 17.64 | thoracic_caliper_2011 / T5_VBHp |
+| BONE_T5 | body_upper_width_mm | None | 23.21 | thoracic_caliper_2011 / T5_VBWs |
 | BONE_T4 | body_anterior_height_mm | None | 16.49 | thoracic_caliper_2011 / T4_VBHa |
+| BONE_T4 | body_lower_width_mm | None | 25.25 | thoracic_caliper_2011 / T4_VBWi |
+| BONE_T4 | body_mid_width_mm | None | 22.57 | thoracic_caliper_2011 / T4_VBWm |
 | BONE_T4 | body_posterior_height_mm | None | 16.58 | thoracic_caliper_2011 / T4_VBHp |
+| BONE_T4 | body_upper_width_mm | None | 23.03 | thoracic_caliper_2011 / T4_VBWs |
 | BONE_T3 | body_anterior_height_mm | None | 15.98 | thoracic_caliper_2011 / T3_VBHa |
+| BONE_T3 | body_lower_width_mm | None | 25.35 | thoracic_caliper_2011 / T3_VBWi |
+| BONE_T3 | body_mid_width_mm | None | 22.9 | thoracic_caliper_2011 / T3_VBWm |
 | BONE_T3 | body_posterior_height_mm | None | 16.26 | thoracic_caliper_2011 / T3_VBHp |
+| BONE_T3 | body_upper_width_mm | None | 23.4 | thoracic_caliper_2011 / T3_VBWs |
 | BONE_T2 | body_anterior_height_mm | None | 15.25 | thoracic_caliper_2011 / T2_VBHa |
+| BONE_T2 | body_lower_width_mm | None | 26.83 | thoracic_caliper_2011 / T2_VBWi |
+| BONE_T2 | body_mid_width_mm | None | 23.16 | thoracic_caliper_2011 / T2_VBWm |
 | BONE_T2 | body_posterior_height_mm | None | 15.47 | thoracic_caliper_2011 / T2_VBHp |
+| BONE_T2 | body_upper_width_mm | None | 23.6 | thoracic_caliper_2011 / T2_VBWs |
 | BONE_T1 | body_anterior_height_mm | None | 14.12 | thoracic_caliper_2011 / T1_VBHa |
+| BONE_T1 | body_lower_width_mm | None | 26.92 | thoracic_caliper_2011 / T1_VBWi |
+| BONE_T1 | body_mid_width_mm | None | 23.04 | thoracic_caliper_2011 / T1_VBWm |
 | BONE_T1 | body_posterior_height_mm | None | 14.63 | thoracic_caliper_2011 / T1_VBHp |
+| BONE_T1 | body_upper_width_mm | None | 23.75 | thoracic_caliper_2011 / T1_VBWs |
 | BONE_C7 | body_height_mm | None | 12.61 | cervical_ct_2021 / C7HT |
 | BONE_C7 | spinal_canal_ap_mm | None | 13.25 | cervical_ct_2021 / C7AP |
 | BONE_C7 | spinal_canal_width_mm | None | 23.34 | cervical_ct_2021 / C7TR |
@@ -164,7 +199,7 @@ Native factual extracts remain under references/dim072. Every applied value uses
 - **talus_ct_2016:** [He et al., Three-dimensional Computer-assisted Modeling of Talus Morphology in Chinese Patients](https://pmc.ncbi.nlm.nih.gov/articles/PMC6584390/). Revision: PMC6584390.1; Orthop Surg 8(3), 383-392 (2016). 32 female volunteers; mean age 41.2 years (21-58); mean height 163.4 cm (156-173); bilateral CT, Tianjin, China.
   Female Left/Right columns of Table 1; methods section on sagittal/coronal apex spans inspected separately. Single-center cohort; means are not one donor, F28 or female_21_baseline. Original images/meshes unavailable for independent landmark or surface review. Do not adopt the dimensionally suspicious published volume entries.
 - **thoracic_caliper_2011:** [Singh et al., Morphometric Measurements of Cadaveric Thoracic Spine in Indian Population and Its Clinical Applications](https://www.asianspinejournal.org/upload/pdf/asj-5-20.pdf). Revision: PMC3047895.1; Asian Spine J 5(1), 20-34 (2011). 19 female cadaveric vertebral columns of 100; overall mean age 52.8 (22-70); Indian institution; preserved bone sets.
-  PDF page 7 / printed page 26, Table 3, female anterior/posterior height columns; T11 posterior height quarantined. Small female cohort, preserved specimens; no full vertebral shape. T11 posterior height conflicts with narrative and resembles Table 2 chord length. Retained as rejected native evidence; no corrected measurement inferred.
+  PDF page 7 / printed page 26, Table 3, female anterior/posterior heights and superior/middle/inferior body widths; T11 posterior height and T6 superior width quarantined. Small female cohort, preserved specimens; no full vertebral shape. T11 posterior height conflicts with narrative and resembles Table 2 chord length. Retained as rejected native evidence; no corrected measurement inferred. T6 superior-width all/male/female means disagree with cohort weighting; the female value is retained but not admitted.
 
 ## Unresolved evidence
 

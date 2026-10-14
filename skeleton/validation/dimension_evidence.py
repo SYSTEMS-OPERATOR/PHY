@@ -110,6 +110,9 @@ def load_evidence(root=ROOT, catalog=None):
             or catalog.get("assignment") != "PHY-DIM-072"
             or catalog.get("target") != 72):
         raise ValueError("Unknown assignment or evidence contract")
+    protocols = read_json(_pinned_file(root, catalog.get("measurement_protocols", {})))
+    if protocols.get("schema_version") != "PHY_DIM072_PROTOCOL_V1":
+        raise ValueError("Unknown anatomical measurement protocol")
     baseline = read_json(_pinned_file(root, catalog["baseline_snapshot"]))
     if (catalog.get("phy_commit") != baseline.get("phy_commit")
             or catalog.get("phy_ref_commit") != baseline.get("phy_ref_commit")):
@@ -171,6 +174,18 @@ def load_evidence(root=ROOT, catalog=None):
                 raise ValueError("Missing native measurement provenance") from error
             if measure.get("admitted_field") != field:
                 raise ValueError("Dimensional semantics differ from the reviewed admission")
+            try:
+                protocol_source = protocols["sources"][mapping["source_id"]]
+                protocol = protocol_source["fields"][field]
+            except KeyError as error:
+                raise ValueError("Missing anatomical landmark protocol") from error
+            _text(protocol.get("landmark_definition"), "anatomical landmark definition")
+            _text(protocol_source.get("source_locator"), "landmark method locator")
+            _text(protocol_source.get("uncertainty"), "measurement uncertainty")
+            if (protocol.get("native_units") != "mm"
+                    or protocol_source.get("geometry_qualified") is not False
+                    or protocol_source.get("fabrication_qualified") is not False):
+                raise ValueError("Landmark method cannot qualify geometry or fabrication")
             values[field] = derive_value(measure, mapping, uid, candidate["side"])
         derived[uid] = values
     return catalog, baseline, derived

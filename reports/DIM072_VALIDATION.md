@@ -73,3 +73,10 @@ The source review and next fabrication tasks are in `docs/PHY-DIM-072.md`.
 The complete 36-candidate evidence matrix, all changed values and all 206
 before/after maps are in the dimension-expansion reports. This is a reviewable
 evidence-limited delivery, not a declaration that PHY-DIM-072 has reached 72.
+
+## Recovery continuation — 14 October 2026
+
+The recovered 93 fields were preserved; 35 thoracic body widths were added.
+Current source-backed field count is 128; complete maps remain 40/206.
+NIH originals are now preserved and independently retrievable in PHY-REF.
+Fresh commands, results, source checks and limits are in RECOVERY_VALIDATION.md.

@@ -79,10 +79,10 @@ class FacialSourceRecordTest(unittest.TestCase):
         # every original complete map and rejects unsupported dimensional changes.
         old = [self.records[uid] for uid in sorted(set(self.records) - FACIAL_IDS)]
         self.assertEqual(len(old), 193)
-        self.assertEqual(sha256(json_bytes(old)), "a0799a5e7af2358053efb490bce0ba2d48c74469756a2c41925938948c9244cd")
+        self.assertEqual(sha256(json_bytes(old)), "c299bf5569e2515f9b51a74040469390a17d5adbc31609b4e441f294dbcab2a5")
         paths = source_record_paths()
         old_files = {paths[uid]: sha256((ROOT / paths[uid]).read_bytes()) for uid in sorted(set(paths) - FACIAL_IDS)}
-        self.assertEqual(sha256(json_bytes(old_files)), "62e4cdc986401cca00007722f36915fb031286783d0885803bfeedace1034f7e")
+        self.assertEqual(sha256(json_bytes(old_files)), "4beb969bf6527d2b0b755a3036e543e681cd57269ec39b6f4d0f4d60b8e65d6e")
 
     def test_every_previous_display_geometry_and_metadata_except_source_presence_is_preserved(self):
         parts = [{key: value for key, value in part.items() if key not in ("source_record", "source_record_status")}

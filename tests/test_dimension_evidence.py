@@ -36,7 +36,7 @@ class DimensionEvidenceTest(unittest.TestCase):
         self.assertEqual(report["remaining_to_target"], 32)
         self.assertEqual(len(report["new_complete_ids"]), 4)
         self.assertEqual(len(report["improved_partial_ids"]), 28)
-        self.assertEqual(report["new_source_backed_field_count"], 93)
+        self.assertEqual(report["new_source_backed_field_count"], 128)
         self.assertEqual(set(report["new_complete_ids"]), {
             "BONE_TALUS_L", "BONE_TALUS_R", "BONE_PATELLA_L", "BONE_PATELLA_R"})
         before = {b["bone_id"]: b for b in self.baseline["bones"]}
@@ -82,7 +82,24 @@ class DimensionEvidenceTest(unittest.TestCase):
         self.assertEqual(m["unit_scale"], 1.0)
         self.assertIsNone(m["canonical_registration"])
 
+    def test_recovered_thoracic_widths_keep_landmark_scope_and_reject_inconsistent_row(self):
+        self.assertEqual(self.values["BONE_T1"]["body_upper_width_mm"], 23.75)
+        self.assertEqual(self.values["BONE_T12"]["body_lower_width_mm"], 37.67)
+        self.assertEqual(self.values["BONE_T6"]["body_mid_width_mm"], 22.58)
+        self.assertNotIn("body_upper_width_mm", self.values["BONE_T6"])
+        self.assertIsNone(self.field.get("BONE_T12").dimensions["width_mm"])
+        native = read_json(ROOT / "references/dim072/thoracic_caliper_2011.json")
+        withheld = next(row for row in native["rows"] if row["parameter"] == "T6_VBWs")
+        self.assertFalse(withheld["admissible"])
+        self.assertIsNone(withheld["admitted_field"])
+        self.assertEqual(withheld["mean"], 23.52)
+        self.assertTrue(withheld["landmark_definition"])
+
     def test_source_scope_cohort_revision_rights_and_hashes_are_required(self):
+        missing = deepcopy(self.catalog)
+        missing.pop("measurement_protocols")
+        with self.assertRaises(ValueError):
+            load_evidence(catalog=missing)
         for key in ("cohort", "revision", "rights_review", "coordinate_frame", "tool_version"):
             bad = deepcopy(self.catalog)
             bad["sources"]["talus_ct_2016"].pop(key)

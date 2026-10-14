@@ -1,0 +1,1597 @@
+{
+  "anthropometry": [
+    {
+      "fabrication_target_mm": null,
+      "field": "stature",
+      "mapping_status": "external_vertex_to_floor",
+      "pdf_page": 37,
+      "population_scope": "source_female_min_male_max",
+      "printed_page": 37,
+      "source_id": "NASA_OCHMO_HB004_REV_A",
+      "source_label": "Stature, Standing",
+      "table": 1,
+      "values_cm": [
+        148.6,
+        194.6
+      ],
+      "values_mm": [
+        1486.0,
+        1946.0
+      ]
+    },
+    {
+      "fabrication_target_mm": null,
+      "field": "biacromialbreadth",
+      "mapping_status": "external_acromion_to_acromion",
+      "pdf_page": 37,
+      "population_scope": "source_female_min_male_max",
+      "printed_page": 37,
+      "source_id": "NASA_OCHMO_HB004_REV_A",
+      "source_label": "Biacromial Breadth",
+      "table": 1,
+      "values_cm": [
+        32.3,
+        44.5
+      ],
+      "values_mm": [
+        323.0,
+        445.0
+      ]
+    },
+    {
+      "fabrication_target_mm": null,
+      "field": "handlength",
+      "mapping_status": "external_hand_endpoints_require_pose_check",
+      "pdf_page": 38,
+      "population_scope": "source_female_min_male_max",
+      "printed_page": 38,
+      "source_id": "NASA_OCHMO_HB004_REV_A",
+      "source_label": "Hand Length",
+      "table": 1,
+      "values_cm": [
+        15.8,
+        22.1
+      ],
+      "values_mm": [
+        158.0,
+        221.0
+      ]
+    },
+    {
+      "fabrication_target_mm": null,
+      "field": "footlength",
+      "mapping_status": "different_pose_from_ANSUR_weight_bearing_foot",
+      "pdf_page": 37,
+      "population_scope": "source_female_min_male_max",
+      "printed_page": 37,
+      "source_id": "NASA_OCHMO_HB004_REV_A",
+      "source_label": "Foot Length, Sitting",
+      "table": 1,
+      "values_cm": [
+        21.6,
+        30.5
+      ],
+      "values_mm": [
+        216.0,
+        305.0
+      ]
+    },
+    {
+      "fabrication_target_mm": null,
+      "field": "acromionradialelength",
+      "mapping_status": "endpoint_definition_not_established_equivalent",
+      "pdf_page": 37,
+      "population_scope": "source_female_min_male_max",
+      "printed_page": 37,
+      "source_id": "NASA_OCHMO_HB004_REV_A",
+      "source_label": "Shoulder to Elbow Length",
+      "table": 1,
+      "values_cm": [
+        29.6,
+        41.9
+      ],
+      "values_mm": [
+        296.0,
+        419.0
+      ]
+    },
+    {
+      "fabrication_target_mm": null,
+      "field": "radialestylionlength",
+      "mapping_status": "endpoint_definition_not_established_equivalent",
+      "pdf_page": 38,
+      "population_scope": "source_female_min_male_max",
+      "printed_page": 38,
+      "source_id": "NASA_OCHMO_HB004_REV_A",
+      "source_label": "Elbow to Wrist length",
+      "table": 1,
+      "values_cm": [
+        22.5,
+        33.1
+      ],
+      "values_mm": [
+        225.0,
+        331.0
+      ]
+    },
+    {
+      "fabrication_target_mm": null,
+      "field": "hip_breadth_standing",
+      "mapping_status": "external_soft_tissue_not_bicristal_or_joint_spacing",
+      "pdf_page": 37,
+      "population_scope": "source_male_min_female_max",
+      "printed_page": 37,
+      "source_id": "NASA_OCHMO_HB004_REV_A",
+      "source_label": "Hip Breadth, Standing",
+      "table": 1,
+      "values_cm": [
+        29.8,
+        40.6
+      ],
+      "values_mm": [
+        298.0,
+        406.0
+      ]
+    },
+    {
+      "fabrication_target_mm": null,
+      "field": "hip_breadth_sitting",
+      "mapping_status": "external_soft_tissue_not_bicristal_or_joint_spacing",
+      "pdf_page": 37,
+      "population_scope": "source_male_min_female_max",
+      "printed_page": 37,
+      "source_id": "NASA_OCHMO_HB004_REV_A",
+      "source_label": "Hip Breadth, Sitting",
+      "table": 1,
+      "values_cm": [
+        31.5,
+        46.5
+      ],
+      "values_mm": [
+        315.0,
+        465.0
+      ]
+    },
+    {
+      "fabrication_target_mm": null,
+      "field": "trochanterionheight",
+      "mapping_status": "external_trochanter_not_femoral_head_center",
+      "pdf_page": 38,
+      "population_scope": "source_female_min_male_max",
+      "printed_page": 38,
+      "source_id": "NASA_OCHMO_HB004_REV_A",
+      "source_label": "Trochanteric Height",
+      "table": 1,
+      "values_cm": [
+        75.2,
+        105.4
+      ],
+      "values_mm": [
+        752.0,
+        1054.0
+      ]
+    },
+    {
+      "fabrication_target_mm": null,
+      "field": "acromialheight",
+      "mapping_status": "external_acromion_not_glenohumeral_center",
+      "pdf_page": 38,
+      "population_scope": "source_female_min_male_max",
+      "printed_page": 38,
+      "source_id": "NASA_OCHMO_HB004_REV_A",
+      "source_label": "Acromion (Shoulder) Height, Standing",
+      "table": 1,
+      "values_cm": [
+        120.4,
+        161.8
+      ],
+      "values_mm": [
+        1204.0,
+        1618.0
+      ]
+    },
+    {
+      "fabrication_target_mm": null,
+      "field": "ankleheight",
+      "mapping_status": "external_landmark_not_cartridge_center",
+      "pdf_page": 38,
+      "population_scope": "source_female_min_male_max",
+      "printed_page": 38,
+      "source_id": "NASA_OCHMO_HB004_REV_A",
+      "source_label": "Ankle Height",
+      "table": 1,
+      "values_cm": [
+        4.8,
+        8.1
+      ],
+      "values_mm": [
+        48.0,
+        81.0
+      ]
+    }
+  ],
+  "authority": "reference_comparison_only",
+  "canon_effect": "none",
+  "catalog_version": "1.0.0",
+  "fabrication_released": false,
+  "interpretation_rules": [
+    "No source value becomes a mechanical limit, joint center or canon coordinate.",
+    "Do not combine individual motion ranges into a feasible whole-body pose without coupled constraints.",
+    "NASA projected ANSUR-1988 values remain separate from ANSUR-II female age-28 means and donor geometry.",
+    "Human 3% stature and 6% seated-height changes in microgravity are not armature rescaling rules.",
+    "Anatomical axes use skeletal landmarks; principal inertial axes originate at center of mass and need a distinct frame.",
+    "Ranges were human reference observations, not measured PHY 0g capability."
+  ],
+  "ranges": [
+    {
+      "combined_joint_feasibility": null,
+      "condition": "unsuited",
+      "endpoints_as_printed_deg": {
+        "Dorsiflexion": 25,
+        "Plantar Flex": -50
+      },
+      "id": "unsuited_ankle_dorsiflexion_plantarflexion",
+      "joint_label": "ankle",
+      "mechanical_axis": null,
+      "mechanical_limit_deg": null,
+      "motion_label": "dorsiflexion_plantarflexion",
+      "pdf_pages": [
+        40
+      ],
+      "printed_pages": [
+        40
+      ],
+      "sex_scope": "not a female-specific engineering target",
+      "sign_convention": "as printed in source diagrams; not mapped to PHY joint axes",
+      "source_id": "NASA_OCHMO_HB004_REV_A",
+      "source_issue": null,
+      "table": 5,
+      "units": "deg"
+    },
+    {
+      "combined_joint_feasibility": null,
+      "condition": "unsuited",
+      "endpoints_as_printed_deg": {
+        "Extension": 0,
+        "Flexion": -125
+      },
+      "id": "unsuited_knee_flexion_extension",
+      "joint_label": "knee",
+      "mechanical_axis": null,
+      "mechanical_limit_deg": null,
+      "motion_label": "flexion_extension",
+      "pdf_pages": [
+        40
+      ],
+      "printed_pages": [
+        40
+      ],
+      "sex_scope": "not a female-specific engineering target",
+      "sign_convention": "as printed in source diagrams; not mapped to PHY joint axes",
+      "source_id": "NASA_OCHMO_HB004_REV_A",
+      "source_issue": null,
+      "table": 5,
+      "units": "deg"
+    },
+    {
+      "combined_joint_feasibility": null,
+      "condition": "unsuited",
+      "endpoints_as_printed_deg": {
+        "Extension": -15,
+        "Flexion": 165
+      },
+      "id": "unsuited_hip_flexion_extension",
+      "joint_label": "hip",
+      "mechanical_axis": null,
+      "mechanical_limit_deg": null,
+      "motion_label": "flexion_extension",
+      "pdf_pages": [
+        40
+      ],
+      "printed_pages": [
+        40
+      ],
+      "sex_scope": "not a female-specific engineering target",
+      "sign_convention": "as printed in source diagrams; not mapped to PHY joint axes",
+      "source_id": "NASA_OCHMO_HB004_REV_A",
+      "source_issue": null,
+      "table": 5,
+      "units": "deg"
+    },
+    {
+      "combined_joint_feasibility": null,
+      "condition": "unsuited",
+      "endpoints_as_printed_deg": {
+        "Abduction": -65,
+        "Adduction": 20
+      },
+      "id": "unsuited_hip_abduction_adduction",
+      "joint_label": "hip",
+      "mechanical_axis": null,
+      "mechanical_limit_deg": null,
+      "motion_label": "abduction_adduction",
+      "pdf_pages": [
+        40
+      ],
+      "printed_pages": [
+        40
+      ],
+      "sex_scope": "not a female-specific engineering target",
+      "sign_convention": "as printed in source diagrams; not mapped to PHY joint axes",
+      "source_id": "NASA_OCHMO_HB004_REV_A",
+      "source_issue": null,
+      "table": 5,
+      "units": "deg"
+    },
+    {
+      "combined_joint_feasibility": null,
+      "condition": "unsuited",
+      "endpoints_as_printed_deg": {
+        "External Rotation": -35,
+        "Internal Rotation": 35
+      },
+      "id": "unsuited_hip_internal_external_rotation",
+      "joint_label": "hip",
+      "mechanical_axis": null,
+      "mechanical_limit_deg": null,
+      "motion_label": "internal_external_rotation",
+      "pdf_pages": [
+        40
+      ],
+      "printed_pages": [
+        40
+      ],
+      "sex_scope": "not a female-specific engineering target",
+      "sign_convention": "as printed in source diagrams; not mapped to PHY joint axes",
+      "source_id": "NASA_OCHMO_HB004_REV_A",
+      "source_issue": null,
+      "table": 5,
+      "units": "deg"
+    },
+    {
+      "combined_joint_feasibility": null,
+      "condition": "unsuited",
+      "endpoints_as_printed_deg": {
+        "Extension": 15,
+        "Flexion": -45
+      },
+      "id": "unsuited_torso_flexion_extension",
+      "joint_label": "torso",
+      "mechanical_axis": null,
+      "mechanical_limit_deg": null,
+      "motion_label": "flexion_extension",
+      "pdf_pages": [
+        40
+      ],
+      "printed_pages": [
+        40
+      ],
+      "sex_scope": "not a female-specific engineering target",
+      "sign_convention": "as printed in source diagrams; not mapped to PHY joint axes",
+      "source_id": "NASA_OCHMO_HB004_REV_A",
+      "source_issue": null,
+      "table": 5,
+      "units": "deg"
+    },
+    {
+      "combined_joint_feasibility": null,
+      "condition": "unsuited",
+      "endpoints_as_printed_deg": {
+        "Left Lean": -40,
+        "Right Lean": 40
+      },
+      "id": "unsuited_torso_lateral_lean",
+      "joint_label": "torso",
+      "mechanical_axis": null,
+      "mechanical_limit_deg": null,
+      "motion_label": "lateral_lean",
+      "pdf_pages": [
+        40
+      ],
+      "printed_pages": [
+        40
+      ],
+      "sex_scope": "not a female-specific engineering target",
+      "sign_convention": "as printed in source diagrams; not mapped to PHY joint axes",
+      "source_id": "NASA_OCHMO_HB004_REV_A",
+      "source_issue": null,
+      "table": 5,
+      "units": "deg"
+    },
+    {
+      "combined_joint_feasibility": null,
+      "condition": "unsuited",
+      "endpoints_as_printed_deg": {
+        "CCW": 30,
+        "CW": -30
+      },
+      "id": "unsuited_torso_axial_rotation",
+      "joint_label": "torso",
+      "mechanical_axis": null,
+      "mechanical_limit_deg": null,
+      "motion_label": "axial_rotation",
+      "pdf_pages": [
+        40,
+        41
+      ],
+      "printed_pages": [
+        40,
+        41
+      ],
+      "sex_scope": "not a female-specific engineering target",
+      "sign_convention": "as printed in source diagrams; not mapped to PHY joint axes",
+      "source_id": "NASA_OCHMO_HB004_REV_A",
+      "source_issue": null,
+      "table": 5,
+      "units": "deg"
+    },
+    {
+      "combined_joint_feasibility": null,
+      "condition": "unsuited",
+      "endpoints_as_printed_deg": {
+        "Extension": -70,
+        "Flexion": 145
+      },
+      "id": "unsuited_shoulder_flexion_extension",
+      "joint_label": "shoulder",
+      "mechanical_axis": null,
+      "mechanical_limit_deg": null,
+      "motion_label": "flexion_extension",
+      "pdf_pages": [
+        41
+      ],
+      "printed_pages": [
+        41
+      ],
+      "sex_scope": "not a female-specific engineering target",
+      "sign_convention": "as printed in source diagrams; not mapped to PHY joint axes",
+      "source_id": "NASA_OCHMO_HB004_REV_A",
+      "source_issue": null,
+      "table": 5,
+      "units": "deg"
+    },
+    {
+      "combined_joint_feasibility": null,
+      "condition": "unsuited",
+      "endpoints_as_printed_deg": {
+        "Abduction": -165,
+        "Adduction": 45
+      },
+      "id": "unsuited_shoulder_abduction_adduction",
+      "joint_label": "shoulder",
+      "mechanical_axis": null,
+      "mechanical_limit_deg": null,
+      "motion_label": "abduction_adduction",
+      "pdf_pages": [
+        41
+      ],
+      "printed_pages": [
+        41
+      ],
+      "sex_scope": "not a female-specific engineering target",
+      "sign_convention": "as printed in source diagrams; not mapped to PHY joint axes",
+      "source_id": "NASA_OCHMO_HB004_REV_A",
+      "source_issue": null,
+      "table": 5,
+      "units": "deg"
+    },
+    {
+      "combined_joint_feasibility": null,
+      "condition": "unsuited",
+      "endpoints_as_printed_deg": {
+        "Exterior Transverse Rotation": 135,
+        "Interior Transverse Rotation": -45
+      },
+      "id": "unsuited_shoulder_1979_transverse_rotation",
+      "joint_label": "shoulder_1979",
+      "mechanical_axis": null,
+      "mechanical_limit_deg": null,
+      "motion_label": "transverse_rotation",
+      "pdf_pages": [
+        41
+      ],
+      "printed_pages": [
+        41
+      ],
+      "sex_scope": "not a female-specific engineering target",
+      "sign_convention": "as printed in source diagrams; not mapped to PHY joint axes",
+      "source_id": "NASA_OCHMO_HB004_REV_A",
+      "source_issue": null,
+      "table": 5,
+      "units": "deg"
+    },
+    {
+      "combined_joint_feasibility": null,
+      "condition": "unsuited",
+      "endpoints_as_printed_deg": {
+        "Lateral": -46,
+        "Medial": 91
+      },
+      "id": "unsuited_shoulder_1979_lateral_medial_rotation",
+      "joint_label": "shoulder_1979",
+      "mechanical_axis": null,
+      "mechanical_limit_deg": null,
+      "motion_label": "lateral_medial_rotation",
+      "pdf_pages": [
+        41
+      ],
+      "printed_pages": [
+        41
+      ],
+      "sex_scope": "not a female-specific engineering target",
+      "sign_convention": "as printed in source diagrams; not mapped to PHY joint axes",
+      "source_id": "NASA_OCHMO_HB004_REV_A",
+      "source_issue": null,
+      "table": 5,
+      "units": "deg"
+    },
+    {
+      "combined_joint_feasibility": null,
+      "condition": "unsuited",
+      "endpoints_as_printed_deg": {
+        "Ex": 65,
+        "Flex": -34
+      },
+      "id": "unsuited_neck_1979_flexion_extension",
+      "joint_label": "neck_1979",
+      "mechanical_axis": null,
+      "mechanical_limit_deg": null,
+      "motion_label": "flexion_extension",
+      "pdf_pages": [
+        41
+      ],
+      "printed_pages": [
+        41
+      ],
+      "sex_scope": "not a female-specific engineering target",
+      "sign_convention": "as printed in source diagrams; not mapped to PHY joint axes",
+      "source_id": "NASA_OCHMO_HB004_REV_A",
+      "source_issue": "Table assigns Flex=-34 and Ex=65; diagram labels flexion +65 and extension -34. Requires source clarification before use.",
+      "table": 5,
+      "units": "deg"
+    },
+    {
+      "combined_joint_feasibility": null,
+      "condition": "unsuited",
+      "endpoints_as_printed_deg": {
+        "Bend Left": 29,
+        "Bend Right": -35
+      },
+      "id": "unsuited_neck_1979_lateral_bend",
+      "joint_label": "neck_1979",
+      "mechanical_axis": null,
+      "mechanical_limit_deg": null,
+      "motion_label": "lateral_bend",
+      "pdf_pages": [
+        41
+      ],
+      "printed_pages": [
+        41
+      ],
+      "sex_scope": "not a female-specific engineering target",
+      "sign_convention": "as printed in source diagrams; not mapped to PHY joint axes",
+      "source_id": "NASA_OCHMO_HB004_REV_A",
+      "source_issue": null,
+      "table": 5,
+      "units": "deg"
+    },
+    {
+      "combined_joint_feasibility": null,
+      "condition": "unsuited",
+      "endpoints_as_printed_deg": {
+        "Rotation Left": 72,
+        "Rotation Right": -73
+      },
+      "id": "unsuited_neck_1979_axial_rotation",
+      "joint_label": "neck_1979",
+      "mechanical_axis": null,
+      "mechanical_limit_deg": null,
+      "motion_label": "axial_rotation",
+      "pdf_pages": [
+        41
+      ],
+      "printed_pages": [
+        41
+      ],
+      "sex_scope": "not a female-specific engineering target",
+      "sign_convention": "as printed in source diagrams; not mapped to PHY joint axes",
+      "source_id": "NASA_OCHMO_HB004_REV_A",
+      "source_issue": null,
+      "table": 5,
+      "units": "deg"
+    },
+    {
+      "combined_joint_feasibility": null,
+      "condition": "unsuited",
+      "endpoints_as_printed_deg": {
+        "Extension": 0,
+        "Flexion": 130
+      },
+      "id": "unsuited_elbow_flexion_extension",
+      "joint_label": "elbow",
+      "mechanical_axis": null,
+      "mechanical_limit_deg": null,
+      "motion_label": "flexion_extension",
+      "pdf_pages": [
+        41,
+        42
+      ],
+      "printed_pages": [
+        41,
+        42
+      ],
+      "sex_scope": "not a female-specific engineering target",
+      "sign_convention": "as printed in source diagrams; not mapped to PHY joint axes",
+      "source_id": "NASA_OCHMO_HB004_REV_A",
+      "source_issue": null,
+      "table": 5,
+      "units": "deg"
+    },
+    {
+      "combined_joint_feasibility": null,
+      "condition": "unsuited",
+      "endpoints_as_printed_deg": {
+        "Extension": -90,
+        "Flexion": 60
+      },
+      "id": "unsuited_wrist_extension_flexion",
+      "joint_label": "wrist",
+      "mechanical_axis": null,
+      "mechanical_limit_deg": null,
+      "motion_label": "extension_flexion",
+      "pdf_pages": [
+        42
+      ],
+      "printed_pages": [
+        42
+      ],
+      "sex_scope": "not a female-specific engineering target",
+      "sign_convention": "as printed in source diagrams; not mapped to PHY joint axes",
+      "source_id": "NASA_OCHMO_HB004_REV_A",
+      "source_issue": null,
+      "table": 5,
+      "units": "deg"
+    },
+    {
+      "combined_joint_feasibility": null,
+      "condition": "unsuited",
+      "endpoints_as_printed_deg": {
+        "Abduction (Radial Deviation)": 30,
+        "Adduction (Ulnar Deviation)": -25
+      },
+      "id": "unsuited_wrist_radial_ulnar_deviation",
+      "joint_label": "wrist",
+      "mechanical_axis": null,
+      "mechanical_limit_deg": null,
+      "motion_label": "radial_ulnar_deviation",
+      "pdf_pages": [
+        42
+      ],
+      "printed_pages": [
+        42
+      ],
+      "sex_scope": "not a female-specific engineering target",
+      "sign_convention": "as printed in source diagrams; not mapped to PHY joint axes",
+      "source_id": "NASA_OCHMO_HB004_REV_A",
+      "source_issue": null,
+      "table": 5,
+      "units": "deg"
+    },
+    {
+      "combined_joint_feasibility": null,
+      "condition": "unsuited",
+      "endpoints_as_printed_deg": {
+        "Pronation": 80,
+        "Supination": -80
+      },
+      "id": "unsuited_wrist_supination_pronation",
+      "joint_label": "wrist",
+      "mechanical_axis": null,
+      "mechanical_limit_deg": null,
+      "motion_label": "supination_pronation",
+      "pdf_pages": [
+        42
+      ],
+      "printed_pages": [
+        42
+      ],
+      "sex_scope": "not a female-specific engineering target",
+      "sign_convention": "as printed in source diagrams; not mapped to PHY joint axes",
+      "source_id": "NASA_OCHMO_HB004_REV_A",
+      "source_issue": null,
+      "table": 5,
+      "units": "deg"
+    },
+    {
+      "combined_joint_feasibility": null,
+      "condition": "unsuited",
+      "endpoints_as_printed_deg": {
+        "Exterior Transverse Rotation": 35,
+        "Interior Transverse Rotation": -30
+      },
+      "id": "unsuited_hip_1979_transverse_rotation",
+      "joint_label": "hip_1979",
+      "mechanical_axis": null,
+      "mechanical_limit_deg": null,
+      "motion_label": "transverse_rotation",
+      "pdf_pages": [
+        42
+      ],
+      "printed_pages": [
+        42
+      ],
+      "sex_scope": "not a female-specific engineering target",
+      "sign_convention": "as printed in source diagrams; not mapped to PHY joint axes",
+      "source_id": "NASA_OCHMO_HB004_REV_A",
+      "source_issue": null,
+      "table": 5,
+      "units": "deg"
+    },
+    {
+      "combined_joint_feasibility": null,
+      "condition": "suited_unpressurized",
+      "endpoints_as_printed_deg": {
+        "Dorsiflexion": 40,
+        "Plantar Flex": -30
+      },
+      "id": "suited_unpressurized_ankle_dorsiflexion_plantarflexion",
+      "joint_label": "ankle",
+      "mechanical_axis": null,
+      "mechanical_limit_deg": null,
+      "motion_label": "dorsiflexion_plantarflexion",
+      "pdf_pages": [
+        42
+      ],
+      "printed_pages": [
+        42
+      ],
+      "sex_scope": "not a female-specific engineering target",
+      "sign_convention": "as printed in source diagrams; not mapped to PHY joint axes",
+      "source_id": "NASA_OCHMO_HB004_REV_A",
+      "source_issue": null,
+      "table": 6,
+      "units": "deg"
+    },
+    {
+      "combined_joint_feasibility": null,
+      "condition": "suited_unpressurized",
+      "endpoints_as_printed_deg": {
+        "Extension": 0,
+        "Flexion": -125
+      },
+      "id": "suited_unpressurized_knee_flexion_extension",
+      "joint_label": "knee",
+      "mechanical_axis": null,
+      "mechanical_limit_deg": null,
+      "motion_label": "flexion_extension",
+      "pdf_pages": [
+        42,
+        43
+      ],
+      "printed_pages": [
+        42,
+        43
+      ],
+      "sex_scope": "not a female-specific engineering target",
+      "sign_convention": "as printed in source diagrams; not mapped to PHY joint axes",
+      "source_id": "NASA_OCHMO_HB004_REV_A",
+      "source_issue": null,
+      "table": 6,
+      "units": "deg"
+    },
+    {
+      "combined_joint_feasibility": null,
+      "condition": "suited_unpressurized",
+      "endpoints_as_printed_deg": {
+        "Extension": -30,
+        "Flexion": 130
+      },
+      "id": "suited_unpressurized_hip_flexion_extension",
+      "joint_label": "hip",
+      "mechanical_axis": null,
+      "mechanical_limit_deg": null,
+      "motion_label": "flexion_extension",
+      "pdf_pages": [
+        43
+      ],
+      "printed_pages": [
+        43
+      ],
+      "sex_scope": "not a female-specific engineering target",
+      "sign_convention": "as printed in source diagrams; not mapped to PHY joint axes",
+      "source_id": "NASA_OCHMO_HB004_REV_A",
+      "source_issue": null,
+      "table": 6,
+      "units": "deg"
+    },
+    {
+      "combined_joint_feasibility": null,
+      "condition": "suited_unpressurized",
+      "endpoints_as_printed_deg": {
+        "Abduction": -30,
+        "Adduction": 20
+      },
+      "id": "suited_unpressurized_hip_abduction_adduction",
+      "joint_label": "hip",
+      "mechanical_axis": null,
+      "mechanical_limit_deg": null,
+      "motion_label": "abduction_adduction",
+      "pdf_pages": [
+        43
+      ],
+      "printed_pages": [
+        43
+      ],
+      "sex_scope": "not a female-specific engineering target",
+      "sign_convention": "as printed in source diagrams; not mapped to PHY joint axes",
+      "source_id": "NASA_OCHMO_HB004_REV_A",
+      "source_issue": null,
+      "table": 6,
+      "units": "deg"
+    },
+    {
+      "combined_joint_feasibility": null,
+      "condition": "suited_unpressurized",
+      "endpoints_as_printed_deg": {
+        "External Rotation": -35,
+        "Internal Rotation": 35
+      },
+      "id": "suited_unpressurized_hip_internal_external_rotation",
+      "joint_label": "hip",
+      "mechanical_axis": null,
+      "mechanical_limit_deg": null,
+      "motion_label": "internal_external_rotation",
+      "pdf_pages": [
+        43
+      ],
+      "printed_pages": [
+        43
+      ],
+      "sex_scope": "not a female-specific engineering target",
+      "sign_convention": "as printed in source diagrams; not mapped to PHY joint axes",
+      "source_id": "NASA_OCHMO_HB004_REV_A",
+      "source_issue": null,
+      "table": 6,
+      "units": "deg"
+    },
+    {
+      "combined_joint_feasibility": null,
+      "condition": "suited_unpressurized",
+      "endpoints_as_printed_deg": {
+        "Extension": 15,
+        "Flexion": -45
+      },
+      "id": "suited_unpressurized_torso_flexion_extension",
+      "joint_label": "torso",
+      "mechanical_axis": null,
+      "mechanical_limit_deg": null,
+      "motion_label": "flexion_extension",
+      "pdf_pages": [
+        43
+      ],
+      "printed_pages": [
+        43
+      ],
+      "sex_scope": "not a female-specific engineering target",
+      "sign_convention": "as printed in source diagrams; not mapped to PHY joint axes",
+      "source_id": "NASA_OCHMO_HB004_REV_A",
+      "source_issue": null,
+      "table": 6,
+      "units": "deg"
+    },
+    {
+      "combined_joint_feasibility": null,
+      "condition": "suited_unpressurized",
+      "endpoints_as_printed_deg": {
+        "Left Lean": -25,
+        "Right Lean": 25
+      },
+      "id": "suited_unpressurized_torso_lateral_lean",
+      "joint_label": "torso",
+      "mechanical_axis": null,
+      "mechanical_limit_deg": null,
+      "motion_label": "lateral_lean",
+      "pdf_pages": [
+        43
+      ],
+      "printed_pages": [
+        43
+      ],
+      "sex_scope": "not a female-specific engineering target",
+      "sign_convention": "as printed in source diagrams; not mapped to PHY joint axes",
+      "source_id": "NASA_OCHMO_HB004_REV_A",
+      "source_issue": null,
+      "table": 6,
+      "units": "deg"
+    },
+    {
+      "combined_joint_feasibility": null,
+      "condition": "suited_unpressurized",
+      "endpoints_as_printed_deg": {
+        "CCW": 30,
+        "CW": -30
+      },
+      "id": "suited_unpressurized_torso_axial_rotation",
+      "joint_label": "torso",
+      "mechanical_axis": null,
+      "mechanical_limit_deg": null,
+      "motion_label": "axial_rotation",
+      "pdf_pages": [
+        43
+      ],
+      "printed_pages": [
+        43
+      ],
+      "sex_scope": "not a female-specific engineering target",
+      "sign_convention": "as printed in source diagrams; not mapped to PHY joint axes",
+      "source_id": "NASA_OCHMO_HB004_REV_A",
+      "source_issue": null,
+      "table": 6,
+      "units": "deg"
+    },
+    {
+      "combined_joint_feasibility": null,
+      "condition": "suited_unpressurized",
+      "endpoints_as_printed_deg": {
+        "Extension": -60,
+        "Flexion": 140
+      },
+      "id": "suited_unpressurized_shoulder_flexion_extension",
+      "joint_label": "shoulder",
+      "mechanical_axis": null,
+      "mechanical_limit_deg": null,
+      "motion_label": "flexion_extension",
+      "pdf_pages": [
+        43
+      ],
+      "printed_pages": [
+        43
+      ],
+      "sex_scope": "not a female-specific engineering target",
+      "sign_convention": "as printed in source diagrams; not mapped to PHY joint axes",
+      "source_id": "NASA_OCHMO_HB004_REV_A",
+      "source_issue": null,
+      "table": 6,
+      "units": "deg"
+    },
+    {
+      "combined_joint_feasibility": null,
+      "condition": "suited_unpressurized",
+      "endpoints_as_printed_deg": {
+        "Abduction": -120,
+        "Adduction": 25
+      },
+      "id": "suited_unpressurized_shoulder_abduction_adduction",
+      "joint_label": "shoulder",
+      "mechanical_axis": null,
+      "mechanical_limit_deg": null,
+      "motion_label": "abduction_adduction",
+      "pdf_pages": [
+        43,
+        44
+      ],
+      "printed_pages": [
+        43,
+        44
+      ],
+      "sex_scope": "not a female-specific engineering target",
+      "sign_convention": "as printed in source diagrams; not mapped to PHY joint axes",
+      "source_id": "NASA_OCHMO_HB004_REV_A",
+      "source_issue": null,
+      "table": 6,
+      "units": "deg"
+    },
+    {
+      "combined_joint_feasibility": null,
+      "condition": "suited_unpressurized",
+      "endpoints_as_printed_deg": {
+        "Exterior Transverse Rotation": 120,
+        "Interior Transverse Rotation": -25
+      },
+      "id": "suited_unpressurized_shoulder_additional_transverse_rotation",
+      "joint_label": "shoulder_additional",
+      "mechanical_axis": null,
+      "mechanical_limit_deg": null,
+      "motion_label": "transverse_rotation",
+      "pdf_pages": [
+        44
+      ],
+      "printed_pages": [
+        44
+      ],
+      "sex_scope": "not a female-specific engineering target",
+      "sign_convention": "as printed in source diagrams; not mapped to PHY joint axes",
+      "source_id": "NASA_OCHMO_HB004_REV_A",
+      "source_issue": null,
+      "table": 6,
+      "units": "deg"
+    },
+    {
+      "combined_joint_feasibility": null,
+      "condition": "suited_unpressurized",
+      "endpoints_as_printed_deg": {
+        "Lateral": -25,
+        "Medial": 60
+      },
+      "id": "suited_unpressurized_shoulder_additional_lateral_medial_rotation",
+      "joint_label": "shoulder_additional",
+      "mechanical_axis": null,
+      "mechanical_limit_deg": null,
+      "motion_label": "lateral_medial_rotation",
+      "pdf_pages": [
+        44
+      ],
+      "printed_pages": [
+        44
+      ],
+      "sex_scope": "not a female-specific engineering target",
+      "sign_convention": "as printed in source diagrams; not mapped to PHY joint axes",
+      "source_id": "NASA_OCHMO_HB004_REV_A",
+      "source_issue": null,
+      "table": 6,
+      "units": "deg"
+    },
+    {
+      "combined_joint_feasibility": null,
+      "condition": "suited_unpressurized",
+      "endpoints_as_printed_deg": {
+        "Extension": 0,
+        "Flexion": 110
+      },
+      "id": "suited_unpressurized_elbow_flexion_extension",
+      "joint_label": "elbow",
+      "mechanical_axis": null,
+      "mechanical_limit_deg": null,
+      "motion_label": "flexion_extension",
+      "pdf_pages": [
+        44
+      ],
+      "printed_pages": [
+        44
+      ],
+      "sex_scope": "not a female-specific engineering target",
+      "sign_convention": "as printed in source diagrams; not mapped to PHY joint axes",
+      "source_id": "NASA_OCHMO_HB004_REV_A",
+      "source_issue": null,
+      "table": 6,
+      "units": "deg"
+    },
+    {
+      "combined_joint_feasibility": null,
+      "condition": "suited_unpressurized",
+      "endpoints_as_printed_deg": {
+        "Extension": -90,
+        "Flexion": 50
+      },
+      "id": "suited_unpressurized_wrist_extension_flexion",
+      "joint_label": "wrist",
+      "mechanical_axis": null,
+      "mechanical_limit_deg": null,
+      "motion_label": "extension_flexion",
+      "pdf_pages": [
+        44
+      ],
+      "printed_pages": [
+        44
+      ],
+      "sex_scope": "not a female-specific engineering target",
+      "sign_convention": "as printed in source diagrams; not mapped to PHY joint axes",
+      "source_id": "NASA_OCHMO_HB004_REV_A",
+      "source_issue": null,
+      "table": 6,
+      "units": "deg"
+    },
+    {
+      "combined_joint_feasibility": null,
+      "condition": "suited_unpressurized",
+      "endpoints_as_printed_deg": {
+        "Abduction (Radial Deviation)": 30,
+        "Adduction (Ulnar Deviation)": -30
+      },
+      "id": "suited_unpressurized_wrist_radial_ulnar_deviation",
+      "joint_label": "wrist",
+      "mechanical_axis": null,
+      "mechanical_limit_deg": null,
+      "motion_label": "radial_ulnar_deviation",
+      "pdf_pages": [
+        44
+      ],
+      "printed_pages": [
+        44
+      ],
+      "sex_scope": "not a female-specific engineering target",
+      "sign_convention": "as printed in source diagrams; not mapped to PHY joint axes",
+      "source_id": "NASA_OCHMO_HB004_REV_A",
+      "source_issue": null,
+      "table": 6,
+      "units": "deg"
+    },
+    {
+      "combined_joint_feasibility": null,
+      "condition": "suited_unpressurized",
+      "endpoints_as_printed_deg": {
+        "Pronation": 80,
+        "Supination": -80
+      },
+      "id": "suited_unpressurized_wrist_supination_pronation",
+      "joint_label": "wrist",
+      "mechanical_axis": null,
+      "mechanical_limit_deg": null,
+      "motion_label": "supination_pronation",
+      "pdf_pages": [
+        44
+      ],
+      "printed_pages": [
+        44
+      ],
+      "sex_scope": "not a female-specific engineering target",
+      "sign_convention": "as printed in source diagrams; not mapped to PHY joint axes",
+      "source_id": "NASA_OCHMO_HB004_REV_A",
+      "source_issue": null,
+      "table": 6,
+      "units": "deg"
+    },
+    {
+      "combined_joint_feasibility": null,
+      "condition": "suited_pressurized",
+      "endpoints_as_printed_deg": {
+        "Dorsiflexion": 40,
+        "Plantar Flex": -20
+      },
+      "id": "suited_pressurized_ankle_dorsiflexion_plantarflexion",
+      "joint_label": "ankle",
+      "mechanical_axis": null,
+      "mechanical_limit_deg": null,
+      "motion_label": "dorsiflexion_plantarflexion",
+      "pdf_pages": [
+        45
+      ],
+      "printed_pages": [
+        45
+      ],
+      "sex_scope": "not a female-specific engineering target",
+      "sign_convention": "as printed in source diagrams; not mapped to PHY joint axes",
+      "source_id": "NASA_OCHMO_HB004_REV_A",
+      "source_issue": "Table 7 title is Suited/Pressurized; repeated column heading says Suited Unpressurized. Title-based context retained, pending source review.",
+      "table": 7,
+      "units": "deg"
+    },
+    {
+      "combined_joint_feasibility": null,
+      "condition": "suited_pressurized",
+      "endpoints_as_printed_deg": {
+        "Extension": 0,
+        "Flexion": -95
+      },
+      "id": "suited_pressurized_knee_flexion_extension",
+      "joint_label": "knee",
+      "mechanical_axis": null,
+      "mechanical_limit_deg": null,
+      "motion_label": "flexion_extension",
+      "pdf_pages": [
+        45
+      ],
+      "printed_pages": [
+        45
+      ],
+      "sex_scope": "not a female-specific engineering target",
+      "sign_convention": "as printed in source diagrams; not mapped to PHY joint axes",
+      "source_id": "NASA_OCHMO_HB004_REV_A",
+      "source_issue": "Table 7 title is Suited/Pressurized; repeated column heading says Suited Unpressurized. Title-based context retained, pending source review.",
+      "table": 7,
+      "units": "deg"
+    },
+    {
+      "combined_joint_feasibility": null,
+      "condition": "suited_pressurized",
+      "endpoints_as_printed_deg": {
+        "Extension": -30,
+        "Flexion": 130
+      },
+      "id": "suited_pressurized_hip_flexion_extension",
+      "joint_label": "hip",
+      "mechanical_axis": null,
+      "mechanical_limit_deg": null,
+      "motion_label": "flexion_extension",
+      "pdf_pages": [
+        45
+      ],
+      "printed_pages": [
+        45
+      ],
+      "sex_scope": "not a female-specific engineering target",
+      "sign_convention": "as printed in source diagrams; not mapped to PHY joint axes",
+      "source_id": "NASA_OCHMO_HB004_REV_A",
+      "source_issue": "Table 7 title is Suited/Pressurized; repeated column heading says Suited Unpressurized. Title-based context retained, pending source review.",
+      "table": 7,
+      "units": "deg"
+    },
+    {
+      "combined_joint_feasibility": null,
+      "condition": "suited_pressurized",
+      "endpoints_as_printed_deg": {
+        "Abduction": -20,
+        "Adduction": 20
+      },
+      "id": "suited_pressurized_hip_abduction_adduction",
+      "joint_label": "hip",
+      "mechanical_axis": null,
+      "mechanical_limit_deg": null,
+      "motion_label": "abduction_adduction",
+      "pdf_pages": [
+        45
+      ],
+      "printed_pages": [
+        45
+      ],
+      "sex_scope": "not a female-specific engineering target",
+      "sign_convention": "as printed in source diagrams; not mapped to PHY joint axes",
+      "source_id": "NASA_OCHMO_HB004_REV_A",
+      "source_issue": "Table 7 title is Suited/Pressurized; repeated column heading says Suited Unpressurized. Title-based context retained, pending source review.",
+      "table": 7,
+      "units": "deg"
+    },
+    {
+      "combined_joint_feasibility": null,
+      "condition": "suited_pressurized",
+      "endpoints_as_printed_deg": {
+        "External Rotation": -5,
+        "Internal Rotation": 5
+      },
+      "id": "suited_pressurized_hip_internal_external_rotation",
+      "joint_label": "hip",
+      "mechanical_axis": null,
+      "mechanical_limit_deg": null,
+      "motion_label": "internal_external_rotation",
+      "pdf_pages": [
+        45
+      ],
+      "printed_pages": [
+        45
+      ],
+      "sex_scope": "not a female-specific engineering target",
+      "sign_convention": "as printed in source diagrams; not mapped to PHY joint axes",
+      "source_id": "NASA_OCHMO_HB004_REV_A",
+      "source_issue": "Table 7 title is Suited/Pressurized; repeated column heading says Suited Unpressurized. Title-based context retained, pending source review.",
+      "table": 7,
+      "units": "deg"
+    },
+    {
+      "combined_joint_feasibility": null,
+      "condition": "suited_pressurized",
+      "endpoints_as_printed_deg": {
+        "Extension": 0,
+        "Flexion": 0
+      },
+      "id": "suited_pressurized_torso_flexion_extension",
+      "joint_label": "torso",
+      "mechanical_axis": null,
+      "mechanical_limit_deg": null,
+      "motion_label": "flexion_extension",
+      "pdf_pages": [
+        45
+      ],
+      "printed_pages": [
+        45
+      ],
+      "sex_scope": "not a female-specific engineering target",
+      "sign_convention": "as printed in source diagrams; not mapped to PHY joint axes",
+      "source_id": "NASA_OCHMO_HB004_REV_A",
+      "source_issue": "Table 7 title is Suited/Pressurized; repeated column heading says Suited Unpressurized. Title-based context retained, pending source review.",
+      "table": 7,
+      "units": "deg"
+    },
+    {
+      "combined_joint_feasibility": null,
+      "condition": "suited_pressurized",
+      "endpoints_as_printed_deg": {
+        "Left Lean": 0,
+        "Right Lean": 0
+      },
+      "id": "suited_pressurized_torso_lateral_lean",
+      "joint_label": "torso",
+      "mechanical_axis": null,
+      "mechanical_limit_deg": null,
+      "motion_label": "lateral_lean",
+      "pdf_pages": [
+        45
+      ],
+      "printed_pages": [
+        45
+      ],
+      "sex_scope": "not a female-specific engineering target",
+      "sign_convention": "as printed in source diagrams; not mapped to PHY joint axes",
+      "source_id": "NASA_OCHMO_HB004_REV_A",
+      "source_issue": "Table 7 title is Suited/Pressurized; repeated column heading says Suited Unpressurized. Title-based context retained, pending source review.",
+      "table": 7,
+      "units": "deg"
+    },
+    {
+      "combined_joint_feasibility": null,
+      "condition": "suited_pressurized",
+      "endpoints_as_printed_deg": {
+        "CCW": 0,
+        "CW": 0
+      },
+      "id": "suited_pressurized_torso_axial_rotation",
+      "joint_label": "torso",
+      "mechanical_axis": null,
+      "mechanical_limit_deg": null,
+      "motion_label": "axial_rotation",
+      "pdf_pages": [
+        45
+      ],
+      "printed_pages": [
+        45
+      ],
+      "sex_scope": "not a female-specific engineering target",
+      "sign_convention": "as printed in source diagrams; not mapped to PHY joint axes",
+      "source_id": "NASA_OCHMO_HB004_REV_A",
+      "source_issue": "Table 7 title is Suited/Pressurized; repeated column heading says Suited Unpressurized. Title-based context retained, pending source review.",
+      "table": 7,
+      "units": "deg"
+    },
+    {
+      "combined_joint_feasibility": null,
+      "condition": "suited_pressurized",
+      "endpoints_as_printed_deg": {
+        "Extension": -10,
+        "Flexion": 115
+      },
+      "id": "suited_pressurized_shoulder_flexion_extension",
+      "joint_label": "shoulder",
+      "mechanical_axis": null,
+      "mechanical_limit_deg": null,
+      "motion_label": "flexion_extension",
+      "pdf_pages": [
+        45,
+        46
+      ],
+      "printed_pages": [
+        45,
+        46
+      ],
+      "sex_scope": "not a female-specific engineering target",
+      "sign_convention": "as printed in source diagrams; not mapped to PHY joint axes",
+      "source_id": "NASA_OCHMO_HB004_REV_A",
+      "source_issue": "Table 7 title is Suited/Pressurized; repeated column heading says Suited Unpressurized. Title-based context retained, pending source review.",
+      "table": 7,
+      "units": "deg"
+    },
+    {
+      "combined_joint_feasibility": null,
+      "condition": "suited_pressurized",
+      "endpoints_as_printed_deg": {
+        "Abduction": -110,
+        "Adduction": 0
+      },
+      "id": "suited_pressurized_shoulder_abduction_adduction",
+      "joint_label": "shoulder",
+      "mechanical_axis": null,
+      "mechanical_limit_deg": null,
+      "motion_label": "abduction_adduction",
+      "pdf_pages": [
+        46
+      ],
+      "printed_pages": [
+        46
+      ],
+      "sex_scope": "not a female-specific engineering target",
+      "sign_convention": "as printed in source diagrams; not mapped to PHY joint axes",
+      "source_id": "NASA_OCHMO_HB004_REV_A",
+      "source_issue": "Table 7 title is Suited/Pressurized; repeated column heading says Suited Unpressurized. Title-based context retained, pending source review.",
+      "table": 7,
+      "units": "deg"
+    },
+    {
+      "combined_joint_feasibility": null,
+      "condition": "suited_pressurized",
+      "endpoints_as_printed_deg": {
+        "Exterior Transverse Rotation": 120,
+        "Interior Transverse Rotation": 0
+      },
+      "id": "suited_pressurized_shoulder_additional_transverse_rotation",
+      "joint_label": "shoulder_additional",
+      "mechanical_axis": null,
+      "mechanical_limit_deg": null,
+      "motion_label": "transverse_rotation",
+      "pdf_pages": [
+        46
+      ],
+      "printed_pages": [
+        46
+      ],
+      "sex_scope": "not a female-specific engineering target",
+      "sign_convention": "as printed in source diagrams; not mapped to PHY joint axes",
+      "source_id": "NASA_OCHMO_HB004_REV_A",
+      "source_issue": "Table 7 title is Suited/Pressurized; repeated column heading says Suited Unpressurized. Title-based context retained, pending source review.",
+      "table": 7,
+      "units": "deg"
+    },
+    {
+      "combined_joint_feasibility": null,
+      "condition": "suited_pressurized",
+      "endpoints_as_printed_deg": {
+        "Lateral": -25,
+        "Medial": 60
+      },
+      "id": "suited_pressurized_shoulder_additional_lateral_medial_rotation",
+      "joint_label": "shoulder_additional",
+      "mechanical_axis": null,
+      "mechanical_limit_deg": null,
+      "motion_label": "lateral_medial_rotation",
+      "pdf_pages": [
+        46
+      ],
+      "printed_pages": [
+        46
+      ],
+      "sex_scope": "not a female-specific engineering target",
+      "sign_convention": "as printed in source diagrams; not mapped to PHY joint axes",
+      "source_id": "NASA_OCHMO_HB004_REV_A",
+      "source_issue": "Table 7 title is Suited/Pressurized; repeated column heading says Suited Unpressurized. Title-based context retained, pending source review.",
+      "table": 7,
+      "units": "deg"
+    },
+    {
+      "combined_joint_feasibility": null,
+      "condition": "suited_pressurized",
+      "endpoints_as_printed_deg": {
+        "Extension": 0,
+        "Flexion": 120
+      },
+      "id": "suited_pressurized_elbow_flexion_extension",
+      "joint_label": "elbow",
+      "mechanical_axis": null,
+      "mechanical_limit_deg": null,
+      "motion_label": "flexion_extension",
+      "pdf_pages": [
+        46
+      ],
+      "printed_pages": [
+        46
+      ],
+      "sex_scope": "not a female-specific engineering target",
+      "sign_convention": "as printed in source diagrams; not mapped to PHY joint axes",
+      "source_id": "NASA_OCHMO_HB004_REV_A",
+      "source_issue": "Table 7 title is Suited/Pressurized; repeated column heading says Suited Unpressurized. Title-based context retained, pending source review.",
+      "table": 7,
+      "units": "deg"
+    },
+    {
+      "combined_joint_feasibility": null,
+      "condition": "suited_pressurized",
+      "endpoints_as_printed_deg": {
+        "Extension": -60,
+        "Flexion": 50
+      },
+      "id": "suited_pressurized_wrist_extension_flexion",
+      "joint_label": "wrist",
+      "mechanical_axis": null,
+      "mechanical_limit_deg": null,
+      "motion_label": "extension_flexion",
+      "pdf_pages": [
+        46
+      ],
+      "printed_pages": [
+        46
+      ],
+      "sex_scope": "not a female-specific engineering target",
+      "sign_convention": "as printed in source diagrams; not mapped to PHY joint axes",
+      "source_id": "NASA_OCHMO_HB004_REV_A",
+      "source_issue": "Table 7 title is Suited/Pressurized; repeated column heading says Suited Unpressurized. Title-based context retained, pending source review.",
+      "table": 7,
+      "units": "deg"
+    },
+    {
+      "combined_joint_feasibility": null,
+      "condition": "suited_pressurized",
+      "endpoints_as_printed_deg": {
+        "Abduction (Radial Deviation)": 25,
+        "Adduction (Ulnar Deviation)": -25
+      },
+      "id": "suited_pressurized_wrist_radial_ulnar_deviation",
+      "joint_label": "wrist",
+      "mechanical_axis": null,
+      "mechanical_limit_deg": null,
+      "motion_label": "radial_ulnar_deviation",
+      "pdf_pages": [
+        46
+      ],
+      "printed_pages": [
+        46
+      ],
+      "sex_scope": "not a female-specific engineering target",
+      "sign_convention": "as printed in source diagrams; not mapped to PHY joint axes",
+      "source_id": "NASA_OCHMO_HB004_REV_A",
+      "source_issue": "Table 7 title is Suited/Pressurized; repeated column heading says Suited Unpressurized. Title-based context retained, pending source review.",
+      "table": 7,
+      "units": "deg"
+    },
+    {
+      "combined_joint_feasibility": null,
+      "condition": "suited_pressurized",
+      "endpoints_as_printed_deg": {
+        "Pronation": 80,
+        "Supination": -80
+      },
+      "id": "suited_pressurized_wrist_supination_pronation",
+      "joint_label": "wrist",
+      "mechanical_axis": null,
+      "mechanical_limit_deg": null,
+      "motion_label": "supination_pronation",
+      "pdf_pages": [
+        46
+      ],
+      "printed_pages": [
+        46
+      ],
+      "sex_scope": "not a female-specific engineering target",
+      "sign_convention": "as printed in source diagrams; not mapped to PHY joint axes",
+      "source_id": "NASA_OCHMO_HB004_REV_A",
+      "source_issue": "Table 7 title is Suited/Pressurized; repeated column heading says Suited Unpressurized. Title-based context retained, pending source review.",
+      "table": 7,
+      "units": "deg"
+    }
+  ],
+  "sources": [
+    {
+      "approved_on": "2023-12-20",
+      "does_not_qualify": [
+        "PHY_kinematics",
+        "mechanical_stops",
+        "0g_biomechanics",
+        "flight_compliance"
+      ],
+      "kind": "human_integration_reference",
+      "pages": 77,
+      "path": "references/NASA/ochmo-hb-004.pdf",
+      "revision": "A",
+      "sha256": "ae38d30adbe9b8dcedb89874dcc246d48e834c24bc54d1cfd770d5594c0ee4b5",
+      "source_id": "NASA_OCHMO_HB004_REV_A",
+      "supports": [
+        "posture_landmark_consistency",
+        "conditioned_human_motion_review",
+        "anthropometric_comparison"
+      ],
+      "title": "Anthropometry, Biomechanics, and Strength",
+      "uri": "https://www.nasa.gov/wp-content/uploads/2025/09/ochmo-hb-004.pdf"
+    },
+    {
+      "approved_on": "2014-06-05",
+      "does_not_qualify": [
+        "PHY_kinematics",
+        "mechanical_stops",
+        "0g_biomechanics",
+        "flight_compliance"
+      ],
+      "kind": "human_integration_background",
+      "pages": 1301,
+      "path": "references/NASA/human-integration-design-handbook-revision-1.pdf",
+      "revision": "1, archived copy with 2022 Section 4 replacement notice",
+      "sha256": "a6a8758b9116984d62fe4b7bc31fa9cf5da2479d57b7da9a3e31a00385ed303f",
+      "source_id": "NASA_HIDH_REV1_ARCHIVE",
+      "supports": [
+        "human_integration_background"
+      ],
+      "title": "Human Integration Design Handbook",
+      "uri": "https://www.nasa.gov/wp-content/uploads/2023/03/human-integration-design-handbook-revision-1.pdf"
+    },
+    {
+      "does_not_qualify": [
+        "PHY_joint_centers",
+        "physical_mass_inertia",
+        "flight_compliance"
+      ],
+      "kind": "human_integration_reference",
+      "revision": "web page accessed 2026-10-12; document revision not inferred",
+      "source_id": "NASA_3001_APPENDIX_E_WEB_2026_10_12",
+      "supports": [
+        "population_and_environment_scope",
+        "anatomical_vs_principal_axes"
+      ],
+      "title": "Appendix E: Physical Characteristics and Capabilities Data Sets",
+      "uri": "https://www.nasa.gov/reference/appendix-e-vol-2/"
+    }
+  ]
+}

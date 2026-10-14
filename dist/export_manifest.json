@@ -7,7 +7,7 @@
     },
     "canonical_json": {
       "path": "skeleton_canonical.json",
-      "sha256": "f31724a66fdc8dda0ab130af77818b21f62de5595f36a66930d9765ca4ebaff4"
+      "sha256": "e5396190c3690f453415457dc62c6e97445cbf5fc734df65619ec120f8ed307c"
     },
     "export_report": {
       "path": "../reports/export_report.json",
@@ -468,7 +468,7 @@
       "path": "skeleton/schema/bone.schema.json",
       "sha256": "96421caf1d462912ec9f64986d63b455f8275e5bfb074ce3cb59c226f77ea59b"
     },
-    "source_records_sha256": "69549551af984a06100b8398f50df47bf07a2e3e435b0594cd11bd4a8596b574"
+    "source_records_sha256": "c97f35a96885bd6b83bd183f2dfdc1eb223faa2668b5a89ce9ec95af71b59c3e"
   },
   "validated_ready": false,
   "validation_scope": "canonical_records_and_export_identity"

@@ -323,11 +323,35 @@
           "source_id": "thoracic_caliper_2011",
           "unit_scale": 1.0
         },
+        "body_lower_width_mm": {
+          "canonical_registration": null,
+          "meaning": "Mediolateral vertebral-body width at the inferior endplate.",
+          "method": "published_mean_identity",
+          "parameter": "T12_VBWi",
+          "source_id": "thoracic_caliper_2011",
+          "unit_scale": 1.0
+        },
+        "body_mid_width_mm": {
+          "canonical_registration": null,
+          "meaning": "Mediolateral vertebral-body width at the middle body level.",
+          "method": "published_mean_identity",
+          "parameter": "T12_VBWm",
+          "source_id": "thoracic_caliper_2011",
+          "unit_scale": 1.0
+        },
         "body_posterior_height_mm": {
           "canonical_registration": null,
           "meaning": "Posterior superior-to-inferior vertebral endplate span.",
           "method": "published_mean_identity",
           "parameter": "T12_VBHp",
+          "source_id": "thoracic_caliper_2011",
+          "unit_scale": 1.0
+        },
+        "body_upper_width_mm": {
+          "canonical_registration": null,
+          "meaning": "Mediolateral vertebral-body width at the superior endplate.",
+          "method": "published_mean_identity",
+          "parameter": "T12_VBWs",
           "source_id": "thoracic_caliper_2011",
           "unit_scale": 1.0
         }
@@ -356,6 +380,30 @@
           "meaning": "Anterior superior-to-inferior vertebral endplate span.",
           "method": "published_mean_identity",
           "parameter": "T11_VBHa",
+          "source_id": "thoracic_caliper_2011",
+          "unit_scale": 1.0
+        },
+        "body_lower_width_mm": {
+          "canonical_registration": null,
+          "meaning": "Mediolateral vertebral-body width at the inferior endplate.",
+          "method": "published_mean_identity",
+          "parameter": "T11_VBWi",
+          "source_id": "thoracic_caliper_2011",
+          "unit_scale": 1.0
+        },
+        "body_mid_width_mm": {
+          "canonical_registration": null,
+          "meaning": "Mediolateral vertebral-body width at the middle body level.",
+          "method": "published_mean_identity",
+          "parameter": "T11_VBWm",
+          "source_id": "thoracic_caliper_2011",
+          "unit_scale": 1.0
+        },
+        "body_upper_width_mm": {
+          "canonical_registration": null,
+          "meaning": "Mediolateral vertebral-body width at the superior endplate.",
+          "method": "published_mean_identity",
+          "parameter": "T11_VBWs",
           "source_id": "thoracic_caliper_2011",
           "unit_scale": 1.0
         }
@@ -388,11 +436,35 @@
           "source_id": "thoracic_caliper_2011",
           "unit_scale": 1.0
         },
+        "body_lower_width_mm": {
+          "canonical_registration": null,
+          "meaning": "Mediolateral vertebral-body width at the inferior endplate.",
+          "method": "published_mean_identity",
+          "parameter": "T10_VBWi",
+          "source_id": "thoracic_caliper_2011",
+          "unit_scale": 1.0
+        },
+        "body_mid_width_mm": {
+          "canonical_registration": null,
+          "meaning": "Mediolateral vertebral-body width at the middle body level.",
+          "method": "published_mean_identity",
+          "parameter": "T10_VBWm",
+          "source_id": "thoracic_caliper_2011",
+          "unit_scale": 1.0
+        },
         "body_posterior_height_mm": {
           "canonical_registration": null,
           "meaning": "Posterior superior-to-inferior vertebral endplate span.",
           "method": "published_mean_identity",
           "parameter": "T10_VBHp",
+          "source_id": "thoracic_caliper_2011",
+          "unit_scale": 1.0
+        },
+        "body_upper_width_mm": {
+          "canonical_registration": null,
+          "meaning": "Mediolateral vertebral-body width at the superior endplate.",
+          "method": "published_mean_identity",
+          "parameter": "T10_VBWs",
           "source_id": "thoracic_caliper_2011",
           "unit_scale": 1.0
         }
@@ -424,11 +496,35 @@
           "source_id": "thoracic_caliper_2011",
           "unit_scale": 1.0
         },
+        "body_lower_width_mm": {
+          "canonical_registration": null,
+          "meaning": "Mediolateral vertebral-body width at the inferior endplate.",
+          "method": "published_mean_identity",
+          "parameter": "T9_VBWi",
+          "source_id": "thoracic_caliper_2011",
+          "unit_scale": 1.0
+        },
+        "body_mid_width_mm": {
+          "canonical_registration": null,
+          "meaning": "Mediolateral vertebral-body width at the middle body level.",
+          "method": "published_mean_identity",
+          "parameter": "T9_VBWm",
+          "source_id": "thoracic_caliper_2011",
+          "unit_scale": 1.0
+        },
         "body_posterior_height_mm": {
           "canonical_registration": null,
           "meaning": "Posterior superior-to-inferior vertebral endplate span.",
           "method": "published_mean_identity",
           "parameter": "T9_VBHp",
+          "source_id": "thoracic_caliper_2011",
+          "unit_scale": 1.0
+        },
+        "body_upper_width_mm": {
+          "canonical_registration": null,
+          "meaning": "Mediolateral vertebral-body width at the superior endplate.",
+          "method": "published_mean_identity",
+          "parameter": "T9_VBWs",
           "source_id": "thoracic_caliper_2011",
           "unit_scale": 1.0
         }
@@ -460,11 +556,35 @@
           "source_id": "thoracic_caliper_2011",
           "unit_scale": 1.0
         },
+        "body_lower_width_mm": {
+          "canonical_registration": null,
+          "meaning": "Mediolateral vertebral-body width at the inferior endplate.",
+          "method": "published_mean_identity",
+          "parameter": "T8_VBWi",
+          "source_id": "thoracic_caliper_2011",
+          "unit_scale": 1.0
+        },
+        "body_mid_width_mm": {
+          "canonical_registration": null,
+          "meaning": "Mediolateral vertebral-body width at the middle body level.",
+          "method": "published_mean_identity",
+          "parameter": "T8_VBWm",
+          "source_id": "thoracic_caliper_2011",
+          "unit_scale": 1.0
+        },
         "body_posterior_height_mm": {
           "canonical_registration": null,
           "meaning": "Posterior superior-to-inferior vertebral endplate span.",
           "method": "published_mean_identity",
           "parameter": "T8_VBHp",
+          "source_id": "thoracic_caliper_2011",
+          "unit_scale": 1.0
+        },
+        "body_upper_width_mm": {
+          "canonical_registration": null,
+          "meaning": "Mediolateral vertebral-body width at the superior endplate.",
+          "method": "published_mean_identity",
+          "parameter": "T8_VBWs",
           "source_id": "thoracic_caliper_2011",
           "unit_scale": 1.0
         }
@@ -496,11 +616,35 @@
           "source_id": "thoracic_caliper_2011",
           "unit_scale": 1.0
         },
+        "body_lower_width_mm": {
+          "canonical_registration": null,
+          "meaning": "Mediolateral vertebral-body width at the inferior endplate.",
+          "method": "published_mean_identity",
+          "parameter": "T7_VBWi",
+          "source_id": "thoracic_caliper_2011",
+          "unit_scale": 1.0
+        },
+        "body_mid_width_mm": {
+          "canonical_registration": null,
+          "meaning": "Mediolateral vertebral-body width at the middle body level.",
+          "method": "published_mean_identity",
+          "parameter": "T7_VBWm",
+          "source_id": "thoracic_caliper_2011",
+          "unit_scale": 1.0
+        },
         "body_posterior_height_mm": {
           "canonical_registration": null,
           "meaning": "Posterior superior-to-inferior vertebral endplate span.",
           "method": "published_mean_identity",
           "parameter": "T7_VBHp",
+          "source_id": "thoracic_caliper_2011",
+          "unit_scale": 1.0
+        },
+        "body_upper_width_mm": {
+          "canonical_registration": null,
+          "meaning": "Mediolateral vertebral-body width at the superior endplate.",
+          "method": "published_mean_identity",
+          "parameter": "T7_VBWs",
           "source_id": "thoracic_caliper_2011",
           "unit_scale": 1.0
         }
@@ -532,6 +676,22 @@
           "source_id": "thoracic_caliper_2011",
           "unit_scale": 1.0
         },
+        "body_lower_width_mm": {
+          "canonical_registration": null,
+          "meaning": "Mediolateral vertebral-body width at the inferior endplate.",
+          "method": "published_mean_identity",
+          "parameter": "T6_VBWi",
+          "source_id": "thoracic_caliper_2011",
+          "unit_scale": 1.0
+        },
+        "body_mid_width_mm": {
+          "canonical_registration": null,
+          "meaning": "Mediolateral vertebral-body width at the middle body level.",
+          "method": "published_mean_identity",
+          "parameter": "T6_VBWm",
+          "source_id": "thoracic_caliper_2011",
+          "unit_scale": 1.0
+        },
         "body_posterior_height_mm": {
           "canonical_registration": null,
           "meaning": "Posterior superior-to-inferior vertebral endplate span.",
@@ -543,7 +703,8 @@
       },
       "geometry_qualified": false,
       "notes": [
-        "Endplate heights do not qualify whole vertebral dimensions, surface shape or articulation."
+        "Endplate heights do not qualify whole vertebral dimensions, surface shape or articulation.",
+        "T6 superior endplate width withheld because the printed aggregate means are inconsistent; the female row is retained as rejected native evidence."
       ],
       "rank": 12,
       "region": "spine",
@@ -568,11 +729,35 @@
           "source_id": "thoracic_caliper_2011",
           "unit_scale": 1.0
         },
+        "body_lower_width_mm": {
+          "canonical_registration": null,
+          "meaning": "Mediolateral vertebral-body width at the inferior endplate.",
+          "method": "published_mean_identity",
+          "parameter": "T5_VBWi",
+          "source_id": "thoracic_caliper_2011",
+          "unit_scale": 1.0
+        },
+        "body_mid_width_mm": {
+          "canonical_registration": null,
+          "meaning": "Mediolateral vertebral-body width at the middle body level.",
+          "method": "published_mean_identity",
+          "parameter": "T5_VBWm",
+          "source_id": "thoracic_caliper_2011",
+          "unit_scale": 1.0
+        },
         "body_posterior_height_mm": {
           "canonical_registration": null,
           "meaning": "Posterior superior-to-inferior vertebral endplate span.",
           "method": "published_mean_identity",
           "parameter": "T5_VBHp",
+          "source_id": "thoracic_caliper_2011",
+          "unit_scale": 1.0
+        },
+        "body_upper_width_mm": {
+          "canonical_registration": null,
+          "meaning": "Mediolateral vertebral-body width at the superior endplate.",
+          "method": "published_mean_identity",
+          "parameter": "T5_VBWs",
           "source_id": "thoracic_caliper_2011",
           "unit_scale": 1.0
         }
@@ -604,11 +789,35 @@
           "source_id": "thoracic_caliper_2011",
           "unit_scale": 1.0
         },
+        "body_lower_width_mm": {
+          "canonical_registration": null,
+          "meaning": "Mediolateral vertebral-body width at the inferior endplate.",
+          "method": "published_mean_identity",
+          "parameter": "T4_VBWi",
+          "source_id": "thoracic_caliper_2011",
+          "unit_scale": 1.0
+        },
+        "body_mid_width_mm": {
+          "canonical_registration": null,
+          "meaning": "Mediolateral vertebral-body width at the middle body level.",
+          "method": "published_mean_identity",
+          "parameter": "T4_VBWm",
+          "source_id": "thoracic_caliper_2011",
+          "unit_scale": 1.0
+        },
         "body_posterior_height_mm": {
           "canonical_registration": null,
           "meaning": "Posterior superior-to-inferior vertebral endplate span.",
           "method": "published_mean_identity",
           "parameter": "T4_VBHp",
+          "source_id": "thoracic_caliper_2011",
+          "unit_scale": 1.0
+        },
+        "body_upper_width_mm": {
+          "canonical_registration": null,
+          "meaning": "Mediolateral vertebral-body width at the superior endplate.",
+          "method": "published_mean_identity",
+          "parameter": "T4_VBWs",
           "source_id": "thoracic_caliper_2011",
           "unit_scale": 1.0
         }
@@ -640,11 +849,35 @@
           "source_id": "thoracic_caliper_2011",
           "unit_scale": 1.0
         },
+        "body_lower_width_mm": {
+          "canonical_registration": null,
+          "meaning": "Mediolateral vertebral-body width at the inferior endplate.",
+          "method": "published_mean_identity",
+          "parameter": "T3_VBWi",
+          "source_id": "thoracic_caliper_2011",
+          "unit_scale": 1.0
+        },
+        "body_mid_width_mm": {
+          "canonical_registration": null,
+          "meaning": "Mediolateral vertebral-body width at the middle body level.",
+          "method": "published_mean_identity",
+          "parameter": "T3_VBWm",
+          "source_id": "thoracic_caliper_2011",
+          "unit_scale": 1.0
+        },
         "body_posterior_height_mm": {
           "canonical_registration": null,
           "meaning": "Posterior superior-to-inferior vertebral endplate span.",
           "method": "published_mean_identity",
           "parameter": "T3_VBHp",
+          "source_id": "thoracic_caliper_2011",
+          "unit_scale": 1.0
+        },
+        "body_upper_width_mm": {
+          "canonical_registration": null,
+          "meaning": "Mediolateral vertebral-body width at the superior endplate.",
+          "method": "published_mean_identity",
+          "parameter": "T3_VBWs",
           "source_id": "thoracic_caliper_2011",
           "unit_scale": 1.0
         }
@@ -676,11 +909,35 @@
           "source_id": "thoracic_caliper_2011",
           "unit_scale": 1.0
         },
+        "body_lower_width_mm": {
+          "canonical_registration": null,
+          "meaning": "Mediolateral vertebral-body width at the inferior endplate.",
+          "method": "published_mean_identity",
+          "parameter": "T2_VBWi",
+          "source_id": "thoracic_caliper_2011",
+          "unit_scale": 1.0
+        },
+        "body_mid_width_mm": {
+          "canonical_registration": null,
+          "meaning": "Mediolateral vertebral-body width at the middle body level.",
+          "method": "published_mean_identity",
+          "parameter": "T2_VBWm",
+          "source_id": "thoracic_caliper_2011",
+          "unit_scale": 1.0
+        },
         "body_posterior_height_mm": {
           "canonical_registration": null,
           "meaning": "Posterior superior-to-inferior vertebral endplate span.",
           "method": "published_mean_identity",
           "parameter": "T2_VBHp",
+          "source_id": "thoracic_caliper_2011",
+          "unit_scale": 1.0
+        },
+        "body_upper_width_mm": {
+          "canonical_registration": null,
+          "meaning": "Mediolateral vertebral-body width at the superior endplate.",
+          "method": "published_mean_identity",
+          "parameter": "T2_VBWs",
           "source_id": "thoracic_caliper_2011",
           "unit_scale": 1.0
         }
@@ -712,11 +969,35 @@
           "source_id": "thoracic_caliper_2011",
           "unit_scale": 1.0
         },
+        "body_lower_width_mm": {
+          "canonical_registration": null,
+          "meaning": "Mediolateral vertebral-body width at the inferior endplate.",
+          "method": "published_mean_identity",
+          "parameter": "T1_VBWi",
+          "source_id": "thoracic_caliper_2011",
+          "unit_scale": 1.0
+        },
+        "body_mid_width_mm": {
+          "canonical_registration": null,
+          "meaning": "Mediolateral vertebral-body width at the middle body level.",
+          "method": "published_mean_identity",
+          "parameter": "T1_VBWm",
+          "source_id": "thoracic_caliper_2011",
+          "unit_scale": 1.0
+        },
         "body_posterior_height_mm": {
           "canonical_registration": null,
           "meaning": "Posterior superior-to-inferior vertebral endplate span.",
           "method": "published_mean_identity",
           "parameter": "T1_VBHp",
+          "source_id": "thoracic_caliper_2011",
+          "unit_scale": 1.0
+        },
+        "body_upper_width_mm": {
+          "canonical_registration": null,
+          "meaning": "Mediolateral vertebral-body width at the superior endplate.",
+          "method": "published_mean_identity",
+          "parameter": "T1_VBWs",
           "source_id": "thoracic_caliper_2011",
           "unit_scale": 1.0
         }
@@ -1487,6 +1768,10 @@
     "span_mm": 1676.4,
     "version": "1.0.0"
   },
+  "measurement_protocols": {
+    "path": "references/dim072/measurement_protocols.json",
+    "sha256": "b71cfd6cb2f40609ef334616b0c61637f65c702224d70a30307fb89acf25522f"
+  },
   "phy_commit": "2064af478d6554f66900f655afdd64c8869a16b5",
   "phy_ref_commit": "5d4cd1e841ec275580e6634fee760e9615f02c30",
   "schema_version": "PHY_DIM072_TABULAR_V1",
@@ -1673,21 +1958,34 @@
       "coordinate_frame": "Study-defined anatomical measurement axes; no spatial placement in the SOPHY frame.",
       "doi": "10.4184/asj.2011.5.1.20",
       "evidence_review": "Methods and selected numerical rows inspected; admitted for unscaled comparison dimensions only.",
-      "extraction": "PDF page 7 / printed page 26, Table 3, female anterior/posterior height columns; T11 posterior height quarantined.",
+      "extraction": "PDF page 7 / printed page 26, Table 3, female anterior/posterior heights and superior/middle/inferior body widths; T11 posterior height and T6 superior width quarantined.",
       "fabrication_qualified": false,
       "geometry_qualified": false,
       "kind": "primary_bone_morphometry",
       "limitations": [
         "Small female cohort, preserved specimens; no full vertebral shape.",
-        "T11 posterior height conflicts with narrative and resembles Table 2 chord length. Retained as rejected native evidence; no corrected measurement inferred."
+        "T11 posterior height conflicts with narrative and resembles Table 2 chord length. Retained as rejected native evidence; no corrected measurement inferred.",
+        "T6 superior-width all/male/female means disagree with cohort weighting; the female value is retained but not admitted."
       ],
       "locator": "https://www.asianspinejournal.org/upload/pdf/asj-5-20.pdf",
       "native_snapshot": {
         "path": "references/dim072/thoracic_caliper_2011.json",
-        "sha256": "cd902d282d15ea9abf6bfa9d54f4503d6b3f8ea9748d1f8a3cf30286ae3ba587"
+        "sha256": "21ea5530a035524ea2fd8b41a274f954fcf751ec0b88e5b44d4c72d672fd8d89"
       },
       "native_units": "mm",
       "publisher_license": "CC-BY-NC 3.0; full article and images not redistributed.",
+      "recovery_review": {
+        "added_admissible_fields": 35,
+        "added_rejected_fields": 1,
+        "date": "2026-10-14",
+        "method": "Published female means unchanged; fixed mm identity conversion; no SOPHY registration.",
+        "predecessor": {
+          "commit": "d8afe81b75c09719cbfe7c8f001b1075590c493c",
+          "path": "references/dim072/thoracic_caliper_2011.json",
+          "sha256": "cd902d282d15ea9abf6bfa9d54f4503d6b3f8ea9748d1f8a3cf30286ae3ba587"
+        },
+        "source_pdf_sha256": "a0acf52435e429df5ca92d250463f38c97c3708406e854296dd8620c5280cc5e"
+      },
       "retrieved_on": "2026-10-13",
       "retrieved_response_scope": "article",
       "retrieved_response_sha256": "a0acf52435e429df5ca92d250463f38c97c3708406e854296dd8620c5280cc5e",

@@ -8,6 +8,9 @@ bone = BoneSpec(
     articulations = [],
     # PHY-DIM-072: unscaled study statistics; whole-bone unknowns remain null.
     dimensions = {
+        'body_upper_width_mm': 23.03,
+        'body_mid_width_mm': 22.57,
+        'body_lower_width_mm': 25.25,
         'body_anterior_height_mm': 16.49,
         'body_posterior_height_mm': 16.58,
         'length_mm': None,
@@ -25,6 +28,9 @@ bone = BoneSpec(
     physics = {"mass_kg": None},
     references = ['https://www.asianspinejournal.org/upload/pdf/asj-5-20.pdf', 'references/dim072/catalog.json#/candidates/13'],
     metric_sources = {
+        'body_upper_width_mm': 'references/dim072/catalog.json#/candidates/13/fields/body_upper_width_mm',
+        'body_mid_width_mm': 'references/dim072/catalog.json#/candidates/13/fields/body_mid_width_mm',
+        'body_lower_width_mm': 'references/dim072/catalog.json#/candidates/13/fields/body_lower_width_mm',
         'body_anterior_height_mm': 'references/dim072/catalog.json#/candidates/13/fields/body_anterior_height_mm',
         'body_posterior_height_mm': 'references/dim072/catalog.json#/candidates/13/fields/body_posterior_height_mm',
     },

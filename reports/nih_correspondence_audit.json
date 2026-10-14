@@ -1,0 +1,586 @@
+{
+  "anatomically_qualified": false,
+  "audit_sha256": "0799b92d4db0e761d5e2c91700e759ef9deadbeba02a0e8d4195386dbf7b48fd",
+  "canonical_transform": null,
+  "fabrication_released": false,
+  "matched_canonical_ids": 36,
+  "matched_mesh_nodes": 46,
+  "rows": [
+    {
+      "bone_id": "BONE_C1",
+      "canonical_dimensions_adopted": false,
+      "landmarks_qualified": false,
+      "mapping_result": "label_correspondence_only",
+      "source_nodes": [
+        {
+          "index": 1066,
+          "mesh": 881,
+          "name": "VH_F_cervical_vertebra_1",
+          "triangles": 15952
+        }
+      ]
+    },
+    {
+      "bone_id": "BONE_C2",
+      "canonical_dimensions_adopted": false,
+      "landmarks_qualified": false,
+      "mapping_result": "label_correspondence_only",
+      "source_nodes": [
+        {
+          "index": 1067,
+          "mesh": 882,
+          "name": "VH_F_cervical_vertebra_2",
+          "triangles": 15426
+        }
+      ]
+    },
+    {
+      "bone_id": "BONE_C3",
+      "canonical_dimensions_adopted": false,
+      "landmarks_qualified": false,
+      "mapping_result": "label_correspondence_only",
+      "source_nodes": [
+        {
+          "index": 1068,
+          "mesh": 883,
+          "name": "VH_F_cervical_vertebra_3",
+          "triangles": 17926
+        }
+      ]
+    },
+    {
+      "bone_id": "BONE_C4",
+      "canonical_dimensions_adopted": false,
+      "landmarks_qualified": false,
+      "mapping_result": "label_correspondence_only",
+      "source_nodes": [
+        {
+          "index": 1069,
+          "mesh": 884,
+          "name": "VH_F_cervical_vertebra_4",
+          "triangles": 19724
+        }
+      ]
+    },
+    {
+      "bone_id": "BONE_C5",
+      "canonical_dimensions_adopted": false,
+      "landmarks_qualified": false,
+      "mapping_result": "label_correspondence_only",
+      "source_nodes": [
+        {
+          "index": 1070,
+          "mesh": 885,
+          "name": "VH_F_cervical_vertebra_5",
+          "triangles": 19472
+        }
+      ]
+    },
+    {
+      "bone_id": "BONE_C6",
+      "canonical_dimensions_adopted": false,
+      "landmarks_qualified": false,
+      "mapping_result": "label_correspondence_only",
+      "source_nodes": [
+        {
+          "index": 1071,
+          "mesh": 886,
+          "name": "VH_F_cervical_vertebra_6",
+          "triangles": 18848
+        }
+      ]
+    },
+    {
+      "bone_id": "BONE_C7",
+      "canonical_dimensions_adopted": false,
+      "landmarks_qualified": false,
+      "mapping_result": "label_correspondence_only",
+      "source_nodes": [
+        {
+          "index": 1072,
+          "mesh": 887,
+          "name": "VH_F_cervical_vertebra_7",
+          "triangles": 16724
+        }
+      ]
+    },
+    {
+      "bone_id": "BONE_COCCYX",
+      "canonical_dimensions_adopted": false,
+      "landmarks_qualified": false,
+      "mapping_result": "label_correspondence_only",
+      "source_nodes": [
+        {
+          "index": 964,
+          "mesh": 798,
+          "name": "VH_F_coccyx",
+          "triangles": 1390
+        }
+      ]
+    },
+    {
+      "bone_id": "BONE_FEMUR_L",
+      "canonical_dimensions_adopted": false,
+      "landmarks_qualified": false,
+      "mapping_result": "label_correspondence_only",
+      "source_nodes": [
+        {
+          "index": 1028,
+          "mesh": 844,
+          "name": "VH_F_femur_L",
+          "triangles": 8916
+        }
+      ]
+    },
+    {
+      "bone_id": "BONE_FEMUR_R",
+      "canonical_dimensions_adopted": false,
+      "landmarks_qualified": false,
+      "mapping_result": "label_correspondence_only",
+      "source_nodes": [
+        {
+          "index": 998,
+          "mesh": 818,
+          "name": "VH_F_femur_R",
+          "triangles": 8916
+        }
+      ]
+    },
+    {
+      "bone_id": "BONE_FIBULA_L",
+      "canonical_dimensions_adopted": false,
+      "landmarks_qualified": false,
+      "mapping_result": "label_correspondence_only",
+      "source_nodes": [
+        {
+          "index": 1046,
+          "mesh": 862,
+          "name": "VH_F_fibula_L",
+          "triangles": 1210
+        }
+      ]
+    },
+    {
+      "bone_id": "BONE_FIBULA_R",
+      "canonical_dimensions_adopted": false,
+      "landmarks_qualified": false,
+      "mapping_result": "label_correspondence_only",
+      "source_nodes": [
+        {
+          "index": 1015,
+          "mesh": 835,
+          "name": "VH_F_fibula_R",
+          "triangles": 1210
+        }
+      ]
+    },
+    {
+      "bone_id": "BONE_HIP_L",
+      "canonical_dimensions_adopted": false,
+      "landmarks_qualified": false,
+      "mapping_result": "label_correspondence_only",
+      "source_nodes": [
+        {
+          "index": 971,
+          "mesh": 802,
+          "name": "VH_F_pubis_compact_bone_L",
+          "triangles": 5376
+        },
+        {
+          "index": 967,
+          "mesh": 799,
+          "name": "VH_F_pubis_spongy_bone_L",
+          "triangles": 2312
+        },
+        {
+          "index": 975,
+          "mesh": 804,
+          "name": "VH_F_ilium_compact_bone_L",
+          "triangles": 12684
+        },
+        {
+          "index": 977,
+          "mesh": 805,
+          "name": "VH_F_ilium_spongy_bone_L",
+          "triangles": 6022
+        },
+        {
+          "index": 982,
+          "mesh": 808,
+          "name": "VH_F_ischium_compact_bone_L",
+          "triangles": 5392
+        },
+        {
+          "index": 985,
+          "mesh": 810,
+          "name": "VH_F_ischium_spongy_bone_L",
+          "triangles": 2296
+        }
+      ]
+    },
+    {
+      "bone_id": "BONE_HIP_R",
+      "canonical_dimensions_adopted": false,
+      "landmarks_qualified": false,
+      "mapping_result": "label_correspondence_only",
+      "source_nodes": [
+        {
+          "index": 970,
+          "mesh": 801,
+          "name": "VH_F_pubis_compact_bone_R",
+          "triangles": 5080
+        },
+        {
+          "index": 968,
+          "mesh": 800,
+          "name": "VH_F_pubis_spongy_bone_R",
+          "triangles": 2172
+        },
+        {
+          "index": 974,
+          "mesh": 803,
+          "name": "VH_F_ilium_compact_bone_R",
+          "triangles": 11810
+        },
+        {
+          "index": 978,
+          "mesh": 806,
+          "name": "VH_F_ilium_spongy_bone_R",
+          "triangles": 5597
+        },
+        {
+          "index": 981,
+          "mesh": 807,
+          "name": "VH_F_ischium_compact_bone_R",
+          "triangles": 5390
+        },
+        {
+          "index": 984,
+          "mesh": 809,
+          "name": "VH_F_ischium_spongy_bone_R",
+          "triangles": 2291
+        }
+      ]
+    },
+    {
+      "bone_id": "BONE_L1",
+      "canonical_dimensions_adopted": false,
+      "landmarks_qualified": false,
+      "mapping_result": "label_correspondence_only",
+      "source_nodes": [
+        {
+          "index": 1048,
+          "mesh": 863,
+          "name": "VH_F_lumbar_vertebra_1",
+          "triangles": 18208
+        }
+      ]
+    },
+    {
+      "bone_id": "BONE_L2",
+      "canonical_dimensions_adopted": false,
+      "landmarks_qualified": false,
+      "mapping_result": "label_correspondence_only",
+      "source_nodes": [
+        {
+          "index": 1049,
+          "mesh": 864,
+          "name": "VH_F_lumbar_vertebra_2",
+          "triangles": 17612
+        }
+      ]
+    },
+    {
+      "bone_id": "BONE_L3",
+      "canonical_dimensions_adopted": false,
+      "landmarks_qualified": false,
+      "mapping_result": "label_correspondence_only",
+      "source_nodes": [
+        {
+          "index": 1050,
+          "mesh": 865,
+          "name": "VH_F_lumbar_vertebra_3",
+          "triangles": 18540
+        }
+      ]
+    },
+    {
+      "bone_id": "BONE_L4",
+      "canonical_dimensions_adopted": false,
+      "landmarks_qualified": false,
+      "mapping_result": "label_correspondence_only",
+      "source_nodes": [
+        {
+          "index": 1051,
+          "mesh": 866,
+          "name": "VH_F_lumbar_vertebra_4",
+          "triangles": 19238
+        }
+      ]
+    },
+    {
+      "bone_id": "BONE_L5",
+      "canonical_dimensions_adopted": false,
+      "landmarks_qualified": false,
+      "mapping_result": "label_correspondence_only",
+      "source_nodes": [
+        {
+          "index": 1052,
+          "mesh": 867,
+          "name": "VH_F_lumbar_vertebra_5",
+          "triangles": 18002
+        }
+      ]
+    },
+    {
+      "bone_id": "BONE_PATELLA_L",
+      "canonical_dimensions_adopted": false,
+      "landmarks_qualified": false,
+      "mapping_result": "label_correspondence_only",
+      "source_nodes": [
+        {
+          "index": 1044,
+          "mesh": 860,
+          "name": "VH_F_patella_L",
+          "triangles": 414
+        }
+      ]
+    },
+    {
+      "bone_id": "BONE_PATELLA_R",
+      "canonical_dimensions_adopted": false,
+      "landmarks_qualified": false,
+      "mapping_result": "label_correspondence_only",
+      "source_nodes": [
+        {
+          "index": 1016,
+          "mesh": 836,
+          "name": "VH_F_patella_R",
+          "triangles": 414
+        }
+      ]
+    },
+    {
+      "bone_id": "BONE_SACRUM",
+      "canonical_dimensions_adopted": false,
+      "landmarks_qualified": false,
+      "mapping_result": "label_correspondence_only",
+      "source_nodes": [
+        {
+          "index": 963,
+          "mesh": 797,
+          "name": "VH_F_sacrum",
+          "triangles": 19636
+        }
+      ]
+    },
+    {
+      "bone_id": "BONE_T1",
+      "canonical_dimensions_adopted": false,
+      "landmarks_qualified": false,
+      "mapping_result": "label_correspondence_only",
+      "source_nodes": [
+        {
+          "index": 1054,
+          "mesh": 869,
+          "name": "VH_F_thoracic_vertebra_1",
+          "triangles": 15084
+        }
+      ]
+    },
+    {
+      "bone_id": "BONE_T10",
+      "canonical_dimensions_adopted": false,
+      "landmarks_qualified": false,
+      "mapping_result": "label_correspondence_only",
+      "source_nodes": [
+        {
+          "index": 1063,
+          "mesh": 878,
+          "name": "VH_F_thoracic_vertebra_10",
+          "triangles": 16402
+        }
+      ]
+    },
+    {
+      "bone_id": "BONE_T11",
+      "canonical_dimensions_adopted": false,
+      "landmarks_qualified": false,
+      "mapping_result": "label_correspondence_only",
+      "source_nodes": [
+        {
+          "index": 1064,
+          "mesh": 879,
+          "name": "VH_F_thoracic_vertebra_11",
+          "triangles": 15614
+        }
+      ]
+    },
+    {
+      "bone_id": "BONE_T12",
+      "canonical_dimensions_adopted": false,
+      "landmarks_qualified": false,
+      "mapping_result": "label_correspondence_only",
+      "source_nodes": [
+        {
+          "index": 1065,
+          "mesh": 880,
+          "name": "VH_F_thoracic_vertebra_12",
+          "triangles": 17736
+        }
+      ]
+    },
+    {
+      "bone_id": "BONE_T2",
+      "canonical_dimensions_adopted": false,
+      "landmarks_qualified": false,
+      "mapping_result": "label_correspondence_only",
+      "source_nodes": [
+        {
+          "index": 1055,
+          "mesh": 870,
+          "name": "VH_F_thoracic_vertebra_2",
+          "triangles": 15536
+        }
+      ]
+    },
+    {
+      "bone_id": "BONE_T3",
+      "canonical_dimensions_adopted": false,
+      "landmarks_qualified": false,
+      "mapping_result": "label_correspondence_only",
+      "source_nodes": [
+        {
+          "index": 1056,
+          "mesh": 871,
+          "name": "VH_F_thoracic_vertebra_3",
+          "triangles": 16232
+        }
+      ]
+    },
+    {
+      "bone_id": "BONE_T4",
+      "canonical_dimensions_adopted": false,
+      "landmarks_qualified": false,
+      "mapping_result": "label_correspondence_only",
+      "source_nodes": [
+        {
+          "index": 1057,
+          "mesh": 872,
+          "name": "VH_F_thoracic_vertebra_4",
+          "triangles": 15292
+        }
+      ]
+    },
+    {
+      "bone_id": "BONE_T5",
+      "canonical_dimensions_adopted": false,
+      "landmarks_qualified": false,
+      "mapping_result": "label_correspondence_only",
+      "source_nodes": [
+        {
+          "index": 1058,
+          "mesh": 873,
+          "name": "VH_F_thoracic_vertebra_5",
+          "triangles": 15846
+        }
+      ]
+    },
+    {
+      "bone_id": "BONE_T6",
+      "canonical_dimensions_adopted": false,
+      "landmarks_qualified": false,
+      "mapping_result": "label_correspondence_only",
+      "source_nodes": [
+        {
+          "index": 1059,
+          "mesh": 874,
+          "name": "VH_F_thoracic_vertebra_6",
+          "triangles": 16030
+        }
+      ]
+    },
+    {
+      "bone_id": "BONE_T7",
+      "canonical_dimensions_adopted": false,
+      "landmarks_qualified": false,
+      "mapping_result": "label_correspondence_only",
+      "source_nodes": [
+        {
+          "index": 1060,
+          "mesh": 875,
+          "name": "VH_F_thoracic_vertebra_7",
+          "triangles": 15848
+        }
+      ]
+    },
+    {
+      "bone_id": "BONE_T8",
+      "canonical_dimensions_adopted": false,
+      "landmarks_qualified": false,
+      "mapping_result": "label_correspondence_only",
+      "source_nodes": [
+        {
+          "index": 1061,
+          "mesh": 876,
+          "name": "VH_F_thoracic_vertebra_8",
+          "triangles": 16830
+        }
+      ]
+    },
+    {
+      "bone_id": "BONE_T9",
+      "canonical_dimensions_adopted": false,
+      "landmarks_qualified": false,
+      "mapping_result": "label_correspondence_only",
+      "source_nodes": [
+        {
+          "index": 1062,
+          "mesh": 877,
+          "name": "VH_F_thoracic_vertebra_9",
+          "triangles": 16486
+        }
+      ]
+    },
+    {
+      "bone_id": "BONE_TIBIA_L",
+      "canonical_dimensions_adopted": false,
+      "landmarks_qualified": false,
+      "mapping_result": "label_correspondence_only",
+      "source_nodes": [
+        {
+          "index": 1045,
+          "mesh": 861,
+          "name": "VH_F_tibia_L",
+          "triangles": 3490
+        }
+      ]
+    },
+    {
+      "bone_id": "BONE_TIBIA_R",
+      "canonical_dimensions_adopted": false,
+      "landmarks_qualified": false,
+      "mapping_result": "label_correspondence_only",
+      "source_nodes": [
+        {
+          "index": 1014,
+          "mesh": 834,
+          "name": "VH_F_tibia_R",
+          "triangles": 3490
+        }
+      ]
+    }
+  ],
+  "software_integrity_pass": true,
+  "source_asset": "NIH_3DPX_020992",
+  "source_frame": "native glTF scene",
+  "source_revision": "3576c8a8ae5766ab684a221813de13e0578003be",
+  "source_sha256": "472567a56896b9b7890508da6501fbf858e56aaa30745365f7a71ade782b529c",
+  "source_units": "m",
+  "unmapped_source_review": [
+    {
+      "reason": "Additional source label beyond typical canonical lumbar-1 through lumbar-5; do not renumber, merge or remove without anatomical review.",
+      "source_node": "VH_F_lumbar_vertebra_6"
+    }
+  ]
+}

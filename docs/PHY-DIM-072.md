@@ -1,15 +1,15 @@
 # PHY-DIM-072 — load-bearing dimension evidence
 
-13 October 2026. Execution record for the assignment to expand complete declared
+13 October 2026; recovery updated 14 October 2026. Execution record for the assignment to expand complete declared
 dimension maps from 36 to at least 72 of the existing 206 identities. Evidence
 requirements take precedence over the numerical target. The assignment permits
 delivery of the maximum defensible result with an explicit shortfall.
 
 **This slice reaches 40/206 complete maps (19.4%), with four new complete maps
 and 28 improved partial maps. It does not reach 72/206. The shortfall is 32 maps.**
-There are 93 newly traceable fields across 32 candidates. The other four
+There are 128 newly traceable fields (93 recovered and 35 added thoracic body widths) across 32 candidates. The other four
 candidates remain unresolved. All 36 previously complete dimension maps retain
-their values. The 24 selected vertebrae retain their original unknown whole-bone
+their values. The recovery adds superior, middle and inferior thoracic body widths with their own landmark names; one inconsistent width remains rejected. The 24 selected vertebrae retain their original unknown whole-bone
 length, width and thickness: body heights and canal clearances are separately
 named, never substituted into these fields.
 
@@ -104,24 +104,28 @@ evidence, not automatically a binding PHY requirement or compliance claim.
 
 ## NIH candidate disposition
 
-NIH entry pages and their embedded public metadata were inspected. This resolves
-some metadata that was unavailable in the previous checkpoint; it does not
-qualify the meshes. Entry versions are separate from HRA reference-object
-versions and source filenames.
+The recovery preserved and qualified the original acquisition work in
+[PHY-REF PR 1](https://github.com/SYSTEMS-OPERATOR/PHY-REF/pull/1). Three pinned
+original GLBs are now in remote LFS storage, independently retrievable with
+matching hashes and sizes. No source mesh is adopted as canonical osteometry.
 
-| Entry | Verified metadata | Disposition |
+| Entry | Recovered evidence | Supported scope / remaining qualification |
 | --- | --- | --- |
-| [3DPX-020984, Pelvis/Female](https://3d.nih.gov/entries/3DPX-020984) | Entry v2; HRA pelvis v1.2; input `VH_F_Pelvis.glb`, file ID 2107981, reported 1,593,336 bytes; CC-BY link resolves to 4.0; Visible Human lineage, Browne/Schlehlein attribution | Original binary retrieval returned HTTP 403. No byte hash, actual segmentation, axes, bounds or metric fidelity verified. Not admitted for measurements. |
-| [3DPX-020992, Body/Female](https://3d.nih.gov/entries/3DPX-020992) | Entry v2; HRA united-female v1.5; input `3d-vh-f-united.glb`, file ID 2107999, reported 211,624,968 bytes; CC-BY 4.0; Visible Human lineage | No full binary materialization. Organ/body label does not establish individual skeletal segmentation, native metrics or a measured full skeleton. Not admitted for measurements. |
-| [3DPX-014841](https://3d.nih.gov/entries/14841?version=1) | Entry v1; metadata declares printUnits mm, anonymized-patient lineage, individual L4/L5 and pelvic files; CC-BY-NC-SA; teaching photographs describe 130% prints | File-size and filename metadata inspected, but raw scale/frame and fidelity not independently verified. Combined sacrum/coccyx asset does not resolve separate bones automatically. No measurements or mesh redistribution. |
-| [3DPX-015843](https://3d.nih.gov/entries/15843?version=1) | Entry v1; remix of 014841; metadata declares mm and 100% real-world files, recommends 125% teaching prints; CC-BY-NC-SA; individual L4/L5, hips, sacrum and proximal-femur files | Documented artifact cleanup and sculpted restoration prevent automatic metric admission. Units/scale declaration is retained, but landmark displacement and original-imaging comparison remain unresolved. Proximal femur is not a complete femur. |
+| [020984 Pelvis/Female](https://3d.nih.gov/entries/3DPX-020984) | Entry v2 / HRA v1.2; VH_F_Pelvis.glb; 1,593,336 bytes; 14 meshes / 87,448 triangles; CC BY 4.0 | Native pelvic tissue components; four fused adult identities. Metric fidelity and landmarks remain unreviewed. |
+| [020986 Skin/Female](https://3d.nih.gov/entries/3DPX-020986) | Entry v3 / HRA v1.3; 3d-vh-f-skin.glb; 16,003,176 bytes; 266,696 triangles; CC BY 4.0 | Exterior comparison only; cannot supply bone dimensions. |
+| [020992 Body/Female](https://3d.nih.gov/entries/3DPX-020992) | Entry v2 / HRA v1.5; 3d-vh-f-united.glb; 211,624,968 bytes; 888 meshes / 5,557,599 triangles; CC BY 4.0 | Segmented pelvic/lower-limb and vertebral reference, including unmapped lumbar-6; not a complete skeleton or qualified dimension source. |
+| [014841 teaching entry](https://3d.nih.gov/entries/14841?version=1) | Prior metadata review: mm declaration, patient lineage, L4/L5 and pelvic files; CC-BY-NC-SA | No new acquisition or measurement; scale/frame and metric fidelity unverified. |
+| [015843 teaching remix](https://3d.nih.gov/entries/15843?version=1) | Prior metadata review: mm / real-world scale declaration, sculpted cleanup/restoration; CC-BY-NC-SA | No new acquisition or redistribution; restoration displacement and source-imaging comparison unresolved. |
 
-PHY-REF remains the intended home for original/reference geometry. No unqualified
-mesh or large imaging dataset was mirrored into PHY or PHY-REF. The two teaching
-entries' restricted licenses remain source attributes; repository Unlicense
-does not override third-party asset terms. This PR redistributes factual table
-extracts and original engineering descriptions, not source articles, images or
-NIH mesh derivatives.
+`references/nih_reference_correspondence.json` pins PHY-REF revision
+`3576c8a8ae5766ab684a221813de13e0578003be`, the original body hash and its audit
+hash. The offline correspondence CLI confirms 36 existing canonical labels
+against 46 source mesh nodes, with no adopted dimensions, landmarks or transform.
+The 36 matches include already complete identities and must not be counted as
+36 new maps. Native geometry remains independent of reduced previews and any
+future PHY registration. Original files stay in PHY-REF; no large mesh or raw
+imaging collection is added to PHY. Detailed custody, units, rights, bounds,
+coverage and limits are in PHY-REF's `reports/REFERENCE_QUALIFICATION.md`.
 
 ## Derivation, uncertainty and maturity
 
@@ -131,7 +135,9 @@ archive, which does not make them NIH-authored standards. Each source records
 the publication/revision, population subset, units, measurement axes, rights
 disposition, inspected method/table, tool version, uncertainty and limitations.
 Native facts are retained in separate hashed snapshots, including rejected
-measurements. Each canonical field has a provenance pointer to its reviewed
+measurements. The separately pinned measurement_protocols.json records anatomical
+landmark definitions and method locators for every admitted field, with unknown
+independent measurement-error bounds and registration uncertainty. Each canonical field has a provenance pointer to its reviewed
 native row and explicit dimensional meaning.
 
 All derivations in this slice use the published mean in millimeters unchanged.
@@ -140,10 +146,10 @@ left/right mirroring is performed. Published SD is preserved as variability, not
 treated as a measurement-error bound, allowable tolerance or individual fit
 guarantee. No direct registration to SOPHY 1676.4 mm has been established.
 
-Two native entries are deliberately rejected: C2 HT pending confirmation of
+Three native entries are deliberately rejected: C2 HT pending confirmation of
 odontoid/span semantics, and T11 posterior body height because its table value
 conflicts with the narrative maximum and resembles the chord-length row. Neither
-is corrected from neighboring levels. C1 has no centrum; no C1 body height is
+is corrected from neighboring levels. T6 superior body width is also withheld because its aggregate means conflict with cohort weighting. C1 has no centrum; no C1 body height is
 invented. Canal AP/transverse spans remain void measurements, not bone width or
 thickness.
 

@@ -15664,11 +15664,17 @@
         "invalid_keys": [],
         "known_keys": [
           "body_anterior_height_mm",
-          "body_posterior_height_mm"
+          "body_lower_width_mm",
+          "body_mid_width_mm",
+          "body_posterior_height_mm",
+          "body_upper_width_mm"
         ],
         "metric_source_declarations": {
           "body_anterior_height_mm": "references/dim072/catalog.json#/candidates/16/fields/body_anterior_height_mm",
-          "body_posterior_height_mm": "references/dim072/catalog.json#/candidates/16/fields/body_posterior_height_mm"
+          "body_lower_width_mm": "references/dim072/catalog.json#/candidates/16/fields/body_lower_width_mm",
+          "body_mid_width_mm": "references/dim072/catalog.json#/candidates/16/fields/body_mid_width_mm",
+          "body_posterior_height_mm": "references/dim072/catalog.json#/candidates/16/fields/body_posterior_height_mm",
+          "body_upper_width_mm": "references/dim072/catalog.json#/candidates/16/fields/body_upper_width_mm"
         },
         "status": "partial",
         "unknown_keys": [
@@ -15678,7 +15684,10 @@
         ],
         "values_mm": {
           "body_anterior_height_mm": 14.12,
+          "body_lower_width_mm": 26.92,
+          "body_mid_width_mm": 23.04,
           "body_posterior_height_mm": 14.63,
+          "body_upper_width_mm": 23.75,
           "length_mm": null,
           "thickness_mm": null,
           "width_mm": null
@@ -15732,7 +15741,7 @@
       "side": "midline",
       "source": {
         "path": "skeleton/bones/bone_t1.py",
-        "sha256": "88135229b853437ef728b9aa41634d941e8bcbafa420b508b34c0c31c8db11d7",
+        "sha256": "1fff8d594fd5f96973b1911be4cb7c4620ccfb47f14d1b3a1c15b677cdd3f957",
         "status": "present"
       }
     },
@@ -15767,11 +15776,17 @@
         "invalid_keys": [],
         "known_keys": [
           "body_anterior_height_mm",
-          "body_posterior_height_mm"
+          "body_lower_width_mm",
+          "body_mid_width_mm",
+          "body_posterior_height_mm",
+          "body_upper_width_mm"
         ],
         "metric_source_declarations": {
           "body_anterior_height_mm": "references/dim072/catalog.json#/candidates/7/fields/body_anterior_height_mm",
-          "body_posterior_height_mm": "references/dim072/catalog.json#/candidates/7/fields/body_posterior_height_mm"
+          "body_lower_width_mm": "references/dim072/catalog.json#/candidates/7/fields/body_lower_width_mm",
+          "body_mid_width_mm": "references/dim072/catalog.json#/candidates/7/fields/body_mid_width_mm",
+          "body_posterior_height_mm": "references/dim072/catalog.json#/candidates/7/fields/body_posterior_height_mm",
+          "body_upper_width_mm": "references/dim072/catalog.json#/candidates/7/fields/body_upper_width_mm"
         },
         "status": "partial",
         "unknown_keys": [
@@ -15781,7 +15796,10 @@
         ],
         "values_mm": {
           "body_anterior_height_mm": 19.78,
+          "body_lower_width_mm": 31.63,
+          "body_mid_width_mm": 27.07,
           "body_posterior_height_mm": 20.19,
+          "body_upper_width_mm": 27.97,
           "length_mm": null,
           "thickness_mm": null,
           "width_mm": null
@@ -15835,7 +15853,7 @@
       "side": "midline",
       "source": {
         "path": "skeleton/bones/bone_t10.py",
-        "sha256": "32abe74329ae79e4ad0200bb3976c93b8e06639ee7bb3e74821e968f44f8284a",
+        "sha256": "2444f3312c85a312a9a39197d344dfcb119b398b88dae652af1c6fdab58b7bdf",
         "status": "present"
       }
     },
@@ -15869,10 +15887,16 @@
       "dimensions": {
         "invalid_keys": [],
         "known_keys": [
-          "body_anterior_height_mm"
+          "body_anterior_height_mm",
+          "body_lower_width_mm",
+          "body_mid_width_mm",
+          "body_upper_width_mm"
         ],
         "metric_source_declarations": {
-          "body_anterior_height_mm": "references/dim072/catalog.json#/candidates/6/fields/body_anterior_height_mm"
+          "body_anterior_height_mm": "references/dim072/catalog.json#/candidates/6/fields/body_anterior_height_mm",
+          "body_lower_width_mm": "references/dim072/catalog.json#/candidates/6/fields/body_lower_width_mm",
+          "body_mid_width_mm": "references/dim072/catalog.json#/candidates/6/fields/body_mid_width_mm",
+          "body_upper_width_mm": "references/dim072/catalog.json#/candidates/6/fields/body_upper_width_mm"
         },
         "status": "partial",
         "unknown_keys": [
@@ -15882,6 +15906,9 @@
         ],
         "values_mm": {
           "body_anterior_height_mm": 20.96,
+          "body_lower_width_mm": 34.37,
+          "body_mid_width_mm": 29.76,
+          "body_upper_width_mm": 31.0,
           "length_mm": null,
           "thickness_mm": null,
           "width_mm": null
@@ -15935,7 +15962,7 @@
       "side": "midline",
       "source": {
         "path": "skeleton/bones/bone_t11.py",
-        "sha256": "3485c69c9c7b34631f5e270ecc5be340f7729619028df85a8c874eaf91b82eab",
+        "sha256": "f96305b161d8f8188d113e368b6b01b758ccff5135b0e8f3632d3d65e49c8f71",
         "status": "present"
       }
     },
@@ -15970,11 +15997,17 @@
         "invalid_keys": [],
         "known_keys": [
           "body_anterior_height_mm",
-          "body_posterior_height_mm"
+          "body_lower_width_mm",
+          "body_mid_width_mm",
+          "body_posterior_height_mm",
+          "body_upper_width_mm"
         ],
         "metric_source_declarations": {
           "body_anterior_height_mm": "references/dim072/catalog.json#/candidates/5/fields/body_anterior_height_mm",
-          "body_posterior_height_mm": "references/dim072/catalog.json#/candidates/5/fields/body_posterior_height_mm"
+          "body_lower_width_mm": "references/dim072/catalog.json#/candidates/5/fields/body_lower_width_mm",
+          "body_mid_width_mm": "references/dim072/catalog.json#/candidates/5/fields/body_mid_width_mm",
+          "body_posterior_height_mm": "references/dim072/catalog.json#/candidates/5/fields/body_posterior_height_mm",
+          "body_upper_width_mm": "references/dim072/catalog.json#/candidates/5/fields/body_upper_width_mm"
         },
         "status": "partial",
         "unknown_keys": [
@@ -15984,7 +16017,10 @@
         ],
         "values_mm": {
           "body_anterior_height_mm": 21.83,
+          "body_lower_width_mm": 37.67,
+          "body_mid_width_mm": 32.91,
           "body_posterior_height_mm": 29.35,
+          "body_upper_width_mm": 33.99,
           "length_mm": null,
           "thickness_mm": null,
           "width_mm": null
@@ -16038,7 +16074,7 @@
       "side": "midline",
       "source": {
         "path": "skeleton/bones/bone_t12.py",
-        "sha256": "9e105fde89f11d4ce62a9a8d9008c1fb57243a345ee0f3649c8c1100b1a4e760",
+        "sha256": "36553be1041cba47721eb694cea1f447e1bcf298af4118d31af353f49026abd8",
         "status": "present"
       }
     },
@@ -16073,11 +16109,17 @@
         "invalid_keys": [],
         "known_keys": [
           "body_anterior_height_mm",
-          "body_posterior_height_mm"
+          "body_lower_width_mm",
+          "body_mid_width_mm",
+          "body_posterior_height_mm",
+          "body_upper_width_mm"
         ],
         "metric_source_declarations": {
           "body_anterior_height_mm": "references/dim072/catalog.json#/candidates/15/fields/body_anterior_height_mm",
-          "body_posterior_height_mm": "references/dim072/catalog.json#/candidates/15/fields/body_posterior_height_mm"
+          "body_lower_width_mm": "references/dim072/catalog.json#/candidates/15/fields/body_lower_width_mm",
+          "body_mid_width_mm": "references/dim072/catalog.json#/candidates/15/fields/body_mid_width_mm",
+          "body_posterior_height_mm": "references/dim072/catalog.json#/candidates/15/fields/body_posterior_height_mm",
+          "body_upper_width_mm": "references/dim072/catalog.json#/candidates/15/fields/body_upper_width_mm"
         },
         "status": "partial",
         "unknown_keys": [
@@ -16087,7 +16129,10 @@
         ],
         "values_mm": {
           "body_anterior_height_mm": 15.25,
+          "body_lower_width_mm": 26.83,
+          "body_mid_width_mm": 23.16,
           "body_posterior_height_mm": 15.47,
+          "body_upper_width_mm": 23.6,
           "length_mm": null,
           "thickness_mm": null,
           "width_mm": null
@@ -16141,7 +16186,7 @@
       "side": "midline",
       "source": {
         "path": "skeleton/bones/bone_t2.py",
-        "sha256": "da74d368f3e7d0534e42ff953003add126fb99b292ffeb36e9c84d97fe234d69",
+        "sha256": "ffdfdf4de5fa6339d01e73d811f7a0f4b032ed47b8fc9e1c60574220c482dd7e",
         "status": "present"
       }
     },
@@ -16176,11 +16221,17 @@
         "invalid_keys": [],
         "known_keys": [
           "body_anterior_height_mm",
-          "body_posterior_height_mm"
+          "body_lower_width_mm",
+          "body_mid_width_mm",
+          "body_posterior_height_mm",
+          "body_upper_width_mm"
         ],
         "metric_source_declarations": {
           "body_anterior_height_mm": "references/dim072/catalog.json#/candidates/14/fields/body_anterior_height_mm",
-          "body_posterior_height_mm": "references/dim072/catalog.json#/candidates/14/fields/body_posterior_height_mm"
+          "body_lower_width_mm": "references/dim072/catalog.json#/candidates/14/fields/body_lower_width_mm",
+          "body_mid_width_mm": "references/dim072/catalog.json#/candidates/14/fields/body_mid_width_mm",
+          "body_posterior_height_mm": "references/dim072/catalog.json#/candidates/14/fields/body_posterior_height_mm",
+          "body_upper_width_mm": "references/dim072/catalog.json#/candidates/14/fields/body_upper_width_mm"
         },
         "status": "partial",
         "unknown_keys": [
@@ -16190,7 +16241,10 @@
         ],
         "values_mm": {
           "body_anterior_height_mm": 15.98,
+          "body_lower_width_mm": 25.35,
+          "body_mid_width_mm": 22.9,
           "body_posterior_height_mm": 16.26,
+          "body_upper_width_mm": 23.4,
           "length_mm": null,
           "thickness_mm": null,
           "width_mm": null
@@ -16244,7 +16298,7 @@
       "side": "midline",
       "source": {
         "path": "skeleton/bones/bone_t3.py",
-        "sha256": "ac57ff634c1c0e219429afa63d028a533f4f21727e9f713ca953a84399895c35",
+        "sha256": "b360da83957cbb2940eef1e68b049fa961452834af90579a858e5056408a4ebc",
         "status": "present"
       }
     },
@@ -16279,11 +16333,17 @@
         "invalid_keys": [],
         "known_keys": [
           "body_anterior_height_mm",
-          "body_posterior_height_mm"
+          "body_lower_width_mm",
+          "body_mid_width_mm",
+          "body_posterior_height_mm",
+          "body_upper_width_mm"
         ],
         "metric_source_declarations": {
           "body_anterior_height_mm": "references/dim072/catalog.json#/candidates/13/fields/body_anterior_height_mm",
-          "body_posterior_height_mm": "references/dim072/catalog.json#/candidates/13/fields/body_posterior_height_mm"
+          "body_lower_width_mm": "references/dim072/catalog.json#/candidates/13/fields/body_lower_width_mm",
+          "body_mid_width_mm": "references/dim072/catalog.json#/candidates/13/fields/body_mid_width_mm",
+          "body_posterior_height_mm": "references/dim072/catalog.json#/candidates/13/fields/body_posterior_height_mm",
+          "body_upper_width_mm": "references/dim072/catalog.json#/candidates/13/fields/body_upper_width_mm"
         },
         "status": "partial",
         "unknown_keys": [
@@ -16293,7 +16353,10 @@
         ],
         "values_mm": {
           "body_anterior_height_mm": 16.49,
+          "body_lower_width_mm": 25.25,
+          "body_mid_width_mm": 22.57,
           "body_posterior_height_mm": 16.58,
+          "body_upper_width_mm": 23.03,
           "length_mm": null,
           "thickness_mm": null,
           "width_mm": null
@@ -16347,7 +16410,7 @@
       "side": "midline",
       "source": {
         "path": "skeleton/bones/bone_t4.py",
-        "sha256": "fc68a2546d904687a75fee9af337a43822824a12933fe76ca32dbf93526e0b13",
+        "sha256": "aa385e42afa49e812df5cd24c12b0550344e89eec05ad26e5e300f60ead13c03",
         "status": "present"
       }
     },
@@ -16382,11 +16445,17 @@
         "invalid_keys": [],
         "known_keys": [
           "body_anterior_height_mm",
-          "body_posterior_height_mm"
+          "body_lower_width_mm",
+          "body_mid_width_mm",
+          "body_posterior_height_mm",
+          "body_upper_width_mm"
         ],
         "metric_source_declarations": {
           "body_anterior_height_mm": "references/dim072/catalog.json#/candidates/12/fields/body_anterior_height_mm",
-          "body_posterior_height_mm": "references/dim072/catalog.json#/candidates/12/fields/body_posterior_height_mm"
+          "body_lower_width_mm": "references/dim072/catalog.json#/candidates/12/fields/body_lower_width_mm",
+          "body_mid_width_mm": "references/dim072/catalog.json#/candidates/12/fields/body_mid_width_mm",
+          "body_posterior_height_mm": "references/dim072/catalog.json#/candidates/12/fields/body_posterior_height_mm",
+          "body_upper_width_mm": "references/dim072/catalog.json#/candidates/12/fields/body_upper_width_mm"
         },
         "status": "partial",
         "unknown_keys": [
@@ -16396,7 +16465,10 @@
         ],
         "values_mm": {
           "body_anterior_height_mm": 16.41,
+          "body_lower_width_mm": 24.6,
+          "body_mid_width_mm": 22.22,
           "body_posterior_height_mm": 17.64,
+          "body_upper_width_mm": 23.21,
           "length_mm": null,
           "thickness_mm": null,
           "width_mm": null
@@ -16450,7 +16522,7 @@
       "side": "midline",
       "source": {
         "path": "skeleton/bones/bone_t5.py",
-        "sha256": "933be2938ce8b4f5982529f0fb987575323f308e5f09e8a0768a3147208ff277",
+        "sha256": "e07c59214203b86be7751071eea57147e343ef7a1b24c125c07efec50e9ea4d8",
         "status": "present"
       }
     },
@@ -16485,10 +16557,14 @@
         "invalid_keys": [],
         "known_keys": [
           "body_anterior_height_mm",
+          "body_lower_width_mm",
+          "body_mid_width_mm",
           "body_posterior_height_mm"
         ],
         "metric_source_declarations": {
           "body_anterior_height_mm": "references/dim072/catalog.json#/candidates/11/fields/body_anterior_height_mm",
+          "body_lower_width_mm": "references/dim072/catalog.json#/candidates/11/fields/body_lower_width_mm",
+          "body_mid_width_mm": "references/dim072/catalog.json#/candidates/11/fields/body_mid_width_mm",
           "body_posterior_height_mm": "references/dim072/catalog.json#/candidates/11/fields/body_posterior_height_mm"
         },
         "status": "partial",
@@ -16499,6 +16575,8 @@
         ],
         "values_mm": {
           "body_anterior_height_mm": 16.95,
+          "body_lower_width_mm": 25.33,
+          "body_mid_width_mm": 22.58,
           "body_posterior_height_mm": 18.16,
           "length_mm": null,
           "thickness_mm": null,
@@ -16553,7 +16631,7 @@
       "side": "midline",
       "source": {
         "path": "skeleton/bones/bone_t6.py",
-        "sha256": "114e4c02c4cf9a5bccd5ec44384fb285c41a10ac92d59cf1b78c603a284ce06a",
+        "sha256": "de73c4ebee5d268954fa5818b20758f64cb65a9c9f1b26da1d4103671b589ea6",
         "status": "present"
       }
     },
@@ -16588,11 +16666,17 @@
         "invalid_keys": [],
         "known_keys": [
           "body_anterior_height_mm",
-          "body_posterior_height_mm"
+          "body_lower_width_mm",
+          "body_mid_width_mm",
+          "body_posterior_height_mm",
+          "body_upper_width_mm"
         ],
         "metric_source_declarations": {
           "body_anterior_height_mm": "references/dim072/catalog.json#/candidates/10/fields/body_anterior_height_mm",
-          "body_posterior_height_mm": "references/dim072/catalog.json#/candidates/10/fields/body_posterior_height_mm"
+          "body_lower_width_mm": "references/dim072/catalog.json#/candidates/10/fields/body_lower_width_mm",
+          "body_mid_width_mm": "references/dim072/catalog.json#/candidates/10/fields/body_mid_width_mm",
+          "body_posterior_height_mm": "references/dim072/catalog.json#/candidates/10/fields/body_posterior_height_mm",
+          "body_upper_width_mm": "references/dim072/catalog.json#/candidates/10/fields/body_upper_width_mm"
         },
         "status": "partial",
         "unknown_keys": [
@@ -16602,7 +16686,10 @@
         ],
         "values_mm": {
           "body_anterior_height_mm": 16.82,
+          "body_lower_width_mm": 26.84,
+          "body_mid_width_mm": 24.04,
           "body_posterior_height_mm": 18.38,
+          "body_upper_width_mm": 25.07,
           "length_mm": null,
           "thickness_mm": null,
           "width_mm": null
@@ -16656,7 +16743,7 @@
       "side": "midline",
       "source": {
         "path": "skeleton/bones/bone_t7.py",
-        "sha256": "8c63791a4e12c4f4b8a3e63532a0377b8f66543926176573c418a13cb04c4417",
+        "sha256": "90c356a70ee4ab76427281bf2b701518eb2a2c95b78f24c0153caf24f8ee85c6",
         "status": "present"
       }
     },
@@ -16691,11 +16778,17 @@
         "invalid_keys": [],
         "known_keys": [
           "body_anterior_height_mm",
-          "body_posterior_height_mm"
+          "body_lower_width_mm",
+          "body_mid_width_mm",
+          "body_posterior_height_mm",
+          "body_upper_width_mm"
         ],
         "metric_source_declarations": {
           "body_anterior_height_mm": "references/dim072/catalog.json#/candidates/9/fields/body_anterior_height_mm",
-          "body_posterior_height_mm": "references/dim072/catalog.json#/candidates/9/fields/body_posterior_height_mm"
+          "body_lower_width_mm": "references/dim072/catalog.json#/candidates/9/fields/body_lower_width_mm",
+          "body_mid_width_mm": "references/dim072/catalog.json#/candidates/9/fields/body_mid_width_mm",
+          "body_posterior_height_mm": "references/dim072/catalog.json#/candidates/9/fields/body_posterior_height_mm",
+          "body_upper_width_mm": "references/dim072/catalog.json#/candidates/9/fields/body_upper_width_mm"
         },
         "status": "partial",
         "unknown_keys": [
@@ -16705,7 +16798,10 @@
         ],
         "values_mm": {
           "body_anterior_height_mm": 18.46,
+          "body_lower_width_mm": 27.42,
+          "body_mid_width_mm": 24.88,
           "body_posterior_height_mm": 18.8,
+          "body_upper_width_mm": 25.97,
           "length_mm": null,
           "thickness_mm": null,
           "width_mm": null
@@ -16759,7 +16855,7 @@
       "side": "midline",
       "source": {
         "path": "skeleton/bones/bone_t8.py",
-        "sha256": "b97decff31bf2c02fe0464b8cc75fc7c0edcb6845b2245e8b9bba303b3cdcf14",
+        "sha256": "b5d599ad14de3e93143b5b047a7b6135f753b0a0a6d1ab70b9aca0418c89f6ee",
         "status": "present"
       }
     },
@@ -16794,11 +16890,17 @@
         "invalid_keys": [],
         "known_keys": [
           "body_anterior_height_mm",
-          "body_posterior_height_mm"
+          "body_lower_width_mm",
+          "body_mid_width_mm",
+          "body_posterior_height_mm",
+          "body_upper_width_mm"
         ],
         "metric_source_declarations": {
           "body_anterior_height_mm": "references/dim072/catalog.json#/candidates/8/fields/body_anterior_height_mm",
-          "body_posterior_height_mm": "references/dim072/catalog.json#/candidates/8/fields/body_posterior_height_mm"
+          "body_lower_width_mm": "references/dim072/catalog.json#/candidates/8/fields/body_lower_width_mm",
+          "body_mid_width_mm": "references/dim072/catalog.json#/candidates/8/fields/body_mid_width_mm",
+          "body_posterior_height_mm": "references/dim072/catalog.json#/candidates/8/fields/body_posterior_height_mm",
+          "body_upper_width_mm": "references/dim072/catalog.json#/candidates/8/fields/body_upper_width_mm"
         },
         "status": "partial",
         "unknown_keys": [
@@ -16808,7 +16910,10 @@
         ],
         "values_mm": {
           "body_anterior_height_mm": 19.35,
+          "body_lower_width_mm": 29.1,
+          "body_mid_width_mm": 25.31,
           "body_posterior_height_mm": 19.49,
+          "body_upper_width_mm": 26.81,
           "length_mm": null,
           "thickness_mm": null,
           "width_mm": null
@@ -16862,7 +16967,7 @@
       "side": "midline",
       "source": {
         "path": "skeleton/bones/bone_t9.py",
-        "sha256": "60f11d4296094483a6329d024b34300e8791a34a4b61f60b32c5062c7c305f64",
+        "sha256": "a9101d39c05e2e231c9a59c2020d28f9c2b02258b467327ebe453623e280022d",
         "status": "present"
       }
     },
@@ -22837,7 +22942,7 @@
     ]
   },
   "inputs": {
-    "canonical_records_sha256": "69549551af984a06100b8398f50df47bf07a2e3e435b0594cd11bd4a8596b574",
+    "canonical_records_sha256": "c97f35a96885bd6b83bd183f2dfdc1eb223faa2668b5a89ce9ec95af71b59c3e",
     "datasets": [
       {
         "bone_ids": [

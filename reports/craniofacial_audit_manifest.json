@@ -3,14 +3,14 @@
   "fabrication_released": false,
   "files": {
     "craniofacial_audit.json": {
-      "sha256": "4ad9e3c27b559bf020db5a4b1cf263887d112e9bc056959633111125eda1c8f5"
+      "sha256": "7e7ef6349a739e6b81d6153ac3da87286bab32706c4e10150bd5ef67c07465c6"
     },
     "craniofacial_audit.md": {
       "sha256": "ad760284026da17f2b69f68ea8e012239ade9e15ca0e07d215964c16212575ce"
     }
   },
   "inputs": {
-    "canonical_records_sha256": "69549551af984a06100b8398f50df47bf07a2e3e435b0594cd11bd4a8596b574",
+    "canonical_records_sha256": "c97f35a96885bd6b83bd183f2dfdc1eb223faa2668b5a89ce9ec95af71b59c3e",
     "catalog_sha256": "5d92a2ae9003700d8480d9c027f56d1876388dec58f83fcd4ce881aaf8ef6b40",
     "datasets": [
       {

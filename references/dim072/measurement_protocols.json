@@ -1,0 +1,165 @@
+{
+  "schema_version": "PHY_DIM072_PROTOCOL_V1",
+  "sources": {
+    "calcaneus_ct_2024": {
+      "fabrication_qualified": false,
+      "fields": {
+        "calcaneal_body_width_mm": {
+          "landmark_definition": "Medial-to-lateral body surfaces at the study measurement site; excludes any claim of full-bone width.",
+          "native_units": "mm"
+        },
+        "calcaneal_lateral_wall_height_mm": {
+          "landmark_definition": "Inferior body surface to superior lateral-wall surface at the study site; a local wall span.",
+          "native_units": "mm"
+        },
+        "length_mm": {
+          "landmark_definition": "Study maximum axial calcaneal span: posterior tuberosity to the anterior endpoint labelled talar point in Table 1; that source wording is retained.",
+          "native_units": "mm"
+        }
+      },
+      "geometry_qualified": false,
+      "source_locator": "Table 1, measurement definitions; Table 2 female columns.",
+      "uncertainty": "Published SD is cohort variation. Independent measurement-error bound and SOPHY fit uncertainty are unknown."
+    },
+    "cervical_ct_2021": {
+      "fabrication_qualified": false,
+      "fields": {
+        "body_height_mm": {
+          "landmark_definition": "Superior-to-inferior endplate intersections through the study corpus midline on coronal reformats.",
+          "native_units": "mm"
+        },
+        "spinal_canal_ap_mm": {
+          "landmark_definition": "Inner anterior/posterior canal boundaries on the selected axial plane, using the study midline and posterior-corpus alignment.",
+          "native_units": "mm"
+        },
+        "spinal_canal_width_mm": {
+          "landmark_definition": "Inner medial/lateral canal boundaries on that axial plane; this is a void span.",
+          "native_units": "mm"
+        }
+      },
+      "geometry_qualified": false,
+      "source_locator": "Image analysis; Figures 1-4; Table 2 female training subset.",
+      "uncertainty": "Published SD is cohort variation. Independent measurement-error bound and SOPHY fit uncertainty are unknown."
+    },
+    "lumbar_ct_2022": {
+      "fabrication_qualified": false,
+      "fields": {
+        "body_height_mm": {
+          "landmark_definition": "Study vertebral-body superior/inferior margins on the CT section; excludes posterior elements.",
+          "native_units": "mm"
+        },
+        "body_lower_ap_mm": {
+          "landmark_definition": "Anterior/posterior body margins at the lower vertebral level in the study CT measurement frame.",
+          "native_units": "mm"
+        },
+        "body_lower_width_mm": {
+          "landmark_definition": "Medial/lateral body margins at the lower vertebral level.",
+          "native_units": "mm"
+        },
+        "body_upper_ap_mm": {
+          "landmark_definition": "Anterior/posterior body margins at the upper vertebral level in the study CT measurement frame.",
+          "native_units": "mm"
+        },
+        "body_upper_width_mm": {
+          "landmark_definition": "Medial/lateral body margins at the upper vertebral level.",
+          "native_units": "mm"
+        }
+      },
+      "geometry_qualified": false,
+      "source_locator": "Methods and Figures 2-4; Table 1 Female group.",
+      "uncertainty": "Published SD is cohort variation. Independent measurement-error bound and SOPHY fit uncertainty are unknown."
+    },
+    "patella_caliper_2013": {
+      "fabrication_qualified": false,
+      "fields": {
+        "length_mm": {
+          "landmark_definition": "Superior patellar border to apex (PH).",
+          "native_units": "mm"
+        },
+        "thickness_mm": {
+          "landmark_definition": "Anterior patellar surface to posterior median ridge (PT); sides remain separate.",
+          "native_units": "mm"
+        },
+        "width_mm": {
+          "landmark_definition": "Medial-to-lateral patellar borders (PW); the table weight label is an explicitly recorded editorial interpretation.",
+          "native_units": "mm"
+        }
+      },
+      "geometry_qualified": false,
+      "source_locator": "PDF p2 Table 1 / p3 Table 4; Table 6 PW cross-check.",
+      "uncertainty": "Published SD is cohort variation. Independent measurement-error bound and SOPHY fit uncertainty are unknown."
+    },
+    "rib1_caliper_2022": {
+      "fabrication_qualified": false,
+      "fields": {
+        "midshaft_thickness_mm": {
+          "landmark_definition": "Minimum craniocaudal shaft span at the same groove.",
+          "native_units": "mm"
+        },
+        "midshaft_width_mm": {
+          "landmark_definition": "Maximum internal/external shaft span at the subclavian-artery groove.",
+          "native_units": "mm"
+        },
+        "tubercle_ventral_arc_mm": {
+          "landmark_definition": "Greater-curvature path from lateral articular-tubercle end to sternal end; excludes neck/head.",
+          "native_units": "mm"
+        },
+        "tubercle_ventral_chord_mm": {
+          "landmark_definition": "Straight span from dorsal articular-tubercle margin to ventral sternal end; excludes neck/head.",
+          "native_units": "mm"
+        }
+      },
+      "geometry_qualified": false,
+      "source_locator": "Tables 1 and 3; selected female side columns.",
+      "uncertainty": "Published SD is cohort variation. Independent measurement-error bound and SOPHY fit uncertainty are unknown."
+    },
+    "talus_ct_2016": {
+      "fabrication_qualified": false,
+      "fields": {
+        "length_mm": {
+          "landmark_definition": "Posterior/anterior talar apexes identified through sagittal CT layers in native anatomical orientation.",
+          "native_units": "mm"
+        },
+        "thickness_mm": {
+          "landmark_definition": "Trochlear superior/inferior apexes through sagittal CT layers; native Height is recorded under the declared thickness field without spatial registration.",
+          "native_units": "mm"
+        },
+        "width_mm": {
+          "landmark_definition": "Medial/lateral talar apexes identified through coronal CT layers.",
+          "native_units": "mm"
+        }
+      },
+      "geometry_qualified": false,
+      "source_locator": "Gross Measurements methods and Table 1 female left/right columns.",
+      "uncertainty": "Published SD is cohort variation. Independent measurement-error bound and SOPHY fit uncertainty are unknown."
+    },
+    "thoracic_caliper_2011": {
+      "fabrication_qualified": false,
+      "fields": {
+        "body_anterior_height_mm": {
+          "landmark_definition": "Superior/inferior endplates at the anterior body margin.",
+          "native_units": "mm"
+        },
+        "body_lower_width_mm": {
+          "landmark_definition": "Body medial/lateral boundaries at the inferior endplate.",
+          "native_units": "mm"
+        },
+        "body_mid_width_mm": {
+          "landmark_definition": "Body medial/lateral boundaries at the middle body level.",
+          "native_units": "mm"
+        },
+        "body_posterior_height_mm": {
+          "landmark_definition": "Superior/inferior endplates at the posterior body margin.",
+          "native_units": "mm"
+        },
+        "body_upper_width_mm": {
+          "landmark_definition": "Body medial/lateral boundaries at the superior endplate.",
+          "native_units": "mm"
+        }
+      },
+      "geometry_qualified": false,
+      "source_locator": "PDF p3 methods and p7 Table 3; printed pp22/26.",
+      "uncertainty": "Published SD is cohort variation. Independent measurement-error bound and SOPHY fit uncertainty are unknown."
+    }
+  }
+}

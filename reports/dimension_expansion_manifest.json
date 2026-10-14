@@ -3,12 +3,12 @@
   "fabrication_released": false,
   "files": {
     "dimension_expansion.json": {
-      "sha256": "e7b92d8bdcbf2c384ffd81373b693cfb06e40f700e219fe066117682a9d0dbec",
-      "size_bytes": 112145
+      "sha256": "78cafacaec7234f860ded4db90033c0dd6fc58f641a8e0db731ca7110a547b21",
+      "size_bytes": 114507
     },
     "dimension_expansion.md": {
-      "sha256": "5bf672d355e37762b2130134c919376792197f6f87baf6a8543ebe7544d6d232",
-      "size_bytes": 18234
+      "sha256": "63c2cd5aa646eee63d309d59895780eefeaeea4b6405a8bffc6ce890c3bf9f79",
+      "size_bytes": 21301
     }
   },
   "target_met": false

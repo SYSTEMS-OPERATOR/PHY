@@ -1,0 +1,164 @@
+[
+  {
+    "name": "full-pytest",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "-q"
+    ],
+    "cwd": "/workspace/scratch/0559b9211f09/PHY-dim072-recovery",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "passed": true,
+    "elapsed_seconds": 66.602,
+    "log_tail": "ualified_source_materials\n  /workspace/scratch/0559b9211f09/PHY-dim072-recovery/skeleton/base.py:363: UserWarning: Metrics for Trapezoid not found in dataset\n    warnings.warn(f\"Metrics for {self.name} not found in dataset\")\n\ntests/test_dataset_link.py::DatasetLinkTest::test_dataset_available_even_if_metrics_missing\ntests/test_validator.py::test_bone_count\ntests/test_validator.py::test_validator_blocks_unqualified_source_materials\n  /workspace/scratch/0559b9211f09/PHY-dim072-recovery/skeleton/base.py:363: UserWarning: Metrics for Triquetrum not found in dataset\n    warnings.warn(f\"Metrics for {self.name} not found in dataset\")\n\ntests/test_dataset_link.py::DatasetLinkTest::test_dataset_available_even_if_metrics_missing\ntests/test_validator.py::test_bone_count\ntests/test_validator.py::test_validator_blocks_unqualified_source_materials\n  /workspace/scratch/0559b9211f09/PHY-dim072-recovery/skeleton/base.py:363: UserWarning: Metrics for Vomer not found in dataset\n    warnings.warn(f\"Metrics for {self.name} not found in dataset\")\n\ntests/test_dataset_link.py::DatasetLinkTest::test_dataset_available_even_if_metrics_missing\ntests/test_validator.py::test_bone_count\ntests/test_validator.py::test_validator_blocks_unqualified_source_materials\n  /workspace/scratch/0559b9211f09/PHY-dim072-recovery/skeleton/base.py:363: UserWarning: Metrics for Zygomatic not found in dataset\n    warnings.warn(f\"Metrics for {self.name} not found in dataset\")\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n295 passed, 5 skipped, 328 warnings, 1014 subtests passed in 63.18s (0:01:03)\n"
+  },
+  {
+    "name": "engineering-repeat",
+    "command": [
+      "python",
+      "bin/audit_engineering.py",
+      "--dataset",
+      "female_21_baseline",
+      "--output-root",
+      "/workspace/scratch/0559b9211f09/verification/recovery-repeat"
+    ],
+    "cwd": "/workspace/scratch/0559b9211f09/PHY-dim072-recovery",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "passed": true,
+    "elapsed_seconds": 1.513,
+    "log_tail": "{\"completed\": true, \"fabrication_released\": false, \"metrics\": {\"canonical_record_present\": 206, \"dataset_binding_present\": 21, \"declared_anatomical_references_resolved\": 24, \"declared_dimensions_complete\": 40, \"dimensional_primitive_available\": 30, \"individual_display_identity\": 206, \"record_validation_pass\": 0, \"reference_declaration_present\": 45, \"source_module_present\": 206}, \"paths\": {\"json\": \"/workspace/scratch/0559b9211f09/verification/recovery-repeat/reports/engineering_audit.json\", \"manifest\": \"/workspace/scratch/0559b9211f09/verification/recovery-repeat/reports/engineering_audit_manifest.json\", \"markdown\": \"/workspace/scratch/0559b9211f09/verification/recovery-repeat/reports/engineering_audit.md\"}}\n"
+  },
+  {
+    "name": "dimensions-repeat",
+    "command": [
+      "python",
+      "bin/audit_dimension_expansion.py",
+      "--output-root",
+      "/workspace/scratch/0559b9211f09/verification/recovery-repeat"
+    ],
+    "cwd": "/workspace/scratch/0559b9211f09/PHY-dim072-recovery",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "passed": true,
+    "elapsed_seconds": 1.57,
+    "log_tail": "{\"completed\": true, \"declared_complete\": 40, \"evidence_integrity_pass\": true, \"fabrication_released\": false, \"improved_partial\": 28, \"record_validation_pass\": 0, \"remaining_to_target\": 32, \"target_met\": false}\n"
+  },
+  {
+    "name": "dimensions-target",
+    "command": [
+      "python",
+      "bin/audit_dimension_expansion.py",
+      "--output-root",
+      "/workspace/scratch/0559b9211f09/verification/recovery-repeat",
+      "--require-target"
+    ],
+    "cwd": "/workspace/scratch/0559b9211f09/PHY-dim072-recovery",
+    "exit_code": 2,
+    "expected_exit_code": 2,
+    "passed": true,
+    "elapsed_seconds": 1.317,
+    "log_tail": "{\"completed\": true, \"declared_complete\": 40, \"evidence_integrity_pass\": true, \"fabrication_released\": false, \"improved_partial\": 28, \"record_validation_pass\": 0, \"remaining_to_target\": 32, \"target_met\": false}\n"
+  },
+  {
+    "name": "craniofacial-repeat",
+    "command": [
+      "python",
+      "bin/audit_craniofacial.py",
+      "--output-root",
+      "/workspace/scratch/0559b9211f09/verification/recovery-repeat"
+    ],
+    "cwd": "/workspace/scratch/0559b9211f09/PHY-dim072-recovery",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "passed": true,
+    "elapsed_seconds": 1.264,
+    "log_tail": "{\"completed\": true, \"counts\": {\"canonical_records_present\": 17, \"individual_display_proxies\": 17, \"mechanically_defined_articulations\": 0, \"participating_bone_identities\": 17, \"qualitative_articulations\": 2, \"spatially_defined_regions\": 0, \"structural_regions\": 7}, \"fabrication_released\": false, \"paths\": {\"json\": \"/workspace/scratch/0559b9211f09/verification/recovery-repeat/reports/craniofacial_audit.json\", \"manifest\": \"/workspace/scratch/0559b9211f09/verification/recovery-repeat/reports/craniofacial_audit_manifest.json\", \"markdown\": \"/workspace/scratch/0559b9211f09/verification/recovery-repeat/reports/craniofacial_audit.md\"}}\n"
+  },
+  {
+    "name": "correspondence-repeat",
+    "command": [
+      "python",
+      "bin/audit_reference_correspondence.py",
+      "--reference-root",
+      "/workspace/scratch/0559b9211f09/PHY-REF",
+      "--output-root",
+      "/workspace/scratch/0559b9211f09/verification/recovery-repeat"
+    ],
+    "cwd": "/workspace/scratch/0559b9211f09/PHY-dim072-recovery",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "passed": true,
+    "elapsed_seconds": 0.444,
+    "log_tail": "{\"completed\": true, \"matched_ids\": 36, \"fabrication_released\": false}\n"
+  },
+  {
+    "name": "review-export-repeat",
+    "command": [
+      "python",
+      "bin/export_fabrication.py",
+      "--mode",
+      "review",
+      "--output-root",
+      "/workspace/scratch/0559b9211f09/verification/recovery-repeat"
+    ],
+    "cwd": "/workspace/scratch/0559b9211f09/PHY-dim072-recovery",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "passed": true,
+    "elapsed_seconds": 0.534,
+    "log_tail": "{\"fabrication_released\": false, \"mode\": \"review\", \"paths\": {\"bom\": \"/workspace/scratch/0559b9211f09/verification/recovery-repeat/exports/fabrication_bom.json\", \"canonical_json\": \"/workspace/scratch/0559b9211f09/verification/recovery-repeat/dist/skeleton_canonical.json\", \"export_report\": \"/workspace/scratch/0559b9211f09/verification/recovery-repeat/reports/export_report.json\", \"joint_table\": \"/workspace/scratch/0559b9211f09/verification/recovery-repeat/exports/joint_table.json\", \"manifest\": \"/workspace/scratch/0559b9211f09/verification/recovery-repeat/dist/export_manifest.json\", \"material_table\": \"/workspace/scratch/0559b9211f09/verification/recovery-repeat/exports/material_table.json\", \"reference_audit\": \"/workspace/scratch/0559b9211f09/verification/recovery-repeat/reports/reference_audit.json\", \"tf_tree\": \"/workspace/scratch/0559b9211f09/verification/recovery-repeat/dist/ros_tf_tree.json\", \"urdf_like\": \"/workspace/scratch/0559b9211f09/verification/recovery-repeat/dist/skeleton_urdf_like.json\", \"validation_report\": \"/workspace/scratch/0559b9211f09/verification/recovery-repeat/reports/validation_report.json\"}, \"published\": true, \"validated_ready\": false}\n"
+  },
+  {
+    "name": "validated-export-blocked",
+    "command": [
+      "python",
+      "bin/export_fabrication.py",
+      "--mode",
+      "validated",
+      "--output-root",
+      "/workspace/scratch/0559b9211f09/verification/recovery-repeat"
+    ],
+    "cwd": "/workspace/scratch/0559b9211f09/PHY-dim072-recovery",
+    "exit_code": 1,
+    "expected_exit_code": 1,
+    "passed": true,
+    "elapsed_seconds": 0.472,
+    "log_tail": "{\"code\": \"validation_failed\", \"diagnostic_report\": \"/workspace/scratch/0559b9211f09/verification/recovery-repeat/reports/export_failure.json\", \"mode\": \"validated\", \"published\": false}\n"
+  },
+  {
+    "name": "canon",
+    "command": [
+      "python",
+      "bin/export_sophy_canon.py",
+      "--height-mm",
+      "1676.4",
+      "--output",
+      "/workspace/scratch/0559b9211f09/verification/recovery-checks/canon.json",
+      "--validation-report",
+      "/workspace/scratch/0559b9211f09/verification/recovery-checks/canon-validation.json"
+    ],
+    "cwd": "/workspace/scratch/0559b9211f09/PHY-dim072-recovery",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "passed": true,
+    "elapsed_seconds": 0.398,
+    "log_tail": "canon_version=1.0.0 height_mm=1676.4 arm_span_mm=1676.4\ncanonical_geometry: /workspace/scratch/0559b9211f09/verification/recovery-checks/canon.json\nvalidation_report: /workspace/scratch/0559b9211f09/verification/recovery-checks/canon-validation.json\n"
+  },
+  {
+    "name": "diff-check",
+    "command": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "cwd": "/workspace/scratch/0559b9211f09/PHY-dim072-recovery",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "passed": true,
+    "elapsed_seconds": 0.019,
+    "log_tail": ""
+  }
+]

@@ -261,5 +261,5 @@ Detailed dimension values, dataset and source hashes, declarations, reference re
 ## Snapshot fingerprints
 
 - inventory_sha256: `960f6fe918c3018d1be33374f6f9c4a6cf026b30af2a5c5f5c1d5c7e8588b0e9`
-- canonical_records_sha256: `69549551af984a06100b8398f50df47bf07a2e3e435b0594cd11bd4a8596b574`
+- canonical_records_sha256: `c97f35a96885bd6b83bd183f2dfdc1eb223faa2668b5a89ce9ec95af71b59c3e`
 - display_parts_sha256: `d11a9e2ecd9f16f62ddab50c489a0d9b8b73b3ee22213bae0d1c4b6d43868d5e`

@@ -166,13 +166,15 @@ def build_studio_evidence(parts, *, root=ROOT, field=None):
     return evidence
 
 
-def studio_build_stamp(evidence, root=ROOT):
+def studio_build_stamp(evidence, root=ROOT, native_references=None):
     """Fingerprint the shipped viewer sources, without a self-referential HEAD."""
     paths = ("bin/export_phy_studio.py", "skeleton/visualization/studio_evidence.py",
              "studio/src/app.js", "studio/src/evidence.js", "studio/src/index.html", "studio/src/part_roles.js",
-             "studio/app.bundle.js", "studio/build.mjs", "studio/package-lock.json")
+             "studio/app.bundle.js", "studio/build.mjs", "studio/package-lock.json",
+             "skeleton/visualization/studio_references.py", "studio/reference_lock.json", "studio/src/native_reference.js")
     inputs = {path: sha256((Path(root) / path).read_bytes()) for path in paths}
     inputs["engineering_evidence"] = sha256(json_bytes(evidence))
+    inputs["native_reference_evidence"] = sha256(json_bytes(native_references))
     return {"engineering_revision": evidence["engineering_revision"],
             "evidence_input_sha256": evidence["input_sha256"],
             "package_input_sha256": sha256(json_bytes(inputs)), "inputs": inputs}

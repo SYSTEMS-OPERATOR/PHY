@@ -1,0 +1,5746 @@
+{
+  "assignment": "PHY-DIM-072",
+  "bones": [
+    {
+      "bone_id": "BONE_C1",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "C1 vertebra",
+      "region": "spine",
+      "side": "midline",
+      "source": {
+        "path": "skeleton/bones/bone_c1.py",
+        "sha256": "50f84a997dac5d9f3315290c53696a22f1cc572b5c65010cc6270a8dcd34047b",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_C2",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "C2 vertebra",
+      "region": "spine",
+      "side": "midline",
+      "source": {
+        "path": "skeleton/bones/bone_c2.py",
+        "sha256": "fb70ffeb9748a241086201deed7d56b27d0e315df04dd29a398d22d3b9fb980b",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_C3",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "C3 vertebra",
+      "region": "spine",
+      "side": "midline",
+      "source": {
+        "path": "skeleton/bones/bone_c3.py",
+        "sha256": "4c5ff07fdfdfdd3707e99fc41a7cc29c23973ccbc89be0261ec1e674adaa8334",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_C4",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "C4 vertebra",
+      "region": "spine",
+      "side": "midline",
+      "source": {
+        "path": "skeleton/bones/bone_c4.py",
+        "sha256": "7dcba28f2297eef55611818fedbd7fb3aa35fb09b65f4f1b88f0b3ffca229bcf",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_C5",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "C5 vertebra",
+      "region": "spine",
+      "side": "midline",
+      "source": {
+        "path": "skeleton/bones/bone_c5.py",
+        "sha256": "d6bce750e454521021e42eb85226b164c84cc9beb1fda130984b947e0f2318ef",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_C6",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "C6 vertebra",
+      "region": "spine",
+      "side": "midline",
+      "source": {
+        "path": "skeleton/bones/bone_c6.py",
+        "sha256": "cb978bc91aafd2dd2668ed641323dafb3a562e4c43a2f9630782a7419e934fb0",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_C7",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "C7 vertebra",
+      "region": "spine",
+      "side": "midline",
+      "source": {
+        "path": "skeleton/bones/bone_c7.py",
+        "sha256": "030f1a907cc3113f4aca8a58dc596aebc455dbb2723eab379ec16ee39afbb53b",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_CALCANEUS_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Calcaneus",
+      "region": "foot",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_calcaneus_l.py",
+        "sha256": "e28dd9ca45e6f8cffd19a67d600c75c42a882d5872a3d1bb0141374d1215e260",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_CALCANEUS_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Calcaneus",
+      "region": "foot",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_calcaneus_r.py",
+        "sha256": "843ec23424c11e4d8d0b82d9dc502259bc428873d685143ee51672164cc65450",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_CAPITATE_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Capitate",
+      "region": "hand",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_capitate_l.py",
+        "sha256": "97498a8fc093287f118d280d9bbd952ff9d03387c9b8934c11536789e21a5530",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_CAPITATE_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Capitate",
+      "region": "hand",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_capitate_r.py",
+        "sha256": "659bdec4164641793f478a6cd8a92a0532394460bc7ee2fd5d85b6f574ded8d0",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_CLAVICLE_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "metric_source_declarations": {
+          "density_kg_m3": "Clavicle",
+          "length_cm": "Clavicle",
+          "mass_g": "Clavicle",
+          "thickness_cm": "Clavicle",
+          "width_cm": "Clavicle"
+        },
+        "status": "complete",
+        "unknown_keys": [],
+        "values_mm": {
+          "length_mm": 140.0,
+          "thickness_mm": 12.0,
+          "width_mm": 12.0
+        }
+      },
+      "name": "Clavicle",
+      "region": "shoulder_girdle",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_clavicle_l.py",
+        "sha256": "a64684a6fc367dcecc92fb723c384c1e9c429c79a71181cd1f78c13104d197f2",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_CLAVICLE_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "metric_source_declarations": {
+          "density_kg_m3": "Clavicle",
+          "length_cm": "Clavicle",
+          "mass_g": "Clavicle",
+          "thickness_cm": "Clavicle",
+          "width_cm": "Clavicle"
+        },
+        "status": "complete",
+        "unknown_keys": [],
+        "values_mm": {
+          "length_mm": 140.0,
+          "thickness_mm": 12.0,
+          "width_mm": 12.0
+        }
+      },
+      "name": "Clavicle",
+      "region": "shoulder_girdle",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_clavicle_r.py",
+        "sha256": "5abacde7f3ad6cb1102faf5295912e6fd8d9beafd459099e55da265254f80b2b",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_COCCYX",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Coccyx",
+      "region": "spine",
+      "side": "midline",
+      "source": {
+        "path": "skeleton/bones/bone_coccyx.py",
+        "sha256": "6c5fdb6c2c8582119c72c75057944a4eece1e62dab762b73899901e56da56137",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_CUBOID_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Cuboid",
+      "region": "foot",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_cuboid_l.py",
+        "sha256": "8839c46bc852699d84d6fec4ed52c8a57bcd046643534d7840e003553c9fc53c",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_CUBOID_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Cuboid",
+      "region": "foot",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_cuboid_r.py",
+        "sha256": "2e34d7f1750028403aefae904500e3949acb1c99a78e49ed70082481089c9812",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_ETHMOID",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "metric_source_declarations": {},
+        "status": "complete",
+        "unknown_keys": [],
+        "values_mm": {
+          "length_mm": 50.0,
+          "thickness_mm": 4.0,
+          "width_mm": 50.0
+        }
+      },
+      "name": "Ethmoid",
+      "region": "skull",
+      "side": "midline",
+      "source": {
+        "path": "skeleton/bones/bone_ethmoid.py",
+        "sha256": "cd1ac8cb9ba7d0522c44f4d7314783f7239b8b397e03b3218afec11979211428",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_FEMUR_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "metric_source_declarations": {
+          "density_kg_m3": "Femur",
+          "length_cm": "Femur",
+          "mass_g": "Femur",
+          "thickness_cm": "Femur",
+          "width_cm": "Femur"
+        },
+        "status": "complete",
+        "unknown_keys": [],
+        "values_mm": {
+          "length_mm": 420.0,
+          "thickness_mm": 40.0,
+          "width_mm": 40.0
+        }
+      },
+      "name": "Femur",
+      "region": "lower_limb",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_femur_l.py",
+        "sha256": "d96ec48df404175fbc3c52e83c40f8c9dc476555379055d1ee00eb1b5a8868c4",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_FEMUR_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "metric_source_declarations": {
+          "density_kg_m3": "Femur",
+          "length_cm": "Femur",
+          "mass_g": "Femur",
+          "thickness_cm": "Femur",
+          "width_cm": "Femur"
+        },
+        "status": "complete",
+        "unknown_keys": [],
+        "values_mm": {
+          "length_mm": 420.0,
+          "thickness_mm": 40.0,
+          "width_mm": 40.0
+        }
+      },
+      "name": "Femur",
+      "region": "lower_limb",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_femur_r.py",
+        "sha256": "83e120ce10469e15ddfef22356db4ced121c86b4be770040934a281999253710",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_FIBULA_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "metric_source_declarations": {
+          "density_kg_m3": "Fibula",
+          "length_cm": "Fibula",
+          "mass_g": "Fibula",
+          "thickness_cm": "Fibula",
+          "width_cm": "Fibula"
+        },
+        "status": "complete",
+        "unknown_keys": [],
+        "values_mm": {
+          "length_mm": 355.0,
+          "thickness_mm": 15.0,
+          "width_mm": 15.0
+        }
+      },
+      "name": "Fibula",
+      "region": "lower_limb",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_fibula_l.py",
+        "sha256": "f9895518c34dcafdc26709114db6c3391355dbf0dbeb52c6ac2a52ed71c3ca1b",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_FIBULA_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "metric_source_declarations": {
+          "density_kg_m3": "Fibula",
+          "length_cm": "Fibula",
+          "mass_g": "Fibula",
+          "thickness_cm": "Fibula",
+          "width_cm": "Fibula"
+        },
+        "status": "complete",
+        "unknown_keys": [],
+        "values_mm": {
+          "length_mm": 355.0,
+          "thickness_mm": 15.0,
+          "width_mm": 15.0
+        }
+      },
+      "name": "Fibula",
+      "region": "lower_limb",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_fibula_r.py",
+        "sha256": "cf9f0ee15ad72e1f1f4436dd4e7f08b13551dc8d92de89877de22cc504449e09",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_FRONTAL",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "metric_source_declarations": {},
+        "status": "complete",
+        "unknown_keys": [],
+        "values_mm": {
+          "length_mm": 135.0,
+          "thickness_mm": 6.0,
+          "width_mm": 145.0
+        }
+      },
+      "name": "Frontal",
+      "region": "skull",
+      "side": "midline",
+      "source": {
+        "path": "skeleton/bones/bone_frontal.py",
+        "sha256": "255eecc3a0f54a9c153eefb53623363b9f5fc7bb45d0a96c5037ec470f32b449",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_HAMATE_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Hamate",
+      "region": "hand",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_hamate_l.py",
+        "sha256": "1dce45b958d16c0ffa8d2df5783dedd0ab2191073d23a3704e5a26b2712213d2",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_HAMATE_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Hamate",
+      "region": "hand",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_hamate_r.py",
+        "sha256": "f6c4e829d4cd4c16d196aca96c6989b185db63122c77b3937278453ab650c629",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_HIP_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "metric_source_declarations": {
+          "density_kg_m3": "HipBone",
+          "length_cm": "HipBone",
+          "mass_g": "HipBone",
+          "thickness_cm": "HipBone",
+          "width_cm": "HipBone"
+        },
+        "status": "complete",
+        "unknown_keys": [],
+        "values_mm": {
+          "length_mm": 230.0,
+          "thickness_mm": 50.0,
+          "width_mm": 140.0
+        }
+      },
+      "name": "Adult hip bone",
+      "region": "pelvis",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_hip_l.py",
+        "sha256": "611842c83bf471b37bb3ee80c4b2d6f981f81296224396d0f9c1dc7d0d32b251",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_HIP_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "metric_source_declarations": {
+          "density_kg_m3": "HipBone",
+          "length_cm": "HipBone",
+          "mass_g": "HipBone",
+          "thickness_cm": "HipBone",
+          "width_cm": "HipBone"
+        },
+        "status": "complete",
+        "unknown_keys": [],
+        "values_mm": {
+          "length_mm": 230.0,
+          "thickness_mm": 50.0,
+          "width_mm": 140.0
+        }
+      },
+      "name": "Adult hip bone",
+      "region": "pelvis",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_hip_r.py",
+        "sha256": "e343f52df510084450c0e48b1938e6163f36df2acca0ea4d5fee8859f3bfea59",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_HUMERUS_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "metric_source_declarations": {
+          "density_kg_m3": "Humerus",
+          "length_cm": "Humerus",
+          "mass_g": "Humerus",
+          "thickness_cm": "Humerus",
+          "width_cm": "Humerus"
+        },
+        "status": "complete",
+        "unknown_keys": [],
+        "values_mm": {
+          "length_mm": 310.0,
+          "thickness_mm": 30.0,
+          "width_mm": 30.0
+        }
+      },
+      "name": "Humerus",
+      "region": "upper_limb",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_humerus_l.py",
+        "sha256": "35ae5f384031d81f91169e21d9c426d665cdd0faa6730ff15c0e612fe9b84233",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_HUMERUS_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "metric_source_declarations": {
+          "density_kg_m3": "Humerus",
+          "length_cm": "Humerus",
+          "mass_g": "Humerus",
+          "thickness_cm": "Humerus",
+          "width_cm": "Humerus"
+        },
+        "status": "complete",
+        "unknown_keys": [],
+        "values_mm": {
+          "length_mm": 310.0,
+          "thickness_mm": 30.0,
+          "width_mm": 30.0
+        }
+      },
+      "name": "Humerus",
+      "region": "upper_limb",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_humerus_r.py",
+        "sha256": "75fb3de66f9a684540db7380963842c79663a74f55c0133a2698f8ca68676911",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_HYOID",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "metric_source_declarations": {},
+        "status": "complete",
+        "unknown_keys": [],
+        "values_mm": {
+          "length_mm": 25.0,
+          "thickness_mm": 10.0,
+          "width_mm": 35.0
+        }
+      },
+      "name": "Hyoid",
+      "region": "hyoid",
+      "side": "midline",
+      "source": {
+        "path": "skeleton/bones/bone_hyoid.py",
+        "sha256": "1fc7f11f28e8a7e3f754cc01da0dcf875f336a6da6223ae94656d2a778ee97a7",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_INCUS_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "metric_source_declarations": {},
+        "status": "complete",
+        "unknown_keys": [],
+        "values_mm": {
+          "length_mm": 8.0,
+          "thickness_mm": 3.0,
+          "width_mm": 4.0
+        }
+      },
+      "name": "Incus",
+      "region": "ear",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_incus_l.py",
+        "sha256": "5dc95a823070593d92cfe79788eaca7fa3b9522cfce6c08c07b8eec7c9a08672",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_INCUS_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "metric_source_declarations": {},
+        "status": "complete",
+        "unknown_keys": [],
+        "values_mm": {
+          "length_mm": 8.0,
+          "thickness_mm": 3.0,
+          "width_mm": 4.0
+        }
+      },
+      "name": "Incus",
+      "region": "ear",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_incus_r.py",
+        "sha256": "cace241502e4ee30a74919d54521cbba8e5ad70d8271f88d4924756e97bbf1b6",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_INFERIOR_NASAL_CONCHA_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Inferior Nasal Concha",
+      "region": "skull",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_inferior_nasal_concha_l.py",
+        "sha256": "e9253ccbf21a783df5f105293ca438fd223d2ade826f5f532a7491b051cbffb2",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_INFERIOR_NASAL_CONCHA_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Inferior Nasal Concha",
+      "region": "skull",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_inferior_nasal_concha_r.py",
+        "sha256": "f11171ce37b97280a10d0f1c145d4d875957603036022479daf5969cf923a435",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_INTERMEDIATE_CUNEIFORM_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Intermediate Cuneiform",
+      "region": "foot",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_intermediate_cuneiform_l.py",
+        "sha256": "322b7d7aeef87867531108259a49b218a03f949105eab32cc1be0ae71e325289",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_INTERMEDIATE_CUNEIFORM_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Intermediate Cuneiform",
+      "region": "foot",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_intermediate_cuneiform_r.py",
+        "sha256": "ac2b41bf5908e274a16abdf687028241f5b17b7d66ce69472b82fb1df92d059b",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_L1",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "L1 vertebra",
+      "region": "spine",
+      "side": "midline",
+      "source": {
+        "path": "skeleton/bones/bone_l1.py",
+        "sha256": "ee2a4b4a0523f7804ea0a6716e3a79cd2c585509fc2fffa51ffb88134c31015e",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_L2",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "L2 vertebra",
+      "region": "spine",
+      "side": "midline",
+      "source": {
+        "path": "skeleton/bones/bone_l2.py",
+        "sha256": "f7d2ffb73a4b6cbf6aaa77d39b386e251d3527b3b407eb3d96745ee62e8cabb9",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_L3",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "L3 vertebra",
+      "region": "spine",
+      "side": "midline",
+      "source": {
+        "path": "skeleton/bones/bone_l3.py",
+        "sha256": "6246e669c35f6f44eb709d119fc1ef67ba796476ba1aa4e748e8a2f1521c2628",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_L4",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "L4 vertebra",
+      "region": "spine",
+      "side": "midline",
+      "source": {
+        "path": "skeleton/bones/bone_l4.py",
+        "sha256": "4567cd4946a28cb1ff5ce11dbc3a6b411019a98f31e1c1b7200876ca7ae12e3f",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_L5",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "L5 vertebra",
+      "region": "spine",
+      "side": "midline",
+      "source": {
+        "path": "skeleton/bones/bone_l5.py",
+        "sha256": "d284c0b879d666bae72662ea5aba2529e6393284450f16843d794b6bd565e066",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_LACRIMAL_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Lacrimal",
+      "region": "skull",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_lacrimal_l.py",
+        "sha256": "57dde2a7324071abd235458bd9eda96497365637bad83c17a28dfbb3de8c87e1",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_LACRIMAL_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Lacrimal",
+      "region": "skull",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_lacrimal_r.py",
+        "sha256": "82f4325764c77c6e781e14aaf189f8696b22a8a0d052a06a707491f12208a902",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_LATERAL_CUNEIFORM_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Lateral Cuneiform",
+      "region": "foot",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_lateral_cuneiform_l.py",
+        "sha256": "c7446a0ffd32f1e93bb587715acc8e4c507152a3d05c29ab0ac5ec30cb89d932",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_LATERAL_CUNEIFORM_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Lateral Cuneiform",
+      "region": "foot",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_lateral_cuneiform_r.py",
+        "sha256": "4e5ff9d1ec362e8860c4ac94e375cdf9eca4c9a011c51eb473a29fb57f49254a",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_LUNATE_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Lunate",
+      "region": "hand",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_lunate_l.py",
+        "sha256": "21eed10b0e382f82790d09d1b66429ca7839d0b6b9ef10f477dcb9b8aea23552",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_LUNATE_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Lunate",
+      "region": "hand",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_lunate_r.py",
+        "sha256": "f28cf2191403f7e2f0730463f3339db7ed9784ace5655ccac886ebc2adcfc33b",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_MALLEUS_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "metric_source_declarations": {},
+        "status": "complete",
+        "unknown_keys": [],
+        "values_mm": {
+          "length_mm": 8.0,
+          "thickness_mm": 3.0,
+          "width_mm": 4.0
+        }
+      },
+      "name": "Malleus",
+      "region": "ear",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_malleus_l.py",
+        "sha256": "b996a1e0676541af7e4039883de63a3b2ee0218e43879431e6851ba838e53cdd",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_MALLEUS_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "metric_source_declarations": {},
+        "status": "complete",
+        "unknown_keys": [],
+        "values_mm": {
+          "length_mm": 8.0,
+          "thickness_mm": 3.0,
+          "width_mm": 4.0
+        }
+      },
+      "name": "Malleus",
+      "region": "ear",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_malleus_r.py",
+        "sha256": "b4df7d89d2e8e8599efae64d3ceed10b89ad40cc3909488d41318f09c66e6dc7",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_MANDIBLE",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [
+          "height_mm",
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "metric_source_declarations": {
+          "density_kg_m3": "Mandible",
+          "height_cm": "Mandible",
+          "length_cm": "Mandible",
+          "mass_g": "Mandible",
+          "thickness_cm": "Mandible"
+        },
+        "status": "complete",
+        "unknown_keys": [],
+        "values_mm": {
+          "height_mm": 70.0,
+          "length_mm": 130.0,
+          "thickness_mm": 13.0,
+          "width_mm": 120.0
+        }
+      },
+      "name": "Mandible",
+      "region": "skull",
+      "side": "midline",
+      "source": {
+        "path": "skeleton/bones/bone_mandible.py",
+        "sha256": "1d5034630710b3a614baeee2fdecba04880b54568ee87c04382f5f5b1544841d",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_MAXILLA_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Maxilla",
+      "region": "skull",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_maxilla_l.py",
+        "sha256": "bdb92e91913651e8873f9a760ed3e5283e9c3ebfcbe64d395fe79290dbc99411",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_MAXILLA_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Maxilla",
+      "region": "skull",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_maxilla_r.py",
+        "sha256": "196a1603b4972c80d0e6ad5b3f878dfb7e371524918ea5115f508e93b0de86d9",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_MEDIAL_CUNEIFORM_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Medial Cuneiform",
+      "region": "foot",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_medial_cuneiform_l.py",
+        "sha256": "c3b154f20a21e66b85fcdb2b3c8e775c9b71f21b3042c47d078df5ccdc8e1e8f",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_MEDIAL_CUNEIFORM_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Medial Cuneiform",
+      "region": "foot",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_medial_cuneiform_r.py",
+        "sha256": "4e67a2f5cd3b162b8330255f0698b6de3a31f8962eee88cbb10c1771df3e38ce",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_META1_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Metacarpal 1",
+      "region": "hand",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_meta1_l.py",
+        "sha256": "7dff39c3c603494d16954a36f5a791051f2a9f06180d0c1a1de519d36ed3ff00",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_META1_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Metacarpal 1",
+      "region": "hand",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_meta1_r.py",
+        "sha256": "2d602270b55d92f22597e3ee3df3cf1758e5e191fed4726bbf006915a8d985eb",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_META2_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Metacarpal 2",
+      "region": "hand",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_meta2_l.py",
+        "sha256": "e65d4e1475d1a0f9eb9ed604aa31713a04791892f0854bdc733b7a86a50d65ef",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_META2_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Metacarpal 2",
+      "region": "hand",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_meta2_r.py",
+        "sha256": "da2a324fd43d05902d0ed381c3eca5892a3c6f6b364176b900a91b41562b19bd",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_META3_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Metacarpal 3",
+      "region": "hand",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_meta3_l.py",
+        "sha256": "b98f1a1145d39fef6b6937c269da028aa221748d822e19ef463670248fc82a4c",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_META3_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Metacarpal 3",
+      "region": "hand",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_meta3_r.py",
+        "sha256": "4a0d73982e97793da8b3d24de57861ed930fb09b7aa9189cb45ae1169e6f99f6",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_META4_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Metacarpal 4",
+      "region": "hand",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_meta4_l.py",
+        "sha256": "a6757965e62328f667bc6f318bc778c18051daaecdcc22146e208310c46edd4b",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_META4_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Metacarpal 4",
+      "region": "hand",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_meta4_r.py",
+        "sha256": "880a64e0ee9afd13f32726813e6c6b0961c20f3c7f3a7b5c86290379339eaa56",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_META5_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Metacarpal 5",
+      "region": "hand",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_meta5_l.py",
+        "sha256": "ca25ff159e565e58feb1aba24d1e45b92d9f86c0938bb46c6f6010c0f84c22fa",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_META5_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Metacarpal 5",
+      "region": "hand",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_meta5_r.py",
+        "sha256": "9752d3bf5382a38b4a9bdec375f3e593b17d30bd7b4d3ac6b18bd3653bc728f8",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_MT1_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Metatarsal 1",
+      "region": "foot",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_mt1_l.py",
+        "sha256": "0650fd4669b34bb2ccdf18b7e963b98739f79aa0ed14b9593715d1aa638dbf6d",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_MT1_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Metatarsal 1",
+      "region": "foot",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_mt1_r.py",
+        "sha256": "407ed3fdcdf59f7d9fd4bf6fc366cf7aa0e72389e8e798ad299c1b654e2ce76f",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_MT2_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Metatarsal 2",
+      "region": "foot",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_mt2_l.py",
+        "sha256": "0180314086e49fd94ab1911b3751285b5580f51f24108f8d03aa329f2a2ece86",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_MT2_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Metatarsal 2",
+      "region": "foot",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_mt2_r.py",
+        "sha256": "f7addf8b0baa0c51d4a168464c04264a5ea2fa076640a68b1ac1031b6213b38c",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_MT3_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Metatarsal 3",
+      "region": "foot",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_mt3_l.py",
+        "sha256": "90736b78e1898d1517492f5d80af6f20bfac355b0deb8a0578a73eb3f9f0a9fe",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_MT3_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Metatarsal 3",
+      "region": "foot",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_mt3_r.py",
+        "sha256": "180f3b2e6002031530016376f709ed4e2617130125346d6e4b9452a6ef4f037b",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_MT4_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Metatarsal 4",
+      "region": "foot",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_mt4_l.py",
+        "sha256": "004bbc3bf4a3e1bf0ec093f5eefec59dc4c6b856c4ddf37ed44d0df006626c2d",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_MT4_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Metatarsal 4",
+      "region": "foot",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_mt4_r.py",
+        "sha256": "ade25bdff5cf8dfadd5eecc7fee9f78b568c321d1552832166230a1ae7c0fa44",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_MT5_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Metatarsal 5",
+      "region": "foot",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_mt5_l.py",
+        "sha256": "b599925bfb6d78b3b1808176aeee883d87e613056eec440aa28439f87dfeaf6d",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_MT5_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Metatarsal 5",
+      "region": "foot",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_mt5_r.py",
+        "sha256": "244f29eaf89c60fcd129973289d2233b39220e0d2017314a025b10a0c7a40ed7",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_NASAL_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Nasal",
+      "region": "skull",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_nasal_l.py",
+        "sha256": "3683c2420b33666da0d70ae1bf8ea9651c0cb067ecbc47b1008fe6c7b231042f",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_NASAL_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Nasal",
+      "region": "skull",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_nasal_r.py",
+        "sha256": "73b658e9da8821f0fc070a38068283cf8169ab9cfda4dfcd3fe597716ffe9ac6",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_NAVICULAR_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Navicular",
+      "region": "foot",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_navicular_l.py",
+        "sha256": "1ef384eebb1538d605ccf04535c1387cf572a7c13587cbe2a7e5835b41c83339",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_NAVICULAR_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Navicular",
+      "region": "foot",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_navicular_r.py",
+        "sha256": "e4d0cb4d96fa20ece7480bbf2cda799ff75639b9b042d663a5372c148f3169a5",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_OCCIPITAL",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "metric_source_declarations": {},
+        "status": "complete",
+        "unknown_keys": [],
+        "values_mm": {
+          "length_mm": 120.0,
+          "thickness_mm": 6.0,
+          "width_mm": 110.0
+        }
+      },
+      "name": "Occipital",
+      "region": "skull",
+      "side": "midline",
+      "source": {
+        "path": "skeleton/bones/bone_occipital.py",
+        "sha256": "92f8f66cdf2e26c219ad407b8618a78211d2a32558d5c8dec42e496aafcc4b9f",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_PALATINE_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Palatine",
+      "region": "skull",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_palatine_l.py",
+        "sha256": "771b5d9b2a403c4a8f8fc3568ed8d7c341cfa986f906f36aa942671dface3db4",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_PALATINE_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Palatine",
+      "region": "skull",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_palatine_r.py",
+        "sha256": "327de47feb76cbb89ac9b989e0706df41b3d2cb887ba862ec7c3a2b07397c4bd",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_PAR_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "metric_source_declarations": {},
+        "status": "complete",
+        "unknown_keys": [],
+        "values_mm": {
+          "length_mm": 140.0,
+          "thickness_mm": 5.0,
+          "width_mm": 100.0
+        }
+      },
+      "name": "Parietal",
+      "region": "skull",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_par_l.py",
+        "sha256": "7512e30a8da357e09d882776cfce8589d41cdc4da00162addea31df463c41cd7",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_PAR_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "metric_source_declarations": {},
+        "status": "complete",
+        "unknown_keys": [],
+        "values_mm": {
+          "length_mm": 140.0,
+          "thickness_mm": 5.0,
+          "width_mm": 100.0
+        }
+      },
+      "name": "Parietal",
+      "region": "skull",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_par_r.py",
+        "sha256": "566b924f14e0221795bf414973955bad5eb9b5ba859fdea49b42f33d8b985070",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_PATELLA_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Patella",
+      "region": "lower_limb",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_patella_l.py",
+        "sha256": "78a6a855a9f69847862eeb6a80dce71786dc734fe3ae07c5f3554674ce216924",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_PATELLA_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Patella",
+      "region": "lower_limb",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_patella_r.py",
+        "sha256": "a3f6bc97ef92d71a6d1787571e05032700e894a204ab18d10edbb1cae2be1987",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_PHAL_1_1_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Hand digit 1 phalanx 1",
+      "region": "hand",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_phal_1_1_l.py",
+        "sha256": "199d3979f18fb1ec499f2af13b881046a669500407869cf1d67a9fb1a9903210",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_PHAL_1_1_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Hand digit 1 phalanx 1",
+      "region": "hand",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_phal_1_1_r.py",
+        "sha256": "6aaa0ca063950289a05c3a7fc5b70661cb0cd67f9c5c893ec541dff48edc14a4",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_PHAL_1_2_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Hand digit 1 phalanx 2",
+      "region": "hand",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_phal_1_2_l.py",
+        "sha256": "d70511ce70a6edbf7dd3660fe9ccd259bdae81439215088ead3f2e44fe99cb6d",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_PHAL_1_2_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Hand digit 1 phalanx 2",
+      "region": "hand",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_phal_1_2_r.py",
+        "sha256": "e6f95ec431557efa43cf27d1e2bfbc1f6685aaa79fa9d4ff316109bd68d1f247",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_PHAL_2_1_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Hand digit 2 phalanx 1",
+      "region": "hand",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_phal_2_1_l.py",
+        "sha256": "49aa3db18e7fbc6079c17d4f3d1432fefee47057d6d55c649aabaa8a2557a306",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_PHAL_2_1_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Hand digit 2 phalanx 1",
+      "region": "hand",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_phal_2_1_r.py",
+        "sha256": "18f8c2be5abcf97e7a5c0ea53208676f00b21328776fcc5456abbe1e716bbefd",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_PHAL_2_2_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Hand digit 2 phalanx 2",
+      "region": "hand",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_phal_2_2_l.py",
+        "sha256": "55f5a8ca62e998d7df33cfd4d40df081345d285dfd8aec6a77a39e2218a3ed9b",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_PHAL_2_2_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Hand digit 2 phalanx 2",
+      "region": "hand",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_phal_2_2_r.py",
+        "sha256": "5f00a4753850b8b209c48e9ddae67543d504797bc87f6851600f3aa1c0b4c5a4",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_PHAL_2_3_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Hand digit 2 phalanx 3",
+      "region": "hand",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_phal_2_3_l.py",
+        "sha256": "d49227864249698f2c63337475e42f323ccdbdfce5d11935ce8e9d22ff8b6511",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_PHAL_2_3_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Hand digit 2 phalanx 3",
+      "region": "hand",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_phal_2_3_r.py",
+        "sha256": "f20b2d5036b5708f3f72f9578c6974231831ce728a9931ec4607c8a2d4ba9025",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_PHAL_3_1_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Hand digit 3 phalanx 1",
+      "region": "hand",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_phal_3_1_l.py",
+        "sha256": "f65306b2eaadc62f55945e42b66de3c223c65fc1fccf739775b98142e0890f4c",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_PHAL_3_1_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Hand digit 3 phalanx 1",
+      "region": "hand",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_phal_3_1_r.py",
+        "sha256": "0c1597ebd3de1f626e008b7dc43ca02fda4ebb6304802919c02b1e8b0183fe9c",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_PHAL_3_2_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Hand digit 3 phalanx 2",
+      "region": "hand",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_phal_3_2_l.py",
+        "sha256": "c44966f1baa4cf5bae0f170e3c1c761e5012c9effc5a357da338bbaa4377cb6f",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_PHAL_3_2_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Hand digit 3 phalanx 2",
+      "region": "hand",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_phal_3_2_r.py",
+        "sha256": "e115964599b789a34ee6557e8eb7ffd5e80f6db4e5ddddd7ffbabc7e6afc3756",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_PHAL_3_3_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Hand digit 3 phalanx 3",
+      "region": "hand",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_phal_3_3_l.py",
+        "sha256": "37e2a2fdac941bc7df55e73605a218aafcc2606b89fc6b634cb9f2a7f87fe143",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_PHAL_3_3_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Hand digit 3 phalanx 3",
+      "region": "hand",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_phal_3_3_r.py",
+        "sha256": "76b26cd0cf72500c0f49b19f136df9e4c45f04920c6b737383fd5fa81a8793c4",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_PHAL_4_1_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Hand digit 4 phalanx 1",
+      "region": "hand",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_phal_4_1_l.py",
+        "sha256": "82d763d5090c286af4c469d85987c5e31a4e41ab475575b70fc4aa6b93daf775",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_PHAL_4_1_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Hand digit 4 phalanx 1",
+      "region": "hand",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_phal_4_1_r.py",
+        "sha256": "e379d1d66fdffd0b8f1516d0a02e56e147c8e3bcd86420417ce258356bbc4f9f",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_PHAL_4_2_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Hand digit 4 phalanx 2",
+      "region": "hand",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_phal_4_2_l.py",
+        "sha256": "792099deb926bab2fe181000e264ee8d960acb9370abaa59a67d407398c5eb1a",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_PHAL_4_2_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Hand digit 4 phalanx 2",
+      "region": "hand",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_phal_4_2_r.py",
+        "sha256": "27a03cdec3f8f9ff7809d2ac5dc8506c27862f846f9043c75567a0c226d35c9c",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_PHAL_4_3_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Hand digit 4 phalanx 3",
+      "region": "hand",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_phal_4_3_l.py",
+        "sha256": "d8884c449c9d30a043aff0eb3aafd6ccda014324d332f069804fea0d412f229f",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_PHAL_4_3_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Hand digit 4 phalanx 3",
+      "region": "hand",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_phal_4_3_r.py",
+        "sha256": "deeb2843747ac5f8180c1974ca543f655a36ad36a3c9c8715ffe567b33160b09",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_PHAL_5_1_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Hand digit 5 phalanx 1",
+      "region": "hand",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_phal_5_1_l.py",
+        "sha256": "108fb641b13ce84e83b9e5f970a084b135ecfff5fe4bec9c9ebb0c09d0bf5028",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_PHAL_5_1_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Hand digit 5 phalanx 1",
+      "region": "hand",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_phal_5_1_r.py",
+        "sha256": "39139ae7fcedd5dbbe0881cd6002c5f34ce425b0c788ccadd2a3272f776ac0a9",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_PHAL_5_2_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Hand digit 5 phalanx 2",
+      "region": "hand",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_phal_5_2_l.py",
+        "sha256": "7e4d9ba9ce1b4534024500960534f7b8cf7450aaafe230e730688f5da5615d8e",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_PHAL_5_2_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Hand digit 5 phalanx 2",
+      "region": "hand",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_phal_5_2_r.py",
+        "sha256": "bf3d21a282af533ce8aa5d0585b7b47692ac2c1502ed559ca382a49e4cea474c",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_PHAL_5_3_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Hand digit 5 phalanx 3",
+      "region": "hand",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_phal_5_3_l.py",
+        "sha256": "8446355f53d74ea6f88311ab7533a9034b2c9e68c3b5e4a5348a622696845538",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_PHAL_5_3_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Hand digit 5 phalanx 3",
+      "region": "hand",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_phal_5_3_r.py",
+        "sha256": "519d973b60b0fb86717d15969f9e9bb21228c6102cd280776261af66e5e1511d",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_PISIFORM_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Pisiform",
+      "region": "hand",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_pisiform_l.py",
+        "sha256": "0ee86a0123ff621990d565060afee0e862ad2bc2030ed351ac069893d95c1597",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_PISIFORM_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Pisiform",
+      "region": "hand",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_pisiform_r.py",
+        "sha256": "821aa090746306d14ab97479ece0c10ad2d939a46122f1c67d6d44db9052db6a",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_RADIUS_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "metric_source_declarations": {
+          "density_kg_m3": "Radius",
+          "length_cm": "Radius",
+          "mass_g": "Radius",
+          "thickness_cm": "Radius",
+          "width_cm": "Radius"
+        },
+        "status": "complete",
+        "unknown_keys": [],
+        "values_mm": {
+          "length_mm": 240.0,
+          "thickness_mm": 15.0,
+          "width_mm": 15.0
+        }
+      },
+      "name": "Radius",
+      "region": "upper_limb",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_radius_l.py",
+        "sha256": "2d9ff676ea20bd586490c7cae69cf827d469ec6af3106867333a5fdd053b90aa",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_RADIUS_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "metric_source_declarations": {
+          "density_kg_m3": "Radius",
+          "length_cm": "Radius",
+          "mass_g": "Radius",
+          "thickness_cm": "Radius",
+          "width_cm": "Radius"
+        },
+        "status": "complete",
+        "unknown_keys": [],
+        "values_mm": {
+          "length_mm": 240.0,
+          "thickness_mm": 15.0,
+          "width_mm": 15.0
+        }
+      },
+      "name": "Radius",
+      "region": "upper_limb",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_radius_r.py",
+        "sha256": "bfcc320d651d52acdcff48b57439770a36c59907bec5143662f962995e2a8f5b",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_RIB10_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Rib 10",
+      "region": "thorax",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_rib10_l.py",
+        "sha256": "4fe49304c1ce67bd90db9949009bfdeebe187c12505afe57768fcc92886d2a2b",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_RIB10_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Rib 10",
+      "region": "thorax",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_rib10_r.py",
+        "sha256": "e89226985064a2fbd2f10694ee89cdd74b93a5024c5cc83ec3bba09e62095e9c",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_RIB11_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Rib 11",
+      "region": "thorax",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_rib11_l.py",
+        "sha256": "99a72d3127db00e53f216dc943c576dcc9da412c4f50c93450a941dd78800baa",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_RIB11_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Rib 11",
+      "region": "thorax",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_rib11_r.py",
+        "sha256": "9212b73362a28cbefe5649abfd117172c9f01bda27ee073cab23f969efde5633",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_RIB12_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Rib 12",
+      "region": "thorax",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_rib12_l.py",
+        "sha256": "9897c68b222acb5d432c3200fc78ff084f0b431bf9a2eb11e92552b8f53ad5d6",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_RIB12_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Rib 12",
+      "region": "thorax",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_rib12_r.py",
+        "sha256": "fa0c448bc7ac754bc2c7afeaeebbaee2756c7e3c7efa5d7d4dc7a5f685e53f6d",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_RIB1_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Rib 1",
+      "region": "thorax",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_rib1_l.py",
+        "sha256": "8550e66fdd1607c6f82982cb26aca8c4b381119af000b7039e80cf603b25e64d",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_RIB1_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Rib 1",
+      "region": "thorax",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_rib1_r.py",
+        "sha256": "0cfe451242999c24a4f4e6f5caa1816228e4fcb78638a1601a07829713448f74",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_RIB2_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Rib 2",
+      "region": "thorax",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_rib2_l.py",
+        "sha256": "543556d0eb0a06d181769c491a022dc31379cf8bb0b8a74b874a0188029bb3a2",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_RIB2_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Rib 2",
+      "region": "thorax",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_rib2_r.py",
+        "sha256": "dc94b49fbf35fad1215d3f0b67f1b126efac1e57f3b587cb5fe8bc73173f96e1",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_RIB3_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Rib 3",
+      "region": "thorax",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_rib3_l.py",
+        "sha256": "7f4e46d451e17f379723758cba0ee29ad1821982920e129c881a723ad0ce533e",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_RIB3_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Rib 3",
+      "region": "thorax",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_rib3_r.py",
+        "sha256": "6703431e9498b5d5c9506a95358309b38555e8f1f4979c641dc5a57c8b1fe8f4",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_RIB4_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Rib 4",
+      "region": "thorax",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_rib4_l.py",
+        "sha256": "35fec6ac0a888832cf1d7f5f6039984036b2d32a0715d18d21edb23355f66988",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_RIB4_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Rib 4",
+      "region": "thorax",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_rib4_r.py",
+        "sha256": "523663a99ba8ebc229b7eaea72aed99bbe574a5e8a74e087323922bcafc6f0b7",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_RIB5_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Rib 5",
+      "region": "thorax",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_rib5_l.py",
+        "sha256": "ff40b23e11b0ef587a62f9751ed443fb2c1a3ac0abb055e538d610ebd3096662",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_RIB5_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Rib 5",
+      "region": "thorax",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_rib5_r.py",
+        "sha256": "7e8092575e733a0c36143bc68abb048705e56ee1950fa61e98c6df3fb7c2b3f4",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_RIB6_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Rib 6",
+      "region": "thorax",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_rib6_l.py",
+        "sha256": "b7a30a5f0cb3cd8c93b3581c9f376ad89a1e1ece2ac10f44a05d6b2c1590db19",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_RIB6_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Rib 6",
+      "region": "thorax",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_rib6_r.py",
+        "sha256": "ed8a0de49cbe5cb2f678e6e5266f20a3ab9b06477bd1971d8872f15ffb655454",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_RIB7_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Rib 7",
+      "region": "thorax",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_rib7_l.py",
+        "sha256": "aea49e93a3cac82c72726cacde5ce18806551672aba2e4a975bfa1c99c99368f",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_RIB7_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Rib 7",
+      "region": "thorax",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_rib7_r.py",
+        "sha256": "4f222e23b141dbea5aa162f1c9a0d541141fe46c9eb479d6263c6d92af894de9",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_RIB8_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Rib 8",
+      "region": "thorax",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_rib8_l.py",
+        "sha256": "d421533ff01832bd9632fce7b0b1df38be335fea83deb3ebb4fb5a813f00c72e",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_RIB8_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Rib 8",
+      "region": "thorax",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_rib8_r.py",
+        "sha256": "e2d8babb3f8c6e9562207b1e01894abbe660cd2ad4fa877fe1fdee0ebd1e1083",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_RIB9_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Rib 9",
+      "region": "thorax",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_rib9_l.py",
+        "sha256": "d1ae1d8a142003695ecb57a09f34c9d4e51d246d1c215afc9f8f177289ffd11c",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_RIB9_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Rib 9",
+      "region": "thorax",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_rib9_r.py",
+        "sha256": "9a707194a17c11579d589491c069c4796e0deaed37eb2a08c829949adeb00e08",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_SACRUM",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "metric_source_declarations": {
+          "density_kg_m3": "Sacrum",
+          "length_cm": "Sacrum",
+          "mass_g": "Sacrum",
+          "thickness_cm": "Sacrum",
+          "width_cm": "Sacrum"
+        },
+        "status": "complete",
+        "unknown_keys": [],
+        "values_mm": {
+          "length_mm": 100.0,
+          "thickness_mm": 10.0,
+          "width_mm": 110.0
+        }
+      },
+      "name": "Sacrum",
+      "region": "spine",
+      "side": "midline",
+      "source": {
+        "path": "skeleton/bones/bone_sacrum.py",
+        "sha256": "78b812ff88e9fa22edf5a776c6dfec76bf6c233f1a7c8dfcff128054c23f1a1c",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_SCAPHOID_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Scaphoid",
+      "region": "hand",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_scaphoid_l.py",
+        "sha256": "6e39ed8513e013e26e8441bf7a55d65300e3869e88c470d3358fe3cfc83a7fb6",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_SCAPHOID_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Scaphoid",
+      "region": "hand",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_scaphoid_r.py",
+        "sha256": "35b04bd07df3a8378c530e6a2d4c0f2e485eaa9ca787d9b5d8b721828c261a06",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_SCAPULA_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "metric_source_declarations": {
+          "density_kg_m3": "Scapula",
+          "length_cm": "Scapula",
+          "mass_g": "Scapula",
+          "thickness_cm": "Scapula",
+          "width_cm": "Scapula"
+        },
+        "status": "complete",
+        "unknown_keys": [],
+        "values_mm": {
+          "length_mm": 145.0,
+          "thickness_mm": 3.0,
+          "width_mm": 105.0
+        }
+      },
+      "name": "Scapula",
+      "region": "shoulder_girdle",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_scapula_l.py",
+        "sha256": "9a1518feb176f30efb6ede0cb0fc96babbb6100e78d360ed1e8967588215c19b",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_SCAPULA_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "metric_source_declarations": {
+          "density_kg_m3": "Scapula",
+          "length_cm": "Scapula",
+          "mass_g": "Scapula",
+          "thickness_cm": "Scapula",
+          "width_cm": "Scapula"
+        },
+        "status": "complete",
+        "unknown_keys": [],
+        "values_mm": {
+          "length_mm": 145.0,
+          "thickness_mm": 3.0,
+          "width_mm": 105.0
+        }
+      },
+      "name": "Scapula",
+      "region": "shoulder_girdle",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_scapula_r.py",
+        "sha256": "ec766c3f56827ceb641f340d7f2bcfd994582e7261424b1b12fb1be610e10b29",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_SPHENOID",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "metric_source_declarations": {},
+        "status": "complete",
+        "unknown_keys": [],
+        "values_mm": {
+          "length_mm": 60.0,
+          "thickness_mm": 5.0,
+          "width_mm": 80.0
+        }
+      },
+      "name": "Sphenoid",
+      "region": "skull",
+      "side": "midline",
+      "source": {
+        "path": "skeleton/bones/bone_sphenoid.py",
+        "sha256": "ddedc46a2b38ba9e18eaf586610cb6e10eeb76ab94785346f1851dc62e047166",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_STAPES_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "metric_source_declarations": {},
+        "status": "complete",
+        "unknown_keys": [],
+        "values_mm": {
+          "length_mm": 8.0,
+          "thickness_mm": 3.0,
+          "width_mm": 4.0
+        }
+      },
+      "name": "Stapes",
+      "region": "ear",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_stapes_l.py",
+        "sha256": "28e5d2ec929842d6b55d8ce48eeb6ee37b132b17de5ca9fa423dd4f42dde5c70",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_STAPES_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "metric_source_declarations": {},
+        "status": "complete",
+        "unknown_keys": [],
+        "values_mm": {
+          "length_mm": 8.0,
+          "thickness_mm": 3.0,
+          "width_mm": 4.0
+        }
+      },
+      "name": "Stapes",
+      "region": "ear",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_stapes_r.py",
+        "sha256": "64bad17341ae218df07ca439c6b1e18055004d1efe5bb1356abebd885c8b257e",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_STERNUM",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "metric_source_declarations": {
+          "density_kg_m3": "Sternum",
+          "length_cm": "Sternum",
+          "mass_g": "Sternum",
+          "thickness_cm": "Sternum",
+          "width_cm": "Sternum"
+        },
+        "status": "complete",
+        "unknown_keys": [],
+        "values_mm": {
+          "length_mm": 170.0,
+          "thickness_mm": 10.0,
+          "width_mm": 50.0
+        }
+      },
+      "name": "Sternum",
+      "region": "thorax",
+      "side": "midline",
+      "source": {
+        "path": "skeleton/bones/bone_sternum.py",
+        "sha256": "6c639ff812c673161382c0398ea7d8f4846af0610326e9000596545de39366d9",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_T1",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "T1 vertebra",
+      "region": "spine",
+      "side": "midline",
+      "source": {
+        "path": "skeleton/bones/bone_t1.py",
+        "sha256": "6145cf99484b32909bf630161af71debca4d699f7d985f331e3f8c1f184ceff6",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_T10",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "T10 vertebra",
+      "region": "spine",
+      "side": "midline",
+      "source": {
+        "path": "skeleton/bones/bone_t10.py",
+        "sha256": "5bc2edf3ead3689ffbcda093112e6e2c8290ecfeb6ab90250899a973d0a0b75a",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_T11",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "T11 vertebra",
+      "region": "spine",
+      "side": "midline",
+      "source": {
+        "path": "skeleton/bones/bone_t11.py",
+        "sha256": "8625bc92e57e89b97a17fa0cf4e6ccd958155637bdacabab67a7ad01411af385",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_T12",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "T12 vertebra",
+      "region": "spine",
+      "side": "midline",
+      "source": {
+        "path": "skeleton/bones/bone_t12.py",
+        "sha256": "4dc83e92fd5515e260372ef7856575f87354c5b0d064f53f02734e882a123cd7",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_T2",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "T2 vertebra",
+      "region": "spine",
+      "side": "midline",
+      "source": {
+        "path": "skeleton/bones/bone_t2.py",
+        "sha256": "55ccc0eb4562179fa8d4e2fb921b51cfb0ea897b0d6d0adbfefb4e45089807d6",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_T3",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "T3 vertebra",
+      "region": "spine",
+      "side": "midline",
+      "source": {
+        "path": "skeleton/bones/bone_t3.py",
+        "sha256": "9a02982a3ce820b2eee2ded3cf31bb9306b8d1e3454197ad2c813314091f9f74",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_T4",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "T4 vertebra",
+      "region": "spine",
+      "side": "midline",
+      "source": {
+        "path": "skeleton/bones/bone_t4.py",
+        "sha256": "b31aeaeea73bb994c837675650a4bc513b4f61c1a5c2fc7f8addf0b83de354af",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_T5",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "T5 vertebra",
+      "region": "spine",
+      "side": "midline",
+      "source": {
+        "path": "skeleton/bones/bone_t5.py",
+        "sha256": "a3109bf440d74af832f8dd177affd032100434a8c6f90b0e57f53b85c0917fed",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_T6",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "T6 vertebra",
+      "region": "spine",
+      "side": "midline",
+      "source": {
+        "path": "skeleton/bones/bone_t6.py",
+        "sha256": "47142c3b7ef1d8d9c5b8088b94b0b9ded2c572af6af2d5f7b6b19fedf798f73e",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_T7",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "T7 vertebra",
+      "region": "spine",
+      "side": "midline",
+      "source": {
+        "path": "skeleton/bones/bone_t7.py",
+        "sha256": "be721566f941a1f89ed94e052a87ad319d4cf82b2271fa14f46e80384f78bcd3",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_T8",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "T8 vertebra",
+      "region": "spine",
+      "side": "midline",
+      "source": {
+        "path": "skeleton/bones/bone_t8.py",
+        "sha256": "0347953571e1442734f7b74dd1eefaed066400f4f94d77f4e3ee3fe1e80964c2",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_T9",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "T9 vertebra",
+      "region": "spine",
+      "side": "midline",
+      "source": {
+        "path": "skeleton/bones/bone_t9.py",
+        "sha256": "6200c164d647c5b9b6183a533ad493cc6c7118f0cea3dec5fe4a90f246b3a723",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_TALUS_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Talus",
+      "region": "foot",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_talus_l.py",
+        "sha256": "682f0dfcd23c92c64cee97e1e04416e793792e278a8889a28d2ec214295ae691",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_TALUS_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Talus",
+      "region": "foot",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_talus_r.py",
+        "sha256": "6c73ab7e96eb07f460764163822d9263b27dbcd1c4d767a8bfc3df80c107d11f",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_TEMP_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "metric_source_declarations": {},
+        "status": "complete",
+        "unknown_keys": [],
+        "values_mm": {
+          "length_mm": 70.0,
+          "thickness_mm": 5.0,
+          "width_mm": 70.0
+        }
+      },
+      "name": "Temporal",
+      "region": "skull",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_temp_l.py",
+        "sha256": "1857748a1bd15e5536303d8e5be8be3434009a1376bbbc1425952613518d497a",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_TEMP_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "metric_source_declarations": {},
+        "status": "complete",
+        "unknown_keys": [],
+        "values_mm": {
+          "length_mm": 70.0,
+          "thickness_mm": 5.0,
+          "width_mm": 70.0
+        }
+      },
+      "name": "Temporal",
+      "region": "skull",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_temp_r.py",
+        "sha256": "03f177ff2e6d282327391dfb72d4746e6e2365aec0d0efb4cdb73ea90f69ddc4",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_TIBIA_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "metric_source_declarations": {
+          "density_kg_m3": "Tibia",
+          "length_cm": "Tibia",
+          "mass_g": "Tibia",
+          "thickness_cm": "Tibia",
+          "width_cm": "Tibia"
+        },
+        "status": "complete",
+        "unknown_keys": [],
+        "values_mm": {
+          "length_mm": 375.0,
+          "thickness_mm": 35.0,
+          "width_mm": 35.0
+        }
+      },
+      "name": "Tibia",
+      "region": "lower_limb",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_tibia_l.py",
+        "sha256": "05ac7585caa3c3ce54924cd9ccff4711af39f19ee6a60d518df443374885cc5a",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_TIBIA_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "metric_source_declarations": {
+          "density_kg_m3": "Tibia",
+          "length_cm": "Tibia",
+          "mass_g": "Tibia",
+          "thickness_cm": "Tibia",
+          "width_cm": "Tibia"
+        },
+        "status": "complete",
+        "unknown_keys": [],
+        "values_mm": {
+          "length_mm": 375.0,
+          "thickness_mm": 35.0,
+          "width_mm": 35.0
+        }
+      },
+      "name": "Tibia",
+      "region": "lower_limb",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_tibia_r.py",
+        "sha256": "f61b2edd6fe4ca964ed2a3f96e3260a6be026c5a55bca4bf493db1963bcd67c5",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_TRAPEZIUM_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Trapezium",
+      "region": "hand",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_trapezium_l.py",
+        "sha256": "db2e497855cb1fae9af872809cb1b58bda82cd0152359755b2ee70bbdfebd1cf",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_TRAPEZIUM_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Trapezium",
+      "region": "hand",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_trapezium_r.py",
+        "sha256": "00686ca06edca729d524706f612675b9df03505fdf229456fe3acb8c1ef6d347",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_TRAPEZOID_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Trapezoid",
+      "region": "hand",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_trapezoid_l.py",
+        "sha256": "b6b8b3d7e6c85ed5dce5f4cac60005b4a1259b559c0ec52b292aec7725bfc335",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_TRAPEZOID_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Trapezoid",
+      "region": "hand",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_trapezoid_r.py",
+        "sha256": "320aa0f8705c8baf067cd525756399a63d2b30292428bea6cdad506645797d50",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_TRIQUETRUM_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Triquetrum",
+      "region": "hand",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_triquetrum_l.py",
+        "sha256": "588d1d65eff3384632d1ab2f5e93fb0a46ba37301a9581b5e5b12e4114ea9a87",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_TRIQUETRUM_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Triquetrum",
+      "region": "hand",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_triquetrum_r.py",
+        "sha256": "c79c6d118a8b522d804cae1ee1ebef42938b63e4027f07f69602dc05348bd3cd",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_T_PHAL_1_1_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Toe 1 phalanx 1",
+      "region": "foot",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_t_phal_1_1_l.py",
+        "sha256": "79b2a5cf036d39fdbb52ebe64ea2ec445a081faeb6f4cc805b7d13da7601a1e6",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_T_PHAL_1_1_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Toe 1 phalanx 1",
+      "region": "foot",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_t_phal_1_1_r.py",
+        "sha256": "060c50b7e84ca28076c5004d02383055022c5a1155e87fb07de52ef9fefe0bbe",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_T_PHAL_1_2_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Toe 1 phalanx 2",
+      "region": "foot",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_t_phal_1_2_l.py",
+        "sha256": "41aa0278a5887e7c103cf6e70fb11a7a8f94e0e3cf6f6fafaf21ef49c609ef72",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_T_PHAL_1_2_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Toe 1 phalanx 2",
+      "region": "foot",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_t_phal_1_2_r.py",
+        "sha256": "c7cec214fc7fd8fbf90a17f643ba5cf650b59e0a86a7aaac4ecd1d508ee1b99d",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_T_PHAL_2_1_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Toe 2 phalanx 1",
+      "region": "foot",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_t_phal_2_1_l.py",
+        "sha256": "28ba0f6afb1d9d31166c926259e5c0786edcd29ea53a85255ae1c2114e5411ef",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_T_PHAL_2_1_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Toe 2 phalanx 1",
+      "region": "foot",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_t_phal_2_1_r.py",
+        "sha256": "0317bac51851cf942c7c81ab22a4f867556a19fc51f799867302cfbe0df76609",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_T_PHAL_2_2_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Toe 2 phalanx 2",
+      "region": "foot",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_t_phal_2_2_l.py",
+        "sha256": "61a7a9898124427863be5671cde426ed4e4468f98ec70b12c39d8eb10ed6560d",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_T_PHAL_2_2_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Toe 2 phalanx 2",
+      "region": "foot",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_t_phal_2_2_r.py",
+        "sha256": "1dddcb2873c397c1e04b8667a672e826adf37bbcf2163ffc162922578fbb6d08",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_T_PHAL_2_3_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Toe 2 phalanx 3",
+      "region": "foot",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_t_phal_2_3_l.py",
+        "sha256": "60c9560e74cd42b315d044bef33de4f7fa13296b15e34d77c1c66d9105fdf411",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_T_PHAL_2_3_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Toe 2 phalanx 3",
+      "region": "foot",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_t_phal_2_3_r.py",
+        "sha256": "91bc0def68a388b7d2e8623fdb9965d68f36149a0ddcc4ce5e668393388a2ae6",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_T_PHAL_3_1_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Toe 3 phalanx 1",
+      "region": "foot",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_t_phal_3_1_l.py",
+        "sha256": "397a967397640bea1d5b910ddcf687d3caa1437d17d8850f4e36276174a1bac2",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_T_PHAL_3_1_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Toe 3 phalanx 1",
+      "region": "foot",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_t_phal_3_1_r.py",
+        "sha256": "84be2a437f33dda0d0e9fadede65764493895da93ae9ba29f07f3e94f7a4eaf6",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_T_PHAL_3_2_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Toe 3 phalanx 2",
+      "region": "foot",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_t_phal_3_2_l.py",
+        "sha256": "5b3ad92649bc9dc3416bdfc86f45fa141c88fab78ee7f6af1221e74db014f4eb",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_T_PHAL_3_2_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Toe 3 phalanx 2",
+      "region": "foot",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_t_phal_3_2_r.py",
+        "sha256": "6f92de0a52cd6a5df54907839985075f562fbb8b38f9e6d3b63e301531c7b5f0",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_T_PHAL_3_3_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Toe 3 phalanx 3",
+      "region": "foot",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_t_phal_3_3_l.py",
+        "sha256": "61b189e1b6a5c0c527a88712d1a86d2b3cc3d103964d8c400460b816d32e2b80",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_T_PHAL_3_3_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Toe 3 phalanx 3",
+      "region": "foot",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_t_phal_3_3_r.py",
+        "sha256": "f045ae46004cbbfa5326e3826798ae424b68b99529470a4e9d88dcd67436f3a7",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_T_PHAL_4_1_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Toe 4 phalanx 1",
+      "region": "foot",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_t_phal_4_1_l.py",
+        "sha256": "4e7582014119fa8286fd26af90359172c9751657b2c111f8429b1c2e964480af",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_T_PHAL_4_1_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Toe 4 phalanx 1",
+      "region": "foot",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_t_phal_4_1_r.py",
+        "sha256": "d5915990c9afce902f878330e003584e318c387009a79ed4510bd85cf8560631",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_T_PHAL_4_2_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Toe 4 phalanx 2",
+      "region": "foot",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_t_phal_4_2_l.py",
+        "sha256": "4a96122e7ebbfd3866957b5eab6ab66461751591e79fbb630471aa1349ebb01a",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_T_PHAL_4_2_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Toe 4 phalanx 2",
+      "region": "foot",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_t_phal_4_2_r.py",
+        "sha256": "05a4b5d338630d5b7c47623e67fa9d8bff1d8a99f055465f1292738e96422054",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_T_PHAL_4_3_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Toe 4 phalanx 3",
+      "region": "foot",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_t_phal_4_3_l.py",
+        "sha256": "23dbb6fac7a22b070c9ef5575feae1adcd63288d92baa27477cc3f7a791f57eb",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_T_PHAL_4_3_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Toe 4 phalanx 3",
+      "region": "foot",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_t_phal_4_3_r.py",
+        "sha256": "a771c94d001f47ce41a96ef05f7b6c4e62dde09acd0206b07a6a808be92f5e39",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_T_PHAL_5_1_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Toe 5 phalanx 1",
+      "region": "foot",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_t_phal_5_1_l.py",
+        "sha256": "d0eb71077fc208c71c34053d02a6784ca4106cc86ab026cadd91cc72900fb80f",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_T_PHAL_5_1_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Toe 5 phalanx 1",
+      "region": "foot",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_t_phal_5_1_r.py",
+        "sha256": "cacaefa019df593b93709d773a8c56267c83df8ded0298d076dba560e755be7d",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_T_PHAL_5_2_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Toe 5 phalanx 2",
+      "region": "foot",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_t_phal_5_2_l.py",
+        "sha256": "9917527c0e483cef4f46b78e6c11f8893e3553a968b6500ba521d57058d734ff",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_T_PHAL_5_2_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Toe 5 phalanx 2",
+      "region": "foot",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_t_phal_5_2_r.py",
+        "sha256": "8a553e92aa6b84b353bfcdeb0ae14e31e35693caf8e2f2dfa1d3eeb2a80b85cc",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_T_PHAL_5_3_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Toe 5 phalanx 3",
+      "region": "foot",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_t_phal_5_3_l.py",
+        "sha256": "b28f4b9208196fd59e2a682a2bd583776efdd0d88619bbdd03f5ab333f71c667",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_T_PHAL_5_3_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Toe 5 phalanx 3",
+      "region": "foot",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_t_phal_5_3_r.py",
+        "sha256": "43bf13ff79ecb0051e3475edba34f85d3bb7586fad9ec52e878ba34e4ed749f7",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_ULNA_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "metric_source_declarations": {
+          "density_kg_m3": "Ulna",
+          "length_cm": "Ulna",
+          "mass_g": "Ulna",
+          "thickness_cm": "Ulna",
+          "width_cm": "Ulna"
+        },
+        "status": "complete",
+        "unknown_keys": [],
+        "values_mm": {
+          "length_mm": 250.0,
+          "thickness_mm": 15.0,
+          "width_mm": 15.0
+        }
+      },
+      "name": "Ulna",
+      "region": "upper_limb",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_ulna_l.py",
+        "sha256": "eddc2ac9d28bb2087e31502488f88e23dbfbe66893cc17a096d97e7e4393f8be",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_ULNA_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "metric_source_declarations": {
+          "density_kg_m3": "Ulna",
+          "length_cm": "Ulna",
+          "mass_g": "Ulna",
+          "thickness_cm": "Ulna",
+          "width_cm": "Ulna"
+        },
+        "status": "complete",
+        "unknown_keys": [],
+        "values_mm": {
+          "length_mm": 250.0,
+          "thickness_mm": 15.0,
+          "width_mm": 15.0
+        }
+      },
+      "name": "Ulna",
+      "region": "upper_limb",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_ulna_r.py",
+        "sha256": "2234810641908570b6373a61a36d78cca41e4140104cade66f4d369c1f4ef705",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_VOMER",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Vomer",
+      "region": "skull",
+      "side": "midline",
+      "source": {
+        "path": "skeleton/bones/bone_vomer.py",
+        "sha256": "f2dcd3945373dfc75a3b29e9d9ea51912c009905f2aee0c63b26e1182bdac974",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_ZYGOMATIC_L",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Zygomatic",
+      "region": "skull",
+      "side": "left",
+      "source": {
+        "path": "skeleton/bones/bone_zygomatic_l.py",
+        "sha256": "ffe2775ce313164aff52de4c6b82a15410ce559ed5baf658e3af78ed99b72a23",
+        "status": "present"
+      }
+    },
+    {
+      "bone_id": "BONE_ZYGOMATIC_R",
+      "dimensions": {
+        "invalid_keys": [],
+        "known_keys": [],
+        "metric_source_declarations": {},
+        "status": "unknown",
+        "unknown_keys": [
+          "length_mm",
+          "thickness_mm",
+          "width_mm"
+        ],
+        "values_mm": {
+          "length_mm": null,
+          "thickness_mm": null,
+          "width_mm": null
+        }
+      },
+      "name": "Zygomatic",
+      "region": "skull",
+      "side": "right",
+      "source": {
+        "path": "skeleton/bones/bone_zygomatic_r.py",
+        "sha256": "3510fb8f1c80a9128b0d3f14bf7db06157d1caf7a2a3c472b32d47c15fc73bd2",
+        "status": "present"
+      }
+    }
+  ],
+  "dataset": "female_21_baseline",
+  "inventory_version": "PHY_ADULT_206_V1",
+  "metrics": {
+    "canonical_record_present": {
+      "count": 206,
+      "meaning": "Supplied canonical snapshot contains the expected identity.",
+      "total": 206
+    },
+    "dataset_binding_present": {
+      "count": 21,
+      "meaning": "Selected dataset contains an object at the record's declared binding key; not evidence qualification.",
+      "total": 206
+    },
+    "declared_anatomical_references_resolved": {
+      "count": 24,
+      "meaning": "At least one declared reference resolves, all declarations resolve and no parent cycle involves this identity; not articulation qualification.",
+      "total": 206
+    },
+    "declared_dimensions_complete": {
+      "count": 36,
+      "meaning": "Nonempty declared dimensions are all finite, positive numbers; not dimensional fidelity.",
+      "total": 206
+    },
+    "dimensional_primitive_available": {
+      "count": 30,
+      "meaning": "Canonical geometry has dimensional_estimate status; not an anatomical surface.",
+      "total": 206
+    },
+    "individual_display_identity": {
+      "count": 206,
+      "meaning": "Individual provisional proxy, excluding hardware and grouped forms.",
+      "total": 206
+    },
+    "record_validation_pass": {
+      "count": 0,
+      "meaning": "Existing ValidatorAgent reports no per-record blocker; independent of whole-model and physical release gates.",
+      "total": 206
+    },
+    "reference_declaration_present": {
+      "count": 13,
+      "meaning": "Record declares at least one nonempty reference string; citations are not verified.",
+      "total": 206
+    },
+    "source_module_present": {
+      "count": 206,
+      "meaning": "Local module declares the expected identity; not evidence of measured data.",
+      "total": 206
+    }
+  },
+  "phy_commit": "2064af478d6554f66900f655afdd64c8869a16b5",
+  "phy_ref_commit": "5d4cd1e841ec275580e6634fee760e9615f02c30"
+}

@@ -6,7 +6,16 @@ bone = BoneSpec(
     bone_type = 'flat',
     location = {'region': 'thorax', 'proximal_connection': 'thoracic vertebrae', 'distal_connection': 'sternum'},
     articulations = [],
-    dimensions = {'length_cm': None, 'width_cm': None, 'thickness_cm': None},
+    # PHY-DIM-072: unscaled study statistics; whole-bone unknowns remain null.
+    dimensions = {
+        'length_mm': None,
+        'midshaft_thickness_mm': 3.3,
+        'midshaft_width_mm': 16.8,
+        'thickness_mm': None,
+        'tubercle_ventral_arc_mm': 97.8,
+        'tubercle_ventral_chord_mm': 79.9,
+        'width_mm': None,
+    },
     function = ['protect thoracic cavity'],
     notable_features = [],
     developmental_notes = 'develop from costal cartilage',
@@ -15,6 +24,15 @@ bone = BoneSpec(
     visual_reference = None,
     embodiment = "virtual",
     geometry = {},
+    physics = {"mass_kg": None},
+    references = ['https://pmc.ncbi.nlm.nih.gov/articles/PMC9005670/', 'references/dim072/catalog.json#/candidates/33'],
+    metric_sources = {
+        'midshaft_thickness_mm': 'references/dim072/catalog.json#/candidates/33/fields/midshaft_thickness_mm',
+        'midshaft_width_mm': 'references/dim072/catalog.json#/candidates/33/fields/midshaft_width_mm',
+        'tubercle_ventral_arc_mm': 'references/dim072/catalog.json#/candidates/33/fields/tubercle_ventral_arc_mm',
+        'tubercle_ventral_chord_mm': 'references/dim072/catalog.json#/candidates/33/fields/tubercle_ventral_chord_mm',
+    },
+    manufacturing_notes = ['Source-backed reference spans only; no registration to SOPHY, qualified surface, material, joint or mounting interface. See dimension evidence catalog.', 'Curved partial arc and local shaft spans are not a whole-rib bounding box or full rib length.'],
 )
 
 

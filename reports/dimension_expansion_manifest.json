@@ -1,0 +1,15 @@
+{
+  "assignment": "PHY-DIM-072",
+  "fabrication_released": false,
+  "files": {
+    "dimension_expansion.json": {
+      "sha256": "78cafacaec7234f860ded4db90033c0dd6fc58f641a8e0db731ca7110a547b21",
+      "size_bytes": 114507
+    },
+    "dimension_expansion.md": {
+      "sha256": "63c2cd5aa646eee63d309d59895780eefeaeea4b6405a8bffc6ce890c3bf9f79",
+      "size_bytes": 21301
+    }
+  },
+  "target_met": false
+}

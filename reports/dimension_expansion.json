@@ -1,0 +1,4489 @@
+{
+  "assignment": "PHY-DIM-072",
+  "baseline_commits": {
+    "PHY": "2064af478d6554f66900f655afdd64c8869a16b5",
+    "PHY-REF": "5d4cd1e841ec275580e6634fee760e9615f02c30"
+  },
+  "baseline_complete": 36,
+  "current_complete": 40,
+  "evidence_integrity_pass": true,
+  "fabrication_qualified_additions": 0,
+  "fabrication_released": false,
+  "geometry_qualified_additions": 0,
+  "improved_partial_ids": [
+    "BONE_C1",
+    "BONE_C2",
+    "BONE_C3",
+    "BONE_C4",
+    "BONE_C5",
+    "BONE_C6",
+    "BONE_C7",
+    "BONE_CALCANEUS_L",
+    "BONE_CALCANEUS_R",
+    "BONE_L1",
+    "BONE_L2",
+    "BONE_L3",
+    "BONE_L4",
+    "BONE_L5",
+    "BONE_RIB1_L",
+    "BONE_RIB1_R",
+    "BONE_T1",
+    "BONE_T10",
+    "BONE_T11",
+    "BONE_T12",
+    "BONE_T2",
+    "BONE_T3",
+    "BONE_T4",
+    "BONE_T5",
+    "BONE_T6",
+    "BONE_T7",
+    "BONE_T8",
+    "BONE_T9"
+  ],
+  "inputs_sha256": {
+    "baseline": "391b699b73a46e694cc705745ab13adeae39bdb59c3dc01f14e3dc591ca5071d",
+    "catalog": "1c3e5ea701c5e480f9ee225f6b60fa6e971a60136a0a24816c6fef4fbefe67de",
+    "engineering_snapshot": "62646268d1dcbfc104d8a7b19d43d36aa68ff562b65df158476b8d53a877c7fa"
+  },
+  "inventory_count": 206,
+  "new_complete_ids": [
+    "BONE_PATELLA_L",
+    "BONE_PATELLA_R",
+    "BONE_TALUS_L",
+    "BONE_TALUS_R"
+  ],
+  "new_source_backed_field_count": 128,
+  "record_validation_pass": 0,
+  "remaining_to_target": 32,
+  "rows": [
+    {
+      "after_mm": {
+        "length_mm": null,
+        "spinal_canal_ap_mm": 29.79,
+        "spinal_canal_width_mm": 27.38,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_C1",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [
+        "spinal_canal_ap_mm",
+        "spinal_canal_width_mm"
+      ],
+      "region": "spine",
+      "side": "midline",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "spinal_canal_ap_mm": 15.53,
+        "spinal_canal_width_mm": 22.77,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_C2",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [
+        "spinal_canal_ap_mm",
+        "spinal_canal_width_mm"
+      ],
+      "region": "spine",
+      "side": "midline",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "body_height_mm": 11.96,
+        "length_mm": null,
+        "spinal_canal_ap_mm": 13.85,
+        "spinal_canal_width_mm": 22.26,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_C3",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [
+        "body_height_mm",
+        "spinal_canal_ap_mm",
+        "spinal_canal_width_mm"
+      ],
+      "region": "spine",
+      "side": "midline",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "body_height_mm": 11.59,
+        "length_mm": null,
+        "spinal_canal_ap_mm": 13.36,
+        "spinal_canal_width_mm": 22.8,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_C4",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [
+        "body_height_mm",
+        "spinal_canal_ap_mm",
+        "spinal_canal_width_mm"
+      ],
+      "region": "spine",
+      "side": "midline",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "body_height_mm": 11.4,
+        "length_mm": null,
+        "spinal_canal_ap_mm": 13.22,
+        "spinal_canal_width_mm": 23.39,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_C5",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [
+        "body_height_mm",
+        "spinal_canal_ap_mm",
+        "spinal_canal_width_mm"
+      ],
+      "region": "spine",
+      "side": "midline",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "body_height_mm": 11.36,
+        "length_mm": null,
+        "spinal_canal_ap_mm": 12.96,
+        "spinal_canal_width_mm": 23.58,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_C6",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [
+        "body_height_mm",
+        "spinal_canal_ap_mm",
+        "spinal_canal_width_mm"
+      ],
+      "region": "spine",
+      "side": "midline",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "body_height_mm": 12.61,
+        "length_mm": null,
+        "spinal_canal_ap_mm": 13.25,
+        "spinal_canal_width_mm": 23.34,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_C7",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [
+        "body_height_mm",
+        "spinal_canal_ap_mm",
+        "spinal_canal_width_mm"
+      ],
+      "region": "spine",
+      "side": "midline",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "calcaneal_body_width_mm": 33.0,
+        "calcaneal_lateral_wall_height_mm": 33.3,
+        "length_mm": 66.2,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_CALCANEUS_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [
+        "calcaneal_body_width_mm",
+        "calcaneal_lateral_wall_height_mm",
+        "length_mm"
+      ],
+      "region": "foot",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "calcaneal_body_width_mm": 33.0,
+        "calcaneal_lateral_wall_height_mm": 33.3,
+        "length_mm": 66.2,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_CALCANEUS_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [
+        "calcaneal_body_width_mm",
+        "calcaneal_lateral_wall_height_mm",
+        "length_mm"
+      ],
+      "region": "foot",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_CAPITATE_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "hand",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_CAPITATE_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "hand",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": 140.0,
+        "thickness_mm": 12.0,
+        "width_mm": 12.0
+      },
+      "before_mm": {
+        "length_mm": 140.0,
+        "thickness_mm": 12.0,
+        "width_mm": 12.0
+      },
+      "bone_id": "BONE_CLAVICLE_L",
+      "declared_complete": true,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "shoulder_girdle",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": 140.0,
+        "thickness_mm": 12.0,
+        "width_mm": 12.0
+      },
+      "before_mm": {
+        "length_mm": 140.0,
+        "thickness_mm": 12.0,
+        "width_mm": 12.0
+      },
+      "bone_id": "BONE_CLAVICLE_R",
+      "declared_complete": true,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "shoulder_girdle",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_COCCYX",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "spine",
+      "side": "midline",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_CUBOID_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "foot",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_CUBOID_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "foot",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": 50.0,
+        "thickness_mm": 4.0,
+        "width_mm": 50.0
+      },
+      "before_mm": {
+        "length_mm": 50.0,
+        "thickness_mm": 4.0,
+        "width_mm": 50.0
+      },
+      "bone_id": "BONE_ETHMOID",
+      "declared_complete": true,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "skull",
+      "side": "midline",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": 420.0,
+        "thickness_mm": 40.0,
+        "width_mm": 40.0
+      },
+      "before_mm": {
+        "length_mm": 420.0,
+        "thickness_mm": 40.0,
+        "width_mm": 40.0
+      },
+      "bone_id": "BONE_FEMUR_L",
+      "declared_complete": true,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "lower_limb",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": 420.0,
+        "thickness_mm": 40.0,
+        "width_mm": 40.0
+      },
+      "before_mm": {
+        "length_mm": 420.0,
+        "thickness_mm": 40.0,
+        "width_mm": 40.0
+      },
+      "bone_id": "BONE_FEMUR_R",
+      "declared_complete": true,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "lower_limb",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": 355.0,
+        "thickness_mm": 15.0,
+        "width_mm": 15.0
+      },
+      "before_mm": {
+        "length_mm": 355.0,
+        "thickness_mm": 15.0,
+        "width_mm": 15.0
+      },
+      "bone_id": "BONE_FIBULA_L",
+      "declared_complete": true,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "lower_limb",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": 355.0,
+        "thickness_mm": 15.0,
+        "width_mm": 15.0
+      },
+      "before_mm": {
+        "length_mm": 355.0,
+        "thickness_mm": 15.0,
+        "width_mm": 15.0
+      },
+      "bone_id": "BONE_FIBULA_R",
+      "declared_complete": true,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "lower_limb",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": 135.0,
+        "thickness_mm": 6.0,
+        "width_mm": 145.0
+      },
+      "before_mm": {
+        "length_mm": 135.0,
+        "thickness_mm": 6.0,
+        "width_mm": 145.0
+      },
+      "bone_id": "BONE_FRONTAL",
+      "declared_complete": true,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "skull",
+      "side": "midline",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_HAMATE_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "hand",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_HAMATE_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "hand",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": 230.0,
+        "thickness_mm": 50.0,
+        "width_mm": 140.0
+      },
+      "before_mm": {
+        "length_mm": 230.0,
+        "thickness_mm": 50.0,
+        "width_mm": 140.0
+      },
+      "bone_id": "BONE_HIP_L",
+      "declared_complete": true,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "pelvis",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": 230.0,
+        "thickness_mm": 50.0,
+        "width_mm": 140.0
+      },
+      "before_mm": {
+        "length_mm": 230.0,
+        "thickness_mm": 50.0,
+        "width_mm": 140.0
+      },
+      "bone_id": "BONE_HIP_R",
+      "declared_complete": true,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "pelvis",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": 310.0,
+        "thickness_mm": 30.0,
+        "width_mm": 30.0
+      },
+      "before_mm": {
+        "length_mm": 310.0,
+        "thickness_mm": 30.0,
+        "width_mm": 30.0
+      },
+      "bone_id": "BONE_HUMERUS_L",
+      "declared_complete": true,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "upper_limb",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": 310.0,
+        "thickness_mm": 30.0,
+        "width_mm": 30.0
+      },
+      "before_mm": {
+        "length_mm": 310.0,
+        "thickness_mm": 30.0,
+        "width_mm": 30.0
+      },
+      "bone_id": "BONE_HUMERUS_R",
+      "declared_complete": true,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "upper_limb",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": 25.0,
+        "thickness_mm": 10.0,
+        "width_mm": 35.0
+      },
+      "before_mm": {
+        "length_mm": 25.0,
+        "thickness_mm": 10.0,
+        "width_mm": 35.0
+      },
+      "bone_id": "BONE_HYOID",
+      "declared_complete": true,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "hyoid",
+      "side": "midline",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": 8.0,
+        "thickness_mm": 3.0,
+        "width_mm": 4.0
+      },
+      "before_mm": {
+        "length_mm": 8.0,
+        "thickness_mm": 3.0,
+        "width_mm": 4.0
+      },
+      "bone_id": "BONE_INCUS_L",
+      "declared_complete": true,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "ear",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": 8.0,
+        "thickness_mm": 3.0,
+        "width_mm": 4.0
+      },
+      "before_mm": {
+        "length_mm": 8.0,
+        "thickness_mm": 3.0,
+        "width_mm": 4.0
+      },
+      "bone_id": "BONE_INCUS_R",
+      "declared_complete": true,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "ear",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_INFERIOR_NASAL_CONCHA_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "skull",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_INFERIOR_NASAL_CONCHA_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "skull",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_INTERMEDIATE_CUNEIFORM_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "foot",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_INTERMEDIATE_CUNEIFORM_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "foot",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "body_height_mm": 24.53,
+        "body_lower_ap_mm": 32.11,
+        "body_lower_width_mm": 46.07,
+        "body_upper_ap_mm": 31.51,
+        "body_upper_width_mm": 42.73,
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_L1",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [
+        "body_height_mm",
+        "body_lower_ap_mm",
+        "body_lower_width_mm",
+        "body_upper_ap_mm",
+        "body_upper_width_mm"
+      ],
+      "region": "spine",
+      "side": "midline",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "body_height_mm": 25.39,
+        "body_lower_ap_mm": 33.69,
+        "body_lower_width_mm": 48.18,
+        "body_upper_ap_mm": 33.12,
+        "body_upper_width_mm": 45.8,
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_L2",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [
+        "body_height_mm",
+        "body_lower_ap_mm",
+        "body_lower_width_mm",
+        "body_upper_ap_mm",
+        "body_upper_width_mm"
+      ],
+      "region": "spine",
+      "side": "midline",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "body_height_mm": 25.32,
+        "body_lower_ap_mm": 34.25,
+        "body_lower_width_mm": 50.97,
+        "body_upper_ap_mm": 34.48,
+        "body_upper_width_mm": 48.22,
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_L3",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [
+        "body_height_mm",
+        "body_lower_ap_mm",
+        "body_lower_width_mm",
+        "body_upper_ap_mm",
+        "body_upper_width_mm"
+      ],
+      "region": "spine",
+      "side": "midline",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "body_height_mm": 25.37,
+        "body_lower_ap_mm": 35.0,
+        "body_lower_width_mm": 52.82,
+        "body_upper_ap_mm": 34.96,
+        "body_upper_width_mm": 50.87,
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_L4",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [
+        "body_height_mm",
+        "body_lower_ap_mm",
+        "body_lower_width_mm",
+        "body_upper_ap_mm",
+        "body_upper_width_mm"
+      ],
+      "region": "spine",
+      "side": "midline",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "body_height_mm": 24.48,
+        "body_lower_ap_mm": 34.32,
+        "body_lower_width_mm": 53.22,
+        "body_upper_ap_mm": 35.12,
+        "body_upper_width_mm": 54.1,
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_L5",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [
+        "body_height_mm",
+        "body_lower_ap_mm",
+        "body_lower_width_mm",
+        "body_upper_ap_mm",
+        "body_upper_width_mm"
+      ],
+      "region": "spine",
+      "side": "midline",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_LACRIMAL_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "skull",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_LACRIMAL_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "skull",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_LATERAL_CUNEIFORM_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "foot",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_LATERAL_CUNEIFORM_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "foot",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_LUNATE_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "hand",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_LUNATE_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "hand",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": 8.0,
+        "thickness_mm": 3.0,
+        "width_mm": 4.0
+      },
+      "before_mm": {
+        "length_mm": 8.0,
+        "thickness_mm": 3.0,
+        "width_mm": 4.0
+      },
+      "bone_id": "BONE_MALLEUS_L",
+      "declared_complete": true,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "ear",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": 8.0,
+        "thickness_mm": 3.0,
+        "width_mm": 4.0
+      },
+      "before_mm": {
+        "length_mm": 8.0,
+        "thickness_mm": 3.0,
+        "width_mm": 4.0
+      },
+      "bone_id": "BONE_MALLEUS_R",
+      "declared_complete": true,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "ear",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "height_mm": 70.0,
+        "length_mm": 130.0,
+        "thickness_mm": 13.0,
+        "width_mm": 120.0
+      },
+      "before_mm": {
+        "height_mm": 70.0,
+        "length_mm": 130.0,
+        "thickness_mm": 13.0,
+        "width_mm": 120.0
+      },
+      "bone_id": "BONE_MANDIBLE",
+      "declared_complete": true,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "skull",
+      "side": "midline",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_MAXILLA_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "skull",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_MAXILLA_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "skull",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_MEDIAL_CUNEIFORM_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "foot",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_MEDIAL_CUNEIFORM_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "foot",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_META1_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "hand",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_META1_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "hand",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_META2_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "hand",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_META2_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "hand",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_META3_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "hand",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_META3_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "hand",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_META4_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "hand",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_META4_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "hand",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_META5_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "hand",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_META5_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "hand",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_MT1_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "foot",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_MT1_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "foot",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_MT2_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "foot",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_MT2_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "foot",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_MT3_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "foot",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_MT3_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "foot",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_MT4_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "foot",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_MT4_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "foot",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_MT5_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "foot",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_MT5_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "foot",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_NASAL_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "skull",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_NASAL_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "skull",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_NAVICULAR_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "foot",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_NAVICULAR_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "foot",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": 120.0,
+        "thickness_mm": 6.0,
+        "width_mm": 110.0
+      },
+      "before_mm": {
+        "length_mm": 120.0,
+        "thickness_mm": 6.0,
+        "width_mm": 110.0
+      },
+      "bone_id": "BONE_OCCIPITAL",
+      "declared_complete": true,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "skull",
+      "side": "midline",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_PALATINE_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "skull",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_PALATINE_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "skull",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": 140.0,
+        "thickness_mm": 5.0,
+        "width_mm": 100.0
+      },
+      "before_mm": {
+        "length_mm": 140.0,
+        "thickness_mm": 5.0,
+        "width_mm": 100.0
+      },
+      "bone_id": "BONE_PAR_L",
+      "declared_complete": true,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "skull",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": 140.0,
+        "thickness_mm": 5.0,
+        "width_mm": 100.0
+      },
+      "before_mm": {
+        "length_mm": 140.0,
+        "thickness_mm": 5.0,
+        "width_mm": 100.0
+      },
+      "bone_id": "BONE_PAR_R",
+      "declared_complete": true,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "skull",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": 41.05,
+        "thickness_mm": 22.89,
+        "width_mm": 42.71
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_PATELLA_L",
+      "declared_complete": true,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [
+        "length_mm",
+        "thickness_mm",
+        "width_mm"
+      ],
+      "region": "lower_limb",
+      "side": "left",
+      "source_backed_complete": true
+    },
+    {
+      "after_mm": {
+        "length_mm": 41.05,
+        "thickness_mm": 22.56,
+        "width_mm": 42.71
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_PATELLA_R",
+      "declared_complete": true,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [
+        "length_mm",
+        "thickness_mm",
+        "width_mm"
+      ],
+      "region": "lower_limb",
+      "side": "right",
+      "source_backed_complete": true
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_PHAL_1_1_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "hand",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_PHAL_1_1_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "hand",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_PHAL_1_2_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "hand",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_PHAL_1_2_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "hand",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_PHAL_2_1_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "hand",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_PHAL_2_1_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "hand",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_PHAL_2_2_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "hand",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_PHAL_2_2_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "hand",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_PHAL_2_3_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "hand",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_PHAL_2_3_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "hand",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_PHAL_3_1_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "hand",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_PHAL_3_1_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "hand",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_PHAL_3_2_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "hand",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_PHAL_3_2_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "hand",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_PHAL_3_3_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "hand",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_PHAL_3_3_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "hand",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_PHAL_4_1_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "hand",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_PHAL_4_1_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "hand",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_PHAL_4_2_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "hand",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_PHAL_4_2_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "hand",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_PHAL_4_3_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "hand",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_PHAL_4_3_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "hand",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_PHAL_5_1_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "hand",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_PHAL_5_1_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "hand",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_PHAL_5_2_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "hand",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_PHAL_5_2_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "hand",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_PHAL_5_3_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "hand",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_PHAL_5_3_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "hand",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_PISIFORM_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "hand",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_PISIFORM_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "hand",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": 240.0,
+        "thickness_mm": 15.0,
+        "width_mm": 15.0
+      },
+      "before_mm": {
+        "length_mm": 240.0,
+        "thickness_mm": 15.0,
+        "width_mm": 15.0
+      },
+      "bone_id": "BONE_RADIUS_L",
+      "declared_complete": true,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "upper_limb",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": 240.0,
+        "thickness_mm": 15.0,
+        "width_mm": 15.0
+      },
+      "before_mm": {
+        "length_mm": 240.0,
+        "thickness_mm": 15.0,
+        "width_mm": 15.0
+      },
+      "bone_id": "BONE_RADIUS_R",
+      "declared_complete": true,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "upper_limb",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_RIB10_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "thorax",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_RIB10_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "thorax",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_RIB11_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "thorax",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_RIB11_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "thorax",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_RIB12_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "thorax",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_RIB12_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "thorax",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "midshaft_thickness_mm": 3.2,
+        "midshaft_width_mm": 17.0,
+        "thickness_mm": null,
+        "tubercle_ventral_arc_mm": 98.6,
+        "tubercle_ventral_chord_mm": 79.6,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_RIB1_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [
+        "midshaft_thickness_mm",
+        "midshaft_width_mm",
+        "tubercle_ventral_arc_mm",
+        "tubercle_ventral_chord_mm"
+      ],
+      "region": "thorax",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "midshaft_thickness_mm": 3.3,
+        "midshaft_width_mm": 16.8,
+        "thickness_mm": null,
+        "tubercle_ventral_arc_mm": 97.8,
+        "tubercle_ventral_chord_mm": 79.9,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_RIB1_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [
+        "midshaft_thickness_mm",
+        "midshaft_width_mm",
+        "tubercle_ventral_arc_mm",
+        "tubercle_ventral_chord_mm"
+      ],
+      "region": "thorax",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_RIB2_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "thorax",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_RIB2_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "thorax",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_RIB3_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "thorax",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_RIB3_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "thorax",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_RIB4_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "thorax",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_RIB4_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "thorax",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_RIB5_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "thorax",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_RIB5_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "thorax",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_RIB6_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "thorax",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_RIB6_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "thorax",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_RIB7_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "thorax",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_RIB7_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "thorax",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_RIB8_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "thorax",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_RIB8_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "thorax",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_RIB9_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "thorax",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_RIB9_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "thorax",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": 100.0,
+        "thickness_mm": 10.0,
+        "width_mm": 110.0
+      },
+      "before_mm": {
+        "length_mm": 100.0,
+        "thickness_mm": 10.0,
+        "width_mm": 110.0
+      },
+      "bone_id": "BONE_SACRUM",
+      "declared_complete": true,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "spine",
+      "side": "midline",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_SCAPHOID_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "hand",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_SCAPHOID_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "hand",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": 145.0,
+        "thickness_mm": 3.0,
+        "width_mm": 105.0
+      },
+      "before_mm": {
+        "length_mm": 145.0,
+        "thickness_mm": 3.0,
+        "width_mm": 105.0
+      },
+      "bone_id": "BONE_SCAPULA_L",
+      "declared_complete": true,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "shoulder_girdle",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": 145.0,
+        "thickness_mm": 3.0,
+        "width_mm": 105.0
+      },
+      "before_mm": {
+        "length_mm": 145.0,
+        "thickness_mm": 3.0,
+        "width_mm": 105.0
+      },
+      "bone_id": "BONE_SCAPULA_R",
+      "declared_complete": true,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "shoulder_girdle",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": 60.0,
+        "thickness_mm": 5.0,
+        "width_mm": 80.0
+      },
+      "before_mm": {
+        "length_mm": 60.0,
+        "thickness_mm": 5.0,
+        "width_mm": 80.0
+      },
+      "bone_id": "BONE_SPHENOID",
+      "declared_complete": true,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "skull",
+      "side": "midline",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": 8.0,
+        "thickness_mm": 3.0,
+        "width_mm": 4.0
+      },
+      "before_mm": {
+        "length_mm": 8.0,
+        "thickness_mm": 3.0,
+        "width_mm": 4.0
+      },
+      "bone_id": "BONE_STAPES_L",
+      "declared_complete": true,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "ear",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": 8.0,
+        "thickness_mm": 3.0,
+        "width_mm": 4.0
+      },
+      "before_mm": {
+        "length_mm": 8.0,
+        "thickness_mm": 3.0,
+        "width_mm": 4.0
+      },
+      "bone_id": "BONE_STAPES_R",
+      "declared_complete": true,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "ear",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": 170.0,
+        "thickness_mm": 10.0,
+        "width_mm": 50.0
+      },
+      "before_mm": {
+        "length_mm": 170.0,
+        "thickness_mm": 10.0,
+        "width_mm": 50.0
+      },
+      "bone_id": "BONE_STERNUM",
+      "declared_complete": true,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "thorax",
+      "side": "midline",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "body_anterior_height_mm": 14.12,
+        "body_lower_width_mm": 26.92,
+        "body_mid_width_mm": 23.04,
+        "body_posterior_height_mm": 14.63,
+        "body_upper_width_mm": 23.75,
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_T1",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [
+        "body_anterior_height_mm",
+        "body_lower_width_mm",
+        "body_mid_width_mm",
+        "body_posterior_height_mm",
+        "body_upper_width_mm"
+      ],
+      "region": "spine",
+      "side": "midline",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "body_anterior_height_mm": 19.78,
+        "body_lower_width_mm": 31.63,
+        "body_mid_width_mm": 27.07,
+        "body_posterior_height_mm": 20.19,
+        "body_upper_width_mm": 27.97,
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_T10",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [
+        "body_anterior_height_mm",
+        "body_lower_width_mm",
+        "body_mid_width_mm",
+        "body_posterior_height_mm",
+        "body_upper_width_mm"
+      ],
+      "region": "spine",
+      "side": "midline",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "body_anterior_height_mm": 20.96,
+        "body_lower_width_mm": 34.37,
+        "body_mid_width_mm": 29.76,
+        "body_upper_width_mm": 31.0,
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_T11",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [
+        "body_anterior_height_mm",
+        "body_lower_width_mm",
+        "body_mid_width_mm",
+        "body_upper_width_mm"
+      ],
+      "region": "spine",
+      "side": "midline",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "body_anterior_height_mm": 21.83,
+        "body_lower_width_mm": 37.67,
+        "body_mid_width_mm": 32.91,
+        "body_posterior_height_mm": 29.35,
+        "body_upper_width_mm": 33.99,
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_T12",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [
+        "body_anterior_height_mm",
+        "body_lower_width_mm",
+        "body_mid_width_mm",
+        "body_posterior_height_mm",
+        "body_upper_width_mm"
+      ],
+      "region": "spine",
+      "side": "midline",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "body_anterior_height_mm": 15.25,
+        "body_lower_width_mm": 26.83,
+        "body_mid_width_mm": 23.16,
+        "body_posterior_height_mm": 15.47,
+        "body_upper_width_mm": 23.6,
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_T2",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [
+        "body_anterior_height_mm",
+        "body_lower_width_mm",
+        "body_mid_width_mm",
+        "body_posterior_height_mm",
+        "body_upper_width_mm"
+      ],
+      "region": "spine",
+      "side": "midline",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "body_anterior_height_mm": 15.98,
+        "body_lower_width_mm": 25.35,
+        "body_mid_width_mm": 22.9,
+        "body_posterior_height_mm": 16.26,
+        "body_upper_width_mm": 23.4,
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_T3",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [
+        "body_anterior_height_mm",
+        "body_lower_width_mm",
+        "body_mid_width_mm",
+        "body_posterior_height_mm",
+        "body_upper_width_mm"
+      ],
+      "region": "spine",
+      "side": "midline",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "body_anterior_height_mm": 16.49,
+        "body_lower_width_mm": 25.25,
+        "body_mid_width_mm": 22.57,
+        "body_posterior_height_mm": 16.58,
+        "body_upper_width_mm": 23.03,
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_T4",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [
+        "body_anterior_height_mm",
+        "body_lower_width_mm",
+        "body_mid_width_mm",
+        "body_posterior_height_mm",
+        "body_upper_width_mm"
+      ],
+      "region": "spine",
+      "side": "midline",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "body_anterior_height_mm": 16.41,
+        "body_lower_width_mm": 24.6,
+        "body_mid_width_mm": 22.22,
+        "body_posterior_height_mm": 17.64,
+        "body_upper_width_mm": 23.21,
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_T5",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [
+        "body_anterior_height_mm",
+        "body_lower_width_mm",
+        "body_mid_width_mm",
+        "body_posterior_height_mm",
+        "body_upper_width_mm"
+      ],
+      "region": "spine",
+      "side": "midline",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "body_anterior_height_mm": 16.95,
+        "body_lower_width_mm": 25.33,
+        "body_mid_width_mm": 22.58,
+        "body_posterior_height_mm": 18.16,
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_T6",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [
+        "body_anterior_height_mm",
+        "body_lower_width_mm",
+        "body_mid_width_mm",
+        "body_posterior_height_mm"
+      ],
+      "region": "spine",
+      "side": "midline",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "body_anterior_height_mm": 16.82,
+        "body_lower_width_mm": 26.84,
+        "body_mid_width_mm": 24.04,
+        "body_posterior_height_mm": 18.38,
+        "body_upper_width_mm": 25.07,
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_T7",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [
+        "body_anterior_height_mm",
+        "body_lower_width_mm",
+        "body_mid_width_mm",
+        "body_posterior_height_mm",
+        "body_upper_width_mm"
+      ],
+      "region": "spine",
+      "side": "midline",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "body_anterior_height_mm": 18.46,
+        "body_lower_width_mm": 27.42,
+        "body_mid_width_mm": 24.88,
+        "body_posterior_height_mm": 18.8,
+        "body_upper_width_mm": 25.97,
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_T8",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [
+        "body_anterior_height_mm",
+        "body_lower_width_mm",
+        "body_mid_width_mm",
+        "body_posterior_height_mm",
+        "body_upper_width_mm"
+      ],
+      "region": "spine",
+      "side": "midline",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "body_anterior_height_mm": 19.35,
+        "body_lower_width_mm": 29.1,
+        "body_mid_width_mm": 25.31,
+        "body_posterior_height_mm": 19.49,
+        "body_upper_width_mm": 26.81,
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_T9",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [
+        "body_anterior_height_mm",
+        "body_lower_width_mm",
+        "body_mid_width_mm",
+        "body_posterior_height_mm",
+        "body_upper_width_mm"
+      ],
+      "region": "spine",
+      "side": "midline",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": 49.15,
+        "thickness_mm": 24.41,
+        "width_mm": 36.79
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_TALUS_L",
+      "declared_complete": true,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [
+        "length_mm",
+        "thickness_mm",
+        "width_mm"
+      ],
+      "region": "foot",
+      "side": "left",
+      "source_backed_complete": true
+    },
+    {
+      "after_mm": {
+        "length_mm": 48.57,
+        "thickness_mm": 24.23,
+        "width_mm": 36.15
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_TALUS_R",
+      "declared_complete": true,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [
+        "length_mm",
+        "thickness_mm",
+        "width_mm"
+      ],
+      "region": "foot",
+      "side": "right",
+      "source_backed_complete": true
+    },
+    {
+      "after_mm": {
+        "length_mm": 70.0,
+        "thickness_mm": 5.0,
+        "width_mm": 70.0
+      },
+      "before_mm": {
+        "length_mm": 70.0,
+        "thickness_mm": 5.0,
+        "width_mm": 70.0
+      },
+      "bone_id": "BONE_TEMP_L",
+      "declared_complete": true,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "skull",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": 70.0,
+        "thickness_mm": 5.0,
+        "width_mm": 70.0
+      },
+      "before_mm": {
+        "length_mm": 70.0,
+        "thickness_mm": 5.0,
+        "width_mm": 70.0
+      },
+      "bone_id": "BONE_TEMP_R",
+      "declared_complete": true,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "skull",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": 375.0,
+        "thickness_mm": 35.0,
+        "width_mm": 35.0
+      },
+      "before_mm": {
+        "length_mm": 375.0,
+        "thickness_mm": 35.0,
+        "width_mm": 35.0
+      },
+      "bone_id": "BONE_TIBIA_L",
+      "declared_complete": true,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "lower_limb",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": 375.0,
+        "thickness_mm": 35.0,
+        "width_mm": 35.0
+      },
+      "before_mm": {
+        "length_mm": 375.0,
+        "thickness_mm": 35.0,
+        "width_mm": 35.0
+      },
+      "bone_id": "BONE_TIBIA_R",
+      "declared_complete": true,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "lower_limb",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_TRAPEZIUM_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "hand",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_TRAPEZIUM_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "hand",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_TRAPEZOID_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "hand",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_TRAPEZOID_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "hand",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_TRIQUETRUM_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "hand",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_TRIQUETRUM_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "hand",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_T_PHAL_1_1_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "foot",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_T_PHAL_1_1_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "foot",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_T_PHAL_1_2_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "foot",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_T_PHAL_1_2_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "foot",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_T_PHAL_2_1_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "foot",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_T_PHAL_2_1_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "foot",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_T_PHAL_2_2_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "foot",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_T_PHAL_2_2_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "foot",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_T_PHAL_2_3_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "foot",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_T_PHAL_2_3_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "foot",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_T_PHAL_3_1_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "foot",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_T_PHAL_3_1_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "foot",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_T_PHAL_3_2_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "foot",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_T_PHAL_3_2_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "foot",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_T_PHAL_3_3_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "foot",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_T_PHAL_3_3_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "foot",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_T_PHAL_4_1_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "foot",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_T_PHAL_4_1_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "foot",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_T_PHAL_4_2_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "foot",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_T_PHAL_4_2_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "foot",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_T_PHAL_4_3_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "foot",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_T_PHAL_4_3_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "foot",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_T_PHAL_5_1_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "foot",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_T_PHAL_5_1_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "foot",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_T_PHAL_5_2_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "foot",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_T_PHAL_5_2_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "foot",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_T_PHAL_5_3_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "foot",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_T_PHAL_5_3_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "foot",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": 250.0,
+        "thickness_mm": 15.0,
+        "width_mm": 15.0
+      },
+      "before_mm": {
+        "length_mm": 250.0,
+        "thickness_mm": 15.0,
+        "width_mm": 15.0
+      },
+      "bone_id": "BONE_ULNA_L",
+      "declared_complete": true,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "upper_limb",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": 250.0,
+        "thickness_mm": 15.0,
+        "width_mm": 15.0
+      },
+      "before_mm": {
+        "length_mm": 250.0,
+        "thickness_mm": 15.0,
+        "width_mm": 15.0
+      },
+      "bone_id": "BONE_ULNA_R",
+      "declared_complete": true,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "upper_limb",
+      "side": "right",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_VOMER",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "skull",
+      "side": "midline",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_ZYGOMATIC_L",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "skull",
+      "side": "left",
+      "source_backed_complete": false
+    },
+    {
+      "after_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "before_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "bone_id": "BONE_ZYGOMATIC_R",
+      "declared_complete": false,
+      "fabrication_qualified": false,
+      "geometry_qualified": false,
+      "new_source_backed_fields": [],
+      "region": "skull",
+      "side": "right",
+      "source_backed_complete": false
+    }
+  ],
+  "source_facts": {
+    "calcaneus_ct_2024": {
+      "path": "references/dim072/calcaneus_ct_2024.json",
+      "sha256": "fd826293dab2818708d245d187cc6a1666d17286700ece6d3423766b52d7612f"
+    },
+    "cervical_ct_2021": {
+      "path": "references/dim072/cervical_ct_2021.json",
+      "sha256": "d7b02de31e4c96f0f7195f39525ce85b7c76ae5ce6e537f129a180fe29c2a6f4"
+    },
+    "lumbar_ct_2022": {
+      "path": "references/dim072/lumbar_ct_2022.json",
+      "sha256": "1d4658332c81ec2c8242dbf9526b220f26d06c3915154a205c91233dffa3dbe3"
+    },
+    "patella_caliper_2013": {
+      "path": "references/dim072/patella_caliper_2013.json",
+      "sha256": "f50fa5058f483aa31c6c4db5dacb4e644a4eee9512c60f2834307e3c970252b7"
+    },
+    "rib1_caliper_2022": {
+      "path": "references/dim072/rib1_caliper_2022.json",
+      "sha256": "8e5a299f7999b0e2b8921f035d607e0bba4317e795680d5e2283623e924e1a27"
+    },
+    "talus_ct_2016": {
+      "path": "references/dim072/talus_ct_2016.json",
+      "sha256": "f8c59055f10512a0b0f9d48788821364ca5289bf8bcbb27b5fe8032db29e7658"
+    },
+    "thoracic_caliper_2011": {
+      "path": "references/dim072/thoracic_caliper_2011.json",
+      "sha256": "21ea5530a035524ea2fd8b41a274f954fcf751ec0b88e5b44d4c72d672fd8d89"
+    }
+  },
+  "target_complete": 72,
+  "target_met": false,
+  "tool_version": "dim072-tabular-v1"
+}

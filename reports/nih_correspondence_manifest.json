@@ -1,0 +1,9 @@
+{
+  "fabrication_released": false,
+  "files": {
+    "nih_correspondence_audit.json": {
+      "sha256": "234a7eecf08feb1a53ca0b1cc091a18f9ecfcab3400bbf863285bed579f12046",
+      "size_bytes": 14755
+    }
+  }
+}

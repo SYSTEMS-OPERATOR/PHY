@@ -1,0 +1,94 @@
+{
+  "rows": [
+    {
+      "admissible": true,
+      "admitted_field": "tubercle_ventral_chord_mm",
+      "bone_id": "BONE_RIB1_L",
+      "mean": 79.6,
+      "n": 33,
+      "native_units": "mm",
+      "parameter": "TVC_L",
+      "sd": 7.0,
+      "side": "left"
+    },
+    {
+      "admissible": true,
+      "admitted_field": "tubercle_ventral_arc_mm",
+      "bone_id": "BONE_RIB1_L",
+      "mean": 98.6,
+      "n": 33,
+      "native_units": "mm",
+      "parameter": "TVA_L",
+      "sd": 8.9,
+      "side": "left"
+    },
+    {
+      "admissible": true,
+      "admitted_field": "midshaft_width_mm",
+      "bone_id": "BONE_RIB1_L",
+      "mean": 17.0,
+      "n": 33,
+      "native_units": "mm",
+      "parameter": "MMxD_L",
+      "sd": 1.7,
+      "side": "left"
+    },
+    {
+      "admissible": true,
+      "admitted_field": "midshaft_thickness_mm",
+      "bone_id": "BONE_RIB1_L",
+      "mean": 3.2,
+      "n": 33,
+      "native_units": "mm",
+      "parameter": "MMnD_L",
+      "sd": 0.5,
+      "side": "left"
+    },
+    {
+      "admissible": true,
+      "admitted_field": "tubercle_ventral_chord_mm",
+      "bone_id": "BONE_RIB1_R",
+      "mean": 79.9,
+      "n": 31,
+      "native_units": "mm",
+      "parameter": "TVC_R",
+      "sd": 6.6,
+      "side": "right"
+    },
+    {
+      "admissible": true,
+      "admitted_field": "tubercle_ventral_arc_mm",
+      "bone_id": "BONE_RIB1_R",
+      "mean": 97.8,
+      "n": 31,
+      "native_units": "mm",
+      "parameter": "TVA_R",
+      "sd": 8.4,
+      "side": "right"
+    },
+    {
+      "admissible": true,
+      "admitted_field": "midshaft_width_mm",
+      "bone_id": "BONE_RIB1_R",
+      "mean": 16.8,
+      "n": 32,
+      "native_units": "mm",
+      "parameter": "MMxD_R",
+      "sd": 2.0,
+      "side": "right"
+    },
+    {
+      "admissible": true,
+      "admitted_field": "midshaft_thickness_mm",
+      "bone_id": "BONE_RIB1_R",
+      "mean": 3.3,
+      "n": 32,
+      "native_units": "mm",
+      "parameter": "MMnD_R",
+      "sd": 0.5,
+      "side": "right"
+    }
+  ],
+  "source_id": "rib1_caliper_2022",
+  "table": "Table 3 female R/L means and SD; definitions Table 1"
+}

@@ -1,0 +1,29 @@
+{
+  "source_head": "2064af478d6554f66900f655afdd64c8869a16b5",
+  "drafts": [
+    {
+      "path": "bin/register_reference_landmarks.py",
+      "bytes": 1321,
+      "sha256": "ee58ca9fac44ad871c0481d58270d8af615dfb88b06755fdb62dd58385239138",
+      "status": "uncommitted local draft; inventoried, not admitted"
+    },
+    {
+      "path": "references/nasa_positioning_ranges.json",
+      "bytes": 49325,
+      "sha256": "86a5d25105c895322fe88cdf04cdf58b96d1e712fe6dc39ce55ad68831a577a3",
+      "status": "uncommitted local draft; inventoried, not admitted"
+    },
+    {
+      "path": "references/nih_reference_correspondence.json",
+      "bytes": 8700,
+      "sha256": "4232587c7469255a94f83822631e5e1320d9cdd498c09191496703a38f50a45a",
+      "status": "uncommitted local draft; inventoried, not admitted"
+    },
+    {
+      "path": "skeleton/reference_registration.py",
+      "bytes": 3678,
+      "sha256": "3b03f7b1427834e106e774f41316cc082a4d934f8799b02f303d4c8f8866e20c",
+      "status": "uncommitted local draft; inventoried, not admitted"
+    }
+  ]
+}

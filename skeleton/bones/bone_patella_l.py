@@ -6,7 +6,12 @@ bone = BoneSpec(
     bone_type = 'sesamoid',
     location = {'region': 'knee', 'proximal_connection': 'femur', 'distal_connection': 'tibia'},
     articulations = [],
-    dimensions = {'length_cm': None, 'width_cm': None, 'thickness_cm': None},
+    # PHY-DIM-072: unscaled study statistics; whole-bone unknowns remain null.
+    dimensions = {
+        'length_mm': 41.05,
+        'thickness_mm': 22.89,
+        'width_mm': 42.71,
+    },
     function = ['protect knee joint'],
     notable_features = [],
     developmental_notes = 'ossifies within quadriceps tendon',
@@ -15,6 +20,14 @@ bone = BoneSpec(
     visual_reference = None,
     embodiment = "virtual",
     geometry = {},
+    physics = {"mass_kg": None},
+    references = ['https://sajs.co.za/article/download/4002/5775', 'references/dim072/catalog.json#/candidates/30'],
+    metric_sources = {
+        'length_mm': 'references/dim072/catalog.json#/candidates/30/fields/length_mm',
+        'thickness_mm': 'references/dim072/catalog.json#/candidates/30/fields/thickness_mm',
+        'width_mm': 'references/dim072/catalog.json#/candidates/30/fields/width_mm',
+    },
+    manufacturing_notes = ['Source-backed reference spans only; no registration to SOPHY, qualified surface, material, joint or mounting interface. See dimension evidence catalog.'],
 )
 
 

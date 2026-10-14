@@ -1,0 +1,307 @@
+{
+  "audit_path": "reports/mesh_audits/3d-vh-f-united.json",
+  "audit_sha256": "0799b92d4db0e761d5e2c91700e759ef9deadbeba02a0e8d4195386dbf7b48fd",
+  "authority": "curated_reference_correspondence_not_geometry_adoption",
+  "canonical_transform": null,
+  "entries": [
+    {
+      "bone_id": "BONE_C1",
+      "mapping_basis": "curated source identity label; morphology/registration not qualified",
+      "source_nodes": [
+        "VH_F_cervical_vertebra_1"
+      ]
+    },
+    {
+      "bone_id": "BONE_C2",
+      "mapping_basis": "curated source identity label; morphology/registration not qualified",
+      "source_nodes": [
+        "VH_F_cervical_vertebra_2"
+      ]
+    },
+    {
+      "bone_id": "BONE_C3",
+      "mapping_basis": "curated source identity label; morphology/registration not qualified",
+      "source_nodes": [
+        "VH_F_cervical_vertebra_3"
+      ]
+    },
+    {
+      "bone_id": "BONE_C4",
+      "mapping_basis": "curated source identity label; morphology/registration not qualified",
+      "source_nodes": [
+        "VH_F_cervical_vertebra_4"
+      ]
+    },
+    {
+      "bone_id": "BONE_C5",
+      "mapping_basis": "curated source identity label; morphology/registration not qualified",
+      "source_nodes": [
+        "VH_F_cervical_vertebra_5"
+      ]
+    },
+    {
+      "bone_id": "BONE_C6",
+      "mapping_basis": "curated source identity label; morphology/registration not qualified",
+      "source_nodes": [
+        "VH_F_cervical_vertebra_6"
+      ]
+    },
+    {
+      "bone_id": "BONE_C7",
+      "mapping_basis": "curated source identity label; morphology/registration not qualified",
+      "source_nodes": [
+        "VH_F_cervical_vertebra_7"
+      ]
+    },
+    {
+      "bone_id": "BONE_COCCYX",
+      "mapping_basis": "curated source identity label; interfaces remain unknown",
+      "source_nodes": [
+        "VH_F_coccyx"
+      ]
+    },
+    {
+      "bone_id": "BONE_FEMUR_L",
+      "mapping_basis": "curated source identity/side label; joint centers remain unknown",
+      "source_nodes": [
+        "VH_F_femur_L"
+      ]
+    },
+    {
+      "bone_id": "BONE_FEMUR_R",
+      "mapping_basis": "curated source identity/side label; joint centers remain unknown",
+      "source_nodes": [
+        "VH_F_femur_R"
+      ]
+    },
+    {
+      "bone_id": "BONE_FIBULA_L",
+      "mapping_basis": "curated source identity/side label; joint centers remain unknown",
+      "source_nodes": [
+        "VH_F_fibula_L"
+      ]
+    },
+    {
+      "bone_id": "BONE_FIBULA_R",
+      "mapping_basis": "curated source identity/side label; joint centers remain unknown",
+      "source_nodes": [
+        "VH_F_fibula_R"
+      ]
+    },
+    {
+      "bone_id": "BONE_HIP_L",
+      "mapping_basis": "six tissue submeshes of one fused adult hip bone; not six adult identities",
+      "source_nodes": [
+        "VH_F_pubis_compact_bone_L",
+        "VH_F_pubis_spongy_bone_L",
+        "VH_F_ilium_compact_bone_L",
+        "VH_F_ilium_spongy_bone_L",
+        "VH_F_ischium_compact_bone_L",
+        "VH_F_ischium_spongy_bone_L"
+      ]
+    },
+    {
+      "bone_id": "BONE_HIP_R",
+      "mapping_basis": "six tissue submeshes of one fused adult hip bone; not six adult identities",
+      "source_nodes": [
+        "VH_F_pubis_compact_bone_R",
+        "VH_F_pubis_spongy_bone_R",
+        "VH_F_ilium_compact_bone_R",
+        "VH_F_ilium_spongy_bone_R",
+        "VH_F_ischium_compact_bone_R",
+        "VH_F_ischium_spongy_bone_R"
+      ]
+    },
+    {
+      "bone_id": "BONE_L1",
+      "mapping_basis": "curated source identity label; morphology/registration not qualified",
+      "source_nodes": [
+        "VH_F_lumbar_vertebra_1"
+      ]
+    },
+    {
+      "bone_id": "BONE_L2",
+      "mapping_basis": "curated source identity label; morphology/registration not qualified",
+      "source_nodes": [
+        "VH_F_lumbar_vertebra_2"
+      ]
+    },
+    {
+      "bone_id": "BONE_L3",
+      "mapping_basis": "curated source identity label; morphology/registration not qualified",
+      "source_nodes": [
+        "VH_F_lumbar_vertebra_3"
+      ]
+    },
+    {
+      "bone_id": "BONE_L4",
+      "mapping_basis": "curated source identity label; morphology/registration not qualified",
+      "source_nodes": [
+        "VH_F_lumbar_vertebra_4"
+      ]
+    },
+    {
+      "bone_id": "BONE_L5",
+      "mapping_basis": "curated source identity label; morphology/registration not qualified",
+      "source_nodes": [
+        "VH_F_lumbar_vertebra_5"
+      ]
+    },
+    {
+      "bone_id": "BONE_PATELLA_L",
+      "mapping_basis": "curated source identity/side label; joint centers remain unknown",
+      "source_nodes": [
+        "VH_F_patella_L"
+      ]
+    },
+    {
+      "bone_id": "BONE_PATELLA_R",
+      "mapping_basis": "curated source identity/side label; joint centers remain unknown",
+      "source_nodes": [
+        "VH_F_patella_R"
+      ]
+    },
+    {
+      "bone_id": "BONE_SACRUM",
+      "mapping_basis": "curated source identity label; interfaces remain unknown",
+      "source_nodes": [
+        "VH_F_sacrum"
+      ]
+    },
+    {
+      "bone_id": "BONE_T1",
+      "mapping_basis": "curated source identity label; morphology/registration not qualified",
+      "source_nodes": [
+        "VH_F_thoracic_vertebra_1"
+      ]
+    },
+    {
+      "bone_id": "BONE_T10",
+      "mapping_basis": "curated source identity label; morphology/registration not qualified",
+      "source_nodes": [
+        "VH_F_thoracic_vertebra_10"
+      ]
+    },
+    {
+      "bone_id": "BONE_T11",
+      "mapping_basis": "curated source identity label; morphology/registration not qualified",
+      "source_nodes": [
+        "VH_F_thoracic_vertebra_11"
+      ]
+    },
+    {
+      "bone_id": "BONE_T12",
+      "mapping_basis": "curated source identity label; morphology/registration not qualified",
+      "source_nodes": [
+        "VH_F_thoracic_vertebra_12"
+      ]
+    },
+    {
+      "bone_id": "BONE_T2",
+      "mapping_basis": "curated source identity label; morphology/registration not qualified",
+      "source_nodes": [
+        "VH_F_thoracic_vertebra_2"
+      ]
+    },
+    {
+      "bone_id": "BONE_T3",
+      "mapping_basis": "curated source identity label; morphology/registration not qualified",
+      "source_nodes": [
+        "VH_F_thoracic_vertebra_3"
+      ]
+    },
+    {
+      "bone_id": "BONE_T4",
+      "mapping_basis": "curated source identity label; morphology/registration not qualified",
+      "source_nodes": [
+        "VH_F_thoracic_vertebra_4"
+      ]
+    },
+    {
+      "bone_id": "BONE_T5",
+      "mapping_basis": "curated source identity label; morphology/registration not qualified",
+      "source_nodes": [
+        "VH_F_thoracic_vertebra_5"
+      ]
+    },
+    {
+      "bone_id": "BONE_T6",
+      "mapping_basis": "curated source identity label; morphology/registration not qualified",
+      "source_nodes": [
+        "VH_F_thoracic_vertebra_6"
+      ]
+    },
+    {
+      "bone_id": "BONE_T7",
+      "mapping_basis": "curated source identity label; morphology/registration not qualified",
+      "source_nodes": [
+        "VH_F_thoracic_vertebra_7"
+      ]
+    },
+    {
+      "bone_id": "BONE_T8",
+      "mapping_basis": "curated source identity label; morphology/registration not qualified",
+      "source_nodes": [
+        "VH_F_thoracic_vertebra_8"
+      ]
+    },
+    {
+      "bone_id": "BONE_T9",
+      "mapping_basis": "curated source identity label; morphology/registration not qualified",
+      "source_nodes": [
+        "VH_F_thoracic_vertebra_9"
+      ]
+    },
+    {
+      "bone_id": "BONE_TIBIA_L",
+      "mapping_basis": "curated source identity/side label; joint centers remain unknown",
+      "source_nodes": [
+        "VH_F_tibia_L"
+      ]
+    },
+    {
+      "bone_id": "BONE_TIBIA_R",
+      "mapping_basis": "curated source identity/side label; joint centers remain unknown",
+      "source_nodes": [
+        "VH_F_tibia_R"
+      ]
+    }
+  ],
+  "fabrication_released": false,
+  "native_axis_review": {
+    "left_side_evidence": [
+      "VH_F_ilium_compact_bone_L",
+      "VH_F_cornea_L"
+    ],
+    "proposed_source_to_PHY_review_rotation": [
+      -1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      1,
+      0
+    ],
+    "right_side_evidence": [
+      "VH_F_ilium_compact_bone_R",
+      "VH_F_cornea_R"
+    ],
+    "scale_for_unit_conversion": 1000,
+    "source_units": "m",
+    "status": "proposal for source-view orientation; no landmark registration or canonical transform",
+    "target_units": "mm",
+    "translation": null
+  },
+  "source_asset": "NIH_3DPX_020992",
+  "source_revision": "3576c8a8ae5766ab684a221813de13e0578003be",
+  "source_sha256": "472567a56896b9b7890508da6501fbf858e56aaa30745365f7a71ade782b529c",
+  "unmapped_source_review": [
+    {
+      "reason": "Additional source label beyond typical canonical lumbar-1 through lumbar-5; do not renumber, merge or remove without anatomical review.",
+      "source_node": "VH_F_lumbar_vertebra_6"
+    }
+  ],
+  "version": "1.0.0"
+}

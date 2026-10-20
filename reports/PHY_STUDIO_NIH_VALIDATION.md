@@ -80,11 +80,38 @@ and draft JSON, preserved canon, offline network behavior and 390 px layout.
 The captured test point checks a cortical triangle; it does not identify ASIS.
 Exported drafts also require the independent PHY-REF geometric validator.
 
-Local Playwright's download returned invalid ZIP data. An independently verified
-`@sparticuz/chromium@153.0.0` fallback launched, but WebGL context initialization
-was blocked in this environment. Local browser interaction did not pass.
-The ordinary GitHub Actions browser run and visual artifact inspection are
-required before this PR is marked ready. This report will record that result.
+The 2026-10-19 repair reproduced the Actions failure from
+[run 38651649966](https://github.com/SYSTEMS-OPERATOR/PHY/actions/runs/38651649966):
+the first full-page screenshot enlarged the in-flow WebGL canvas and its stage
+to 445,560 px. The next screenshot attempted a 1440 by 445,811 bitmap and crashed
+Chromium. The canvas is now positioned inside its stage without contributing
+intrinsic dimensions to the flex/grid layout. A regression checks bounded,
+stable stage dimensions across 1800, 1024, 1440 and 390 px viewports and after
+full-page capture; it fails against the original layout before the browser crashes.
+
+Visual review also exposed stale parent transforms during camera framing after
+switching into and out of the native views' 1000 mm/m display scale. Refreshing
+world matrices before measuring visible meshes restores the pelvis framing and
+the armature on return, including phones. Browser checks now verify projected
+part centers remain on-screen and the model remains large enough to inspect.
+The asynchronous-switch check distinguishes all 230 source parts from the 228
+default-visible parts, then verifies that enabling the two envelope meshes shows
+all 230. No source geometry, native coordinates or layer defaults were changed.
+
+The complete seven-model browser smoke now passes locally with no browser errors
+or HTTP requests. Playwright's ordinary browser download still returns invalid
+ZIP data here, so the local run used `@sparticuz/chromium@153.0.0` with a
+single-process SwiftShader launch wrapper. The repository's ordinary Actions
+launch remains unchanged. Desktop, pelvis, exterior, phone and evidence-dialog
+screenshots were visually inspected. The exported draft also passes PHY-REF's
+independent geometric validator as `preview_geometry_verified_only`.
+
+The Studio workflow's Python checks passed **215 tests and 937 subtests** during
+the repair; syntax/build, native/bone export logic and deterministic rebuild
+checks also pass. Generated bundle and offline review HTML are synchronized.
+The normal Actions browser check must also pass before this PR is marked ready;
+see [PR 112 checks](https://github.com/SYSTEMS-OPERATOR/PHY/pull/112/checks) for its
+current result.
 
 ## Remaining engineering decisions
 

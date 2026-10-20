@@ -16,8 +16,42 @@ try {
   const page=await browser.newPage({viewport:{width:1440,height:1000},deviceScaleFactor:1});
   page.on('pageerror',e=>errors.push(e.message));
   page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});
+  const assertStableViewport=async label=>{
+    const samples=await page.evaluate(async()=>{
+      await document.fonts.ready;
+      const rows=[];
+      for(let i=0;i<12;i++){
+        await new Promise(requestAnimationFrame);
+        const stage=document.querySelector('#stage').getBoundingClientRect();
+        const canvas=document.querySelector('#viewport').getBoundingClientRect();
+        rows.push({width:stage.width,height:stage.height,canvasWidth:canvas.width,canvasHeight:canvas.height,viewportHeight:innerHeight});
+      }
+      return rows;
+    });
+    for(const sample of samples){
+      assert.ok(sample.width>0&&sample.height>0&&sample.height<sample.viewportHeight*2,label+': canvas stage stays bounded');
+      assert.ok(Math.abs(sample.width-sample.canvasWidth)<1&&Math.abs(sample.height-sample.canvasHeight)<1,label+': canvas fits its stage');
+    }
+    assert.ok(Math.abs(samples.at(-1).height-samples[0].height)<1,label+': drawing-buffer resizing must not grow the layout');
+  };
+  const assertModelFramed=async label=>{
+    const {points,rect}=await page.evaluate(async()=>{
+      await new Promise(requestAnimationFrame);
+      const ids=PHY_STUDIO.visiblePartIds();
+      const r=document.querySelector('#viewport').getBoundingClientRect();
+      return {points:ids.map(id=>PHY_STUDIO.projectPart(id)),rect:{x:r.x,y:r.y,width:r.width,height:r.height}};
+    });
+    assert.ok(points.every(([x,y])=>x>=rect.x&&x<=rect.x+rect.width&&y>=rect.y&&y<=rect.y+rect.height),label+': visible part centers stay in the viewport');
+    const ys=points.map(p=>p[1]);
+    assert.ok(Math.max(...ys)-Math.min(...ys)>rect.height*.15,label+': model remains large enough to inspect');
+  };
   await page.goto(pathToFileURL(path.join(root,'studio/dist/PHY-Studio.html')).href);
   await page.waitForFunction(()=>window.PHY_STUDIO?.getState().webgl);
+  for(const viewport of [{width:1800,height:1000},{width:1024,height:768},{width:1440,height:1000}]){
+    await page.setViewportSize(viewport);
+    await assertStableViewport('desktop '+viewport.width);
+  }
+  await assertModelFramed('initial armature');
   assert.equal(await page.evaluate(()=>PHY_STUDIO.getState().model),'F28_REFINED');
   assert.equal(await page.evaluate(()=>PHY_STUDIO.getState().modelParts),230);
   assert.deepEqual(await page.evaluate(()=>{const a=PHY_STUDIO.boneAudit();return [a.expected_bones,a.individual_bone_proxies,a.grouped_bones,a.unrepresented_bones];}),[206,206,0,0]);
@@ -41,6 +75,7 @@ try {
   assert.match(await method.innerText(),/cohort variation/);
   assert.match(await method.innerText(),/published_mean_identity/);
   await page.screenshot({path:path.join(output,'engineering.png'),fullPage:true});
+  await assertStableViewport('after full-page engineering capture');
   await page.click('[data-tab="nasa"]');
   assert.match(await page.locator('#modal-content').innerText(),/52 motion pairs, 11 external anthropometric comparisons, 17 source issues retained/);
   assert.equal(await page.locator('.nasa-motion').count(),20);
@@ -195,6 +230,7 @@ try {
       const expected=await page.evaluate(()=>PHY_DATA.models.find(m=>m.id===PHY_STUDIO.getState().model).bounds_m);
       const actual=await page.evaluate(()=>PHY_STUDIO.modelBounds());
       assert.ok(actual.every((v,i)=>Math.abs(v-(expected.max[i]-expected.min[i])*1000)<1e-4),'native axes and units remain unchanged');
+      if(id==='NIH_PELVIS')await assertModelFramed('native pelvis');
       await page.evaluate(()=>{PHY_STUDIO.setHeight(1800);PHY_STUDIO.setPose(0);PHY_STUDIO.setPalette('carbon');});
       assert.deepEqual(await page.evaluate(()=>PHY_STUDIO.modelBounds()),actual);
       const raw=await getDownload('glb',id+'.glb');
@@ -205,8 +241,14 @@ try {
     // Finish on a normal model even if earlier asynchronous parses complete late.
     await page.evaluate(()=>Promise.all([PHY_STUDIO.selectModel('NIH_SKIN'),PHY_STUDIO.selectModel('NIH_PELVIS'),PHY_STUDIO.selectModel('SOPHY_SCALE')]));
     assert.equal(await page.evaluate(()=>PHY_STUDIO.getState().model),'SOPHY_SCALE');
+    assert.equal(await page.evaluate(()=>PHY_STUDIO.getState().modelParts),230);
+    assert.equal(await page.locator('#layer-envelope').isChecked(),false);
+    assert.equal(await page.evaluate(()=>PHY_STUDIO.visiblePartIds().length),228,'two form envelopes stay hidden by default');
+    await page.check('#layer-envelope');
     assert.equal(await page.evaluate(()=>PHY_STUDIO.visiblePartIds().length),230);
+    await page.uncheck('#layer-envelope');
     assert.equal(await page.evaluate(()=>PHY_STUDIO.getState().height),1676.4);
+    await assertModelFramed('armature after native views');
     await page.click('#compare-reference');
     await page.waitForFunction(()=>PHY_STUDIO.getState().model==='NIH_PELVIS'&&!PHY_STUDIO.getState().loading);
     await page.selectOption('#landmark-candidate','L_ASIS');await page.click('#isolate');
@@ -240,7 +282,9 @@ try {
   }
   // Both source provenance and all primary controls remain reachable on a phone.
   await page.setViewportSize({width:390,height:844});
+  await assertStableViewport('390 px phone');
   await page.click('[data-model="F28_REFINED"]');await page.click('#mat-wood');
+  await assertModelFramed('390 px armature after native views');
   const widths=await page.evaluate(()=>[document.documentElement.scrollWidth,innerWidth]);assert.equal(widths[0],widths[1]);
   await page.locator('#export').scrollIntoViewIfNeeded();assert.ok(await page.locator('#export').isVisible());
   await page.click('#open-engineering');
@@ -265,7 +309,7 @@ try {
   assert.deepEqual(errors,[]);
   assert.deepEqual(networkRequests,[],'evidence, NASA and native NIH views stay offline');
   await fs.writeFile(path.join(output,'results.json'),JSON.stringify({status:'passed',browserErrors:errors,stlTriangles:count,stlHeightMm:maxZ,glbMeshes:json.meshes.length,boneOnlyMeshes:boneJson.meshes.length,mobileWidth:widths[0]},null,2));
-  console.log('PHY Studio browser smoke passed: offline WebGL, five models, 206-bone filtering/identity/GLB audit including six ear ossicles and one hyoid, surface selection/ruler, height/pose/isolation, valid GLB/STL/JSON, embedded maquette ZIP, and 390px mobile layout.');
+  console.log('PHY Studio browser smoke passed: offline WebGL, '+(hasNative?'seven':'five')+' models, stable canvas layout and camera framing, 206-bone filtering/identity/GLB audit including six ear ossicles and one hyoid, surface selection/ruler, height/pose/isolation, valid GLB/STL/JSON, embedded maquette ZIP, and 390px mobile layout.');
 } finally {
   await browser.close();
 }

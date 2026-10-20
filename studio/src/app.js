@@ -202,6 +202,8 @@ function makeDimensions() {
 }
 function cameraView(view='iso',target=null,size=null) {
   if(!camera)return;state.view=view;
+  // Mesh-only bounds queries do not update the parent's native display scale.
+  root.updateMatrixWorld(true);
   const box=new THREE.Box3();for(const m of meshes)if(m.visible)box.expandByObject(m);if(box.isEmpty())box.setFromObject(root);
   const extent=box.getSize(new THREE.Vector3()),center=target??box.getCenter(new THREE.Vector3());
   const d=size??Math.max(extent.y,extent.x,extent.z,180)*(innerWidth<760?2.5:2.18);

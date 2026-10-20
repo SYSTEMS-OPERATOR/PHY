@@ -4,6 +4,8 @@
 <style>
 #draft-points{white-space:pre-wrap;overflow-wrap:anywhere}.reference-review .mini-controls{flex-wrap:wrap}.reference-review .mini-controls button{min-width:90px}.reference-review p{overflow-wrap:anywhere}
 .modal p{overflow-wrap:anywhere}
+/* Drawing-buffer changes must not contribute to the stage's intrinsic size. */
+#viewport{position:absolute;inset:0}
 #evidence-details{scroll-margin-top:110px}
 .dimension-table td:first-child,.dimension-table td:nth-child(2){white-space:nowrap;overflow-wrap:normal}.modal-head{position:sticky;top:0;background:var(--panel);z-index:1;gap:8px}.close{flex-shrink:0}
 .metric-table{min-width:420px}.metric-table td:nth-child(2),.metric-table th:nth-child(2){white-space:nowrap;overflow-wrap:normal;width:65px}

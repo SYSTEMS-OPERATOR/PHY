@@ -24,6 +24,7 @@ sys.path.insert(0, str(ROOT))
 from skeleton.visualization.studio_model import build_armature, reference_statistics, write_stl
 from skeleton.visualization.bone_equivalence import report_markdown
 from skeleton.visualization.studio_evidence import build_studio_evidence, studio_build_stamp
+from skeleton.visualization.studio_references import load_native_references
 
 
 def write_package_zip(output):
@@ -249,14 +250,27 @@ do not alter these cut files; regenerate an explicit profile before new cuts.
     return manifest
 
 
-def export(output, include_a0=True):
+def export(output, include_a0=True, reference_root=None):
+    native_models, native_evidence, previews = load_native_references(reference_root) if reference_root else ([], None, {})
     output.mkdir(parents=True, exist_ok=True)
+    if not native_evidence:
+        # These are generated distribution copies, never source assets.
+        for name in ("NIH_REFERENCE_EVIDENCE.json", "PELVIS_LEFT_REVIEW.json", "NIH_ATTRIBUTION.md",
+                     "NIH_LICENSE-CC-BY-4.0.txt", "pelvis-preview.glb", "skin-preview.glb"):
+            (output / name).unlink(missing_ok=True)
     reference = reference_statistics()
     mean = build_armature(refinement=0)
     refined = build_armature()
     sophy = build_armature(height_mm=1676.4, span_equals_height=True)
     evidence = build_studio_evidence(refined["parts"])
-    build = studio_build_stamp(evidence)
+    build = studio_build_stamp(evidence, native_references=native_evidence)
+    if native_evidence:
+        (output / "NIH_REFERENCE_EVIDENCE.json").write_text(json.dumps(native_evidence, indent=2, sort_keys=True, allow_nan=False)+"\n")
+        (output / "PELVIS_LEFT_REVIEW.json").write_text(json.dumps(native_evidence["landmark_packet"], indent=2, allow_nan=False)+"\n")
+        (output / "NIH_ATTRIBUTION.md").write_text(native_evidence["attribution"])
+        shutil.copyfile(Path(reference_root) / "assets/nih/LICENSE-CC-BY-4.0.txt", output / "NIH_LICENSE-CC-BY-4.0.txt")
+        for path, raw in previews.items():
+            (output / Path(path).name).write_bytes(raw)
     (output / "ENGINEERING_EVIDENCE.json").write_text(json.dumps(evidence, indent=2, sort_keys=True, allow_nan=False)+"\n")
     (output / "NASA_POSITIONING_RANGES.json").write_text(json.dumps(evidence["nasa"], indent=2, sort_keys=True, allow_nan=False)+"\n")
     audit = refined["bone_equivalence"]
@@ -362,6 +376,7 @@ def export(output, include_a0=True):
               dict(sophy, id="SOPHY_SCALE", name="SOPHY / 1676.4 mm reference overlay")]
     if include_a0:
         models.extend([a0_model(), source_kit()])
+    models.extend(native_models)
     assets = []
     for model in models[:3]:
         path = output / (model["id"].lower()+".json")
@@ -371,7 +386,7 @@ def export(output, include_a0=True):
         assets.extend([path, stl])
     maquette_manifest = maquette(refined, output / "maquette")
     data = {"version": "1.0.0", "models": models, "reference": reference,
-            "engineering": evidence, "build": build,
+            "engineering": evidence, "build": build, "native_references": native_evidence,
             "maquette": maquette_manifest,
             "maquette_files": {str(p.relative_to(output / "maquette")): p.read_text(encoding="utf-8")
                                for p in sorted((output / "maquette").rglob("*")) if p.is_file()},
@@ -421,7 +436,7 @@ def export(output, include_a0=True):
     (output / "REFERENCE.md").write_text("\n".join(report)+"\n")
     manifest = {"version": "1.0.0", "reference_sha256": reference["snapshot_sha256"],
                 "build": build,
-                "models": [{"id": m["id"], "parts": len(m["parts"]), "triangles": sum(len(p["faces"]) for p in m["parts"]), "fabrication_released": m["fabrication_released"]} for m in models],
+                "models": [{"id": m["id"], "parts": len(m["parts"]), "triangles": sum(p.get("triangle_count", len(p.get("faces", []))) for p in m["parts"]), "fabrication_released": m["fabrication_released"]} for m in models],
                 "maquette_cut_parts": maquette_manifest["cut_parts"],
                 "full_scale_structural_release": False,
                 "files": {str(p.relative_to(output)): hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(output.rglob("*")) if p.is_file() and p.name not in ("manifest.json", "PHY-Studio-package.zip")}}
@@ -435,9 +450,10 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", type=Path, default=ROOT / "studio/dist")
     parser.add_argument("--without-a0", action="store_true")
+    parser.add_argument("--reference-root", type=Path, help="explicit offline PHY-REF checkout matching studio/reference_lock.json; uses only two small previews")
     parser.add_argument("--sync-review", action="store_true", help="copy generated offline HTML and bone reports to checked-in review locations")
     args = parser.parse_args()
-    export(args.output, not args.without_a0)
+    export(args.output, not args.without_a0, args.reference_root)
     if args.sync_review:
         review = ROOT / "PROJECTS/PHY_F28/reports"
         review.mkdir(parents=True, exist_ok=True)

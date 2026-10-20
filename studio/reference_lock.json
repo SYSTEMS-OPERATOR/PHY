@@ -1,0 +1,42 @@
+{
+  "version": "PHY_STUDIO_NATIVE_REFERENCES_V1",
+  "repository": "SYSTEMS-OPERATOR/PHY-REF",
+  "revision": "0cafc8e7f387d009a666b3b3b44bfae29904c53c",
+  "review_status": "proposed_reference_review_packet",
+  "files": {
+    "sources/reference_assets.json": {
+      "sha256": "e2458c8d5d818841a48d7f3309593f6340b62d83e7e02e973f9af9fcb74023d9",
+      "bytes": 6324
+    },
+    "assets/nih/derived/derivative_manifest.json": {
+      "sha256": "33c182cd5b0b9cb611f3415c19f7094a5e368ccbe547153af5e52399975ddfa8",
+      "bytes": 18200
+    },
+    "phy_ref/glb.py": {
+      "sha256": "fc89e9897f687aa7ec0f2f48b072644fe8ff5f05b6848538824e834c86b8cd9d",
+      "bytes": 13186
+    },
+    "reviews/pelvis_left_landmarks.json": {
+      "sha256": "7dd6609dc5e7782e14f81a6176d31f7f3910b3f04f538f08a38703e2312d31c8",
+      "bytes": 7491
+    },
+    "assets/nih/ATTRIBUTION.md": {
+      "sha256": "7f77462a0ee0a6a69a1ec570ba6c304086da6f8f109a4edbe42af461804c0e42",
+      "bytes": 1167
+    },
+    "assets/nih/LICENSE-CC-BY-4.0.txt": {
+      "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411",
+      "bytes": 18657
+    },
+    "assets/nih/derived/pelvis-preview.glb": {
+      "sha256": "c619c5fd8aefb971f9fd036b2f26e5809e0c102ddf8ba37474d33a84c52d9f49",
+      "bytes": 373404
+    },
+    "assets/nih/derived/skin-preview.glb": {
+      "sha256": "f72c4ac15551b046dffb3ba667e65d83165dc596d4672cc75a9eae4552108785",
+      "bytes": 451504
+    }
+  },
+  "canon_effect": "none",
+  "fabrication_released": false
+}

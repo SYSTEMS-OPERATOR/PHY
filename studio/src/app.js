@@ -6,6 +6,8 @@ import { STLExporter } from 'three/addons/exporters/STLExporter.js';
 import { partVisible, partMatches, exportGroup as makeExportGroup } from './part_roles.js';
 import { escape, htmlTable, boneEvidenceHtml, engineeringHtml, nasaHtml, nasaMotionHtml, conditionLabels } from './evidence.js';
 import { isNative, previewBytes, emptyDraft, annotationFromHit, nativeReferenceHtml } from './native_reference.js';
+import { createOriginalReview } from './original_review_ui.js';
+import { canonicalJson } from './original_review.js';
 
 const data = window.PHY_DATA;
 const $ = id => document.getElementById(id);
@@ -18,6 +20,7 @@ const state = { model:'F28_REFINED', height:sourceMean, pose:75, palette:'wood',
 let model, renderer, scene, camera, controls, root, meshes=[], guides, ground, rulerGroup, annotationGroup, environment;
 let selectionSequence=0, comparisonModel='NIH_PELVIS';
 let referenceDraft=data.native_references?emptyDraft(data.native_references):null;
+let originalReview;
 let toastTimer, lastFocus, focusTarget, redraw=true;
 const palette = {
   wood: {redwood:0xb27850, brass:0xb99b5e, copper:0xb57055, ivory:0xaabbab, steel:0x6b767b, aluminum:0xb2b9b5, acetal:0x383f3d},
@@ -66,7 +69,7 @@ function init() {
 }
 function resize() { if(!renderer)return;const r=stage.getBoundingClientRect();renderer.setSize(r.width,r.height,false);camera.aspect=r.width/r.height;camera.updateProjectionMatrix();redraw=true; }
 function populateModels() {
-  const labels={F28_MEAN:['01','Female 28','Arithmetic mean'],F28_REFINED:['02','Female 28 · refined','Slight form adjustments'],SOPHY_SCALE:['03','SOPHY scale','1676.4 mm · canon reference'],A0_R1:['04','Shoulder · A0-R1','Located CAD / shop review'],REFERENCE_KIT:['05','Source library','Legacy component envelopes'],NIH_PELVIS:['06','NIH · female pelvis','Native frame / reduced preview'],NIH_SKIN:['07','NIH · female skin','Exterior / reduced preview']};
+  const labels={F28_MEAN:['01','Female 28','Arithmetic mean'],F28_REFINED:['02','Female 28 · refined','Slight form adjustments'],SOPHY_SCALE:['03','SOPHY scale','1676.4 mm · canon reference'],A0_R1:['04','Shoulder · A0-R1','Located CAD / shop review'],REFERENCE_KIT:['05','Source library','Legacy component envelopes'],NIH_PELVIS:['06','NIH · female pelvis','Native frame / reduced preview'],NIH_SKIN:['07','NIH · female skin','Exterior / reduced preview'],NIH_PELVIS_ORIGINAL:['08','NIH · pelvis original','Verified local file / original faces']};
   $('models').replaceChildren();
   for(const m of data.models){const [glyph,label,note]=labels[m.id];const b=document.createElement('button');b.className='model-button';b.dataset.model=m.id;b.innerHTML='<span class="model-glyph">'+glyph+'</span><span><span class="model-label">'+label+'</span><div class="model-note">'+note+'</div></span>';b.onclick=()=>selectModel(m.id);$('models').append(b);}
 }
@@ -81,6 +84,7 @@ async function selectModel(id,render=true) {
   model=data.models.find(x=>x.id===id);if(!model)return;
   const chosen=model,sequence=++selectionSequence,native=isNative(model);
   state.loading=false;state.referenceCapture=false;$('capture-landmark').classList.remove('active');
+  originalReview?.syncModel(model);
   if(native)comparisonModel=id;
   state.model=id;state.height=model.height_mm??0;state.pose=model.arm_drop_deg??0;state.selected=null;state.isolated=false;state.boneOnly=false;state.exploded=0;
   $('layer-bones-only').checked=false;$('layer-bones-only').disabled=!model.bone_equivalence;
@@ -96,10 +100,10 @@ async function selectModel(id,render=true) {
   $('source-note').textContent=body?'ANSUR II, female US Army cohort (2010–2012), age exactly 28; not a civilian/worldwide mean. 92 samples. External dimensions differ from mechanical centers. Arm station closure factor '+round(model.design_datums.arm_chain_closure_scale,4)+'. See Reference for every mean and limitation.':model.limitations.join(' ');
   $('pose-note').textContent=body?'Visual arm motion around proposed centers.':isA0?'Neutral A0 assembly. Its physical motion screen remains discrete.':'Unassembled component gallery.';
   if(native){
-    $('model-title').textContent=id==='NIH_PELVIS'?'The female pelvis':'The female exterior';
+    $('model-title').textContent=id==='NIH_SKIN'?'The female exterior':'The female pelvis';
     $('model-eyebrow').textContent='NIH / HRA / NATIVE REFERENCE';
     $('model-subtitle').textContent='Source geometry in a separate native frame.';
-    $('model-badge').textContent='DECIMATED PREVIEW / ANATOMICAL QUALIFICATION OPEN';
+    $('model-badge').textContent=id==='NIH_PELVIS_ORIGINAL'?'VERIFIED ORIGINAL / ANATOMICAL QUALIFICATION OPEN':'DECIMATED PREVIEW / ANATOMICAL QUALIFICATION OPEN';
     $('profile-note').textContent='Source world coordinates preserved. 1000 mm/m display conversion only; no stature normalization.';
     $('pose-note').textContent='Native static source pose. No PHY joint axes or anatomical registration.';
   }
@@ -107,12 +111,13 @@ async function selectModel(id,render=true) {
   $('axis-note').textContent=native?'SOURCE X · Y UP · Z / m → mm ×1000':'mm / X RIGHT · Y FRONT · Z UP';
   $('canvas-note').textContent=native?'SEPARATE NATIVE VIEW · CAMERA ORBIT ONLY · NO REGISTRATION':'DRAG TO ORBIT · SCROLL / PINCH TO ZOOM · CLICK A PART';
   $('reference-review').hidden=id!=='NIH_PELVIS';
+  $('original-review').hidden=!data.native_references?.original_review_contract;
   $('compare-reference').hidden=!data.native_references || (!native&&id!=='SOPHY_SCALE');
   $('compare-reference').textContent=native?'View SOPHY separately ↗':'Return to NIH native view ↗';
   for(const control of ['explode','mat-wood','mat-carbon','layer-frame','layer-joints','layer-dimensions'])$(control).disabled=native;
   for(const option of $('export-format').options)option.disabled=native&&option.value==='stl';
   if(native&&$('export-format').value==='stl')$('export-format').value='glb';
-  $('export-note').textContent=native?'GLB downloads the identical pinned preview in meters. JSON retains draft/provenance. No transformed STL or fabrication mesh export.':'Current scale and pose. Reference geometry; full-scale structural release is open.';
+  $('export-note').textContent=id==='NIH_PELVIS_ORIGINAL'?'GLB saves the verified original bytes. JSON exports the unaccepted original review packet.':native?'GLB downloads the identical pinned preview in meters. JSON retains draft/provenance. No transformed STL or fabrication mesh export.':'Current scale and pose. Reference geometry; full-scale structural release is open.';
   $('export').disabled=!renderer&&!native;
   updateDraft();
   for(const input of ['height','height-number','pose','pose-a','pose-t'])$(input).disabled=!body;
@@ -124,15 +129,15 @@ async function selectModel(id,render=true) {
   disposeGroup(root);disposeGroup(guides);disposeGroup(rulerGroup);disposeGroup(annotationGroup);meshes=[];
   root.position.set(0,0,0);root.quaternion.identity();root.scale.setScalar(1);
   if(native){
-    state.loading=true;$('render-status').textContent='Checking pinned native preview…';
+    state.loading=true;$('render-status').textContent='Checking pinned native geometry…';
     try{
-      const raw=await previewBytes(chosen),gltf=await new GLTFLoader().parseAsync(raw.buffer,'');
+      const gltf=chosen._originalSurface?{scene:chosen._originalSurface.scene()}:await new GLTFLoader().parseAsync((await previewBytes(chosen)).buffer,'');
       if(sequence!==selectionSequence){disposeGroup(gltf.scene);return;}
       gltf.scene.traverse(mesh=>{if(!mesh.isMesh)return;const part=chosen.parts.find(p=>p.id===mesh.name);if(!part)throw new Error('Native mesh label mismatch');mesh.userData.part=part;mesh.castShadow=true;mesh.receiveShadow=true;meshes.push(mesh);});
       if(meshes.length!==chosen.parts.length)throw new Error('Native mesh count mismatch');
       root.add(gltf.scene);root.scale.setScalar(1000);
       root.userData={profile:id,units:'m',display_units:'mm',display_scale:1000,canonical_transform:null};
-      state.loading=false;$('render-status').textContent='Pinned native preview · stored locally · anatomy/metric fidelity unqualified';
+      state.loading=false;$('render-status').textContent=(chosen._originalSurface?'Verified local original':'Pinned native preview')+' · anatomy/metric fidelity unqualified';
       applyTransforms();cameraView('iso');updateDraft();return;
     }catch(e){if(sequence===selectionSequence){state.loading=false;meshes=[];disposeGroup(root);$('render-status').textContent='Reference load blocked: '+e.message;toast('Reference load blocked: '+e.message);}return;}
   }
@@ -150,7 +155,7 @@ function updateStats() {
   const body=!!model.height_mm;
   if(isNative(model)){
     const vals=[model.parts.length+' <span>source meshes</span>',model.derivative.preview_triangles.toLocaleString()+' <span>triangles</span>','m <span>native / Y up</span>'];
-    vals.forEach((v,i)=>{$('stat'+(i+1)).innerHTML=v;$('stat'+(i+1)+'-label').textContent=['Segmentation','Reduced preview','Source frame'][i];});return;
+    vals.forEach((v,i)=>{$('stat'+(i+1)).innerHTML=v;$('stat'+(i+1)+'-label').textContent=['Segmentation',model._originalSurface?'Original triangles':'Reduced preview','Source frame'][i];});return;
   }
   const vals=body?[round(state.height)+' <span>mm</span>',round(model.t_pose_span_mm*state.height/model.height_mm)+' <span>mm</span>','92 <span>women / age 28</span>']:model.id==='A0_R1'?['19 <span>CAD parts</span>','35 <span>located instances</span>','317 <span>mm / S–E station</span>']:['18 <span>source solids</span>','mm <span>canonical units</span>','0 <span>anatomical transforms</span>'];
   const labels=body?['Standing height','T-pose span','Source cohort']:model.id==='A0_R1'?['Unique geometry','Assembly','Dummy member']:['Library','Dimensions','Placement'];
@@ -222,13 +227,14 @@ function inspectPart(id) {
   const dims=p.bounds_mm.max.map((v,i)=>(v-p.bounds_mm.min[i])*(model.height_mm?state.height/model.height_mm:1));
   $('part-details').innerHTML='<p><strong>'+escape(p.name)+'</strong><br>'+escape(p.id)+'</p>'+(p.role?'<p>Role: '+escape(p.role)+(p.bone_id?'<br>'+escape(p.bone_id)+' · dimensional fidelity unverified':p.grouped_bone_ids?'<br>'+p.grouped_bone_ids.length+' grouped identities · not individual bones':'')+'</p>':'')+(p.source_record_status?'<p class="quiet">Canonical source record '+escape(p.source_record_status)+'</p>':'')+'<p>'+dims.map(x=>round(x)).join(' × ')+' mm <span class="quiet">/ axis-aligned envelope</span></p><p class="quiet">'+escape(p.authority)+'<br>'+escape(p.source)+'</p>'+(p.center_distance_mm?'<p>Member center distance: '+round(p.center_distance_mm*(model.height_mm?state.height/model.height_mm:1))+' mm</p>':'');
   if(p.bone_id)$('part-details').innerHTML+=boneEvidenceHtml(data.engineering,p.bone_id);
-  if(isNative(model))$('part-details').innerHTML+='<p class="quiet">Native X/Y/Z display envelope only; not a bone measurement.<br>Original source node '+p.source_node+' · preview node '+p.preview_node+' · '+p.triangle_count+' triangles<br>Source '+escape(model.source.sha256)+'<br>Preview '+escape(model.derivative.preview_sha256)+'</p>';
+  if(isNative(model))$('part-details').innerHTML+='<p class="quiet">Native X/Y/Z display envelope only; not a bone measurement.<br>Original source node '+p.source_node+(model._originalSurface?' · original primitive '+p.primitive_index:' · preview node '+p.preview_node)+' · '+p.triangle_count+' triangles<br>Source '+escape(model.source.sha256)+(model._originalSurface?'':'<br>Preview '+escape(model.derivative.preview_sha256))+'</p>';
   applyTransforms();
 }
 function pick(event) {
   if(state.loading)return;
   const rect=canvas.getBoundingClientRect(),point=new THREE.Vector2((event.clientX-rect.left)/rect.width*2-1,-(event.clientY-rect.top)/rect.height*2+1),ray=new THREE.Raycaster();ray.setFromCamera(point,camera);
   const hit=ray.intersectObjects(meshes.filter(m=>m.visible&&m.userData.part.region!=='envelope'),false)[0];if(!hit)return;
+  if(originalReview?.pick(hit))return;
   if(state.referenceCapture&&model.id==='NIH_PELVIS'){
     try{const feature=data.native_references.landmark_packet.landmarks.find(p=>p.id===$('landmark-candidate').value),annotation=annotationFromHit(hit,feature,model);
       referenceDraft.annotations=referenceDraft.annotations.filter(p=>p.landmark_id!==annotation.landmark_id);referenceDraft.annotations.push(annotation);
@@ -248,6 +254,7 @@ function updateDraft(){
   $('draft-points').textContent=referenceDraft.annotations.map(p=>p.landmark_id+': ['+p.native_point_m.map(v=>round(v,6)).join(', ')+'] m · preview face '+p.face_index).join('\n');
   if(!annotationGroup)return;disposeGroup(annotationGroup);
   if(model?.id==='NIH_PELVIS'&&!state.loading)for(const p of referenceDraft.annotations){const ball=new THREE.Mesh(new THREE.SphereGeometry(1.5,12,8),new THREE.MeshBasicMaterial({color:0xb66a48,depthTest:false}));ball.position.fromArray(p.native_point_m).multiplyScalar(1000);annotationGroup.add(ball);}
+  if(!state.loading)originalReview?.overlays(annotationGroup);
   redraw=true;
 }
 function wireControls() {
@@ -264,7 +271,7 @@ function wireControls() {
   $('focus-part').onclick=()=>{const m=meshes.find(x=>x.name===state.selected);if(!m){toast('Select a component first.');return;}const b=new THREE.Box3().setFromObject(m);cameraView(state.view,b.getCenter(new THREE.Vector3()),Math.max(...b.getSize(new THREE.Vector3()).toArray(),45)*2.5);};
   $('mat-wood').onclick=()=>setPalette('wood');$('mat-carbon').onclick=()=>setPalette('carbon');
   document.querySelectorAll('[data-view]').forEach(b=>b.onclick=()=>cameraView(b.dataset.view));
-  $('measure').onclick=()=>{state.referenceCapture=false;$('capture-landmark').classList.remove('active');state.ruler=!state.ruler;$('measure').classList.toggle('active',state.ruler);state.points=[];disposeGroup(rulerGroup);if(state.ruler)toast(isNative(model)?'Click two preview points. Distances are not qualified osteometry.':'Click two points on the frame to measure.');redraw=true;};
+  $('measure').onclick=()=>{originalReview?.stop();state.referenceCapture=false;$('capture-landmark').classList.remove('active');state.ruler=!state.ruler;$('measure').classList.toggle('active',state.ruler);state.points=[];disposeGroup(rulerGroup);if(state.ruler)toast(isNative(model)?'Click two preview points. Distances are not qualified osteometry.':'Click two points on the frame to measure.');redraw=true;};
   $('compare-reference').onclick=()=>selectModel(isNative(model)?'SOPHY_SCALE':comparisonModel);
   $('capture-landmark').onclick=()=>{if(state.loading||!renderer)return;state.ruler=false;$('measure').classList.remove('active');state.points=[];disposeGroup(rulerGroup);state.referenceCapture=!state.referenceCapture;$('capture-landmark').classList.toggle('active',state.referenceCapture);if(state.referenceCapture)toast('Click the specified cortical surface for a draft point.');};
   $('landmark-candidate').onchange=()=>{const p=data.native_references.landmark_packet.landmarks.find(p=>p.id===$('landmark-candidate').value);$('landmark-definition').textContent=p.definition+' '+p.review_rule;inspectPart(p.preview_mesh_names[0]);};
@@ -283,6 +290,11 @@ async function exportModel() {
     const selectedModel=model,format=$('export-format').value;
     try{
       if(format==='stl'){toast('Native preview STL export is unavailable. Use the pinned GLB or draft JSON.');return;}
+      if(selectedModel._originalSurface){
+        if(format==='glb')download(selectedModel._originalSurface.raw,'VH_F_Pelvis.glb','model/gltf-binary');
+        else download(canonicalJson(originalReview.packet()),'PHY-pelvis-original-review-packet.json','application/json');
+        return;
+      }
       if(format==='glb')download(await previewBytes(selectedModel),selectedModel.derivative.preview_filename,'model/gltf-binary');
       else download(JSON.stringify({reference_model:{...selectedModel,glb_base64:undefined},
         review_state:{units:'m',frame:selectedModel.frame,display_conversion_mm_per_m:1000,canonical_transform:null,fabrication_released:false,build:data.build},
@@ -365,6 +377,22 @@ function openModal(tab) {
 }
 function closeModal(){$('modal-backdrop').classList.remove('open');lastFocus?.focus();}
 function wireResources(){
+  if(data.native_references?.original_review_contract){
+    originalReview=createOriginalReview({data,download,selectModel,changed:updateDraft,renderAvailable:!!renderer,
+      prepareCapture(){state.ruler=false;state.points=[];$('measure').classList.remove('active');disposeGroup(rulerGroup);},
+      activate(ctx){
+        const base=data.models.find(m=>m.id==='NIH_PELVIS'),original={...base,id:'NIH_PELVIS_ORIGINAL',kind:'nih_native_original',parts:ctx.surface.parts,
+          derivative:{...base.derivative,preview_triangles:ctx.surface.parts.reduce((n,p)=>n+p.triangle_count,0)},glb_base64:undefined};
+        Object.defineProperty(original,'_originalSurface',{value:ctx.surface});
+        const at=data.models.findIndex(m=>m.id===original.id);if(at<0)data.models.push(original);else data.models[at]=original;populateModels();
+      },
+      focus(id){inspectPart(id);state.isolated=true;applyTransforms();cameraView(state.view);},
+      getView:()=>({camera_position_mm:camera.position.toArray(),target_mm:controls.target.toArray()}),
+      restoreView(view){camera.position.fromArray(view.camera_position_mm);controls.target.fromArray(view.target_mm);controls.update();redraw=true;},
+      snapshot(){renderer.render(scene,camera);canvas.toBlob(blob=>download(blob,'PHY-original-annotated-view.png','image/png'));
+        download(canonicalJson({viewer_build_sha256:data.build.package_input_sha256,user_agent:navigator.userAgent,viewport_px:[canvas.width,canvas.height],view:{camera_position_mm:camera.position.toArray(),target_mm:controls.target.toArray()},note:'Review context only; image bytes are not geometric proof and vary across renderers.'}),'PHY-original-annotated-view-context.json','application/json');}
+    });
+  }
   if(data.native_references){
     for(const p of data.native_references.landmark_packet.landmarks)$('landmark-candidate').add(new Option(p.label,p.id));
     const p=data.native_references.landmark_packet.landmarks[0];$('landmark-definition').textContent=p.definition+' '+p.review_rule;
@@ -377,6 +405,7 @@ function wireResources(){
 }
 window.PHY_STUDIO={getState:()=>({...state,points:state.points.map(p=>p.toArray()),modelParts:model?.parts.length,webgl:!!renderer}),selectModel,setHeight,setPose,setPalette,inspectPart,
   referenceDraft:()=>referenceDraft?structuredClone(referenceDraft):null,
+  originalReview:()=>originalReview,
   boneAudit:()=>model?.bone_equivalence??null,visiblePartIds:()=>meshes.filter(m=>m.visible).map(m=>m.name),
   modelBounds:()=>root?new THREE.Box3().setFromObject(root).getSize(new THREE.Vector3()).toArray():null,
   projectPart:id=>{const mesh=meshes.find(x=>x.name===id);if(!mesh)return null;const c=new THREE.Box3().setFromObject(mesh).getCenter(new THREE.Vector3()).project(camera);const r=canvas.getBoundingClientRect();return [r.left+(c.x+1)*r.width/2,r.top+(1-c.y)*r.height/2];}};

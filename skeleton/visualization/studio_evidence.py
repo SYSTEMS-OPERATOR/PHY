@@ -171,7 +171,8 @@ def studio_build_stamp(evidence, root=ROOT, native_references=None):
     paths = ("bin/export_phy_studio.py", "skeleton/visualization/studio_evidence.py",
              "studio/src/app.js", "studio/src/evidence.js", "studio/src/index.html", "studio/src/part_roles.js",
              "studio/app.bundle.js", "studio/build.mjs", "studio/package-lock.json",
-             "skeleton/visualization/studio_references.py", "studio/reference_lock.json", "studio/src/native_reference.js")
+             "skeleton/visualization/studio_references.py", "studio/reference_lock.json", "studio/src/native_reference.js",
+             "studio/src/original_review.js", "studio/src/original_review_ui.js")
     inputs = {path: sha256((Path(root) / path).read_bytes()) for path in paths}
     inputs["engineering_evidence"] = sha256(json_bytes(evidence))
     inputs["native_reference_evidence"] = sha256(json_bytes(native_references))

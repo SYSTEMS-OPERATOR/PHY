@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: SYSTEMS-OPERATOR/PHY-REF
-          ref: 0cafc8e7f387d009a666b3b3b44bfae29904c53c
+          ref: 1671f55f7a7cd6f03af4497dd02da02906135795
           path: .phy-reference
           lfs: false
       - uses: actions/setup-python@v5
@@ -60,11 +60,20 @@ jobs:
       - name: Install test browser
         working-directory: studio
         run: npx playwright install --with-deps chromium
+      - name: Acquire exact original for explicit local-file browser fixtures
+        run: python .phy-reference/tools/acquire_nih.py --asset NIH_3DPX_020984
       - name: Exercise offline Studio and exports
+        env:
+          PHY_PELVIS_ORIGINAL: .phy-reference/assets/nih/originals/VH_F_Pelvis.glb
         run: npm run test:browser --prefix studio
+      - name: Independently reconstruct browser original reviews and packet
+        run: |
+          python .phy-reference/tools/validate_original_review.py --original .phy-reference/assets/nih/originals/VH_F_Pelvis.glb --draft /tmp/phy-original-review-qa/review-A.json --compare /tmp/phy-original-review-qa/review-B.json
+          python .phy-reference/tools/validate_original_review.py --original .phy-reference/assets/nih/originals/VH_F_Pelvis.glb --packet /tmp/phy-original-review-qa/packet.json
       - uses: actions/upload-artifact@v4
         with:
           name: phy-studio-demo
           path: |
             studio/dist/PHY-Studio-package.zip
             /tmp/phy-studio-qa/
+            /tmp/phy-original-review-qa/

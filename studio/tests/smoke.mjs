@@ -276,7 +276,7 @@ try {
     await page.click('#compare-reference');await page.waitForFunction(()=>!PHY_STUDIO.getState().loading);
     assert.equal(await page.evaluate(()=>PHY_STUDIO.referenceDraft().annotations.length),1,'draft persists across frame switching');
     await page.click('#open-engineering');await page.click('[data-tab="nih"]');
-    assert.match(await page.locator('#modal-content').innerText(),/0cafc8e7f387d009a666b3b3b44bfae29904c53c/);
+    assert.ok((await page.locator('#modal-content').innerText()).includes(JSON.parse(await fs.readFile(path.join(root,'studio/reference_lock.json'),'utf8')).revision));
     assert.match(await page.locator('#modal-content').innerText(),/CC BY 4.0/);
     await page.keyboard.press('Escape');
   }

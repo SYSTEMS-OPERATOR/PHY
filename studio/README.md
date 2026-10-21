@@ -117,8 +117,8 @@ open only when selected; evidence inspection needs no network or PDF acquisition
 ## Native NIH comparison and draft landmarks
 
 The checked-in viewer includes the two existing small previews from PHY-REF
-revision `0cafc8e7f387d009a666b3b3b44bfae29904c53c` (review packet proposed in
-[PHY-REF PR 2](https://github.com/SYSTEMS-OPERATOR/PHY-REF/pull/2)).
+revision `1671f55f7a7cd6f03af4497dd02da02906135795` (original review tooling in
+[PHY-REF PR 3](https://github.com/SYSTEMS-OPERATOR/PHY-REF/pull/3)).
 `studio/reference_lock.json` pins all consumed files, bytes and SHA-256 hashes.
 Original binary custody and derived-mesh authority remain in PHY-REF. The HTML
 and distribution package embed copies of these exact derived bytes for offline
@@ -157,6 +157,79 @@ Native **GLB** download preserves the pinned preview bytes and meter/Y-up frame;
 **JSON** exports provenance and the unaccepted draft. Native STL/reinterpreted
 mesh export is unavailable. Existing PHY armature GLB/STL/JSON exports remain.
 
+
+## Original-surface pelvis reviews
+
+The **Original-surface review** inspector admits the exact local `VH_F_Pelvis.glb`
+(1,593,336 bytes; SHA-256 `155603d0c44a8ed1e0ca307f1ec3037941304f29f4187631135a9a150fab048d`).
+It checks custody before adding a session-only **NIH pelvis original** model with
+14 source meshes and 87,448 original triangles. Original bytes are never embedded
+in the HTML or fetched by Studio. In the pinned PHY-REF checkout, the existing
+`python tools/acquire_nih.py --asset NIH_3DPX_020984` command can acquire that file;
+Studio itself requires an explicit local-file selection.
+
+1. Load the original, declare a reviewer/session ID and evidence kind, and choose
+   one of the five existing candidates. A declared identity does not prove an
+   independent human review. Software demonstrations must use **Software fixture**.
+2. Focus the specified surface, select a useful view, arm **Capture / replace
+   point**, then click. The point retains exact original node/primitive/face,
+   vertex indices, barycentric weights and native world meters. Replacing or
+   deleting a candidate leaves the other candidates intact.
+3. Use **Toggle patch faces** to add/remove clicked original triangles. Capture a
+   point first. The ischial tuberosity requires a patch and an explicit
+   representative-point rule; the sacral promontory requires a proposed
+   median-plane construction note. Incomplete work can be saved with these
+   requirements unresolved. The software never chooses a centroid or plane.
+4. Record point/patch rules, review notes and camera views. Views store camera
+   position/target in display millimeters; they do not adopt a coordinate frame
+   or store component visibility. **Save annotated view** downloads a PNG and a
+   separate rendering-context JSON. Images are optional context, not lineage
+   proof; screenshot bytes vary by renderer.
+5. Save the versioned original draft before closing. To resume, first supply the
+   same original, then load the draft or packet. Every annotation and supplied
+   report is checked before replacing the active review. A failed import keeps
+   valid work intact. Preview drafts use their existing distinct format and
+   cannot be imported as original drafts.
+6. Load a separately supplied **comparison draft B**. Orange A and blue B remain
+   separate. The table identifies missing candidates, changed selection rules
+   and patches, and source-coordinate differences converted to millimeters.
+   Metric calibration and an approved uncertainty budget remain unresolved;
+   no average, winner or tolerance verdict is produced.
+7. **Export review packet** saves deterministic JSON with one or two reviews,
+   source/definition/contract/revision/build fingerprints, reconstruction reports,
+   comparison, declared reviewer/context, attribution/license and unresolved
+   gates. It includes no original binary, generated timestamp or local path.
+   The same packet can reopen in Studio after explicitly reloading its original.
+
+Validate outside the viewer, from the **pinned** PHY-REF checkout:
+
+```bash
+python tools/validate_original_review.py --original /path/to/VH_F_Pelvis.glb --packet /path/to/PHY-pelvis-original-review-packet.json
+python tools/validate_original_review.py --original /path/to/VH_F_Pelvis.glb --draft /path/to/review-A.json --compare /path/to/review-B.json --output /path/to/review-packet.json
+```
+
+New types are `PHY_PELVIS_ORIGINAL_DRAFT_V1`,
+`PHY_PELVIS_ORIGINAL_COMPARISON_V1` and `PHY_PELVIS_ORIGINAL_PACKET_V1`;
+`reviews/original_review_contract.json` in PHY-REF defines their limits. JSON uses
+recursive sorted object keys, preserved array order, UTF-8, two-space indentation
+and a final newline. Each producer is deterministic; Python and JavaScript number
+formatting need not produce identical bytes. Numeric report checks permit only
+rounding differences. The `1e-7 m` reconstruction epsilon is a numerical
+consistency check, separate from metric calibration and anatomical uncertainty.
+
+Accepted landmarks and canonical transforms remain null. Anatomical acceptance
+and fabrication release remain false. Source lumbar-6 context, segmentation,
+independent anatomical review, calibration and approved uncertainty budgets are
+subsequent evidence. All six left-hip cortical/spongy segments retain one fused
+adult hip identity; original display parts do not add canonical bones.
+
+For explicit original integration tests, set `PHY_PELVIS_ORIGINAL` to its absolute
+local path before `npm run test:logic --prefix studio` and
+`npm run test:browser --prefix studio`. Without it, original integration tests
+report skips and fetch nothing; existing logic/browser coverage still runs.
+Actions supplies the pinned original to file inputs and independently validates
+the resulting labeled fixture packet. See
+`reports/PHY_STUDIO_ORIGINAL_REVIEW_VALIDATION.md` for the current evidence.
 
 ## Rebuild
 

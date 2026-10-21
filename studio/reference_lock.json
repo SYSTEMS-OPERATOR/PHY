@@ -1,7 +1,7 @@
 {
   "version": "PHY_STUDIO_NATIVE_REFERENCES_V1",
   "repository": "SYSTEMS-OPERATOR/PHY-REF",
-  "revision": "0cafc8e7f387d009a666b3b3b44bfae29904c53c",
+  "revision": "1671f55f7a7cd6f03af4497dd02da02906135795",
   "review_status": "proposed_reference_review_packet",
   "files": {
     "sources/reference_assets.json": {
@@ -35,6 +35,10 @@
     "assets/nih/derived/skin-preview.glb": {
       "sha256": "f72c4ac15551b046dffb3ba667e65d83165dc596d4672cc75a9eae4552108785",
       "bytes": 451504
+    },
+    "reviews/original_review_contract.json": {
+      "sha256": "ad56d6c1ce0b56d7767dd2b8be9a557dc537c6ee59fe40c6f26d89d85a268827",
+      "bytes": 1853
     }
   },
   "canon_effect": "none",

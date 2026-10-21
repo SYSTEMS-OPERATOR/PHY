@@ -40,9 +40,19 @@ def load_native_references(reference_root, root=ROOT):
     catalog = inspector.strict_json(raw_files["sources/reference_assets.json"])
     derivatives = inspector.strict_json(raw_files["assets/nih/derived/derivative_manifest.json"])
     packet = inspector.strict_json(raw_files["reviews/pelvis_left_landmarks.json"])
+    contract_path = "reviews/original_review_contract.json"
+    contract = inspector.strict_json(raw_files[contract_path])
     if (packet["accepted_landmarks"] is not None or packet["canonical_transform"] is not None
             or packet["fabrication_released"] is not False):
         raise ValueError("Landmark packet must remain unaccepted")
+    if (contract["version"] != "PHY_PELVIS_ORIGINAL_CONTRACT_V1"
+            or contract["packet_sha256"] != lock["files"]["reviews/pelvis_left_landmarks.json"]["sha256"]
+            or contract["source"] != {k: packet["source"][k] for k in ("asset_id", "bytes", "sha256")}
+            or contract["units"] != "m" or contract["coordinate_frame"] != packet["coordinate_frame"]
+            or set(contract["features"]) != {f["id"] for f in packet["landmarks"]}
+            or contract["accepted_landmarks"] is not None or contract["canonical_transform"] is not None
+            or contract["fabrication_released"] is not False):
+        raise ValueError("Original review contract custody/qualification mismatch")
     models = []
     for ident, filename in PREVIEWS.items():
         source = next(a for a in catalog["assets"] if a["asset_id"] == ident)
@@ -92,6 +102,8 @@ def load_native_references(reference_root, root=ROOT):
                 "review_status": lock["review_status"], "files": lock["files"],
                 "landmark_packet": packet,
                 "landmark_packet_sha256": lock["files"]["reviews/pelvis_left_landmarks.json"]["sha256"],
+                "original_review_contract": contract,
+                "original_review_contract_sha256": lock["files"][contract_path]["sha256"],
                 "attribution": raw_files["assets/nih/ATTRIBUTION.md"].decode(),
                 "canon_effect": "none", "fabrication_released": False}
     return models, evidence, {p: raw_files[p] for p in raw_files if p.endswith(".glb")}

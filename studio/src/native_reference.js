@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import { escape, htmlTable } from './evidence.js';
 
-export const isNative = model => model?.kind === 'nih_native_preview';
+export const isNative = model => ['nih_native_preview','nih_native_original'].includes(model?.kind);
 
 export async function previewBytes(model) {
   const raw = Uint8Array.from(atob(model.glb_base64), c => c.charCodeAt(0));
@@ -40,7 +40,7 @@ export function nativeReferenceHtml(data) {
   const evidence=data.native_references;
   if (!evidence) return '<p>NIH previews were omitted from this build. Rebuild with the explicit pinned PHY-REF checkout using --reference-root.</p>';
   const packet=evidence.landmark_packet;
-  const cards=data.models.filter(isNative).map(model=>{
+  const cards=data.models.filter(m=>m.kind==='nih_native_preview').map(model=>{
     const s=model.source,d=model.derivative;
     return '<h3>'+escape(s.title)+'</h3><p>'+escape(s.attribution)+'</p><p><a href="'+escape(s.entry_url)+'" target="_blank" rel="noopener">NIH source entry</a> · <a href="'+escape(s.license_url)+'" target="_blank" rel="noopener">CC BY 4.0</a> · entry '+s.entry_version+' / HRA '+escape(s.reference_object_version)+'</p><p class="small-note">Original '+escape(s.original_filename)+' · '+s.bytes+' bytes · SHA-256 '+escape(s.sha256)+'<br>Preview '+d.preview_bytes+' bytes · '+d.preview_triangles+' triangles · SHA-256 '+escape(d.preview_sha256)+'</p><p>'+escape(d.recipe)+'. '+escape(d.qualification)+'. '+escape(d.textures_and_vertex_colors)+'.</p>';
   }).join('');

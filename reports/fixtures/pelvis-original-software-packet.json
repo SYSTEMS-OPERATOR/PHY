@@ -1,0 +1,472 @@
+{
+  "accepted_landmarks": null,
+  "attribution": "Kristen Browne; Heidi Schlehlein. 2022. 3D Reference Organ for Pelvis, Female v1.2. https://doi.org/10.48539/HBM427.CCRP.887. Accessed on May 6, 2022.",
+  "canonical_transform": null,
+  "comparison": {
+    "accepted_landmarks": null,
+    "canonical_transform": null,
+    "contains_software_fixtures": true,
+    "distance_meaning": "Source-coordinate distances converted to mm; metric calibration unresolved; no tolerance verdict.",
+    "fabrication_released": false,
+    "kind": "PHY_PELVIS_ORIGINAL_COMPARISON_V1",
+    "reviewer_relation": "distinct_declared_ids_independence_unverified",
+    "rows": [
+      {
+        "distance_source_mm": 98.78277782728621,
+        "landmark_id": "L_ASIS",
+        "patch_faces_differ": false,
+        "selection_rules_differ": false,
+        "status": "paired"
+      },
+      {
+        "distance_source_mm": 0,
+        "landmark_id": "L_ISCHIAL_TUBEROSITY",
+        "patch_faces_differ": false,
+        "selection_rules_differ": false,
+        "status": "paired"
+      },
+      {
+        "distance_source_mm": 0,
+        "landmark_id": "L_PSIS",
+        "patch_faces_differ": false,
+        "selection_rules_differ": false,
+        "status": "paired"
+      },
+      {
+        "distance_source_mm": 0,
+        "landmark_id": "L_PUBIC_TUBERCLE",
+        "patch_faces_differ": false,
+        "selection_rules_differ": false,
+        "status": "paired"
+      },
+      {
+        "distance_source_mm": 0,
+        "landmark_id": "SACRAL_PROMONTORY",
+        "patch_faces_differ": false,
+        "selection_rules_differ": false,
+        "status": "paired"
+      }
+    ],
+    "status": "unaccepted_coordinate_comparison"
+  },
+  "contract_sha256": "ad56d6c1ce0b56d7767dd2b8be9a557dc537c6ee59fe40c6f26d89d85a268827",
+  "coordinate_frame": "source world Y-up, unchanged",
+  "fabrication_released": false,
+  "kind": "PHY_PELVIS_ORIGINAL_PACKET_V1",
+  "license": "CC-BY-4.0",
+  "packet_id": "NIH_PELVIS_LEFT_REVIEW_01",
+  "packet_sha256": "7dd6609dc5e7782e14f81a6176d31f7f3910b3f04f538f08a38703e2312d31c8",
+  "reference_revision": "1671f55f7a7cd6f03af4497dd02da02906135795",
+  "reviews": [
+    {
+      "accepted_landmarks": null,
+      "annotations": [
+        {
+          "anatomically_accepted": false,
+          "barycentric": [
+            0.2895561187791631,
+            0.4952372858451939,
+            0.21520659537564307
+          ],
+          "construction_note": "",
+          "face_index": 5141,
+          "landmark_id": "L_PSIS",
+          "mesh_name": "VH_F_ilium_compact_bone_L",
+          "native_point_m": [
+            0.05717764829464834,
+            0.10592086104927048,
+            -0.16185415525483032
+          ],
+          "patch_faces": [],
+          "patch_rule": "",
+          "primitive_index": 0,
+          "selection_rule": "Software fixture: arbitrary visible original triangle; not an anatomical observation.",
+          "source_node": 13,
+          "vertex_indices": [
+            3134,
+            3142,
+            3138
+          ]
+        },
+        {
+          "anatomically_accepted": false,
+          "barycentric": [
+            0.2478365770074365,
+            0.39182083814626373,
+            0.3603425848462997
+          ],
+          "construction_note": "",
+          "face_index": 2782,
+          "landmark_id": "L_PUBIC_TUBERCLE",
+          "mesh_name": "VH_F_pubis_compact_bone_L",
+          "native_point_m": [
+            0.03606817808626153,
+            0.00746942844654766,
+            -0.04426584901311187
+          ],
+          "patch_faces": [],
+          "patch_rule": "",
+          "primitive_index": 0,
+          "selection_rule": "Software fixture: arbitrary visible original triangle; not an anatomical observation.",
+          "source_node": 9,
+          "vertex_indices": [
+            1650,
+            1633,
+            1572
+          ]
+        },
+        {
+          "anatomically_accepted": false,
+          "barycentric": [
+            0.12920319223542642,
+            0.6505998160046664,
+            0.22019699175990717
+          ],
+          "construction_note": "Software fixture only. No anatomical median plane has been constructed.",
+          "face_index": 2611,
+          "landmark_id": "SACRAL_PROMONTORY",
+          "mesh_name": "VH_F_sacrum",
+          "native_point_m": [
+            -0.019793658542437254,
+            0.09725507132305355,
+            -0.15781859358814593
+          ],
+          "patch_faces": [],
+          "patch_rule": "",
+          "primitive_index": 0,
+          "selection_rule": "Software fixture: arbitrary visible original triangle; not an anatomical observation.",
+          "source_node": 1,
+          "vertex_indices": [
+            2610,
+            2611,
+            2612
+          ]
+        },
+        {
+          "anatomically_accepted": false,
+          "barycentric": [
+            0.8355789851444995,
+            0.06920257288548647,
+            0.09521844197001408
+          ],
+          "construction_note": "",
+          "face_index": 2157,
+          "landmark_id": "L_ISCHIAL_TUBEROSITY",
+          "mesh_name": "VH_F_ischium_compact_bone_L",
+          "native_point_m": [
+            0.059129549156577435,
+            0.005090190108964492,
+            -0.11362542885293975
+          ],
+          "patch_faces": [
+            {
+              "face_index": 2157,
+              "primitive_index": 0,
+              "vertex_indices": [
+                1272,
+                1312,
+                1274
+              ]
+            },
+            {
+              "face_index": 2158,
+              "primitive_index": 0,
+              "vertex_indices": [
+                1190,
+                1272,
+                1191
+              ]
+            }
+          ],
+          "patch_rule": "Software fixture: explicit clicked faces, chosen to exercise lineage. No anatomical representative rule is approved.",
+          "primitive_index": 0,
+          "selection_rule": "Software fixture: arbitrary visible original triangle; not an anatomical observation.",
+          "source_node": 20,
+          "vertex_indices": [
+            1272,
+            1312,
+            1274
+          ]
+        },
+        {
+          "anatomically_accepted": false,
+          "barycentric": [
+            0.2895561187791631,
+            0.4952372858451939,
+            0.21520659537564307
+          ],
+          "construction_note": "",
+          "face_index": 5141,
+          "landmark_id": "L_ASIS",
+          "mesh_name": "VH_F_ilium_compact_bone_L",
+          "native_point_m": [
+            0.05717764829464834,
+            0.10592086104927048,
+            -0.16185415525483032
+          ],
+          "patch_faces": [],
+          "patch_rule": "",
+          "primitive_index": 0,
+          "selection_rule": "Software fixture: recaptured arbitrary triangle, not an anatomical observation.",
+          "source_node": 13,
+          "vertex_indices": [
+            3134,
+            3142,
+            3138
+          ]
+        }
+      ],
+      "canonical_transform": null,
+      "contract_sha256": "ad56d6c1ce0b56d7767dd2b8be9a557dc537c6ee59fe40c6f26d89d85a268827",
+      "coordinate_frame": "source world Y-up, unchanged",
+      "fabrication_released": false,
+      "kind": "PHY_PELVIS_ORIGINAL_DRAFT_V1",
+      "packet_id": "NIH_PELVIS_LEFT_REVIEW_01",
+      "packet_sha256": "7dd6609dc5e7782e14f81a6176d31f7f3910b3f04f538f08a38703e2312d31c8",
+      "reference_revision": "1671f55f7a7cd6f03af4497dd02da02906135795",
+      "review_notes": "SOFTWARE FIXTURE ONLY. Arbitrary clicked points exercise review software; none identifies an accepted anatomical landmark.",
+      "reviewer": {
+        "evidence_kind": "software_fixture",
+        "id": "fixture-A",
+        "session_id": "browser-session-A"
+      },
+      "source_sha256": "155603d0c44a8ed1e0ca307f1ec3037941304f29f4187631135a9a150fab048d",
+      "units": "m",
+      "views": [
+        {
+          "camera_position_mm": [
+            -82.31498936446889,
+            52.23836961597993,
+            -450.3981396173291
+          ],
+          "label": "Fixture ischium inspection",
+          "target_mm": [
+            68.3848187327385,
+            2.0051002502441406,
+            -91.58907271921635
+          ]
+        }
+      ]
+    },
+    {
+      "accepted_landmarks": null,
+      "annotations": [
+        {
+          "anatomically_accepted": false,
+          "barycentric": [
+            0.2895561187791631,
+            0.4952372858451939,
+            0.21520659537564307
+          ],
+          "construction_note": "",
+          "face_index": 5141,
+          "landmark_id": "L_PSIS",
+          "mesh_name": "VH_F_ilium_compact_bone_L",
+          "native_point_m": [
+            0.05717764829464834,
+            0.10592086104927048,
+            -0.16185415525483032
+          ],
+          "patch_faces": [],
+          "patch_rule": "",
+          "primitive_index": 0,
+          "selection_rule": "Software fixture: arbitrary visible original triangle; not an anatomical observation.",
+          "source_node": 13,
+          "vertex_indices": [
+            3134,
+            3142,
+            3138
+          ]
+        },
+        {
+          "anatomically_accepted": false,
+          "barycentric": [
+            0.2478365770074365,
+            0.39182083814626373,
+            0.3603425848462997
+          ],
+          "construction_note": "",
+          "face_index": 2782,
+          "landmark_id": "L_PUBIC_TUBERCLE",
+          "mesh_name": "VH_F_pubis_compact_bone_L",
+          "native_point_m": [
+            0.03606817808626153,
+            0.00746942844654766,
+            -0.04426584901311187
+          ],
+          "patch_faces": [],
+          "patch_rule": "",
+          "primitive_index": 0,
+          "selection_rule": "Software fixture: arbitrary visible original triangle; not an anatomical observation.",
+          "source_node": 9,
+          "vertex_indices": [
+            1650,
+            1633,
+            1572
+          ]
+        },
+        {
+          "anatomically_accepted": false,
+          "barycentric": [
+            0.12920319223542642,
+            0.6505998160046664,
+            0.22019699175990717
+          ],
+          "construction_note": "Software fixture only. No anatomical median plane has been constructed.",
+          "face_index": 2611,
+          "landmark_id": "SACRAL_PROMONTORY",
+          "mesh_name": "VH_F_sacrum",
+          "native_point_m": [
+            -0.019793658542437254,
+            0.09725507132305355,
+            -0.15781859358814593
+          ],
+          "patch_faces": [],
+          "patch_rule": "",
+          "primitive_index": 0,
+          "selection_rule": "Software fixture: arbitrary visible original triangle; not an anatomical observation.",
+          "source_node": 1,
+          "vertex_indices": [
+            2610,
+            2611,
+            2612
+          ]
+        },
+        {
+          "anatomically_accepted": false,
+          "barycentric": [
+            0.8355789851444995,
+            0.06920257288548647,
+            0.09521844197001408
+          ],
+          "construction_note": "",
+          "face_index": 2157,
+          "landmark_id": "L_ISCHIAL_TUBEROSITY",
+          "mesh_name": "VH_F_ischium_compact_bone_L",
+          "native_point_m": [
+            0.059129549156577435,
+            0.005090190108964492,
+            -0.11362542885293975
+          ],
+          "patch_faces": [
+            {
+              "face_index": 2157,
+              "primitive_index": 0,
+              "vertex_indices": [
+                1272,
+                1312,
+                1274
+              ]
+            },
+            {
+              "face_index": 2158,
+              "primitive_index": 0,
+              "vertex_indices": [
+                1190,
+                1272,
+                1191
+              ]
+            }
+          ],
+          "patch_rule": "Software fixture: explicit clicked faces, chosen to exercise lineage. No anatomical representative rule is approved.",
+          "primitive_index": 0,
+          "selection_rule": "Software fixture: arbitrary visible original triangle; not an anatomical observation.",
+          "source_node": 20,
+          "vertex_indices": [
+            1272,
+            1312,
+            1274
+          ]
+        },
+        {
+          "anatomically_accepted": false,
+          "barycentric": [
+            0.5031770251533525,
+            0.3380349618366138,
+            0.15878801301003367
+          ],
+          "construction_note": "",
+          "face_index": 11849,
+          "landmark_id": "L_ASIS",
+          "mesh_name": "VH_F_ilium_compact_bone_L",
+          "native_point_m": [
+            0.10315126344577977,
+            0.09332637305885563,
+            -0.07533339024740598
+          ],
+          "patch_faces": [],
+          "patch_rule": "",
+          "primitive_index": 0,
+          "selection_rule": "Software fixture: recaptured arbitrary triangle, not an anatomical observation.",
+          "source_node": 13,
+          "vertex_indices": [
+            6089,
+            2475,
+            2476
+          ]
+        }
+      ],
+      "canonical_transform": null,
+      "contract_sha256": "ad56d6c1ce0b56d7767dd2b8be9a557dc537c6ee59fe40c6f26d89d85a268827",
+      "coordinate_frame": "source world Y-up, unchanged",
+      "fabrication_released": false,
+      "kind": "PHY_PELVIS_ORIGINAL_DRAFT_V1",
+      "packet_id": "NIH_PELVIS_LEFT_REVIEW_01",
+      "packet_sha256": "7dd6609dc5e7782e14f81a6176d31f7f3910b3f04f538f08a38703e2312d31c8",
+      "reference_revision": "1671f55f7a7cd6f03af4497dd02da02906135795",
+      "review_notes": "SOFTWARE FIXTURE ONLY. Arbitrary clicked points exercise review software; none identifies an accepted anatomical landmark.",
+      "reviewer": {
+        "evidence_kind": "software_fixture",
+        "id": "fixture-B",
+        "session_id": "browser-session-B"
+      },
+      "source_sha256": "155603d0c44a8ed1e0ca307f1ec3037941304f29f4187631135a9a150fab048d",
+      "units": "m",
+      "views": [
+        {
+          "camera_position_mm": [
+            -82.31498936446889,
+            52.23836961597993,
+            -450.3981396173291
+          ],
+          "label": "Fixture ischium inspection",
+          "target_mm": [
+            68.3848187327385,
+            2.0051002502441406,
+            -91.58907271921635
+          ]
+        }
+      ]
+    }
+  ],
+  "source_sha256": "155603d0c44a8ed1e0ca307f1ec3037941304f29f4187631135a9a150fab048d",
+  "units": "m",
+  "unresolved_gates": [
+    "independent_anatomical_review",
+    "metric_calibration",
+    "segmentation_review",
+    "approved_uncertainty_budget",
+    "anatomical_acceptance",
+    "canonical_registration",
+    "source_L6_context"
+  ],
+  "validation": [
+    {
+      "anatomically_accepted": false,
+      "annotations": 5,
+      "fabrication_released": false,
+      "missing_features": [],
+      "status": "original_geometry_verified_only",
+      "unresolved_requirements": []
+    },
+    {
+      "anatomically_accepted": false,
+      "annotations": 5,
+      "fabrication_released": false,
+      "missing_features": [],
+      "status": "original_geometry_verified_only",
+      "unresolved_requirements": []
+    }
+  ],
+  "viewer_build_sha256": "62e3ea0d6e6226196a1579337132ac056cfd58c03aff5d4e452eea9098fbd88d"
+}

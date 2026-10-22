@@ -39,7 +39,7 @@ def main():
     )
     counts = result["counts"]
     lines = [
-        "# T56 A0-R1 convergence snapshot", "",
+        "# T56 A0-R2 convergence snapshot", "",
         f"Schema valid: **{str(result['schema_valid']).lower()}**. Article ready: **{str(result['article_ready']).lower()}**.", "",
         "| Gate | Closed | Total |", "| --- | ---: | ---: |",
         f"| Mission inputs | {counts['mission_inputs_in_scope'] - counts['open_mission_inputs_in_scope']} | {counts['mission_inputs_in_scope']} |",

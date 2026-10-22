@@ -3,7 +3,7 @@
   "status": "not_run_template_only",
   "measured_evidence": false,
   "article_serial": null,
-  "drawing_revision": "A0-R1",
+  "drawing_revision": "A0-R2",
   "instrument_calibration_refs": [],
   "material_lot_refs": [],
   "measurements": {
@@ -30,7 +30,15 @@
     "dummy_member_straightness_mm_per_300_mm": null,
     "as_built_moving_mass_kg": null,
     "as_built_center_of_gravity_mm_from_S": null,
-    "minimum_tool_clearance_mm": null
+    "minimum_tool_clearance_mm": null,
+    "cap_radial_overlap_mm": null,
+    "left_outer_ring_axial_clearance_mm": null,
+    "right_outer_ring_axial_clearance_mm": null,
+    "shaft_end_play_mm": null,
+    "bearing_residual_clearance_mm": null,
+    "stop_first_contact_angles_deg": null,
+    "available_stop_travel_before_limit_mm": null,
+    "carrier_underside_clearance_mm": null
   },
   "deviations": [],
   "inspector": null,

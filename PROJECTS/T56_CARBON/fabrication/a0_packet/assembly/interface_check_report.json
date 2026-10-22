@@ -1,0 +1,339 @@
+{
+  "method": "CadQuery solid intersections; threshold 1e-5 mm3; Euclidean minimum nominal distances",
+  "required_carriage_mating_gaps_mm": {
+    "yoke_1": 0.0,
+    "yoke_2": 0.0,
+    "pitch_stop_carrier_-1": 0.0,
+    "pitch_stop_carrier_1": 0.0
+  },
+  "revised_neutral_pair_count": 2016,
+  "revised_neutral_unintended_penetrations": [],
+  "pitch_pose_count": 7,
+  "pitch_pose_checks": [
+    {
+      "pitch_deg": -32,
+      "unintended_penetrations": [],
+      "hub_gaps_mm": {
+        "carriage": 2.0,
+        "yoke_1": 2.0,
+        "yoke_2": 2.0,
+        "bearing_cap_1": 16.05,
+        "bearing_cap_2": 16.75,
+        "pitch_stop_carrier_-1": 30.0,
+        "pitch_stop_carrier_1": 30.0,
+        "pitch_stop_pad_1": 0.0,
+        "pitch_stop_pad_2": 13.307294,
+        "stop_crossbar_1": 10.0,
+        "stop_crossbar_2": 11.785811
+      }
+    },
+    {
+      "pitch_deg": -30,
+      "unintended_penetrations": [],
+      "hub_gaps_mm": {
+        "carriage": 2.0,
+        "yoke_1": 2.0,
+        "yoke_2": 2.0,
+        "bearing_cap_1": 16.05,
+        "bearing_cap_2": 16.75,
+        "pitch_stop_carrier_-1": 30.0,
+        "pitch_stop_carrier_1": 30.0,
+        "pitch_stop_pad_1": 2.09397,
+        "pitch_stop_pad_2": 13.721261,
+        "stop_crossbar_1": 12.09397,
+        "stop_crossbar_2": 12.238078
+      }
+    },
+    {
+      "pitch_deg": 0,
+      "unintended_penetrations": [],
+      "hub_gaps_mm": {
+        "carriage": 2.0,
+        "yoke_1": 2.0,
+        "yoke_2": 2.0,
+        "bearing_cap_1": 16.05,
+        "bearing_cap_2": 16.75,
+        "pitch_stop_carrier_-1": 30.0,
+        "pitch_stop_carrier_1": 30.0,
+        "pitch_stop_pad_1": 22.466258,
+        "pitch_stop_pad_2": 25.838914,
+        "stop_crossbar_1": 21.410321,
+        "stop_crossbar_2": 21.556063
+      }
+    },
+    {
+      "pitch_deg": 30,
+      "unintended_penetrations": [],
+      "hub_gaps_mm": {
+        "carriage": 2.0,
+        "yoke_1": 2.0,
+        "yoke_2": 2.0,
+        "bearing_cap_1": 16.05,
+        "bearing_cap_2": 16.75,
+        "pitch_stop_carrier_-1": 30.132296,
+        "pitch_stop_carrier_1": 30.132296,
+        "pitch_stop_pad_1": 23.934943,
+        "pitch_stop_pad_2": 23.934943,
+        "stop_crossbar_1": 27.683116,
+        "stop_crossbar_2": 27.683116
+      }
+    },
+    {
+      "pitch_deg": 60,
+      "unintended_penetrations": [],
+      "hub_gaps_mm": {
+        "carriage": 2.0,
+        "yoke_1": 2.0,
+        "yoke_2": 2.0,
+        "bearing_cap_1": 16.05,
+        "bearing_cap_2": 16.75,
+        "pitch_stop_carrier_-1": 30.0,
+        "pitch_stop_carrier_1": 30.0,
+        "pitch_stop_pad_1": 25.838914,
+        "pitch_stop_pad_2": 22.466258,
+        "stop_crossbar_1": 21.556063,
+        "stop_crossbar_2": 21.410321
+      }
+    },
+    {
+      "pitch_deg": 90,
+      "unintended_penetrations": [],
+      "hub_gaps_mm": {
+        "carriage": 3.0,
+        "yoke_1": 2.0,
+        "yoke_2": 2.0,
+        "bearing_cap_1": 16.05,
+        "bearing_cap_2": 16.75,
+        "pitch_stop_carrier_-1": 30.0,
+        "pitch_stop_carrier_1": 30.0,
+        "pitch_stop_pad_1": 13.721261,
+        "pitch_stop_pad_2": 2.09397,
+        "stop_crossbar_1": 12.238078,
+        "stop_crossbar_2": 12.09397
+      }
+    },
+    {
+      "pitch_deg": 92,
+      "unintended_penetrations": [],
+      "hub_gaps_mm": {
+        "carriage": 2.052447,
+        "yoke_1": 2.0,
+        "yoke_2": 2.0,
+        "bearing_cap_1": 16.05,
+        "bearing_cap_2": 16.75,
+        "pitch_stop_carrier_-1": 30.0,
+        "pitch_stop_carrier_1": 30.0,
+        "pitch_stop_pad_1": 13.307294,
+        "pitch_stop_pad_2": 0.0,
+        "stop_crossbar_1": 11.785811,
+        "stop_crossbar_2": 10.0
+      }
+    }
+  ],
+  "fixture_pose_count": 35,
+  "fixture_penetrations": [],
+  "scapular_root_pose_count": 5,
+  "scapular_root_penetrations": [],
+  "stop_contacts": [
+    {
+      "angle_deg": -32,
+      "lug_center_from_S_mm": [
+        50.88288576938556,
+        0.0,
+        31.795155853992295
+      ],
+      "outward_normal": [
+        -0.5299192642332049,
+        0.0,
+        0.848048096156426
+      ],
+      "contact_from_S_mm": [
+        46.64353165551992,
+        0.0,
+        38.5795406232437
+      ],
+      "pad_center_from_S_mm": [
+        43.99393533435389,
+        0.0,
+        42.819781104025836
+      ],
+      "backing_center_from_S_mm": [
+        37.10498489932223,
+        0.0,
+        53.84440635405937
+      ],
+      "effective_arm_mm": 60.0,
+      "pad_rotation_y_deg": -32.0
+    },
+    {
+      "angle_deg": 92,
+      "lug_center_from_S_mm": [
+        -2.0939698021500575,
+        0.0,
+        -59.96344962114575
+      ],
+      "outward_normal": [
+        -0.9993908270190958,
+        0.0,
+        0.034899496702500955
+      ],
+      "contact_from_S_mm": [
+        -10.089096418302823,
+        0.0,
+        -59.68425364752574
+      ],
+      "pad_center_from_S_mm": [
+        -15.086050553398303,
+        0.0,
+        -59.50975616401324
+      ],
+      "backing_center_from_S_mm": [
+        -28.078131304646547,
+        0.0,
+        -59.056062706880724
+      ],
+      "effective_arm_mm": 60.00000000000001,
+      "pad_rotation_y_deg": -88.00000000000001
+    }
+  ],
+  "unreviewed_legacy_instances": [
+    "index_plunger",
+    "scapular_stop_pad_1",
+    "scapular_stop_bracket_1",
+    "scapular_stop_pad_2",
+    "scapular_stop_bracket_2",
+    "scapular_index_plunger",
+    "secondary_tether"
+  ],
+  "legacy_or_mixed_penetrations": [
+    {
+      "a": "rocker_PB",
+      "b": "scapular_stop_pad_1",
+      "penetration_mm3": 828.33726
+    },
+    {
+      "a": "rocker_PB",
+      "b": "scapular_stop_bracket_1",
+      "penetration_mm3": 1751.213773
+    },
+    {
+      "a": "rocker_AC",
+      "b": "scapular_stop_pad_2",
+      "penetration_mm3": 828.33726
+    },
+    {
+      "a": "rocker_AC",
+      "b": "scapular_stop_bracket_2",
+      "penetration_mm3": 1751.213773
+    },
+    {
+      "a": "rocker_AC",
+      "b": "scapular_index_plunger",
+      "penetration_mm3": 1805.526488
+    },
+    {
+      "a": "carriage",
+      "b": "scapular_stop_pad_1",
+      "penetration_mm3": 107.786885
+    },
+    {
+      "a": "carriage",
+      "b": "scapular_stop_pad_2",
+      "penetration_mm3": 107.786885
+    },
+    {
+      "a": "carriage",
+      "b": "scapular_index_plunger",
+      "penetration_mm3": 985.812916
+    },
+    {
+      "a": "pivot_bolt_B",
+      "b": "scapular_stop_pad_1",
+      "penetration_mm3": 14.681477
+    },
+    {
+      "a": "pivot_bolt_B",
+      "b": "scapular_stop_bracket_1",
+      "penetration_mm3": 14.917232
+    },
+    {
+      "a": "pivot_bolt_C",
+      "b": "scapular_stop_pad_2",
+      "penetration_mm3": 14.681477
+    },
+    {
+      "a": "pivot_bolt_C",
+      "b": "scapular_stop_bracket_2",
+      "penetration_mm3": 14.917232
+    },
+    {
+      "a": "pivot_bolt_C",
+      "b": "scapular_index_plunger",
+      "penetration_mm3": 1191.836529
+    },
+    {
+      "a": "hub",
+      "b": "secondary_tether",
+      "penetration_mm3": 422.816296
+    },
+    {
+      "a": "shaft",
+      "b": "secondary_tether",
+      "penetration_mm3": 473.057648
+    },
+    {
+      "a": "sector",
+      "b": "scapular_stop_pad_2",
+      "penetration_mm3": 1034.66599
+    },
+    {
+      "a": "sector",
+      "b": "scapular_stop_bracket_2",
+      "penetration_mm3": 242.401502
+    },
+    {
+      "a": "sector",
+      "b": "scapular_index_plunger",
+      "penetration_mm3": 1012.859871
+    },
+    {
+      "a": "carrier_screw_1",
+      "b": "scapular_stop_pad_1",
+      "penetration_mm3": 0.269325
+    },
+    {
+      "a": "carrier_screw_2",
+      "b": "scapular_stop_pad_2",
+      "penetration_mm3": 0.269325
+    },
+    {
+      "a": "scapular_stop_pad_1",
+      "b": "scapular_stop_bracket_1",
+      "penetration_mm3": 840.0
+    },
+    {
+      "a": "scapular_stop_pad_2",
+      "b": "scapular_stop_bracket_2",
+      "penetration_mm3": 840.0
+    },
+    {
+      "a": "scapular_stop_pad_2",
+      "b": "scapular_index_plunger",
+      "penetration_mm3": 2233.002243
+    },
+    {
+      "a": "scapular_stop_bracket_2",
+      "b": "scapular_index_plunger",
+      "penetration_mm3": 744.462691
+    }
+  ],
+  "result": "pass_revised_interfaces_at_samples_only",
+  "whole_article_clearance_approved": false,
+  "continuous_clearance_proof": false,
+  "limitations": [
+    "legacy/mixed penetrations are release blockers, not intentional-contact exemptions",
+    "relative cartridge check uses parallel-four-bar translation invariance; seven pitch poses only",
+    "full rocker/bolt motion, supplier internals, guards and tools remain unverified",
+    "nominal CAD gaps are not tolerance/thermal or structural qualification"
+  ]
+}

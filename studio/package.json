@@ -1,7 +1,7 @@
 {
   "name": "phy-studio",
   "version": "1.0.0",
-  "description": "Offline PHY armature and A0-R1 review studio",
+  "description": "Offline PHY armature and A0-R2 review studio",
   "scripts": {
     "build": "node build.mjs",
     "check": "node --check src/app.js && node --check src/evidence.js && node --check src/part_roles.js && node --check tests/bone-exports.mjs && node --check tests/smoke.mjs && node --check src/native_reference.js && node --check tests/native-reference.mjs && node --check src/original_review.js && node --check src/original_review_ui.js && node --check tests/original-review.mjs && node --check tests/original-browser.mjs",

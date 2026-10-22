@@ -1,4 +1,4 @@
-# T56 A0-R1 convergence snapshot
+# T56 A0-R2 convergence snapshot
 
 Schema valid: **true**. Article ready: **false**.
 
@@ -27,8 +27,8 @@ The six load cases have closed-form results and numeric acceptance criteria, but
 
 ## Shop-review release blockers
 
-- bearing static screen margin is below 1.0 at the provisional 6 J design-energy load; revise load distribution, bearing selection or accepted impact model before release
-- 4 mm stop travel and force-displacement response require supplier/coupon verification before impact testing
+- bearing static screen is CONDITIONAL on stop curve, selected SKF variant, fit and internal-clearance approval; not a bearing qualification
+- 4 mm stop travel and force-displacement response require supplier/coupon verification before impact testing; that compression overruns the nominal hard-stop range by 3.82 degrees at R60
 - combined-load calculations remain closed-form screens and require independent load-path review
 - independent drawing and load-path review has not been signed
 - supplier-dependent bearing, plunger, friction-stack, tether and bench interfaces remain open

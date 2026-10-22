@@ -10,11 +10,20 @@
     "tube_area_mm2": 282.25750000000005,
     "tube_inertia_mm4": 23711.10009114583,
     "tube_section_modulus_mm3": 1867.015755208333,
-    "fabrication_geometry_revision": "A0-R1"
+    "fabrication_geometry_revision": "A0-R2",
+    "frozen_safety_factors": {
+      "yield": 2.0,
+      "ultimate": 3.0,
+      "buckling": 3.0,
+      "joint_retention": 3.0,
+      "bonded_or_keyed_insert": 4.0,
+      "fatigue": "demonstrate_10000_cycles_then_inspect"
+    },
+    "keyed_insert_design_moment_Nm": 126.8
   },
   "screening_blockers": [
-    "bearing static screen margin is below 1.0 at the provisional 6 J design-energy load; revise load distribution, bearing selection or accepted impact model before release",
-    "4 mm stop travel and force-displacement response require supplier/coupon verification before impact testing",
+    "bearing static screen is CONDITIONAL on stop curve, selected SKF variant, fit and internal-clearance approval; not a bearing qualification",
+    "4 mm stop travel and force-displacement response require supplier/coupon verification before impact testing; that compression overruns the nominal hard-stop range by 3.82 degrees at R60",
     "combined-load calculations remain closed-form screens and require independent load-path review"
   ],
   "cases": {
@@ -67,8 +76,8 @@
         "tube_stress_at_retention_design_MPa": 50.93690277369307,
         "tube_yield_margin_x": 4.711711685068348,
         "root_pair_couple_force_N": 951.0,
-        "root_pivot_bolt_shear_stress_MPa": 11.638319944666858,
-        "root_pivot_bolt_shear_margin_x": 41.17438992102793,
+        "root_pivot_bolt_shear_stress_MPa": 12.108508070431396,
+        "root_pivot_bolt_shear_margin_x": 39.575538178612014,
         "bench_fastener_tension_stress_MPa": 18.218390804597703,
         "bench_fastener_proof_margin_x": 45.558359621451096
       },
@@ -88,25 +97,225 @@
         "service_energy_J": 2.0,
         "design_energy_J": 6.0,
         "linear_spring_peak_stop_force_N": 3000.0,
-        "peak_stop_moment_Nm": 105.00000000000001,
-        "tube_stress_at_design_energy_MPa": 56.23948255770529,
-        "shaft_von_mises_stress_MPa": 199.65420332617884,
+        "peak_stop_moment_Nm": 180.0,
+        "tube_stress_at_design_energy_MPa": 96.41054152749477,
+        "shaft_von_mises_stress_MPa": 170.75148529896168,
         "shaft_keyway_factor": 1.6,
-        "shaft_factored_von_mises_stress_MPa": 319.44672532188616,
-        "shaft_yield_margin_x": 2.050420142325761,
-        "key_tangential_force_N": 12352.94117647059,
-        "key_shear_stress_MPa": 98.82352941176471,
-        "key_bearing_stress_MPa": 197.64705882352942,
-        "key_shear_margin_x": 2.921117433399892,
-        "key_bearing_margin_x": 2.5297619047619047,
-        "maximum_screened_bearing_reaction_N": 3250.0,
-        "bearing_static_threshold_N": 3000,
-        "bearing_static_screen_margin_x": 0.9230769230769231,
-        "yoke_net_section_stress_MPa": 11.607142857142858,
-        "stop_attachment_fastener_shear_MPa": 53.05164769729845,
-        "stop_attachment_fastener_margin_x": 9.032720833886405,
-        "index_pin_double_shear_stress_MPa": 29.841551829730378,
-        "rocker_weak_axis_euler_buckling_N": 283246.2269342716,
+        "shaft_factored_von_mises_stress_MPa": 273.2023764783387,
+        "shaft_yield_margin_x": 2.397490125976019,
+        "key_tangential_force_N": 14917.64705882353,
+        "key_shear_stress_MPa": 119.34117647058824,
+        "key_bearing_stress_MPa": 238.68235294117648,
+        "key_shear_margin_x": 2.418906392010952,
+        "key_bearing_margin_x": 2.094834384858044,
+        "maximum_screened_bearing_reaction_N": 1956.3503535488958,
+        "bearing_static_threshold_N": 4750,
+        "bearing_static_screen_margin_x": 2.4279904626404543,
+        "yoke_net_section_stress_MPa": 4.075729903226867,
+        "stop_attachment_fastener_shear_MPa": 26.525823848649225,
+        "stop_attachment_fastener_margin_x": 18.06544166777281,
+        "index_pin_single_shear_stress_MPa_at_retention": 54.055839600140175,
+        "impact_free_body": {
+          "stop_force_N": 3000.0,
+          "stop_torque_Nm": 180.0,
+          "inertia_kg_m2": 0.113050125,
+          "angular_deceleration_rad_s2": 1592.2140731821394,
+          "inertia_resultant_N": 883.2807570977917,
+          "total_radial_load_N": 3883.2807570977916,
+          "bearing_reactions": {
+            "A_N": [
+              0.0,
+              0,
+              1941.6403785488958
+            ],
+            "B_N": [
+              0.0,
+              0.0,
+              1941.6403785488958
+            ],
+            "radial_N": [
+              1941.6403785488958,
+              1941.6403785488958
+            ],
+            "axial_N": [
+              0,
+              0.0
+            ],
+            "force_residual_N": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "moment_residual_Nmm": [
+              0.0,
+              0,
+              0.0
+            ],
+            "torque_requiring_separate_reaction_Nmm": 0
+          },
+          "maximum_bearing_radial_N": 1941.6403785488958,
+          "shaft_midspan_bending_Nmm": 58249.211356466876,
+          "curve_area_fraction": 0.5,
+          "usable_travel_mm": 4,
+          "status": "conditional_on_unverified_compliance_and_rigid_body_model"
+        },
+        "directional_retention_free_bodies": [
+          {
+            "axis": "X",
+            "force_N": [
+              300.0,
+              0.0,
+              0.0
+            ],
+            "moment_Nmm": [
+              0,
+              0.0,
+              -0.0
+            ],
+            "reactions": {
+              "A_N": [
+                -150.0,
+                -0.0,
+                -0.0
+              ],
+              "B_N": [
+                -150.0,
+                0.0,
+                0.0
+              ],
+              "radial_N": [
+                150.0,
+                150.0
+              ],
+              "axial_N": [
+                0.0,
+                0.0
+              ],
+              "force_residual_N": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "moment_residual_Nmm": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "torque_requiring_separate_reaction_Nmm": 0.0
+            },
+            "P0_N": [
+              150.0,
+              150.0
+            ]
+          },
+          {
+            "axis": "Y",
+            "force_N": [
+              0.0,
+              300.0,
+              0.0
+            ],
+            "moment_Nmm": [
+              0,
+              0.0,
+              -95100.0
+            ],
+            "reactions": {
+              "A_N": [
+                1585.0,
+                -300.0,
+                -0.0
+              ],
+              "B_N": [
+                -1585.0,
+                0.0,
+                0.0
+              ],
+              "radial_N": [
+                1585.0,
+                1585.0
+              ],
+              "axial_N": [
+                300.0,
+                0.0
+              ],
+              "force_residual_N": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "moment_residual_Nmm": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "torque_requiring_separate_reaction_Nmm": 0.0
+            },
+            "P0_N": [
+              1585.0,
+              1585.0
+            ]
+          },
+          {
+            "axis": "Z",
+            "force_N": [
+              0.0,
+              0.0,
+              300.0
+            ],
+            "moment_Nmm": [
+              0,
+              95100.0,
+              -0.0
+            ],
+            "reactions": {
+              "A_N": [
+                0.0,
+                -0.0,
+                -150.0
+              ],
+              "B_N": [
+                -0.0,
+                0.0,
+                -150.0
+              ],
+              "radial_N": [
+                150.0,
+                150.0
+              ],
+              "axial_N": [
+                0.0,
+                0.0
+              ],
+              "force_residual_N": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "moment_residual_Nmm": [
+                0.0,
+                95100.0,
+                0.0
+              ],
+              "torque_requiring_separate_reaction_Nmm": 95100.0
+            },
+            "P0_N": [
+              150.0,
+              150.0
+            ]
+          }
+        ],
+        "required_static_safety_factor": 2,
+        "bearing_margin_over_required_s0_x": 1.2139952313202271,
+        "legacy_R1_screen_reference_only": {
+          "force_N": 3000,
+          "torque_Nm": 105,
+          "reaction_N": 3250,
+          "threshold_N": 3000,
+          "margin_x": 0.9230769230769231,
+          "superseded_reason": "Y torque was incorrectly assigned to radial bearing-span couple; unverified threshold was not an identified bearing"
+        },
+        "rocker_weak_axis_euler_buckling_N": 101159.36676223985,
         "stop_compliance_basis_verified": false
       },
       "acceptance_criteria": {
@@ -167,8 +376,12 @@
     "nominal mass is conservatively represented at half-span and payload at the load station",
     "linear stop force assumes 4 mm usable pad travel and triangular force-displacement response; this assumption is not accepted until a compression curve and first-article stack verify it",
     "bearing load sharing, friction, damping, backlash, acoustic output, temperature and fatigue remain physical measurements",
-    "bearing reactions use a conservative force-plus-couple screen and do not replace supplier life/static calculations",
     "key, pin, plate and fastener checks use nominal load distribution without notch, preload-loss or fatigue credit",
-    "no calculated result is a measured capability"
+    "no calculated result is a measured capability",
+    "R2 explicitly separates Y-axis torque from bearing bending couples. Rigid-body impact inertia is included; rotor mass distribution remains the frozen two-lump approximation.",
+    "Peak impact and 3x directional retention are separate free bodies, not simultaneous invented combinations.",
+    "Integral lug bypasses shaft/key for stop torque. Impact shaft check uses radial midspan bending; keyed index retention is checked separately.",
+    "Static equivalent bearing load max(Fr,0.6Fr+0.5Fa) is a catalog screen; CN clearance, fits, creep, oscillatory wear and life remain unapproved.",
+    "Stop contact is nominally at -32/+92 degrees; 4 mm tangent compression would overrun by about 3.8 degrees. No impact qualification or compliance credit is granted."
   ]
 }

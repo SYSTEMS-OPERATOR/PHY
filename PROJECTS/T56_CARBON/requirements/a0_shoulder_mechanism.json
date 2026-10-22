@@ -13,23 +13,63 @@
     "reason": "one-degree-of-freedom submechanisms, flat stock, inspectable pivots, direct hard stops, and no compound anatomical joint claim",
     "scapular_stage": {
       "plane": "XY",
-      "pivot_axis_unit": [0, 0, 1],
-      "posterior_root_mm": [-130, -60, 35],
-      "anterior_root_mm": [-130, 40, 35],
-      "posterior_carriage_pivot_mm": [-185, -60, 35],
-      "anterior_carriage_pivot_mm": [-185, 40, 35],
+      "pivot_axis_unit": [
+        0,
+        0,
+        1
+      ],
+      "posterior_root_mm": [
+        -130,
+        -60,
+        35
+      ],
+      "anterior_root_mm": [
+        -130,
+        40,
+        35
+      ],
+      "posterior_carriage_pivot_mm": [
+        -185,
+        -60,
+        35
+      ],
+      "anterior_carriage_pivot_mm": [
+        -185,
+        40,
+        35
+      ],
       "rocker_center_distance_mm": 55,
       "coupler_center_distance_mm": 100,
-      "range_deg": [-10, 10],
-      "hard_stop_range_deg": [-10, 10],
+      "range_deg": [
+        -10,
+        10
+      ],
+      "hard_stop_range_deg": [
+        -10,
+        10
+      ],
       "passive_retention": "M8 clamp screw plus spring-biased neutral indexing plunger; neither electrical power nor software is required to retain the carriage",
       "secondary_retention": "all four M10 pivot shoulder bolts use prevailing-torque all-metal locknuts and captured washers"
     },
     "humeral_stage": {
-      "joint_center_mm": [-205, -10, 70],
-      "axis_unit": [0, 1, 0],
-      "command_range_deg": [-30, 90],
-      "hard_stop_range_deg": [-32, 92],
+      "joint_center_mm": [
+        -205,
+        -10,
+        70
+      ],
+      "axis_unit": [
+        0,
+        1,
+        0
+      ],
+      "command_range_deg": [
+        -30,
+        90
+      ],
+      "hard_stop_range_deg": [
+        -32,
+        92
+      ],
       "passive_retention": "Belleville-preloaded dry friction stack set to at least 7 N m breakaway torque plus a spring-biased 8 mm indexing plunger into 15 degree sector holes; maximum degraded single-fault free interval 15 degrees",
       "secondary_retention": "6 mm steel tether rated not less than 1 kN between hub and carriage; tether is not the primary retainer",
       "drive_interface": "removable umbilical-powered low-speed actuator may drive the keyed shaft input; actuator selection is outside the fabricated load path",
@@ -39,23 +79,55 @@
   "trajectory": [
     {
       "pose_id": "A0_SCAPULAR_POSTERIOR_STOP",
-      "position_mm": [-204.164, -19.551, 70],
-      "rpy_deg": [0, 0, 0]
+      "position_mm": [
+        -204.164,
+        -19.551,
+        70
+      ],
+      "rpy_deg": [
+        0,
+        0,
+        0
+      ]
     },
     {
       "pose_id": "A0_NEUTRAL_LOCKED",
-      "position_mm": [-205, -10, 70],
-      "rpy_deg": [0, 0, 0]
+      "position_mm": [
+        -205,
+        -10,
+        70
+      ],
+      "rpy_deg": [
+        0,
+        0,
+        0
+      ]
     },
     {
       "pose_id": "A0_SCAPULAR_ANTERIOR_STOP",
-      "position_mm": [-204.164, -0.449, 70],
-      "rpy_deg": [0, 0, 0]
+      "position_mm": [
+        -204.164,
+        -0.449,
+        70
+      ],
+      "rpy_deg": [
+        0,
+        0,
+        0
+      ]
     }
   ],
   "dummy_member": {
-    "shoulder_output_mm": [-205, -10, 70],
-    "dummy_elbow_station_mm": [-522, -10, 70],
+    "shoulder_output_mm": [
+      -205,
+      -10,
+      70
+    ],
+    "dummy_elbow_station_mm": [
+      -522,
+      -10,
+      70
+    ],
     "effective_length_mm": 317,
     "external_reference_context": "ANSUR II acromion-radiale median from PR #92 is a comparison only; the 317 mm A0 load station is a project-local mechanical decision and not a canon landmark",
     "section": "ASTM B221 6061-T6 square tube 25.4 x 25.4 x 3.175 mm",
@@ -64,26 +136,62 @@
     "straightness_mm_per_300_mm": 0.75
   },
   "datum_fixture": {
-    "revision": "A0-D001-R1",
+    "revision": "A0-D001-R2",
     "origin": "scribed cross and 6 mm H7 tooling hole at upper surface of base plate; coordinates refer to the tooling-hole axis at plate Z=0",
     "handedness": "right_handed",
     "base_plate": {
       "material": "ASTM A36 steel plate",
-      "size_xyz_mm": [300, 240, 8],
+      "size_xyz_mm": [
+        300,
+        240,
+        8
+      ],
       "frame_bounds_mm": {
-        "min": [-280, -120, -8],
-        "max": [20, 120, 0]
+        "min": [
+          -280,
+          -120,
+          -8
+        ],
+        "max": [
+          20,
+          120,
+          0
+        ]
       },
       "bench_mount_holes_mm": [
-        [-250, -90, 0],
-        [-250, 90, 0],
-        [-10, -90, 0],
-        [-10, 90, 0]
+        [
+          -250,
+          -90,
+          0
+        ],
+        [
+          -250,
+          90,
+          0
+        ],
+        [
+          -10,
+          -90,
+          0
+        ],
+        [
+          -10,
+          90,
+          0
+        ]
       ],
       "bench_mount_hole_diameter_mm": 11,
       "root_pivot_holes_mm": [
-        [-130, -60, 0],
-        [-130, 40, 0]
+        [
+          -130,
+          -60,
+          0
+        ],
+        [
+          -130,
+          40,
+          0
+        ]
       ],
       "root_pivot_hole_diameter_mm": 10.5
     },
@@ -94,7 +202,7 @@
   "materials_and_sections": {
     "base_plate": "ASTM A36 steel, 8 mm plate",
     "rockers_and_carriage": "ASTM B209 6061-T6 aluminum plate, 6 mm and 8 mm",
-    "yoke_and_sector": "ASTM B209 6061-T6 aluminum plate, 8 mm and 6 mm",
+    "yoke_and_sector": "6061-T6 billet yoke, 16 mm upright with integral foot; sector 6 mm plate",
     "dummy_member": "ASTM B221 6061-T6 square tube, 25.4 x 25.4 x 3.175 mm",
     "pivot_shaft": "AISI 4140 prehardened steel, 17 mm ground shaft with 5 x 5 mm parallel key",
     "fasteners": "ISO 898-1 class 10.9 zinc-plated steel unless otherwise noted",
@@ -103,13 +211,13 @@
   },
   "fits": [
     {
-      "interface": "17 mm pivot shaft to 6003 bearing inner ring",
+      "interface": "17 mm pitch shaft to SKF 6203-2RSH inner ring",
       "fit": "shaft h6; 16.989 to 17.000 mm",
       "inspection": "micrometer at three axial stations"
     },
     {
-      "interface": "6003 bearing outer ring to yoke bore",
-      "fit": "housing H7; 35.000 to 35.025 mm",
+      "interface": "SKF 6203-2RSH outer ring to yoke",
+      "fit": "housing candidate 40.000..40.025 mm; independent fit review hold",
       "inspection": "three-point bore gauge"
     },
     {
@@ -143,68 +251,245 @@
   },
   "collision_and_service_envelopes": {
     "neck_exclusion_aabb_mm": {
-      "min_mm": [-90, -75, 0],
-      "max_mm": [90, 75, 210]
+      "min_mm": [
+        -90,
+        -75,
+        0
+      ],
+      "max_mm": [
+        90,
+        75,
+        210
+      ]
     },
     "representative_ribcage_exclusion_aabb_mm": {
-      "min_mm": [-170, -110, -300],
-      "max_mm": [170, 110, 0]
+      "min_mm": [
+        -170,
+        -110,
+        -300
+      ],
+      "max_mm": [
+        170,
+        110,
+        0
+      ]
     },
     "shoulder_service_access_aabb_mm": {
-      "min_mm": [-280, -130, 15],
-      "max_mm": [-90, 130, 180]
+      "min_mm": [
+        -280,
+        -130,
+        15
+      ],
+      "max_mm": [
+        -90,
+        130,
+        180
+      ]
     },
     "authority_note": "fixture guarding and tool-access design volumes only; not anatomical or outer-form measurements"
   },
   "fabrication_geometry": {
-    "revision": "A0-R1",
-    "authority": "project-local dimensions controlling A0-R1 CAD, drawings, BOM and closed-form section inputs",
+    "revision": "A0-R2",
+    "authority": "project-local dimensions controlling A0-R2 CAD, drawings, BOM and closed-form section inputs",
     "units": "mm",
     "root_axis_height": 35,
     "fixture": {
-      "base_size_xyz": [300, 240, 8],
+      "base_size_xyz": [
+        300,
+        240,
+        8
+      ],
       "tooling_hole_diameter": 6,
       "bench_hole_diameter": 11,
       "root_hole_diameter": 10.5,
-      "standoff_size_xyz": [25, 25, 32]
+      "standoff_size_xyz": [
+        25,
+        25,
+        32
+      ]
     },
     "four_bar": {
-      "rocker_size_xyz": [70, 25, 6],
+      "rocker_size_xyz": [
+        70,
+        25,
+        6
+      ],
       "rocker_centers": 55,
-      "carriage_size_xyz": [70, 120, 8],
+      "carriage_size_xyz": [
+        120,
+        120,
+        8
+      ],
       "carriage_pivot_centers": 100,
-      "pivot_bore_diameter": 10.2
+      "pivot_bore_diameter": 10.2,
+      "carriage_center_z": 43,
+      "carriage_relief_x_from_S": 23,
+      "carriage_relief_y_half": 22
     },
     "cartridge": {
-      "yoke_plate_size_xzy": [70, 70, 8],
-      "yoke_plate_center_y": [-40, 20],
-      "bearing_type": "6003-2RS",
-      "bearing_id_od_width": [17, 35, 10],
-      "bearing_housing_diameter": 35,
+      "yoke_plate_size_xzy": [
+        70,
+        58,
+        16
+      ],
+      "yoke_plate_center_y": [
+        -40,
+        20
+      ],
+      "bearing_type": "SKF 6203-2RSH",
+      "bearing_id_od_width": [
+        17,
+        40,
+        12
+      ],
+      "bearing_housing_diameter": 40,
       "shaft_diameter": 17,
-      "shaft_length": 104,
-      "shaft_key_width_height_length": [5, 5, 30],
-      "hub_size_xyz": [85, 40, 55],
-      "hub_center_x_from_S": -22.5,
+      "shaft_length": 164,
+      "shaft_key_width_height_length": [
+        5,
+        5,
+        30
+      ],
+      "hub_size_xyz": [
+        60,
+        40,
+        55
+      ],
+      "hub_center_x_from_S": -10,
       "tube_socket_across_flats": 25.5,
       "tube_socket_start_x_from_S": -12,
       "tube_socket_seat_x_from_S": -40,
       "hub_pinch_bolt_diameter": 6.6,
-      "hub_pinch_bolt_x_from_S": [-20, -32],
+      "hub_pinch_bolt_x_from_S": [
+        -20,
+        -32
+      ],
       "sector_od": 90,
       "sector_thickness": 6,
       "sector_bore_diameter": 17,
-      "sector_center_y": 34,
+      "sector_center_y": 56,
       "index_hole_diameter": 8.2,
       "index_hole_radius": 35,
       "index_increment_deg": 15,
-      "friction_stack_envelope_od_width": [45, 9],
-      "friction_stack_center_y": -50.5,
-      "end_retainer_od_width": [26, 4],
-      "stop_pad_size_xyz": [20, 15, 10],
-      "stop_bracket_size_xyz": [28, 20, 8],
-      "plunger_envelope_body_pin_length": [16, 8, 45],
-      "tether_endpoints_neutral": [[-185, -10, 70], [-245, -10, 70]]
+      "friction_stack_envelope_od_width": [
+        45,
+        9
+      ],
+      "friction_stack_center_y": -80,
+      "end_retainer_od_width": [
+        21.6,
+        3
+      ],
+      "stop_pad_size_xyz": [
+        12,
+        28,
+        10
+      ],
+      "stop_bracket_size_xyz": [
+        28,
+        20,
+        8
+      ],
+      "plunger_envelope_body_pin_length": [
+        16,
+        8,
+        45
+      ],
+      "tether_endpoints_neutral": [
+        [
+          -185,
+          -10,
+          70
+        ],
+        [
+          -245,
+          -10,
+          70
+        ]
+      ],
+      "yoke_bottom_z_from_S": -23,
+      "yoke_foot_size_xyz": [
+        80,
+        38,
+        12
+      ],
+      "yoke_foot_center_y": 11,
+      "yoke_foot_holes_x": [
+        -30,
+        -15
+      ],
+      "yoke_foot_holes_y": [
+        24
+      ],
+      "yoke_mount_clearance": 6.6,
+      "yoke_mount_screw_length": 20,
+      "bearing_ledge_bore": 35,
+      "bearing_pocket_depth": 14,
+      "bearing_cap_od": 60,
+      "bearing_cap_bore": 35,
+      "bearing_cap_nose_od": 39.8,
+      "bearing_cap_thickness": 4,
+      "bearing_cap_nose_length": 1.95,
+      "bearing_float_cap_nose_length": 1.25,
+      "bearing_cap_bolt_circle": 50,
+      "bearing_cap_hole": 4.5,
+      "bearing_cap_screw_length": 10,
+      "shaft_end_thread": "M6 x 1, 16 deep both ends; tap-drill geometry only",
+      "shaft_end_thread_depth": 16,
+      "shaft_end_tap_drill": 5,
+      "end_retainer_hole": 6.6,
+      "inner_spacer_od": 21.6,
+      "inner_spacer_bore": 17.1,
+      "inner_spacer_length": 4,
+      "outer_spacer_left_length": 46,
+      "outer_spacer_right_inner_length": 27,
+      "outer_spacer_right_outer_length": 13,
+      "friction_stack_clearance_bore": 23,
+      "stop_lug_radius": 60,
+      "stop_lug_radius_tip": 8,
+      "stop_lug_width": 16,
+      "stop_carrier_width_y": 16,
+      "stop_carrier_beam": 22,
+      "stop_carrier_x": 82,
+      "stop_carrier_top_z": 80,
+      "stop_carrier_bottom_z": -57,
+      "stop_carrier_foot_x": [
+        20,
+        93
+      ],
+      "stop_carrier_foot_y": 54,
+      "stop_carrier_foot_holes_x": [
+        32,
+        48
+      ],
+      "stop_carrier_foot_size_y": 48,
+      "stop_pad_screw_hole": 3.4,
+      "stop_pad_screw_y": [
+        -11,
+        11
+      ],
+      "stop_pad_counterbore": 6,
+      "stop_pad_counterbore_depth": 2,
+      "tube_socket_mouth_x_from_S": -40,
+      "tube_socket_bottom_x_from_S": -12,
+      "hub_corner_bevel": 8,
+      "hub_pinch_bolt_z": 20,
+      "stop_lug_root_half_height": 12,
+      "stop_carrier_frame_y": 90,
+      "stop_bar_span": 196,
+      "stop_bar_shoulder_span": 164,
+      "stop_bar_od": 20,
+      "stop_bar_journal": 12,
+      "stop_bar_flat_offset": 8,
+      "bearing_cap_bottom_z": -10,
+      "bearing_cap_hole_angles": [
+        0,
+        90,
+        180
+      ],
+      "yoke_foot_outer_toe_xmax": 15,
+      "legacy_socket_field_note": "Legacy start/seat fields describe member resolver stations, not machining entry direction. Machining uses mouth=-40, bottom=-12.",
+      "bearing_floating_pocket_depth": 15
     },
     "dummy_member": {
       "outer": 25.4,
@@ -216,24 +501,121 @@
     },
     "assembly": {
       "intentional_contact_classes": [
-        "pivot shoulder and link bore",
-        "shaft and bearing inner rings",
-        "bearing outer rings and yoke seats",
-        "shaft key and keyed hub/sector",
-        "dummy tube and split-clamp socket",
-        "stop pad and stop bracket only at declared hard stops"
+        "surface contact and explicitly specified fits only; no positive-volume exemption; see interface_check_report.json"
       ],
-      "sampled_scapular_angles_deg": [-10, -5, 0, 5, 10],
-      "sampled_pitch_angles_deg": [-32, -30, 0, 30, 60, 90, 92],
+      "sampled_scapular_angles_deg": [
+        -10,
+        -5,
+        0,
+        5,
+        10
+      ],
+      "sampled_pitch_angles_deg": [
+        -32,
+        -30,
+        0,
+        30,
+        60,
+        90,
+        92
+      ],
       "continuous_clearance_proof": false
     },
     "supplier_dependent_open_items": [
-      "bearing corner radii and shoulder relief",
-      "index plunger body thread, nose length and engagement geometry",
-      "friction washer material and torque/preload correlation",
-      "tether end-fitting envelope and certified rating",
-      "bench interface capacity"
-    ]
+      "Bearing CN residual clearance and shaft/housing fits under oscillating load: 17 h6 remains conditional; do not machine seats before review.",
+      "Stop pad material/curve: acetal is not credited with 4 mm elastic travel; first contact and backed travel must be reconciled with hard-stop angles.",
+      "Plunger thread/nose/support and engagement; single-sided index pin is not modeled as double shear.",
+      "Friction stack material, grounded reaction attachment, shaft coupling and torque/preload correlation.",
+      "Tether end fittings/routing, full guards, scapular stop/clamp hardware and rated bench interface.",
+      "Thread pull-out, fastener preload/locking, material certificates and tool access require independent review and first-article inspection."
+    ],
+    "interface_limits": {
+      "bearing_od_incoming": [
+        39.98,
+        40.0
+      ],
+      "bearing_width_incoming": [
+        11.85,
+        12.0
+      ],
+      "bearing_bore_incoming": [
+        16.99,
+        17.0
+      ],
+      "housing_bore": [
+        40.0,
+        40.025
+      ],
+      "shaft": [
+        16.989,
+        17.0
+      ],
+      "cap_bore": [
+        35.0,
+        35.03
+      ],
+      "spacer_od": [
+        21.58,
+        21.62
+      ],
+      "pocket_depth": [
+        13.98,
+        14.02
+      ],
+      "cap_nose": [
+        1.93,
+        1.97
+      ],
+      "float_cap_nose": [
+        1.23,
+        1.27
+      ],
+      "yoke_center_span": [
+        59.8,
+        60.2
+      ],
+      "inner_spacer_length": [
+        3.98,
+        4.02
+      ],
+      "hub_width": [
+        39.97,
+        40.03
+      ],
+      "shaft_length": [
+        163.97,
+        164.03
+      ],
+      "cap_thickness": [
+        3.98,
+        4.02
+      ],
+      "end_washer_thickness": [
+        2.98,
+        3.02
+      ],
+      "note": "incoming ranges are PROJECT ACCEPTANCE WINDOWS, not SKF manufacturing tolerances; measure delivered parts. Shaft h6 requires fit/creep/internal-clearance review.",
+      "floating_pocket_depth": [
+        14.98,
+        15.02
+      ],
+      "outer_spacer_left_length": [
+        45.98,
+        46.02
+      ],
+      "outer_spacer_right_inner_length": [
+        26.98,
+        27.02
+      ],
+      "outer_spacer_right_outer_length": [
+        12.98,
+        13.02
+      ],
+      "sector_thickness": [
+        5.9,
+        6.1
+      ]
+    }
   },
   "release_boundary": {
     "shop_reviewable": true,

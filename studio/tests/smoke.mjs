@@ -133,8 +133,8 @@ try {
   await page.click('#pose-t');await page.click('[data-view="front"]');
   assert.equal(await page.evaluate(()=>PHY_STUDIO.getState().pose),0);
   await page.screenshot({path:path.join(output,'t-pose.png')});
-  await page.click('[data-model="A0_R1"]');
-  assert.equal(await page.evaluate(()=>PHY_STUDIO.getState().modelParts),35);
+  await page.click('[data-model="A0_R2"]');
+  assert.equal(await page.evaluate(()=>PHY_STUDIO.getState().modelParts),64);
   assert.ok(await page.locator('#layer-bones-only').isDisabled());
   assert.ok(await page.locator('#height-number').isDisabled());
   await page.screenshot({path:path.join(output,'a0.png')});
@@ -156,7 +156,7 @@ try {
   assert.equal(await page.evaluate(()=>PHY_STUDIO.getState().points.length),2);
   await page.click('#measure');
   await page.click('#open-build');assert.ok(await page.locator('#modal-backdrop').evaluate(e=>e.classList.contains('open')));
-  await page.click('[data-tab="readiness"]');assert.match(await page.locator('#modal-content').innerText(),/3.25 kN/);
+  await page.click('[data-tab="readiness"]');assert.match(await page.locator('#modal-content').innerText(),/4 mm stop compression/);
   await page.keyboard.press('Escape');
   const getDownload=async(format,filename)=>{
     await page.selectOption('#export-format',format);

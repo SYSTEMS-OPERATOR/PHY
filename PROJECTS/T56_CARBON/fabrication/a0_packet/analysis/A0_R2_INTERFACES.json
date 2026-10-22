@@ -1,0 +1,52 @@
+{
+  "method": "worst_case_interval_arithmetic; independent dimensions; no RSS credit",
+  "cap_radial_overlap_mm": [
+    2.474999999999998,
+    2.5
+  ],
+  "left_outer_ring_axial_clearance_mm": [
+    0.009999999999999787,
+    0.2400000000000002
+  ],
+  "right_outer_ring_axial_clearance_mm": [
+    1.7100000000000009,
+    1.9399999999999995
+  ],
+  "inner_vs_outer_center_span_error_mm": [
+    -0.4200000000000017,
+    0.2700000000000031
+  ],
+  "floating_seat_inward_available_mm": 0.9800000000000004,
+  "floating_seat_outward_available_mm": 0.7300000000000004,
+  "floating_seat_inward_demand_mm": 0.6600000000000019,
+  "floating_seat_outward_demand_mm": 0.5100000000000033,
+  "floating_seat_reserve_mm": 0.2199999999999971,
+  "unshimmed_inner_stack_length_mm": [
+    163.47,
+    164.23
+  ],
+  "unshimmed_stack_minus_shaft_mm": [
+    -0.5600000000000023,
+    0.2599999999999909
+  ],
+  "selected_end_shims_mm": null,
+  "shaft_diametral_clearance_mm": [
+    -0.010000000000001563,
+    0.010999999999999233
+  ],
+  "housing_diametral_clearance_mm": [
+    0.0,
+    0.045000000000001705
+  ],
+  "spacer_abutment_od_mm": [
+    21.58,
+    21.62
+  ],
+  "limitations": [
+    "incoming acceptance windows require actual measurements; not catalog tolerance claims",
+    "17 h6 can produce interference or clearance; fit and residual CN clearance remain blocked",
+    "short stack: add annular outboard stack shims; long stack: add \u00d816.8/\u00d86.6 shaft-face standoffs under end washers; target 0.05..0.15 end play without bearing preload",
+    "hole true position, cap screw engagement, tool access and thermal gradients need independent review"
+  ],
+  "fabrication_released": false
+}

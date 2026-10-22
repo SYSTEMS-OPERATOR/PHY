@@ -1,0 +1,85 @@
+{
+  "revision": "A0-R2",
+  "baseline_commit": "02d5758d476e9ff753c1dcbb9951c2bce542fe88",
+  "fabrication_released": false,
+  "physical_evidence_complete": false,
+  "items": [
+    {
+      "id": "R2-001",
+      "interface": "yoke/carriage penetration",
+      "baseline_evidence": "Each R1 yoke intersected by 1463.152224 mm3",
+      "disposition": "resolved_nominal_and_sampled",
+      "current_evidence_or_hold": "Handed feet and bolted mounting, plate layer Z43 and sweep relief; exact pair report"
+    },
+    {
+      "id": "R2-002",
+      "interface": "outer-ring capture",
+      "baseline_evidence": "R1 cap opening35 equaled bearingOD35: zero overlap",
+      "disposition": "resolved_geometry_fit_approval_open",
+      "current_evidence_or_hold": "R2 minimum radial overlap 2.475000 mm in project incoming windows; C-cap stiffness/screw/fit review remains open"
+    },
+    {
+      "id": "R2-003",
+      "interface": "tube insertion path",
+      "baseline_evidence": "R1 socket had closed -X entry and solid crossed the tube",
+      "disposition": "resolved_nominal",
+      "current_evidence_or_hold": "Open -40 mouth; blind -12 bottom; insertion28, station317, stock327 unchanged"
+    },
+    {
+      "id": "R2-004",
+      "interface": "bearing free body",
+      "baseline_evidence": "R1 assigned 105 N m about Y as bearing-span bending couple",
+      "disposition": "corrected_conditional_calculation",
+      "current_evidence_or_hold": "Vector X/Z equilibrium, separate My; rigid-body inertia included; no measured curve or rating acceptance"
+    },
+    {
+      "id": "R2-005",
+      "interface": "supplier bearing selection",
+      "baseline_evidence": "Generic 6003 and 3000 N threshold unverified",
+      "disposition": "catalog_candidate_only",
+      "current_evidence_or_hold": "SKF6203-2RSH data traced; h6/CN fits, residual clearance/thermal/creep remain blocked"
+    },
+    {
+      "id": "R2-006",
+      "interface": "pitch stop surfaces",
+      "baseline_evidence": "R1 blocks did not establish actual rotating contact",
+      "disposition": "resolved_nominal_contact_only",
+      "current_evidence_or_hold": "Integral hub lug and shouldered crossbars; nominal first contact -32/+92 with zero positive volume"
+    },
+    {
+      "id": "R2-007",
+      "interface": "compliance and hard limit",
+      "baseline_evidence": "4 mm triangular response has no supplier/coupon basis",
+      "disposition": "blocked",
+      "current_evidence_or_hold": "4 mm atR60 overruns nominal hard limit by3.82deg; no credited travel; coupon/setting review required"
+    },
+    {
+      "id": "R2-008",
+      "interface": "legacy whole-article placements",
+      "baseline_evidence": "Scapular stops/plungers and straight tether remain overlapping or ungrounded",
+      "disposition": "blocked_excluded_from_issued_subassembly",
+      "current_evidence_or_hold": "7 undefined instances omitted, 24 original legacy/mixed conflicts recorded; no contact exemption"
+    },
+    {
+      "id": "R2-009",
+      "interface": "drawing content",
+      "baseline_evidence": "R1 SVG sheets were specification tables without projected geometry",
+      "disposition": "resolved_digital",
+      "current_evidence_or_hold": "14 CAD projection/section sheets, dimension/coordinate callouts, candidate fits/tolerances; independent shop review open"
+    },
+    {
+      "id": "R2-010",
+      "interface": "instruction drift",
+      "baseline_evidence": "R1 D006 said30 insertion, controlling sources said28",
+      "disposition": "resolved",
+      "current_evidence_or_hold": "Current drawing, BOM and procedure use28"
+    },
+    {
+      "id": "R2-011",
+      "interface": "weak-axis and screw screening",
+      "baseline_evidence": "Rocker Euler formula used overall70 length as section width; root area used clearance10.2 bore",
+      "disposition": "corrected_screen",
+      "current_evidence_or_hold": "Use25 section width and10 shoulder area; keep frozen buckling/joint/key factors explicit"
+    }
+  ]
+}

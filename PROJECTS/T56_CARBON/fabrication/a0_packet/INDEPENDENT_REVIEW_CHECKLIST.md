@@ -1,4 +1,4 @@
-# T56 A0-R1 independent shop-review checklist
+# T56 A0-R2 independent shop-review checklist
 
 Status: **OPEN — REVIEW REQUIRED BEFORE CUTTING STOCK**
 
@@ -40,7 +40,7 @@ line. “Reviewed” is not “fabrication released” and is never physical evi
 
 - [ ] Repeat-export hashes are identical and every part/assembly STEP imports
   as valid geometry.
-- [ ] Drawings, BOM, procedures and first-article template all say A0-R1.
+- [ ] Drawings, BOM, procedures and first-article template all say A0-R2.
 - [ ] No supplier assumption, calculation or blank record is marked measured.
 - [ ] Canon regression confirms SOPHY 1.0.0, H=span=1676.4 mm and mirror-derived
   symmetry are unchanged.
@@ -54,3 +54,13 @@ Reviewer: ____________________  Date: __________
 Disposition: [ ] revise and resubmit  [ ] acceptable for shop quotation only
 
 Linked deviations/issues: _________________________________________________
+
+## R2 cartridge holds
+
+- [ ] Review all 14 projected/section sheets and the mirrored parts.
+- [ ] Confirm housing/shaft fits, residual CN clearance and shoulder geometry with actual SKF variant/lot.
+- [ ] Inspect C-cap retaining arc, screw engagement, floating-seat reserve and selective shaft shims.
+- [ ] Review integral lug, shouldered crossbars, frame feet, threaded carriage and fastener locking.
+- [ ] Resolve 4 mm stop travel versus hard-stop angle limits; approve the measured curve and backed contact geometry.
+- [ ] Close all legacy/mixed collisions; omitted provisional envelopes are not installed hardware.
+- [ ] Preserve all six unapproved load cases and five unapproved evidence packages until signed records exist.

@@ -61,26 +61,29 @@ def a0_model():
             raise ValueError("invalid A0 B-rep " + iid)
         box = shape.BoundingBox()
         vertices, faces = shape.tessellate(.6, .18)
-        material = "steel" if any(k in pid for k in ("shaft", "key", "bolt", "retainer", "bearing_envelope", "tether")) else ("acetal" if "pad" in pid else "aluminum")
+        material = "steel" if any(k in pid for k in ("shaft", "key", "bolt", "retainer", "bearing_envelope", "tether", "spacer", "crossbar", "screw", "fixture_base")) else ("acetal" if "pad" in pid else "aluminum")
         parts.append({"id": iid, "name": iid.replace("_", " ").title(), "part_id": pid,
                       "region": "fixture" if "fixture" in iid or "standoff" in iid else "mechanism",
-                      "material": material, "authority": "A0-R1 located shop-review B-rep",
+                      "material": material, "authority": "A0-R2 located shop-review B-rep",
                       "source": "bin/export_t56_a0_article.py → located_instances",
                       "bounds_mm": {"min": [box.xmin, box.ymin, box.zmin], "max": [box.xmax, box.ymax, box.zmax]},
                       "volume_mm3": round(shape.Volume(), 6),
                       "vertices": [[round(v.x, 5), round(v.y, 5), round(v.z, 5)] for v in vertices],
                       "faces": [list(f) for f in faces]})
     packet = ROOT / "PROJECTS/T56_CARBON/fabrication/a0_packet"
-    return {"id": "A0_R1", "name": "A0-R1 / shoulder bench article", "units": "mm",
+    return {"id": "A0_R2", "name": "A0-R2 / shoulder bench article", "units": "mm",
             "frame": design["frame_id"], "parts": parts, "landmarks": {}, "canon_effect": "none",
             "fabrication_released": False, "physical_evidence_complete": False,
             "motion": exporter.motion_report(design),
             "bom": [dict(zip(["item_id", "qty", "description", "material", "note"], row)) for row in exporter.bom_rows(design)],
             "convergence": json.loads((packet / "analysis/A0_CONVERGENCE.json").read_text()),
-            "limitations": ["Exact current 35-instance neutral B-rep, tessellated for viewing.",
-                            "19 distinct CAD parts; 24 BOM lines. It is a separate, unscaled bench article.",
-                            "3.25 kN screened bearing reaction exceeds the provisional 3.0 kN threshold.",
-                            "Supplier interfaces, stop-pad response, continuous clearance, independent review and physical bench records remain open."]}
+            "part_definition_count":len({part['part_id'] for part in parts}),
+            "limitations": [f"Exact current {len(parts)}-instance cartridge subassembly, tessellated for viewing.",
+                            "Undefined scapular stops/plungers and the straight tether placement are omitted; their conflicts remain registered.",
+                            "The corrected bearing calculation includes inertia and identifies SKF 6203-2RSH as a conditional candidate; fits and residual clearance are unapproved.",
+                            "Nominal stop contact is -32/+92 degrees. The assumed 4 mm compliance conflicts with the angle limits and has no accepted material curve.",
+                            "Friction coupling/grounding, remaining interfaces, continuous clearance, independent review and all physical bench records remain open."]}
+
 
 
 def source_kit():
@@ -425,7 +428,7 @@ def export(output, include_a0=True, reference_root=None):
                "- Elliptical torso envelope uses marginal girths; interpolation and anatomical appearance are design, not scan data.", "",
                "Refinement: shoulders −1%, waist −3%, hips +2%. No measured source is overwritten, and no claim of objective attractiveness is made.", "",
                "The SOPHY scale overlay preserves H=span=1676.4 mm for comparison. It neither adopts new canon landmarks nor modifies canon 1.0.0.",
-               "A0-R1 is the exact separate 35-instance CAD assembly. Its 317 mm station is never scaled or substituted into the whole-body form study.", "",
+               "A0-R2 is the exact separate cartridge CAD subassembly. Its 317 mm station is never scaled or substituted into the whole-body form study.", "",
                "## First physical demonstration", "", "See maquette/BUILD.md, actual-size cut SVGs, BOM.csv and assembly-stencil.svg.",
                "The quarter-scale supported plywood maquette has a separate, preserved construction design. It does not miniaturize the core bone proxies or demonstrate skeletal distribution/structural capacity.", "",
                "## Reproduce", "", "`python bin/export_phy_studio.py` builds all geometry and the offline app; CadQuery 2.7.0 is required for A0 and the source kit.",

@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1132" viewBox="0 0 1600 1132"><defs><marker id="arr" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#37556e"/></marker></defs><style>text{font-family:DejaVu Sans,sans-serif;fill:#182d3d} .label{font-size:17px;font-weight:bold} .small{font-size:13px} .dimension{font-size:14px;text-anchor:middle} .dim{stroke:#37556e;fill:none;stroke-width:1} .note{font-size:16px}</style><rect width="1600" height="1132" fill="white"/><rect x="16" y="16" width="1568" height="1100" fill="none" stroke="#182d3d"/><text x="40" y="53" font-size="25">A0-D003-R2 | Dummy member</text><text x="40" y="84" font-size="16">ENGINEERING / SHOP REVIEW — NOT FABRICATION RELEASED — mm — DO NOT SCALE</text><path d="M30 100 H1570 M1100 120 V1040 M30 1055 H1570" stroke="#182d3d" fill="none"/><text x="60" y="155" class="label">TUBE / TOP</text><g transform="translate(40,170)">
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   width="500.0"
+   height="84.17737003058105"
+
+>
+    <g transform="scale(1.345565749235474, -1.345565749235474)   translate(22.295454545454547,-31.279545454545453)" stroke-width="0.8175000000000001"  fill="none">
+       <!-- hidden lines -->
+       <g  stroke="rgb(160,160,160)" fill="none" stroke-dasharray="0.8175000000000001,0.8175000000000001" >
+			<path d="M0.0,-12.7 L327.0,-12.7 " />
+			<path d="M0.0,12.7 L327.0,12.7 " />
+			<path d="M0.0,-12.7 L0.0,12.7 " />
+			<path d="M327.0,-12.7 L327.0,12.7 " />
+			<path d="M0.0,-9.524999999999999 L0.0,9.524999999999999 " />
+			<path d="M0.0,9.524999999999999 L0.0,-9.524999999999999 " />
+			<path d="M327.0,-9.524999999999999 L327.0,9.524999999999999 " />
+			<path d="M327.0,9.524999999999999 L327.0,-9.524999999999999 " />
+			<path d="M0.0,9.524999999999999 L327.0,9.524999999999999 " />
+			<path d="M0.0,9.524999999999999 L327.0,9.524999999999999 " />
+			<path d="M0.0,-9.524999999999999 L327.0,-9.524999999999999 " />
+			<path d="M0.0,-9.524999999999999 L327.0,-9.524999999999999 " />
+
+       </g>
+
+       <!-- solid lines -->
+       <g  stroke="rgb(0,0,0)" fill="none">
+			<path d="M0.0,-12.7 L327.0,-12.7 " />
+			<path d="M0.0,12.7 L327.0,12.7 " />
+			<path d="M0.0,12.7 L0.0,-12.7 " />
+			<path d="M327.0,12.7 L327.0,-12.7 " />
+
+       </g>
+    </g>
+    
+</svg>
+</g><g class="dim"><path d="M70,233.17737003058105 V261.1773700305811 M510.0,233.17737003058105 V261.1773700305811"/><path d="M70,253.17737003058105 H510.0" marker-start="url(#arr)" marker-end="url(#arr)"/></g><text x="290.0" y="275.1773700305811" class="dimension">327.000 X</text><g class="dim"><path d="M514.0,195 H535.0 M514.0,229.17737003058105 H535.0"/><path d="M530.0,195 V229.17737003058105" marker-start="url(#arr)" marker-end="url(#arr)"/></g><text x="537.0" y="212.08868501529054" class="small">25.400 Y</text><text x="580" y="155" class="label">TUBE / END SECTION</text><g transform="translate(560,170)">
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   width="315.0"
+   height="305.0"
+
+>
+    <g transform="scale(10.039370078740143, -10.039370078740143)   translate(15.68823529411765,-15.190196078431375)" stroke-width="0.10956862745098056"  fill="none">
+       <!-- hidden lines -->
+       <g  stroke="rgb(160,160,160)" fill="none" stroke-dasharray="0.10956862745098056,0.10956862745098056" >
+			<path d="M-12.7,-12.7 L12.7,-12.7 " />
+			<path d="M-12.7,12.7 L-12.7,-12.7 " />
+			<path d="M12.7,-12.7 L12.7,12.7 " />
+			<path d="M12.7,12.7 L-12.7,12.7 " />
+			<path d="M9.524999999999999,9.524999999999999 L9.524999999999999,-9.524999999999999 " />
+			<path d="M-9.524999999999999,9.524999999999999 L9.524999999999999,9.524999999999999 " />
+			<path d="M-9.524999999999999,-9.524999999999999 L-9.524999999999999,9.524999999999999 " />
+			<path d="M9.524999999999999,-9.524999999999999 L-9.524999999999999,-9.524999999999999 " />
+
+       </g>
+
+       <!-- solid lines -->
+       <g  stroke="rgb(0,0,0)" fill="none">
+			<path d="M-12.699999999999964,-12.700000000000035 L12.700000000000035,-12.700000000000035 " />
+			<path d="M-12.699999999999964,12.699999999999964 L-12.699999999999964,-12.700000000000035 " />
+			<path d="M12.700000000000035,-12.700000000000035 L12.700000000000035,12.699999999999964 " />
+			<path d="M12.700000000000035,12.699999999999964 L-12.699999999999964,12.699999999999964 " />
+			<path d="M9.525000000000034,9.524999999999963 L9.525000000000034,-9.525000000000034 " />
+			<path d="M-9.524999999999963,9.524999999999963 L9.525000000000034,9.524999999999963 " />
+			<path d="M-9.524999999999963,-9.525000000000034 L-9.524999999999963,9.524999999999963 " />
+			<path d="M9.525000000000034,-9.525000000000034 L-9.524999999999963,-9.525000000000034 " />
+
+       </g>
+    </g>
+    
+</svg>
+</g><g class="dim"><path d="M590,454.0 V482.0 M845.0,454.0 V482.0"/><path d="M590,474.0 H845.0" marker-start="url(#arr)" marker-end="url(#arr)"/></g><text x="717.5" y="496.0" class="dimension">25.400 Y</text><g class="dim"><path d="M849.0,195 H870.0 M849.0,450.0 H870.0"/><path d="M865.0,195 V450.0" marker-start="url(#arr)" marker-end="url(#arr)"/></g><text x="872.0" y="322.5" class="small">25.400 Z</text><text x="1120" y="151" class="note">Tube 25.4 square x 3.175 wall; 6061-T6.</text><text x="1120" y="182.05" class="note">Cut length 327 ±0.5. Straightness ≤0.75 / 300.</text><text x="1120" y="213.1" class="note">Insertion 28 from -40 mouth to -12 socket</text><text x="1120" y="236.10000000000002" class="note">bottom, relative S. Tube tip is X=-12;</text><text x="1120" y="259.1" class="note">effective station remains 317 ±1.</text><text x="1120" y="290.15" class="note">Cut ends global (-217,-10,70), (-544,-10,70).</text><text x="1120" y="313.15" class="note">Offsets 40/25; distal insertion 47.</text><text x="1120" y="344.20000000000005" class="note">Stock material section/lot and actual mass/CG</text><text x="1120" y="367.20000000000005" class="note">require inspection.</text><text x="1120" y="398.25" class="note">Local part axes shown by dimension suffix;</text><text x="1120" y="421.25" class="note">assembly locations in assembly_instances.json.</text><text x="1120" y="452.3" class="note">No tolerances or capacity inferred from mesh</text><text x="1120" y="475.3" class="note">appearance.</text><text x="40" y="1081" font-size="14">General candidate limits: machined ±0.10; profile ±0.25; explicit fits/coordinates override. Threads 6H candidate.</text><text x="40" y="1104" font-size="14">Edge break 0.2–0.5 except bearing abutments R≤0.4 / keys 0.2. Materials per BOM. Independent review and inspection required.</text></svg>

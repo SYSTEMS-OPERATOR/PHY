@@ -1,0 +1,17 @@
+{
+  "basis_force_N": 3000.0,
+  "status": "conditional_nominal_screens_not_capacity_approval",
+  "crossbar_flat_section_area_mm2": 297.8091544796509,
+  "crossbar_flat_section_modulus_mm3": 684.2454353272958,
+  "crossbar_unnotched_bending_MPa": 197.29762601255106,
+  "crossbar_journal_bending_MPa": 70.7355302630646,
+  "lug_root_unnotched_bending_MPa": 87.890625,
+  "frame_unnotched_bending_MPa": 69.73140495867769,
+  "shaft_end_bolt_tension_MPa_at_300N": 14.925373134328357,
+  "limitations": [
+    "crossbar flat is included analytically; drilled/tapped holes, shoulders and local contact concentrations are NOT included",
+    "lug and C-frame use nominal rectangular sections and conservative full stop couple; not a frame stiffness solution",
+    "carriage plate bending, threaded-foot pullout/prying, cap bending and screw preload/locking require independent calculation/inspection",
+    "no fatigue, ultimate material certification, deflection or physical qualification is supplied"
+  ]
+}

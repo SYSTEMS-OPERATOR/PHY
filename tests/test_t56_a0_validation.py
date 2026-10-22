@@ -40,7 +40,7 @@ class T56A0ValidationTest(unittest.TestCase):
         self.assertGreater(impact["shaft_yield_margin_x"], 2)
         self.assertGreater(impact["key_shear_margin_x"], 2)
         self.assertGreater(impact["key_bearing_margin_x"], 2)
-        self.assertLess(impact["bearing_static_screen_margin_x"], 1)
+        self.assertGreater(impact["bearing_static_screen_margin_x"], 2)
         self.assertFalse(impact["stop_compliance_basis_verified"])
         self.assertLessEqual(cases["LC-SHO-004"]["results"]["tube_stress_at_design_energy_MPa"], 120)
         self.assertLessEqual(
@@ -51,7 +51,7 @@ class T56A0ValidationTest(unittest.TestCase):
     def test_r1_screening_failures_remain_visible_release_blockers(self):
         result = load_cases.calculate()
         blockers = "\n".join(result["screening_blockers"])
-        self.assertIn("bearing static screen margin is below 1.0", blockers)
+        self.assertIn("bearing static screen", blockers)
         self.assertIn("stop travel", blockers)
         self.assertFalse(result["fabrication_released"])
         self.assertFalse(result["physical_evidence_complete"])
@@ -86,7 +86,7 @@ class T56A0ValidationTest(unittest.TestCase):
 
     def test_r1_convergence_keeps_release_and_evidence_open(self):
         report = self.load(PACKET / "analysis" / "A0_CONVERGENCE.json")
-        self.assertEqual(report["packet_revision"], "A0-R1")
+        self.assertEqual(report["packet_revision"], "A0-R2")
         self.assertFalse(report["fabrication_released"])
         self.assertFalse(report["physical_evidence_complete"])
         blockers = "\n".join(report["shop_review_release_blockers"])
@@ -96,7 +96,7 @@ class T56A0ValidationTest(unittest.TestCase):
     def test_r1_register_references_resolve(self):
         geometry = self.load(REQ / "geometry_register.json")
         fixture = geometry["coordinate_frame"]
-        self.assertEqual(fixture["datum_revision"], "A0-D001-R1")
+        self.assertEqual(fixture["datum_revision"], "A0-D001-R2")
         self.assertTrue((PROJECT / fixture["dimensioned_datum_evidence"]).is_file())
         closure = self.load(REQ / "single_side_article_closure.json")
         for package in closure["article_evidence_packages"]:
@@ -107,8 +107,8 @@ class T56A0ValidationTest(unittest.TestCase):
     def test_first_article_templates_are_r1_and_blank(self):
         inspection = self.load(PACKET / "procedures" / "inspection_record_template.json")
         bench = self.load(PACKET / "procedures" / "bench_test_record_template.json")
-        self.assertEqual(inspection["drawing_revision"], "A0-R1")
-        self.assertEqual(bench["drawing_revision"], "A0-R1")
+        self.assertEqual(inspection["drawing_revision"], "A0-R2")
+        self.assertEqual(bench["drawing_revision"], "A0-R2")
         self.assertIsNone(inspection["measurements"]["tube_to_shaft_nominal_ligament_mm"])
         self.assertFalse(inspection["measured_evidence"])
         self.assertFalse(bench["measured_evidence"])

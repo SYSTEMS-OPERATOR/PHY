@@ -1,13 +1,23 @@
 {
   "packet_id": "T56_A0_SINGLE_SIDE_SHOULDER",
-  "revision": "A0-R1",
+  "revision": "A0-R2",
   "status": "independent_shop_review_candidate_not_fabrication_released",
   "fabrication_released": false,
   "physical_evidence_complete": false,
   "canon_effect": "none",
   "units": "mm",
   "source": "PROJECTS/T56_CARBON/requirements/a0_shoulder_mechanism.json",
-  "source_sha256": "969c1eeb5cba60b2dc5ab60a2e555fa33e3f57cf06e7548b18a23e9c9c2d4fb6",
+  "source_sha256": "4044651006e2a6caa7cd660a5a42ec87f0bc9acc287e05d62d38d75d51a80d8f",
+  "source_hashes": {
+    "PROJECTS/T56_CARBON/requirements/a0_shoulder_mechanism.json": "4044651006e2a6caa7cd660a5a42ec87f0bc9acc287e05d62d38d75d51a80d8f",
+    "PROJECTS/T56_CARBON/requirements/a0_article_scope.json": "a54791c4f3d76594abf78d8314a0e2b93fde1771fb5fd14592808ab7d0538588",
+    "PROJECTS/T56_CARBON/requirements/a0_analysis_basis.json": "b45d79560676ad6783f3a2b25c7dbfb93177aea54ad120e3f3c3f10b99651fd6",
+    "PROJECTS/T56_CARBON/requirements/a0_supplier_basis.json": "9bf97c7f96e5313d6a1006f90a64c63bab07930814cbefd8b007255fedcbe90f",
+    "PROJECTS/T56_CARBON/tools/a0_interfaces.py": "ec5c1d10aa2ac48ac077a055093cfca8a9737c211d179339a6e1de00b28ed991",
+    "PROJECTS/T56_CARBON/tools/a0_drawings.py": "de321c3cc8044fc8f07ad4e1b81521d51252f4d22f945aaa2fb318107593f842",
+    "PROJECTS/T56_CARBON/tools/a0_load_cases.py": "d71ccfbeecd7231a9b89bae10e5f387b6a81f1a944f6a08e660a4b89a19e47f8",
+    "bin/export_t56_a0_article.py": "924bd71c0e0f4026cbc92e67c9c794e05e3e7d90be9f6b4064a1e51ec0965b9d"
+  },
   "parts": [
     {
       "part": "A0-101_fixture_base",
@@ -36,33 +46,33 @@
       "valid_solid": true,
       "step_round_trip": "pass",
       "bounds_mm": [
-        70.0,
+        120.0,
         120.0,
         8.0
       ],
-      "volume_mm3": 65345.20369732059
+      "volume_mm3": 75387.95773984616
     },
     {
       "part": "A0-104_yoke_side",
       "valid_solid": true,
       "step_round_trip": "pass",
       "bounds_mm": [
-        70.0,
-        8.0,
-        70.0
+        80.0,
+        38.0,
+        58.0
       ],
-      "volume_mm3": 30955.706894743525
+      "volume_mm3": 59935.48806271885
     },
     {
       "part": "A0-105_output_hub",
       "valid_solid": true,
       "step_round_trip": "pass",
       "bounds_mm": [
-        85.0,
+        108.0,
         40.0,
         55.0
       ],
-      "volume_mm3": 156003.0953840658
+      "volume_mm3": 111640.23444423488
     },
     {
       "part": "A0-106_index_sector",
@@ -80,11 +90,11 @@
       "valid_solid": true,
       "step_round_trip": "pass",
       "bounds_mm": [
-        20.0,
-        15.0,
+        12.0,
+        28.0,
         10.0
       ],
-      "volume_mm3": 3000.0
+      "volume_mm3": 3101.635420168776
     },
     {
       "part": "A0-108_dummy_member",
@@ -125,10 +135,10 @@
       "step_round_trip": "pass",
       "bounds_mm": [
         17.0,
-        104.0,
+        164.0,
         17.0
       ],
-      "volume_mm3": 23249.55577265779
+      "volume_mm3": 36168.76710996841
     },
     {
       "part": "A0-202_key",
@@ -146,22 +156,22 @@
       "valid_solid": true,
       "step_round_trip": "pass",
       "bounds_mm": [
-        26.0,
-        4.0,
-        26.0
+        21.6,
+        3.0,
+        21.6
       ],
-      "volume_mm3": 1215.7963569392496
+      "volume_mm3": 996.670269351362
     },
     {
       "part": "A0-301_bearing_envelope",
       "valid_solid": true,
       "step_round_trip": "pass",
       "bounds_mm": [
-        35.0,
-        10.0,
-        35.0
+        40.0,
+        12.0,
+        40.0
       ],
-      "volume_mm3": 7351.326809400116
+      "volume_mm3": 12355.883906568655
     },
     {
       "part": "A0-304_plunger_envelope",
@@ -183,7 +193,7 @@
         9.0,
         45.0
       ],
-      "volume_mm3": 12271.060904921731
+      "volume_mm3": 10574.600871983243
     },
     {
       "part": "A0-302_pivot_bolt_envelope",
@@ -212,16 +222,181 @@
       "valid_solid": true,
       "step_round_trip": "pass",
       "bounds_mm": [
-        45.0,
-        3.0,
-        45.0
+        60.00000000000001,
+        5.95,
+        40.000000000000014
       ],
-      "volume_mm3": 1884.9555921538756
+      "volume_mm3": 4948.743512089034
+    },
+    {
+      "part": "A0-311_floating_cap",
+      "valid_solid": true,
+      "step_round_trip": "pass",
+      "bounds_mm": [
+        60.00000000000001,
+        5.25,
+        40.000000000000014
+      ],
+      "volume_mm3": 4814.584970971311
+    },
+    {
+      "part": "A0-111_pitch_stop_carrier",
+      "valid_solid": true,
+      "step_round_trip": "pass",
+      "bounds_mm": [
+        137.07813130464655,
+        48.0,
+        160.0
+      ],
+      "volume_mm3": 151137.39934734593
+    },
+    {
+      "part": "A0-112_stop_crossbar",
+      "valid_solid": true,
+      "step_round_trip": "pass",
+      "bounds_mm": [
+        20.0,
+        196.0,
+        18.000000000000362
+      ],
+      "volume_mm3": 51772.59267862544
+    },
+    {
+      "part": "A0-204_sector_key",
+      "valid_solid": true,
+      "step_round_trip": "pass",
+      "bounds_mm": [
+        5.0,
+        6.0,
+        5.0
+      ],
+      "volume_mm3": 149.99999999999997
+    },
+    {
+      "part": "A0-205_inner_spacer",
+      "valid_solid": true,
+      "step_round_trip": "pass",
+      "bounds_mm": [
+        21.6,
+        4.0,
+        21.6
+      ],
+      "volume_mm3": 547.1083606226625
+    },
+    {
+      "part": "A0-206_left_outer_spacer",
+      "valid_solid": true,
+      "step_round_trip": "pass",
+      "bounds_mm": [
+        21.6,
+        46.0,
+        21.6
+      ],
+      "volume_mm3": 6291.746147160621
+    },
+    {
+      "part": "A0-207_right_inner_spacer",
+      "valid_solid": true,
+      "step_round_trip": "pass",
+      "bounds_mm": [
+        21.6,
+        27.0,
+        21.6
+      ],
+      "volume_mm3": 3692.9814342029736
+    },
+    {
+      "part": "A0-208_right_outer_spacer",
+      "valid_solid": true,
+      "step_round_trip": "pass",
+      "bounds_mm": [
+        21.6,
+        13.0,
+        21.6
+      ],
+      "volume_mm3": 1778.102172023653
+    },
+    {
+      "part": "A0-312_mount_screw",
+      "valid_solid": true,
+      "step_round_trip": "pass",
+      "bounds_mm": [
+        10.0,
+        10.0,
+        26.0
+      ],
+      "volume_mm3": 863.9379797371932
+    },
+    {
+      "part": "A0-313_cap_screw",
+      "valid_solid": true,
+      "step_round_trip": "pass",
+      "bounds_mm": [
+        7.0,
+        7.0,
+        14.0
+      ],
+      "volume_mm3": 239.467900019882
+    },
+    {
+      "part": "A0-314_end_screw",
+      "valid_solid": true,
+      "step_round_trip": "pass",
+      "bounds_mm": [
+        10.0,
+        10.0,
+        22.0
+      ],
+      "volume_mm3": 785.3981633974481
+    },
+    {
+      "part": "A0-315_carrier_screw",
+      "valid_solid": true,
+      "step_round_trip": "pass",
+      "bounds_mm": [
+        10.0,
+        10.0,
+        26.0
+      ],
+      "volume_mm3": 863.9379797371932
+    },
+    {
+      "part": "A0-316_pad_screw",
+      "valid_solid": true,
+      "step_round_trip": "pass",
+      "bounds_mm": [
+        5.7,
+        5.7,
+        15.65
+      ],
+      "volume_mm3": 110.82635673976881
+    },
+    {
+      "part": "A0-114_floating_yoke",
+      "valid_solid": true,
+      "step_round_trip": "pass",
+      "bounds_mm": [
+        80.0,
+        38.0,
+        58.0
+      ],
+      "volume_mm3": 59640.96375144479
+    },
+    {
+      "part": "A0-113_scapular_pad_envelope",
+      "valid_solid": true,
+      "step_round_trip": "pass",
+      "bounds_mm": [
+        20.0,
+        15.0,
+        10.0
+      ],
+      "volume_mm3": 3000.0
     }
   ],
-  "parts_step_bundle": "cad/A0-R1-parts-step.tar.gz",
-  "assembly_step_gzip": "assembly/A0-R1-neutral-assembly.step.gz",
-  "assembly_instance_count": 35,
+  "parts_step_bundle": "cad/A0-R2-parts-step.tar.gz",
+  "assembly_step_gzip": "assembly/A0-R2-neutral-assembly.step.gz",
+  "assembly_instance_count": 64,
   "motion_clearance": {
     "method": "discrete centerline samples against registered AABBs",
     "continuous_clearance_proof": false,
@@ -229,20 +404,40 @@
     "sampled_collision_count": 0,
     "result": "pass_at_samples_only"
   },
-  "drawing_files": [
-    "A0-D001-R1-fixture-datum.svg",
-    "A0-D002-R1-mechanism-assembly.svg",
-    "A0-D003-R1-dummy-member.svg",
-    "A0-D004-R1-cartridge-interfaces.svg",
-    "A0-D005-R1-assembly-register.svg",
-    "A0-D006-R1-exploded-order.svg"
+  "omitted_provisional_instances": [
+    "index_plunger",
+    "scapular_stop_pad_1",
+    "scapular_stop_bracket_1",
+    "scapular_stop_pad_2",
+    "scapular_stop_bracket_2",
+    "scapular_index_plunger",
+    "secondary_tether"
   ],
-  "bom_items": 24,
+  "assembly_interface_result": "pass_revised_interfaces_at_samples_only",
+  "whole_article_clearance_approved": false,
+  "drawing_files": [
+    "A0-D001-R2-fixture-and-roots.svg",
+    "A0-D002-R2-carriage-and-rocker.svg",
+    "A0-D003-R2-dummy-member.svg",
+    "A0-D004-R2-bearing-yoke.svg",
+    "A0-D005-R2-bearing-caps.svg",
+    "A0-D006-R2-pitch-shaft.svg",
+    "A0-D007-R2-output-hub.svg",
+    "A0-D008-R2-index-sector.svg",
+    "A0-D009-R2-stop-carrier-frame.svg",
+    "A0-D010-R2-stop-crossbar.svg",
+    "A0-D011-R2-pads-and-spacers.svg",
+    "A0-D012-R2-axial-assembly.svg",
+    "A0-D013-R2-stop-contacts.svg",
+    "A0-D014-R2-located-assembly.svg"
+  ],
+  "bom_items": 40,
   "supplier_dependent_open_items": [
-    "bearing corner radii and shoulder relief",
-    "index plunger body thread, nose length and engagement geometry",
-    "friction washer material and torque/preload correlation",
-    "tether end-fitting envelope and certified rating",
-    "bench interface capacity"
+    "Bearing CN residual clearance and shaft/housing fits under oscillating load: 17 h6 remains conditional; do not machine seats before review.",
+    "Stop pad material/curve: acetal is not credited with 4 mm elastic travel; first contact and backed travel must be reconciled with hard-stop angles.",
+    "Plunger thread/nose/support and engagement; single-sided index pin is not modeled as double shear.",
+    "Friction stack material, grounded reaction attachment, shaft coupling and torque/preload correlation.",
+    "Tether end fittings/routing, full guards, scapular stop/clamp hardware and rated bench interface.",
+    "Thread pull-out, fastener preload/locking, material certificates and tool access require independent review and first-article inspection."
   ]
 }

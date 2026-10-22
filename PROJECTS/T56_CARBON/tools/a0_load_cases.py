@@ -6,6 +6,11 @@ import argparse
 import json
 import math
 from pathlib import Path
+import sys
+
+ROOT = Path(__file__).resolve().parents[3]
+if str(ROOT) not in sys.path: sys.path.insert(0, str(ROOT))
+from PROJECTS.T56_CARBON.tools.a0_interfaces import impact_free_body, bearing_reactions, equivalent_static_load, stop_geometry
 
 PROJECT = Path(__file__).resolve().parents[1]
 REQ = PROJECT / "requirements"
@@ -19,10 +24,10 @@ def value(scope, record_id):
     return scope["mission_inputs"][record_id]["value"]
 
 
-def calculate():
-    scope = read("a0_article_scope.json")
-    design = read("a0_shoulder_mechanism.json")
-    basis = read("a0_analysis_basis.json")
+def calculate(design=None, basis=None, scope=None):
+    scope = scope or read("a0_article_scope.json")
+    design = design or read("a0_shoulder_mechanism.json")
+    basis = basis or read("a0_analysis_basis.json")
     constants = basis["constants"]
     material = basis["material_minima"]
     fabrication = design["fabrication_geometry"]
@@ -54,7 +59,9 @@ def calculate():
         3 * material["6061_T6"]["elastic_modulus_MPa"] * inertia
     )
 
-    sf_yield, sf_ultimate = 2, 3
+    factors=value(scope,"ME-SF-001")
+    sf_yield, sf_ultimate = factors["yield"], factors["ultimate"]
+    sf_insert=factors["bonded_or_keyed_insert"]
     dynamic_torque = mass_inertia * acceleration
     ordinary_stop_energy = 0.5 * mass_inertia * speed**2
     push_moment = external_force * length_m
@@ -64,39 +71,49 @@ def calculate():
     design_impact_energy = impact_energy * sf_ultimate
     stop_travel_m = constants["stop_pad_usable_travel_mm"] / 1000
     stop_radius_m = constants["pitch_stop_radius_mm"] / 1000
-    impact_peak_force = 2 * design_impact_energy / stop_travel_m
-    impact_peak_moment = impact_peak_force * stop_radius_m
+    impact_fbd = impact_free_body(design,mass,payload,length_mm,design_impact_energy,constants["stop_pad_usable_travel_mm"])
+    impact_peak_force = impact_fbd["stop_force_N"]
+    impact_peak_moment = impact_fbd["stop_torque_Nm"]
     impact_tube_stress = impact_peak_moment * 1000 / section_modulus
 
     shaft_d = cartridge["shaft_diameter"]
-    shaft_tau = 16 * impact_peak_moment * 1000 / (math.pi * shaft_d**3)
-    shaft_bending_stress = 32 * push_moment * 1000 / (math.pi * shaft_d**3)
-    shaft_vm = math.hypot(shaft_bending_stress, math.sqrt(3) * shaft_tau)
+    # Stop torque acts directly from integral hub lug into its carrier. The
+    # shaft takes radial bearing bending; index retention torque is separate.
+    shaft_tau = 16 * push_retention_moment * 1000 / (math.pi * shaft_d**3)
+    shaft_bending_stress = 32 * (impact_fbd['shaft_midspan_bending_Nmm']+total_weight*constants['bearing_center_span_mm']/4) / (math.pi * shaft_d**3)
+    shaft_vm = max(shaft_bending_stress, math.sqrt(3)*shaft_tau)
     shaft_keyway_factor = 1.6
     shaft_vm_with_keyway = shaft_vm * shaft_keyway_factor
     shaft_yield_sf = material["4140_PREHARD"]["yield_MPa"] / shaft_vm_with_keyway
 
     key_width, key_height, _ = cartridge["shaft_key_width_height_length"]
     key_length = constants["key_effective_length_mm"]
-    key_force = 2 * impact_peak_moment * 1000 / shaft_d
+    key_force = 2 * push_moment * sf_insert * 1000 / shaft_d
     key_shear = key_force / (key_width * key_length)
     key_bearing = key_force / (0.5 * key_height * key_length)
     key_shear_margin = (material["HARDENED_KEY_STEEL"]["yield_MPa"] / math.sqrt(3)) / key_shear
     key_bearing_margin = material["HARDENED_KEY_STEEL"]["yield_MPa"] / key_bearing
 
-    bearing_span_m = constants["bearing_center_span_mm"] / 1000
-    bearing_direct_reaction = impact_peak_force / 2
-    bearing_couple_reaction = impact_peak_moment / bearing_span_m
-    maximum_bearing_reaction = bearing_direct_reaction + bearing_couple_reaction
-    bearing_static_threshold = basis["bearing_procurement_acceptance"]["minimum_static_rating_per_bearing_N"]
-    bearing_static_screen_margin = bearing_static_threshold / maximum_bearing_reaction
+    span=abs(cartridge['yoke_plate_center_y'][1]-cartridge['yoke_plate_center_y'][0])
+    maximum_bearing_reaction=impact_fbd['maximum_bearing_radial_N']+total_weight/2
+    bearing_static_threshold = basis['bearing_procurement_acceptance']['minimum_static_rating_per_bearing_N']
+    bearing_static_screen_margin=bearing_static_threshold/maximum_bearing_reaction
+    required_s0=basis['bearing_procurement_acceptance']['static_safety_factor_required']
+    directional=[]
+    for axis in range(3):
+        force=[0.,0.,0.];force[axis]=external_force*sf_ultimate
+        # E is (-L,0,0) from S at neutral; r x F in N mm.
+        moment=[0,length_mm*force[2],-length_mm*force[1]]
+        reaction=bearing_reactions(force,moment,[-span/2,span/2])
+        directional.append({'axis':'XYZ'[axis],'force_N':force,'moment_Nmm':moment,'reactions':reaction,
+                            'P0_N':[equivalent_static_load(fr,fa) for fr,fa in zip(reaction['radial_N'],reaction['axial_N'])]})
 
     yoke_t = cartridge["yoke_plate_size_xzy"][2]
     yoke_net_width = cartridge["yoke_plate_size_xzy"][0] - cartridge["bearing_housing_diameter"]
     yoke_net_stress = maximum_bearing_reaction / (yoke_t * yoke_net_width)
 
     root_couple_force = push_retention_moment * 1000 / constants["root_pair_spacing_mm"]
-    root_bolt_area = math.pi * four_bar["pivot_bore_diameter"]**2 / 4
+    root_bolt_area = math.pi * 10**2 / 4
     root_bolt_shear = root_couple_force / root_bolt_area
     root_bolt_shear_margin = (material["ISO_10_9"]["proof_MPa"] / math.sqrt(3)) / root_bolt_shear
     bench_tension = push_retention_moment * 1000 / constants["bench_fastener_lever_mm"]
@@ -107,9 +124,9 @@ def calculate():
     stop_fastener_shear = impact_peak_force / constants["stop_attachment_fastener_count"] / stop_fastener_area
     stop_fastener_margin = (material["ISO_10_9"]["proof_MPa"] / math.sqrt(3)) / stop_fastener_shear
     index_pin_area = math.pi * cartridge["plunger_envelope_body_pin_length"][1]**2 / 4
-    index_pin_double_shear = impact_peak_force / (2 * index_pin_area)
+    index_pin_single_shear = (push_retention_moment*1000/cartridge["index_hole_radius"]) / index_pin_area
 
-    rocker_width, _, rocker_thickness = four_bar["rocker_size_xyz"]
+    _, rocker_width, rocker_thickness = four_bar["rocker_size_xyz"]
     rocker_i = rocker_width * rocker_thickness**3 / 12
     rocker_buckling = math.pi**2 * material["6061_T6"]["elastic_modulus_MPa"] * rocker_i / four_bar["rocker_centers"]**2
     index_energy = gravity_moment * math.sin(math.radians(constants["degraded_index_interval_deg"]))
@@ -194,7 +211,12 @@ def calculate():
                 "yoke_net_section_stress_MPa": yoke_net_stress,
                 "stop_attachment_fastener_shear_MPa": stop_fastener_shear,
                 "stop_attachment_fastener_margin_x": stop_fastener_margin,
-                "index_pin_double_shear_stress_MPa": index_pin_double_shear,
+                "index_pin_single_shear_stress_MPa_at_retention": index_pin_single_shear,
+                "impact_free_body":impact_fbd,
+                "directional_retention_free_bodies":directional,
+                "required_static_safety_factor":required_s0,
+                "bearing_margin_over_required_s0_x":bearing_static_screen_margin/required_s0,
+                "legacy_R1_screen_reference_only": {"force_N":3000,"torque_Nm":105,"reaction_N":3250,"threshold_N":3000,"margin_x":3000/3250,"superseded_reason":"Y torque was incorrectly assigned to radial bearing-span couple; unverified threshold was not an identified bearing"},
                 "rocker_weak_axis_euler_buckling_N": rocker_buckling,
                 "stop_compliance_basis_verified": False,
             },
@@ -252,10 +274,12 @@ def calculate():
             "tube_area_mm2": area, "tube_inertia_mm4": inertia,
             "tube_section_modulus_mm3": section_modulus,
             "fabrication_geometry_revision": fabrication["revision"],
+            "frozen_safety_factors": factors,
+            "keyed_insert_design_moment_Nm":push_moment*sf_insert,
         },
         "screening_blockers": [
-            "bearing static screen margin is below 1.0 at the provisional 6 J design-energy load; revise load distribution, bearing selection or accepted impact model before release" if bearing_static_screen_margin < 1 else "bearing static rating remains supplier verification",
-            "4 mm stop travel and force-displacement response require supplier/coupon verification before impact testing",
+            "bearing static screen is below the required s0" if bearing_static_screen_margin < required_s0 else "bearing static screen is CONDITIONAL on stop curve, selected SKF variant, fit and internal-clearance approval; not a bearing qualification",
+            "4 mm stop travel and force-displacement response require supplier/coupon verification before impact testing; that compression overruns the nominal hard-stop range by 3.82 degrees at R60",
             "combined-load calculations remain closed-form screens and require independent load-path review",
         ],
         "cases": cases,

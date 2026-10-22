@@ -1,0 +1,43 @@
+{
+  "basis_id": "A0_R2_SUPPLIER_CANDIDATES",
+  "retrieved_date": "2026-10-21",
+  "approval": "catalog_verified_candidate_only_not_procurement_or_fit_release",
+  "bearing": {
+    "manufacturer": "SKF",
+    "designation": "6203-2RSH",
+    "internal_clearance": "CN candidate; residual clearance and shaft fit NOT approved",
+    "dimensions_mm": {"bore":17,"outside":40,"width":12,"shaft_abutment_min":21.2,"shaft_abutment_max":22,"housing_abutment_max":35.8,"fillet_radius_max":0.6},
+    "ratings_N": {"basic_static_C0":4750,"basic_dynamic_C":9950},
+    "primary_url": "https://www.skf.com/group/products/rolling-bearings/ball-bearings/deep-groove-ball-bearings/productid-6203-2RSH",
+    "dimension_crosscheck_url": "https://www.skf.com/ba/products/rolling-bearings/ball-bearings/deep-groove-ball-bearings/productid-6203-2RSH",
+    "document_revision": "unversioned manufacturer web product page; exact designation required on delivered lot",
+    "applicability": "single-row sealed deep-groove bearing candidate; oscillation, shock, internal clearance, fits and life require review",
+    "not_verified": ["delivered lot dimensions and ratings", "mounted residual CN clearance", "shaft creep under alternating/rotating inner-ring loads", "aluminum housing thermal behavior", "seal geometry beyond catalog abutment limits", "oscillatory lubrication and fatigue"]
+  },
+  "rejected_baseline_comparator": {
+    "designation": "SKF 6003-2RSH",
+    "dimensions_mm": [17,35,10],
+    "basic_static_C0_N":3250,
+    "basic_dynamic_C_N":6370,
+    "primary_url":"https://www.skf.com/group/products/rolling-bearings/ball-bearings/deep-groove-ball-bearings/productid-6003-2RSH",
+    "reason":"R2 conditional inertia-inclusive impact reaction requires C0 about 3913 N at project s0=2; 6003 fails that screen. The old generic 3000 N threshold did not establish any delivered rating."
+  },
+  "static_selection": {
+    "primary_url":"https://www.skf.com/binaries/pub12/Images/0901d196807026e8-100-700_SKF_bearings_and_mounted_products_2018_tcm_12-314117.pdf",
+    "document":"SKF bearings and mounted products 2018; Bearing life, Table 5",
+    "catalog_guidance":"Rotating ball bearings with pronounced shock: at least 1.5 for normal quiet-running requirements; at least 2 for high requirements. Unknown shock magnitude requires conservative values.",
+    "project_candidate_s0":2,
+    "project_justification":"A0 acoustic target and unverified shock response justify using the high quiet-running guideline for this provisional comparison. This is an engineering choice awaiting independent approval, distinct from frozen material yield/ultimate factors 2/3."
+  },
+  "static_equivalent_load": {
+    "formula":"P0=max(Fr,0.6*Fr+0.5*Fa)",
+    "primary_url":"https://cdn.skfmediahub.skf.com/api/public/0901d1968024f8c3/pdf_preview_medium/0901d1968024f8c3_pdf_preview_medium.pdf",
+    "document":"SKF/MRC Engineering Handbook, single-row deep-groove ball bearings S-type, page 47",
+    "applicability":"Generic deep-groove static-load screen; obtain exact selected-variant application approval before release. No life or preload approval is implied."
+  },
+  "other_interfaces": {
+    "fasteners":"ISO 4762 dimensions/class 10.9 candidate callouts; actual vendor, head envelope, coating, locking, torque and lot not selected",
+    "pad":"Existing acetal label is a candidate, with no supported force-displacement curve or usable elastic travel",
+    "plunger_friction_tether_bench":"Unselected; physical capacity and mating/support geometry remain blocked; see release checklist"
+  }
+}

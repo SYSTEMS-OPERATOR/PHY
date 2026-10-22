@@ -93,14 +93,14 @@
       "valid": true,
       "bounds_mm": {
         "min": [
-          -220.0,
+          -245.0,
           -70.0,
-          31.0
+          39.0
         ],
         "max": [
-          -150.0,
+          -125.0,
           50.0,
-          39.0
+          47.0
         ]
       }
     },
@@ -178,13 +178,13 @@
       "valid": true,
       "bounds_mm": {
         "min": [
-          -240.0,
-          -44.0,
-          35.0
+          -245.0,
+          -70.0,
+          47.0
         ],
         "max": [
-          -170.0,
-          -36.0,
+          -165.0,
+          -32.0,
           105.0
         ]
       }
@@ -195,30 +195,132 @@
       "valid": true,
       "bounds_mm": {
         "min": [
-          -222.5,
-          -45.0,
-          52.5
+          -225.0,
+          -46.0,
+          50.0
         ],
         "max": [
-          -187.5,
-          -35.0,
-          87.5
+          -185.0,
+          -34.0,
+          90.0
+        ]
+      }
+    },
+    {
+      "instance_id": "bearing_cap_1",
+      "part_id": "A0-310_bearing_cap",
+      "valid": true,
+      "bounds_mm": {
+        "min": [
+          -235.0,
+          -52.0,
+          59.99999999999999
+        ],
+        "max": [
+          -175.0,
+          -46.05,
+          100.0
+        ]
+      }
+    },
+    {
+      "instance_id": "cap_screw_1_1",
+      "part_id": "A0-313_cap_screw",
+      "valid": true,
+      "bounds_mm": {
+        "min": [
+          -183.5,
+          -56.0,
+          66.5
+        ],
+        "max": [
+          -176.5,
+          -42.0,
+          73.5
+        ]
+      }
+    },
+    {
+      "instance_id": "cap_screw_1_2",
+      "part_id": "A0-313_cap_screw",
+      "valid": true,
+      "bounds_mm": {
+        "min": [
+          -208.5,
+          -56.0,
+          91.5
+        ],
+        "max": [
+          -201.5,
+          -42.0,
+          98.5
+        ]
+      }
+    },
+    {
+      "instance_id": "cap_screw_1_3",
+      "part_id": "A0-313_cap_screw",
+      "valid": true,
+      "bounds_mm": {
+        "min": [
+          -233.5,
+          -56.0,
+          66.5
+        ],
+        "max": [
+          -226.5,
+          -42.0,
+          73.5
+        ]
+      }
+    },
+    {
+      "instance_id": "mount_screw_1_1",
+      "part_id": "A0-312_mount_screw",
+      "valid": true,
+      "bounds_mm": {
+        "min": [
+          -240.0,
+          -69.0,
+          39.0
+        ],
+        "max": [
+          -230.0,
+          -59.0,
+          65.0
+        ]
+      }
+    },
+    {
+      "instance_id": "mount_screw_1_2",
+      "part_id": "A0-312_mount_screw",
+      "valid": true,
+      "bounds_mm": {
+        "min": [
+          -225.0,
+          -69.0,
+          39.0
+        ],
+        "max": [
+          -215.0,
+          -59.0,
+          65.0
         ]
       }
     },
     {
       "instance_id": "yoke_2",
-      "part_id": "A0-104_yoke_side",
+      "part_id": "A0-114_floating_yoke",
       "valid": true,
       "bounds_mm": {
         "min": [
-          -240.0,
-          16.0,
-          35.0
+          -245.0,
+          12.0,
+          47.0
         ],
         "max": [
-          -170.0,
-          24.0,
+          -165.0,
+          50.0,
           105.0
         ]
       }
@@ -229,48 +331,116 @@
       "valid": true,
       "bounds_mm": {
         "min": [
-          -222.5,
-          15.0,
-          52.5
+          -225.0,
+          14.0,
+          50.0
         ],
         "max": [
-          -187.5,
-          25.0,
-          87.5
-        ]
-      }
-    },
-    {
-      "instance_id": "bearing_cap_1",
-      "part_id": "A0-310_bearing_cap",
-      "valid": true,
-      "bounds_mm": {
-        "min": [
-          -227.5,
-          -48.0,
-          47.5
-        ],
-        "max": [
-          -182.5,
-          -45.0,
-          92.5
+          -185.0,
+          26.0,
+          90.0
         ]
       }
     },
     {
       "instance_id": "bearing_cap_2",
-      "part_id": "A0-310_bearing_cap",
+      "part_id": "A0-311_floating_cap",
       "valid": true,
       "bounds_mm": {
         "min": [
-          -227.5,
-          25.0,
-          47.5
+          -235.0,
+          26.75,
+          59.99999999999999
         ],
         "max": [
-          -182.5,
-          28.0,
-          92.5
+          -175.0,
+          32.0,
+          100.0
+        ]
+      }
+    },
+    {
+      "instance_id": "cap_screw_2_1",
+      "part_id": "A0-313_cap_screw",
+      "valid": true,
+      "bounds_mm": {
+        "min": [
+          -183.5,
+          22.0,
+          66.5
+        ],
+        "max": [
+          -176.5,
+          36.0,
+          73.5
+        ]
+      }
+    },
+    {
+      "instance_id": "cap_screw_2_2",
+      "part_id": "A0-313_cap_screw",
+      "valid": true,
+      "bounds_mm": {
+        "min": [
+          -208.5,
+          22.0,
+          91.5
+        ],
+        "max": [
+          -201.5,
+          36.0,
+          98.5
+        ]
+      }
+    },
+    {
+      "instance_id": "cap_screw_2_3",
+      "part_id": "A0-313_cap_screw",
+      "valid": true,
+      "bounds_mm": {
+        "min": [
+          -233.5,
+          22.0,
+          66.5
+        ],
+        "max": [
+          -226.5,
+          36.0,
+          73.5
+        ]
+      }
+    },
+    {
+      "instance_id": "mount_screw_2_1",
+      "part_id": "A0-312_mount_screw",
+      "valid": true,
+      "bounds_mm": {
+        "min": [
+          -240.0,
+          39.0,
+          39.0
+        ],
+        "max": [
+          -230.0,
+          49.0,
+          65.0
+        ]
+      }
+    },
+    {
+      "instance_id": "mount_screw_2_2",
+      "part_id": "A0-312_mount_screw",
+      "valid": true,
+      "bounds_mm": {
+        "min": [
+          -225.0,
+          39.0,
+          39.0
+        ],
+        "max": [
+          -215.0,
+          49.0,
+          65.0
         ]
       }
     },
@@ -280,12 +450,12 @@
       "valid": true,
       "bounds_mm": {
         "min": [
-          -270.0,
+          -245.0,
           -30.0,
           42.5
         ],
         "max": [
-          -185.0,
+          -137.0,
           10.0,
           97.5
         ]
@@ -298,12 +468,12 @@
       "bounds_mm": {
         "min": [
           -213.5,
-          -62.0,
+          -92.0,
           61.5
         ],
         "max": [
           -196.5,
-          42.0,
+          72.0,
           78.5
         ]
       }
@@ -316,12 +486,12 @@
         "min": [
           -207.5,
           -25.0,
-          77.25
+          76.0
         ],
         "max": [
           -202.5,
           5.0,
-          82.25
+          81.0
         ]
       }
     },
@@ -332,13 +502,30 @@
       "bounds_mm": {
         "min": [
           -250.0,
-          31.0,
+          53.0,
           25.0
         ],
         "max": [
           -160.0,
-          37.0,
+          59.0,
           115.0
+        ]
+      }
+    },
+    {
+      "instance_id": "sector_key",
+      "part_id": "A0-204_sector_key",
+      "valid": true,
+      "bounds_mm": {
+        "min": [
+          -207.5,
+          53.0,
+          76.0
+        ],
+        "max": [
+          -202.5,
+          59.0,
+          81.0
         ]
       }
     },
@@ -349,13 +536,98 @@
       "bounds_mm": {
         "min": [
           -227.5,
-          -55.0,
+          -84.5,
           47.5
         ],
         "max": [
           -182.5,
-          -46.0,
+          -75.5,
           92.5
+        ]
+      }
+    },
+    {
+      "instance_id": "inner_spacer_1",
+      "part_id": "A0-205_inner_spacer",
+      "valid": true,
+      "bounds_mm": {
+        "min": [
+          -215.8,
+          -34.0,
+          59.2
+        ],
+        "max": [
+          -194.2,
+          -30.0,
+          80.8
+        ]
+      }
+    },
+    {
+      "instance_id": "inner_spacer_2",
+      "part_id": "A0-205_inner_spacer",
+      "valid": true,
+      "bounds_mm": {
+        "min": [
+          -215.8,
+          10.0,
+          59.2
+        ],
+        "max": [
+          -194.2,
+          14.0,
+          80.8
+        ]
+      }
+    },
+    {
+      "instance_id": "left_outer_spacer",
+      "part_id": "A0-206_left_outer_spacer",
+      "valid": true,
+      "bounds_mm": {
+        "min": [
+          -215.8,
+          -92.0,
+          59.2
+        ],
+        "max": [
+          -194.2,
+          -46.0,
+          80.8
+        ]
+      }
+    },
+    {
+      "instance_id": "right_inner_spacer",
+      "part_id": "A0-207_right_inner_spacer",
+      "valid": true,
+      "bounds_mm": {
+        "min": [
+          -215.8,
+          26.0,
+          59.2
+        ],
+        "max": [
+          -194.2,
+          53.0,
+          80.8
+        ]
+      }
+    },
+    {
+      "instance_id": "right_outer_spacer",
+      "part_id": "A0-208_right_outer_spacer",
+      "valid": true,
+      "bounds_mm": {
+        "min": [
+          -215.8,
+          59.0,
+          59.2
+        ],
+        "max": [
+          -194.2,
+          72.0,
+          80.8
         ]
       }
     },
@@ -365,14 +637,31 @@
       "valid": true,
       "bounds_mm": {
         "min": [
-          -218.0,
-          -62.0,
-          57.0
+          -215.8,
+          -95.0,
+          59.2
         ],
         "max": [
-          -192.0,
-          -58.0,
-          83.0
+          -194.2,
+          -92.0,
+          80.8
+        ]
+      }
+    },
+    {
+      "instance_id": "end_screw_1",
+      "part_id": "A0-314_end_screw",
+      "valid": true,
+      "bounds_mm": {
+        "min": [
+          -210.0,
+          -101.0,
+          65.0
+        ],
+        "max": [
+          -200.0,
+          -79.0,
+          75.0
         ]
       }
     },
@@ -382,14 +671,31 @@
       "valid": true,
       "bounds_mm": {
         "min": [
-          -218.0,
-          38.0,
-          57.0
+          -215.8,
+          72.0,
+          59.2
         ],
         "max": [
-          -192.0,
-          42.0,
-          83.0
+          -194.2,
+          75.0,
+          80.8
+        ]
+      }
+    },
+    {
+      "instance_id": "end_screw_2",
+      "part_id": "A0-314_end_screw",
+      "valid": true,
+      "bounds_mm": {
+        "min": [
+          -210.0,
+          59.0,
+          65.0
+        ],
+        "max": [
+          -200.0,
+          81.0,
+          75.0
         ]
       }
     },
@@ -411,36 +717,172 @@
       }
     },
     {
+      "instance_id": "pitch_stop_carrier_-1",
+      "part_id": "A0-111_pitch_stop_carrier",
+      "valid": true,
+      "bounds_mm": {
+        "min": [
+          -249.07813130464655,
+          -108.0,
+          0.9999999999999964
+        ],
+        "max": [
+          -111.99999999999999,
+          -60.0,
+          161.0
+        ]
+      }
+    },
+    {
+      "instance_id": "pitch_stop_carrier_1",
+      "part_id": "A0-111_pitch_stop_carrier",
+      "valid": true,
+      "bounds_mm": {
+        "min": [
+          -249.07813130464655,
+          40.0,
+          0.9999999999999964
+        ],
+        "max": [
+          -111.99999999999999,
+          88.0,
+          161.0
+        ]
+      }
+    },
+    {
       "instance_id": "pitch_stop_pad_1",
       "part_id": "A0-107_stop_pad",
       "valid": true,
       "bounds_mm": {
         "min": [
-          -180.0,
-          -17.5,
-          20.0
+          -168.7439495637507,
+          -24.0,
+          105.40002503784447
         ],
         "max": [
-          -160.0,
-          -2.5,
-          30.0
+          -153.26817976754154,
+          4.0,
+          120.2395371702072
         ]
       }
     },
     {
-      "instance_id": "pitch_stop_bracket_1",
-      "part_id": "A0-110_stop_bracket",
+      "instance_id": "stop_crossbar_1",
+      "part_id": "A0-112_stop_crossbar",
       "valid": true,
       "bounds_mm": {
         "min": [
-          -167.0,
-          -20.0,
-          21.0
+          -177.89501510067777,
+          -108.0,
+          113.88050599940868
         ],
         "max": [
-          -139.0,
-          0.0,
-          29.0
+          -157.89501510067777,
+          88.0,
+          133.84440635405937
+        ]
+      }
+    },
+    {
+      "instance_id": "pad_screw_1_1",
+      "part_id": "A0-316_pad_screw",
+      "valid": true,
+      "bounds_mm": {
+        "min": [
+          -167.8952366924069,
+          -23.85,
+          107.36608755383382
+        ],
+        "max": [
+          -156.1250030129159,
+          -18.15,
+          122.81070924203803
+        ]
+      }
+    },
+    {
+      "instance_id": "pad_screw_1_2",
+      "part_id": "A0-316_pad_screw",
+      "valid": true,
+      "bounds_mm": {
+        "min": [
+          -167.8952366924069,
+          -1.85,
+          107.36608755383382
+        ],
+        "max": [
+          -156.1250030129159,
+          3.85,
+          122.81070924203803
+        ]
+      }
+    },
+    {
+      "instance_id": "bar_washer_1_-1",
+      "part_id": "A0-203_end_retainer",
+      "valid": true,
+      "bounds_mm": {
+        "min": [
+          -178.69501510067778,
+          -111.0,
+          113.04440635405938
+        ],
+        "max": [
+          -157.09501510067776,
+          -108.0,
+          134.64440635405938
+        ]
+      }
+    },
+    {
+      "instance_id": "bar_end_screw_1_-1",
+      "part_id": "A0-314_end_screw",
+      "valid": true,
+      "bounds_mm": {
+        "min": [
+          -172.89501510067777,
+          -117.0,
+          118.84440635405937
+        ],
+        "max": [
+          -162.89501510067777,
+          -95.0,
+          128.84440635405937
+        ]
+      }
+    },
+    {
+      "instance_id": "bar_washer_1_1",
+      "part_id": "A0-203_end_retainer",
+      "valid": true,
+      "bounds_mm": {
+        "min": [
+          -178.69501510067778,
+          88.0,
+          113.04440635405938
+        ],
+        "max": [
+          -157.09501510067776,
+          91.0,
+          134.64440635405938
+        ]
+      }
+    },
+    {
+      "instance_id": "bar_end_screw_1_1",
+      "part_id": "A0-314_end_screw",
+      "valid": true,
+      "bounds_mm": {
+        "min": [
+          -172.89501510067777,
+          75.0,
+          118.84440635405937
+        ],
+        "max": [
+          -162.89501510067777,
+          97.0,
+          128.84440635405937
         ]
       }
     },
@@ -450,150 +892,201 @@
       "valid": true,
       "bounds_mm": {
         "min": [
-          -180.0,
-          -17.5,
-          110.0
+          -225.2924016687088,
+          -24.0,
+          4.3194013903596815
         ],
         "max": [
-          -160.0,
-          -2.5,
-          120.0
+          -214.8796994380878,
+          4.0,
+          16.66108628161384
         ]
       }
     },
     {
-      "instance_id": "pitch_stop_bracket_2",
-      "part_id": "A0-110_stop_bracket",
+      "instance_id": "stop_crossbar_2",
+      "part_id": "A0-112_stop_crossbar",
       "valid": true,
       "bounds_mm": {
         "min": [
-          -167.0,
-          -20.0,
-          111.0
+          -243.07813130464655,
+          -108.0,
+          0.9439372931192764
         ],
         "max": [
-          -139.0,
-          0.0,
-          119.0
+          -224.87360770827874,
+          88.0,
+          20.943937293119276
         ]
       }
     },
     {
-      "instance_id": "index_plunger",
-      "part_id": "A0-304_plunger_envelope",
+      "instance_id": "pad_screw_2_1",
+      "part_id": "A0-316_pad_screw",
+      "valid": true,
+      "bounds_mm": {
+        "min": [
+          -231.12297402148647,
+          -23.85,
+          7.479697319315709
+        ],
+        "max": [
+          -215.3394196421574,
+          -18.15,
+          13.23380920288368
+        ]
+      }
+    },
+    {
+      "instance_id": "pad_screw_2_2",
+      "part_id": "A0-316_pad_screw",
+      "valid": true,
+      "bounds_mm": {
+        "min": [
+          -231.12297402148647,
+          -1.85,
+          7.479697319315709
+        ],
+        "max": [
+          -215.3394196421574,
+          3.85,
+          13.23380920288368
+        ]
+      }
+    },
+    {
+      "instance_id": "bar_washer_2_-1",
+      "part_id": "A0-203_end_retainer",
+      "valid": true,
+      "bounds_mm": {
+        "min": [
+          -243.87813130464656,
+          -111.0,
+          0.14393729311927572
+        ],
+        "max": [
+          -222.27813130464654,
+          -108.0,
+          21.743937293119277
+        ]
+      }
+    },
+    {
+      "instance_id": "bar_end_screw_2_-1",
+      "part_id": "A0-314_end_screw",
+      "valid": true,
+      "bounds_mm": {
+        "min": [
+          -238.07813130464655,
+          -117.0,
+          5.943937293119276
+        ],
+        "max": [
+          -228.07813130464655,
+          -95.0,
+          15.943937293119276
+        ]
+      }
+    },
+    {
+      "instance_id": "bar_washer_2_1",
+      "part_id": "A0-203_end_retainer",
+      "valid": true,
+      "bounds_mm": {
+        "min": [
+          -243.87813130464656,
+          88.0,
+          0.14393729311927572
+        ],
+        "max": [
+          -222.27813130464654,
+          91.0,
+          21.743937293119277
+        ]
+      }
+    },
+    {
+      "instance_id": "bar_end_screw_2_1",
+      "part_id": "A0-314_end_screw",
+      "valid": true,
+      "bounds_mm": {
+        "min": [
+          -238.07813130464655,
+          75.0,
+          5.943937293119276
+        ],
+        "max": [
+          -228.07813130464655,
+          97.0,
+          15.943937293119276
+        ]
+      }
+    },
+    {
+      "instance_id": "carrier_screw_1",
+      "part_id": "A0-315_carrier_screw",
       "valid": true,
       "bounds_mm": {
         "min": [
           -178.0,
-          11.5,
-          62.0
+          -69.0,
+          39.0
         ],
         "max": [
+          -168.0,
+          -59.0,
+          65.0
+        ]
+      }
+    },
+    {
+      "instance_id": "carrier_screw_2",
+      "part_id": "A0-315_carrier_screw",
+      "valid": true,
+      "bounds_mm": {
+        "min": [
+          -178.0,
+          39.0,
+          39.0
+        ],
+        "max": [
+          -168.0,
+          49.0,
+          65.0
+        ]
+      }
+    },
+    {
+      "instance_id": "carrier_screw_3",
+      "part_id": "A0-315_carrier_screw",
+      "valid": true,
+      "bounds_mm": {
+        "min": [
           -162.0,
-          56.5,
-          78.0
-        ]
-      }
-    },
-    {
-      "instance_id": "scapular_stop_pad_1",
-      "part_id": "A0-107_stop_pad",
-      "valid": true,
-      "bounds_mm": {
-        "min": [
-          -195.0,
-          -79.5,
-          30.0
-        ],
-        "max": [
-          -175.0,
-          -64.5,
-          40.0
-        ]
-      }
-    },
-    {
-      "instance_id": "scapular_stop_bracket_1",
-      "part_id": "A0-110_stop_bracket",
-      "valid": true,
-      "bounds_mm": {
-        "min": [
-          -182.0,
-          -82.0,
-          31.0
-        ],
-        "max": [
-          -154.0,
-          -62.0,
+          -69.0,
           39.0
+        ],
+        "max": [
+          -152.0,
+          -59.0,
+          65.0
         ]
       }
     },
     {
-      "instance_id": "scapular_stop_pad_2",
-      "part_id": "A0-107_stop_pad",
+      "instance_id": "carrier_screw_4",
+      "part_id": "A0-315_carrier_screw",
       "valid": true,
       "bounds_mm": {
         "min": [
-          -195.0,
-          44.5,
-          30.0
-        ],
-        "max": [
-          -175.0,
-          59.5,
-          40.0
-        ]
-      }
-    },
-    {
-      "instance_id": "scapular_stop_bracket_2",
-      "part_id": "A0-110_stop_bracket",
-      "valid": true,
-      "bounds_mm": {
-        "min": [
-          -182.0,
-          42.0,
-          31.0
-        ],
-        "max": [
-          -154.0,
-          62.0,
+          -162.0,
+          39.0,
           39.0
-        ]
-      }
-    },
-    {
-      "instance_id": "scapular_index_plunger",
-      "part_id": "A0-304_plunger_envelope",
-      "valid": true,
-      "bounds_mm": {
-        "min": [
-          -193.0,
-          17.5,
-          27.0
         ],
         "max": [
-          -177.0,
-          62.5,
-          43.0
-        ]
-      }
-    },
-    {
-      "instance_id": "secondary_tether",
-      "part_id": "A0-307_tether_envelope",
-      "valid": true,
-      "bounds_mm": {
-        "min": [
-          -245.0,
-          -13.0,
-          67.0
-        ],
-        "max": [
-          -185.0,
-          -6.999999999999993,
-          73.0
+          -152.0,
+          49.0,
+          65.0
         ]
       }
     }

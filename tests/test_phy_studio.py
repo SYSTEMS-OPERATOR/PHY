@@ -121,8 +121,8 @@ class PHYStudioTest(unittest.TestCase):
     @unittest.skipUnless(importlib.util.find_spec("cadquery"), "optional CadQuery unavailable")
     def test_a0_viewer_uses_existing_exact_located_geometry(self):
         model = exporter.a0_model()
-        self.assertEqual(len(model["parts"]), 35)
-        self.assertEqual(len({p["part_id"] for p in model["parts"]}), 19)
+        self.assertEqual(len(model["parts"]), 64)
+        self.assertEqual(len({p["part_id"] for p in model["parts"]}), model["part_definition_count"])
         existing = json.loads((ROOT / "PROJECTS/T56_CARBON/fabrication/a0_packet/assembly/assembly_instances.json").read_text())
         old = {p["instance_id"]: p for p in existing["instances"]}
         for p in model["parts"]:

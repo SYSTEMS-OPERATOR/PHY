@@ -18,7 +18,7 @@ The portable app has no runtime package installation, account or cloud service.
 | F28 mean | Mean-based adult female reference; 92 ANSUR II women aged exactly 28 |
 | F28 refined | Shoulders −1%, waist −3%, hip +2%; design choices remain explicit |
 | SOPHY scale | Proposed form overlay at H=span=1676.4 mm; canon kernel unchanged |
-| A0-R1 | Exact current 19 B-rep solids / 35 located instances; separate bench article |
+| A0-R2 | Exact current 64-instance cartridge subassembly; unresolved article interfaces remain excluded and blocked |
 | Source library | Existing 18 source-based envelope solids; gallery placement only |
 | NIH female pelvis | Pinned 19,983-triangle native reference preview; 14 tissue meshes / four fused adult bones |
 | NIH female skin | Pinned 25,000-triangle exterior preview; no bone or tissue-mechanics evidence |

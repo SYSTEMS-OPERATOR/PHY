@@ -5,12 +5,7 @@
   "sampled_collision_count": 0,
   "result": "pass_at_samples_only",
   "intentional_contacts": [
-    "pivot shoulder and link bore",
-    "shaft and bearing inner rings",
-    "bearing outer rings and yoke seats",
-    "shaft key and keyed hub/sector",
-    "dummy tube and split-clamp socket",
-    "stop pad and stop bracket only at declared hard stops"
+    "surface contact and explicitly specified fits only; no positive-volume exemption; see interface_check_report.json"
   ],
   "limitations": [
     "not a swept-solid or continuous collision proof",

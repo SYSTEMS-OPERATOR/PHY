@@ -1,4 +1,4 @@
-# A0-R1 build, inspection and bench-test procedure
+# A0-R2 build, inspection and bench-test procedure
 
 Status: **PROCEDURE ISSUED FOR SHOP REVIEW — NO TESTS RECORDED**
 
@@ -6,6 +6,18 @@ This procedure applies only to the guarded, non-load-bearing left-side A0
 article. A second competent reviewer must approve drawings and the load path
 before stock is cut. Human lifting, body support, fall arrest, unguarded motion
 and unsupervised operation are prohibited.
+
+R2 adds a dimensioned cartridge subassembly. Undefined scapular stop/plunger and
+straight tether placements are excluded from the issued STEP and remain listed
+with their original conflicts in `assembly/interface_check_report.json`. They
+must be designed and independently accepted before any whole-article build.
+
+The shaft h6 fit, CN residual clearance, friction coupling/grounding, fastener
+locking and stop compliance remain critical holds. In particular, nominal first
+contact is at -32/+92 degrees; 4 mm tangential compression would overrun those
+limits by 3.82 degrees. The existing impact acceptance criterion is unchanged and
+currently unfulfilled. Do not execute BT-05 until a reviewed compliant mechanism
+or documented requirement disposition resolves this conflict.
 
 ## 1. Hold points
 
@@ -26,8 +38,9 @@ motion, permanent set, datum shift or instrumentation fault.
 ## 2. Fabrication
 
 1. Confirm `manifest.json` source hash matches the reviewed mechanism JSON and
-   confirm the reviewed neutral assembly has 35 modeled instances.
-2. Cut A0-101 through A0-110 and A0-201 through A0-203 from the BOM materials. Do not machine
+   confirm the reviewed neutral assembly has the instance count in the current manifest (unresolved envelopes excluded).
+2. Manufacture only the reviewed current BOM items; use the part drawings and
+   handed-part notes. The BOM also includes unresolved reserved interfaces. Do not machine
    bearing bores or the index-plunger thread until the delivered parts are
    measured and the mating dimensions are confirmed.
 3. Machine the base datum hole and face first. Establish the drawing origin from
@@ -35,7 +48,7 @@ motion, permanent set, datum shift or instrumentation fault.
    setup where practical.
 4. Ream link pivots to `10.2 +0.10/-0.00 mm`; hold their pattern to true
    position `0.30 mm`. Match-mark each rocker and its inspected orientation.
-5. Finish bearing bores to `35 H7`, shaft journals to `17 h6`, the `5 x 5 mm`
+5. Finish bearing bores to `40.000..40.025 mm`, shaft journals to `17 h6`, the `5 x 5 mm`
    keyway to the delivered key, hub socket to `25.50 +0.15/-0.00 mm`, and index
    holes to `8.2 +0.10/-0.00 mm`.
 6. Cut the square tube to `327 ±0.5 mm`; deburr and break edges 0.2–0.5 mm.
@@ -67,8 +80,22 @@ Use calibrated instruments and the supplied inspection template. At minimum:
    all-metal locknuts. Tighten locknuts only to remove axial play while
    preserving free rotation; target end float is `0.05–0.15 mm`. Do not apply a
    generic clamp-bolt torque through a rotating link.
-3. Install both 8 mm yoke plates, 6003 bearings, keyed 17 mm shaft, offset hub, captured end
-   retainers, sector, hard-stop pads and index plunger. Torque M6-10.9 hub pinch
+3. Install the mirrored yokes with M6x20 foot screws and confirm at least 0.5 mm
+   underside clearance to the rocker layer. Install SKF 6203-2RSH bearings,
+   Ø35-opening C caps (left nose1.95; right nose1.25), keyed 17 mm shaft,
+   inner/outer spacers, hub, sector and bolted end washers. Inspect the right
+   pocket15 and locating pocket14; verify floating-ring movement in both axial
+   directions before tightening any end capture. Measure the entire
+   inner stack and select ground shims for 0.05–0.15 mm shaft end play, with
+   no bearing preload and free floating-side outer-ring movement. If the stack is
+   short, add annular outboard stack shims; if long, add Ø16.8/Ø6.6 shaft-face
+   standoffs under end washers. Target0.10 mm end play; accept0.05..0.15 only
+   after inspection. Maximum stack shims0.75 / face standoffs0.50; exceeding
+   either requires a deviation. Retain at least12 mm end-screw engagement. Approve all
+   thread engagement, tightening and locking before assembly.
+   Install mirrored stop frames, shouldered crossbars, end washers/bolts and
+   recessed pads; record actual pad contact angles and remaining backed travel.
+   Supplier plunger and friction attachments must be independently closed. Torque M6-10.9 hub pinch
    bolts to provisional `12 N·m`; witness-mark after torque.
 4. Set the dry friction stack to a measured breakaway torque of at least `7 N·m`
    over three trials. Lock and witness-mark the adjuster.

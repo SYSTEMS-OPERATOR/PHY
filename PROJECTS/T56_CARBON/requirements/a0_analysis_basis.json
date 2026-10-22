@@ -8,7 +8,7 @@
   "constants": {
     "gravity_m_s2": 9.80665,
     "stop_pad_usable_travel_mm": 4,
-    "pitch_stop_radius_mm": 35,
+    "pitch_stop_radius_mm": 60,
     "pitch_friction_breakaway_min_Nm": 7,
     "degraded_index_interval_deg": 15,
     "service_handle_lever_mm": 55,
@@ -17,7 +17,7 @@
     "root_pair_spacing_mm": 100,
     "bench_fastener_lever_mm": 90,
     "m10_tensile_stress_area_mm2": 58,
-    "stop_attachment_fastener_count": 2,
+    "stop_attachment_fastener_count": 4,
     "stop_attachment_fastener_diameter_mm": 6
   },
   "material_minima": {
@@ -47,18 +47,24 @@
   },
   "section_authority": "a0_shoulder_mechanism.json#fabrication_geometry",
   "bearing_procurement_acceptance": {
-    "type": "6003-2RS",
-    "minimum_static_rating_per_bearing_N": 3000,
-    "minimum_dynamic_rating_per_bearing_N": 5500,
-    "note": "ratings are procurement thresholds, not evidence that an unverified supplier part meets them"
+    "type": "SKF 6203-2RSH",
+    "minimum_static_rating_per_bearing_N": 4750,
+    "minimum_dynamic_rating_per_bearing_N": 9950,
+    "note": "ratings are procurement thresholds, not evidence that an unverified supplier part meets them",
+    "static_safety_factor_required": 2,
+    "static_factor_basis": "Project candidate s0=2 for shock/quiet running, at conditional 3x service energy. SKF rotating ball-bearing shock guidance >=1.5 normal, >=2 high quiet-running; independent review must approve applicability. Distinct from frozen material factors 2/3."
   },
   "method_limits": [
     "closed-form rigid-joint checks do not replace FEA, coupon data, or article test",
     "nominal mass is conservatively represented at half-span and payload at the load station",
     "linear stop force assumes 4 mm usable pad travel and triangular force-displacement response; this assumption is not accepted until a compression curve and first-article stack verify it",
     "bearing load sharing, friction, damping, backlash, acoustic output, temperature and fatigue remain physical measurements",
-    "bearing reactions use a conservative force-plus-couple screen and do not replace supplier life/static calculations",
     "key, pin, plate and fastener checks use nominal load distribution without notch, preload-loss or fatigue credit",
-    "no calculated result is a measured capability"
+    "no calculated result is a measured capability",
+    "R2 explicitly separates Y-axis torque from bearing bending couples. Rigid-body impact inertia is included; rotor mass distribution remains the frozen two-lump approximation.",
+    "Peak impact and 3x directional retention are separate free bodies, not simultaneous invented combinations.",
+    "Integral lug bypasses shaft/key for stop torque. Impact shaft check uses radial midspan bending; keyed index retention is checked separately.",
+    "Static equivalent bearing load max(Fr,0.6Fr+0.5Fa) is a catalog screen; CN clearance, fits, creep, oscillatory wear and life remain unapproved.",
+    "Stop contact is nominally at -32/+92 degrees; 4 mm tangent compression would overrun by about 3.8 degrees. No impact qualification or compliance credit is granted."
   ]
 }

@@ -1,0 +1,68 @@
+{
+  "status": "hypothetical_not_measured",
+  "rows": [
+    {
+      "travel_mm": 1,
+      "area_fraction": 0.5,
+      "force_N": 12000.0,
+      "radial_per_bearing_N": 7766.561514195583,
+      "s0_without_gravity": 0.6115962632006499
+    },
+    {
+      "travel_mm": 1,
+      "area_fraction": 0.75,
+      "force_N": 8000.0,
+      "radial_per_bearing_N": 5177.707676130389,
+      "s0_without_gravity": 0.9173943948009748
+    },
+    {
+      "travel_mm": 1,
+      "area_fraction": 1,
+      "force_N": 6000.0,
+      "radial_per_bearing_N": 3883.2807570977916,
+      "s0_without_gravity": 1.2231925264012997
+    },
+    {
+      "travel_mm": 2,
+      "area_fraction": 0.5,
+      "force_N": 6000.0,
+      "radial_per_bearing_N": 3883.2807570977916,
+      "s0_without_gravity": 1.2231925264012997
+    },
+    {
+      "travel_mm": 2,
+      "area_fraction": 0.75,
+      "force_N": 4000.0,
+      "radial_per_bearing_N": 2588.8538380651944,
+      "s0_without_gravity": 1.8347887896019497
+    },
+    {
+      "travel_mm": 2,
+      "area_fraction": 1,
+      "force_N": 3000.0,
+      "radial_per_bearing_N": 1941.6403785488958,
+      "s0_without_gravity": 2.4463850528025994
+    },
+    {
+      "travel_mm": 4,
+      "area_fraction": 0.5,
+      "force_N": 3000.0,
+      "radial_per_bearing_N": 1941.6403785488958,
+      "s0_without_gravity": 2.4463850528025994
+    },
+    {
+      "travel_mm": 4,
+      "area_fraction": 0.75,
+      "force_N": 2000.0,
+      "radial_per_bearing_N": 1294.4269190325972,
+      "s0_without_gravity": 3.6695775792038994
+    },
+    {
+      "travel_mm": 4,
+      "area_fraction": 1,
+      "force_N": 1500.0,
+      "radial_per_bearing_N": 970.8201892744479,
+      "s0_without_gravity": 4.892770105605199
+    }
+  ]
+}

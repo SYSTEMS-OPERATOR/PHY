@@ -1,25 +1,41 @@
 item_id,qty,description,material_or_standard,size_or_procurement_note
-A0-101,1,fixture base plate,A36 steel plate,"[300, 240, 8]; A0-D001-R1"
-A0-102,2,parallel four-bar rocker,6061-T6 plate,"[70, 25, 6]; 55 centers"
-A0-103,1,moving carriage plate,6061-T6 plate,"[70, 120, 8]"
-A0-104,2,pitch yoke side plate,6061-T6 plate,"[70, 70, 8]; Ø35 H7 seat"
-A0-105,1,split-clamp offset output hub,6061-T6 billet,"[85, 40, 55]; 25.5 socket"
-A0-106,1,keyed index sector,6061-T6 plate,Ø90 x 6; 15 degree index
-A0-107,4,replaceable stop pad,acetal,"[20, 15, 10]"
-A0-108,1,dummy humeral member,6061-T6 square tube,25.4 square x 3.175 wall x 327
-A0-109,2,root pivot standoff,6061-T6 billet,"[25, 25, 32]; axis Z=35"
-A0-110,4,hard-stop bracket,6061-T6 billet,"[28, 20, 8]; final contact blue-check open"
-A0-201,1,pitch shaft,4140 prehard ground bar,Ø17 h6 x 104; 5 x 5 keyway
-A0-202,1,parallel key,"hardened steel, DIN 6885 form A",5 x 5 x 30
-A0-203,2,shaft end retainer,4140 or class 10.9 steel,Ø26 x 4; detail review open
-A0-301,2,deep-groove bearing,6003-2RS,17 x 35 x 10; lot and corner geometry verified before machining
-A0-302,4,pivot shoulder bolt,ISO 898-1 class 10.9,M10 x 1.5; 10 shoulder
-A0-303,4,pivot locknut,all-metal prevailing torque,M10 x 1.5; single-use
-A0-304,2,spring indexing plunger,"steel, pull-ring type",8 pin; body/thread and nose geometry supplier-open
-A0-305,1,carriage clamp screw,ISO 898-1 class 10.9,M8 x 1.25 with captive hand knob
-A0-306,2,hub pinch bolt,ISO 898-1 class 10.9,M6 x 1.0; length after first-article stack
-A0-307,1,secondary retention tether,steel wire rope,6 mm; rated >=1 kN; end fittings supplier-open
-A0-308,4,bench mounting fastener,ISO 898-1 class 10.9,M10 x 1.5; length to reviewed bench
-A0-309,1,passive friction stack,dry friction + Belleville washers,breakaway >=7 N m; material/correlation supplier-open
-A0-310,2,bearing retaining cap,6061-T6,captures protruding 6003 ring; detail review open
-A0-401,1,galvanic isolation kit,PET plus zinc-rich primer,0.5 PET; seal aluminum/steel interfaces
+A0-101,1,fixture base plate,A36,"[300, 240, 8]"
+A0-102,2,four-bar rocker,6061-T6,"[70, 25, 6]; 55 centers"
+A0-103,1,relieved carriage,6061-T6,"[120, 120, 8]; plate center Z=43"
+A0-104,1,handed bearing yoke with integral foot,6061-T6 billet,"one mirrored in Y; [70, 58, 16]; foot [80, 38, 12]; billet covers full drawn envelope; Ø40 pocket/Ø35 ledge"
+A0-105,1,offset split hub with integral stop lug,6061-T6 billet,"body [60, 40, 55]; integral finished X span 108.0 (add shop stock allowance); open mouth X=-40; bottom -12; R60 lug"
+A0-106,1,keyed index sector,6061-T6,Ø90 x 6; Y=56
+A0-107,2,pitch stop pad,acetal candidate ONLY,"[12, 28, 10]; NO verified energy/travel credit"
+A0-108,1,dummy member,6061-T6 tube,25.4 square x 3.175 wall x 327; insertion 28
+A0-109,2,root standoff,6061-T6,"[25, 25, 32]"
+A0-110,2,scapular bracket provisional envelope,6061-T6,"[28, 20, 8]"
+A0-111,2,handed pitch stop carrier frame,6061-T6 billet,"one mirrored in Y; 22 web x 16; integral feet12 require full D009 envelope billet, not plate16"
+A0-112,2,stop crossbar with front flat,4140 prehard,Ø20 x 196; Ø12 journals; 124 shoulder span; M6 ends; flat offset 8
+A0-113,2,legacy scapular pad envelope,acetal candidate,20 x15 x10; existing scapular interface remains blocked
+A0-114,1,floating-side footed yoke,6061-T6 billet,"R2 right yoke; pocket15 ±0.02, inward float1 nominal; unloaded axial ledge1"
+A0-201,1,pitch shaft with local key seats,4140 prehard,Ø17 h6 CANDIDATE x 164; 30/6 key seats; M6x1 ends 16 deep
+A0-202,1,hub key,hardened key steel,5 x 5 x 30; material/fit acceptance open
+A0-203,6,bolted end-capture washer,4140 prehard,Ø21.6 x 3; Ø6.6 clearance
+A0-204,1,sector key,hardened key steel,5 x 5 x 6
+A0-205,2,inner-ring spacer,4140 prehard,Ø21.6/Ø17.1 x 4
+A0-206,1,left outer spacer,4140 prehard,Ø21.6/Ø17.1 x 46
+A0-207,1,right inner spacer,4140 prehard,Ø21.6/Ø17.1 x 27
+A0-208,1,right outer spacer,4140 prehard,Ø21.6/Ø17.1 x 13
+A0-301,2,deep-groove sealed bearing,SKF 6203-2RSH,"[17, 40, 12]; C0=4750 N; C=9950 N; CN/fit approval HOLD"
+A0-302,4,pivot shoulder bolt envelope,class 10.9,M10 x1.5; actual shoulder/head/washer stack HOLD
+A0-303,4,pivot locknut,all-metal prevailing torque,M10 x1.5; supplier-open
+A0-304,2,index plunger envelope,supplier-open,8 pin; support/thread/nose HOLD; no impact-credit
+A0-305,1,carriage clamp,supplier-open,M8x1.25; grounding/attachment HOLD
+A0-306,2,hub pinch screw,"class 10.9, ISO 4762 candidate",M6x1 across Y; 20 mm engagement in far cheek; length/locking reviewed before purchase
+A0-307,1,secondary tether envelope,steel rope,6 mm; rating >=1 kN; route/end fittings HOLD
+A0-308,4,bench screw,class 10.9,M10; reviewed bench/length/locking HOLD
+A0-309,1,passive friction envelope,supplier-open,>=7 N m; grounded reaction/coupling/preload HOLD
+A0-310,1,locating-side C cap,6061-T6,Ø60/Ø35; 4 flange; 1.95 nose; bottom Z=-10
+A0-311,1,floating-side C cap,6061-T6,Ø60/Ø35; 4 flange; 1.25 nose; bottom Z=-10
+A0-312,4,yoke foot screw,"class 10.9, ISO 4762 candidate",M6x1 x20; 8 mm carriage thread; dry torque/locking approval HOLD
+A0-313,6,cap screw,"class 10.9, ISO 4762 candidate",M4x0.7 x10; 6 mm yoke engagement
+A0-314,6,shaft/crossbar end screw,"class 10.9, ISO 4762 candidate",M6x1 x16; 3 mm washer; 13 mm thread engagement; approved locking required
+A0-315,4,stop carrier foot screw,"class 10.9, ISO 4762 candidate",M6x1 x20; 8 mm carriage engagement; inspect underside clearance
+A0-316,4,recessed pad screw,"class 10.9, low-head candidate",M3x0.5 x14; Ø5.7 x1.65 head envelope; delivered head must fit Ø6 x2 recess
+A0-401,1,galvanic isolation kit,PET + primer,0.5 PET; installed datum stack review HOLD
+A0-402,1,selective end-shim kit,ground steel,annular stack shims Ø21.6/Ø17.1 up to0.75; shaft-face standoffs Ø16.8/Ø6.6 up to0.50; select measured0.05..0.15 end play

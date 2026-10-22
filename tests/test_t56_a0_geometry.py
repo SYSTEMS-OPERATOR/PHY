@@ -92,7 +92,7 @@ class T56A0GeometryTest(unittest.TestCase):
         yoke = parts["A0-104_yoke_side"].val().BoundingBox()
         sector = parts["A0-106_index_sector"].val().BoundingBox()
         key = parts["A0-202_key"].val().BoundingBox()
-        self.assertAlmostEqual(yoke.ylen, 8.0)
+        self.assertAlmostEqual(yoke.ylen, 38.0)
         self.assertAlmostEqual(sector.ylen, 6.0)
         self.assertEqual(sorted(round(v, 6) for v in (key.xlen, key.ylen, key.zlen)), [5.0, 5.0, 30.0])
 
@@ -114,14 +114,19 @@ class T56A0GeometryTest(unittest.TestCase):
     def test_located_assembly_has_required_interfaces_and_quantities(self):
         rows = exporter.located_instances(exporter.build_parts())
         ids = [row[0] for row in rows]
-        self.assertEqual(len(ids), 35)
+        self.assertEqual(len(ids), 64)
         self.assertEqual(len(ids), len(set(ids)))
         for required in ("root_standoff_P", "root_standoff_A", "yoke_1", "yoke_2",
                          "bearing_1", "bearing_2", "shaft", "key", "sector",
                          "bearing_cap_1", "bearing_cap_2", "friction_stack",
-                         "retainer_1", "retainer_2", "index_plunger",
-                         "scapular_index_plunger", "secondary_tether"):
+                         "retainer_1", "retainer_2", "end_screw_1",
+                         "pitch_stop_carrier_1", "stop_crossbar_1"):
             self.assertIn(required, ids)
+        self.assertNotIn("index_plunger", ids)
+        self.assertNotIn("secondary_tether", ids)
+        manifest=self.load(PACKET / "manifest.json")
+        self.assertIn("index_plunger", manifest["omitted_provisional_instances"])
+        self.assertIn("secondary_tether", manifest["omitted_provisional_instances"])
 
     def test_sampled_motion_is_explicitly_not_continuous_proof(self):
         report = exporter.motion_report()
@@ -130,13 +135,14 @@ class T56A0GeometryTest(unittest.TestCase):
         self.assertEqual(report["result"], "pass_at_samples_only")
         self.assertFalse(report["continuous_clearance_proof"])
 
-    def test_bom_and_drawings_are_driven_by_r1_authority(self):
+    @unittest.skipUnless(importlib.util.find_spec("cadquery"), "optional CadQuery unavailable")
+    def test_bom_and_drawings_are_driven_by_r2_authority(self):
         design = self.load(DESIGN)
         fab = design["fabrication_geometry"]
         rows = {row[0]: row for row in exporter.bom_rows(design)}
         self.assertIn(str(fab["cartridge"]["shaft_length"]), rows["A0-201"][4])
         self.assertIn(str(fab["dummy_member"]["cut_length"]), rows["A0-108"][4])
-        self.assertEqual(len(exporter.drawings(design)), 6)
+        self.assertEqual(len(exporter.drawings(design)), 14)
         rendered = "\n".join(exporter.drawings(design).values())
         self.assertNotIn("8 mm keyed drive interface", rendered)
         self.assertIn("17 h6", rendered)

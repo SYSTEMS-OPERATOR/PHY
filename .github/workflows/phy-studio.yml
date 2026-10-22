@@ -43,7 +43,7 @@ jobs:
         run: python -m pytest tests/test_studio_references.py -q
       - name: Validate source, geometry and existing canon
         run: |
-          python -m pytest tests/test_studio_evidence.py tests/test_reference_registration.py tests/test_dimension_evidence.py tests/test_craniofacial_audit.py tests/test_facial_source_records.py tests/test_engineering_audit.py tests/test_ear_hyoid_geometry.py tests/test_skull_bone_geometry.py tests/test_fabrication_validation.py tests/test_fabrication_exports.py tests/test_foot_bone_geometry.py tests/test_hand_bone_geometry.py tests/test_bone_equivalence.py tests/test_phy_studio.py tests/test_sophy_geometry_canon.py tests/test_sophy_project_canon_bindings.py tests/test_reference_dimensions.py tests/test_t56_a0_geometry.py -q
+          python -m pytest tests/test_studio_evidence.py tests/test_reference_registration.py tests/test_dimension_evidence.py tests/test_craniofacial_audit.py tests/test_facial_source_records.py tests/test_engineering_audit.py tests/test_ear_hyoid_geometry.py tests/test_skull_bone_geometry.py tests/test_fabrication_validation.py tests/test_fabrication_exports.py tests/test_foot_bone_geometry.py tests/test_hand_bone_geometry.py tests/test_bone_equivalence.py tests/test_phy_studio.py tests/test_sophy_geometry_canon.py tests/test_sophy_project_canon_bindings.py tests/test_reference_dimensions.py tests/test_t56_a0_geometry.py tests/test_t56_a0_interfaces.py tests/test_t56_a0_validation.py -q
       - name: Check deterministic export
         run: |
           python bin/export_phy_studio.py --reference-root .phy-reference --output /tmp/phy-repeat
@@ -57,6 +57,11 @@ jobs:
           cmp PROJECTS/PHY_F28/reports/FOOT_PROXY_LAYOUT.md studio/dist/FOOT_PROXY_LAYOUT.md
           cmp PROJECTS/PHY_F28/reports/SKULL_PROXY_LAYOUT.md studio/dist/SKULL_PROXY_LAYOUT.md
           cmp PROJECTS/PHY_F28/reports/EAR_HYOID_PROXY_LAYOUT.md studio/dist/EAR_HYOID_PROXY_LAYOUT.md
+      - name: Check deterministic A0 cartridge manufacturing export
+        run: |
+          python bin/export_t56_a0_article.py --output /tmp/a0-first
+          python bin/export_t56_a0_article.py --output /tmp/a0-repeat
+          diff -qr /tmp/a0-first /tmp/a0-repeat
       - name: Install test browser
         working-directory: studio
         run: npx playwright install --with-deps chromium

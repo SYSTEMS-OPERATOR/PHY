@@ -27,7 +27,7 @@ python bin/phy_studio.py
 ```
 
 Explore a complete adult female reference armature, measured age-28 means and
-slight form refinements, the SOPHY scale overlay, and the existing A0-R1 shoulder
+slight form refinements, the SOPHY scale overlay, and the current A0-R2 shoulder
 CAD. Orbit, inspect parts, compare poses, measure and export 3D models. The portable
 `studio/PHY-Studio.html` works offline and embeds a 1:4 maquette cut/assembly ZIP.
 See `studio/README.md` and `PROJECTS/PHY_F28/README.md` for construction scope,

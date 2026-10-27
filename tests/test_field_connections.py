@@ -3,6 +3,7 @@ import unittest
 
 from skeleton.base import BoneSpec
 from skeleton.field import SkeletonField
+from skeleton.validation.validator_agent import ValidatorAgent
 
 
 def bone(uid, name, *references):
@@ -95,6 +96,52 @@ class ArticulationSignalTest(unittest.TestCase):
         source = bone("TIBIA_L", "Tibia", "femur")
         SkeletonField([left, right, source])
         self.assertTrue(all(not b.entanglement_links for b in (left, right, source)))
+
+
+class ArticulationInputTest(unittest.TestCase):
+    invalid_targets = (None, False, True, 7, 1.5, [], {}, ["FEMUR_L"], {"id": "FEMUR_L"})
+
+    def test_nontext_targets_do_not_crash_or_prevent_valid_signal_links(self):
+        for reference in self.invalid_targets:
+            with self.subTest(reference=reference):
+                target = bone("FEMUR_L", "Femur")
+                decoy = bone("7", "7")
+                source = bone("TIBIA_L", "Tibia", reference, "FEMUR_L")
+                field = SkeletonField([target, decoy, source])
+                field.build_entanglement()
+                field.propagate(source.domain_id, {"voltage": 4.0})
+
+                self.assertEqual(source.entanglement_links, [target.domain_id])
+                self.assertEqual(target.entanglement_links, [source.domain_id])
+                self.assertEqual(decoy.entanglement_links, [])
+                self.assertEqual((source.voltage_potential, target.voltage_potential,
+                                  decoy.voltage_potential), (0.0, 2.0, 0.0))
+                self.assertEqual(source.articulations, [{"bone": reference}, {"bone": "FEMUR_L"}])
+
+    def test_nontext_targets_do_not_crash_render_connection_lookup(self):
+        for reference in self.invalid_targets:
+            with self.subTest(reference=reference):
+                # Registration alone isolates rendering from automatic wiring.
+                field = SkeletonField()
+                field.register(bone("FEMUR_L", "Femur"))
+                field.register(bone("7", "7"))
+                field.register(bone("TIBIA_L", "Tibia", reference, "FEMUR_L"))
+
+                self.assertEqual(field._connection_pairs(), [("TIBIA_L", "FEMUR_L")])
+
+    def test_invalid_declared_connections_remain_visible_to_validation(self):
+        for reference in (True, 7, ["FEMUR_L"], {"id": "FEMUR_L"}):
+            with self.subTest(reference=reference):
+                target = bone("FEMUR_L", "Femur")
+                source = bone("TIBIA_L", "Tibia", reference, "FEMUR_L")
+                field = SkeletonField([source, target])
+
+                report = ValidatorAgent(field).run()
+
+                self.assertFalse(report["summary"]["pass"])
+                self.assertTrue(report["invalid_parent_child_references"])
+                self.assertIn("invalid_parent_child_references", report["export_readiness"]["issues"])
+                self.assertEqual(source.connections["children"], [reference, "FEMUR_L"])
 
 
 if __name__ == "__main__":

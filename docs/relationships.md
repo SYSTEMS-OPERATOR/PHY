@@ -79,3 +79,8 @@ Its Engineering/component inspectors separate the kinds above. Participant
 navigation selects an existing proxy; it changes no model geometry, scale, pose,
 canon or mechanical limits. Review JSON retains the relationship graph alongside
 the evidence. Display proxies remain unqualified anatomical geometry.
+
+Runtime tooling and the standalone CLI use the standard library. JSON Schema
+regression tests additionally require `jsonschema`, installed by both CI jobs.
+The inspection Markdown shows a bounded diagnostic sample; JSON retains all
+declarations and resolution diagnostics. See [the validation record](../reports/PHY-REL-001_VALIDATION.md).

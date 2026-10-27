@@ -30,13 +30,20 @@ class SkeletonField:
         return self.bones.get(domain_id)
 
     def build_entanglement(self) -> None:
+        """Wire exact bone IDs or unique legacy names without guessing a side."""
+        id_map = {bone.unique_id: bone for bone in self.bones.values()}
         name_map: Dict[str, List[BoneSpec]] = {}
         for bone in self.bones.values():
             name_map.setdefault(bone.name.lower(), []).append(bone)
         for bone in self.bones.values():
             for art in bone.articulations:
-                partner_name = art.get("bone", "").lower()
-                for partner in name_map.get(partner_name, []):
+                reference = art.get("bone", "")
+                partner = id_map.get(reference)
+                if partner is None:
+                    candidates = name_map.get(reference.lower(), [])
+                    if len(candidates) == 1:
+                        partner = candidates[0]
+                if partner is not None:
                     bone.entangle(partner)
 
     def broadcast(self, voltage: float, signal_type: str = "EMG") -> None:

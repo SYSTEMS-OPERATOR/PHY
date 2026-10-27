@@ -9,6 +9,7 @@ from typing import Dict, Any, List
 import json
 
 from skeleton.field import SkeletonField
+from skeleton.relationships import build_relationship_snapshot, relationship_markdown
 from skeleton.validation.validator_agent import ValidatorAgent, describe, nonfinite_paths
 from .identity import ExportIdentity
 from .publication import PublicationError, publish_files
@@ -42,7 +43,7 @@ class ExporterAgent:
 
     def export_all(self, dist_dir: Path = Path("dist"), reports_dir: Path = Path("reports"),
                    exports_dir: Path = Path("exports"), *, mode: str = "review") -> Dict[str, str]:
-        """Publish ten files after validation, conversion and strict serialization.
+        """Publish twelve files after validation, conversion and strict serialization.
 
         Review permits incomplete records and unresolved references. Validated
         requires both record and identity gates. Every mode requires valid,
@@ -118,17 +119,22 @@ class ExporterAgent:
             "reference_audit": Path(reports_dir) / "reference_audit.json",
             "validation_report": Path(reports_dir) / "validation_report.json",
             "export_report": Path(reports_dir) / "export_report.json",
+            "relationships": Path(dist_dir) / "relationship_graph.json",
+            "relationship_report": Path(reports_dir) / "relationship_graph.md",
             "manifest": Path(dist_dir) / "export_manifest.json",
         }
         try:
+            relationships = build_relationship_snapshot(snapshot)
             artifacts = {
                 "canonical_json": exported_records, "tf_tree": self._tf_tree(records, identity),
                 "urdf_like": self._urdf_like(records, identity), "bom": self._bom(records),
                 "material_table": self._material_table(records), "joint_table": self._joint_table(records),
                 "reference_audit": self._reference_audit(records),
                 "validation_report": record_report, "export_report": export_report,
+                "relationships": relationships,
             }
             payloads = {paths[key]: json_bytes(value) for key, value in artifacts.items()}
+            payloads[paths["relationship_report"]] = relationship_markdown(relationships).encode("utf-8")
             datasets = {}
             for bone in snapshot.bones.values():
                 if bone.dataset is not None:
@@ -136,7 +142,8 @@ class ExporterAgent:
                     datasets.setdefault(digest, []).append(bone.unique_id)
             schema_path = Path(__file__).parents[1] / "schema" / "bone.schema.json"
             manifest = {
-                "package_version": "1.0.0", "mode": mode, "record_count": len(records),
+                "package_version": "1.1.0", "mode": mode, "record_count": len(records),
+                "relationship_version": relationships["relationship_version"],
                 "validated_ready": ready, "fabrication_released": False,
                 "validation_scope": export_report["validation_scope"],
                 "source": {

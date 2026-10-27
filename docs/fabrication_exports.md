@@ -110,7 +110,13 @@ with three additions: the canonical validation report, export report and manifes
 | `reports/reference_audit.json` | Missing source references by bone ID |
 | `reports/validation_report.json` | Canonical record gate results |
 | `reports/export_report.json` | Chosen mode, record blockers and identity gate results |
+| `dist/relationship_graph.json` | Typed declarations, curated participation and observed runtime links |
+| `reports/relationship_graph.md` | Concise relationship inspection and unresolved declarations |
 | `dist/export_manifest.json` | Package contract version, readiness and content hashes |
+
+Additive package contract `1.1.0` contains twelve files. The relationship
+artifact has its own `1.0.0` schema and retains partial-snapshot diagnostics;
+existing review/validated gates are unchanged. See [relationships.md](relationships.md).
 
 The manifest's `files` entries use paths relative to the manifest directory and
 SHA-256 hashes of the exact nine artifact byte streams. It excludes itself and

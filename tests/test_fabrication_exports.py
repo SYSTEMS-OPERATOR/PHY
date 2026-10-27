@@ -64,18 +64,23 @@ class ExportContractTest(unittest.TestCase):
             bone.dataset_key = bone.unique_id
         records = [bone.to_fabrication_record() for bone in reversed(bones)]
         paths = export(SkeletonField(bones), self.root, "validated")
-        self.assertEqual(len(paths), 10)
+        self.assertEqual(len(paths), 12)
         manifest = read_json(paths["manifest"])
         self.assertTrue(manifest["validated_ready"])
         self.assertFalse(manifest["fabrication_released"])
         self.assertEqual(manifest["mode"], "validated")
+        self.assertEqual(manifest["package_version"], "1.1.0")
+        self.assertEqual(manifest["relationship_version"], "1.0.0")
         self.assertEqual(manifest["record_count"], 2)
         self.assertEqual(set(manifest["files"]), set(paths) - {"manifest"})
         for key, entry in manifest["files"].items():
             target = Path(paths["manifest"]).parent / entry["path"]
             self.assertEqual(target.resolve(), Path(paths[key]).resolve())
             self.assertEqual(hashlib.sha256(target.read_bytes()).hexdigest(), entry["sha256"])
-            read_json(target)
+            if target.suffix == ".json":
+                read_json(target)
+            else:
+                self.assertIn("PHY relationship inspection", target.read_text())
         source = manifest["source"]
         self.assertEqual(source["source_records_sha256"], hashlib.sha256(json_bytes(records)).hexdigest())
         self.assertEqual(source["schema"]["sha256"],
@@ -351,7 +356,7 @@ class CliContractTest(unittest.TestCase):
                     before = package_bytes(result["paths"])
                     manifest = read_json(result["paths"]["manifest"])
                     self.assertEqual(manifest["mode"], "review")
-                    self.assertEqual(len(manifest["files"]), 9)
+                    self.assertEqual(len(manifest["files"]), 11)
                     self.assertNotIn("export_failure.json", str(manifest["files"]))
                     blocked = subprocess.run(command, cwd=outside, env=env, text=True, capture_output=True, check=False)
                     self.assertEqual(blocked.returncode, 1, blocked.stderr)

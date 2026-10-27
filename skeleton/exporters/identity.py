@@ -1,8 +1,8 @@
 """Resolve exported identities without guessing sides or mechanical topology."""
-from collections import Counter, defaultdict
 from typing import Any, Dict, List
 
 from skeleton.validation.validator_agent import describe
+from skeleton.identity import IdentityResolver, find_parent_cycles
 
 
 class ExportIdentity:
@@ -13,18 +13,10 @@ class ExportIdentity:
             "parent_cycles": [], "ready": False,
             "mechanical_transforms_validated": False,
         }
-        ids = []
-        self.names = defaultdict(list)
-        for record in records:
-            uid = record.get("unique_id")
-            if not isinstance(uid, str) or not uid.strip():
-                self.report["invalid_ids"].append(describe(uid))
-            else:
-                ids.append(uid)
-                if isinstance(record.get("name"), str):
-                    self.names[record["name"]].append(uid)
-        self.report["duplicate_ids"] = sorted(uid for uid, count in Counter(ids).items() if count > 1)
-        self.ids = set(ids)
+        self.resolver = IdentityResolver(records)
+        self.names, self.ids = self.resolver.names, self.resolver.ids
+        self.report["invalid_ids"] = list(self.resolver.invalid_ids)
+        self.report["duplicate_ids"] = list(self.resolver.duplicate_ids)
         self.parents: Dict[str, Any] = {}
         self.parent_references: Dict[str, Any] = {}
         self.adjacency: Dict[str, Any] = {}
@@ -61,43 +53,10 @@ class ExportIdentity:
         return bool(self.report["invalid_ids"] or self.report["duplicate_ids"])
 
     def resolve(self, reference: Any, uid: str, field: str, optional: bool = False) -> Dict[str, Any]:
-        result = {"bone_id": None, "reference": reference, "status": "unresolved"}
-        if optional and reference in (None, ""):
-            result["status"] = "unspecified"
-            return result
-        if not isinstance(reference, str) or not reference.strip():
-            result.update(reference=describe(reference), status="invalid")
-        elif reference in self.ids:
-            result.update(bone_id=reference, status="id")
-            return result
-        else:
-            candidates = sorted(self.names.get(reference, []))
-            if len(candidates) == 1:
-                result.update(bone_id=candidates[0], status="unique_display_name")
-                return result
-            result["status"] = "ambiguous" if candidates else "missing"
-            result["candidates"] = candidates
-        self.report["unresolved_references"].append({**result, "bone_id": uid, "field": field})
+        result = self.resolver.resolve(reference, policy="exact", optional=optional)
+        if result["bone_id"] is None and result["status"] != "unspecified":
+            self.report["unresolved_references"].append({**result, "bone_id": uid, "field": field})
         return result
 
     def _check_cycles(self) -> None:
-        # Follow only the one declared parent per record. Anatomical children
-        # are adjacency references, not additional transform-tree parents.
-        done = set()
-        cycles = set()
-        for start in sorted(self.ids):
-            path = []
-            positions = {}
-            current = start
-            while current is not None and current not in done:
-                if current in positions:
-                    cycle = path[positions[current]:]
-                    offset = cycle.index(min(cycle))
-                    cycle = cycle[offset:] + cycle[:offset]
-                    cycles.add(tuple(cycle + [cycle[0]]))
-                    break
-                positions[current] = len(path)
-                path.append(current)
-                current = self.parents[current]
-            done.update(path)
-        self.report["parent_cycles"] = [list(cycle) for cycle in sorted(cycles)]
+        self.report["parent_cycles"] = find_parent_cycles(self.parents)

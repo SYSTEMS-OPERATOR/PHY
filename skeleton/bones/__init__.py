@@ -27,15 +27,8 @@ def load_bones(dataset_name: str = "female_21_baseline") -> List[BoneSpec]:
         bone.apply_dataset(dataset)
         bones.append(bone)
 
-    # establish entanglements based on articulations
-    name_map = {b.name: b for b in bones}
-    for bone in bones:
-        for art in bone.articulations:
-            other = name_map.get(art.get('bone'))
-            if other and other is not bone:
-                bone.entangle(other)
-
-    return bones
+    # Both loading APIs must use the same identity and ambiguity rules.
+    return list(SkeletonField(bones).bones.values())
 
 
 def load_field(dataset_name: str = "female_21_baseline") -> SkeletonField:

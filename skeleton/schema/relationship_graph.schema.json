@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://systems-operator.local/phy/skeleton/schema/relationship_graph.schema.json",
+  "title": "PHY relationship snapshot 1.0.0",
+  "type": "object",
+  "required": ["relationship_version", "inventory_version", "scope", "inventory", "bones", "supplemental_records", "regions", "sources", "relationships", "counts_by_kind", "diagnostics", "matching_policies", "inputs", "qualification"],
+  "properties": {
+    "relationship_version": {"const": "1.0.0"},
+    "inventory_version": {"const": "PHY_ADULT_206_V1"},
+    "scope": {"const": "declared_anatomy_curated_participation_and_observed_runtime"},
+    "inventory": {
+      "type": "object",
+      "required": ["expected_adult_identities", "loaded_adult_identities", "supplied_record_count", "missing_record_ids", "non_inventory_record_ids", "complete_adult_snapshot"],
+      "properties": {
+        "expected_adult_identities": {"const": 206},
+        "loaded_adult_identities": {"type": "integer", "minimum": 0, "maximum": 206},
+        "supplied_record_count": {"type": "integer", "minimum": 0},
+        "missing_record_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "non_inventory_record_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "complete_adult_snapshot": {"type": "boolean"}
+      }
+    },
+    "bones": {"type": "array", "minItems": 206, "maxItems": 206, "items": {"type": "object", "required": ["bone_id", "record_status"], "properties": {"bone_id": {"type": "string"}, "record_status": {"enum": ["present", "missing_record"]}}}},
+    "supplemental_records": {"type": "array", "items": {"type": "object", "required": ["bone_id", "adult_inventory_member"], "properties": {"adult_inventory_member": {"const": false}}}},
+    "regions": {"type": "array", "minItems": 7, "maxItems": 7, "items": {"type": "object", "required": ["region_id", "name", "entity_kind"], "properties": {"entity_kind": {"const": "region"}}}},
+    "sources": {"type": "array"},
+    "relationships": {"type": "array", "items": {"$ref": "#/$defs/relationship"}},
+    "counts_by_kind": {"type": "object"},
+    "diagnostics": {"type": "object", "required": ["unresolved_references", "parent_cycles", "invalid_runtime_ids", "duplicate_runtime_ids"]},
+    "matching_policies": {"type": "object", "properties": {"runtime_legacy_names": {"const": "case_insensitive"}, "rendering": {"const": "exact"}, "export_parent_and_adjacency": {"const": "exact"}, "observed_signal_links": {"const": "runtime_domain_id_only"}}},
+    "inputs": {"type": "object", "required": ["inventory_sha256", "bone_declarations_sha256", "source_files", "catalog_sha256", "schema"]},
+    "qualification": {"type": "object", "required": ["canon_effect", "mechanical_transforms_validated", "engineering_definitions_qualified", "fabrication_released"], "properties": {"canon_effect": {"const": "none"}, "mechanical_transforms_validated": {"const": false}, "engineering_definitions_qualified": {"const": false}, "fabrication_released": {"const": false}}}
+  },
+  "$defs": {
+    "resolution": {"type": "object", "required": ["bone_id", "reference", "status"], "properties": {"bone_id": {"type": ["string", "null"]}, "status": {"enum": ["id", "unique_display_name", "invalid", "missing", "ambiguous", "unspecified"]}, "candidates": {"type": "array", "items": {"type": "string"}}}},
+    "participant": {"type": "object", "required": ["role", "reference_value", "bone_id", "matching_policy", "resolution"], "properties": {"role": {"type": "string"}, "bone_id": {"type": ["string", "null"]}, "matching_policy": {"enum": ["exact", "runtime_domain_id_only"]}, "resolution": {"$ref": "#/$defs/resolution"}, "runtime_resolution": {"$ref": "#/$defs/resolution"}}},
+    "relationship": {
+      "type": "object",
+      "required": ["relationship_id", "kind", "semantic_role", "participants", "original_declaration", "resolution_status", "provenance", "biological_classification", "qualitative_motion", "engineering_definition"],
+      "properties": {
+        "relationship_id": {"type": "string", "minLength": 1},
+        "kind": {"enum": ["legacy_parent", "legacy_adjacency", "legacy_articulation", "qualitative_articulation", "structural_membership", "operational_signal"]},
+        "semantic_role": {"type": "string", "minLength": 1},
+        "participants": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/participant"}},
+        "resolution_status": {"enum": ["resolved", "invalid", "missing", "ambiguous", "unspecified"]},
+        "provenance": {"type": "object", "required": ["kind", "source_path", "source_file_sha256", "value_sha256", "source_ids"]},
+        "biological_classification": {"type": ["string", "null"]},
+        "qualitative_motion": {"type": "array", "items": {"type": "string"}},
+        "engineering_definition": {"const": null}
+      }
+    }
+  }
+}

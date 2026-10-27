@@ -3,6 +3,7 @@ from __future__ import annotations
 from typing import Dict, List, Optional, Tuple
 
 from .base import BoneSpec
+from .identity import IdentityResolver
 
 
 class SkeletonField:
@@ -32,20 +33,16 @@ class SkeletonField:
     def build_entanglement(self) -> None:
         """Wire exact bone IDs or unique legacy names without guessing a side."""
         id_map = {bone.unique_id: bone for bone in self.bones.values()}
-        name_map: Dict[str, List[BoneSpec]] = {}
-        for bone in self.bones.values():
-            name_map.setdefault(bone.name.lower(), []).append(bone)
+        resolver = IdentityResolver({"unique_id": b.unique_id, "name": b.name}
+                                    for b in self.bones.values())
         for bone in self.bones.values():
             for art in bone.articulations:
                 reference = art.get("bone", "")
                 # Leave malformed source references intact for validation.
                 if not isinstance(reference, str):
                     continue
-                partner = id_map.get(reference)
-                if partner is None:
-                    candidates = name_map.get(reference.lower(), [])
-                    if len(candidates) == 1:
-                        partner = candidates[0]
+                resolved = resolver.resolve(reference, policy="case_insensitive")
+                partner = id_map.get(resolved["bone_id"])
                 if partner is not None:
                     bone.entangle(partner)
 
@@ -117,19 +114,15 @@ class SkeletonField:
         """Resolve rendered articulation targets by ID, then unique exact name."""
         pairs: List[Tuple[str, str]] = []
         id_map = {b.unique_id: b for b in self.bones.values()}
-        name_map: Dict[str, List[BoneSpec]] = {}
-        for bone in self.bones.values():
-            name_map.setdefault(bone.name, []).append(bone)
+        resolver = IdentityResolver({"unique_id": b.unique_id, "name": b.name}
+                                    for b in self.bones.values())
         for bone in self.bones.values():
             for art in bone.articulations:
                 reference = art.get('bone')
                 if not isinstance(reference, str):
                     continue
-                other = id_map.get(reference)
-                if other is None:
-                    matches = name_map.get(reference, [])
-                    if len(matches) == 1:
-                        other = matches[0]
+                resolved = resolver.resolve(reference, policy="exact")
+                other = id_map.get(resolved["bone_id"])
                 if other:
                     pairs.append((bone.unique_id, other.unique_id))
         return pairs

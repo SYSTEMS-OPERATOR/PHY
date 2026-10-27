@@ -38,6 +38,16 @@ class StudioEvidenceTest(unittest.TestCase):
         self.assertEqual(e["canonical_reference"], {
             "version": "1.0.0", "height_mm": 1676.4, "span_mm": 1676.4, "registered": False})
 
+    def test_relationships_are_fresh_independent_evidence_with_actual_content_hash(self):
+        from skeleton.relationships import build_relationship_snapshot
+        from skeleton.exporters.exporter_agent import json_bytes
+        graph = self.evidence["relationships"]
+        self.assertEqual(graph, build_relationship_snapshot(self.field))
+        self.assertEqual(hashlib.sha256(json_bytes(graph)).hexdigest(),
+                         self.evidence["inputs"]["relationship_graph_sha256"])
+        self.assertEqual(graph["counts_by_kind"]["qualitative_articulation"], 2)
+        self.assertEqual(graph["counts_by_kind"]["structural_membership"], 7)
+
     def test_landmarks_and_native_statistics_are_traced_without_mesh_inference(self):
         e = self.evidence
         for bone in e["bones"].values():

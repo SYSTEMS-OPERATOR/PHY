@@ -5,6 +5,7 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { STLExporter } from 'three/addons/exporters/STLExporter.js';
 import { partVisible, partMatches, exportGroup as makeExportGroup } from './part_roles.js';
 import { escape, htmlTable, boneEvidenceHtml, engineeringHtml, nasaHtml, nasaMotionHtml, conditionLabels } from './evidence.js';
+import { relationshipsHtml } from './relationships.js';
 import { isNative, previewBytes, emptyDraft, annotationFromHit, nativeReferenceHtml } from './native_reference.js';
 import { createOriginalReview } from './original_review_ui.js';
 import { canonicalJson } from './original_review.js';
@@ -226,9 +227,21 @@ function inspectPart(id) {
   if(!p){$('part-details').innerHTML='<p class="quiet">Click the model to inspect a part, its dimensions, and its source.</p>';if(renderer)applyTransforms();return;}
   const dims=p.bounds_mm.max.map((v,i)=>(v-p.bounds_mm.min[i])*(model.height_mm?state.height/model.height_mm:1));
   $('part-details').innerHTML='<p><strong>'+escape(p.name)+'</strong><br>'+escape(p.id)+'</p>'+(p.role?'<p>Role: '+escape(p.role)+(p.bone_id?'<br>'+escape(p.bone_id)+' · dimensional fidelity unverified':p.grouped_bone_ids?'<br>'+p.grouped_bone_ids.length+' grouped identities · not individual bones':'')+'</p>':'')+(p.source_record_status?'<p class="quiet">Canonical source record '+escape(p.source_record_status)+'</p>':'')+'<p>'+dims.map(x=>round(x)).join(' × ')+' mm <span class="quiet">/ axis-aligned envelope</span></p><p class="quiet">'+escape(p.authority)+'<br>'+escape(p.source)+'</p>'+(p.center_distance_mm?'<p>Member center distance: '+round(p.center_distance_mm*(model.height_mm?state.height/model.height_mm:1))+' mm</p>':'');
-  if(p.bone_id)$('part-details').innerHTML+=boneEvidenceHtml(data.engineering,p.bone_id);
+  if(p.bone_id)$('part-details').innerHTML+=canonicalDetails(p.bone_id);
   if(isNative(model))$('part-details').innerHTML+='<p class="quiet">Native X/Y/Z display envelope only; not a bone measurement.<br>Original source node '+p.source_node+(model._originalSurface?' · original primitive '+p.primitive_index:' · preview node '+p.preview_node)+' · '+p.triangle_count+' triangles<br>Source '+escape(model.source.sha256)+(model._originalSurface?'':'<br>Preview '+escape(model.derivative.preview_sha256))+'</p>';
   applyTransforms();
+}
+function canonicalDetails(uid) {
+  const available=new Set(model.parts.filter(p=>p.bone_id).map(p=>p.bone_id));
+  return boneEvidenceHtml(data.engineering,uid)+relationshipsHtml(data.engineering.relationships,uid,available);
+}
+function inspectRelatedBone(uid) {
+  const part=model.parts.find(p=>p.bone_id===uid);
+  if(!part){toast('No proxy for this identity in the current model.');return false;}
+  $('part-search').value='';updatePartList();inspectPart(part.id);
+  const selector=$('evidence-bone');
+  if(selector){selector.value=uid;$('evidence-details').innerHTML=canonicalDetails(uid);}
+  return true;
 }
 function pick(event) {
   if(state.loading)return;
@@ -298,7 +311,8 @@ async function exportModel() {
       if(format==='glb')download(await previewBytes(selectedModel),selectedModel.derivative.preview_filename,'model/gltf-binary');
       else download(JSON.stringify({reference_model:{...selectedModel,glb_base64:undefined},
         review_state:{units:'m',frame:selectedModel.frame,display_conversion_mm_per_m:1000,canonical_transform:null,fabrication_released:false,build:data.build},
-        landmark_draft:selectedModel.id==='NIH_PELVIS'?referenceDraft:null,native_reference_evidence:data.native_references},null,2),'PHY-'+selectedModel.id+'-native-review.json','application/json');
+        landmark_draft:selectedModel.id==='NIH_PELVIS'?referenceDraft:null,native_reference_evidence:data.native_references,
+        relationship_graph:data.engineering.relationships},null,2),'PHY-'+selectedModel.id+'-native-review.json','application/json');
       toast('Exported pinned native reference / unaccepted review data.');
     }catch(e){toast('Reference export blocked: '+e.message);}return;
   }
@@ -344,8 +358,8 @@ function openModal(tab) {
     const selector=$('evidence-bone');
     const selected=model.parts.find(p=>p.id===state.selected)?.bone_id;
     if(selected)selector.value=selected;
-    selector.onchange=()=>$('evidence-details').innerHTML=boneEvidenceHtml(data.engineering,selector.value);
-    selector.onchange();
+    selector.onchange=()=>{const uid=selector.value;$('evidence-details').innerHTML=canonicalDetails(uid);const part=model.parts.find(p=>p.bone_id===uid);if(part)inspectPart(part.id);};
+    $('evidence-details').innerHTML=canonicalDetails(selector.value);
   } else if(tab==='nasa'){
     $('modal-title').textContent='NASA positioning and ranges';
     $('modal-content').innerHTML=nasaHtml(data.engineering);
@@ -399,6 +413,10 @@ function wireResources(){
   }
   $('download-maquette').onclick=maquetteDownload;$('open-reference').onclick=()=>openModal('reference');$('open-build').onclick=()=>openModal('build');$('open-readiness').onclick=()=>openModal('readiness');$('open-bones').onclick=()=>openModal('bones');$('close-modal').onclick=closeModal;
   $('open-engineering').onclick=()=>openModal('engineering');
+  for(const container of [$('part-details'),$('modal-content')])container.addEventListener('click',event=>{
+    const button=event.target.closest('button[data-related-bone]');
+    if(button&&!button.disabled)inspectRelatedBone(button.dataset.relatedBone);
+  });
   $('build-stamp').textContent='Engineering baseline '+data.build.engineering_revision.slice(0,8)+' · package '+data.build.package_input_sha256.slice(0,12);
   document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>openModal(b.dataset.tab));$('modal-backdrop').onclick=e=>{if(e.target===$('modal-backdrop'))closeModal();};
   document.addEventListener('keydown',e=>{if(!$('modal-backdrop').classList.contains('open'))return;if(e.key==='Escape')closeModal();if(e.key==='Tab'){const focusable=[...document.querySelector('.modal').querySelectorAll('button,a,input,select,[tabindex="0"]')].filter(x=>!x.disabled);const first=focusable[0],last=focusable.at(-1);if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}}});

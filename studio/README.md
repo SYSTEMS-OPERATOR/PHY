@@ -114,6 +114,27 @@ baseline revision names reviewed engineering data; source/bundle hashes identify
 this viewer build without timestamps or a self-referential Git HEAD. Source links
 open only when selected; evidence inspection needs no network or PDF acquisition.
 
+## Relationship inspection
+
+Select a bone, or open **Engineering** and choose its canonical ID. The
+relationship cards separate legacy anatomical declarations, source-backed
+qualitative articulations, structural region membership and operational signal
+links. Expand a card for participants, matching results, original values and
+source/evidence hashes. Select a participant button to highlight its existing
+proxy in the current model; absent proxies have disabled navigation.
+
+For **BONE_MANDIBLE**, the two TMJs share the same mandible and retain qualitative
+rotation/translation with unresolved engineering definitions. The separate
+legacy `temporal`/`hinge` declaration retains both ambiguity candidates. Region
+membership creates no pairwise contacts. **BONE_HYOID** keeps its unspecified
+parent and gains no joint. Inspection changes no geometry, scale, pose or limits.
+
+The graph is embedded in the portable HTML and engineering evidence/review JSON.
+The package also ships `relationship_graph.json` and `RELATIONSHIPS.md`, with
+actual byte hashes in manifest contract `1.1.0`. The standalone standard-library
+CLI is `python bin/export_relationship_graph.py --output-root /tmp/phy-relationships`.
+See [the versioned relationship contract](../docs/relationships.md).
+
 ## Native NIH comparison and draft landmarks
 
 The checked-in viewer includes the two existing small previews from PHY-REF

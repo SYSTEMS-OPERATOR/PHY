@@ -165,8 +165,12 @@ body and canal measurements do not replace unknown whole-bone dimensions.
 See `PHY-DIM-072.md` and `../reports/dimension_expansion.md` for the evidence
 matrix, rejected measurements and maturity boundaries.
 
-Review explicit anatomical relationship semantics in a small region
-before replacing legacy name references: sutures, bone articulations, cartilage
-and soft-tissue suspension need different declarations. Stable IDs alone do not
-make a correct kinematic hierarchy. New qualification claims need explicit,
-independent contracts and evidence rather than a new completeness percentage.
+PHY-REL-001 adds a read-only typed relationship snapshot, shared identity
+resolution and offline Studio inspection. The seven existing craniofacial
+regions and two qualitative TMJs retain their evidence and null engineering
+definitions beside the original legacy declarations. See [relationships.md](relationships.md).
+
+Further anatomical declarations still need source review: sutures, bone
+articulations, cartilage and soft-tissue suspension have different semantics.
+Stable IDs and a relationship graph do not qualify a kinematic hierarchy.
+Engineering definitions and release require independent contracts and evidence.

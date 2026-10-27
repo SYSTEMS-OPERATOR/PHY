@@ -8,7 +8,8 @@ Pick a door. Nulls travel first class here.
 | Door | What happens inside |
 | --- | --- |
 | [__init__.py](__init__.py) | Public imports: `ExporterAgent`, `ExportError` and `CanonicalGeometryExporter`. |
-| [exporter_agent.py](exporter_agent.py) | Builds the ten-file bone-record package: canonical records, TF/URDF-like inventories, BOM, tables, audits and manifest. |
+| [exporter_agent.py](exporter_agent.py) | Builds the twelve-file bone-record package, including typed relationships and their inspection report. |
+| [relationship_exporter.py](relationship_exporter.py) | Publishes a standalone relationship graph/report with a hash manifest. |
 | [identity.py](identity.py) | Checks the guest list: exact bone IDs first, unique exact display names second; reports ambiguous references and parent cycles. |
 | [publication.py](publication.py) | Stages record-package files, publishes the manifest last and attempts rollback after ordinary I/O failures. |
 | [cli.py](cli.py) | Shared entrypoint behind [export_fabrication.py](../../bin/export_fabrication.py) and [assemble_skeleton.py](../../assemble_skeleton.py). |

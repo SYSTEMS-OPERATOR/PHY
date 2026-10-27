@@ -32,7 +32,7 @@ jobs:
     - name: Hardware benches
       run: |
         PYTHONPATH=. python bin/rt_monitor.py || true
-        PYTHONPATH=. python bin/generate_tcf.py
+        PYTHONPATH=. python bin/generate_tcf.py --smoke
     - name: Build Yocto image
       run: deploy/yocto_builder.sh yocto_artifact
     - name: QEMU RT kernel smoke

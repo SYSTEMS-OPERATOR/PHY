@@ -103,11 +103,20 @@ class SkeletonField:
         return nodes
 
     def _connection_pairs(self) -> List[Tuple[str, str]]:
+        """Resolve rendered articulation targets by ID, then unique exact name."""
         pairs: List[Tuple[str, str]] = []
-        name_map = {b.name: b for b in self.bones.values()}
+        id_map = {b.unique_id: b for b in self.bones.values()}
+        name_map: Dict[str, List[BoneSpec]] = {}
+        for bone in self.bones.values():
+            name_map.setdefault(bone.name, []).append(bone)
         for bone in self.bones.values():
             for art in bone.articulations:
-                other = name_map.get(art.get('bone'))
+                reference = art.get('bone')
+                other = id_map.get(reference)
+                if other is None:
+                    matches = name_map.get(reference, [])
+                    if len(matches) == 1:
+                        other = matches[0]
                 if other:
                     pairs.append((bone.unique_id, other.unique_id))
         return pairs

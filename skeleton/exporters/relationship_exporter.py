@@ -1,11 +1,12 @@
 """Deterministic relationship inspection packages, published manifest last."""
 from pathlib import Path
 
-from skeleton.relationships import RELATIONSHIP_VERSION, encode, relationship_markdown, sha256
+from skeleton.relationships import RELATIONSHIP_VERSION, encode, relationship_markdown, sha256, validate_relationship_snapshot
 from .publication import publish_files
 
 
 def export_relationship_snapshot(graph, output_root):
+    validate_relationship_snapshot(graph)
     root = Path(output_root)
     paths = {"graph": root / "relationship_graph.json", "report": root / "RELATIONSHIPS.md",
              "manifest": root / "relationship_manifest.json"}

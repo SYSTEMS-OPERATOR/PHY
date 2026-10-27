@@ -57,7 +57,8 @@ export function engineeringHtml(evidence,build) {
     '<details><summary>Package provenance</summary><p>Engineering baseline: '+link('https://github.com/SYSTEMS-OPERATOR/PHY/commit/'+evidence.engineering_revision,evidence.engineering_revision)+' · '+escape(evidence.engineering_revision_time)+'</p>'+htmlTable(['INPUT','SHA-256'],[
       ['Evidence inputs',evidence.input_sha256],['Package inputs',build.package_input_sha256],
       ['Canonical records',evidence.inputs.canonical_records_sha256],['NASA catalog',evidence.inputs.nasa_catalog_sha256],
-      ['SOPHY canon',evidence.inputs.canon_sha256]
+      ['SOPHY canon',evidence.inputs.canon_sha256],
+      ['Relationship graph',evidence.inputs.relationship_graph_sha256]
     ])+'<p>The revision names the reviewed engineering baseline. Content hashes identify the evidence and viewer shipped in this offline package.</p></details>';
 }
 

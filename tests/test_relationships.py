@@ -14,9 +14,10 @@ from skeleton.base import BoneSpec
 from skeleton.bones import load_field
 from skeleton.field import SkeletonField
 from skeleton.identity import IdentityResolver
-from skeleton.relationships import build_relationship_snapshot, encode, json_safe, relationships_for_bone
+from skeleton.relationships import build_relationship_snapshot, encode, json_safe, relationships_for_bone, relationship_markdown
 from skeleton.relationship_catalog import load_catalog
 from skeleton.exporters.relationship_exporter import export_relationship_snapshot
+from skeleton.exporters.identity import ExportIdentity
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -28,6 +29,16 @@ def fixture(uid, name=None, references=(), **kw):
 
 
 class IdentityResolverTest(unittest.TestCase):
+    def test_consumers_preserve_their_distinct_matching_policies(self):
+        source, target = fixture("A", references=("pelvis",)), fixture("P", name="Pelvis")
+        field = SkeletonField([source, target])
+        self.assertEqual(source.entanglement_links, ["P"])
+        self.assertEqual(field._connection_pairs(), [])
+        identity = ExportIdentity([{"unique_id": "A", "name": "A", "connections": {"parent": "pelvis"}},
+                                   {"unique_id": "P", "name": "Pelvis", "connections": {}}])
+        self.assertIsNone(identity.parents["A"])
+        self.assertEqual(identity.parent_references["A"]["status"], "missing")
+
     def test_id_precedence_ambiguity_policies_and_order(self):
         rows = [{"unique_id": "Femur", "name": "Selected"}, {"unique_id": "L", "name": "Femur"},
                 {"unique_id": "R", "name": "Femur"}, {"unique_id": "P", "name": "Pelvis"}]
@@ -50,6 +61,13 @@ class IdentityResolverTest(unittest.TestCase):
         self.assertEqual(resolver.duplicate_ids, ["A"])
         self.assertEqual(resolver.invalid_ids, ["None"])
         self.assertIsNone(resolver.resolve("A", policy="exact")["bone_id"])
+
+    def test_optional_malformed_reference_does_not_invoke_its_equality_operator(self):
+        class InvalidReference:
+            def __eq__(self, other):
+                raise ValueError("not a text reference")
+        resolver = IdentityResolver([{"unique_id": "A", "name": "A"}])
+        self.assertEqual(resolver.resolve(InvalidReference(), policy="exact", optional=True)["status"], "invalid")
 
 
 class RelationshipSnapshotTest(unittest.TestCase):
@@ -89,6 +107,14 @@ class RelationshipSnapshotTest(unittest.TestCase):
         self.assertEqual(target["runtime_resolution"]["status"], "ambiguous")
         self.assertEqual(target["runtime_resolution"]["candidates"], ["BONE_TEMP_L", "BONE_TEMP_R"])
         self.assertIn(legacy, relationships_for_bone(self.graph, "BONE_TEMP_R"))
+
+    def test_markdown_summary_is_bounded_without_dropping_json_diagnostics(self):
+        before = encode(self.graph)
+        report = relationship_markdown(self.graph)
+        self.assertLess(len(report.splitlines()), 100)
+        self.assertIn("BONE_MANDIBLE:articulations[0]", report)
+        self.assertIn(f"of {len(self.graph['diagnostics']['unresolved_references'])} unresolved", report)
+        self.assertEqual(encode(self.graph), before)
 
     def test_partial_snapshots_do_not_create_records_contacts_or_runtime_links(self):
         graph = build_relationship_snapshot(SkeletonField([fixture("BONE_MANDIBLE")]))
@@ -152,6 +178,18 @@ class RelationshipSnapshotTest(unittest.TestCase):
         field.propagate("runtime-a", {"voltage": 4})
         self.assertEqual((a.voltage_potential, b.voltage_potential), (0, 2))
 
+    def test_runtime_links_follow_actual_registration_and_diagnose_stale_domain_labels(self):
+        a, b = fixture("A", domain_id="runtime-a"), fixture("B", domain_id="runtime-b")
+        field = SkeletonField([a, b])
+        a.entangle(b)
+        b.domain_id = "stale-label"
+        graph = build_relationship_snapshot(field)
+        link = next(r for r in graph["relationships"] if r["relationship_id"].startswith("REL:A:entanglement_links"))
+        self.assertEqual(link["participants"][1]["bone_id"], "B")
+        self.assertEqual(graph["diagnostics"]["runtime_binding_issues"], [{
+            "bone_id": "B", "registered_domain_id": "runtime-b", "declared_domain_id": "stale-label"}])
+        self.assertEqual(b.domain_id, "stale-label")
+
     def test_bad_record_ids_are_refused_and_fresh_inputs_change_fingerprints(self):
         field = SkeletonField([fixture("A"), fixture("B")])
         field.bones["B"].unique_id = "A"
@@ -173,6 +211,26 @@ class RelationshipSnapshotTest(unittest.TestCase):
 
 
 class RelationshipPublicationTest(unittest.TestCase):
+    def test_modified_qualification_or_unfingerprinted_values_cannot_replace_package(self):
+        graph = build_relationship_snapshot(SkeletonField([fixture("A")]))
+        with tempfile.TemporaryDirectory() as directory:
+            paths = export_relationship_snapshot(graph, directory)
+            before = {key: Path(path).read_bytes() for key, path in paths.items()}
+            for change in ("qualification", "engineering", "hash", "inventory"):
+                with self.subTest(change=change):
+                    changed = deepcopy(graph)
+                    if change == "qualification":
+                        changed["qualification"]["fabrication_released"] = True
+                    elif change == "engineering":
+                        changed["relationships"][0]["engineering_definition"] = {"axis": "invented"}
+                    elif change == "inventory":
+                        changed["inventory"]["loaded_adult_identities"] = 206
+                    else:
+                        changed["relationships"][0]["original_declaration"] = "changed without a hash"
+                    with self.assertRaises(ValueError):
+                        export_relationship_snapshot(changed, directory)
+                    self.assertEqual(before, {key: Path(path).read_bytes() for key, path in paths.items()})
+
     def test_repeat_exports_manifest_and_rollback(self):
         graph = build_relationship_snapshot(SkeletonField([fixture("A")]))
         with tempfile.TemporaryDirectory() as directory:
@@ -193,8 +251,7 @@ class RelationshipPublicationTest(unittest.TestCase):
                     raise OSError("injected relationship manifest failure")
                 return real_replace(source, target)
 
-            changed = deepcopy(graph)
-            changed["scope"] += "_test"
+            changed = build_relationship_snapshot(SkeletonField([fixture("A", references=("MISSING",))]))
             with patch("skeleton.exporters.publication.os.replace", side_effect=fail_manifest):
                 with self.assertRaises(OSError):
                     export_relationship_snapshot(changed, root / "one")
@@ -204,7 +261,7 @@ class RelationshipPublicationTest(unittest.TestCase):
     def test_cli_runs_outside_checkout_and_failure_preserves_package(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
-            command = [sys.executable, str(ROOT / "bin/export_relationship_graph.py"), "--output-root", str(root / "out")]
+            command = [sys.executable, "-S", str(ROOT / "bin/export_relationship_graph.py"), "--output-root", str(root / "out")]
             run = subprocess.run(command, cwd=root, text=True, capture_output=True, timeout=30)
             self.assertEqual(run.returncode, 0, run.stderr)
             paths = json.loads(run.stdout)["paths"]

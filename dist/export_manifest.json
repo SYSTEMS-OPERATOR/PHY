@@ -25,6 +25,14 @@
       "path": "../reports/reference_audit.json",
       "sha256": "ba08558bd2e2e55ad021e0921ddb99ffc4f328df56b0acd8ce158987c534ab98"
     },
+    "relationship_report": {
+      "path": "../reports/relationship_graph.md",
+      "sha256": "58ed020c3b55e3250be4a525ef6d93e7fc090205ff51631efe61ef559c6d2027"
+    },
+    "relationships": {
+      "path": "relationship_graph.json",
+      "sha256": "18cba5b821285bcdab92c843905468b60cf03dc87cbca29018cfbaa12d660c13"
+    },
     "tf_tree": {
       "path": "ros_tf_tree.json",
       "sha256": "42dbd9179d7d4091fa93e164531db3fc5b9ab120f9aadcc764ab8dc8fd8d7d9e"
@@ -39,8 +47,9 @@
     }
   },
   "mode": "review",
-  "package_version": "1.0.0",
+  "package_version": "1.1.0",
   "record_count": 206,
+  "relationship_version": "1.0.0",
   "source": {
     "datasets": [
       {

@@ -80,8 +80,9 @@ def build_relationship_snapshot(field, *, root=ROOT, catalog=None):
             "invalid_ids": resolver.invalid_ids, "duplicate_ids": resolver.duplicate_ids}, sort_keys=True))
     supplied.sort(key=lambda bone: bone.unique_id)
     by_id = {b.unique_id: b for b in supplied}
-    runtime = IdentityResolver({"unique_id": b.domain_id, "name": b.name} for b in supplied)
-    domains = {b.domain_id: b.unique_id for b in supplied if isinstance(b.domain_id, str)}
+    registrations = {b.unique_id: key for key, b in field.bones.items()}
+    runtime = IdentityResolver({"unique_id": key, "name": b.name} for key, b in field.bones.items())
+    domains = {key: b.unique_id for key, b in field.bones.items() if isinstance(key, str)}
     inventory = expected_bones()
     expected = {row["bone_id"] for row in inventory}
     repository_catalog = catalog is None
@@ -93,6 +94,7 @@ def build_relationship_snapshot(field, *, root=ROOT, catalog=None):
     sources = {uid: {"path": path, "sha256": sha256((root / path).read_bytes())}
                for uid, path in sorted(paths.items()) if uid in by_id}
     raw = [{"bone_id": b.unique_id, "name": json_safe(b.name), "domain_id": json_safe(b.domain_id),
+            "registered_domain_id": json_safe(registrations[b.unique_id]),
             **{key: json_safe(getattr(b, key)) for key in (
                 "connections", "articulations", "entanglement_links", "source_ids", "references")}}
            for b in supplied]
@@ -139,6 +141,8 @@ def build_relationship_snapshot(field, *, root=ROOT, catalog=None):
             if invalid:
                 participants[1].update(bone_id=None)
                 participants[1]["resolution"].update(bone_id=None, status="invalid")
+                if "runtime_resolution" in participants[1]:
+                    participants[1]["runtime_resolution"].update(bone_id=None, status="invalid")
             add(f"REL:{uid}:{path}", kind, role, original, participants, provenance(path, original))
             return participants[1]["bone_id"]
 
@@ -185,7 +189,7 @@ def build_relationship_snapshot(field, *, root=ROOT, catalog=None):
             target = {"role": "runtime_peer", "reference_value": json_safe(link),
                       "bone_id": result["bone_id"], "matching_policy": "runtime_domain_id_only",
                       "resolution": json_safe(result)}
-            path = f"entanglement_links[{index}]"
+            path = "entanglement_links" if invalid_links else f"entanglement_links[{index}]"
             add(f"REL:{uid}:{path}", "operational_signal", "observed_runtime_signal_link", link,
                 [owner, target], provenance(path, link), direction="declaring_bone_to_runtime_peer")
 
@@ -235,7 +239,11 @@ def build_relationship_snapshot(field, *, root=ROOT, catalog=None):
         "sources": catalog["sources"], "relationships": relations,
         "counts_by_kind": {kind: Counter(r["kind"] for r in relations)[kind] for kind in RELATIONSHIP_KINDS},
         "diagnostics": {"unresolved_references": unresolved, "parent_cycles": find_parent_cycles(parents),
-                        "invalid_runtime_ids": runtime.invalid_ids, "duplicate_runtime_ids": runtime.duplicate_ids},
+                        "invalid_runtime_ids": runtime.invalid_ids, "duplicate_runtime_ids": runtime.duplicate_ids,
+                        "runtime_binding_issues": [{"bone_id": b.unique_id,
+                            "registered_domain_id": json_safe(registrations[b.unique_id]),
+                            "declared_domain_id": json_safe(b.domain_id)} for b in supplied
+                            if registrations[b.unique_id] != b.domain_id]},
         "matching_policies": {"runtime_legacy_names": "case_insensitive", "rendering": "exact",
                               "export_parent_and_adjacency": "exact", "observed_signal_links": "runtime_domain_id_only"},
         "inputs": {"inventory_sha256": sha256(encode(inventory)),
@@ -246,8 +254,52 @@ def build_relationship_snapshot(field, *, root=ROOT, catalog=None):
         "qualification": {"canon_effect": "none", "mechanical_transforms_validated": False,
                           "engineering_definitions_qualified": False, "fabrication_released": False},
     }
-    encode(graph)
+    validate_relationship_snapshot(graph)
     return graph
+
+
+def validate_relationship_snapshot(graph):
+    """Enforce publication boundaries without a third-party schema dependency.
+
+    The JSON Schema supplies the complete interchange shape; these independent
+    checks also enforce inventory identity, unique declarations and value hashes.
+    """
+    if graph.get("relationship_version") != RELATIONSHIP_VERSION or graph.get("inventory_version") != INVENTORY_VERSION:
+        raise ValueError("Unsupported relationship contract version")
+    if graph.get("scope") != "declared_anatomy_curated_participation_and_observed_runtime":
+        raise ValueError("Unsupported relationship scope")
+    if graph.get("qualification") != {"canon_effect": "none", "mechanical_transforms_validated": False,
+                                      "engineering_definitions_qualified": False, "fabrication_released": False}:
+        raise ValueError("Relationships cannot qualify engineering or fabrication")
+    expected = {r["bone_id"] for r in expected_bones()}
+    bones = graph["bones"]
+    if len(bones) != 206 or {b["bone_id"] for b in bones} != expected:
+        raise ValueError("Relationship adult inventory must contain exactly the 206 identity slots")
+    present = {b["bone_id"] for b in bones if b["record_status"] == "present"}
+    extra = {b["bone_id"] for b in graph["supplemental_records"]}
+    inventory = graph["inventory"]
+    if (inventory["expected_adult_identities"] != 206 or inventory["loaded_adult_identities"] != len(present)
+            or set(inventory["missing_record_ids"]) != expected - present
+            or set(inventory["non_inventory_record_ids"]) != extra or extra & expected
+            or inventory["supplied_record_count"] != len(present) + len(extra)
+            or inventory["complete_adult_snapshot"] != (present == expected and not extra)):
+        raise ValueError("Inconsistent relationship inventory coverage")
+    seen, counts = set(), Counter()
+    for row in graph["relationships"]:
+        rid = row["relationship_id"]
+        if rid in seen or row["kind"] not in RELATIONSHIP_KINDS:
+            raise ValueError("Invalid or duplicate relationship identity/kind")
+        seen.add(rid)
+        counts[row["kind"]] += 1
+        if row["engineering_definition"] is not None:
+            raise ValueError("Engineering definitions remain null in relationship contract 1.0.0")
+        if row["provenance"]["value_sha256"] != sha256(encode(row["original_declaration"])):
+            raise ValueError("Relationship original value differs from its provenance hash")
+        if any(p["bone_id"] is not None and p["bone_id"] not in present | extra for p in row["participants"]):
+            raise ValueError("A relationship cannot resolve to a missing record")
+    if graph["counts_by_kind"] != {kind: counts[kind] for kind in RELATIONSHIP_KINDS}:
+        raise ValueError("Relationship counts differ from declarations")
+    encode(graph)
 
 
 def relationships_for_bone(graph, bone_id):
@@ -276,10 +328,14 @@ def relationship_markdown(graph):
     lines += ["", "## Unresolved declarations and compatibility projections", "",
               "Exact export/render matching and case-insensitive legacy runtime matching remain distinct.", "",
               "| Declaration | Projection | Reference | Status | Candidates |", "| --- | --- | --- | --- | --- |"]
-    for row in graph["diagnostics"]["unresolved_references"]:
+    unresolved = graph["diagnostics"]["unresolved_references"]
+    # Keep the initial TMJ review visible; complete diagnostics stay in JSON.
+    ordered = sorted(unresolved, key=lambda row: not row["relationship_id"].startswith("REL:BONE_MANDIBLE:"))
+    for row in ordered[:30]:
         lines.append("| " + " | ".join(cell(row.get(key, "")) for key in
                      ("relationship_id", "projection", "reference", "status", "candidates")) + " |")
-    lines += ["", "Parent cycles (declared parent projection only): `" + json.dumps(graph["diagnostics"]["parent_cycles"]) + "`.",
+    lines += ["", f"Showing {min(30, len(unresolved))} of {len(unresolved)} unresolved resolution diagnostics; all remain in JSON.",
+              "", "Parent cycles (declared parent projection only): `" + json.dumps(graph["diagnostics"]["parent_cycles"]) + "`.",
               "", "Complete original values, source locators, content hashes and null definitions are retained in relationship_graph.json.",
               "Source-file correspondence alone does not prove that a supplied snapshot was loaded from that file.", ""]
     return "\n".join(lines)

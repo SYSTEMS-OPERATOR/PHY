@@ -25,6 +25,7 @@ from skeleton.visualization.studio_model import build_armature, reference_statis
 from skeleton.visualization.bone_equivalence import report_markdown
 from skeleton.visualization.studio_evidence import build_studio_evidence, studio_build_stamp
 from skeleton.visualization.studio_references import load_native_references
+from skeleton.relationships import encode, relationship_markdown
 
 
 def write_package_zip(output):
@@ -275,6 +276,8 @@ def export(output, include_a0=True, reference_root=None):
         for path, raw in previews.items():
             (output / Path(path).name).write_bytes(raw)
     (output / "ENGINEERING_EVIDENCE.json").write_text(json.dumps(evidence, indent=2, sort_keys=True, allow_nan=False)+"\n")
+    (output / "relationship_graph.json").write_bytes(encode(evidence["relationships"]))
+    (output / "RELATIONSHIPS.md").write_text(relationship_markdown(evidence["relationships"]), encoding="utf-8")
     (output / "NASA_POSITIONING_RANGES.json").write_text(json.dumps(evidence["nasa"], indent=2, sort_keys=True, allow_nan=False)+"\n")
     audit = refined["bone_equivalence"]
     (output / "BONE_EQUIVALENCE.json").write_text(json.dumps(audit, indent=2)+"\n")
@@ -388,7 +391,7 @@ def export(output, include_a0=True, reference_root=None):
         write_stl([p for p in model["parts"] if p["region"] != "envelope"], stl)
         assets.extend([path, stl])
     maquette_manifest = maquette(refined, output / "maquette")
-    data = {"version": "1.0.0", "models": models, "reference": reference,
+    data = {"version": "1.1.0", "models": models, "reference": reference,
             "engineering": evidence, "build": build, "native_references": native_evidence,
             "maquette": maquette_manifest,
             "maquette_files": {str(p.relative_to(output / "maquette")): p.read_text(encoding="utf-8")
@@ -437,7 +440,9 @@ def export(output, include_a0=True, reference_root=None):
                "## Sources", "", reference["data_url"], reference["report_url"],
                "Pinned source CSV SHA-256: `"+reference["provenance"]["source_catalog"]+"` (catalog); projected subset hash in references/provenance.json."]
     (output / "REFERENCE.md").write_text("\n".join(report)+"\n")
-    manifest = {"version": "1.0.0", "reference_sha256": reference["snapshot_sha256"],
+    manifest = {"version": "1.1.0", "reference_sha256": reference["snapshot_sha256"],
+                "relationship_version": evidence["relationships"]["relationship_version"],
+                "relationship_graph_sha256": evidence["inputs"]["relationship_graph_sha256"],
                 "build": build,
                 "models": [{"id": m["id"], "parts": len(m["parts"]), "triangles": sum(p.get("triangle_count", len(p.get("faces", []))) for p in m["parts"]), "fabrication_released": m["fabrication_released"]} for m in models],
                 "maquette_cut_parts": maquette_manifest["cut_parts"],

@@ -19,6 +19,7 @@ from skeleton.validation.dimension_evidence import (
     CATALOG_PATH, _pinned_file, expansion_report, load_evidence, read_json,
 )
 from skeleton.validation.engineering_audit import engineering_audit
+from skeleton.relationships import build_relationship_snapshot
 
 ROOT = Path(__file__).resolve().parents[2]
 BASELINE_PATH = Path("studio/evidence_baseline.json")
@@ -139,6 +140,7 @@ def build_studio_evidence(parts, *, root=ROOT, field=None):
             or canon.standing_height_mm != catalog["canonical_reference"]["height_mm"]
             or canon.arm_span_mm != catalog["canonical_reference"]["span_mm"]):
         raise ValueError("Studio canon comparison differs from the current kernel")
+    relationships = build_relationship_snapshot(field, root=root)
     inputs = {
         **observed,
         "inventory_sha256": engineering["inputs"]["inventory_sha256"],
@@ -148,6 +150,7 @@ def build_studio_evidence(parts, *, root=ROOT, field=None):
         "source_snapshots": {sid: s["native_snapshot"] for sid, s in catalog["sources"].items()},
         "nasa_catalog_sha256": baseline["nasa_catalog"]["sha256"],
         "canon_sha256": sha256(json_bytes(canon_data)),
+        "relationship_graph_sha256": sha256(json_bytes(relationships)),
     }
     evidence = {
         "version": "PHY_STUDIO_EVIDENCE_V1", "engineering_revision": baseline["engineering_revision"],
@@ -157,6 +160,7 @@ def build_studio_evidence(parts, *, root=ROOT, field=None):
         "metrics": engineering["metrics"], "qualification": engineering["qualification"],
         "dimension_expansion": {k: v for k, v in expansion.items() if k not in ("rows", "inputs_sha256", "source_facts")},
         "bones": bones, "sources": catalog["sources"], "nasa": nasa,
+        "relationships": relationships,
         "nasa_counts": {"conditions": {c: sum(r["condition"] == c for r in nasa["ranges"]) for c in CONDITIONS},
                         "source_issues": sum(r["source_issue"] is not None for r in nasa["ranges"]),
                         "anthropometry": len(nasa["anthropometry"])},
@@ -172,7 +176,9 @@ def studio_build_stamp(evidence, root=ROOT, native_references=None):
              "studio/src/app.js", "studio/src/evidence.js", "studio/src/index.html", "studio/src/part_roles.js",
              "studio/app.bundle.js", "studio/build.mjs", "studio/package-lock.json",
              "skeleton/visualization/studio_references.py", "studio/reference_lock.json", "studio/src/native_reference.js",
-             "studio/src/original_review.js", "studio/src/original_review_ui.js")
+             "studio/src/original_review.js", "studio/src/original_review_ui.js",
+             "studio/src/relationships.js", "skeleton/identity.py", "skeleton/relationships.py",
+             "skeleton/relationship_catalog.py", "skeleton/schema/relationship_graph.schema.json")
     inputs = {path: sha256((Path(root) / path).read_bytes()) for path in paths}
     inputs["engineering_evidence"] = sha256(json_bytes(evidence))
     inputs["native_reference_evidence"] = sha256(json_bytes(native_references))

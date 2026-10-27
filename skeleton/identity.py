@@ -47,7 +47,7 @@ class IdentityResolver:
         if policy not in MATCHING_POLICIES:
             raise ValueError("Unsupported identity matching policy: " + str(policy))
         result = {"bone_id": None, "reference": reference, "status": "unresolved"}
-        if optional and (reference is None or reference == ""):
+        if optional and (reference is None or (isinstance(reference, str) and reference == "")):
             return {**result, "status": "unspecified"}
         if not isinstance(reference, str) or not reference.strip():
             return {**result, "reference": describe_reference(reference), "status": "invalid"}

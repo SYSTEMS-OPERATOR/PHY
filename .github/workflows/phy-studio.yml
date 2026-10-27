@@ -27,7 +27,7 @@ jobs:
           cache: npm
           cache-dependency-path: studio/package-lock.json
       - name: Install geometry and test tools
-        run: python -m pip install pytest cadquery==2.7.0
+        run: python -m pip install pytest jsonschema cadquery==2.7.0
       - name: Install viewer tools
         run: npm ci --prefix studio
       - name: Build and check viewer
@@ -43,6 +43,7 @@ jobs:
         run: python -m pytest tests/test_studio_references.py -q
       - name: Validate source, geometry and existing canon
         run: |
+          python -m pytest tests/test_relationships.py tests/test_relationship_schema.py tests/test_bone_loading_connections.py tests/test_field_connections.py tests/test_signal_propagation.py -q
           python -m pytest tests/test_studio_evidence.py tests/test_reference_registration.py tests/test_dimension_evidence.py tests/test_craniofacial_audit.py tests/test_facial_source_records.py tests/test_engineering_audit.py tests/test_ear_hyoid_geometry.py tests/test_skull_bone_geometry.py tests/test_fabrication_validation.py tests/test_fabrication_exports.py tests/test_foot_bone_geometry.py tests/test_hand_bone_geometry.py tests/test_bone_equivalence.py tests/test_phy_studio.py tests/test_sophy_geometry_canon.py tests/test_sophy_project_canon_bindings.py tests/test_reference_dimensions.py tests/test_t56_a0_geometry.py tests/test_t56_a0_interfaces.py tests/test_t56_a0_validation.py -q
       - name: Check deterministic export
         run: |
@@ -81,4 +82,5 @@ jobs:
           path: |
             studio/dist/PHY-Studio-package.zip
             /tmp/phy-studio-qa/
+            /tmp/phy-relationships-qa/
             /tmp/phy-original-review-qa/

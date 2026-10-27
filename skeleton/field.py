@@ -47,6 +47,7 @@ class SkeletonField:
         return {d: b.voltage_potential for d, b in self.bones.items()}
 
     def propagate(self, from_domain: str, signal: Dict[str, float]) -> None:
+        """Deliver once per reachable peer without echoing back to the origin."""
         origin = self.bones.get(from_domain)
         if not origin:
             return
@@ -58,7 +59,7 @@ class SkeletonField:
             visited.add(b.domain_id)
             for link_id in b.entanglement_links:
                 other = self.bones.get(link_id)
-                if other is None:
+                if other is None or other.domain_id in visited:
                     continue
                 other.receive_signal_packet(signal, b.domain_id)
                 _prop(other)

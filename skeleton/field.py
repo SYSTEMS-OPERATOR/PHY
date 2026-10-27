@@ -38,6 +38,9 @@ class SkeletonField:
         for bone in self.bones.values():
             for art in bone.articulations:
                 reference = art.get("bone", "")
+                # Leave malformed source references intact for validation.
+                if not isinstance(reference, str):
+                    continue
                 partner = id_map.get(reference)
                 if partner is None:
                     candidates = name_map.get(reference.lower(), [])
@@ -120,6 +123,8 @@ class SkeletonField:
         for bone in self.bones.values():
             for art in bone.articulations:
                 reference = art.get('bone')
+                if not isinstance(reference, str):
+                    continue
                 other = id_map.get(reference)
                 if other is None:
                     matches = name_map.get(reference, [])

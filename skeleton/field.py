@@ -36,7 +36,12 @@ class SkeletonField:
         resolver = IdentityResolver({"unique_id": b.unique_id, "name": b.name}
                                     for b in self.bones.values())
         for bone in self.bones.values():
+            # Preserve malformed declarations for relationship diagnostics.
+            if not isinstance(bone.articulations, list):
+                continue
             for art in bone.articulations:
+                if not isinstance(art, dict):
+                    continue
                 reference = art.get("bone", "")
                 # Leave malformed source references intact for validation.
                 if not isinstance(reference, str):
@@ -117,7 +122,11 @@ class SkeletonField:
         resolver = IdentityResolver({"unique_id": b.unique_id, "name": b.name}
                                     for b in self.bones.values())
         for bone in self.bones.values():
+            if not isinstance(bone.articulations, list):
+                continue
             for art in bone.articulations:
+                if not isinstance(art, dict):
+                    continue
                 reference = art.get('bone')
                 if not isinstance(reference, str):
                     continue

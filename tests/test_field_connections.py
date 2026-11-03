@@ -3,6 +3,7 @@ import unittest
 
 from skeleton.base import BoneSpec
 from skeleton.field import SkeletonField
+from skeleton.relationships import build_relationship_snapshot, encode
 from skeleton.validation.validator_agent import ValidatorAgent
 
 
@@ -142,6 +143,78 @@ class ArticulationInputTest(unittest.TestCase):
                 self.assertTrue(report["invalid_parent_child_references"])
                 self.assertIn("invalid_parent_child_references", report["export_readiness"]["issues"])
                 self.assertEqual(source.connections["children"], [reference, "FEMUR_L"])
+
+
+class ArticulationShapeTest(unittest.TestCase):
+    invalid_entries = (None, False, 7, 1.5, "DECOY", [], ["DECOY"])
+    invalid_containers = (None, False, 7, 1.5, "DECOY", {"bone": "DECOY"},
+                          ({"bone": "DECOY"},))
+
+    @staticmethod
+    def source(articulations):
+        # Explicit canonical connections allow the original malformed legacy
+        # declaration to reach field consumers without deriving adjacency.
+        return BoneSpec(
+            unique_id="SOURCE", name="Source", bone_type="long", location={"region": "test"},
+            articulations=articulations, connections={"parent": None, "children": []},
+            dimensions={}, function=[], notable_features=[],
+            developmental_notes="synthetic articulation-shape fixture", variations="",
+        )
+
+    def test_invalid_entries_do_not_block_neighboring_signal_delivery_or_diagnostics(self):
+        for entry in self.invalid_entries:
+            with self.subTest(entry=entry):
+                original = [entry, {"bone": "TARGET"}]
+                source, target, decoy = self.source(original), bone("TARGET", "Target"), bone("DECOY", "Decoy")
+                field = SkeletonField([source, target, decoy])
+                field.build_entanglement()
+                field.propagate("SOURCE", {"voltage": 4.0})
+                self.assertEqual(source.entanglement_links, ["TARGET"])
+                self.assertEqual(target.entanglement_links, ["SOURCE"])
+                self.assertEqual(decoy.entanglement_links, [])
+                self.assertEqual(field.summary(), {"SOURCE": 0.0, "TARGET": 2.0, "DECOY": 0.0})
+                self.assertIs(source.articulations, original)
+                self.assertEqual(original, [entry, {"bone": "TARGET"}])
+
+                graph = build_relationship_snapshot(field)
+                row = next(r for r in graph["relationships"]
+                           if r["relationship_id"] == "REL:SOURCE:articulations[0]")
+                self.assertEqual(row["resolution_status"], "invalid")
+                self.assertEqual(row["original_declaration"], entry)
+                self.assertIsNone(row["participants"][1]["bone_id"])
+                self.assertIsNone(row["participants"][1]["runtime_resolution"]["bone_id"])
+                self.assertEqual(encode(graph), encode(build_relationship_snapshot(field)))
+
+    def test_invalid_entries_do_not_crash_rendering_or_become_edges(self):
+        for entry in self.invalid_entries:
+            with self.subTest(entry=entry):
+                source = self.source([entry, {"bone": "TARGET"}])
+                # Isolate rendering from automatic wiring to detect either
+                # consumer regressing independently.
+                field = SkeletonField()
+                for item in (source, bone("TARGET", "Target"), bone("DECOY", "Decoy")):
+                    field.register(item)
+                self.assertEqual(field._connection_pairs(), [("SOURCE", "TARGET")])
+                self.assertEqual(source.entanglement_links, [])
+
+    def test_invalid_containers_are_diagnosed_without_interpreting_their_contents(self):
+        for container in self.invalid_containers:
+            with self.subTest(container=container):
+                source = self.source(container)
+                neighbor = bone("NEIGHBOR", "Neighbor", "TARGET")
+                field = SkeletonField([source, neighbor, bone("TARGET", "Target"), bone("DECOY", "Decoy")])
+                field.propagate("NEIGHBOR", {"voltage": 4.0})
+                self.assertEqual(field.summary(), {"SOURCE": 0.0, "NEIGHBOR": 0.0, "TARGET": 2.0, "DECOY": 0.0})
+                self.assertEqual(source.entanglement_links, [])
+                self.assertEqual(field._connection_pairs(), [("NEIGHBOR", "TARGET")])
+                self.assertIs(source.articulations, container)
+                graph = build_relationship_snapshot(field)
+                row = next(r for r in graph["relationships"]
+                           if r["relationship_id"] == "REL:SOURCE:articulations")
+                self.assertEqual(row["resolution_status"], "invalid")
+                self.assertIsNone(row["participants"][1]["bone_id"])
+                self.assertEqual(row["original_declaration"], container if not isinstance(container, tuple)
+                                 else {"invalid_type": "builtins.tuple"})
 
 
 if __name__ == "__main__":

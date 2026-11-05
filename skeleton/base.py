@@ -111,9 +111,13 @@ class BoneSpec:
         if not self.region:
             self.region = self.location.get("region", "unspecified")
         if not self.connections:
+            # Derive adjacency only from valid shapes; retain raw declarations
+            # for the relationship snapshot's invalid-input diagnostics.
+            articulations = self.articulations if isinstance(self.articulations, list) else []
             self.connections = {
                 "parent": self.location.get("proximal_connection"),
-                "children": [a.get("bone") for a in self.articulations if a.get("bone")],
+                "children": [a.get("bone") for a in articulations
+                             if isinstance(a, dict) and a.get("bone")],
             }
         if not self.source_ids:
             self.source_ids = [self.unique_id]

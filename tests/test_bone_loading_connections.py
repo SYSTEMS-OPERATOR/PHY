@@ -6,10 +6,12 @@ from unittest.mock import patch
 import warnings
 
 from skeleton.bones import load_bones, load_field
+from skeleton.field import SkeletonField
+from skeleton.relationships import build_relationship_snapshot
 
 
 class BoneLoadingConnectionTest(unittest.TestCase):
-    def load_fixture(self, definitions, loader):
+    def load_fixture(self, definitions, loader, *, overrides=None):
         """Execute temporary bone modules through the production discovery path."""
         with tempfile.TemporaryDirectory() as directory:
             files = []
@@ -20,6 +22,7 @@ class BoneLoadingConnectionTest(unittest.TestCase):
                     dimensions={}, function=[], notable_features=[],
                     developmental_notes="synthetic loading fixture", variations="",
                 )
+                values.update((overrides or {}).get(uid, {}))
                 path = Path(directory) / f"bone_{index:02d}.py"
                 path.write_text("from skeleton.base import BoneSpec\n"
                                 f"bone = BoneSpec(**{values!r})\n", encoding="utf-8")
@@ -80,6 +83,40 @@ class BoneLoadingConnectionTest(unittest.TestCase):
                     self.assertEqual(bones["SOURCE"].entanglement_links, ["TARGET"])
                     self.assertEqual(bones["SOURCE"].articulations,
                                      [{"bone": invalid}, {"bone": "TARGET"}])
+
+    def test_malformed_shapes_survive_loading_and_connection_derivation(self):
+        definitions = [("SOURCE", "Source", ()), ("TARGET", "Target", ()),
+                       ("DECOY", "Decoy", ())]
+        shapes = (None, [None, {"bone": "TARGET"}], ({"bone": "DECOY"},))
+        canonical = {"parent": "DECOY", "children": ["DECOY"]}
+        for loader in (load_bones, load_field):
+            for shape in shapes:
+                for supplied in ({}, {"connections": {}}, {"connections": canonical}):
+                    with self.subTest(loader=loader.__name__, shape=shape, supplied=supplied):
+                        bones = self.load_fixture(definitions, loader, overrides={
+                            "SOURCE": {"articulations": shape, **supplied}})
+                        source = bones["SOURCE"]
+                        targets = ["TARGET"] if isinstance(shape, list) else []
+                        self.assertEqual(source.entanglement_links, targets)
+                        self.assertEqual(bones["TARGET"].entanglement_links, ["SOURCE"] if targets else [])
+                        self.assertEqual(bones["DECOY"].entanglement_links, [])
+                        self.assertEqual(source.articulations, shape)
+                        self.assertEqual(source.connections, canonical if supplied.get("connections") else
+                                         {"parent": None, "children": targets})
+
+                        # Register without rewiring: inspect what the loader returned.
+                        field = SkeletonField()
+                        for bone in bones.values():
+                            field.register(bone)
+                        graph = build_relationship_snapshot(field)
+                        path = "articulations[0]" if isinstance(shape, list) else "articulations"
+                        row = next(r for r in graph["relationships"]
+                                   if r["relationship_id"] == f"REL:SOURCE:{path}")
+                        self.assertEqual(row["resolution_status"], "invalid")
+                        self.assertIsNone(row["participants"][1]["bone_id"])
+                        self.assertEqual(row["original_declaration"],
+                                         None if shape is None or isinstance(shape, list) else
+                                         {"invalid_type": "builtins.tuple"})
 
 
 if __name__ == "__main__":

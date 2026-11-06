@@ -1,10 +1,12 @@
 """Rendering and signal links must preserve identity without guessing a side."""
 import unittest
+from unittest.mock import patch
 
 from skeleton.base import BoneSpec
 from skeleton.field import SkeletonField
 from skeleton.relationships import build_relationship_snapshot, encode
 from skeleton.validation.validator_agent import ValidatorAgent
+from skeleton.visualization.visualizer2d import SkeletonVisualizer2D
 
 
 def bone(uid, name, *references):
@@ -215,6 +217,24 @@ class ArticulationShapeTest(unittest.TestCase):
                 self.assertIsNone(row["participants"][1]["bone_id"])
                 self.assertEqual(row["original_declaration"], container if not isinstance(container, tuple)
                                  else {"invalid_type": "builtins.tuple"})
+
+    def test_hierarchy_renderer_uses_guarded_canonical_edges(self):
+        for shape in (None, [None, {"bone": "TARGET"}], ({"bone": "DECOY"},)):
+            with self.subTest(shape=shape):
+                source, target = self.source(shape), bone("TARGET", "Target")
+                target.domain_id = "runtime-target"
+                field = SkeletonField()
+                for item in (source, target, bone("DECOY", "Decoy")):
+                    field.register(item)
+                nodes = [object()]
+                visualizer = SkeletonVisualizer2D()
+                with patch.object(field, "to_render_nodes", return_value=nodes), \
+                        patch.object(visualizer, "render_graph") as render:
+                    visualizer.render_hierarchy(field, layout="review-layout")
+                edges = [("SOURCE", "TARGET")] if isinstance(shape, list) else []
+                render.assert_called_once_with(nodes, edges, layout="review-layout")
+                self.assertIs(source.articulations, shape)
+                self.assertEqual(source.entanglement_links, [])
 
 
 if __name__ == "__main__":

@@ -35,10 +35,4 @@ class SkeletonVisualizer2D:
 
     def render_hierarchy(self, field, **kwargs) -> None:
         nodes = field.to_render_nodes()
-        edges = []
-        for bone in field.bones.values():
-            for art in bone.articulations:
-                partner = field.get(art.get("bone"))
-                if partner:
-                    edges.append((bone.unique_id, partner.unique_id))
-        self.render_graph(nodes, edges, **kwargs)
+        self.render_graph(nodes, field._connection_pairs(), **kwargs)

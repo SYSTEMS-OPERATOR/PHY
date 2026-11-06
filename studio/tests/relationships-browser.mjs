@@ -4,6 +4,7 @@ import os from 'node:os';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { createHash } from 'node:crypto';
+import { execFileSync } from 'node:child_process';
 import { chromium } from 'playwright';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
@@ -81,8 +82,62 @@ try {
   assert.deepEqual(review.engineering_evidence.relationships,graph);
   assert.equal(review.engineering_evidence.inputs.relationship_graph_sha256,digest);
   assert.equal(review.review_state.fabrication_released,false);
+
+  // Exercise malformed Python declarations through evidence, packaging, UI and export.
+  const fixtureRoot=await fs.mkdtemp(path.join(output,'malformed-'));
+  execFileSync(process.env.PHY_PYTHON_EXECUTABLE||'python3',
+    [path.join(root,'studio/tests/malformed-relationships.py'),fixtureRoot],{cwd:root,timeout:60000});
+  const fixtureBytes=await fs.readFile(path.join(fixtureRoot,'relationship_graph.json'));
+  const fixtureGraph=JSON.parse(fixtureBytes);
+  const fixtureDigest=createHash('sha256').update(fixtureBytes).digest('hex');
+  const fixtureManifest=JSON.parse(await fs.readFile(path.join(fixtureRoot,'manifest.json'),'utf8'));
+  assert.equal(fixtureManifest.files['relationship_graph.json'],fixtureDigest);
+  assert.equal(fixtureManifest.relationship_graph_sha256,fixtureDigest);
+  for(const name of ['f28_mean.json','f28_refined.json','sophy_scale.json'])
+    assert.equal(fixtureManifest.files[name],manifest.files[name],'malformed declarations cannot change body geometry');
+  await page.goto(pathToFileURL(path.join(fixtureRoot,'PHY-Studio.html')).href);
+  await page.waitForFunction(()=>window.PHY_STUDIO?.getState().webgl);
+  assert.deepEqual(await page.evaluate(()=>PHY_DATA.engineering.relationships),fixtureGraph);
+  const fixtureGeometryBefore=await geometryHash();
+  await page.click('#open-engineering');
+  for(const [uid,rid,original] of [
+    ['BONE_HYOID','REL:BONE_HYOID:articulations[0]',null],
+    ['BONE_INCUS_L','REL:BONE_INCUS_L:articulations',{invalid_type:'builtins.tuple'}]
+  ]){
+    const row=fixtureGraph.relationships.find(r=>r.relationship_id===rid);
+    assert.equal(row.resolution_status,'invalid');
+    assert.equal(row.participants[1].bone_id,null);
+    assert.deepEqual(row.original_declaration,original);
+    await page.selectOption('#evidence-bone',uid);
+    const card=details.locator('[data-relationship-id="'+rid+'"]');
+    assert.match(await card.locator('summary').first().innerText(),/invalid/);
+    await card.locator('summary').first().click();
+    assert.match(await card.innerText(),/unresolved target/);
+    assert.equal(await card.locator('[data-related-bone]').count(),1,'invalid target has no navigation button');
+    await card.locator('.relationship-original summary').click();
+    assert.deepEqual(JSON.parse(await card.locator('.relationship-original pre').innerText()),original);
+  }
+  const valid=fixtureGraph.relationships.find(r=>r.relationship_id==='REL:BONE_HYOID:articulations[1]');
+  assert.equal(valid.participants[1].bone_id,'BONE_MALLEUS_R');
+  assert.equal(fixtureGraph.relationships.filter(r=>r.kind==='operational_signal'&&
+    r.participants[0].bone_id==='BONE_INCUS_L').length,0,'tuple contents must never become runtime links');
+  await page.screenshot({path:path.join(output,'malformed-relationships.png'),fullPage:true});
+  assert.equal(await geometryHash(),fixtureGeometryBefore);
+  assert.deepEqual(await page.evaluate(()=>PHY_DATA.engineering.relationships),fixtureGraph,'inspection is read-only');
+  await page.keyboard.press('Escape');
+  await page.selectOption('#export-format','json');
+  const fixtureDownloadPromise=page.waitForEvent('download');
+  await page.click('#export');
+  const fixtureDownload=await fixtureDownloadPromise;
+  const fixtureReviewPath=path.join(output,'malformed-relationship-review.json');
+  await fixtureDownload.saveAs(fixtureReviewPath);
+  const fixtureReview=JSON.parse(await fs.readFile(fixtureReviewPath,'utf8'));
+  assert.deepEqual(fixtureReview.engineering_evidence.relationships,fixtureGraph);
+  assert.equal(fixtureReview.engineering_evidence.inputs.relationship_graph_sha256,fixtureDigest);
+  assert.equal(fixtureReview.review_state.fabrication_released,false);
   assert.deepEqual(errors,[]);assert.deepEqual(requests,[],'relationship inspection must stay offline');
   await fs.writeFile(path.join(output,'verification.json'),JSON.stringify({passed:true,relationship_sha256:digest,
-    adult_identities:206,tmjs:2,regions:7,geometry_unchanged:true,network_requests:requests,browser_errors:errors},null,2)+'\n');
-  console.log('Offline relationship inspection, shared mandible, participant selection, unchanged geometry and review export pass.');
+    malformed_relationship_sha256:fixtureDigest,malformed_shapes:2,adult_identities:206,tmjs:2,regions:7,
+    geometry_unchanged:true,network_requests:requests,browser_errors:errors},null,2)+'\n');
+  console.log('Offline relationship inspection, malformed declarations, unchanged geometry and review export pass.');
 }finally{await browser.close();}

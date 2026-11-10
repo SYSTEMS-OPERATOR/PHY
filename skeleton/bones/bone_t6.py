@@ -17,7 +17,7 @@ bone = BoneSpec(
         'width_mm': None,
     },
     function = ['rib articulation'],
-    notable_features = [],
+    notable_features = ['Costal body demifacets and transverse costal facets for rib articulation.', 'Pedicles and laminae form the neural arch around the vertebral foramen.', 'Posterior spinous process; its size and inclination vary with level.'],
     developmental_notes = 'vertebral arch fusion in adolescence',
     variations = '',
     unique_id = 'BONE_T6',
@@ -25,7 +25,7 @@ bone = BoneSpec(
     embodiment = "virtual",
     geometry = {},
     physics = {"mass_kg": None},
-    references = ['https://www.asianspinejournal.org/upload/pdf/asj-5-20.pdf', 'references/dim072/catalog.json#/candidates/11'],
+    references = ['https://www.asianspinejournal.org/upload/pdf/asj-5-20.pdf', 'references/dim072/catalog.json#/candidates/11', 'https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column', 'https://www.ncbi.nlm.nih.gov/books/NBK459153/'],
     metric_sources = {
         'body_mid_width_mm': 'references/dim072/catalog.json#/candidates/11/fields/body_mid_width_mm',
         'body_lower_width_mm': 'references/dim072/catalog.json#/candidates/11/fields/body_lower_width_mm',

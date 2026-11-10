@@ -7,11 +7,11 @@
     },
     "canonical_json": {
       "path": "skeleton_canonical.json",
-      "sha256": "e5396190c3690f453415457dc62c6e97445cbf5fc734df65619ec120f8ed307c"
+      "sha256": "e499621168790f43231736096d0c4f0e65b86e70f441065a90934377211fb961"
     },
     "export_report": {
       "path": "../reports/export_report.json",
-      "sha256": "b25ffb63ce3c90d3b0e54610324b152716c368fb2cf127e47e7bf8aa10b7c8e1"
+      "sha256": "05e706c2fd9a64f94dee4d3518ced9b089e8b279f57ef4557d946a58fc0490ba"
     },
     "joint_table": {
       "path": "../exports/joint_table.json",
@@ -23,19 +23,19 @@
     },
     "reference_audit": {
       "path": "../reports/reference_audit.json",
-      "sha256": "ba08558bd2e2e55ad021e0921ddb99ffc4f328df56b0acd8ce158987c534ab98"
+      "sha256": "6abd821025a1b0d0b4a574ef62f730a30def9fc6ec4a03b10a529f19081f0d31"
     },
     "relationship_report": {
       "path": "../reports/relationship_graph.md",
-      "sha256": "58ed020c3b55e3250be4a525ef6d93e7fc090205ff51631efe61ef559c6d2027"
+      "sha256": "e9cc6804b995ce965666bf432ff49384c24b7506f30823399ec0a675d5bfbe67"
     },
     "relationships": {
       "path": "relationship_graph.json",
-      "sha256": "18cba5b821285bcdab92c843905468b60cf03dc87cbca29018cfbaa12d660c13"
+      "sha256": "b1c245a81f8ee2c5d792a3fd9fe769bcb117b975c6de3f2b4e09062cea9f0525"
     },
     "tf_tree": {
       "path": "ros_tf_tree.json",
-      "sha256": "42dbd9179d7d4091fa93e164531db3fc5b9ab120f9aadcc764ab8dc8fd8d7d9e"
+      "sha256": "501af3265db2e881472ba1efdb2b55a9be1f0c670d58d6de0c4d7cf1e267ab24"
     },
     "urdf_like": {
       "path": "skeleton_urdf_like.json",
@@ -43,7 +43,7 @@
     },
     "validation_report": {
       "path": "../reports/validation_report.json",
-      "sha256": "d227ab7413bc9ca2a60e3b9ecf4c4f88f52498e3c2c91f1f053341d10b280350"
+      "sha256": "b1fbce7f9086ffe37019403d72a9fc6713c88e4e7ddd6222c290b736ab8a6297"
     }
   },
   "mode": "review",
@@ -477,7 +477,7 @@
       "path": "skeleton/schema/bone.schema.json",
       "sha256": "96421caf1d462912ec9f64986d63b455f8275e5bfb074ce3cb59c226f77ea59b"
     },
-    "source_records_sha256": "c97f35a96885bd6b83bd183f2dfdc1eb223faa2668b5a89ce9ec95af71b59c3e"
+    "source_records_sha256": "db8f2f89ae4527a173f545fdebea6beb1709ab7782b0ad83ae1e7e19a662427c"
   },
   "validated_ready": false,
   "validation_scope": "canonical_records_and_export_identity"

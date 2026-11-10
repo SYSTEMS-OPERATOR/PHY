@@ -1,0 +1,101 @@
+{
+  "schema_version": "PHY_SPINE_SOURCE_REVIEW_V1",
+  "reviewed_on": "2026-11-09",
+  "baseline_commit": "fa02634120438687d67c6d156aa0aec1adf41aa1",
+  "scope": "published_table_transcription_and_qualitative_feature_review_only",
+  "numerical_reviews": [
+    {
+      "source_id": "cervical_ct_2021",
+      "native_snapshot": {
+        "path": "references/dim072/cervical_ct_2021.json",
+        "sha256": "d7b02de31e4c96f0f7195f39525ce85b7c76ae5ce6e537f129a180fe29c2a6f4"
+      },
+      "source_response": {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8354927/fullTextXML",
+        "sha256": "3b11e067797298507b3885f8b13ee0bb006739f8f18012c9a971b1f34782a149",
+        "content_type": "application/xml",
+        "bytes": 137201
+      },
+      "table": "Table 2, Female training set; Table 1 observer error retained in source",
+      "rows_checked": 20,
+      "admitted_rows": 19,
+      "quarantined_parameters": [
+        "C2HT"
+      ],
+      "statistics_checked": [
+        "mean",
+        "sd",
+        "minimum",
+        "maximum"
+      ],
+      "comparison": "exact numerical match",
+      "method": "XML female training columns",
+      "publisher_pdf": null
+    },
+    {
+      "source_id": "lumbar_ct_2022",
+      "native_snapshot": {
+        "path": "references/dim072/lumbar_ct_2022.json",
+        "sha256": "1d4658332c81ec2c8242dbf9526b220f26d06c3915154a205c91233dffa3dbe3"
+      },
+      "source_response": {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8917002/fullTextXML",
+        "sha256": "d2cab89a91cda90d3d63d2b1a5bdf3c9db36a39cf9feb4c0ffa7c0727979d920",
+        "content_type": "application/xml",
+        "bytes": 163844
+      },
+      "table": "Table 1, female group; L1-L5 U and L rows",
+      "rows_checked": 25,
+      "admitted_rows": 25,
+      "quarantined_parameters": [],
+      "statistics_checked": [
+        "mean",
+        "sd"
+      ],
+      "comparison": "exact numerical match",
+      "method": "XML Table 1 female U/L body rows, excluding disc rows",
+      "publisher_pdf": null
+    },
+    {
+      "source_id": "thoracic_caliper_2011",
+      "native_snapshot": {
+        "path": "references/dim072/thoracic_caliper_2011.json",
+        "sha256": "21ea5530a035524ea2fd8b41a274f954fcf751ec0b88e5b44d4c72d672fd8d89"
+      },
+      "source_response": {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3047895/fullTextXML",
+        "sha256": "ba723e19cdbbd05e3b1e9a6e67ea59908c0a49146f8b19cf94fe0113fbb3a7b7",
+        "content_type": "application/xml",
+        "bytes": 76087
+      },
+      "table": "Table 3, female columns; PDF page 7 / printed 26",
+      "rows_checked": 60,
+      "admitted_rows": 58,
+      "quarantined_parameters": [
+        "T11_VBHp",
+        "T6_VBWs"
+      ],
+      "statistics_checked": [
+        "mean",
+        "sd"
+      ],
+      "comparison": "exact numerical match",
+      "method": "Publisher PDF page 7 / printed page 26, female columns; pdftotext -layout plus rendered visual review",
+      "publisher_pdf": {
+        "url": "https://www.asianspinejournal.org/upload/pdf/asj-5-20.pdf",
+        "sha256": "a0acf52435e429df5ca92d250463f38c97c3708406e854296dd8620c5280cc5e",
+        "bytes": 768144
+      }
+    }
+  ],
+  "numerical_mismatches": [],
+  "notes": [
+    "105 native rows checked; 102 remain admitted and three remain quarantined. No numerical bone value is changed.",
+    "Cervical Results identify 106 male and 104 female developmental subjects. The same paragraph ambiguously calls the 40 male / 44 female remainder training; Table 2 training and validation columns remain separate.",
+    "C2HT, T6_VBWs and T11_VBHp remain quarantined, including their printed numerical values.",
+    "Sacrum 100 x 110 x 10 mm in female_21_baseline is legacy dataset input without admitted osteometric provenance; this review does not verify it.",
+    "No feature sizes, facet coordinates, joint centers, donor registration, mechanical clearance or physical evidence are supplied."
+  ],
+  "geometry_qualified": false,
+  "fabrication_released": false
+}

@@ -761,10 +761,6 @@
   "invalid_field_types": [],
   "invalid_parent_child_references": [
     {
-      "bone": "BONE_C1",
-      "parent": "'skull'"
-    },
-    {
       "bone": "BONE_CALCANEUS_L",
       "parent": "'tibia/fibula'"
     },
@@ -787,10 +783,6 @@
     {
       "bone": "BONE_CLAVICLE_R",
       "parent": "'sternum'"
-    },
-    {
-      "bone": "BONE_COCCYX",
-      "parent": "'sacrum'"
     },
     {
       "bone": "BONE_CUBOID_L",
@@ -5103,7 +5095,6 @@
     "BONE_CAPITATE_R",
     "BONE_CLAVICLE_L",
     "BONE_CLAVICLE_R",
-    "BONE_COCCYX",
     "BONE_CUBOID_L",
     "BONE_CUBOID_R",
     "BONE_ETHMOID",
@@ -5211,7 +5202,6 @@
     "BONE_RIB8_R",
     "BONE_RIB9_L",
     "BONE_RIB9_R",
-    "BONE_SACRUM",
     "BONE_SCAPHOID_L",
     "BONE_SCAPHOID_R",
     "BONE_SCAPULA_L",
@@ -5452,10 +5442,6 @@
     },
     {
       "bone": "BONE_COCCYX",
-      "field": "references"
-    },
-    {
-      "bone": "BONE_COCCYX",
       "field": "mount_points"
     },
     {
@@ -7761,10 +7747,6 @@
     {
       "bone": "BONE_SACRUM",
       "field": "manufacturing_notes"
-    },
-    {
-      "bone": "BONE_SACRUM",
-      "field": "references"
     },
     {
       "bone": "BONE_SACRUM",

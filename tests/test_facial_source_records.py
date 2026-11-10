@@ -73,16 +73,22 @@ class FacialSourceRecordTest(unittest.TestCase):
             self.assertEqual(source_record_paths()[row["bone_id"]], row["source_record"])
             self.assertEqual(self.records[row["bone_id"]]["name"], row["name"])
 
-    def test_established_193_source_files_and_records_match_current_evidence_checkpoint(self):
+    def test_established_167_nonspinal_source_files_and_records_match_current_evidence_checkpoint(self):
         # These identities predate the facial continuation. PHY-DIM-072 supplies
         # reviewed dimensions for 32 of them; its separate baseline test retains
         # every original complete map and rejects unsupported dimensional changes.
-        old = [self.records[uid] for uid in sorted(set(self.records) - FACIAL_IDS)]
-        self.assertEqual(len(old), 193)
-        self.assertEqual(sha256(json_bytes(old)), "c299bf5569e2515f9b51a74040469390a17d5adbc31609b4e441f294dbcab2a5")
+        # The spine review adds cited qualitative features and repairs two parent
+        # declarations. test_spine_audit separately locks all 26 spine identities,
+        # admitted spans, unknowns and feature contracts. The other 167 records
+        # and source files retain their exact pre-review content.
+        spine_ids = {row["bone_id"] for row in expected_bones() if row["region"] == "spine"}
+        unchanged = set(self.records) - FACIAL_IDS - spine_ids
+        old = [self.records[uid] for uid in sorted(unchanged)]
+        self.assertEqual(len(old), 167)
+        self.assertEqual(sha256(json_bytes(old)), "3c3057c4f3d0c97707bc6f736810c42ea769530445e5434e652c20404bd92efa")
         paths = source_record_paths()
-        old_files = {paths[uid]: sha256((ROOT / paths[uid]).read_bytes()) for uid in sorted(set(paths) - FACIAL_IDS)}
-        self.assertEqual(sha256(json_bytes(old_files)), "4beb969bf6527d2b0b755a3036e543e681cd57269ec39b6f4d0f4d60b8e65d6e")
+        old_files = {paths[uid]: sha256((ROOT / paths[uid]).read_bytes()) for uid in sorted(unchanged)}
+        self.assertEqual(sha256(json_bytes(old_files)), "64894fd049d9170976988a8ed6e465fea2d9ad617375b34aa768bb62652d655a")
 
     def test_every_previous_display_geometry_and_metadata_except_source_presence_is_preserved(self):
         parts = [{key: value for key, value in part.items() if key not in ("source_record", "source_record_status")}
@@ -100,8 +106,8 @@ class FacialSourceRecordTest(unittest.TestCase):
         self.assertEqual({key: value["count"] for key, value in report["metrics"].items()}, {
             "individual_display_identity": 206, "source_module_present": 206,
             "canonical_record_present": 206, "declared_dimensions_complete": 40,
-            "dataset_binding_present": 21, "reference_declaration_present": 45,
-            "dimensional_primitive_available": 30, "declared_anatomical_references_resolved": 24,
+            "dataset_binding_present": 21, "reference_declaration_present": 47,
+            "dimensional_primitive_available": 30, "declared_anatomical_references_resolved": 26,
             "record_validation_pass": 0,
         })
         self.assertEqual(report["missing_source_records"], [])
@@ -117,7 +123,7 @@ class FacialSourceRecordTest(unittest.TestCase):
         self.assertEqual(len({row["bone"] for row in report["missing_dimension_values"]}), 166)
         self.assertEqual(len(report["missing_mount_points"]), 206)
         self.assertEqual(len(report["missing_joint_interfaces"]), 206)
-        self.assertEqual(len(report["missing_references"]), 161)
+        self.assertEqual(len(report["missing_references"]), 159)
         self.assertFalse(report["export_readiness"]["ready"])
 
     def test_review_export_has_206_records_and_null_transforms_while_validated_stays_blocked(self):

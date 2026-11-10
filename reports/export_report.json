@@ -9,13 +9,6 @@
     "scope": "identity_and_declared_anatomical_parent_references",
     "unresolved_references": [
       {
-        "bone_id": "BONE_C1",
-        "candidates": [],
-        "field": "connections.parent",
-        "reference": "skull",
-        "status": "missing"
-      },
-      {
         "bone_id": "BONE_CALCANEUS_L",
         "candidates": [],
         "field": "connections.parent",
@@ -55,13 +48,6 @@
         "candidates": [],
         "field": "connections.parent",
         "reference": "sternum",
-        "status": "missing"
-      },
-      {
-        "bone_id": "BONE_COCCYX",
-        "candidates": [],
-        "field": "connections.parent",
-        "reference": "sacrum",
         "status": "missing"
       },
       {

@@ -8,13 +8,14 @@ bone = BoneSpec(
     articulations = [],
     dimensions = {'length_cm': None, 'width_cm': None, 'thickness_cm': None},
     function = ['supports pelvis'],
-    notable_features = [],
+    notable_features = ['Typically five fused sacral segments; one adult inventory identity.', 'Sacral promontory and auricular surfaces for articulation with the ilia.', 'Sacral canal, sacral hiatus and paired anterior/posterior sacral foramina.'],
     developmental_notes = 'fusion of 5 sacral vertebrae',
     variations = '',
     unique_id = 'BONE_SACRUM',
     visual_reference = None,
     embodiment = "virtual",
     geometry = {},
+    references = ['https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column'],
 )
 
 

@@ -37,14 +37,12 @@ Exact export/render matching and case-insensitive legacy runtime matching remain
 | REL:BONE_MANDIBLE:articulations[0] | runtime_compatibility | temporal | ambiguous | ['BONE_TEMP_L', 'BONE_TEMP_R'] |
 | REL:BONE_MANDIBLE:connections.children[0] | declared | temporal | missing | [] |
 | REL:BONE_MANDIBLE:connections.parent | declared | temporal | missing | [] |
-| REL:BONE_C1:connections.parent | declared | skull | missing | [] |
 | REL:BONE_CALCANEUS_L:connections.parent | declared | tibia/fibula | missing | [] |
 | REL:BONE_CALCANEUS_R:connections.parent | declared | tibia/fibula | missing | [] |
 | REL:BONE_CAPITATE_L:connections.parent | declared | radius/ulna | missing | [] |
 | REL:BONE_CAPITATE_R:connections.parent | declared | radius/ulna | missing | [] |
 | REL:BONE_CLAVICLE_L:connections.parent | declared | sternum | missing | [] |
 | REL:BONE_CLAVICLE_R:connections.parent | declared | sternum | missing | [] |
-| REL:BONE_COCCYX:connections.parent | declared | sacrum | missing | [] |
 | REL:BONE_CUBOID_L:connections.parent | declared | tibia/fibula | missing | [] |
 | REL:BONE_CUBOID_R:connections.parent | declared | tibia/fibula | missing | [] |
 | REL:BONE_ETHMOID:articulations[0] | declared | vomer | missing | [] |
@@ -63,8 +61,10 @@ Exact export/render matching and case-insensitive legacy runtime matching remain
 | REL:BONE_HIP_R:connections.parent | declared | sacrum | missing | [] |
 | REL:BONE_HUMERUS_L:connections.parent | declared | scapula | missing | [] |
 | REL:BONE_HUMERUS_R:connections.parent | declared | scapula | missing | [] |
+| REL:BONE_INTERMEDIATE_CUNEIFORM_L:connections.parent | declared | tibia/fibula | missing | [] |
+| REL:BONE_INTERMEDIATE_CUNEIFORM_R:connections.parent | declared | tibia/fibula | missing | [] |
 
-Showing 30 of 186 unresolved resolution diagnostics; all remain in JSON.
+Showing 30 of 184 unresolved resolution diagnostics; all remain in JSON.
 
 Parent cycles (declared parent projection only): `[]`.
 

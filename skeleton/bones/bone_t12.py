@@ -18,7 +18,7 @@ bone = BoneSpec(
         'width_mm': None,
     },
     function = ['rib articulation'],
-    notable_features = [],
+    notable_features = ['Single pair of complete costal facets for rib 12; no transverse costal facets.', 'Transitional thoracic superior and lumbar-type inferior articular morphology.'],
     developmental_notes = 'vertebral arch fusion in adolescence',
     variations = '',
     unique_id = 'BONE_T12',
@@ -26,7 +26,7 @@ bone = BoneSpec(
     embodiment = "virtual",
     geometry = {},
     physics = {"mass_kg": None},
-    references = ['https://www.asianspinejournal.org/upload/pdf/asj-5-20.pdf', 'references/dim072/catalog.json#/candidates/5'],
+    references = ['https://www.asianspinejournal.org/upload/pdf/asj-5-20.pdf', 'references/dim072/catalog.json#/candidates/5', 'https://www.ncbi.nlm.nih.gov/books/NBK459153/'],
     metric_sources = {
         'body_upper_width_mm': 'references/dim072/catalog.json#/candidates/5/fields/body_upper_width_mm',
         'body_mid_width_mm': 'references/dim072/catalog.json#/candidates/5/fields/body_mid_width_mm',

@@ -1,0 +1,2050 @@
+{
+  "all_dimensions_verified": false,
+  "audit_version": "1.0.0",
+  "bones": [
+    {
+      "admitted_feature_fields": [
+        "spinal_canal_ap_mm",
+        "spinal_canal_width_mm"
+      ],
+      "anatomical_parent": {
+        "bone_id": "BONE_OCCIPITAL",
+        "reference": "BONE_OCCIPITAL",
+        "status": "id"
+      },
+      "bone_id": "BONE_C1",
+      "dataset_key": null,
+      "dimensional_status": "partial_source_backed",
+      "dimensions_mm": {
+        "length_mm": null,
+        "spinal_canal_ap_mm": 29.79,
+        "spinal_canal_width_mm": 27.38,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "expected_superior_reference": "BONE_OCCIPITAL",
+      "feature_evidence": {
+        "catalog_locator": "references/spine/features.json#/feature_sets/0",
+        "source_ids": [
+          "openstax_spine"
+        ],
+        "source_locator": "Cervical Vertebrae, atlas description and Figure 7.25"
+      },
+      "feature_geometry": null,
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "measurement_provenance": {
+        "spinal_canal_ap_mm": "references/dim072/catalog.json#/candidates/23/fields/spinal_canal_ap_mm",
+        "spinal_canal_width_mm": "references/dim072/catalog.json#/candidates/23/fields/spinal_canal_width_mm"
+      },
+      "mechanical_definition": null,
+      "notable_features": [
+        "Ring formed by anterior and posterior arches; no vertebral body or spinous process.",
+        "Superior articular facets for the occipital condyles; inferior facets for the axis.",
+        "Transverse foramina in the transverse processes."
+      ],
+      "physics": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "source": "physics.mass_kg",
+          "status": "unknown"
+        }
+      },
+      "record_status": "present",
+      "reference_declarations": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC8354927/",
+        "references/dim072/catalog.json#/candidates/23",
+        "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column"
+      ],
+      "source_file": {
+        "path": "skeleton/bones/bone_c1.py",
+        "sha256": "4d0505f5348e966a528aaabaaab6921c07e322ba2b0622ee2b08248ee1ee7649"
+      },
+      "whole_bone_unknown_fields": [
+        "length_mm",
+        "width_mm",
+        "thickness_mm"
+      ]
+    },
+    {
+      "admitted_feature_fields": [
+        "spinal_canal_ap_mm",
+        "spinal_canal_width_mm"
+      ],
+      "anatomical_parent": {
+        "bone_id": "BONE_C1",
+        "reference": "C1",
+        "status": "unique_display_name"
+      },
+      "bone_id": "BONE_C2",
+      "dataset_key": null,
+      "dimensional_status": "partial_source_backed",
+      "dimensions_mm": {
+        "length_mm": null,
+        "spinal_canal_ap_mm": 15.53,
+        "spinal_canal_width_mm": 22.77,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "expected_superior_reference": "BONE_C1",
+      "feature_evidence": {
+        "catalog_locator": "references/spine/features.json#/feature_sets/1",
+        "source_ids": [
+          "openstax_spine"
+        ],
+        "source_locator": "Cervical Vertebrae, axis description and Figure 7.25"
+      },
+      "feature_geometry": null,
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "measurement_provenance": {
+        "spinal_canal_ap_mm": "references/dim072/catalog.json#/candidates/22/fields/spinal_canal_ap_mm",
+        "spinal_canal_width_mm": "references/dim072/catalog.json#/candidates/22/fields/spinal_canal_width_mm"
+      },
+      "mechanical_definition": null,
+      "notable_features": [
+        "Dens (odontoid process) projects superiorly from the body.",
+        "Atlas-dens articulation is supported by the transverse ligament.",
+        "Transverse foramina; neural arch and articular processes."
+      ],
+      "physics": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "source": "physics.mass_kg",
+          "status": "unknown"
+        }
+      },
+      "record_status": "present",
+      "reference_declarations": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC8354927/",
+        "references/dim072/catalog.json#/candidates/22",
+        "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column"
+      ],
+      "source_file": {
+        "path": "skeleton/bones/bone_c2.py",
+        "sha256": "c9ecc3cdcb0809a1a829d790a9cf540b0df19ed7c94899390926f33f2f2ed908"
+      },
+      "whole_bone_unknown_fields": [
+        "length_mm",
+        "width_mm",
+        "thickness_mm"
+      ]
+    },
+    {
+      "admitted_feature_fields": [
+        "body_height_mm",
+        "spinal_canal_ap_mm",
+        "spinal_canal_width_mm"
+      ],
+      "anatomical_parent": {
+        "bone_id": "BONE_C2",
+        "reference": "C2",
+        "status": "unique_display_name"
+      },
+      "bone_id": "BONE_C3",
+      "dataset_key": null,
+      "dimensional_status": "partial_source_backed",
+      "dimensions_mm": {
+        "body_height_mm": 11.96,
+        "length_mm": null,
+        "spinal_canal_ap_mm": 13.85,
+        "spinal_canal_width_mm": 22.26,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "expected_superior_reference": "BONE_C2",
+      "feature_evidence": {
+        "catalog_locator": "references/spine/features.json#/feature_sets/2",
+        "source_ids": [
+          "openstax_spine"
+        ],
+        "source_locator": "General Structure of a Vertebra; Cervical Vertebrae"
+      },
+      "feature_geometry": null,
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "measurement_provenance": {
+        "body_height_mm": "references/dim072/catalog.json#/candidates/21/fields/body_height_mm",
+        "spinal_canal_ap_mm": "references/dim072/catalog.json#/candidates/21/fields/spinal_canal_ap_mm",
+        "spinal_canal_width_mm": "references/dim072/catalog.json#/candidates/21/fields/spinal_canal_width_mm"
+      },
+      "mechanical_definition": null,
+      "notable_features": [
+        "Vertebral body and neural arch enclose the vertebral foramen.",
+        "Transverse processes contain transverse foramina.",
+        "Short spinous process, commonly bifid; individual morphology varies."
+      ],
+      "physics": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "source": "physics.mass_kg",
+          "status": "unknown"
+        }
+      },
+      "record_status": "present",
+      "reference_declarations": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC8354927/",
+        "references/dim072/catalog.json#/candidates/21",
+        "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column"
+      ],
+      "source_file": {
+        "path": "skeleton/bones/bone_c3.py",
+        "sha256": "860491dba84e368d03f66cc776d48f8454f4f6942ec52c672a260b40dc69f593"
+      },
+      "whole_bone_unknown_fields": [
+        "length_mm",
+        "width_mm",
+        "thickness_mm"
+      ]
+    },
+    {
+      "admitted_feature_fields": [
+        "body_height_mm",
+        "spinal_canal_ap_mm",
+        "spinal_canal_width_mm"
+      ],
+      "anatomical_parent": {
+        "bone_id": "BONE_C3",
+        "reference": "C3",
+        "status": "unique_display_name"
+      },
+      "bone_id": "BONE_C4",
+      "dataset_key": null,
+      "dimensional_status": "partial_source_backed",
+      "dimensions_mm": {
+        "body_height_mm": 11.59,
+        "length_mm": null,
+        "spinal_canal_ap_mm": 13.36,
+        "spinal_canal_width_mm": 22.8,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "expected_superior_reference": "BONE_C3",
+      "feature_evidence": {
+        "catalog_locator": "references/spine/features.json#/feature_sets/2",
+        "source_ids": [
+          "openstax_spine"
+        ],
+        "source_locator": "General Structure of a Vertebra; Cervical Vertebrae"
+      },
+      "feature_geometry": null,
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "measurement_provenance": {
+        "body_height_mm": "references/dim072/catalog.json#/candidates/20/fields/body_height_mm",
+        "spinal_canal_ap_mm": "references/dim072/catalog.json#/candidates/20/fields/spinal_canal_ap_mm",
+        "spinal_canal_width_mm": "references/dim072/catalog.json#/candidates/20/fields/spinal_canal_width_mm"
+      },
+      "mechanical_definition": null,
+      "notable_features": [
+        "Vertebral body and neural arch enclose the vertebral foramen.",
+        "Transverse processes contain transverse foramina.",
+        "Short spinous process, commonly bifid; individual morphology varies."
+      ],
+      "physics": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "source": "physics.mass_kg",
+          "status": "unknown"
+        }
+      },
+      "record_status": "present",
+      "reference_declarations": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC8354927/",
+        "references/dim072/catalog.json#/candidates/20",
+        "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column"
+      ],
+      "source_file": {
+        "path": "skeleton/bones/bone_c4.py",
+        "sha256": "a8f4cc66df747e77add3764cfd871b7a9b060564dc7eb57c065fc8a82314b2f3"
+      },
+      "whole_bone_unknown_fields": [
+        "length_mm",
+        "width_mm",
+        "thickness_mm"
+      ]
+    },
+    {
+      "admitted_feature_fields": [
+        "body_height_mm",
+        "spinal_canal_ap_mm",
+        "spinal_canal_width_mm"
+      ],
+      "anatomical_parent": {
+        "bone_id": "BONE_C4",
+        "reference": "C4",
+        "status": "unique_display_name"
+      },
+      "bone_id": "BONE_C5",
+      "dataset_key": null,
+      "dimensional_status": "partial_source_backed",
+      "dimensions_mm": {
+        "body_height_mm": 11.4,
+        "length_mm": null,
+        "spinal_canal_ap_mm": 13.22,
+        "spinal_canal_width_mm": 23.39,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "expected_superior_reference": "BONE_C4",
+      "feature_evidence": {
+        "catalog_locator": "references/spine/features.json#/feature_sets/2",
+        "source_ids": [
+          "openstax_spine"
+        ],
+        "source_locator": "General Structure of a Vertebra; Cervical Vertebrae"
+      },
+      "feature_geometry": null,
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "measurement_provenance": {
+        "body_height_mm": "references/dim072/catalog.json#/candidates/19/fields/body_height_mm",
+        "spinal_canal_ap_mm": "references/dim072/catalog.json#/candidates/19/fields/spinal_canal_ap_mm",
+        "spinal_canal_width_mm": "references/dim072/catalog.json#/candidates/19/fields/spinal_canal_width_mm"
+      },
+      "mechanical_definition": null,
+      "notable_features": [
+        "Vertebral body and neural arch enclose the vertebral foramen.",
+        "Transverse processes contain transverse foramina.",
+        "Short spinous process, commonly bifid; individual morphology varies."
+      ],
+      "physics": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "source": "physics.mass_kg",
+          "status": "unknown"
+        }
+      },
+      "record_status": "present",
+      "reference_declarations": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC8354927/",
+        "references/dim072/catalog.json#/candidates/19",
+        "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column"
+      ],
+      "source_file": {
+        "path": "skeleton/bones/bone_c5.py",
+        "sha256": "9cad60c36d625cebf0b3257e4d6aad9b07b33b2d8e099f81927b2cb1a84dfba9"
+      },
+      "whole_bone_unknown_fields": [
+        "length_mm",
+        "width_mm",
+        "thickness_mm"
+      ]
+    },
+    {
+      "admitted_feature_fields": [
+        "body_height_mm",
+        "spinal_canal_ap_mm",
+        "spinal_canal_width_mm"
+      ],
+      "anatomical_parent": {
+        "bone_id": "BONE_C5",
+        "reference": "C5",
+        "status": "unique_display_name"
+      },
+      "bone_id": "BONE_C6",
+      "dataset_key": null,
+      "dimensional_status": "partial_source_backed",
+      "dimensions_mm": {
+        "body_height_mm": 11.36,
+        "length_mm": null,
+        "spinal_canal_ap_mm": 12.96,
+        "spinal_canal_width_mm": 23.58,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "expected_superior_reference": "BONE_C5",
+      "feature_evidence": {
+        "catalog_locator": "references/spine/features.json#/feature_sets/2",
+        "source_ids": [
+          "openstax_spine"
+        ],
+        "source_locator": "General Structure of a Vertebra; Cervical Vertebrae"
+      },
+      "feature_geometry": null,
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "measurement_provenance": {
+        "body_height_mm": "references/dim072/catalog.json#/candidates/18/fields/body_height_mm",
+        "spinal_canal_ap_mm": "references/dim072/catalog.json#/candidates/18/fields/spinal_canal_ap_mm",
+        "spinal_canal_width_mm": "references/dim072/catalog.json#/candidates/18/fields/spinal_canal_width_mm"
+      },
+      "mechanical_definition": null,
+      "notable_features": [
+        "Vertebral body and neural arch enclose the vertebral foramen.",
+        "Transverse processes contain transverse foramina.",
+        "Short spinous process, commonly bifid; individual morphology varies."
+      ],
+      "physics": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "source": "physics.mass_kg",
+          "status": "unknown"
+        }
+      },
+      "record_status": "present",
+      "reference_declarations": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC8354927/",
+        "references/dim072/catalog.json#/candidates/18",
+        "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column"
+      ],
+      "source_file": {
+        "path": "skeleton/bones/bone_c6.py",
+        "sha256": "c2f68bac3bd97a8153c2e85c55d774d3374082e4e2497b2115808ba59e44b9fc"
+      },
+      "whole_bone_unknown_fields": [
+        "length_mm",
+        "width_mm",
+        "thickness_mm"
+      ]
+    },
+    {
+      "admitted_feature_fields": [
+        "body_height_mm",
+        "spinal_canal_ap_mm",
+        "spinal_canal_width_mm"
+      ],
+      "anatomical_parent": {
+        "bone_id": "BONE_C6",
+        "reference": "C6",
+        "status": "unique_display_name"
+      },
+      "bone_id": "BONE_C7",
+      "dataset_key": null,
+      "dimensional_status": "partial_source_backed",
+      "dimensions_mm": {
+        "body_height_mm": 12.61,
+        "length_mm": null,
+        "spinal_canal_ap_mm": 13.25,
+        "spinal_canal_width_mm": 23.34,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "expected_superior_reference": "BONE_C6",
+      "feature_evidence": {
+        "catalog_locator": "references/spine/features.json#/feature_sets/3",
+        "source_ids": [
+          "openstax_spine"
+        ],
+        "source_locator": "Cervical Vertebrae, C7 description"
+      },
+      "feature_geometry": null,
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "measurement_provenance": {
+        "body_height_mm": "references/dim072/catalog.json#/candidates/17/fields/body_height_mm",
+        "spinal_canal_ap_mm": "references/dim072/catalog.json#/candidates/17/fields/spinal_canal_ap_mm",
+        "spinal_canal_width_mm": "references/dim072/catalog.json#/candidates/17/fields/spinal_canal_width_mm"
+      },
+      "mechanical_definition": null,
+      "notable_features": [
+        "Prominent, elongated spinous process at the cervicothoracic transition.",
+        "Transverse foramina; vertebral body, neural arch and articular processes."
+      ],
+      "physics": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "source": "physics.mass_kg",
+          "status": "unknown"
+        }
+      },
+      "record_status": "present",
+      "reference_declarations": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC8354927/",
+        "references/dim072/catalog.json#/candidates/17",
+        "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column"
+      ],
+      "source_file": {
+        "path": "skeleton/bones/bone_c7.py",
+        "sha256": "0e123c0f94afa3a3c9f42753c6bf1637fca39bad6bdfb1d28d1fa857ce07add8"
+      },
+      "whole_bone_unknown_fields": [
+        "length_mm",
+        "width_mm",
+        "thickness_mm"
+      ]
+    },
+    {
+      "admitted_feature_fields": [
+        "body_anterior_height_mm",
+        "body_lower_width_mm",
+        "body_mid_width_mm",
+        "body_posterior_height_mm",
+        "body_upper_width_mm"
+      ],
+      "anatomical_parent": {
+        "bone_id": "BONE_C7",
+        "reference": "C7",
+        "status": "unique_display_name"
+      },
+      "bone_id": "BONE_T1",
+      "dataset_key": null,
+      "dimensional_status": "partial_source_backed",
+      "dimensions_mm": {
+        "body_anterior_height_mm": 14.12,
+        "body_lower_width_mm": 26.92,
+        "body_mid_width_mm": 23.04,
+        "body_posterior_height_mm": 14.63,
+        "body_upper_width_mm": 23.75,
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "expected_superior_reference": "BONE_C7",
+      "feature_evidence": {
+        "catalog_locator": "references/spine/features.json#/feature_sets/4",
+        "source_ids": [
+          "thoracic_features"
+        ],
+        "source_locator": "Structure and Function, atypical T1"
+      },
+      "feature_geometry": null,
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "measurement_provenance": {
+        "body_anterior_height_mm": "references/dim072/catalog.json#/candidates/16/fields/body_anterior_height_mm",
+        "body_lower_width_mm": "references/dim072/catalog.json#/candidates/16/fields/body_lower_width_mm",
+        "body_mid_width_mm": "references/dim072/catalog.json#/candidates/16/fields/body_mid_width_mm",
+        "body_posterior_height_mm": "references/dim072/catalog.json#/candidates/16/fields/body_posterior_height_mm",
+        "body_upper_width_mm": "references/dim072/catalog.json#/candidates/16/fields/body_upper_width_mm"
+      },
+      "mechanical_definition": null,
+      "notable_features": [
+        "Whole superior costal facets for rib 1 and inferior demifacets for rib 2.",
+        "Transverse costal facets for the rib-1 tubercles."
+      ],
+      "physics": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "source": "physics.mass_kg",
+          "status": "unknown"
+        }
+      },
+      "record_status": "present",
+      "reference_declarations": [
+        "https://www.asianspinejournal.org/upload/pdf/asj-5-20.pdf",
+        "references/dim072/catalog.json#/candidates/16",
+        "https://www.ncbi.nlm.nih.gov/books/NBK459153/"
+      ],
+      "source_file": {
+        "path": "skeleton/bones/bone_t1.py",
+        "sha256": "de9be7d34b24bbd761b29b7e1ba6b299667320c0c10deae63c5884edc33f2d24"
+      },
+      "whole_bone_unknown_fields": [
+        "length_mm",
+        "width_mm",
+        "thickness_mm"
+      ]
+    },
+    {
+      "admitted_feature_fields": [
+        "body_anterior_height_mm",
+        "body_lower_width_mm",
+        "body_mid_width_mm",
+        "body_posterior_height_mm",
+        "body_upper_width_mm"
+      ],
+      "anatomical_parent": {
+        "bone_id": "BONE_T1",
+        "reference": "T1",
+        "status": "unique_display_name"
+      },
+      "bone_id": "BONE_T2",
+      "dataset_key": null,
+      "dimensional_status": "partial_source_backed",
+      "dimensions_mm": {
+        "body_anterior_height_mm": 15.25,
+        "body_lower_width_mm": 26.83,
+        "body_mid_width_mm": 23.16,
+        "body_posterior_height_mm": 15.47,
+        "body_upper_width_mm": 23.6,
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "expected_superior_reference": "BONE_T1",
+      "feature_evidence": {
+        "catalog_locator": "references/spine/features.json#/feature_sets/5",
+        "source_ids": [
+          "openstax_spine",
+          "thoracic_features"
+        ],
+        "source_locator": "Thoracic Vertebrae; Structure and Function, typical thoracic levels"
+      },
+      "feature_geometry": null,
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "measurement_provenance": {
+        "body_anterior_height_mm": "references/dim072/catalog.json#/candidates/15/fields/body_anterior_height_mm",
+        "body_lower_width_mm": "references/dim072/catalog.json#/candidates/15/fields/body_lower_width_mm",
+        "body_mid_width_mm": "references/dim072/catalog.json#/candidates/15/fields/body_mid_width_mm",
+        "body_posterior_height_mm": "references/dim072/catalog.json#/candidates/15/fields/body_posterior_height_mm",
+        "body_upper_width_mm": "references/dim072/catalog.json#/candidates/15/fields/body_upper_width_mm"
+      },
+      "mechanical_definition": null,
+      "notable_features": [
+        "Costal body demifacets and transverse costal facets for rib articulation.",
+        "Pedicles and laminae form the neural arch around the vertebral foramen.",
+        "Posterior spinous process; its size and inclination vary with level."
+      ],
+      "physics": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "source": "physics.mass_kg",
+          "status": "unknown"
+        }
+      },
+      "record_status": "present",
+      "reference_declarations": [
+        "https://www.asianspinejournal.org/upload/pdf/asj-5-20.pdf",
+        "references/dim072/catalog.json#/candidates/15",
+        "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column",
+        "https://www.ncbi.nlm.nih.gov/books/NBK459153/"
+      ],
+      "source_file": {
+        "path": "skeleton/bones/bone_t2.py",
+        "sha256": "d52ba7331a382c9924dfd68003bea9b767200d46a8823eb6d4a59e8171ab0026"
+      },
+      "whole_bone_unknown_fields": [
+        "length_mm",
+        "width_mm",
+        "thickness_mm"
+      ]
+    },
+    {
+      "admitted_feature_fields": [
+        "body_anterior_height_mm",
+        "body_lower_width_mm",
+        "body_mid_width_mm",
+        "body_posterior_height_mm",
+        "body_upper_width_mm"
+      ],
+      "anatomical_parent": {
+        "bone_id": "BONE_T2",
+        "reference": "T2",
+        "status": "unique_display_name"
+      },
+      "bone_id": "BONE_T3",
+      "dataset_key": null,
+      "dimensional_status": "partial_source_backed",
+      "dimensions_mm": {
+        "body_anterior_height_mm": 15.98,
+        "body_lower_width_mm": 25.35,
+        "body_mid_width_mm": 22.9,
+        "body_posterior_height_mm": 16.26,
+        "body_upper_width_mm": 23.4,
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "expected_superior_reference": "BONE_T2",
+      "feature_evidence": {
+        "catalog_locator": "references/spine/features.json#/feature_sets/5",
+        "source_ids": [
+          "openstax_spine",
+          "thoracic_features"
+        ],
+        "source_locator": "Thoracic Vertebrae; Structure and Function, typical thoracic levels"
+      },
+      "feature_geometry": null,
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "measurement_provenance": {
+        "body_anterior_height_mm": "references/dim072/catalog.json#/candidates/14/fields/body_anterior_height_mm",
+        "body_lower_width_mm": "references/dim072/catalog.json#/candidates/14/fields/body_lower_width_mm",
+        "body_mid_width_mm": "references/dim072/catalog.json#/candidates/14/fields/body_mid_width_mm",
+        "body_posterior_height_mm": "references/dim072/catalog.json#/candidates/14/fields/body_posterior_height_mm",
+        "body_upper_width_mm": "references/dim072/catalog.json#/candidates/14/fields/body_upper_width_mm"
+      },
+      "mechanical_definition": null,
+      "notable_features": [
+        "Costal body demifacets and transverse costal facets for rib articulation.",
+        "Pedicles and laminae form the neural arch around the vertebral foramen.",
+        "Posterior spinous process; its size and inclination vary with level."
+      ],
+      "physics": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "source": "physics.mass_kg",
+          "status": "unknown"
+        }
+      },
+      "record_status": "present",
+      "reference_declarations": [
+        "https://www.asianspinejournal.org/upload/pdf/asj-5-20.pdf",
+        "references/dim072/catalog.json#/candidates/14",
+        "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column",
+        "https://www.ncbi.nlm.nih.gov/books/NBK459153/"
+      ],
+      "source_file": {
+        "path": "skeleton/bones/bone_t3.py",
+        "sha256": "617f5df10d3ad5f3f36dc912a54c3a9a2a454b5aea1dc0ff82c9163603e11bcd"
+      },
+      "whole_bone_unknown_fields": [
+        "length_mm",
+        "width_mm",
+        "thickness_mm"
+      ]
+    },
+    {
+      "admitted_feature_fields": [
+        "body_anterior_height_mm",
+        "body_lower_width_mm",
+        "body_mid_width_mm",
+        "body_posterior_height_mm",
+        "body_upper_width_mm"
+      ],
+      "anatomical_parent": {
+        "bone_id": "BONE_T3",
+        "reference": "T3",
+        "status": "unique_display_name"
+      },
+      "bone_id": "BONE_T4",
+      "dataset_key": null,
+      "dimensional_status": "partial_source_backed",
+      "dimensions_mm": {
+        "body_anterior_height_mm": 16.49,
+        "body_lower_width_mm": 25.25,
+        "body_mid_width_mm": 22.57,
+        "body_posterior_height_mm": 16.58,
+        "body_upper_width_mm": 23.03,
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "expected_superior_reference": "BONE_T3",
+      "feature_evidence": {
+        "catalog_locator": "references/spine/features.json#/feature_sets/5",
+        "source_ids": [
+          "openstax_spine",
+          "thoracic_features"
+        ],
+        "source_locator": "Thoracic Vertebrae; Structure and Function, typical thoracic levels"
+      },
+      "feature_geometry": null,
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "measurement_provenance": {
+        "body_anterior_height_mm": "references/dim072/catalog.json#/candidates/13/fields/body_anterior_height_mm",
+        "body_lower_width_mm": "references/dim072/catalog.json#/candidates/13/fields/body_lower_width_mm",
+        "body_mid_width_mm": "references/dim072/catalog.json#/candidates/13/fields/body_mid_width_mm",
+        "body_posterior_height_mm": "references/dim072/catalog.json#/candidates/13/fields/body_posterior_height_mm",
+        "body_upper_width_mm": "references/dim072/catalog.json#/candidates/13/fields/body_upper_width_mm"
+      },
+      "mechanical_definition": null,
+      "notable_features": [
+        "Costal body demifacets and transverse costal facets for rib articulation.",
+        "Pedicles and laminae form the neural arch around the vertebral foramen.",
+        "Posterior spinous process; its size and inclination vary with level."
+      ],
+      "physics": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "source": "physics.mass_kg",
+          "status": "unknown"
+        }
+      },
+      "record_status": "present",
+      "reference_declarations": [
+        "https://www.asianspinejournal.org/upload/pdf/asj-5-20.pdf",
+        "references/dim072/catalog.json#/candidates/13",
+        "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column",
+        "https://www.ncbi.nlm.nih.gov/books/NBK459153/"
+      ],
+      "source_file": {
+        "path": "skeleton/bones/bone_t4.py",
+        "sha256": "91d6f76f822441169d1c840ff1fe489e8fb39cffc45e07fc850af69bb40d0dae"
+      },
+      "whole_bone_unknown_fields": [
+        "length_mm",
+        "width_mm",
+        "thickness_mm"
+      ]
+    },
+    {
+      "admitted_feature_fields": [
+        "body_anterior_height_mm",
+        "body_lower_width_mm",
+        "body_mid_width_mm",
+        "body_posterior_height_mm",
+        "body_upper_width_mm"
+      ],
+      "anatomical_parent": {
+        "bone_id": "BONE_T4",
+        "reference": "T4",
+        "status": "unique_display_name"
+      },
+      "bone_id": "BONE_T5",
+      "dataset_key": null,
+      "dimensional_status": "partial_source_backed",
+      "dimensions_mm": {
+        "body_anterior_height_mm": 16.41,
+        "body_lower_width_mm": 24.6,
+        "body_mid_width_mm": 22.22,
+        "body_posterior_height_mm": 17.64,
+        "body_upper_width_mm": 23.21,
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "expected_superior_reference": "BONE_T4",
+      "feature_evidence": {
+        "catalog_locator": "references/spine/features.json#/feature_sets/5",
+        "source_ids": [
+          "openstax_spine",
+          "thoracic_features"
+        ],
+        "source_locator": "Thoracic Vertebrae; Structure and Function, typical thoracic levels"
+      },
+      "feature_geometry": null,
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "measurement_provenance": {
+        "body_anterior_height_mm": "references/dim072/catalog.json#/candidates/12/fields/body_anterior_height_mm",
+        "body_lower_width_mm": "references/dim072/catalog.json#/candidates/12/fields/body_lower_width_mm",
+        "body_mid_width_mm": "references/dim072/catalog.json#/candidates/12/fields/body_mid_width_mm",
+        "body_posterior_height_mm": "references/dim072/catalog.json#/candidates/12/fields/body_posterior_height_mm",
+        "body_upper_width_mm": "references/dim072/catalog.json#/candidates/12/fields/body_upper_width_mm"
+      },
+      "mechanical_definition": null,
+      "notable_features": [
+        "Costal body demifacets and transverse costal facets for rib articulation.",
+        "Pedicles and laminae form the neural arch around the vertebral foramen.",
+        "Posterior spinous process; its size and inclination vary with level."
+      ],
+      "physics": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "source": "physics.mass_kg",
+          "status": "unknown"
+        }
+      },
+      "record_status": "present",
+      "reference_declarations": [
+        "https://www.asianspinejournal.org/upload/pdf/asj-5-20.pdf",
+        "references/dim072/catalog.json#/candidates/12",
+        "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column",
+        "https://www.ncbi.nlm.nih.gov/books/NBK459153/"
+      ],
+      "source_file": {
+        "path": "skeleton/bones/bone_t5.py",
+        "sha256": "0d7bd0beb4d88860651c2b64a396e22de2c72731cef3f588a1fd771eca980ee5"
+      },
+      "whole_bone_unknown_fields": [
+        "length_mm",
+        "width_mm",
+        "thickness_mm"
+      ]
+    },
+    {
+      "admitted_feature_fields": [
+        "body_anterior_height_mm",
+        "body_lower_width_mm",
+        "body_mid_width_mm",
+        "body_posterior_height_mm"
+      ],
+      "anatomical_parent": {
+        "bone_id": "BONE_T5",
+        "reference": "T5",
+        "status": "unique_display_name"
+      },
+      "bone_id": "BONE_T6",
+      "dataset_key": null,
+      "dimensional_status": "partial_source_backed",
+      "dimensions_mm": {
+        "body_anterior_height_mm": 16.95,
+        "body_lower_width_mm": 25.33,
+        "body_mid_width_mm": 22.58,
+        "body_posterior_height_mm": 18.16,
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "expected_superior_reference": "BONE_T5",
+      "feature_evidence": {
+        "catalog_locator": "references/spine/features.json#/feature_sets/5",
+        "source_ids": [
+          "openstax_spine",
+          "thoracic_features"
+        ],
+        "source_locator": "Thoracic Vertebrae; Structure and Function, typical thoracic levels"
+      },
+      "feature_geometry": null,
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "measurement_provenance": {
+        "body_anterior_height_mm": "references/dim072/catalog.json#/candidates/11/fields/body_anterior_height_mm",
+        "body_lower_width_mm": "references/dim072/catalog.json#/candidates/11/fields/body_lower_width_mm",
+        "body_mid_width_mm": "references/dim072/catalog.json#/candidates/11/fields/body_mid_width_mm",
+        "body_posterior_height_mm": "references/dim072/catalog.json#/candidates/11/fields/body_posterior_height_mm"
+      },
+      "mechanical_definition": null,
+      "notable_features": [
+        "Costal body demifacets and transverse costal facets for rib articulation.",
+        "Pedicles and laminae form the neural arch around the vertebral foramen.",
+        "Posterior spinous process; its size and inclination vary with level."
+      ],
+      "physics": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "source": "physics.mass_kg",
+          "status": "unknown"
+        }
+      },
+      "record_status": "present",
+      "reference_declarations": [
+        "https://www.asianspinejournal.org/upload/pdf/asj-5-20.pdf",
+        "references/dim072/catalog.json#/candidates/11",
+        "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column",
+        "https://www.ncbi.nlm.nih.gov/books/NBK459153/"
+      ],
+      "source_file": {
+        "path": "skeleton/bones/bone_t6.py",
+        "sha256": "8356b84af713bcfb28d8af882f1011b493bc4a21c1cba666695bd4c3e440a202"
+      },
+      "whole_bone_unknown_fields": [
+        "length_mm",
+        "width_mm",
+        "thickness_mm"
+      ]
+    },
+    {
+      "admitted_feature_fields": [
+        "body_anterior_height_mm",
+        "body_lower_width_mm",
+        "body_mid_width_mm",
+        "body_posterior_height_mm",
+        "body_upper_width_mm"
+      ],
+      "anatomical_parent": {
+        "bone_id": "BONE_T6",
+        "reference": "T6",
+        "status": "unique_display_name"
+      },
+      "bone_id": "BONE_T7",
+      "dataset_key": null,
+      "dimensional_status": "partial_source_backed",
+      "dimensions_mm": {
+        "body_anterior_height_mm": 16.82,
+        "body_lower_width_mm": 26.84,
+        "body_mid_width_mm": 24.04,
+        "body_posterior_height_mm": 18.38,
+        "body_upper_width_mm": 25.07,
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "expected_superior_reference": "BONE_T6",
+      "feature_evidence": {
+        "catalog_locator": "references/spine/features.json#/feature_sets/5",
+        "source_ids": [
+          "openstax_spine",
+          "thoracic_features"
+        ],
+        "source_locator": "Thoracic Vertebrae; Structure and Function, typical thoracic levels"
+      },
+      "feature_geometry": null,
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "measurement_provenance": {
+        "body_anterior_height_mm": "references/dim072/catalog.json#/candidates/10/fields/body_anterior_height_mm",
+        "body_lower_width_mm": "references/dim072/catalog.json#/candidates/10/fields/body_lower_width_mm",
+        "body_mid_width_mm": "references/dim072/catalog.json#/candidates/10/fields/body_mid_width_mm",
+        "body_posterior_height_mm": "references/dim072/catalog.json#/candidates/10/fields/body_posterior_height_mm",
+        "body_upper_width_mm": "references/dim072/catalog.json#/candidates/10/fields/body_upper_width_mm"
+      },
+      "mechanical_definition": null,
+      "notable_features": [
+        "Costal body demifacets and transverse costal facets for rib articulation.",
+        "Pedicles and laminae form the neural arch around the vertebral foramen.",
+        "Posterior spinous process; its size and inclination vary with level."
+      ],
+      "physics": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "source": "physics.mass_kg",
+          "status": "unknown"
+        }
+      },
+      "record_status": "present",
+      "reference_declarations": [
+        "https://www.asianspinejournal.org/upload/pdf/asj-5-20.pdf",
+        "references/dim072/catalog.json#/candidates/10",
+        "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column",
+        "https://www.ncbi.nlm.nih.gov/books/NBK459153/"
+      ],
+      "source_file": {
+        "path": "skeleton/bones/bone_t7.py",
+        "sha256": "7f200b184b7578e11b2c0620f631ae087eb7befdbed97e39b08dbb52b7c4fe2a"
+      },
+      "whole_bone_unknown_fields": [
+        "length_mm",
+        "width_mm",
+        "thickness_mm"
+      ]
+    },
+    {
+      "admitted_feature_fields": [
+        "body_anterior_height_mm",
+        "body_lower_width_mm",
+        "body_mid_width_mm",
+        "body_posterior_height_mm",
+        "body_upper_width_mm"
+      ],
+      "anatomical_parent": {
+        "bone_id": "BONE_T7",
+        "reference": "T7",
+        "status": "unique_display_name"
+      },
+      "bone_id": "BONE_T8",
+      "dataset_key": null,
+      "dimensional_status": "partial_source_backed",
+      "dimensions_mm": {
+        "body_anterior_height_mm": 18.46,
+        "body_lower_width_mm": 27.42,
+        "body_mid_width_mm": 24.88,
+        "body_posterior_height_mm": 18.8,
+        "body_upper_width_mm": 25.97,
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "expected_superior_reference": "BONE_T7",
+      "feature_evidence": {
+        "catalog_locator": "references/spine/features.json#/feature_sets/5",
+        "source_ids": [
+          "openstax_spine",
+          "thoracic_features"
+        ],
+        "source_locator": "Thoracic Vertebrae; Structure and Function, typical thoracic levels"
+      },
+      "feature_geometry": null,
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "measurement_provenance": {
+        "body_anterior_height_mm": "references/dim072/catalog.json#/candidates/9/fields/body_anterior_height_mm",
+        "body_lower_width_mm": "references/dim072/catalog.json#/candidates/9/fields/body_lower_width_mm",
+        "body_mid_width_mm": "references/dim072/catalog.json#/candidates/9/fields/body_mid_width_mm",
+        "body_posterior_height_mm": "references/dim072/catalog.json#/candidates/9/fields/body_posterior_height_mm",
+        "body_upper_width_mm": "references/dim072/catalog.json#/candidates/9/fields/body_upper_width_mm"
+      },
+      "mechanical_definition": null,
+      "notable_features": [
+        "Costal body demifacets and transverse costal facets for rib articulation.",
+        "Pedicles and laminae form the neural arch around the vertebral foramen.",
+        "Posterior spinous process; its size and inclination vary with level."
+      ],
+      "physics": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "source": "physics.mass_kg",
+          "status": "unknown"
+        }
+      },
+      "record_status": "present",
+      "reference_declarations": [
+        "https://www.asianspinejournal.org/upload/pdf/asj-5-20.pdf",
+        "references/dim072/catalog.json#/candidates/9",
+        "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column",
+        "https://www.ncbi.nlm.nih.gov/books/NBK459153/"
+      ],
+      "source_file": {
+        "path": "skeleton/bones/bone_t8.py",
+        "sha256": "835e00b34e7119275c490493b92819b7009153ac10ae4e1ed3866afaf1fde6b4"
+      },
+      "whole_bone_unknown_fields": [
+        "length_mm",
+        "width_mm",
+        "thickness_mm"
+      ]
+    },
+    {
+      "admitted_feature_fields": [
+        "body_anterior_height_mm",
+        "body_lower_width_mm",
+        "body_mid_width_mm",
+        "body_posterior_height_mm",
+        "body_upper_width_mm"
+      ],
+      "anatomical_parent": {
+        "bone_id": "BONE_T8",
+        "reference": "T8",
+        "status": "unique_display_name"
+      },
+      "bone_id": "BONE_T9",
+      "dataset_key": null,
+      "dimensional_status": "partial_source_backed",
+      "dimensions_mm": {
+        "body_anterior_height_mm": 19.35,
+        "body_lower_width_mm": 29.1,
+        "body_mid_width_mm": 25.31,
+        "body_posterior_height_mm": 19.49,
+        "body_upper_width_mm": 26.81,
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "expected_superior_reference": "BONE_T8",
+      "feature_evidence": {
+        "catalog_locator": "references/spine/features.json#/feature_sets/6",
+        "source_ids": [
+          "thoracic_features"
+        ],
+        "source_locator": "Structure and Function, T9/T10 anatomical variation"
+      },
+      "feature_geometry": null,
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "measurement_provenance": {
+        "body_anterior_height_mm": "references/dim072/catalog.json#/candidates/8/fields/body_anterior_height_mm",
+        "body_lower_width_mm": "references/dim072/catalog.json#/candidates/8/fields/body_lower_width_mm",
+        "body_mid_width_mm": "references/dim072/catalog.json#/candidates/8/fields/body_mid_width_mm",
+        "body_posterior_height_mm": "references/dim072/catalog.json#/candidates/8/fields/body_posterior_height_mm",
+        "body_upper_width_mm": "references/dim072/catalog.json#/candidates/8/fields/body_upper_width_mm"
+      },
+      "mechanical_definition": null,
+      "notable_features": [
+        "Costal-facet pattern is transitional; an inferior demifacet may be absent.",
+        "Vertebral body, neural arch, transverse and spinous processes."
+      ],
+      "physics": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "source": "physics.mass_kg",
+          "status": "unknown"
+        }
+      },
+      "record_status": "present",
+      "reference_declarations": [
+        "https://www.asianspinejournal.org/upload/pdf/asj-5-20.pdf",
+        "references/dim072/catalog.json#/candidates/8",
+        "https://www.ncbi.nlm.nih.gov/books/NBK459153/"
+      ],
+      "source_file": {
+        "path": "skeleton/bones/bone_t9.py",
+        "sha256": "d3d24c9539c2faa4c154544c166360fa43985ea012dcff3c9b19881e960dfea5"
+      },
+      "whole_bone_unknown_fields": [
+        "length_mm",
+        "width_mm",
+        "thickness_mm"
+      ]
+    },
+    {
+      "admitted_feature_fields": [
+        "body_anterior_height_mm",
+        "body_lower_width_mm",
+        "body_mid_width_mm",
+        "body_posterior_height_mm",
+        "body_upper_width_mm"
+      ],
+      "anatomical_parent": {
+        "bone_id": "BONE_T9",
+        "reference": "T9",
+        "status": "unique_display_name"
+      },
+      "bone_id": "BONE_T10",
+      "dataset_key": null,
+      "dimensional_status": "partial_source_backed",
+      "dimensions_mm": {
+        "body_anterior_height_mm": 19.78,
+        "body_lower_width_mm": 31.63,
+        "body_mid_width_mm": 27.07,
+        "body_posterior_height_mm": 20.19,
+        "body_upper_width_mm": 27.97,
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "expected_superior_reference": "BONE_T9",
+      "feature_evidence": {
+        "catalog_locator": "references/spine/features.json#/feature_sets/7",
+        "source_ids": [
+          "thoracic_features"
+        ],
+        "source_locator": "Structure and Function, T9/T10 anatomical variation"
+      },
+      "feature_geometry": null,
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "measurement_provenance": {
+        "body_anterior_height_mm": "references/dim072/catalog.json#/candidates/7/fields/body_anterior_height_mm",
+        "body_lower_width_mm": "references/dim072/catalog.json#/candidates/7/fields/body_lower_width_mm",
+        "body_mid_width_mm": "references/dim072/catalog.json#/candidates/7/fields/body_mid_width_mm",
+        "body_posterior_height_mm": "references/dim072/catalog.json#/candidates/7/fields/body_posterior_height_mm",
+        "body_upper_width_mm": "references/dim072/catalog.json#/candidates/7/fields/body_upper_width_mm"
+      },
+      "mechanical_definition": null,
+      "notable_features": [
+        "Costal body facets for rib 10; facet configuration varies.",
+        "Transverse costal-facet pattern is not assumed from typical thoracic levels."
+      ],
+      "physics": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "source": "physics.mass_kg",
+          "status": "unknown"
+        }
+      },
+      "record_status": "present",
+      "reference_declarations": [
+        "https://www.asianspinejournal.org/upload/pdf/asj-5-20.pdf",
+        "references/dim072/catalog.json#/candidates/7",
+        "https://www.ncbi.nlm.nih.gov/books/NBK459153/"
+      ],
+      "source_file": {
+        "path": "skeleton/bones/bone_t10.py",
+        "sha256": "c9e81fe557c2f8e2dfb3d93dac78614eeea3a3440b55a16004b0eca9aee2edc6"
+      },
+      "whole_bone_unknown_fields": [
+        "length_mm",
+        "width_mm",
+        "thickness_mm"
+      ]
+    },
+    {
+      "admitted_feature_fields": [
+        "body_anterior_height_mm",
+        "body_lower_width_mm",
+        "body_mid_width_mm",
+        "body_upper_width_mm"
+      ],
+      "anatomical_parent": {
+        "bone_id": "BONE_T10",
+        "reference": "T10",
+        "status": "unique_display_name"
+      },
+      "bone_id": "BONE_T11",
+      "dataset_key": null,
+      "dimensional_status": "partial_source_backed",
+      "dimensions_mm": {
+        "body_anterior_height_mm": 20.96,
+        "body_lower_width_mm": 34.37,
+        "body_mid_width_mm": 29.76,
+        "body_upper_width_mm": 31.0,
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "expected_superior_reference": "BONE_T10",
+      "feature_evidence": {
+        "catalog_locator": "references/spine/features.json#/feature_sets/8",
+        "source_ids": [
+          "thoracic_features"
+        ],
+        "source_locator": "Structure and Function, atypical T11/T12"
+      },
+      "feature_geometry": null,
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "measurement_provenance": {
+        "body_anterior_height_mm": "references/dim072/catalog.json#/candidates/6/fields/body_anterior_height_mm",
+        "body_lower_width_mm": "references/dim072/catalog.json#/candidates/6/fields/body_lower_width_mm",
+        "body_mid_width_mm": "references/dim072/catalog.json#/candidates/6/fields/body_mid_width_mm",
+        "body_upper_width_mm": "references/dim072/catalog.json#/candidates/6/fields/body_upper_width_mm"
+      },
+      "mechanical_definition": null,
+      "notable_features": [
+        "Single pair of complete costal facets for rib 11.",
+        "No transverse costal facets."
+      ],
+      "physics": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "source": "physics.mass_kg",
+          "status": "unknown"
+        }
+      },
+      "record_status": "present",
+      "reference_declarations": [
+        "https://www.asianspinejournal.org/upload/pdf/asj-5-20.pdf",
+        "references/dim072/catalog.json#/candidates/6",
+        "https://www.ncbi.nlm.nih.gov/books/NBK459153/"
+      ],
+      "source_file": {
+        "path": "skeleton/bones/bone_t11.py",
+        "sha256": "0afea8da627a1b144dc48642e62add32bc6b32c39b0737eabe57f9ef0a792d2c"
+      },
+      "whole_bone_unknown_fields": [
+        "length_mm",
+        "width_mm",
+        "thickness_mm"
+      ]
+    },
+    {
+      "admitted_feature_fields": [
+        "body_anterior_height_mm",
+        "body_lower_width_mm",
+        "body_mid_width_mm",
+        "body_posterior_height_mm",
+        "body_upper_width_mm"
+      ],
+      "anatomical_parent": {
+        "bone_id": "BONE_T11",
+        "reference": "T11",
+        "status": "unique_display_name"
+      },
+      "bone_id": "BONE_T12",
+      "dataset_key": null,
+      "dimensional_status": "partial_source_backed",
+      "dimensions_mm": {
+        "body_anterior_height_mm": 21.83,
+        "body_lower_width_mm": 37.67,
+        "body_mid_width_mm": 32.91,
+        "body_posterior_height_mm": 29.35,
+        "body_upper_width_mm": 33.99,
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "expected_superior_reference": "BONE_T11",
+      "feature_evidence": {
+        "catalog_locator": "references/spine/features.json#/feature_sets/9",
+        "source_ids": [
+          "thoracic_features"
+        ],
+        "source_locator": "Structure and Function, atypical T12"
+      },
+      "feature_geometry": null,
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "measurement_provenance": {
+        "body_anterior_height_mm": "references/dim072/catalog.json#/candidates/5/fields/body_anterior_height_mm",
+        "body_lower_width_mm": "references/dim072/catalog.json#/candidates/5/fields/body_lower_width_mm",
+        "body_mid_width_mm": "references/dim072/catalog.json#/candidates/5/fields/body_mid_width_mm",
+        "body_posterior_height_mm": "references/dim072/catalog.json#/candidates/5/fields/body_posterior_height_mm",
+        "body_upper_width_mm": "references/dim072/catalog.json#/candidates/5/fields/body_upper_width_mm"
+      },
+      "mechanical_definition": null,
+      "notable_features": [
+        "Single pair of complete costal facets for rib 12; no transverse costal facets.",
+        "Transitional thoracic superior and lumbar-type inferior articular morphology."
+      ],
+      "physics": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "source": "physics.mass_kg",
+          "status": "unknown"
+        }
+      },
+      "record_status": "present",
+      "reference_declarations": [
+        "https://www.asianspinejournal.org/upload/pdf/asj-5-20.pdf",
+        "references/dim072/catalog.json#/candidates/5",
+        "https://www.ncbi.nlm.nih.gov/books/NBK459153/"
+      ],
+      "source_file": {
+        "path": "skeleton/bones/bone_t12.py",
+        "sha256": "dac566d43dd240e208b9be7185cd141c52a7b4e0266667b8a26f8ca8b78357c6"
+      },
+      "whole_bone_unknown_fields": [
+        "length_mm",
+        "width_mm",
+        "thickness_mm"
+      ]
+    },
+    {
+      "admitted_feature_fields": [
+        "body_height_mm",
+        "body_lower_ap_mm",
+        "body_lower_width_mm",
+        "body_upper_ap_mm",
+        "body_upper_width_mm"
+      ],
+      "anatomical_parent": {
+        "bone_id": "BONE_T12",
+        "reference": "T12",
+        "status": "unique_display_name"
+      },
+      "bone_id": "BONE_L1",
+      "dataset_key": null,
+      "dimensional_status": "partial_source_backed",
+      "dimensions_mm": {
+        "body_height_mm": 24.53,
+        "body_lower_ap_mm": 32.11,
+        "body_lower_width_mm": 46.07,
+        "body_upper_ap_mm": 31.51,
+        "body_upper_width_mm": 42.73,
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "expected_superior_reference": "BONE_T12",
+      "feature_evidence": {
+        "catalog_locator": "references/spine/features.json#/feature_sets/10",
+        "source_ids": [
+          "openstax_spine"
+        ],
+        "source_locator": "Lumbar Vertebrae and Figure 7.28"
+      },
+      "feature_geometry": null,
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "measurement_provenance": {
+        "body_height_mm": "references/dim072/catalog.json#/candidates/4/fields/body_height_mm",
+        "body_lower_ap_mm": "references/dim072/catalog.json#/candidates/4/fields/body_lower_ap_mm",
+        "body_lower_width_mm": "references/dim072/catalog.json#/candidates/4/fields/body_lower_width_mm",
+        "body_upper_ap_mm": "references/dim072/catalog.json#/candidates/4/fields/body_upper_ap_mm",
+        "body_upper_width_mm": "references/dim072/catalog.json#/candidates/4/fields/body_upper_width_mm"
+      },
+      "mechanical_definition": null,
+      "notable_features": [
+        "Large vertebral body with pedicles, laminae and vertebral foramen.",
+        "Short, blunt spinous process; transverse and articular processes.",
+        "Superior articular facets face medially; inferior facets face laterally."
+      ],
+      "physics": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "source": "physics.mass_kg",
+          "status": "unknown"
+        }
+      },
+      "record_status": "present",
+      "reference_declarations": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC8917002/",
+        "references/dim072/catalog.json#/candidates/4",
+        "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column"
+      ],
+      "source_file": {
+        "path": "skeleton/bones/bone_l1.py",
+        "sha256": "c4fb6fe2c7b0001eb8a53a32c00752d0bb113e1b40afba740cbb913b5c64b676"
+      },
+      "whole_bone_unknown_fields": [
+        "length_mm",
+        "width_mm",
+        "thickness_mm"
+      ]
+    },
+    {
+      "admitted_feature_fields": [
+        "body_height_mm",
+        "body_lower_ap_mm",
+        "body_lower_width_mm",
+        "body_upper_ap_mm",
+        "body_upper_width_mm"
+      ],
+      "anatomical_parent": {
+        "bone_id": "BONE_L1",
+        "reference": "L1",
+        "status": "unique_display_name"
+      },
+      "bone_id": "BONE_L2",
+      "dataset_key": null,
+      "dimensional_status": "partial_source_backed",
+      "dimensions_mm": {
+        "body_height_mm": 25.39,
+        "body_lower_ap_mm": 33.69,
+        "body_lower_width_mm": 48.18,
+        "body_upper_ap_mm": 33.12,
+        "body_upper_width_mm": 45.8,
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "expected_superior_reference": "BONE_L1",
+      "feature_evidence": {
+        "catalog_locator": "references/spine/features.json#/feature_sets/10",
+        "source_ids": [
+          "openstax_spine"
+        ],
+        "source_locator": "Lumbar Vertebrae and Figure 7.28"
+      },
+      "feature_geometry": null,
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "measurement_provenance": {
+        "body_height_mm": "references/dim072/catalog.json#/candidates/3/fields/body_height_mm",
+        "body_lower_ap_mm": "references/dim072/catalog.json#/candidates/3/fields/body_lower_ap_mm",
+        "body_lower_width_mm": "references/dim072/catalog.json#/candidates/3/fields/body_lower_width_mm",
+        "body_upper_ap_mm": "references/dim072/catalog.json#/candidates/3/fields/body_upper_ap_mm",
+        "body_upper_width_mm": "references/dim072/catalog.json#/candidates/3/fields/body_upper_width_mm"
+      },
+      "mechanical_definition": null,
+      "notable_features": [
+        "Large vertebral body with pedicles, laminae and vertebral foramen.",
+        "Short, blunt spinous process; transverse and articular processes.",
+        "Superior articular facets face medially; inferior facets face laterally."
+      ],
+      "physics": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "source": "physics.mass_kg",
+          "status": "unknown"
+        }
+      },
+      "record_status": "present",
+      "reference_declarations": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC8917002/",
+        "references/dim072/catalog.json#/candidates/3",
+        "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column"
+      ],
+      "source_file": {
+        "path": "skeleton/bones/bone_l2.py",
+        "sha256": "5e23df7a3b8afc549259e3363b35357f19e174866d702dfc0403ed2a9ca25a05"
+      },
+      "whole_bone_unknown_fields": [
+        "length_mm",
+        "width_mm",
+        "thickness_mm"
+      ]
+    },
+    {
+      "admitted_feature_fields": [
+        "body_height_mm",
+        "body_lower_ap_mm",
+        "body_lower_width_mm",
+        "body_upper_ap_mm",
+        "body_upper_width_mm"
+      ],
+      "anatomical_parent": {
+        "bone_id": "BONE_L2",
+        "reference": "L2",
+        "status": "unique_display_name"
+      },
+      "bone_id": "BONE_L3",
+      "dataset_key": null,
+      "dimensional_status": "partial_source_backed",
+      "dimensions_mm": {
+        "body_height_mm": 25.32,
+        "body_lower_ap_mm": 34.25,
+        "body_lower_width_mm": 50.97,
+        "body_upper_ap_mm": 34.48,
+        "body_upper_width_mm": 48.22,
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "expected_superior_reference": "BONE_L2",
+      "feature_evidence": {
+        "catalog_locator": "references/spine/features.json#/feature_sets/10",
+        "source_ids": [
+          "openstax_spine"
+        ],
+        "source_locator": "Lumbar Vertebrae and Figure 7.28"
+      },
+      "feature_geometry": null,
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "measurement_provenance": {
+        "body_height_mm": "references/dim072/catalog.json#/candidates/2/fields/body_height_mm",
+        "body_lower_ap_mm": "references/dim072/catalog.json#/candidates/2/fields/body_lower_ap_mm",
+        "body_lower_width_mm": "references/dim072/catalog.json#/candidates/2/fields/body_lower_width_mm",
+        "body_upper_ap_mm": "references/dim072/catalog.json#/candidates/2/fields/body_upper_ap_mm",
+        "body_upper_width_mm": "references/dim072/catalog.json#/candidates/2/fields/body_upper_width_mm"
+      },
+      "mechanical_definition": null,
+      "notable_features": [
+        "Large vertebral body with pedicles, laminae and vertebral foramen.",
+        "Short, blunt spinous process; transverse and articular processes.",
+        "Superior articular facets face medially; inferior facets face laterally."
+      ],
+      "physics": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "source": "physics.mass_kg",
+          "status": "unknown"
+        }
+      },
+      "record_status": "present",
+      "reference_declarations": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC8917002/",
+        "references/dim072/catalog.json#/candidates/2",
+        "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column"
+      ],
+      "source_file": {
+        "path": "skeleton/bones/bone_l3.py",
+        "sha256": "837de416290c0ff2e79dfd2a5524cc54bb11218c4fb80a5458716733dedcdc86"
+      },
+      "whole_bone_unknown_fields": [
+        "length_mm",
+        "width_mm",
+        "thickness_mm"
+      ]
+    },
+    {
+      "admitted_feature_fields": [
+        "body_height_mm",
+        "body_lower_ap_mm",
+        "body_lower_width_mm",
+        "body_upper_ap_mm",
+        "body_upper_width_mm"
+      ],
+      "anatomical_parent": {
+        "bone_id": "BONE_L3",
+        "reference": "L3",
+        "status": "unique_display_name"
+      },
+      "bone_id": "BONE_L4",
+      "dataset_key": null,
+      "dimensional_status": "partial_source_backed",
+      "dimensions_mm": {
+        "body_height_mm": 25.37,
+        "body_lower_ap_mm": 35.0,
+        "body_lower_width_mm": 52.82,
+        "body_upper_ap_mm": 34.96,
+        "body_upper_width_mm": 50.87,
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "expected_superior_reference": "BONE_L3",
+      "feature_evidence": {
+        "catalog_locator": "references/spine/features.json#/feature_sets/10",
+        "source_ids": [
+          "openstax_spine"
+        ],
+        "source_locator": "Lumbar Vertebrae and Figure 7.28"
+      },
+      "feature_geometry": null,
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "measurement_provenance": {
+        "body_height_mm": "references/dim072/catalog.json#/candidates/1/fields/body_height_mm",
+        "body_lower_ap_mm": "references/dim072/catalog.json#/candidates/1/fields/body_lower_ap_mm",
+        "body_lower_width_mm": "references/dim072/catalog.json#/candidates/1/fields/body_lower_width_mm",
+        "body_upper_ap_mm": "references/dim072/catalog.json#/candidates/1/fields/body_upper_ap_mm",
+        "body_upper_width_mm": "references/dim072/catalog.json#/candidates/1/fields/body_upper_width_mm"
+      },
+      "mechanical_definition": null,
+      "notable_features": [
+        "Large vertebral body with pedicles, laminae and vertebral foramen.",
+        "Short, blunt spinous process; transverse and articular processes.",
+        "Superior articular facets face medially; inferior facets face laterally."
+      ],
+      "physics": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "source": "physics.mass_kg",
+          "status": "unknown"
+        }
+      },
+      "record_status": "present",
+      "reference_declarations": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC8917002/",
+        "references/dim072/catalog.json#/candidates/1",
+        "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column"
+      ],
+      "source_file": {
+        "path": "skeleton/bones/bone_l4.py",
+        "sha256": "5061f116dc2183c416a792413a9ee56ee4828da35a17ef45ba72729918a4659b"
+      },
+      "whole_bone_unknown_fields": [
+        "length_mm",
+        "width_mm",
+        "thickness_mm"
+      ]
+    },
+    {
+      "admitted_feature_fields": [
+        "body_height_mm",
+        "body_lower_ap_mm",
+        "body_lower_width_mm",
+        "body_upper_ap_mm",
+        "body_upper_width_mm"
+      ],
+      "anatomical_parent": {
+        "bone_id": "BONE_L4",
+        "reference": "L4",
+        "status": "unique_display_name"
+      },
+      "bone_id": "BONE_L5",
+      "dataset_key": null,
+      "dimensional_status": "partial_source_backed",
+      "dimensions_mm": {
+        "body_height_mm": 24.48,
+        "body_lower_ap_mm": 34.32,
+        "body_lower_width_mm": 53.22,
+        "body_upper_ap_mm": 35.12,
+        "body_upper_width_mm": 54.1,
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "expected_superior_reference": "BONE_L4",
+      "feature_evidence": {
+        "catalog_locator": "references/spine/features.json#/feature_sets/10",
+        "source_ids": [
+          "openstax_spine"
+        ],
+        "source_locator": "Lumbar Vertebrae and Figure 7.28"
+      },
+      "feature_geometry": null,
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "measurement_provenance": {
+        "body_height_mm": "references/dim072/catalog.json#/candidates/0/fields/body_height_mm",
+        "body_lower_ap_mm": "references/dim072/catalog.json#/candidates/0/fields/body_lower_ap_mm",
+        "body_lower_width_mm": "references/dim072/catalog.json#/candidates/0/fields/body_lower_width_mm",
+        "body_upper_ap_mm": "references/dim072/catalog.json#/candidates/0/fields/body_upper_ap_mm",
+        "body_upper_width_mm": "references/dim072/catalog.json#/candidates/0/fields/body_upper_width_mm"
+      },
+      "mechanical_definition": null,
+      "notable_features": [
+        "Large vertebral body with pedicles, laminae and vertebral foramen.",
+        "Short, blunt spinous process; transverse and articular processes.",
+        "Superior articular facets face medially; inferior facets face laterally."
+      ],
+      "physics": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "source": "physics.mass_kg",
+          "status": "unknown"
+        }
+      },
+      "record_status": "present",
+      "reference_declarations": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC8917002/",
+        "references/dim072/catalog.json#/candidates/0",
+        "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column"
+      ],
+      "source_file": {
+        "path": "skeleton/bones/bone_l5.py",
+        "sha256": "b22224141c2810a91d94983dd7158e4f49aa089133be166827a8adf23cf2bc2c"
+      },
+      "whole_bone_unknown_fields": [
+        "length_mm",
+        "width_mm",
+        "thickness_mm"
+      ]
+    },
+    {
+      "admitted_feature_fields": [],
+      "anatomical_parent": {
+        "bone_id": "BONE_L5",
+        "reference": "L5",
+        "status": "unique_display_name"
+      },
+      "bone_id": "BONE_SACRUM",
+      "dataset_key": "Sacrum",
+      "dimensional_status": "legacy_dataset_unverified",
+      "dimensions_mm": {
+        "length_mm": 100.0,
+        "thickness_mm": 10.0,
+        "width_mm": 110.0
+      },
+      "expected_superior_reference": "BONE_L5",
+      "feature_evidence": {
+        "catalog_locator": "references/spine/features.json#/feature_sets/11",
+        "source_ids": [
+          "openstax_spine"
+        ],
+        "source_locator": "Sacrum and Coccyx and Figure 7.29"
+      },
+      "feature_geometry": null,
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "measurement_provenance": {},
+      "mechanical_definition": null,
+      "notable_features": [
+        "Typically five fused sacral segments; one adult inventory identity.",
+        "Sacral promontory and auricular surfaces for articulation with the ilia.",
+        "Sacral canal, sacral hiatus and paired anterior/posterior sacral foramina."
+      ],
+      "physics": {
+        "mass_kg": 0.165,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "estimated"
+        }
+      },
+      "record_status": "present",
+      "reference_declarations": [
+        "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column"
+      ],
+      "source_file": {
+        "path": "skeleton/bones/bone_sacrum.py",
+        "sha256": "931466e6bc66d96d7d956350beb44b6011775a68c68055d55804ba7052ac63a1"
+      },
+      "whole_bone_unknown_fields": []
+    },
+    {
+      "admitted_feature_fields": [],
+      "anatomical_parent": {
+        "bone_id": "BONE_SACRUM",
+        "reference": "BONE_SACRUM",
+        "status": "id"
+      },
+      "bone_id": "BONE_COCCYX",
+      "dataset_key": null,
+      "dimensional_status": "unknown",
+      "dimensions_mm": {
+        "length_mm": null,
+        "thickness_mm": null,
+        "width_mm": null
+      },
+      "expected_superior_reference": "BONE_SACRUM",
+      "feature_evidence": {
+        "catalog_locator": "references/spine/features.json#/feature_sets/12",
+        "source_ids": [
+          "coccyx_ct_2013"
+        ],
+        "source_locator": "Methods/Table 1 and Results, coccygeal morphology"
+      },
+      "feature_geometry": null,
+      "geometry": {
+        "reason": "no source geometry",
+        "status": "unresolved"
+      },
+      "measurement_provenance": {},
+      "mechanical_definition": null,
+      "notable_features": [
+        "Usually four coccygeal segments, with three to five observed; fusion is variable.",
+        "Sacrococcygeal and intercoccygeal interfaces vary in fusion and alignment.",
+        "Straight and curved lengths are different anatomical measurements."
+      ],
+      "physics": {
+        "mass_kg": null,
+        "mass_provenance": {
+          "density": "material.density",
+          "dimensions": "dimensions",
+          "method": "box_volume_times_density",
+          "status": "unknown"
+        }
+      },
+      "record_status": "present",
+      "reference_declarations": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC3631051/"
+      ],
+      "source_file": {
+        "path": "skeleton/bones/bone_coccyx.py",
+        "sha256": "ca17d27d9f1bef597c16e6be5560bb91457f3ca07c7a99e5d99d7b85696d5448"
+      },
+      "whole_bone_unknown_fields": [
+        "length_mm",
+        "width_mm",
+        "thickness_mm"
+      ]
+    }
+  ],
+  "canonical_reference": {
+    "height_mm": 1676.4,
+    "registered": false,
+    "span_mm": 1676.4,
+    "version": "1.0.0"
+  },
+  "complete_spine_snapshot": true,
+  "consistency_pass": true,
+  "counts": {
+    "admitted_feature_fields_checked": 102,
+    "consistency_issues": 0,
+    "expected_spine_bones": 26,
+    "present_spine_bones": 26,
+    "published_rows_reviewed": 105
+  },
+  "inputs": {
+    "datasets": [
+      "c838292fdeda8e7ddbc026f80aaf9bff87a36d7ccd69dda4b2e5614e33496742"
+    ],
+    "dimension_catalog_sha256": "1c3e5ea701c5e480f9ee225f6b60fa6e971a60136a0a24816c6fef4fbefe67de",
+    "features_sha256": "77b2f851b9d99a6a924a62f5bdeee144ab8a4b393c03f68468d9f6ff5b0bd6b0",
+    "measurement_protocols": {
+      "path": "references/dim072/measurement_protocols.json",
+      "sha256": "b71cfd6cb2f40609ef334616b0c61637f65c702224d70a30307fb89acf25522f"
+    },
+    "native_snapshots": {
+      "cervical_ct_2021": {
+        "path": "references/dim072/cervical_ct_2021.json",
+        "sha256": "d7b02de31e4c96f0f7195f39525ce85b7c76ae5ce6e537f129a180fe29c2a6f4"
+      },
+      "lumbar_ct_2022": {
+        "path": "references/dim072/lumbar_ct_2022.json",
+        "sha256": "1d4658332c81ec2c8242dbf9526b220f26d06c3915154a205c91233dffa3dbe3"
+      },
+      "thoracic_caliper_2011": {
+        "path": "references/dim072/thoracic_caliper_2011.json",
+        "sha256": "21ea5530a035524ea2fd8b41a274f954fcf751ec0b88e5b44d4c72d672fd8d89"
+      }
+    },
+    "source_review_sha256": "90c7db54767f3d684bdcdca3ef98faf2ae1f5d3dd1fcac0b489b8c4093afe59b",
+    "spine_declarations_sha256": "64bea1aa220b56a78c985731d4183b242682853385f99ceaf4863fa75e985f39"
+  },
+  "issues": [],
+  "missing_record_ids": [],
+  "open_evidence": [
+    "Whole-bone envelopes remain unknown for 24 unfused vertebrae and coccyx.",
+    "Sacrum dataset spans and estimated mass are unverified legacy inputs, not reviewed osteometry.",
+    "C2HT, T6_VBWs and T11_VBHp remain quarantined; no substitute is inferred.",
+    "Pedicle/lamina/process sizes, articular surfaces, facet positions, discs and soft-tissue interfaces remain unresolved.",
+    "Studio spine ellipsoids are provisional display proxies; none models the reviewed features.",
+    "Anatomical superior references do not qualify mechanical joints, limits, signal routing or load paths."
+  ],
+  "published_source_review": {
+    "baseline_commit": "fa02634120438687d67c6d156aa0aec1adf41aa1",
+    "fabrication_released": false,
+    "geometry_qualified": false,
+    "notes": [
+      "105 native rows checked; 102 remain admitted and three remain quarantined. No numerical bone value is changed.",
+      "Cervical Results identify 106 male and 104 female developmental subjects. The same paragraph ambiguously calls the 40 male / 44 female remainder training; Table 2 training and validation columns remain separate.",
+      "C2HT, T6_VBWs and T11_VBHp remain quarantined, including their printed numerical values.",
+      "Sacrum 100 x 110 x 10 mm in female_21_baseline is legacy dataset input without admitted osteometric provenance; this review does not verify it.",
+      "No feature sizes, facet coordinates, joint centers, donor registration, mechanical clearance or physical evidence are supplied."
+    ],
+    "numerical_mismatches": [],
+    "numerical_reviews": [
+      {
+        "admitted_rows": 19,
+        "comparison": "exact numerical match",
+        "method": "XML female training columns",
+        "native_snapshot": {
+          "path": "references/dim072/cervical_ct_2021.json",
+          "sha256": "d7b02de31e4c96f0f7195f39525ce85b7c76ae5ce6e537f129a180fe29c2a6f4"
+        },
+        "publisher_pdf": null,
+        "quarantined_parameters": [
+          "C2HT"
+        ],
+        "rows_checked": 20,
+        "source_id": "cervical_ct_2021",
+        "source_response": {
+          "bytes": 137201,
+          "content_type": "application/xml",
+          "sha256": "3b11e067797298507b3885f8b13ee0bb006739f8f18012c9a971b1f34782a149",
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8354927/fullTextXML"
+        },
+        "statistics_checked": [
+          "mean",
+          "sd",
+          "minimum",
+          "maximum"
+        ],
+        "table": "Table 2, Female training set; Table 1 observer error retained in source"
+      },
+      {
+        "admitted_rows": 25,
+        "comparison": "exact numerical match",
+        "method": "XML Table 1 female U/L body rows, excluding disc rows",
+        "native_snapshot": {
+          "path": "references/dim072/lumbar_ct_2022.json",
+          "sha256": "1d4658332c81ec2c8242dbf9526b220f26d06c3915154a205c91233dffa3dbe3"
+        },
+        "publisher_pdf": null,
+        "quarantined_parameters": [],
+        "rows_checked": 25,
+        "source_id": "lumbar_ct_2022",
+        "source_response": {
+          "bytes": 163844,
+          "content_type": "application/xml",
+          "sha256": "d2cab89a91cda90d3d63d2b1a5bdf3c9db36a39cf9feb4c0ffa7c0727979d920",
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8917002/fullTextXML"
+        },
+        "statistics_checked": [
+          "mean",
+          "sd"
+        ],
+        "table": "Table 1, female group; L1-L5 U and L rows"
+      },
+      {
+        "admitted_rows": 58,
+        "comparison": "exact numerical match",
+        "method": "Publisher PDF page 7 / printed page 26, female columns; pdftotext -layout plus rendered visual review",
+        "native_snapshot": {
+          "path": "references/dim072/thoracic_caliper_2011.json",
+          "sha256": "21ea5530a035524ea2fd8b41a274f954fcf751ec0b88e5b44d4c72d672fd8d89"
+        },
+        "publisher_pdf": {
+          "bytes": 768144,
+          "sha256": "a0acf52435e429df5ca92d250463f38c97c3708406e854296dd8620c5280cc5e",
+          "url": "https://www.asianspinejournal.org/upload/pdf/asj-5-20.pdf"
+        },
+        "quarantined_parameters": [
+          "T11_VBHp",
+          "T6_VBWs"
+        ],
+        "rows_checked": 60,
+        "source_id": "thoracic_caliper_2011",
+        "source_response": {
+          "bytes": 76087,
+          "content_type": "application/xml",
+          "sha256": "ba723e19cdbbd05e3b1e9a6e67ea59908c0a49146f8b19cf94fe0113fbb3a7b7",
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3047895/fullTextXML"
+        },
+        "statistics_checked": [
+          "mean",
+          "sd"
+        ],
+        "table": "Table 3, female columns; PDF page 7 / printed 26"
+      }
+    ],
+    "reviewed_on": "2026-11-09",
+    "schema_version": "PHY_SPINE_SOURCE_REVIEW_V1",
+    "scope": "published_table_transcription_and_qualitative_feature_review_only"
+  },
+  "qualification": {
+    "anatomical_surface_geometry": "unverified",
+    "fabrication_released": false,
+    "mechanical_transforms_validated": false,
+    "physical_evidence": "unmeasured"
+  },
+  "scope": "spine_dimensions_qualitative_features_and_declared_anatomical_parents",
+  "sources": {
+    "coccyx_ct_2013": {
+      "doi": "10.1007/s00586-012-2595-2",
+      "scope": "Qualitative segment/fusion variability and distinct straight/curved length definitions; no new numerical admission.",
+      "title": "Woon et al., CT morphology and morphometry of the normal adult coccyx",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3631051/"
+    },
+    "openstax_spine": {
+      "scope": "Qualitative anatomy and superior/inferior anatomical neighbors; no dimensions or mechanical joint definitions.",
+      "title": "OpenStax Anatomy and Physiology 2e, section 7.3: The Vertebral Column",
+      "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column"
+    },
+    "thoracic_features": {
+      "scope": "Typical versus atypical thoracic costal facets and T9/T10 variability; no feature sizes or mechanical limits.",
+      "title": "StatPearls: Anatomy, Back, Thoracic Vertebrae",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK459153/"
+    }
+  }
+}

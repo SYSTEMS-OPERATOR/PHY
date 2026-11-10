@@ -1,13 +1,13 @@
 {
-  "canonical_records_sha256": "c97f35a96885bd6b83bd183f2dfdc1eb223faa2668b5a89ce9ec95af71b59c3e",
-  "canonical_sources_sha256": "fd287c7403376b058b993bff0eefe444f17b90d27c1b3a56773de11d3789e39f",
+  "canonical_records_sha256": "db8f2f89ae4527a173f545fdebea6beb1709ab7782b0ad83ae1e7e19a662427c",
+  "canonical_sources_sha256": "7259e641f0e97266442cc2b68c7ad5e1aa17ac17cfb36012b73b12f0f224f898",
   "dimension_catalog": {
     "path": "references/dim072/catalog.json",
     "sha256": "1c3e5ea701c5e480f9ee225f6b60fa6e971a60136a0a24816c6fef4fbefe67de"
   },
   "display_parts_sha256": "d11a9e2ecd9f16f62ddab50c489a0d9b8b73b3ee22213bae0d1c4b6d43868d5e",
-  "engineering_revision": "c3e260cddf022f9acec1dfa457efeeb50f4750fc",
-  "engineering_revision_time": "2026-10-14T09:01:06Z",
+  "engineering_revision": "cb472b8552a75e96a8a857e9e22979325e2d3900",
+  "engineering_revision_time": "2026-11-09T22:11:33-05:00",
   "nasa_catalog": {
     "path": "references/nasa_positioning_ranges.json",
     "sha256": "86a5d25105c895322fe88cdf04cdf58b96d1e712fe6dc39ce55ad68831a577a3"

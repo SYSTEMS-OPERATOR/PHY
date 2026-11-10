@@ -18,7 +18,7 @@ bone = BoneSpec(
         'width_mm': None,
     },
     function = ['weight bearing'],
-    notable_features = [],
+    notable_features = ['Large vertebral body with pedicles, laminae and vertebral foramen.', 'Short, blunt spinous process; transverse and articular processes.', 'Superior articular facets face medially; inferior facets face laterally.'],
     developmental_notes = 'large body for support',
     variations = '',
     unique_id = 'BONE_L5',
@@ -26,7 +26,7 @@ bone = BoneSpec(
     embodiment = "virtual",
     geometry = {},
     physics = {"mass_kg": None},
-    references = ['https://pmc.ncbi.nlm.nih.gov/articles/PMC8917002/', 'references/dim072/catalog.json#/candidates/0'],
+    references = ['https://pmc.ncbi.nlm.nih.gov/articles/PMC8917002/', 'references/dim072/catalog.json#/candidates/0', 'https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column'],
     metric_sources = {
         'body_height_mm': 'references/dim072/catalog.json#/candidates/0/fields/body_height_mm',
         'body_lower_ap_mm': 'references/dim072/catalog.json#/candidates/0/fields/body_lower_ap_mm',

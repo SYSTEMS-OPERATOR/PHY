@@ -62,8 +62,8 @@ class EngineeringAuditTest(unittest.TestCase):
         self.assertEqual(observed, {
             "individual_display_identity": 206, "source_module_present": 206,
             "canonical_record_present": 206, "declared_dimensions_complete": 40,
-            "dataset_binding_present": 21, "reference_declaration_present": 45,
-            "dimensional_primitive_available": 30, "declared_anatomical_references_resolved": 24,
+            "dataset_binding_present": 21, "reference_declaration_present": 47,
+            "dimensional_primitive_available": 30, "declared_anatomical_references_resolved": 26,
             "record_validation_pass": 0,
         })
         self.assertEqual(self.report["missing_canonical_records"], [])

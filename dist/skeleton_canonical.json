@@ -4,15 +4,14 @@
     "connection_resolution": {
       "children": [],
       "parent": {
-        "bone_id": null,
-        "candidates": [],
-        "reference": "skull",
-        "status": "missing"
+        "bone_id": "BONE_OCCIPITAL",
+        "reference": "BONE_OCCIPITAL",
+        "status": "id"
       }
     },
     "connections": {
       "children": [],
-      "parent": null,
+      "parent": "BONE_OCCIPITAL",
       "role": "anatomical_references"
     },
     "dimensions": {
@@ -30,7 +29,7 @@
     "latin_name": "C1",
     "manufacturing_notes": [
       "Source-backed reference spans only; no registration to SOPHY, qualified surface, material, joint or mounting interface. See dimension evidence catalog.",
-      "Canal dimensions are clearances, not dimensions of solid bone or a defined mechanical cartridge.",
+      "Study canal/foramen spans describe an osseous opening, not usable mechanical clearance, bone dimensions or a cartridge envelope.",
       "Atlas has no centrum; no C1 body height invented."
     ],
     "material": {
@@ -48,13 +47,14 @@
     },
     "references": [
       "https://pmc.ncbi.nlm.nih.gov/articles/PMC8354927/",
-      "references/dim072/catalog.json#/candidates/23"
+      "references/dim072/catalog.json#/candidates/23",
+      "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column"
     ],
     "region": "cervical vertebrae",
     "revision": "1.0.0",
     "source_connections": {
       "children": [],
-      "parent": "skull"
+      "parent": "BONE_OCCIPITAL"
     },
     "source_ids": [
       "BONE_C1"
@@ -100,7 +100,7 @@
     "latin_name": "C2",
     "manufacturing_notes": [
       "Source-backed reference spans only; no registration to SOPHY, qualified surface, material, joint or mounting interface. See dimension evidence catalog.",
-      "Canal dimensions are clearances, not dimensions of solid bone or a defined mechanical cartridge.",
+      "Study canal/foramen spans describe an osseous opening, not usable mechanical clearance, bone dimensions or a cartridge envelope.",
       "C2 HT retained in native evidence but not admitted until odontoid/span semantics are clarified."
     ],
     "material": {
@@ -118,7 +118,8 @@
     },
     "references": [
       "https://pmc.ncbi.nlm.nih.gov/articles/PMC8354927/",
-      "references/dim072/catalog.json#/candidates/22"
+      "references/dim072/catalog.json#/candidates/22",
+      "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column"
     ],
     "region": "cervical vertebrae",
     "revision": "1.0.0",
@@ -171,7 +172,7 @@
     "latin_name": "C3",
     "manufacturing_notes": [
       "Source-backed reference spans only; no registration to SOPHY, qualified surface, material, joint or mounting interface. See dimension evidence catalog.",
-      "Canal dimensions are clearances, not dimensions of solid bone or a defined mechanical cartridge."
+      "Study canal/foramen spans describe an osseous opening, not usable mechanical clearance, bone dimensions or a cartridge envelope."
     ],
     "material": {
       "density": 1800.0,
@@ -188,7 +189,8 @@
     },
     "references": [
       "https://pmc.ncbi.nlm.nih.gov/articles/PMC8354927/",
-      "references/dim072/catalog.json#/candidates/21"
+      "references/dim072/catalog.json#/candidates/21",
+      "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column"
     ],
     "region": "cervical vertebrae",
     "revision": "1.0.0",
@@ -241,7 +243,7 @@
     "latin_name": "C4",
     "manufacturing_notes": [
       "Source-backed reference spans only; no registration to SOPHY, qualified surface, material, joint or mounting interface. See dimension evidence catalog.",
-      "Canal dimensions are clearances, not dimensions of solid bone or a defined mechanical cartridge."
+      "Study canal/foramen spans describe an osseous opening, not usable mechanical clearance, bone dimensions or a cartridge envelope."
     ],
     "material": {
       "density": 1800.0,
@@ -258,7 +260,8 @@
     },
     "references": [
       "https://pmc.ncbi.nlm.nih.gov/articles/PMC8354927/",
-      "references/dim072/catalog.json#/candidates/20"
+      "references/dim072/catalog.json#/candidates/20",
+      "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column"
     ],
     "region": "cervical vertebrae",
     "revision": "1.0.0",
@@ -311,7 +314,7 @@
     "latin_name": "C5",
     "manufacturing_notes": [
       "Source-backed reference spans only; no registration to SOPHY, qualified surface, material, joint or mounting interface. See dimension evidence catalog.",
-      "Canal dimensions are clearances, not dimensions of solid bone or a defined mechanical cartridge."
+      "Study canal/foramen spans describe an osseous opening, not usable mechanical clearance, bone dimensions or a cartridge envelope."
     ],
     "material": {
       "density": 1800.0,
@@ -328,7 +331,8 @@
     },
     "references": [
       "https://pmc.ncbi.nlm.nih.gov/articles/PMC8354927/",
-      "references/dim072/catalog.json#/candidates/19"
+      "references/dim072/catalog.json#/candidates/19",
+      "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column"
     ],
     "region": "cervical vertebrae",
     "revision": "1.0.0",
@@ -381,7 +385,7 @@
     "latin_name": "C6",
     "manufacturing_notes": [
       "Source-backed reference spans only; no registration to SOPHY, qualified surface, material, joint or mounting interface. See dimension evidence catalog.",
-      "Canal dimensions are clearances, not dimensions of solid bone or a defined mechanical cartridge."
+      "Study canal/foramen spans describe an osseous opening, not usable mechanical clearance, bone dimensions or a cartridge envelope."
     ],
     "material": {
       "density": 1800.0,
@@ -398,7 +402,8 @@
     },
     "references": [
       "https://pmc.ncbi.nlm.nih.gov/articles/PMC8354927/",
-      "references/dim072/catalog.json#/candidates/18"
+      "references/dim072/catalog.json#/candidates/18",
+      "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column"
     ],
     "region": "cervical vertebrae",
     "revision": "1.0.0",
@@ -451,7 +456,7 @@
     "latin_name": "C7",
     "manufacturing_notes": [
       "Source-backed reference spans only; no registration to SOPHY, qualified surface, material, joint or mounting interface. See dimension evidence catalog.",
-      "Canal dimensions are clearances, not dimensions of solid bone or a defined mechanical cartridge."
+      "Study canal/foramen spans describe an osseous opening, not usable mechanical clearance, bone dimensions or a cartridge envelope."
     ],
     "material": {
       "density": 1800.0,
@@ -468,7 +473,8 @@
     },
     "references": [
       "https://pmc.ncbi.nlm.nih.gov/articles/PMC8354927/",
-      "references/dim072/catalog.json#/candidates/17"
+      "references/dim072/catalog.json#/candidates/17",
+      "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column"
     ],
     "region": "cervical vertebrae",
     "revision": "1.0.0",
@@ -901,15 +907,14 @@
     "connection_resolution": {
       "children": [],
       "parent": {
-        "bone_id": null,
-        "candidates": [],
-        "reference": "sacrum",
-        "status": "missing"
+        "bone_id": "BONE_SACRUM",
+        "reference": "BONE_SACRUM",
+        "status": "id"
       }
     },
     "connections": {
       "children": [],
-      "parent": null,
+      "parent": "BONE_SACRUM",
       "role": "anatomical_references"
     },
     "dimensions": {
@@ -939,12 +944,14 @@
         "status": "unknown"
       }
     },
-    "references": [],
+    "references": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC3631051/"
+    ],
     "region": "coccyx",
     "revision": "1.0.0",
     "source_connections": {
       "children": [],
-      "parent": "sacrum"
+      "parent": "BONE_SACRUM"
     },
     "source_ids": [
       "BONE_COCCYX"
@@ -2428,7 +2435,8 @@
     },
     "references": [
       "https://pmc.ncbi.nlm.nih.gov/articles/PMC8917002/",
-      "references/dim072/catalog.json#/candidates/4"
+      "references/dim072/catalog.json#/candidates/4",
+      "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column"
     ],
     "region": "lumbar vertebrae",
     "revision": "1.0.0",
@@ -2500,7 +2508,8 @@
     },
     "references": [
       "https://pmc.ncbi.nlm.nih.gov/articles/PMC8917002/",
-      "references/dim072/catalog.json#/candidates/3"
+      "references/dim072/catalog.json#/candidates/3",
+      "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column"
     ],
     "region": "lumbar vertebrae",
     "revision": "1.0.0",
@@ -2572,7 +2581,8 @@
     },
     "references": [
       "https://pmc.ncbi.nlm.nih.gov/articles/PMC8917002/",
-      "references/dim072/catalog.json#/candidates/2"
+      "references/dim072/catalog.json#/candidates/2",
+      "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column"
     ],
     "region": "lumbar vertebrae",
     "revision": "1.0.0",
@@ -2644,7 +2654,8 @@
     },
     "references": [
       "https://pmc.ncbi.nlm.nih.gov/articles/PMC8917002/",
-      "references/dim072/catalog.json#/candidates/1"
+      "references/dim072/catalog.json#/candidates/1",
+      "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column"
     ],
     "region": "lumbar vertebrae",
     "revision": "1.0.0",
@@ -2716,7 +2727,8 @@
     },
     "references": [
       "https://pmc.ncbi.nlm.nih.gov/articles/PMC8917002/",
-      "references/dim072/catalog.json#/candidates/0"
+      "references/dim072/catalog.json#/candidates/0",
+      "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column"
     ],
     "region": "lumbar vertebrae",
     "revision": "1.0.0",
@@ -9319,7 +9331,9 @@
         "status": "estimated"
       }
     },
-    "references": [],
+    "references": [
+      "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column"
+    ],
     "region": "sacrum",
     "revision": "1.0.0",
     "source_connections": {
@@ -9924,7 +9938,8 @@
     },
     "references": [
       "https://www.asianspinejournal.org/upload/pdf/asj-5-20.pdf",
-      "references/dim072/catalog.json#/candidates/16"
+      "references/dim072/catalog.json#/candidates/16",
+      "https://www.ncbi.nlm.nih.gov/books/NBK459153/"
     ],
     "region": "thoracic vertebrae",
     "revision": "1.0.0",
@@ -9996,7 +10011,8 @@
     },
     "references": [
       "https://www.asianspinejournal.org/upload/pdf/asj-5-20.pdf",
-      "references/dim072/catalog.json#/candidates/7"
+      "references/dim072/catalog.json#/candidates/7",
+      "https://www.ncbi.nlm.nih.gov/books/NBK459153/"
     ],
     "region": "thoracic vertebrae",
     "revision": "1.0.0",
@@ -10068,7 +10084,8 @@
     },
     "references": [
       "https://www.asianspinejournal.org/upload/pdf/asj-5-20.pdf",
-      "references/dim072/catalog.json#/candidates/6"
+      "references/dim072/catalog.json#/candidates/6",
+      "https://www.ncbi.nlm.nih.gov/books/NBK459153/"
     ],
     "region": "thoracic vertebrae",
     "revision": "1.0.0",
@@ -10140,7 +10157,8 @@
     },
     "references": [
       "https://www.asianspinejournal.org/upload/pdf/asj-5-20.pdf",
-      "references/dim072/catalog.json#/candidates/5"
+      "references/dim072/catalog.json#/candidates/5",
+      "https://www.ncbi.nlm.nih.gov/books/NBK459153/"
     ],
     "region": "thoracic vertebrae",
     "revision": "1.0.0",
@@ -10212,7 +10230,9 @@
     },
     "references": [
       "https://www.asianspinejournal.org/upload/pdf/asj-5-20.pdf",
-      "references/dim072/catalog.json#/candidates/15"
+      "references/dim072/catalog.json#/candidates/15",
+      "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column",
+      "https://www.ncbi.nlm.nih.gov/books/NBK459153/"
     ],
     "region": "thoracic vertebrae",
     "revision": "1.0.0",
@@ -10284,7 +10304,9 @@
     },
     "references": [
       "https://www.asianspinejournal.org/upload/pdf/asj-5-20.pdf",
-      "references/dim072/catalog.json#/candidates/14"
+      "references/dim072/catalog.json#/candidates/14",
+      "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column",
+      "https://www.ncbi.nlm.nih.gov/books/NBK459153/"
     ],
     "region": "thoracic vertebrae",
     "revision": "1.0.0",
@@ -10356,7 +10378,9 @@
     },
     "references": [
       "https://www.asianspinejournal.org/upload/pdf/asj-5-20.pdf",
-      "references/dim072/catalog.json#/candidates/13"
+      "references/dim072/catalog.json#/candidates/13",
+      "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column",
+      "https://www.ncbi.nlm.nih.gov/books/NBK459153/"
     ],
     "region": "thoracic vertebrae",
     "revision": "1.0.0",
@@ -10428,7 +10452,9 @@
     },
     "references": [
       "https://www.asianspinejournal.org/upload/pdf/asj-5-20.pdf",
-      "references/dim072/catalog.json#/candidates/12"
+      "references/dim072/catalog.json#/candidates/12",
+      "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column",
+      "https://www.ncbi.nlm.nih.gov/books/NBK459153/"
     ],
     "region": "thoracic vertebrae",
     "revision": "1.0.0",
@@ -10499,7 +10525,9 @@
     },
     "references": [
       "https://www.asianspinejournal.org/upload/pdf/asj-5-20.pdf",
-      "references/dim072/catalog.json#/candidates/11"
+      "references/dim072/catalog.json#/candidates/11",
+      "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column",
+      "https://www.ncbi.nlm.nih.gov/books/NBK459153/"
     ],
     "region": "thoracic vertebrae",
     "revision": "1.0.0",
@@ -10571,7 +10599,9 @@
     },
     "references": [
       "https://www.asianspinejournal.org/upload/pdf/asj-5-20.pdf",
-      "references/dim072/catalog.json#/candidates/10"
+      "references/dim072/catalog.json#/candidates/10",
+      "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column",
+      "https://www.ncbi.nlm.nih.gov/books/NBK459153/"
     ],
     "region": "thoracic vertebrae",
     "revision": "1.0.0",
@@ -10643,7 +10673,9 @@
     },
     "references": [
       "https://www.asianspinejournal.org/upload/pdf/asj-5-20.pdf",
-      "references/dim072/catalog.json#/candidates/9"
+      "references/dim072/catalog.json#/candidates/9",
+      "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column",
+      "https://www.ncbi.nlm.nih.gov/books/NBK459153/"
     ],
     "region": "thoracic vertebrae",
     "revision": "1.0.0",
@@ -10715,7 +10747,8 @@
     },
     "references": [
       "https://www.asianspinejournal.org/upload/pdf/asj-5-20.pdf",
-      "references/dim072/catalog.json#/candidates/8"
+      "references/dim072/catalog.json#/candidates/8",
+      "https://www.ncbi.nlm.nih.gov/books/NBK459153/"
     ],
     "region": "thoracic vertebrae",
     "revision": "1.0.0",

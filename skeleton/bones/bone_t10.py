@@ -18,7 +18,7 @@ bone = BoneSpec(
         'width_mm': None,
     },
     function = ['rib articulation'],
-    notable_features = [],
+    notable_features = ['Costal body facets for rib 10; facet configuration varies.', 'Transverse costal-facet pattern is not assumed from typical thoracic levels.'],
     developmental_notes = 'vertebral arch fusion in adolescence',
     variations = '',
     unique_id = 'BONE_T10',
@@ -26,7 +26,7 @@ bone = BoneSpec(
     embodiment = "virtual",
     geometry = {},
     physics = {"mass_kg": None},
-    references = ['https://www.asianspinejournal.org/upload/pdf/asj-5-20.pdf', 'references/dim072/catalog.json#/candidates/7'],
+    references = ['https://www.asianspinejournal.org/upload/pdf/asj-5-20.pdf', 'references/dim072/catalog.json#/candidates/7', 'https://www.ncbi.nlm.nih.gov/books/NBK459153/'],
     metric_sources = {
         'body_upper_width_mm': 'references/dim072/catalog.json#/candidates/7/fields/body_upper_width_mm',
         'body_mid_width_mm': 'references/dim072/catalog.json#/candidates/7/fields/body_mid_width_mm',

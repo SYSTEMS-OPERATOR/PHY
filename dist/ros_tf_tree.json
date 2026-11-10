@@ -6,12 +6,11 @@
     "display_name": "C1",
     "frame_id": "BONE_C1",
     "origin_mm": null,
-    "parent": null,
+    "parent": "BONE_OCCIPITAL",
     "parent_reference": {
-      "bone_id": null,
-      "candidates": [],
-      "reference": "skull",
-      "status": "missing"
+      "bone_id": "BONE_OCCIPITAL",
+      "reference": "BONE_OCCIPITAL",
+      "status": "id"
     },
     "relationship_role": "anatomical_parent_reference",
     "rotation_rpy_rad": null,
@@ -220,12 +219,11 @@
     "display_name": "Coccyx",
     "frame_id": "BONE_COCCYX",
     "origin_mm": null,
-    "parent": null,
+    "parent": "BONE_SACRUM",
     "parent_reference": {
-      "bone_id": null,
-      "candidates": [],
-      "reference": "sacrum",
-      "status": "missing"
+      "bone_id": "BONE_SACRUM",
+      "reference": "BONE_SACRUM",
+      "status": "id"
     },
     "relationship_role": "anatomical_parent_reference",
     "rotation_rpy_rad": null,
@@ -1231,7 +1229,9 @@
     "transform_status": "unresolved"
   },
   {
-    "children": [],
+    "children": [
+      "BONE_C1"
+    ],
     "display_name": "Occipital",
     "frame_id": "BONE_OCCIPITAL",
     "origin_mm": null,
@@ -2237,7 +2237,9 @@
     "transform_status": "unresolved"
   },
   {
-    "children": [],
+    "children": [
+      "BONE_COCCYX"
+    ],
     "display_name": "Sacrum",
     "frame_id": "BONE_SACRUM",
     "origin_mm": null,

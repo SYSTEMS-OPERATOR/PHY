@@ -29,18 +29,25 @@ class GeometryAgent:
 
     def compute(self) -> None:
         """Compute and store the bone geometry and inertia."""
-        dims = self.bone.dimensions
-        l = dims.get("length_cm")
-        w = dims.get("width_cm")
-        t = dims.get("thickness_cm")
+        # Use BoneSpec's canonical conversion and alias checks. Named body or
+        # canal spans never substitute for missing whole-bone dimensions.
+        dims = self.bone._dimensions_mm()
+        l = dims.get("length_mm")
+        w = dims.get("width_mm")
+        t = dims.get("thickness_mm")
         if l is None or w is None:
             return
+        sizes = (l, w) if self.bone.bone_type == "long" else (l, w, t)
+        if any(value is None for value in sizes):
+            return
+        if any(not math.isfinite(value) or value <= 0 for value in sizes):
+            raise ValueError("Primitive dimensions must be finite and positive")
         shape = self.bone.bone_type
         density = self.bone.material.get("density", 1800.0)
 
         if shape == "long":
-            radius_m = (w * 0.5) / 100
-            length_m = l / 100
+            radius_m = (w * 0.5) / 1000
+            length_m = l / 1000
             volume_m3 = math.pi * radius_m ** 2 * length_m
             mass = density * volume_m3
             inertia = cylinder_inertia(mass, radius_m, length_m)
@@ -51,9 +58,9 @@ class GeometryAgent:
                 "length_m": length_m,
             }
         elif shape == "flat" and t is not None:
-            x = w / 100
-            y = t / 100
-            z = l / 100
+            x = w / 1000
+            y = t / 1000
+            z = l / 1000
             volume_m3 = x * y * z
             mass = density * volume_m3
             inertia = box_inertia(mass, x, y, z)
@@ -68,9 +75,9 @@ class GeometryAgent:
             # irregular or generic box approximation
             if t is None:
                 return
-            x = w / 100
-            y = t / 100
-            z = l / 100
+            x = w / 1000
+            y = t / 1000
+            z = l / 1000
             volume_m3 = x * y * z
             mass = density * volume_m3
             inertia = box_inertia(mass, x, y, z)

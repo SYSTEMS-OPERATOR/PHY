@@ -4,7 +4,6 @@
     "BONE_CAPITATE_R",
     "BONE_CLAVICLE_L",
     "BONE_CLAVICLE_R",
-    "BONE_COCCYX",
     "BONE_CUBOID_L",
     "BONE_CUBOID_R",
     "BONE_ETHMOID",
@@ -112,7 +111,6 @@
     "BONE_RIB8_R",
     "BONE_RIB9_L",
     "BONE_RIB9_R",
-    "BONE_SACRUM",
     "BONE_SCAPHOID_L",
     "BONE_SCAPHOID_R",
     "BONE_SCAPULA_L",
@@ -163,5 +161,5 @@
     "BONE_ULNA_R"
   ],
   "total_bones": 206,
-  "with_references": 45
+  "with_references": 47
 }

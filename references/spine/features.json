@@ -1,0 +1,291 @@
+{
+  "schema_version": "PHY_SPINE_FEATURES_V1",
+  "reviewed_on": "2026-11-09",
+  "authority": "qualitative_reference_not_canon_or_mechanical_design",
+  "sources": {
+    "openstax_spine": {
+      "title": "OpenStax Anatomy and Physiology 2e, section 7.3: The Vertebral Column",
+      "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column",
+      "scope": "Qualitative anatomy and superior/inferior anatomical neighbors; no dimensions or mechanical joint definitions."
+    },
+    "thoracic_features": {
+      "title": "StatPearls: Anatomy, Back, Thoracic Vertebrae",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK459153/",
+      "scope": "Typical versus atypical thoracic costal facets and T9/T10 variability; no feature sizes or mechanical limits."
+    },
+    "coccyx_ct_2013": {
+      "title": "Woon et al., CT morphology and morphometry of the normal adult coccyx",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3631051/",
+      "doi": "10.1007/s00586-012-2595-2",
+      "scope": "Qualitative segment/fusion variability and distinct straight/curved length definitions; no new numerical admission."
+    }
+  },
+  "anatomical_order": [
+    "BONE_C1",
+    "BONE_C2",
+    "BONE_C3",
+    "BONE_C4",
+    "BONE_C5",
+    "BONE_C6",
+    "BONE_C7",
+    "BONE_T1",
+    "BONE_T2",
+    "BONE_T3",
+    "BONE_T4",
+    "BONE_T5",
+    "BONE_T6",
+    "BONE_T7",
+    "BONE_T8",
+    "BONE_T9",
+    "BONE_T10",
+    "BONE_T11",
+    "BONE_T12",
+    "BONE_L1",
+    "BONE_L2",
+    "BONE_L3",
+    "BONE_L4",
+    "BONE_L5",
+    "BONE_SACRUM",
+    "BONE_COCCYX"
+  ],
+  "superior_reference": "BONE_OCCIPITAL",
+  "feature_sets": [
+    {
+      "feature_set_id": "atlas",
+      "bone_ids": [
+        "BONE_C1"
+      ],
+      "features": [
+        "Ring formed by anterior and posterior arches; no vertebral body or spinous process.",
+        "Superior articular facets for the occipital condyles; inferior facets for the axis.",
+        "Transverse foramina in the transverse processes."
+      ],
+      "source_ids": [
+        "openstax_spine"
+      ],
+      "source_locator": "Cervical Vertebrae, atlas description and Figure 7.25",
+      "feature_geometry": null,
+      "mechanical_definition": null
+    },
+    {
+      "feature_set_id": "axis",
+      "bone_ids": [
+        "BONE_C2"
+      ],
+      "features": [
+        "Dens (odontoid process) projects superiorly from the body.",
+        "Atlas-dens articulation is supported by the transverse ligament.",
+        "Transverse foramina; neural arch and articular processes."
+      ],
+      "source_ids": [
+        "openstax_spine"
+      ],
+      "source_locator": "Cervical Vertebrae, axis description and Figure 7.25",
+      "feature_geometry": null,
+      "mechanical_definition": null
+    },
+    {
+      "feature_set_id": "typical_cervical",
+      "bone_ids": [
+        "BONE_C3",
+        "BONE_C4",
+        "BONE_C5",
+        "BONE_C6"
+      ],
+      "features": [
+        "Vertebral body and neural arch enclose the vertebral foramen.",
+        "Transverse processes contain transverse foramina.",
+        "Short spinous process, commonly bifid; individual morphology varies."
+      ],
+      "source_ids": [
+        "openstax_spine"
+      ],
+      "source_locator": "General Structure of a Vertebra; Cervical Vertebrae",
+      "feature_geometry": null,
+      "mechanical_definition": null
+    },
+    {
+      "feature_set_id": "cervical_transition",
+      "bone_ids": [
+        "BONE_C7"
+      ],
+      "features": [
+        "Prominent, elongated spinous process at the cervicothoracic transition.",
+        "Transverse foramina; vertebral body, neural arch and articular processes."
+      ],
+      "source_ids": [
+        "openstax_spine"
+      ],
+      "source_locator": "Cervical Vertebrae, C7 description",
+      "feature_geometry": null,
+      "mechanical_definition": null
+    },
+    {
+      "feature_set_id": "first_thoracic",
+      "bone_ids": [
+        "BONE_T1"
+      ],
+      "features": [
+        "Whole superior costal facets for rib 1 and inferior demifacets for rib 2.",
+        "Transverse costal facets for the rib-1 tubercles."
+      ],
+      "source_ids": [
+        "thoracic_features"
+      ],
+      "source_locator": "Structure and Function, atypical T1",
+      "feature_geometry": null,
+      "mechanical_definition": null
+    },
+    {
+      "feature_set_id": "typical_thoracic",
+      "bone_ids": [
+        "BONE_T2",
+        "BONE_T3",
+        "BONE_T4",
+        "BONE_T5",
+        "BONE_T6",
+        "BONE_T7",
+        "BONE_T8"
+      ],
+      "features": [
+        "Costal body demifacets and transverse costal facets for rib articulation.",
+        "Pedicles and laminae form the neural arch around the vertebral foramen.",
+        "Posterior spinous process; its size and inclination vary with level."
+      ],
+      "source_ids": [
+        "openstax_spine",
+        "thoracic_features"
+      ],
+      "source_locator": "Thoracic Vertebrae; Structure and Function, typical thoracic levels",
+      "feature_geometry": null,
+      "mechanical_definition": null
+    },
+    {
+      "feature_set_id": "ninth_thoracic",
+      "bone_ids": [
+        "BONE_T9"
+      ],
+      "features": [
+        "Costal-facet pattern is transitional; an inferior demifacet may be absent.",
+        "Vertebral body, neural arch, transverse and spinous processes."
+      ],
+      "source_ids": [
+        "thoracic_features"
+      ],
+      "source_locator": "Structure and Function, T9/T10 anatomical variation",
+      "feature_geometry": null,
+      "mechanical_definition": null
+    },
+    {
+      "feature_set_id": "tenth_thoracic",
+      "bone_ids": [
+        "BONE_T10"
+      ],
+      "features": [
+        "Costal body facets for rib 10; facet configuration varies.",
+        "Transverse costal-facet pattern is not assumed from typical thoracic levels."
+      ],
+      "source_ids": [
+        "thoracic_features"
+      ],
+      "source_locator": "Structure and Function, T9/T10 anatomical variation",
+      "feature_geometry": null,
+      "mechanical_definition": null
+    },
+    {
+      "feature_set_id": "eleventh_thoracic",
+      "bone_ids": [
+        "BONE_T11"
+      ],
+      "features": [
+        "Single pair of complete costal facets for rib 11.",
+        "No transverse costal facets."
+      ],
+      "source_ids": [
+        "thoracic_features"
+      ],
+      "source_locator": "Structure and Function, atypical T11/T12",
+      "feature_geometry": null,
+      "mechanical_definition": null
+    },
+    {
+      "feature_set_id": "thoracolumbar_transition",
+      "bone_ids": [
+        "BONE_T12"
+      ],
+      "features": [
+        "Single pair of complete costal facets for rib 12; no transverse costal facets.",
+        "Transitional thoracic superior and lumbar-type inferior articular morphology."
+      ],
+      "source_ids": [
+        "thoracic_features"
+      ],
+      "source_locator": "Structure and Function, atypical T12",
+      "feature_geometry": null,
+      "mechanical_definition": null
+    },
+    {
+      "feature_set_id": "lumbar",
+      "bone_ids": [
+        "BONE_L1",
+        "BONE_L2",
+        "BONE_L3",
+        "BONE_L4",
+        "BONE_L5"
+      ],
+      "features": [
+        "Large vertebral body with pedicles, laminae and vertebral foramen.",
+        "Short, blunt spinous process; transverse and articular processes.",
+        "Superior articular facets face medially; inferior facets face laterally."
+      ],
+      "source_ids": [
+        "openstax_spine"
+      ],
+      "source_locator": "Lumbar Vertebrae and Figure 7.28",
+      "feature_geometry": null,
+      "mechanical_definition": null
+    },
+    {
+      "feature_set_id": "sacrum",
+      "bone_ids": [
+        "BONE_SACRUM"
+      ],
+      "features": [
+        "Typically five fused sacral segments; one adult inventory identity.",
+        "Sacral promontory and auricular surfaces for articulation with the ilia.",
+        "Sacral canal, sacral hiatus and paired anterior/posterior sacral foramina."
+      ],
+      "source_ids": [
+        "openstax_spine"
+      ],
+      "source_locator": "Sacrum and Coccyx and Figure 7.29",
+      "feature_geometry": null,
+      "mechanical_definition": null
+    },
+    {
+      "feature_set_id": "coccyx",
+      "bone_ids": [
+        "BONE_COCCYX"
+      ],
+      "features": [
+        "Usually four coccygeal segments, with three to five observed; fusion is variable.",
+        "Sacrococcygeal and intercoccygeal interfaces vary in fusion and alignment.",
+        "Straight and curved lengths are different anatomical measurements."
+      ],
+      "source_ids": [
+        "coccyx_ct_2013"
+      ],
+      "source_locator": "Methods/Table 1 and Results, coccygeal morphology",
+      "feature_geometry": null,
+      "mechanical_definition": null
+    }
+  ],
+  "does_not_qualify": [
+    "dimensions",
+    "surface_geometry",
+    "joint_centers",
+    "mechanical_limits",
+    "physical_evidence",
+    "fabrication_release"
+  ]
+}

@@ -4,17 +4,18 @@ from ..base import BoneSpec
 bone = BoneSpec(
     name = 'Coccyx',
     bone_type = 'irregular',
-    location = {'region': 'coccyx', 'proximal_connection': 'sacrum', 'distal_connection': ''},
+    location = {'region': 'coccyx', 'proximal_connection': 'BONE_SACRUM', 'distal_connection': ''},
     articulations = [],
     dimensions = {'length_cm': None, 'width_cm': None, 'thickness_cm': None},
     function = ['ligament attachment'],
-    notable_features = [],
-    developmental_notes = 'fusion of rudimentary vertebrae',
+    notable_features = ['Usually four coccygeal segments, with three to five observed; fusion is variable.', 'Sacrococcygeal and intercoccygeal interfaces vary in fusion and alignment.', 'Straight and curved lengths are different anatomical measurements.'],
+    developmental_notes = 'Usually four coccygeal segments; number and extent of fusion vary.',
     variations = '',
     unique_id = 'BONE_COCCYX',
     visual_reference = None,
     embodiment = "virtual",
     geometry = {},
+    references = ['https://pmc.ncbi.nlm.nih.gov/articles/PMC3631051/'],
 )
 
 

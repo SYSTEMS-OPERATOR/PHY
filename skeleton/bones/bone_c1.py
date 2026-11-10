@@ -4,7 +4,7 @@ from ..base import BoneSpec
 bone = BoneSpec(
     name = 'C1',
     bone_type = 'irregular',
-    location = {'region': 'cervical vertebrae', 'proximal_connection': 'skull', 'distal_connection': 'C2'},
+    location = {'region': 'cervical vertebrae', 'proximal_connection': 'BONE_OCCIPITAL', 'distal_connection': 'C2'},
     articulations = [],
     # PHY-DIM-072: unscaled study statistics; whole-bone unknowns remain null.
     dimensions = {
@@ -15,7 +15,7 @@ bone = BoneSpec(
         'width_mm': None,
     },
     function = ['support head'],
-    notable_features = [],
+    notable_features = ['Ring formed by anterior and posterior arches; no vertebral body or spinous process.', 'Superior articular facets for the occipital condyles; inferior facets for the axis.', 'Transverse foramina in the transverse processes.'],
     developmental_notes = 'centers fuse during adolescence',
     variations = '',
     unique_id = 'BONE_C1',
@@ -23,12 +23,12 @@ bone = BoneSpec(
     embodiment = "virtual",
     geometry = {},
     physics = {"mass_kg": None},
-    references = ['https://pmc.ncbi.nlm.nih.gov/articles/PMC8354927/', 'references/dim072/catalog.json#/candidates/23'],
+    references = ['https://pmc.ncbi.nlm.nih.gov/articles/PMC8354927/', 'references/dim072/catalog.json#/candidates/23', 'https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column'],
     metric_sources = {
         'spinal_canal_ap_mm': 'references/dim072/catalog.json#/candidates/23/fields/spinal_canal_ap_mm',
         'spinal_canal_width_mm': 'references/dim072/catalog.json#/candidates/23/fields/spinal_canal_width_mm',
     },
-    manufacturing_notes = ['Source-backed reference spans only; no registration to SOPHY, qualified surface, material, joint or mounting interface. See dimension evidence catalog.', 'Canal dimensions are clearances, not dimensions of solid bone or a defined mechanical cartridge.', 'Atlas has no centrum; no C1 body height invented.'],
+    manufacturing_notes = ['Source-backed reference spans only; no registration to SOPHY, qualified surface, material, joint or mounting interface. See dimension evidence catalog.', 'Study canal/foramen spans describe an osseous opening, not usable mechanical clearance, bone dimensions or a cartridge envelope.', 'Atlas has no centrum; no C1 body height invented.'],
 )
 
 

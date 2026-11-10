@@ -1668,15 +1668,6 @@
         "candidates": [],
         "participant": 1,
         "projection": "declared",
-        "reference": "skull",
-        "relationship_id": "REL:BONE_C1:connections.parent",
-        "status": "missing"
-      },
-      {
-        "bone_id": null,
-        "candidates": [],
-        "participant": 1,
-        "projection": "declared",
         "reference": "tibia/fibula",
         "relationship_id": "REL:BONE_CALCANEUS_L:connections.parent",
         "status": "missing"
@@ -1724,15 +1715,6 @@
         "projection": "declared",
         "reference": "sternum",
         "relationship_id": "REL:BONE_CLAVICLE_R:connections.parent",
-        "status": "missing"
-      },
-      {
-        "bone_id": null,
-        "candidates": [],
-        "participant": 1,
-        "projection": "declared",
-        "reference": "sacrum",
-        "relationship_id": "REL:BONE_COCCYX:connections.parent",
         "status": "missing"
       },
       {
@@ -3346,7 +3328,7 @@
     ]
   },
   "inputs": {
-    "bone_declarations_sha256": "bbf241653a95afb7522336acafe95235e6a63a48500fadc6afcefc842aff7563",
+    "bone_declarations_sha256": "d1e6077b8d03eba7a6dd56dd55b4206af566ff8e232adba2880e223d221be7da",
     "catalog_file_sha256": "8273b37d8a23503bf5a341be99770b85da26033a195100a33d583cee87afb3e6",
     "catalog_path": "references/craniofacial_relationships.json",
     "catalog_sha256": "5d92a2ae9003700d8480d9c027f56d1876388dec58f83fcd4ce881aaf8ef6b40",
@@ -3358,31 +3340,31 @@
     "source_files": {
       "BONE_C1": {
         "path": "skeleton/bones/bone_c1.py",
-        "sha256": "28a6c91848154f0715670d148af33ca8dfc28e3da7d3f3f653876fd742c7298f"
+        "sha256": "4d0505f5348e966a528aaabaaab6921c07e322ba2b0622ee2b08248ee1ee7649"
       },
       "BONE_C2": {
         "path": "skeleton/bones/bone_c2.py",
-        "sha256": "2166ce956ba2d22f2c5e915f0fb5b3e3fe974707b68ca4356514a62c1be15562"
+        "sha256": "c9ecc3cdcb0809a1a829d790a9cf540b0df19ed7c94899390926f33f2f2ed908"
       },
       "BONE_C3": {
         "path": "skeleton/bones/bone_c3.py",
-        "sha256": "efc0bef1b31abdb954c8a04c7177e978b466b22455b749da99ac090b1f85f0de"
+        "sha256": "860491dba84e368d03f66cc776d48f8454f4f6942ec52c672a260b40dc69f593"
       },
       "BONE_C4": {
         "path": "skeleton/bones/bone_c4.py",
-        "sha256": "a3567c708b86a7fd150367e482a5ebe6b903050468349b8d20bfdb8183b81e1e"
+        "sha256": "a8f4cc66df747e77add3764cfd871b7a9b060564dc7eb57c065fc8a82314b2f3"
       },
       "BONE_C5": {
         "path": "skeleton/bones/bone_c5.py",
-        "sha256": "baa6ab35a727f14a78c379cd86cab5be9491460796ca14ba49f0e424864d3181"
+        "sha256": "9cad60c36d625cebf0b3257e4d6aad9b07b33b2d8e099f81927b2cb1a84dfba9"
       },
       "BONE_C6": {
         "path": "skeleton/bones/bone_c6.py",
-        "sha256": "40ab3e2a2b4eff0c3e384c00e286970bb6293958107e1910700ea8369811dfd4"
+        "sha256": "c2f68bac3bd97a8153c2e85c55d774d3374082e4e2497b2115808ba59e44b9fc"
       },
       "BONE_C7": {
         "path": "skeleton/bones/bone_c7.py",
-        "sha256": "43d8339b117d54d6be5862a207302c3e8dbeff0eb42d63132a813ee06db03b5e"
+        "sha256": "0e123c0f94afa3a3c9f42753c6bf1637fca39bad6bdfb1d28d1fa857ce07add8"
       },
       "BONE_CALCANEUS_L": {
         "path": "skeleton/bones/bone_calcaneus_l.py",
@@ -3410,7 +3392,7 @@
       },
       "BONE_COCCYX": {
         "path": "skeleton/bones/bone_coccyx.py",
-        "sha256": "6c5fdb6c2c8582119c72c75057944a4eece1e62dab762b73899901e56da56137"
+        "sha256": "ca17d27d9f1bef597c16e6be5560bb91457f3ca07c7a99e5d99d7b85696d5448"
       },
       "BONE_CUBOID_L": {
         "path": "skeleton/bones/bone_cuboid_l.py",
@@ -3498,23 +3480,23 @@
       },
       "BONE_L1": {
         "path": "skeleton/bones/bone_l1.py",
-        "sha256": "0f8a39fc9440be659bb20b26adf2fb295bce303af9f67e2f814f6231e926d0fe"
+        "sha256": "c4fb6fe2c7b0001eb8a53a32c00752d0bb113e1b40afba740cbb913b5c64b676"
       },
       "BONE_L2": {
         "path": "skeleton/bones/bone_l2.py",
-        "sha256": "54c1a74cb981415f46de5a5018da211dfc2d9d638ff3e3e6b217bd1e92ed69cc"
+        "sha256": "5e23df7a3b8afc549259e3363b35357f19e174866d702dfc0403ed2a9ca25a05"
       },
       "BONE_L3": {
         "path": "skeleton/bones/bone_l3.py",
-        "sha256": "2844c37f9533942eb47412bd2bb76b7adb2d4fe5550897a37e3aef85c453d931"
+        "sha256": "837de416290c0ff2e79dfd2a5524cc54bb11218c4fb80a5458716733dedcdc86"
       },
       "BONE_L4": {
         "path": "skeleton/bones/bone_l4.py",
-        "sha256": "23a6a53d9ccda612b5bdd53c5f6ca4f441dc011c9b2d05282dcee3356105bfa0"
+        "sha256": "5061f116dc2183c416a792413a9ee56ee4828da35a17ef45ba72729918a4659b"
       },
       "BONE_L5": {
         "path": "skeleton/bones/bone_l5.py",
-        "sha256": "308646ac250005981a7970fd29b82240c1b4ff9670b7019c110ca7f39c0582a3"
+        "sha256": "b22224141c2810a91d94983dd7158e4f49aa089133be166827a8adf23cf2bc2c"
       },
       "BONE_LACRIMAL_L": {
         "path": "skeleton/bones/bone_lacrimal_l.py",
@@ -3918,7 +3900,7 @@
       },
       "BONE_SACRUM": {
         "path": "skeleton/bones/bone_sacrum.py",
-        "sha256": "78b812ff88e9fa22edf5a776c6dfec76bf6c233f1a7c8dfcff128054c23f1a1c"
+        "sha256": "931466e6bc66d96d7d956350beb44b6011775a68c68055d55804ba7052ac63a1"
       },
       "BONE_SCAPHOID_L": {
         "path": "skeleton/bones/bone_scaphoid_l.py",
@@ -3954,51 +3936,51 @@
       },
       "BONE_T1": {
         "path": "skeleton/bones/bone_t1.py",
-        "sha256": "1fff8d594fd5f96973b1911be4cb7c4620ccfb47f14d1b3a1c15b677cdd3f957"
+        "sha256": "de9be7d34b24bbd761b29b7e1ba6b299667320c0c10deae63c5884edc33f2d24"
       },
       "BONE_T10": {
         "path": "skeleton/bones/bone_t10.py",
-        "sha256": "2444f3312c85a312a9a39197d344dfcb119b398b88dae652af1c6fdab58b7bdf"
+        "sha256": "c9e81fe557c2f8e2dfb3d93dac78614eeea3a3440b55a16004b0eca9aee2edc6"
       },
       "BONE_T11": {
         "path": "skeleton/bones/bone_t11.py",
-        "sha256": "f96305b161d8f8188d113e368b6b01b758ccff5135b0e8f3632d3d65e49c8f71"
+        "sha256": "0afea8da627a1b144dc48642e62add32bc6b32c39b0737eabe57f9ef0a792d2c"
       },
       "BONE_T12": {
         "path": "skeleton/bones/bone_t12.py",
-        "sha256": "36553be1041cba47721eb694cea1f447e1bcf298af4118d31af353f49026abd8"
+        "sha256": "dac566d43dd240e208b9be7185cd141c52a7b4e0266667b8a26f8ca8b78357c6"
       },
       "BONE_T2": {
         "path": "skeleton/bones/bone_t2.py",
-        "sha256": "ffdfdf4de5fa6339d01e73d811f7a0f4b032ed47b8fc9e1c60574220c482dd7e"
+        "sha256": "d52ba7331a382c9924dfd68003bea9b767200d46a8823eb6d4a59e8171ab0026"
       },
       "BONE_T3": {
         "path": "skeleton/bones/bone_t3.py",
-        "sha256": "b360da83957cbb2940eef1e68b049fa961452834af90579a858e5056408a4ebc"
+        "sha256": "617f5df10d3ad5f3f36dc912a54c3a9a2a454b5aea1dc0ff82c9163603e11bcd"
       },
       "BONE_T4": {
         "path": "skeleton/bones/bone_t4.py",
-        "sha256": "aa385e42afa49e812df5cd24c12b0550344e89eec05ad26e5e300f60ead13c03"
+        "sha256": "91d6f76f822441169d1c840ff1fe489e8fb39cffc45e07fc850af69bb40d0dae"
       },
       "BONE_T5": {
         "path": "skeleton/bones/bone_t5.py",
-        "sha256": "e07c59214203b86be7751071eea57147e343ef7a1b24c125c07efec50e9ea4d8"
+        "sha256": "0d7bd0beb4d88860651c2b64a396e22de2c72731cef3f588a1fd771eca980ee5"
       },
       "BONE_T6": {
         "path": "skeleton/bones/bone_t6.py",
-        "sha256": "de73c4ebee5d268954fa5818b20758f64cb65a9c9f1b26da1d4103671b589ea6"
+        "sha256": "8356b84af713bcfb28d8af882f1011b493bc4a21c1cba666695bd4c3e440a202"
       },
       "BONE_T7": {
         "path": "skeleton/bones/bone_t7.py",
-        "sha256": "90c356a70ee4ab76427281bf2b701518eb2a2c95b78f24c0153caf24f8ee85c6"
+        "sha256": "7f200b184b7578e11b2c0620f631ae087eb7befdbed97e39b08dbb52b7c4fe2a"
       },
       "BONE_T8": {
         "path": "skeleton/bones/bone_t8.py",
-        "sha256": "b5d599ad14de3e93143b5b047a7b6135f753b0a0a6d1ab70b9aca0418c89f6ee"
+        "sha256": "835e00b34e7119275c490493b92819b7009153ac10ae4e1ed3866afaf1fde6b4"
       },
       "BONE_T9": {
         "path": "skeleton/bones/bone_t9.py",
-        "sha256": "a9101d39c05e2e231c9a59c2020d28f9c2b02258b467327ebe453623e280022d"
+        "sha256": "d3d24c9539c2faa4c154544c166360fa43985ea012dcff3c9b19881e960dfea5"
       },
       "BONE_TALUS_L": {
         "path": "skeleton/bones/bone_talus_l.py",
@@ -4246,7 +4228,7 @@
       "biological_classification": null,
       "engineering_definition": null,
       "kind": "legacy_parent",
-      "original_declaration": "skull",
+      "original_declaration": "BONE_OCCIPITAL",
       "participants": [
         {
           "bone_id": "BONE_C1",
@@ -4260,14 +4242,13 @@
           "role": "declaring_bone"
         },
         {
-          "bone_id": null,
+          "bone_id": "BONE_OCCIPITAL",
           "matching_policy": "exact",
-          "reference_value": "skull",
+          "reference_value": "BONE_OCCIPITAL",
           "resolution": {
-            "bone_id": null,
-            "candidates": [],
-            "reference": "skull",
-            "status": "missing"
+            "bone_id": "BONE_OCCIPITAL",
+            "reference": "BONE_OCCIPITAL",
+            "status": "id"
           },
           "role": "declared_target"
         }
@@ -4278,19 +4259,20 @@
         "kind": "BoneSpec_snapshot",
         "references": [
           "https://pmc.ncbi.nlm.nih.gov/articles/PMC8354927/",
-          "references/dim072/catalog.json#/candidates/23"
+          "references/dim072/catalog.json#/candidates/23",
+          "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column"
         ],
         "source_correspondence_only": true,
-        "source_file_sha256": "28a6c91848154f0715670d148af33ca8dfc28e3da7d3f3f653876fd742c7298f",
+        "source_file_sha256": "4d0505f5348e966a528aaabaaab6921c07e322ba2b0622ee2b08248ee1ee7649",
         "source_ids": [
           "BONE_C1"
         ],
         "source_path": "skeleton/bones/bone_c1.py",
-        "value_sha256": "e0553618beb74ae640a8a38d4562fbdccd82d8ff037ee0e22fc49d68aeecdc2f"
+        "value_sha256": "4a490ab8383302c4e7fc03a4910afed3b9e54968f06a5a7b98cf8556c748c949"
       },
       "qualitative_motion": [],
       "relationship_id": "REL:BONE_C1:connections.parent",
-      "resolution_status": "missing",
+      "resolution_status": "resolved",
       "semantic_role": "declared_anatomical_parent_reference"
     },
     {
@@ -4328,10 +4310,11 @@
         "kind": "BoneSpec_snapshot",
         "references": [
           "https://pmc.ncbi.nlm.nih.gov/articles/PMC8354927/",
-          "references/dim072/catalog.json#/candidates/22"
+          "references/dim072/catalog.json#/candidates/22",
+          "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column"
         ],
         "source_correspondence_only": true,
-        "source_file_sha256": "2166ce956ba2d22f2c5e915f0fb5b3e3fe974707b68ca4356514a62c1be15562",
+        "source_file_sha256": "c9ecc3cdcb0809a1a829d790a9cf540b0df19ed7c94899390926f33f2f2ed908",
         "source_ids": [
           "BONE_C2"
         ],
@@ -4378,10 +4361,11 @@
         "kind": "BoneSpec_snapshot",
         "references": [
           "https://pmc.ncbi.nlm.nih.gov/articles/PMC8354927/",
-          "references/dim072/catalog.json#/candidates/21"
+          "references/dim072/catalog.json#/candidates/21",
+          "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column"
         ],
         "source_correspondence_only": true,
-        "source_file_sha256": "efc0bef1b31abdb954c8a04c7177e978b466b22455b749da99ac090b1f85f0de",
+        "source_file_sha256": "860491dba84e368d03f66cc776d48f8454f4f6942ec52c672a260b40dc69f593",
         "source_ids": [
           "BONE_C3"
         ],
@@ -4428,10 +4412,11 @@
         "kind": "BoneSpec_snapshot",
         "references": [
           "https://pmc.ncbi.nlm.nih.gov/articles/PMC8354927/",
-          "references/dim072/catalog.json#/candidates/20"
+          "references/dim072/catalog.json#/candidates/20",
+          "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column"
         ],
         "source_correspondence_only": true,
-        "source_file_sha256": "a3567c708b86a7fd150367e482a5ebe6b903050468349b8d20bfdb8183b81e1e",
+        "source_file_sha256": "a8f4cc66df747e77add3764cfd871b7a9b060564dc7eb57c065fc8a82314b2f3",
         "source_ids": [
           "BONE_C4"
         ],
@@ -4478,10 +4463,11 @@
         "kind": "BoneSpec_snapshot",
         "references": [
           "https://pmc.ncbi.nlm.nih.gov/articles/PMC8354927/",
-          "references/dim072/catalog.json#/candidates/19"
+          "references/dim072/catalog.json#/candidates/19",
+          "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column"
         ],
         "source_correspondence_only": true,
-        "source_file_sha256": "baa6ab35a727f14a78c379cd86cab5be9491460796ca14ba49f0e424864d3181",
+        "source_file_sha256": "9cad60c36d625cebf0b3257e4d6aad9b07b33b2d8e099f81927b2cb1a84dfba9",
         "source_ids": [
           "BONE_C5"
         ],
@@ -4528,10 +4514,11 @@
         "kind": "BoneSpec_snapshot",
         "references": [
           "https://pmc.ncbi.nlm.nih.gov/articles/PMC8354927/",
-          "references/dim072/catalog.json#/candidates/18"
+          "references/dim072/catalog.json#/candidates/18",
+          "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column"
         ],
         "source_correspondence_only": true,
-        "source_file_sha256": "40ab3e2a2b4eff0c3e384c00e286970bb6293958107e1910700ea8369811dfd4",
+        "source_file_sha256": "c2f68bac3bd97a8153c2e85c55d774d3374082e4e2497b2115808ba59e44b9fc",
         "source_ids": [
           "BONE_C6"
         ],
@@ -4578,10 +4565,11 @@
         "kind": "BoneSpec_snapshot",
         "references": [
           "https://pmc.ncbi.nlm.nih.gov/articles/PMC8354927/",
-          "references/dim072/catalog.json#/candidates/17"
+          "references/dim072/catalog.json#/candidates/17",
+          "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column"
         ],
         "source_correspondence_only": true,
-        "source_file_sha256": "43d8339b117d54d6be5862a207302c3e8dbeff0eb42d63132a813ee06db03b5e",
+        "source_file_sha256": "0e123c0f94afa3a3c9f42753c6bf1637fca39bad6bdfb1d28d1fa857ce07add8",
         "source_ids": [
           "BONE_C7"
         ],
@@ -4891,7 +4879,7 @@
       "biological_classification": null,
       "engineering_definition": null,
       "kind": "legacy_parent",
-      "original_declaration": "sacrum",
+      "original_declaration": "BONE_SACRUM",
       "participants": [
         {
           "bone_id": "BONE_COCCYX",
@@ -4905,14 +4893,13 @@
           "role": "declaring_bone"
         },
         {
-          "bone_id": null,
+          "bone_id": "BONE_SACRUM",
           "matching_policy": "exact",
-          "reference_value": "sacrum",
+          "reference_value": "BONE_SACRUM",
           "resolution": {
-            "bone_id": null,
-            "candidates": [],
-            "reference": "sacrum",
-            "status": "missing"
+            "bone_id": "BONE_SACRUM",
+            "reference": "BONE_SACRUM",
+            "status": "id"
           },
           "role": "declared_target"
         }
@@ -4921,18 +4908,20 @@
         "bone_id": "BONE_COCCYX",
         "field": "connections.parent",
         "kind": "BoneSpec_snapshot",
-        "references": [],
+        "references": [
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC3631051/"
+        ],
         "source_correspondence_only": true,
-        "source_file_sha256": "6c5fdb6c2c8582119c72c75057944a4eece1e62dab762b73899901e56da56137",
+        "source_file_sha256": "ca17d27d9f1bef597c16e6be5560bb91457f3ca07c7a99e5d99d7b85696d5448",
         "source_ids": [
           "BONE_COCCYX"
         ],
         "source_path": "skeleton/bones/bone_coccyx.py",
-        "value_sha256": "0435f729738c2deca00d4735b2d8ca20d64c4de17b704ac942f842073c919c4f"
+        "value_sha256": "c0f176f685e3873d9e4f6015a6f0985de39da9356d819952cb8df64d1a6c1c3a"
       },
       "qualitative_motion": [],
       "relationship_id": "REL:BONE_COCCYX:connections.parent",
-      "resolution_status": "missing",
+      "resolution_status": "resolved",
       "semantic_role": "declared_anatomical_parent_reference"
     },
     {
@@ -6384,10 +6373,11 @@
         "kind": "BoneSpec_snapshot",
         "references": [
           "https://pmc.ncbi.nlm.nih.gov/articles/PMC8917002/",
-          "references/dim072/catalog.json#/candidates/4"
+          "references/dim072/catalog.json#/candidates/4",
+          "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column"
         ],
         "source_correspondence_only": true,
-        "source_file_sha256": "0f8a39fc9440be659bb20b26adf2fb295bce303af9f67e2f814f6231e926d0fe",
+        "source_file_sha256": "c4fb6fe2c7b0001eb8a53a32c00752d0bb113e1b40afba740cbb913b5c64b676",
         "source_ids": [
           "BONE_L1"
         ],
@@ -6434,10 +6424,11 @@
         "kind": "BoneSpec_snapshot",
         "references": [
           "https://pmc.ncbi.nlm.nih.gov/articles/PMC8917002/",
-          "references/dim072/catalog.json#/candidates/3"
+          "references/dim072/catalog.json#/candidates/3",
+          "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column"
         ],
         "source_correspondence_only": true,
-        "source_file_sha256": "54c1a74cb981415f46de5a5018da211dfc2d9d638ff3e3e6b217bd1e92ed69cc",
+        "source_file_sha256": "5e23df7a3b8afc549259e3363b35357f19e174866d702dfc0403ed2a9ca25a05",
         "source_ids": [
           "BONE_L2"
         ],
@@ -6484,10 +6475,11 @@
         "kind": "BoneSpec_snapshot",
         "references": [
           "https://pmc.ncbi.nlm.nih.gov/articles/PMC8917002/",
-          "references/dim072/catalog.json#/candidates/2"
+          "references/dim072/catalog.json#/candidates/2",
+          "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column"
         ],
         "source_correspondence_only": true,
-        "source_file_sha256": "2844c37f9533942eb47412bd2bb76b7adb2d4fe5550897a37e3aef85c453d931",
+        "source_file_sha256": "837de416290c0ff2e79dfd2a5524cc54bb11218c4fb80a5458716733dedcdc86",
         "source_ids": [
           "BONE_L3"
         ],
@@ -6534,10 +6526,11 @@
         "kind": "BoneSpec_snapshot",
         "references": [
           "https://pmc.ncbi.nlm.nih.gov/articles/PMC8917002/",
-          "references/dim072/catalog.json#/candidates/1"
+          "references/dim072/catalog.json#/candidates/1",
+          "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column"
         ],
         "source_correspondence_only": true,
-        "source_file_sha256": "23a6a53d9ccda612b5bdd53c5f6ca4f441dc011c9b2d05282dcee3356105bfa0",
+        "source_file_sha256": "5061f116dc2183c416a792413a9ee56ee4828da35a17ef45ba72729918a4659b",
         "source_ids": [
           "BONE_L4"
         ],
@@ -6584,10 +6577,11 @@
         "kind": "BoneSpec_snapshot",
         "references": [
           "https://pmc.ncbi.nlm.nih.gov/articles/PMC8917002/",
-          "references/dim072/catalog.json#/candidates/0"
+          "references/dim072/catalog.json#/candidates/0",
+          "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column"
         ],
         "source_correspondence_only": true,
-        "source_file_sha256": "308646ac250005981a7970fd29b82240c1b4ff9670b7019c110ca7f39c0582a3",
+        "source_file_sha256": "b22224141c2810a91d94983dd7158e4f49aa089133be166827a8adf23cf2bc2c",
         "source_ids": [
           "BONE_L5"
         ],
@@ -12471,9 +12465,11 @@
         "bone_id": "BONE_SACRUM",
         "field": "connections.parent",
         "kind": "BoneSpec_snapshot",
-        "references": [],
+        "references": [
+          "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column"
+        ],
         "source_correspondence_only": true,
-        "source_file_sha256": "78b812ff88e9fa22edf5a776c6dfec76bf6c233f1a7c8dfcff128054c23f1a1c",
+        "source_file_sha256": "931466e6bc66d96d7d956350beb44b6011775a68c68055d55804ba7052ac63a1",
         "source_ids": [
           "BONE_SACRUM"
         ],
@@ -13055,10 +13051,11 @@
         "kind": "BoneSpec_snapshot",
         "references": [
           "https://www.asianspinejournal.org/upload/pdf/asj-5-20.pdf",
-          "references/dim072/catalog.json#/candidates/7"
+          "references/dim072/catalog.json#/candidates/7",
+          "https://www.ncbi.nlm.nih.gov/books/NBK459153/"
         ],
         "source_correspondence_only": true,
-        "source_file_sha256": "2444f3312c85a312a9a39197d344dfcb119b398b88dae652af1c6fdab58b7bdf",
+        "source_file_sha256": "c9e81fe557c2f8e2dfb3d93dac78614eeea3a3440b55a16004b0eca9aee2edc6",
         "source_ids": [
           "BONE_T10"
         ],
@@ -13105,10 +13102,11 @@
         "kind": "BoneSpec_snapshot",
         "references": [
           "https://www.asianspinejournal.org/upload/pdf/asj-5-20.pdf",
-          "references/dim072/catalog.json#/candidates/6"
+          "references/dim072/catalog.json#/candidates/6",
+          "https://www.ncbi.nlm.nih.gov/books/NBK459153/"
         ],
         "source_correspondence_only": true,
-        "source_file_sha256": "f96305b161d8f8188d113e368b6b01b758ccff5135b0e8f3632d3d65e49c8f71",
+        "source_file_sha256": "0afea8da627a1b144dc48642e62add32bc6b32c39b0737eabe57f9ef0a792d2c",
         "source_ids": [
           "BONE_T11"
         ],
@@ -13155,10 +13153,11 @@
         "kind": "BoneSpec_snapshot",
         "references": [
           "https://www.asianspinejournal.org/upload/pdf/asj-5-20.pdf",
-          "references/dim072/catalog.json#/candidates/5"
+          "references/dim072/catalog.json#/candidates/5",
+          "https://www.ncbi.nlm.nih.gov/books/NBK459153/"
         ],
         "source_correspondence_only": true,
-        "source_file_sha256": "36553be1041cba47721eb694cea1f447e1bcf298af4118d31af353f49026abd8",
+        "source_file_sha256": "dac566d43dd240e208b9be7185cd141c52a7b4e0266667b8a26f8ca8b78357c6",
         "source_ids": [
           "BONE_T12"
         ],
@@ -13205,10 +13204,11 @@
         "kind": "BoneSpec_snapshot",
         "references": [
           "https://www.asianspinejournal.org/upload/pdf/asj-5-20.pdf",
-          "references/dim072/catalog.json#/candidates/16"
+          "references/dim072/catalog.json#/candidates/16",
+          "https://www.ncbi.nlm.nih.gov/books/NBK459153/"
         ],
         "source_correspondence_only": true,
-        "source_file_sha256": "1fff8d594fd5f96973b1911be4cb7c4620ccfb47f14d1b3a1c15b677cdd3f957",
+        "source_file_sha256": "de9be7d34b24bbd761b29b7e1ba6b299667320c0c10deae63c5884edc33f2d24",
         "source_ids": [
           "BONE_T1"
         ],
@@ -13255,10 +13255,12 @@
         "kind": "BoneSpec_snapshot",
         "references": [
           "https://www.asianspinejournal.org/upload/pdf/asj-5-20.pdf",
-          "references/dim072/catalog.json#/candidates/15"
+          "references/dim072/catalog.json#/candidates/15",
+          "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column",
+          "https://www.ncbi.nlm.nih.gov/books/NBK459153/"
         ],
         "source_correspondence_only": true,
-        "source_file_sha256": "ffdfdf4de5fa6339d01e73d811f7a0f4b032ed47b8fc9e1c60574220c482dd7e",
+        "source_file_sha256": "d52ba7331a382c9924dfd68003bea9b767200d46a8823eb6d4a59e8171ab0026",
         "source_ids": [
           "BONE_T2"
         ],
@@ -13305,10 +13307,12 @@
         "kind": "BoneSpec_snapshot",
         "references": [
           "https://www.asianspinejournal.org/upload/pdf/asj-5-20.pdf",
-          "references/dim072/catalog.json#/candidates/14"
+          "references/dim072/catalog.json#/candidates/14",
+          "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column",
+          "https://www.ncbi.nlm.nih.gov/books/NBK459153/"
         ],
         "source_correspondence_only": true,
-        "source_file_sha256": "b360da83957cbb2940eef1e68b049fa961452834af90579a858e5056408a4ebc",
+        "source_file_sha256": "617f5df10d3ad5f3f36dc912a54c3a9a2a454b5aea1dc0ff82c9163603e11bcd",
         "source_ids": [
           "BONE_T3"
         ],
@@ -13355,10 +13359,12 @@
         "kind": "BoneSpec_snapshot",
         "references": [
           "https://www.asianspinejournal.org/upload/pdf/asj-5-20.pdf",
-          "references/dim072/catalog.json#/candidates/13"
+          "references/dim072/catalog.json#/candidates/13",
+          "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column",
+          "https://www.ncbi.nlm.nih.gov/books/NBK459153/"
         ],
         "source_correspondence_only": true,
-        "source_file_sha256": "aa385e42afa49e812df5cd24c12b0550344e89eec05ad26e5e300f60ead13c03",
+        "source_file_sha256": "91d6f76f822441169d1c840ff1fe489e8fb39cffc45e07fc850af69bb40d0dae",
         "source_ids": [
           "BONE_T4"
         ],
@@ -13405,10 +13411,12 @@
         "kind": "BoneSpec_snapshot",
         "references": [
           "https://www.asianspinejournal.org/upload/pdf/asj-5-20.pdf",
-          "references/dim072/catalog.json#/candidates/12"
+          "references/dim072/catalog.json#/candidates/12",
+          "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column",
+          "https://www.ncbi.nlm.nih.gov/books/NBK459153/"
         ],
         "source_correspondence_only": true,
-        "source_file_sha256": "e07c59214203b86be7751071eea57147e343ef7a1b24c125c07efec50e9ea4d8",
+        "source_file_sha256": "0d7bd0beb4d88860651c2b64a396e22de2c72731cef3f588a1fd771eca980ee5",
         "source_ids": [
           "BONE_T5"
         ],
@@ -13455,10 +13463,12 @@
         "kind": "BoneSpec_snapshot",
         "references": [
           "https://www.asianspinejournal.org/upload/pdf/asj-5-20.pdf",
-          "references/dim072/catalog.json#/candidates/11"
+          "references/dim072/catalog.json#/candidates/11",
+          "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column",
+          "https://www.ncbi.nlm.nih.gov/books/NBK459153/"
         ],
         "source_correspondence_only": true,
-        "source_file_sha256": "de73c4ebee5d268954fa5818b20758f64cb65a9c9f1b26da1d4103671b589ea6",
+        "source_file_sha256": "8356b84af713bcfb28d8af882f1011b493bc4a21c1cba666695bd4c3e440a202",
         "source_ids": [
           "BONE_T6"
         ],
@@ -13505,10 +13515,12 @@
         "kind": "BoneSpec_snapshot",
         "references": [
           "https://www.asianspinejournal.org/upload/pdf/asj-5-20.pdf",
-          "references/dim072/catalog.json#/candidates/10"
+          "references/dim072/catalog.json#/candidates/10",
+          "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column",
+          "https://www.ncbi.nlm.nih.gov/books/NBK459153/"
         ],
         "source_correspondence_only": true,
-        "source_file_sha256": "90c356a70ee4ab76427281bf2b701518eb2a2c95b78f24c0153caf24f8ee85c6",
+        "source_file_sha256": "7f200b184b7578e11b2c0620f631ae087eb7befdbed97e39b08dbb52b7c4fe2a",
         "source_ids": [
           "BONE_T7"
         ],
@@ -13555,10 +13567,12 @@
         "kind": "BoneSpec_snapshot",
         "references": [
           "https://www.asianspinejournal.org/upload/pdf/asj-5-20.pdf",
-          "references/dim072/catalog.json#/candidates/9"
+          "references/dim072/catalog.json#/candidates/9",
+          "https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column",
+          "https://www.ncbi.nlm.nih.gov/books/NBK459153/"
         ],
         "source_correspondence_only": true,
-        "source_file_sha256": "b5d599ad14de3e93143b5b047a7b6135f753b0a0a6d1ab70b9aca0418c89f6ee",
+        "source_file_sha256": "835e00b34e7119275c490493b92819b7009153ac10ae4e1ed3866afaf1fde6b4",
         "source_ids": [
           "BONE_T8"
         ],
@@ -13605,10 +13619,11 @@
         "kind": "BoneSpec_snapshot",
         "references": [
           "https://www.asianspinejournal.org/upload/pdf/asj-5-20.pdf",
-          "references/dim072/catalog.json#/candidates/8"
+          "references/dim072/catalog.json#/candidates/8",
+          "https://www.ncbi.nlm.nih.gov/books/NBK459153/"
         ],
         "source_correspondence_only": true,
-        "source_file_sha256": "a9101d39c05e2e231c9a59c2020d28f9c2b02258b467327ebe453623e280022d",
+        "source_file_sha256": "d3d24c9539c2faa4c154544c166360fa43985ea012dcff3c9b19881e960dfea5",
         "source_ids": [
           "BONE_T9"
         ],

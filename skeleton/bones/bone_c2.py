@@ -15,7 +15,7 @@ bone = BoneSpec(
         'width_mm': None,
     },
     function = ['support neck'],
-    notable_features = [],
+    notable_features = ['Dens (odontoid process) projects superiorly from the body.', 'Atlas-dens articulation is supported by the transverse ligament.', 'Transverse foramina; neural arch and articular processes.'],
     developmental_notes = 'centers fuse during adolescence',
     variations = '',
     unique_id = 'BONE_C2',
@@ -23,12 +23,12 @@ bone = BoneSpec(
     embodiment = "virtual",
     geometry = {},
     physics = {"mass_kg": None},
-    references = ['https://pmc.ncbi.nlm.nih.gov/articles/PMC8354927/', 'references/dim072/catalog.json#/candidates/22'],
+    references = ['https://pmc.ncbi.nlm.nih.gov/articles/PMC8354927/', 'references/dim072/catalog.json#/candidates/22', 'https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column'],
     metric_sources = {
         'spinal_canal_ap_mm': 'references/dim072/catalog.json#/candidates/22/fields/spinal_canal_ap_mm',
         'spinal_canal_width_mm': 'references/dim072/catalog.json#/candidates/22/fields/spinal_canal_width_mm',
     },
-    manufacturing_notes = ['Source-backed reference spans only; no registration to SOPHY, qualified surface, material, joint or mounting interface. See dimension evidence catalog.', 'Canal dimensions are clearances, not dimensions of solid bone or a defined mechanical cartridge.', 'C2 HT retained in native evidence but not admitted until odontoid/span semantics are clarified.'],
+    manufacturing_notes = ['Source-backed reference spans only; no registration to SOPHY, qualified surface, material, joint or mounting interface. See dimension evidence catalog.', 'Study canal/foramen spans describe an osseous opening, not usable mechanical clearance, bone dimensions or a cartridge envelope.', 'C2 HT retained in native evidence but not admitted until odontoid/span semantics are clarified.'],
 )
 
 

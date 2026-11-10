@@ -1,0 +1,41 @@
+{
+  "audit_version": "1.0.0",
+  "fabrication_released": false,
+  "files": {
+    "spine_audit.json": {
+      "sha256": "f16578ef7f2f19cf6c34a6ae61ef8255227470eb40cc7506826901b940af89bf",
+      "size_bytes": 75763
+    },
+    "spine_audit.md": {
+      "sha256": "b1aa80b057214b485ff0b93bd33dab2a8c6d780c0d4aa5c0d8322c169ac67196",
+      "size_bytes": 17596
+    }
+  },
+  "inputs": {
+    "datasets": [
+      "c838292fdeda8e7ddbc026f80aaf9bff87a36d7ccd69dda4b2e5614e33496742"
+    ],
+    "dimension_catalog_sha256": "1c3e5ea701c5e480f9ee225f6b60fa6e971a60136a0a24816c6fef4fbefe67de",
+    "features_sha256": "77b2f851b9d99a6a924a62f5bdeee144ab8a4b393c03f68468d9f6ff5b0bd6b0",
+    "measurement_protocols": {
+      "path": "references/dim072/measurement_protocols.json",
+      "sha256": "b71cfd6cb2f40609ef334616b0c61637f65c702224d70a30307fb89acf25522f"
+    },
+    "native_snapshots": {
+      "cervical_ct_2021": {
+        "path": "references/dim072/cervical_ct_2021.json",
+        "sha256": "d7b02de31e4c96f0f7195f39525ce85b7c76ae5ce6e537f129a180fe29c2a6f4"
+      },
+      "lumbar_ct_2022": {
+        "path": "references/dim072/lumbar_ct_2022.json",
+        "sha256": "1d4658332c81ec2c8242dbf9526b220f26d06c3915154a205c91233dffa3dbe3"
+      },
+      "thoracic_caliper_2011": {
+        "path": "references/dim072/thoracic_caliper_2011.json",
+        "sha256": "21ea5530a035524ea2fd8b41a274f954fcf751ec0b88e5b44d4c72d672fd8d89"
+      }
+    },
+    "source_review_sha256": "90c7db54767f3d684bdcdca3ef98faf2ae1f5d3dd1fcac0b489b8c4093afe59b",
+    "spine_declarations_sha256": "64bea1aa220b56a78c985731d4183b242682853385f99ceaf4863fa75e985f39"
+  }
+}

@@ -87,6 +87,8 @@ manifest using existing staging/rollback utilities. Inputs are fresh BoneSpec
 records, current source files and pinned source facts, not cached audit reports.
 The standard-library API is `audit_spine(field)`; partial inputs retain missing
 records explicitly. Construction does not change source objects or runtime state.
+Source-file hashes express correspondence; they do not prove that a supplied
+API object was constructed from those file bytes. The CLI loads fresh sources.
 
 Exit 0 means a report was produced; `--require-consistent` returns 2 for data
 inconsistencies. Input/publication errors return 1. A consistency pass never means
